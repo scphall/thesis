@@ -1,0 +1,16 @@
+\documentclass{report}
+
+\input{preamble/preamble}
+
+\title{Thesis}
+\author{Sam Hall}
+\date{\today}
+
+\begin{document}
+
+\input{dsphi}
+
+\bibliographystyle{bib/LHCb}
+\bibliography{bib/main,bib/LHCb-PAPER,bib/LHCb-CONF}
+
+\end{document}

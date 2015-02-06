@@ -1,0 +1,99 @@
+
+%%%%%%%%%%%%%%%
+% My Additions
+%%%%%%%%%%%%%%%
+
+%% My Decays
+%--------------------------------
+
+\newcommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\newcommand{\commentt}[1]{}
+
+\newif\ifstartedinmathmode
+\newcommand*{\bam}[1]{%
+  \relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
+  {\ifstartedinmathmode{{\color{red}\boldsymbol{#1}}}\else{{\color{red}\bf #1}}\fi}
+}
+
+\newenvironment{bullets}{
+\begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}}
+{\end{itemize}}
+\newenvironment{enumeratesp}{
+\begin{enumerate}
+    \setlength{\leftmargin}{0pt}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}}
+{\end{enumerate}}
+
+\def\pz{\phantom{0}}
+\def\pzz{\phantom{00}}
+\def\xxx{\ensuremath{xxx}\xspace}
+
+
+% B -> Ds phi
+\def\btodsphi {\decay{\Bp}{\Dsp\phi}\xspace}
+\def\btodskstar   {\decay{\Bp}{\Dsp\Kstarbz}}
+\def\btodkstar    {\decay{\Bp}{\Dp\Kstarbz}}
+
+
+
+% B -> hhhmumu
+\def\Kone{\ensuremath{K_{1}}\xspace}
+\def\Koneb{{\kern 0.2em\overline{\kern -0.2em K}{}}_{1}\xspace} % no ensuremath
+\def\Konep{\ensuremath{\Kone^{+}}\xspace}
+\def\Konem{\ensuremath{\Kone^{-}}\xspace}
+
+\def\thetakone{\ensuremath{\theta_{\Kone}}\xspace}
+\def\sinthetakone{\ensuremath{\sin\theta_{\Kone}}\xspace}
+\def\costhetakone{\ensuremath{\cos\theta_{\Kone}}\xspace}
+
+\def\pipi{\ensuremath{\pip\pim}\xspace}
+\def\kpipi{{\ensuremath{\Kp\pip\pim}}\xspace}
+\def\phik{{\ensuremath{\phi\Kp}}\xspace}
+\def\kphi{{\ensuremath{\phi\Kp}}\xspace}
+
+\def\btokpipimumu{\mbox{\decay{\Bp}{\Kp\pip\pim\mumu}}}
+\def\btokpipijpsi{\mbox{\decay{\Bp}{\jpsi\Kp\pip\pim}}}
+\def\btokpipipsitwos{\mbox{\decay{\Bp}{\psitwos\Kp\pip\pim}}}
+\def\btojpsikpipi{\mbox{\decay{\Bp}{\jpsi\Kp\pip\pim}}}
+\def\btopsitwosk{\mbox{\decay{\Bp}{\psitwos\Kp}}}
+\def\btophikmumu{\decay{\Bp}{\phi\Kp\mumu}}
+\def\btophikjpsi{\decay{\Bp}{\jpsi\phi\Kp}}
+\def\btokphijpsi{\decay{\Bp}{\jpsi\phi\Kp}}
+\def\btojpsiphik{\decay{\Bp}{\jpsi\phi\Kp}}
+\def\psitwostojpsipipi{\mbox{\decay{\psitwos}{\jpsi\pip\pim}}}
+\def\btokonemumu{\mbox{\decay{\Bp}{\Konep(1270)\mumu}}}
+
+
+\def\Tm  {\ensuremath{{\,\mathrm{Tm}}}\xspace}
+
+\def\d{\ensuremath{{\rm d}}\xspace}
+\def\dBF{\ensuremath{{\rm d}\BF}\xspace}
+\def\dqsq{\ensuremath{{\rm d}\qsq}\xspace}
+\def\max{\ensuremath{\mathrm{max}}\xspace}
+\def\min{\ensuremath{\mathrm{min}}\xspace}
+\def\sig{\ensuremath{\mathrm{sig}}\xspace}
+\def\norm{\ensuremath{\mathrm{norm}}\xspace}
+
+\newcommand{\chisqfd}{\ensuremath{\chi^2_{\rm FD}}\xspace}
+%\def\Lag{\ensuremath{\mathcal{L}}\xspace}
+\def\photon{\ensuremath{\gamma}\xspace}
+
+\newcommand\V[1]{\ensuremath{V_{#1}^{}}\xspace}
+\newcommand\Vconj[1]{\ensuremath{V_{#1}^{*}}\xspace}
+\newcommand\Lag[1]{\ensuremath{\mathcal{L}_\mathrm{#1}}\xspace}
+\newcommand\Lagm[1]{\ensuremath{\mathcal{L}_{#1}}\xspace}
+\newcommand\Ham[1]{\ensuremath{\mathcal{H}_\mathrm{#1}}\xspace}
+\def\matho{\ensuremath{\mathcal{O}}\xspace}
+\def\pid{\gls{PIDLabel}\xspace}
+
+\newcommand\Eq[1]{Eq.~\ref{#1}\xspace}
+\newcommand\Fig[1]{Fig.~\ref{#1}\xspace}
+\newcommand\Tab[1]{Table~\ref{#1}\xspace}
+\newcommand\Sec[1]{Sec~\ref{#1}\xspace}
+
+

@@ -1,0 +1,462 @@
+\chapter{The LHCb detector / Experimental}
+\label{ch:lhcb}
+
+The following chapter first introduces the \lhc and the \lhcb detector before going on to briefly
+describe data collection and processing.
+This will include a description of \pid at the \lhcb detector, triggering and event simulation.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The \lhc}
+The \lhc is a $27\km$ circumference particle accelerator which spans the Franco-Swiss border, and
+is the most recent addition to \cern's accelerator complex, and is designed to accelerate protons
+upto $14\tev$ and collide them.
+Protons are delivered to the \lhc synchrotron ring by from the \sps with an energy of $450\gev$.
+They are then accelerated such that they collide with a centre-of-mass energy of $8(7)\tev$ in
+2012(2011) and a maximum luminosity of $2\e{32}\,\mathrm{cm}^{-2}\mathrm{s}^{-1}$.
+Particles are collided at four interaction points where the detectors \atlas, \alice, \cms and
+\lhcb are located.
+
+
+%Protons and heavy ions are injected into the \lhc at $450\gev$ from the \sps, and then accelerated
+%to energies on the \tev scale before colliding them at one of four interaction points around the
+%ring.
+%The \lhc is designed to collide protons every $25\ns$ with a centre-of-mass energy of $14\tev$,
+%however in Run 1 it ran at $50\ns$ and collided particles with energies of 7 and $8\tec$ in 2011
+%and 2012 respectively.
+
+
+
+
+%Typically a 2012 (2011) fill of the \lhc collided protons with a centre-of-mass energy of $8(7)\tev$
+%every $50\ns$ with a maximum luminosity of $2\e{32}\,\mathrm{cm}^{-2}\mathrm{s}^{-1}$.
+%Particles are injected into the \lhc with an energy of 450\gev, where they are then accelerated
+%up to the desired energy.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The \lhcb detector}
+
+Modern high energy flavour physics experiments usually study the decays of particles containing
+\bquark or \cquark quarks.
+These paritcles typically travel around $\cm$ before decaying into some combination of leptons and
+hadrons.
+A detector designed for flavour physics, therefore, must be able to resolve decay vertices
+at which \bquark and \cquark containing hadrons decay, and then reconstruct and identify the particles
+into which they decay.
+The \lhcb detector is just such an apparatus, where the above requirements drove its design.
+\lhcb is a single-arm forward spectrometer, meaning that while
+the reconstruction of non-interacting particles, such as neutrinos, is difficult, there is room for
+a precise vertex detector and \pid systems which are absent from modern general purpose detectors.
+
+%Detector geometry and subdetector layout are shown in Fig.~\ref{fig:lhcb:lhcb},
+Figure~\ref{fig:lhcb:lhcb} shows the \lhcb detector layout with subdetector systems indicated.
+The \lhcb $z$ coordinate is defined by the \lhc beam pipe which passes through the centre of the
+detector, the $x$ and $y$ coordinates are then the horizontal and vertical axes respectively.
+After the interaction point detected particles travel in the forward $z$ direction (downstream) through the
+detector volume.
+Part of this is immersed in a magnetic field with an integrated field strengh of $4\,\mathrm{Tm}$,
+this bends charged particles in the $x$ direction
+
+where charged particles are bent in the $x$ plane by a conventional magnet.
+This magnet is
+the detector in a magnetic field which has an integrated field strength of $4\,\mathrm{Tm}$.
+The various subdetector systems trough which particles pass can be broadly categorized as tracking,
+particle identification or calorimetry.
+
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=\textwidth]{LHCb_detector}
+  \end{center}
+  \caption[\lhcb detector]
+  {\small
+    Schematic diagram of the \lhcb detector showing subdetector systems.
+  }
+  \label{fig:lhcb:lhcb}
+\end{figure}
+
+%Tracking begins close to the interaction point with the Vertex Locator (\velo), the aim of which is
+%to resolve tracks in such a high occupancy region.
+%Charged particles traveling in the detection region will then be observed as deposits in the Tracker
+%Turicensis (\ttracker) before the magnet, and the three tracking stations (\Tone, \Ttwo and
+%\Tthree) after the magnet.
+%Particle identification information primarily comes from the two Ring Imaging Cherenkov (\rich)
+%detectors, which allow separation between pions, kaons and protons.
+%Calorimeters measure the energy of electrons, photons and hadrons.
+%The muon stations provide tracking information for particles which penetrate the calorimeter
+%systems, and therefore also provide particle identification for muons.
+
+In the high energy proton-proton collisions provided by the \lhc \bbbar pairs are produced in such
+away that their momentum vectors point along the beam axis; this is shown in shown in
+Fig.~\ref{fig:lhcb:bbbar}.
+This motivates the \lhcb detector's asymmetric design, the acceptance being from
+$15\mrad$ to £$300(250)\mrad$ in the bending (non-bending) plane.
+This equates in pseudo-rapidity, $\eta$, to approximately $2<\eta<5$ where:
+\begin{equation}
+  \eta = -\log\left(\tan\frac\theta2\right),
+\end{equation}
+and $\theta$ is the angle between a particle's momentum vector and the positive $z$ direction.
+This detection region is sufficient to cover nearly 50\% of \bquark quarks produced.
+%The asymmetric design of the \lhcb detector is unique among high energy physics experiments...
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{acceptance}
+  \end{center}
+  \caption[Simulated production of \protect\bbbar pairs]
+  {\small
+    Simulation of the production of \bquark and \protect\bquarkbar quarks with angles $\theta_1$ and
+    $\theta_2$ from the beam axis respectively.
+    The full plot would be detected in a general purpose detector and the red area is that covered
+    by the \lhcb detector.
+  }
+  \label{fig:lhcb:bbbar}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Tracking}
+The proton-proton interaction point is surrounded by the \velo.
+This is a very high multiplicity region and therefore a high resolution required is provided by the
+\velo.
+Resolving tracks here is not only important to identify the primary vertex (PV), but also the
+secondary vertex indicative of long lived particles that decay via the Weak interaction, which is
+vitally important for the \lhcb physics program.
+The \velo enables this by getting very close to the beam line and a high resolution, courtesy of
+silicon strip detection layers working in $(r,\phi)$ coordinates.
+
+There are 42 of each the $r$ and $\phi$ sensors in the \velo, organized into 21 detection layers,
+with an additional four $r$ upstream sensors for pile-up veto.
+\bam{Pile-up veto here.}
+Each of these layers is split into two haves which can retract during \lhc beam injection, and then
+close when beams are declared stable.
+This movement allows the detection region to begin $8\mm$ from the beam centre, reducing track
+extrapolation back to the primary vertex.
+Particles emerging from the primary vertex in the range $1.6<\eta<4.9$, and $|z|<10.6\cm$ can be
+detected in the \velo.
+The pitch of the silicon strips varies from $\sim40\mum$ closest to the beam, to $\sim100\mum$
+and has an impact resolution of $20\mum$ for high momentum tracks.
+The geometry of the \velo is shown in Fig.~\ref{fig:lhcb:velo}.
+
+%The tracking system begins with the \velo.
+%Resolving tracks coming from the interaction region is vitally important for the \lhcb physics
+%program.
+%The \velo surrounds the interaction region with high resolution silicon strip detectors with
+%cylindrical $(r,\phi)$ coordinates.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{velo}
+  \end{center}
+  \caption[\lhcb \velo]
+  {\small
+    The layout of silicon sensors the \velo in showing $r$ sensors in red and $\phi$ sensors in
+    blue.
+    A cross section at $y=0$ in the $(x,z)$ plane is shown while the \velo is closed.
+    Along side these are slices in the $(x,y)$ plane, with the \velo closed and open.
+  }
+  \label{fig:lhcb:velo}
+\end{figure}
+
+
+Tracking continues with four tracking stations, the \ttracker is located
+before the magnet, and the remaining stations (\Tone, \Ttwo and \Tthree) are downstream of the magnet.
+Each of these consists of four layers of strip detectors orientated in $(x, u, v, x)$, where $u$
+and $v$ are rotated $\pm5^\circ$ with respect to $x$.
+The tracking stations after the magnet (T1-3) are each comprised of two detectors: an inner
+tracker (\intr), covering the high occupancy area nearest the beam pipe; and an outer tracker (\ot)
+covering the remainder.
+Together with the \ttracker, the \intr forms the Silicon Tracker (\st).
+The \ot is composed of straw-tube modules, each containing two layers of drift-tube detectors.
+Directly before the magnet is the \ttracker which, together with the \intr, forms the Silicon
+Tracker (\st).
+
+The combination of the tracking systems results in a momentum resolution of $\Delta p/p$ varying
+from $0.4\%$ at $5\gev$ to $0.6\%$ at $100\gev$.
+
+\begin{figure}
+  \begin{center}
+    \tikzstyle{dataset} = [rectangle, text width=0.45\textwidth, minimum height=1in, color=white]
+    \begin{tikzpicture}[node distance=1cm and 1cm,line width=1.1pt]
+      \coordinate[] (p1);
+      %\coordinate[below left=2.7 and 0.77 of p1] (woman);
+      \coordinate[below left=3.4 and 1.10 of p1] (woman);
+      \draw(p1) node {\includegraphics[width=0.6\textwidth]{trackers}};
+      %\draw [black] (woman) ellipse (0.4 and 0.94);
+      \draw [black] (woman) ellipse (0.7 and 1.2);
+    \end{tikzpicture}
+  \end{center}
+  \caption[\lhcb tracking stations]
+  {\small
+    The \lhcb tracking subdetectors, specifically the \ttracker, \Tone, \Ttwo and \Tthree.
+    Silicon strip detectors in the \intr and \intr are shown in purple and the straw tube detectors
+    in the \ot are shown in cyan.
+    These detector subsystems use a $u$, $v$ coordinate system.
+    The woman is circled, she is severely irradiated.
+  }
+  \label{fig:lhcb:tracking}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{RICH and PID}
+Another essential requirement of the \lhcb detector is the ability to distinguish between pions, kaons and
+other charged particles that do not decay within the detector volume.
+This is achieved with information gathered by two \rich detectors;
+\richone is located immediately downstream of the \velo and \richtwo is downstream of the tracking
+stations.
+
+Cherenkov radiation is electromagnetic radiation emitted when a charged particle passes through a
+dielectric medium (insulator which can be polarized by an electric field) at a speed greater than
+the phase velocity of light in that medium.
+Cone of light is emitted the angle of which is proportional to the particle's velocity:
+\begin{equation}
+  \cos\theta_\mathrm{Ch}=\frac1{n\beta}, \beta=\frac{v_p}{c}.
+\end{equation}
+In \lhcb's \rich detectors this cone of light is reflected and focused by spherical mirrors onto
+arrays of Hybrid Proton Detectors (HPDs) outside of the detection volume.
+The hits in the HPDs are then fitted to circles in order to measure the angle $\theta_\mathrm{Ch}$,
+and thus the velocity of the particle that created it.
+With the information about the particle's momentum from the tracking system (and magnet)
+a likelihood is produced based on the predicted $\theta_\mathrm{Ch}$ for given particle hypotheses.
+
+Two \rich detectors are needed in order to perform particle identification to particles with a
+range of momenta.
+\richone contains two radiators: Aerogel and \cfourften, which are denser than the \cffour in
+\richtwo, and is therefore sensitive to lower momentum tracks; $\sim1-60\gev$ in comparison to
+$15-100\gev$.
+Their particle identification abilities are outlined in Fig~\ref{fig:lhcb:richpid}, where
+theoretical Cherenkov angles are show for a particle of given momentum, alongside
+%Cover the full momentum spectrum.
+
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{rich1_2d}
+  \end{center}
+  \caption{\small
+    Schematic of the \lhcb \richone detector indicating various components.
+  }
+  \label{fig:lhcb:rich}
+\end{figure}
+
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[height=0.2\textheight]{cherenkov_theory}
+    %\includegraphics[height=0.2\textheight]{KandPi_2_K}
+    \includegraphics[height=0.2\textheight]{KPi_S20_MagDown_DLL}
+  \end{center}
+  \caption{\small
+    Cherenkov angle as a function of momentum for pions, kaons and protons in the three different
+    radiators (left), and the kaons-pion separation performance as a function of momentum, from
+    Ref.~\cite{LHCb-DP-2012-003}.
+  }
+  \label{fig:lhcb:rich}
+\end{figure}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Calorimeters}
+Main purpose of the \lhcb calorimeter system is to measure the position and energy of hadrons,
+electrons and photons for use in the \lone trigger.
+%Primary objective is for fast readout.
+The first elements of the calorimeter are the \spd and the \presh which surround a plate of lead.
+Together these give electron-photon separation as the scintillating material only interacts with
+charged particles.
+After the \spd/\presh combination come the \ecal and \hcal.
+Both of these consist are of the shashlik design, that is alternating layers of scintillator and
+lead.
+The design energy resolution of the \ecal is $\sigma_E/E = 10\%/\sqrt{E} \oplus 1\%$ (E in GeV)
+and the resolution of the \hcal is $\sigma_E/E = (69\pm5)\%/\sqrt{E} \oplus (9\pm2)\%$ (E in GeV).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Muon detectors}
+The final subdetector is the muon system which is used for tracking, triggering and \pid.
+Each of the five muon stations (M1-5) are comprised of regtangular detection areas with higher
+resolution in the bending plane than in the non-bending plane, each consectutive muon station is
+also larger than the previous (in order to cover the same angular acceptance).
+The first muon station is unique, is only used for tracking and triggering and is positioned
+upstream of the colorimeters.
+The remaining muon stations being downstream of the calorimeters and separated by $80\cm$ thick
+sheets of iron absorbers.
+
+The muon stataions can be divided up into three sections: M1 is the only station upstream of the
+calorimeters and is used primarily for the trigger, though also in muon reconstruction; M2-3 also
+have high spacial resolution; M4-5 have limited spacial resolution, and are used instead to detect
+highly penetrating particles.
+Other than these differences, each muon station is roughly the same, covering an angular acceptance
+of $20(16)\mrad$ to $306(258)\mrad$ in the bending (non-bending) plane.
+They also have higher resolution in the bending plane to increase the resolution of the measured
+muon momenta.
+
+
+
+
+\section{Particle identification}
+As mentioned \pid is a vital part of \lhcb's physics program.
+Tracking system provies detailed info about (charged particle) tracks passing through the \rich
+radiators.
+Exact eEmission point(s) of photons are unknown for each track, midpoint of passage through
+radiator is taken.
+Candidate photons  for wach track are determined by combining the photon wmmission poihnt with the
+measured hit positiosn of photions.
+Once phopton candidatees are assigned, Cherenkov angle can be computed.
+Fill analytican solution of the RICHJ optics is used, reconstrincting the trachector onf the photon
+throughh the \rich optical system, taking into account the knowledge of mirrors and HPDs.
+
+
+%This paragraph is from \cite{LHCb-DP-2012-003}.
+Cherenkov angle is combined with track momentum from the tracking system.
+Overall log-likelihood approach is used, all tracks in both rich detectors are considered
+simultaineously, allowing for optimal overlapping oc Cherenkov cones.
+Begin with all particles will null \pid hypothesis (that of the pion), overall event likelihood,
+computed from the distribution of photon hits, the assiciated tracks ant their errors is then
+calcilated for this set of hypotesis. Then for each track in turn, the likelihood is recomputed
+changing the mass hypothesis to that of pi, e, K, p, $\mu$; leaving all others unchanged.
+the change in mass hypotheses amongst all tracks that gives the largest increase in the eveny
+likelyhood is identified and the mass hoyypthesis for that treack is set to its preferred  value.
+This is repeated until all tracks have been set to their optimat hypotheses and no further
+improvement in the event likelihood is found.
+Final measure is the delta log-likelihood, from pion to all others.
+
+Further PID for muons is provided by the \lhcb muon system, the criteria that is required is that
+of {isMuon}...
+\begin{itemize}
+  \item What is isMuon?
+    \begin{itemize}
+      \item $p\in[3,6]\gev$ require M2 and M3
+      \item $p\in[6,10]\gev$ require M2 and M3 and (M4 or M5)
+      \item $p\in[10,)\gev$ require M2 and M3 and M4 and M5
+    \end{itemize}
+\end{itemize}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Triggers}
+Triggering is an essential part of the operation of \lhcb, and is necessary to reduce the vast
+amount of data produced to a manageable amount that can be written to tape.
+With the 2011 and 2012 running conditions the proton bunch spacing wasa $50\ns$, giving an
+interaction rate of $40\mhz$, with an average number of interactions per bunch crossing of $\mu=1.6$.
+
+In order to best trigger events a double layer system is employed.
+Firstly the Level-0 (\lone) hardware trigger reduces the rate to $1\mhz$, then software triggers
+reduce the rate to a total output of $5\khz$ being written to disk.
+
+The First Level Trigger (\lone) is the hardware trigger stage operates at the bunch crossing
+frequency of the \lhc.
+The \lone hadron trigger takes information from the  \spd, \ps, \ecal and \hcal.
+These four detectors offer differentiation between electrons, photon and hadron showers.
+The quantity triggered on is the transverse energy, $E_T$.
+At least one candidate above threshold (LOElecton, L0Hadron, L0Photon).
+Muon trigger: Each quadrant of the muon station identifies the first and second most transverse
+momentum.
+Processors search for hits that define a straight line trough the five muon stations and that point
+towards the interaaxtion oiunti in the yz plane.
+In the xz plane the search is limited to muons with pt>0.5\gev.
+The position of a track in the first tewo station sallow the determonasion of hits pt.
+The trigger sets a single threshold on either the largest py of the 8 candidates (L0Mon) of a
+threshold on pTpargest x ptsecond largest (L0Dimuon) (of the 8 candidated)
+
+
+
+
+\begin{itemize}
+  \item The bunch crossing is $40\,MHz$, clearly this can not all be recorded
+  \item \lhcb was designed for instantaneous luminosity of $2\e{32}$, during
+    running period of 2012 this was doubled to $4\e{32}$, possible because of
+    excellent performance of detector hardware and trigger system. In such
+    conditions, the average number of visible interactions per bunch crossing is $\mu=1.6$
+  \item Also a lot of interactions are rubbish
+  \item Triggers select events that are most likely to be of interest
+  \item LHCb plans to run at $2\e{32}\,\mathrm{cm}^{-2}\mathrm{s}^{-1}$
+  \item Defocussed, so we see 10MHz (numbers need checking)
+\end{itemize}
+
+
+%\begin{figure}
+  %\begin{center}
+    %\includegraphics[scale=1]{trigger}
+  %\end{center}
+  %\caption{\small
+    %Triggers of \lhcb.
+  %}
+  %\label{fig:lhcb:trigger}
+%\end{figure}
+
+
+
+\subsection{Software triggers}
+\begin{itemize}
+  \item HLT1
+    \begin{itemize}
+      \item Partial event reconstruction and an inclusive selection of signal
+        candidates.
+    \end{itemize}
+  \item HLT2
+    \begin{itemize}
+      \item At the reduced rate of 80kHz (2012)
+      \item performs full event reconstruction
+      \item Inclusive and exclusive selections reduces the trigger rate to
+        5kHz, which are saved for later offline analusus (2012)
+    \end{itemize}
+\end{itemize}
+
+
+\subsection{Muon triggers}
+\begin{itemize}
+  \item L0Muon
+  \item M1-5 split into quadrants, each quadrant contains elemets from all Mx stations
+  \item from each quadrant get first and second greatest pt
+  \item different resolutions in zx and zy planes
+  \item L0Muon cuts on ptlargest, and L0DiMuon cuts on ptlargest x ptsecond
+\end{itemize}
+
+
+\subsubsection{Deferred triggering}
+The concept of deferred triggering was new to the \lhcb triggering system in 2012.
+It consisted of Storing some events that pass the \lone trigger on hard disks temporoarily until
+the end of the fill, and then processing the event with the \hlt.
+
+
+
+\section{Simulation}
+The \lhcb simulation is a three step process: first $pp$ collisions are generated, then subsequent
+decays are simulated and finally they are reconstructed.
+Simulation is done using pythia...
+
+
+Simulation of events at the \lhcb  detector is a multi-stage process involving generation,
+simulation and reconstructio...n
+
+
+
+\section{Stripping}
+The high output rate of the \lhcb trigger means that there is a huge amount of data to be made
+accessible to collaborators, too much to be convenient, in fact.
+Because of \lhcb's wide physics program it is possible to run further collaboration wide selection
+twice a year to reduce the dataset by approximately a factor of ten.
+Within each of these data-subsets further stripping flags are applied which further increase the
+speed which a dataset can be processed.
+The stripping lines used in this thesis are the Dimuon line and the
+
+
+
+
+%\cite{Alves:2008zz}
+
