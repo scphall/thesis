@@ -12,12 +12,11 @@ CHAPTERS = $(filter-out \
 
 MAINS = $(wildcard */main.tex)
 TARGETS = $(addsuffix .pdf,$(addprefix $(PDFDIR)/,$(subst /main.tex,,$(MAINS))))
-SOURCES = $(wildcard */*.tex)
 BIBSOURCES = $(wildcard $(BIBSOURCES)/*.bib)
 
 all: $(TARGETS)
 
-$(PDFDIR)/%.pdf: %/*.tex %/figs
+$(PDFDIR)/%.pdf: %/*.tex
 	sed 's/XXX/$*/g' thesis/template.tex > $(OUTDIR)/$*.tex
 	$(LATEX) --output-directory=$(OUTDIR) $(OUTDIR)/$*
 	bibtex $(OUTDIR)/$*
