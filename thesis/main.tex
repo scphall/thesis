@@ -1,23 +1,13 @@
-\documentclass[12pt,a4paper]{report}
-
-\input{preamble/preamble}
-
-\title{Thesis}
-\author{Sam Hall}
-\date{\today}
-
-
-\begin{document}
 %\maketitle
 \pagenumbering{roman}
-\input{latex/title}
+\input{thesis/title}
 \pagestyle{fancy}
 %\fancyhead[RE,LO]{{\bf \thechapter.}~\leftmark}
-\input{latex/abstract}
+\input{thesis/abstract}
 \pagebreak
-\input{latex/declaration}
+\input{thesis/declaration}
 \pagebreak
-\input{latex/acknowledgements}
+\input{thesis/acknowledgements}
 \pagebreak
 \tableofcontents\thispagestyle{fancy}
 \pagebreak
@@ -28,8 +18,8 @@
 
 \linenumbers
 
-\input{latex/poem}
-\input{latex/notes}
+\input{thesis/poem}
+\input{thesis/notes}
 
 \pagenumbering{arabic}
 \fancyhead[RE,LO]{{\bf \thechapter.}~\leftmark}
@@ -41,10 +31,9 @@
 %\input{db/db}
 %\input{conc/conc}
 
-\bibliographystyle{bib/LHCb}
-\bibliography{bib/main,bib/LHCb-PAPER,bib/LHCb-CONF,bib/LHCb-DP}
+%\bibliographystyle{bib/LHCb}
+%\bibliography{bib/main,bib/LHCb-PAPER,bib/LHCb-CONF,bib/LHCb-DP}
+%
+%%\printglossaries
+%\printglossary[type=main,style=long]
 
-%\printglossaries
-\printglossary[type=main,style=long]
-
-\end{document}
