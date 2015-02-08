@@ -1,0 +1,183 @@
+\section{The CKM matrix and Unitarity Triangle}
+\label{sec:ckm}
+
+The CKM matrix is defined as:
+\begin{equation}
+  V = \left(V_{uL}V_{dL}^\dagger\right) =
+  \begin{pmatrix}
+    \V{ud} & \V{us} & \V{ub} \\
+    \V{cd} & \V{cs} & \V{cb} \\
+    \V{td} & \V{ts} & \V{tb} \\
+  \end{pmatrix},
+\end{equation}
+where each $|V_{ij}|$ parameterizes the probability of an up-type quark, $i$, transistioning to a
+down-type quark $j$.
+In the SM, it is assumed that the total charged current couplings of up- to down-type quarks is the
+same as down- to up-type.
+This means that the CKM matrix is unitary, $V^\dagger V = \mathbb{1}$, and therefore it contains
+four physical parameters: three angles ($\theta_{12}$, $\theta_{13}$ and $\theta_{23}$) and one
+complex phase ($\delta$).
+In fact, the observation of CPV in kaon mixing led to the prediction of a third generation before
+its discovery because a $3\times3$ matrix is the smallest necessary for a phase to enter a unitary
+matrix.
+
+%preferentially
+%hierarchichal
+%arbiatry
+
+%The CKM matrix is the source of all flavour violation in the SM.
+%In the SM, it is assumed that the total charged current couplings of up- to down-type quarks is the
+%same as down- to up-type.
+%This means that the CKM matrix is unitary, $V^\dagger V = \mathbb{1}$, and therefore it contains
+%four physical parameters: three angles ($\theta_{12}$, $\theta_{13}$ and $\theta_{23}$) and one
+%complex phase ($\delta$).
+
+There are many ways of representing the CKM matrix, one way is as a product of three rotation
+matrices, one of which contains the complex phase, this is the \emph{standard} parameterization.
+The \emph{Wolfenstein} parameterization is obtained by defining
+\begin{align}
+  \sin\theta_{12}&=\lambda,
+  & \sin\theta_{23}&=A\lambda^2,
+  & \mathrm{and}&
+  & e^{-i\delta}\sin\theta_{13} &= A\lambda^3(\rho-i\eta),
+\end{align}
+%Because this matrix can be written as a product of three rotation
+%matrices (with angles $\theta_{12}$, $\theta_{13}$ and $\theta_{23}$) and the CP violating phase
+%($\delta$), it can be parameterized in terms of $\lambda$, $A$, $\rho$ and $\eta$.
+%Where: $\sin\theta_{12}=\lambda$,
+%$\sin\theta_{23}=A\lambda^2$ and $e^{-i\delta}\sin\theta_{13} = A\lambda^3(\rho-i\eta)$.
+%and Taylor expanding products of the three rotation matrices, it can be shown that:
+which results in
+\begin{align}
+  V\simeq
+    \begin{pmatrix}
+      %1-\tfrac12\lambda & \lambda & A\lambda^3(\rho-i\eta+\tfrac{i}2\eta\lambda^2) \\
+      %-\lambda & 1-\lambda^2-i\eta A^2\lambda^4 & A\lambda^2(1+i\eta\lambda^2) \\
+      %A\lambda^3(1-\rho-i\eta) & -A\lambda^2 & 1 \\
+      1-\tfrac12\lambda & \lambda & A\lambda^3(\rho-i\eta) \\
+      -\lambda & 1-\lambda^2 & A\lambda^2 \\
+      A\lambda^3(1-\rho-i\eta) & -A\lambda^2 & 1 \\
+    \end{pmatrix}.
+  \label{eq:th:wolfenstein}
+\end{align}
+%where
+%\begin{align}
+  %\lambda &= 0.22537\pm0.00061, & A =
+%\end{align}
+Since $A,\lambda\neq0$, it is clear that $V$ is not diagonal, and therefore flavour changing
+currents are allowed in the SM.
+However, the diagonal elements are close to unity and the CKM matrix exhibits a strong
+hierarchichal structure, for which there is no explaination in the SM.
+
+
+
+Unitarity can be expressed as
+$V_{\alpha\beta}^{\phantom{\dagger}}V_{\beta\gamma}^* = \delta_{\alpha\gamma}$
+%\begin{equation}
+  %V_{\alpha\beta}^{\phantom{\dagger}}V_{\beta\gamma}^* = \delta_{\alpha\gamma},
+  %\boldsymbol{V}_{ij}\boldsymbol{V}_{jk}^\dagger = \delta_{ik}.
+  %\sum_{i=1}^3\left|V_{ij}\right|^2 = 1
+  %\sum_{i=1}^3\left(V_{ij}^*V_{jk}\right) = \mathbb{1},
+  %\label{eq:th:unitarity}
+%\end{equation}
+which gives six equations, when $\delta_{\alpha\gamma} = 0$, of the form:
+\begin{align}
+  %\sum_{i=1}^3V_{ij}^*V_{ki} &= 0 && \sum_{i=1}^3V_{ji}^*V_{ik} =0, & j&\neq k;
+  \sum_{\alpha=1}^3V_{\alpha\beta}^*V_{\gamma\alpha}^{\phantom{*}} &= 0
+  && \sum_{\alpha=1}^3V_{\beta\alpha}^*V_{\alpha\gamma}^{\phantom{*}}=0, & \beta&\neq\gamma.
+  \label{eq:th:offdiag}
+\end{align}
+These equations map closed triangles on the complex plane.
+Two of these triangles have all sides of similar length
+($\mathcal{O}(\lambda^3)$).
+One of these is referred to as \emph{the} Unitarity Triangle (UT) and is described by
+%Taking the equations of the triangles in Eq.~\ref{eq:th:unitarity} where all sides have length of
+%$\mathcal{O}(\lambda^3)$ leaves two triangles, one of which is:
+\begin{equation}
+  %\V{ud}\Vconj{ub} + \V{cd}\Vconj{cb} + \V{td}\Vconj{tb} = 0.
+  1 + \frac{\V{ud}\Vconj{ub}}{\V{cd}\Vconj{cb}} + \frac{\V{td}\Vconj{tb}}{\V{cd}\Vconj{cb}} = 0.
+  \label{eq:th:ut}
+\end{equation}
+The UT has a base of unit length and an apex at
+%$\bar\rho+i\bar\eta = (1-\tfrac12\lambda^2)(\rho+i\eta)$.
+\begin{equation}
+  %\bar\rho+i\bar\eta = (1-\tfrac12\lambda^2)(\rho+i\eta)
+  \bar\rho+i\bar\eta = (1-\tfrac12\lambda^2)(\rho+i\eta) =
+  \frac{\V{ud}\Vconj{ub}}{\V{cd}\Vconj{cb}}
+\end{equation}
+%If divided through by $\V{cd}\Vconj{cb}$, then Eq.~\ref{eq:th:ut} can be mapped onto the complex
+%plane, where the apex is at $\bar\rho+i\bar\eta = (1-\tfrac12\lambda^2)(\rho+i\eta)$.
+and the angles are
+\begin{align}
+  \alpha &=    \arg\left(-\frac{\V{td}\Vconj{tb}}{\V{ud}\Vconj{ub}}\right), &
+  \beta  &=\pi-\arg\left( \frac{\V{td}\Vconj{tb}}{\V{cd}\Vconj{cb}}\right), & &\mathrm{and} &
+  \gamma &=    \arg\left( \frac{\V{ud}\Vconj{ub}}{\V{cd}\Vconj{cb}}\right).
+\end{align}
+%are phases between CKM matrix elements.
+This triangle is depicted in \Fig{fig:th:ut}.
+%, is simply a graphical representation of the CKM matrix.
+%Measurements of CKM matrix elements constrain the angles, side lengths and apex of the UT, these
+%constraints are also shown in Fig.~\ref{fig:th:ut}.
+
+\begin{figure}
+  %\subfloat[\label{fig:th:ut:sch}] {
+  %\subfloat[\label{fig:th:ut:plane}] {
+  \begin{center}
+      \includegraphics[scale=1]{diagram_ut}
+      %\includegraphics[width=0.48\textwidth]{diagram_ut}
+      \includegraphics[width=0.47\textwidth]{rhoeta_small_Vub}
+  \end{center}
+  \caption[Unitarity triangle]{\small
+    Schematic diagram of the Unitarity triangle given in Eq.~\ref{eq:th:ut} on the complex plane,
+    where the base has been normalized to unit length.
+    Alongside is shown the same triangle with coloured bands indicating various constraints on
+    side lengths, angles and position of the apex.
+  }
+  \label{fig:th:ut}
+\end{figure}
+
+Precise determination of the CKM matrix elements is important, for  they are each fundamental
+parameters of the SM.
+They also contain all the information about flavour violation and CPV that is allowed within the
+framework of the SM.
+This information is reprtesented by the UT, a current fit of measurement of angles and side lengths
+is shown in \Fig{fig:th:ut}.
+If additional CP-violating phases were to exist beyond the SM, their effect would be seen in global
+fits of the UT.
+
+Each CKM matrix element is ususally measured in a particular way.
+For example, the elements \V{td} and \V{ts} are measured using $B-\bar B$ oscillations since tree
+level determination using \tquark quarks is difficult to do with precision.
+However, the nature of NP is unknown and could effect different processes in different ways.
+A good example of this is \V{ub}, which is the CKM element known to the lowest degree of accuracy.
+
+A determination of \V{ub}
+can be made using inclusive and exculsive measurements of
+\decay{B}{X_u\ell\bar\nu_\ell} decays.
+Inclusive measurements are made difficult from large
+\decay{B}{X_c\ell\bar\nu_\ell} backgrounds, while exclusive semi-leptonic modes suffer from
+uncertainties introduced by form factors.
+A combination of these results leads to a value of
+$\left|\V{ub}\right|_\mathrm{SL}=\left(4.13\pm0.49\right)\e{-3}$ \cite{PDG2012}.
+But, \V{ub} can also be obtained using the tree level decay of
+%A value of $\left|\V{ub}\right|$ can also be obtained from the annihilation decay
+\decay{\Bp}{\taup\nu_\tau}:
+$\left|\V{ub}\right|_{\tau\nu}=\left(4.22\pm0.42\right)\e{-3}$ \cite{PDG2012}.
+The branching fraction which is used to calculate this latter value~\cite{Amhis:2012bh} is somewhat
+higher than the SM prediction and particularly sensitive to NP models which include a charged
+Higgs.
+Figure \ref{fig:th:ut} shows the length of the side $|\V{ud}\Vconj{ub}|/|\V{cd}\Vconj{cb}|$
+calculated by both values of \V{ub}.
+The decay \btodsphi has a very similar topology to \decay{\Bp}{\taup\nu_\tau} in that it proceeds
+via the annihilation of the \Bp meson constituent quarks and the resulting $W^+$ decays into quarks
+that form the final state.
+This decay is discussed in \Sec{sec:dsphi}.
+
+The other side is sensitive to the value of \V{tb} and \V{td}.
+The value of \V{tb} is determined from decays of \tquark quarks using the ratio
+$\BF(\decay{t}{Wb})/\BF(\decay{t}{Wq})$, where $q=d,b,s$.
+Oscillation frequencies of \Bd and \Bs mesons ($\Delta m_d$ and $\Delta m_s$ respectively) are used
+to measure the \V{td} and \V{ts}.
+
+
+

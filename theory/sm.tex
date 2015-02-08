@@ -1,0 +1,225 @@
+\section{The Standard Model}
+The current formulation of the SM of particle physics was concocted in the 1970s, when the Higgs
+mechanism was incorporated into Glashow's electroweak theory by Salam and Weinberg.
+The theory prescribes a treatment
+as to how fundamental particles interact via three of the four
+fundamental forces, namely: the strong, weak and electromagnetic forces.
+
+%Mathematically, the SM is a locally gauge invariant quantum field theory, where excitations of
+%various fields manifest themselves as particles.
+%There is a global Poincare symmetry as required by special relativity; and a local
+%$SU(3)\times SU(2)\times U(1)$ symmetry which encapsulates the SM Lagrangian:
+%\begin{equation}
+  %\Lag{SM} = \Lag{EW} + \Lag{Strong} + \Lag{Higgs}.
+%\end{equation}
+%Where the components describe the electroweak, strong and Higgs interactions.
+%Each generator of this local gauge group is associated with a gauge boson which mediates
+%interactions between other bosons and fermions.
+
+Mathematically, the SM is a locally gauge invariant quantum field theory.
+It inhabits a space-time with a global Poincar\'e symmetry that obeys a local
+$SU(3)\times SU(2)\times U(1)$ symmetry.
+Each generator in this group corresponds to a gauge-boson; so the strong force ($SU(3)$ group) has
+eight gluons that mediate the interaction, and the electroweak force ($SU(2)\times U(1)$ group) has
+$3+1$ gauge bosons, which are the weak gauge bosons ($Z$, $W^\pm$) and the photon ($\gamma$).
+These are all vector fields.
+Fermions are described by spinor fields, $\psi$, which obey the Dirac equation:
+\begin{equation}
+  (i\hbar\gamma^\mu\partial_\mu - mc)\psi = 0.
+  \label{th:eq:dirac}
+\end{equation}
+The fermions of the SM constitute six leptons (electron, electron neutrino, muon, muon neutrino,
+tau and tau neutrino) and six quarks (up, down, charm, strange, top and bottom), which are
+organized into pairs forming three generations.
+For each fermion there is a corresponding antiparticle with the same mass and opposite charge ---
+charge being the conserved quantity resulting from the global gauge symmetry (by Noether's
+theorem).
+There is also a single scalar field in the SM, that of the Higgs boson.
+%The only additional particle is the scalar Higgs boson.
+
+The SM Lagrangian can be expressed as a sum of components:
+\begin{equation}
+  \Lag{SM} = \Lag{Strong} + \Lag{V} + \Lag{\ell} + \Lag{\it q} + \Lag{Higgs} + \Lag{Yuk}.
+  \label{eq:th:lag}
+\end{equation}
+The first three terms describe: interactions of the strong force between colour carrying particles,
+weak vector boson self-interactions, and the electroweak behavior of leptons.
+The remaining terms describe the electroweak behavior of quarks, the Higgs interaction and Yukawa
+couplings, respectively.
+These latter terms are of fundamental importance as to how the flavour changing currents and CPV
+occur in the SM, and will be be discussed in detail.
+%the SM.
+%Each of these shall be discussed in turn.
+
+The structure of CP and flavour violation emerges as a direct consequence of the Higgs mechanism
+breaking the local electroweak symmetry.
+The Lagrangian of the scalar Higgs field is:
+\begin{align}
+  \Lag{Higgs}
+  &= \left(D_\mu\Phi\right)^\dagger\left(D^\mu\Phi\right) - V(\Phi) \\
+  &= \left(D_\mu\Phi\right)^\dagger\left(D^\mu\Phi\right) - \mu^2\left(\Phi^\dagger\Phi\right) +
+  \lambda\left(\Phi^\dagger\Phi\right),
+  \label{eq:th:laghiggs1}
+\end{align}
+where $\mu$ and $\lambda$ are constants, $D_\mu$ is the covariant derivative, and $\Phi$ is the
+Higgs doublet, defined by:
+\begin{equation}
+  \Phi = \frac{1}{\sqrt{2}}
+  \begin{pmatrix}
+    \phi_1 + i\phi_2 \\
+    \phi_3 + i\phi_4 \\
+  \end{pmatrix}.
+  \label{eq:th:phi}
+\end{equation}
+Taking $\mu^2<0$ and $\lambda>0$ moves the minimum of the potential $V(\Phi)$ away from zero to a distance $v$:
+\begin{equation}
+  v = \sqrt{\frac{\mu^2}{\lambda}}.
+\end{equation}
+At this point the Higgs field gets a vacuum expectation value (VEV)
+%$\braket{\phi} = \tfrac{1}{\sqrt{2}}v$.
+of $\langle\phi\rangle = \tfrac{1}{\sqrt{2}}v$.
+The direction of the VEV from the origin is arbitrary, but the choice of:
+\begin{align}
+  \bra{0}\phi_1\ket{0} =
+  \bra{0}\phi_2\ket{0} =
+  \bra{0}\phi_4\ket{0} = 0  &&
+  \bra{0}\phi_3\ket{0} = v,
+\end{align}
+is convenient, and changes Eq.~\ref{eq:th:phi} to:
+\begin{equation}
+  \Phi = \frac{1}{\sqrt{2}}
+  \begin{pmatrix}
+    \eta_1 + i\eta_2 \\
+    v + i\eta_4 \\
+  \end{pmatrix}.
+  \label{eq:th:eta}
+\end{equation}
+Here, $\eta_1$, $\eta_2$ and $\eta_4$, are Goldstone bosons which, by choosing an appropriate
+gauge, become the longitudinal components of the weak bosons.
+This choice of gauge simplifies $\Phi$ to:
+\begin{equation}
+  \Phi =
+  \begin{pmatrix} 0 \\ v+H
+  \end{pmatrix},
+  \label{eq:th:phi2}
+\end{equation}
+where $H$ is the physical Higgs boson.
+%Using this in Eq.~\ref{eq:th:laghiggs1} gives:
+Inserting Eq.~\ref{eq:th:phi2} into Eq.~\ref{eq:th:laghiggs1} gives:
+%\begin{multline}
+  %\Lag{Higgs} =
+  %\frac12\left(\partial_\mu H\right)\left(\partial^\mu H\right)
+  %+\frac14g^2\left(v^2 + 2vH + H^2\right)W_\mu^+W^{-\mu}  \\
+  %+\frac18\left(g^2 + g^{\prime2}\right)\left(v^2 + 2vH + H^2\right)Z_\mu Z^\mu
+  %+ \mu^2H^2 + \frac14\lambda\left(H^4+4vH^3\right) + \cdots,
+  %\label{eq:th:laghiggs2}
+%\end{multline}
+\begin{equation}
+  \Lag{Higgs} =
+  \frac12\left(\partial_\mu H\right)\left(\partial^\mu H\right)
+  +\mu^2H^2
+  +\left(m_W^2W_\mu^+W^{-\mu} + \frac{m_Z^2}{2}Z_\mu Z^\mu\right)
+  \cdot
+  \left(1 + \frac{H}{v}\right)^2
+  \label{eq:th:laghiggs2}
+\end{equation}
+where $g$ and $g^\prime$ are coupling constants and other terms are three- and four-point
+interactions of the Higgs with itself and weak gauge bosons.
+Thus, the $U(1)$ local gauge symmetry is broken, weak gauge boson acquire a mass while photons remain
+massless; as is consistent with observations.
+
+
+%It is not possible to directly insert mass terms for fermions, because the required terms
+%($m(\bar\psi_L\psi_R+\bar\psi_R\psi_L$) are not allowed \bam{ELABORATE}.
+All fermions (except neutrinos) also get a mass after the spontaneous symmetry breaking (SSB) of
+the $U(1)$ symmetry.
+The Dirac mass term for a chiral field should be of the form:
+\begin{equation}
+  \Lag{mass} = -m_\psi\left(\bar\psi_R\psi_L + \bar\psi_L\psi_R\right),
+\end{equation}
+but the left- and right-handed fields have different $U(1)$ charges %Y hypercharge
+and so transform differently under local gauge transformations and so cannot be added to \Lag{SM}.
+However, masses can be generated through the Yukawa couplings (\Lag{Yuk} in \Eq{eq:th:lag}), which
+describe integrations between all fermionic fields and the Higgs doublet, and can be written:
+\begin{equation}
+  \Lag{Yuk} = \sum_{\substack{\ell=\\e,\mu,\tau}}\left(\Lag{Yuk}^\ell\right) + \Lag{Yuk}^q,
+  \label{eq:th:yukking}
+\end{equation}
+where $\ell$ and $q$ denote the lepton and quark sectors respectively.
+First considering the lepton term, after SSB:
+\begin{align}
+  \Lag{Yuk}^\ell
+  &= - g_\ell\left(\bar\chi_L\Phi \ell_R + \bar \ell_R\Phi^\dagger\chi_L\right) \\
+  &= - \frac{g_\ell v}{\sqrt{2}}\left(\bar\ell_L\ell_R + \bar\ell_R\ell_L\right)\cdot
+  \left(1 + \frac{H}{v}\right)
+     %- \frac{g_\ell}{\sqrt{2}}H\left(\bar\ell_L\ell_R + \bar\ell_R\ell_L\right),
+\end{align}
+where $g_\ell$ is a coupling constant, and
+\begin{align}
+  \chi_L = \begin{pmatrix}\nu_L \\ \ell_L \end{pmatrix}.
+\end{align}
+Thus the leptons get a mass of $m_\ell = \tfrac{1}{\sqrt{2}}g_\ell v$, and interact with the Higgs
+field.
+
+The story for $\Lag{Yuk}^q$ is a bit more involved.
+Before SSB:
+\begin{align}
+  \Lag{Yuk}^q &= - y_{ij}^u\bar Q_L^i\Phi u_R^j
+  - y_{ij}^d\bar Q_L^i\tilde\Phi d_R^j + \mathrm{h.c.},
+  \label{eq:th:lagyukq}
+\end{align}
+where there is an implicit sum over all generations $i$ and $j$, $y^{u,d}$ is a $3\times3$ matrix
+characterizing the Yukawa couplings between quark generations,
+\begin{align}
+  \tilde\Phi_i &= \varepsilon_{ij}\Phi_j,
+    \qquad \mathrm{and} \quad Q_L = \begin{pmatrix}u_L \\ d_L \end{pmatrix}.
+\end{align}
+After SSB, and the Higgs acquires a VEV, \Eq{eq:th:lagyukq} becomes:
+\begin{equation}
+  \Lag{Yuk}^q =
+  - \frac{v}{\sqrt{2}}
+  \left(
+  y_{ij}^u\bar u_L^iu_{R,j}
+  + y_{ij}^d\bar d_L^id_{R,j},
+  + \mathrm{h.c.}
+  \right)
+  \cdot
+  \left(1 + \frac{H}{v}\right),
+  \label{eq:th:lagyuk2}
+\end{equation}
+where the mass of the quarks is $m_q = \frac{v}{\sqrt{2}}y_{ij}^q$.
+However, it is more convenient to change a basis in which the matrix $m^q$ is diagonal such that
+$m_{ij}^\mathrm{diag} = V_{Lik}m_{kl}(V_R^\dagger)_{lj}$.
+This is exactly equivalent to transforming the chiral quark fields for up- and down-type quarks
+accordingly:
+\begin{align}
+  q_L^\alpha = \left(V_L^q\right)_{\alpha i}q_L &&
+  q_R^\alpha = \left(V_R^q\right)_{\alpha i}q_R,
+\end{align}
+where the index of the original basis is identified with $i$ and the mass basis uses $\alpha$.
+
+The rotations of the basis of the chiral quark fields leave much of \Lag{SM} unchanged since
+$V_{qL}^\dagger V_{qL} = V_{qR}^\dagger V_{qR} = \mathbb{1}$.
+However, this is not the case in the charged current (CC) part of \Lag{\it q}; which transforms as:
+\begin{align}
+  \Lag{\it q}^\mathrm{CC}
+  &= \frac{g}{2}i\gamma^\mu
+  \left[\bar u_Ld_LW^+_\mu + \bar d_Lu_LW^-_\mu
+  \right]  \\
+  &= \frac{g}{2}i\gamma^\mu
+  \left[
+    \bar u_L\left(V_{uL}V_{dL}^\dagger\right)d_LW^+_\mu +
+    \bar d_L\left(V_{dL}V_{uL}^\dagger\right)u_LW^-_\mu
+  \right]  \\
+  &= \frac{g}{2}i\gamma^\mu
+  \left[
+    V\bar u_Ld_LW^+_\mu +
+    V^\dagger\bar d_Lu_LW^-_\mu
+  \right].
+\end{align}
+The matrix $V$ is defined is known as the Cabibbo-Kobayashi-Maskawa (CKM) matrix
+and parameterizes the couplings between up- and down-type quarks in charged weak currents.
+
+
+
+

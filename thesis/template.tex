@@ -2,6 +2,10 @@
 
 \input{preamble/preamble}
 
+\usepackage{etoolbox}
+\newtoggle{appendix}
+\togglefalse{appendix}
+
 \title{Thesis}
 \author{Sam Hall}
 \date{\today}
@@ -9,10 +13,19 @@
 \begin{document}
 \linenumbers
 
+
+
 \input{XXX/main}
+
+
+\iftoggle{appendix}{
+  \input{appendices/main}
+}{
+}
 
 \bibliographystyle{bib/LHCb}
 \bibliography{bib/main,bib/LHCb-PAPER,bib/LHCb-CONF}
+
 %
 %%\printglossaries
 %\printglossary[type=main,style=long]
