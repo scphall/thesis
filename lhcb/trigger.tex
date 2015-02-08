@@ -1,0 +1,145 @@
+\section{Trigger}
+
+With a $pp$ interaction rate of $40\mhz$ there is clearly too much information associated with an event
+to write them all to disk.
+Instead a multistage trigger is employed.
+The first level trigger, \lone, is embedded in the hardware of \lhcb and is fully synchronous with
+the bunch crossing rate.
+It uses momentum and energy information to select events.
+Its output rate is $1\mhz$.
+Two software triggers are fast enough to perform tracking algorithms and use information from
+multiple subdetectors to reduce the events written to disk to $5\khz$.
+The flow of data through the trigger is shown in Fig.~\ref{fig:lhcb:trigger}.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[scale=1]{trigger}
+  \end{center}
+  \caption[Trigger sequence]
+  {\small
+    The flow of the \lhcb trigger system in 2012.
+  }
+  \label{fig:lhcb:trigger}
+\end{figure}
+
+There are five \lone trigger lines; one each for photons, electrons, hadrons, muons and dimuons.
+The decisions of the former three are based on calorimeter information while th others use muon
+system information.
+A cluster in the \ecal and \hcal is defined as two-by-two calorimeter cells.
+For each cluster the transverse energy, $E_T$, is calculated:
+\begin{equation}
+  E_T = \sum_{i=1}^4E_i\sin\theta_i,
+\end{equation}
+where $E_i$ is the energy in cluster $i$ and $\theta_i$ is the angle between the average
+interaction point and the cell's centre.
+These clusters are then categorized as follows.
+A hadron candidate is the largest $E_T$ cluster in the \hcal summed with the $E_T$ of the \ecal
+cluster in front, if there is one.
+A candidate photon (electron) is the largest $E_T$ deposit with hits in the \presh cells in front and
+no hits (at least one hits) in the nearest \spd cells.
+The $E_T$ of each candidate is compared to thresholds, and the event is retained if one or more is
+exceeded.
+
+First level trigger lines associated with muons base their acceptance on measurements of \pt.
+Each quadrant of the muon system is read out independently, so muons which cross boundaries cannot
+be triggered.
+The muon candidates with the highest and second highest \pt are selected by each quadrant by
+searching for straight lines through M1-5 in the $z-y$ plane, and in the $z-x$ plane if
+$p_T>0.5\gev$.
+The M1 station is used here to increase the \pt resolution of tracks, this enables (without the
+tracking information) a resolution of about $25\,\%$ of fully reconstructed tracks.
+Events are accepted based on candidates from all quadrants with values of $p_T^\mathrm{max}$ and
+$p_T^\mathrm{max}\times p_T^\mathrm{2^{nd} max}$ greater than thresholds for the muon and dimuon
+lines respectively.
+
+Around $80\%$ of the events accepted at \lone are processed by the software triggers immediately.
+The rest are stored temporarily on hard disks to be processed while the \lhc is not colliding protons.
+This is known as deferred triggering.
+
+The first software trigger, \hltone, performs the full three dimensional \velo track fitting
+algorithms (but with fewer passes than the offline version).
+Candidate \velo tracks for triggers which do not require muons are selected based upon the quality of the
+\velo track and the smallest IP with respect to any of the identified primary vertices.
+Primary vertices are defined to be points within $300\mum$ of the mean
+interaction point in the $x-y$ plane, $\mathrm{PV}^\mathrm{mean}_{xy}$, from which at least five
+tracks originate.
+The position of $\mathrm{PV}^\mathrm{mean}_{xy}$ is measured at the start of each \lhc machine
+fill.
+For trigger lines requiring muons, each \velo track is extrapolated to a window in the M3
+station.
+The size of this window is narrow in the non-bending direction but wide enough to accommodate a $6\gev$
+muon in $x$.
+If there is a deposit in this window then the \velo track, is extrapolated to the cluster and if
+there are hits consistent with this track in any of the muon stations M2, M4 or M5 the track is
+tagged as belonging to a muon.
+The \velo tracks that are selected by IP or the muon system are extrapolated (or interpolated) into
+the \intr and \ot.
+This is known as forward tracking, and provides momentum measurements for all these tracks.
+
+More info needed on specific lines?
+
+The second software trigger, \hlttwo, performs forward tracking on all \velo tracks with
+$p>5\gev$ and $p_T>0.5\gev$ in 2011; which was reduced to $p_T>0.3\gev$ in 2012 thanks to deferred
+triggering.
+These charged tracks are then used to identify decaying $B$ mesons using their topology.
+Vertices formed of two, three and four reconstructed tracks displaced from PVs are triggered based
+on the response of a Bonsai Boosted Decision Tree (BBDT)~\ref{Gligorov:2012qt} whose inputs are
+properties of the tracks and vertex.
+A BBDT is a Boosted Decision Tree (to be described in an Appendix) where input variables are
+discretized allowing a simple, fast look-up table to be used to calculate the trigger
+output~\cite{Gligorov:2012qt}.
+
+%Trigger 2011 \cite{LHCb-DP-2012-004}
+%Trigger 2012 \cite{Albrecht:2013fba}
+
+
+\section{Data, simulation and stripping}
+The data collected by the \lhcb detector used in this thesis totals $3\invfb$; where $1\invfb$ was
+collected in the year 2011 with a centre-of-mass energy of $7\tev$, and $2\invfb$ was collected in
+2012.
+
+%\section{Simulation}
+Reliable analysis of real data would not be possible without selections of simulated events.
+%Simulation of events is a vital part of analyses at \lhcb, it allows collaborator's access to pure
+These allows collaborator's access to pure samples of specific, requested decays to aid their
+research.
+This can be for the evaluation of efficiencies, understanding effects in data, or making analysis
+decisions without comprimising blinded data.
+These events are generated in two independent phases: generation and simulation.
+Proton-proton collisions are generated using \pythia~\cite{Sjostrand:2006za,*Sjostrand:2007gs}
+with a specific \lhcb configuration~\cite{LHCb-PROC-2010-056},
+and subsequent hadronic decays are handled by the \evtgen~\cite{Lange:2001uf} package.
+The simulation phase is designed to mimic the \lhcb detector's response to particles, this is done
+with \geant~\cite{Allison:2006ve,*Agostinelli:2002hh} as described in
+Ref.~\cite{LHCb-PROC-2011-006}.
+
+%\subsection{Stripping}
+Even the --- much reduced --- output rate of $5\khz$ there are still vast amount of data for an
+analyst to sift through.
+To aid this, additional selections are applied to the dataset biannually which further categorize
+each event.
+This is known as stripping.
+Stripped datasets are the only ones accessable to analysts, which makes the process of retreiving
+data of interest fast.
+Stripping selections in this thesis vary, and will be described when appropriate.
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%The high output rate of the \lhcb trigger means that there is a huge amount of data to be made
+%accessible to collaborators, too much to be convenient, in fact.
+%Because of \lhcb's wide physics program it is possible to run further collaboration wide selection
+%twice a year to reduce the dataset by approximately a factor of ten.
+%Within each of these data-subsets further stripping flags are applied which further increase the
+%speed which a dataset can be processed.
+%The stripping lines used in this thesis are the Dimuon line and the
+
+
+
+
+
+
