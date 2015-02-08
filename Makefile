@@ -25,8 +25,11 @@ $(PDFDIR)/%.pdf: %/*.tex
 		-o $(OUTDIR)/$*.gls $(OUTDIR)/$*.glo
 	$(LATEX) --output-directory=$(OUTDIR) $(OUTDIR)/$*
 	$(LATEX) --output-directory=$(OUTDIR) $(OUTDIR)/$*
-	mv -f $(OUTDIR)/$*.pdf $(PDFDIR)/.
+	cp -f $(OUTDIR)/$*.pdf $(PDFDIR)/.
+	mv -f $(OUTDIR)/$*.pdf $(PDFDIR)/recent.pdf
 
+open:
+	open $(PDFDIR)/recent.pdf
 
 .PHONY: info clean
 info:
