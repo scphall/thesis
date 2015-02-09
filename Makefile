@@ -39,7 +39,7 @@ clean:
 	rm -f $(OUTDIR)/* $(PDFDIR)/*.pdf
 
 count:
-	@echo "thesis\n======\nBackup of the ol' thesis" > README.md
-	@echo "\nThesis | Total\n---|---" >> README.md
+	@echo "thesis\n======\nBackup of the ol' thesis." > README.md
+	@echo '\n$(shell date "+%a %d %b") | Total\n---|---' >> README.md
 	@texcount -inc -total Thesis/main.tex
 	@texcount -inc -total Thesis/main.tex | tr : "|" | grep -v Total >> README.md
