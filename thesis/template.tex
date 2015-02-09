@@ -17,14 +17,13 @@
 
 \input{XXX/main}
 
-
-\iftoggle{appendix}{
-  \input{appendices/main}
-}{
-}
-
 \bibliographystyle{bib/LHCb}
 \bibliography{bib/main,bib/LHCb-PAPER,bib/LHCb-CONF}
+
+\iftoggle{appendix}{
+  \input{Thesis/appendices}
+}{
+}
 
 %
 %%\printglossaries

@@ -43,14 +43,31 @@ exceeded.
 First level trigger lines associated with muons base their acceptance on measurements of \pt.
 Each quadrant of the muon system is read out independently, so muons which cross boundaries cannot
 be triggered.
-The muon candidates with the highest and second highest \pt are selected by each quadrant by
+The muon candidates with the highest and second highest \pt are selected from each quadrant by
 searching for straight lines through M1-5 in the $z-y$ plane, and in the $z-x$ plane if
 $p_T>0.5\gev$.
-The M1 station is used here to increase the \pt resolution of tracks, this enables (without the
+The M1 station is used to increase the \pt resolution of tracks, this enables (without the
 tracking information) a resolution of about $25\,\%$ of fully reconstructed tracks.
 Events are accepted based on candidates from all quadrants with values of $p_T^\mathrm{max}$ and
 $p_T^\mathrm{max}\times p_T^\mathrm{2^{nd} max}$ greater than thresholds for the muon and dimuon
 lines respectively.
+Thresholds for \lone trigger lines used in this thesis are given in \Tab{tab:lhcb:trigger}.
+
+\begin{table}
+  \caption{\small
+    Thresholds in 2011 and 2012 for \lone trigger lines~\cite{Albrecht:2013fba} used in this thesis.
+  }
+  \label{tab:lhcb:trigger}
+  \begin{center}
+    \begin{tabular}{ccc}\hline
+      &2011&2012\\\hline\hline
+      {\tt L0Muon} & $1.48\gev$ & $1.76\gev$ \\
+      {\tt L0Dimuon} & $(1.296\gev)^2$ & $(1.6\gev)^2$ \\
+      {\tt L0Hadron} & $3.5\gev$ & $3.7\gev$ \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
 
 Around $80\%$ of the events accepted at \lone are processed by the software triggers immediately.
 The rest are stored temporarily on hard disks to be processed while the \lhc is not colliding protons.
