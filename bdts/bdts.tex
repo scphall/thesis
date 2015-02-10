@@ -1,35 +1,126 @@
 \chapter{BDTs}
 
-The analyses detailed in \bam{Sections} of this thesis, make prodigous use of multivariate
-techniques for the removal of combinatorial backgrounds.
-Combinatorial background is fromed from a random combination of tracks that happen to form a well
+The analyses detailed in \Chap{ch:hhh}, \Chap{ch:dsphi} and \Chap{ch:db} of this thesis, make
+prodigous use of multivariate techniques for the removal of combinatorial backgrounds.
+Combinatorial background is formed from a random combination of tracks that happen to form a well
 defined vertex and pass selection criterea.
-To remove these backgrounds multivariate selection techniques can be emplyed to exploit
-correlations between variables in weakly discriminating variables to produce a single classifier
-that can distinguish them from genunie signal.
+To remove these backgrounds multivariate analysis (MVA) techniques can be emplyed.
+A multivariate discriminator expolits correlations between weakly discriminating variables to
+produce a single, more separating, classifier.
 
-A Decision Tree (DT) is a tree-like graph of decisions where, in this case, the edges correspond to
-cuts on training variables and the final nodes are deemed to result in signal- of
-background-like events.
+An MVA algorithm takes a sample of the signal and background candidates to separate, and a set of
+variables to be used.
+Samples of events are split in two, some are used for training the MVA, and the remaining are used
+for testing it.
+The input, or training, variables define an $n$-dimensional space populated by the input samples.
+The algorithm then classifies regions in this $n$-dimensional space as signal- or background-like;
+such that an arbitary event placed somewhere in the space would also be classified based on the
+point it inhabits.
+The Boosted Decision Tree (BDT) algorithm is used throughout this thesis because it can handle
+a weighted training sample, including negative weights, and can exploit non-linear correlations
+between variables~\cite{Breiman,Roe}.
 
-A single DT is formed using a sample of signal and background candidates and a list of training
-variables which might weakly separate the two.
-A cut on a training variable is chosen to best separate the signal from the backgtround sample.
-Each candidate is then defined as being most signal- or background-like depending on this cut.
-This process can continue, splitting the sample down further, until...
+A BDT is composed of a combination of numerous Decision Trees (DTs), each of which is a claissifier
+in its own right, but can only distinguish between high density populations of signal and
+background candidates.
+The objective is to use DTs to best separate signal and background.
+Training a DT begins with a single node, a decision is chosen which best separates the signal from
+background based on the value of the $\mathrm{G}_{ini}$ index, which is defined as
+\begin{equation}
+  \mathrm{G}_{ini} = 2(1-\eff{sig})(1-\eff{bkg}) = 2\cdot\frac{b}{s+b}\cdot\frac{s}{s+b}
+  = \frac{2sb}{(s+b)^2},
+\end{equation}
+where $s$ and $b$ are the weighted sum of signal and background candidates, respectively, at the
+node of interest.
+The efficiency of signal and background are denoted by \eff{sig} and \eff{bkg}, and the purity of a
+node is defined as $1-\varepsilon$.
+The decision, or cut, which results in the largest reduction in $\mathrm{G}_{ini}$ is the one that
+is chosen, since for a pure child node the aim is for a pure sample of signal or background, that
+is an efficiency \eff{sig} or \eff{bkg} to be zero.
+This process of splitting is repeated until there is no possible improvement in the purity of child
+nodes, at which point the node is dubbed a leaf and is not split.
+Each leaf maps out an area in $n$-dimensions, and is classified as a signal or background leaf
+depending on the purity of the training sample enclosed by that area.
+Candidates from the other samples can then be traced through the DT and assigned as being
+consistent with either signal or background.
+However, some candidates in the training sample will be misclassified.
 
-\section{Bagging and boosting}
-This algorithm will produce a DT whose output is weakly correlated to the true distribution of
-candidates.
-In order to increse the correlation, the technique of boosting is applied.
-The process of boosting with reference to a DT is to weight events that are misclassified by the
-DT, and then retrain the DT taking them into account.
-There are are many varieties of boosting,
+Decision Trees have the advantage of clarity over other machine learning algorithms such as neural
+nets, and can be written down exactly.
+They are also insensitive to variables with very little separation power because the
+$\mathrm{G}_{ini}$ index never identifies a cut on them as being profitable.
+However, DTs are sensitive to statistical fluctuations in the training sample.
+
+To negate this problem DTs can be \emph{Boosted} using one of a number of algorithms.
+The proceedure of boosting removes the power of that statistical fluctuations has over the final
+Boosted Decision Tree (BDT).
+
+A different approach to training BDTs is taken in each of the analyses in this thesis.
+Each technique is outlined in the following sections.
+
+
+\section{Bagging}
+Random selection of
+samples (with replacement) features (without replacement)
+During bootstrap approximately 1 − 1/e ≈ 2/3 samples are retained and 1/e ≈ 1/3 samples left out
+
+
+
+
+
+\section{AdaBoost}
+
+
+
+
+
+\section{uBoost}
 
 
 
 
 
 
-The boosted decision tree (BDT) is a machine
-\cite{AdaBoost}
+%This resulting split leaves two sub-nodes, one classifing predominantly background- and the other
+%predominantly signal-like events.
+%This is known as splitting.
+%Each split
+
+%The process of spilitting can continue
+%
+%the other
+
+
+
+
+%Each of the analyses in this thesis uses the Boosted Decision Tree (BDT) algorithm because it can
+%handle
+
+
+
+
+%A Decision Tree (DT) is a tree-like graph of decisions where, in this case, the edges correspond to
+%cuts on training variables and the final nodes are deemed to result in signal- of
+%background-like events.
+
+%A single DT is formed using a sample of signal and background candidates and a list of training
+%variables which might weakly separate the two.
+%A cut on a training variable is chosen to best separate the signal from the backgtround sample.
+%Each candidate is then defined as being most signal- or background-like depending on this cut.
+%This process can continue, splitting the sample down further, until...
+
+%\section{Bagging and boosting}
+%This algorithm will produce a DT whose output is weakly correlated to the true distribution of
+%candidates.
+%In order to increse the correlation, the technique of boosting is applied.
+%The process of boosting with reference to a DT is to weight events that are misclassified by the
+%DT, and then retrain the DT taking them into account.
+%There are are many varieties of boosting,
+
+
+
+
+
+
+%The boosted decision tree (BDT) is a machine
+%\cite{AdaBoost}

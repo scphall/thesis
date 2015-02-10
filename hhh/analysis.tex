@@ -33,8 +33,6 @@ invariant mass within $12\mev$ of $m_\phi^\pdg$.
 
 Processes with the same final state as \btokpipimumu and \btophikmumu are not smoothly distributed
 in $m_{K\pi\pi\mu\mu}$, rather they peak under the signal.
-
-
 The tree level decays \decay{\Bp}{\jpsi\kpipi} and \decay{\Bp}{\jpsi\phik}, where
 \decay{\jpsi}{\mumu}, have large branching fractions:
 \begin{align}
@@ -44,11 +42,23 @@ The tree level decays \decay{\Bp}{\jpsi\kpipi} and \decay{\Bp}{\jpsi\phik}, wher
 and the same final state particles.
 The same is true for the large contributions from \decay{\Bp}{\psitwos\kpipi} and
 \decay{\Bp}{\psitwos\phik} decays, where \decay{\psitwos}{\mumu}.
-These constitute large, irriducible backgrounds and must be removed with veotes around the \jpsi
-and \psitwos masses.
-However, the amount of contamination from decaying \jpsi and \psitwos is so great that both show
-evidence of asymmetric tails from
+These contributions from charmonium decays constitute large, irriducible backgrounds and must be
+removed with veotes around the \jpsi and \psitwos masses.
+The vetoes used remove events where the invariant dimuon mass falls in either region
+$2946<m_{\mu\mu}<3176\mev$ or $3586<m_{\mu\mu}<3766\mev$.
 
+Mis-reconstructed decays to charmonium contribute to the upper mass sideband.
+To remove these, the veto windows are extended up by $40\mev$ in the region
+$5330<m_{B^+_\mathrm{candidate}}<5450\mev$.
+Radiative tails from the decays \decay{\jpsi}{\mumu\gamma} and \decay{\psitwos}{\mumu\gamma} are
+suppressed by extending the vetoes down by $250\mev$ and $100\mev$ respectively in the region
+$m_{B^+_\mathrm{candidate}}<5230\mev$.
+Figure~{fig:hhh:charmvetoes} shows the boundaries defined by these vetoes on data.
+
+
+
+%However, the amount of contamination from decaying \jpsi and \psitwos is so great that both show
+%evidence of asymmetric tails from
 
 \begin{figure}
   \begin{center}
@@ -62,7 +72,6 @@ evidence of asymmetric tails from
     \label{fig:hhh:charmvetoes}
   \end{center}
 \end{figure}
-
 
 
 %PID info from the RICH is used to identify final state hadrons

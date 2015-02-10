@@ -4,12 +4,12 @@ Backup of the ol' thesis.
 
 Mon 09 Feb | Total
 ---|---
-Words in text| 5115
-Words in headers| 61
+Words in text| 5580
+Words in headers| 65
 Words outside text (captions, etc.)| 213
-Number of headers| 27
+Number of headers| 29
 Number of floats/tables/figures| 9
-Number of math inlines| 207
-Number of math displayed| 34
-Files| 22
+Number of math inlines| 221
+Number of math displayed| 35
+Files| 24
 
