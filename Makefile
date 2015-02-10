@@ -4,6 +4,7 @@ BIBDIR = bib
 OUTDIR = aux
 PDFDIR = pdfs
 PREAMBLEDIR = preamble
+META = Thesis/metadata
 CHAPTERS = $(filter-out \
 					 $(PDFDIR)/ \
 					 $(PREAMBLEDIR)/ \
@@ -41,5 +42,6 @@ clean:
 count:
 	@echo "thesis\n======\nBackup of the ol' thesis." > README.md
 	@echo '\n$(shell date "+%a %d %b") | Total\n---|---' >> README.md
-	@texcount -inc -total Thesis/main.tex
+	@date "+%m-%d-%Y" >> $(META)
+	@texcount -inc -total Thesis/main.tex | tee -a $(META)
 	@texcount -inc -total Thesis/main.tex | tr : "|" | grep -v Total >> README.md
