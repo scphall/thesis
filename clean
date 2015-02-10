@@ -1,0 +1,16 @@
+#!/bin/bash
+
+AUXDIR=aux
+if [ $# -eq 0 ]
+then
+  echo "No arguments supplied"
+  exit
+fi
+DIR=$(echo $1 | sed 's/\///')
+echo Cleaning $DIR
+rm -vf $AUXDIR/$1.*
+if [ -f $DIR/main.tex ]
+then
+  touch $DIR/main.tex
+fi
+
