@@ -29,15 +29,19 @@ invariant mass within $12\mev$ of $m_\phi^\pdg$.
 
 
 
-\subsection{Irreducible backgrounds}
+\subsection{Peaking backgrounds}
 
 Processes with the same final state as \btokpipimumu and \btophikmumu are not smoothly distributed
 in $m_{K\pi\pi\mu\mu}$, rather they peak under the signal.
 The tree level decays \decay{\Bp}{\jpsi\kpipi} and \decay{\Bp}{\jpsi\phik}, where
 \decay{\jpsi}{\mumu}, have large branching fractions:
 \begin{align}
-  \BF(\decay{\Bp}{\jpsi(\to\mumu)\kpipi}) &= (4.8 \pm 0.8)\e{-5} \\
-  \BF(\decay{\Bp}{\jpsi(\to\mumu)\phik}) &= (3.1 \pm 1.1)\e{-6},
+  \BF\left(\decay{\Bp}{\jpsi\kpipi}\right)
+  \cdot \BF\left(\jpsitomumu\right)
+  &= (4.8 \pm 0.8)\e{-5} \\
+  \BF\left(\decay{\Bp}{\jpsi\phik}\right)
+  \cdot \BF\left(\jpsitomumu\right)
+  &= (3.1 \pm 1.1)\e{-6},
 \end{align}
 and the same final state particles.
 The same is true for the large contributions from \decay{\Bp}{\psitwos\kpipi} and
@@ -49,10 +53,10 @@ $2946<m_{\mu\mu}<3176\mev$ or $3586<m_{\mu\mu}<3766\mev$.
 
 Mis-reconstructed decays to charmonium contribute to the upper mass sideband.
 To remove these, the veto windows are extended up by $40\mev$ in the region
-$5330<m_{B^+_\mathrm{candidate}}<5450\mev$.
+$5330<m_{K\pi\pi\mu\mu}<5450\mev$.
 Radiative tails from the decays \decay{\jpsi}{\mumu\gamma} and \decay{\psitwos}{\mumu\gamma} are
 suppressed by extending the vetoes down by $250\mev$ and $100\mev$ respectively in the region
-$m_{B^+_\mathrm{candidate}}<5230\mev$.
+$m_{K\pi\pi\mu\mu}<5230\mev$.
 Figure~{fig:hhh:charmvetoes} shows the boundaries defined by these vetoes on data.
 
 %However, the amount of contamination from decaying \jpsi and \psitwos is so great that both show
@@ -72,27 +76,41 @@ Figure~{fig:hhh:charmvetoes} shows the boundaries defined by these vetoes on dat
 \end{figure}
 
 Given the large branching fractions of the charmonium decays given above, and the probability of
-misidentifying a muon as a pion or kaon is $\mathcal{O}(1\,\%)$,~\cite{LHCb-DP-2013-001}
-there could have been significant contamination from mis-identified candidates.
+misidentifying a muon as a pion is $\mathcal{O}(1\,\%)$,~\cite{LHCb-DP-2013-001}, and slightly less
+for kaon, there could have been significant contamination from mis-identified candidates.
 This potential background was removed by calculating the invariant mass of each $\mu^+\pi^-$ and
 $\mu^+K^-$ combination, where the hadron was assigned the muon mass.
 If the mass of this object fell within $50\mev$ of $m_\jpsi$ or $m_\psitwos$, then the candidate
 was vetoed.
+Figure~\reF{fig:hhh:misid} shows the effect on these vetoes, and demonstraaaates that a large part
+of the background that is removed by these vetoes is from the decay
+$\decay{\Bp}{\jpsi\rho(770)^0\Kp}$.
 
-%To remove these, each hadron was assigned the muon mass, and each possible opposite sign com
-%combination of
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{hhhmisid_pre}
+    \includegraphics[width=0.45\textwidth]{hhhmisid_post}
+    \caption{\small
+      Invariant mass of the combination of a muon and a hadron of the opposite charge
+      reconstructed under the muon mass hypothesis.
+      The left-hand plot shows the distributions before the veto of isidentification of the \jpsi
+      and \psitwos, while the right-hand plot shows the distribution after the vetoes.
+      The blue circles are the distribution of $m(\mu\mu\to\mu\pi)$ (solid circles having the same
+      charge as the kaon) and red square show the $m(\mu\mu\to\mu K)$ distribution.
+      There is a feature at low mass in the $m(\mu\mu\to\mu\pi)$ spectrum which is removed by the
+      vetoes, and originates from the backgrtound decay $\decay{\Bp}{\jpsi\rho(770)^0\Kp}$.
+    }
+    \label{fig:hhh:misid}
+  \end{center}
+\end{figure}
+
+Other peaking backgrounds D0...
 
 
 
-%PID info from the RICH is used to identify final state hadrons
-%PV chosen based on lowest PV of B candidateo
-%vertex fit \chisq must increase by more than 121 when including the B candidate daughters
-%fit vertex chi2 < 6
 
-%Backgorunds of \jpsi and \psitwos must be removed
-%also their radiative tails
 
-%main sources of peaking backgrounds come from charmonia
 
 \subsection{Multivariate selection}
 Combinatorial background was suppressed using a BDT trained using the AdaBoost
@@ -105,8 +123,9 @@ algorithm~\cite{AdaBoost}; for more details please refer to \Sect{sec:bdt:ada}.
 
 
 
-
+\subsection{Particle identification}
 \subsection{Reweighting of variables}
+
 
 
 
@@ -115,3 +134,11 @@ algorithm~\cite{AdaBoost}; for more details please refer to \Sect{sec:bdt:ada}.
 %\section{Efficiencies}
 %\section{Systematics}
 %\section{Summary}
+
+%PID info from the RICH is used to identify final state hadrons
+%PV chosen based on lowest PV of B candidateo
+%vertex fit \chisq must increase by more than 121 when including the B candidate daughters
+%fit vertex chi2 < 6
+%Backgorunds of \jpsi and \psitwos must be removed
+%also their radiative tails
+%main sources of peaking backgrounds come from charmonia

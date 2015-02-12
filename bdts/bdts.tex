@@ -1,4 +1,4 @@
-\chapter{BDTs}
+%\chapter{BDTs}
 
 The analyses detailed in \Chap{ch:hhh}, \Chap{ch:dsphi} and \Chap{ch:db} of this thesis, make
 prodigious use of multivariate techniques for the removal of combinatorial backgrounds.
@@ -113,40 +113,113 @@ classifier, in the range zero to one.
 \section{AdaBoost}
 \label{sec:bdt:ada}
 The Adaptive Boost, AdaBoost, algorithm~\cite{AdaBoost} negates the effect of statistical
-fluctuations in a data set
-by giving misclassified events a higher weight.
-For a training sample, described by the varibles $x_i$ with true responses $f(x_i)\in{-1,1}$,
-a BDT produced with the AdaBoost algorithm gives the output of
+fluctuations in a data set by increaging the weights of misclassified events.
+The algorithm begins by training a DT as described above, where each event has unit weight.
+For subsequent DTs, the weight for each event, $i$, is modified for a tree $t$, to be
 \begin{equation}
-  C_m = \sum_{j=1}^{m}\alpha_jh_j(x_i),
+  w_i^t = c_i^t \times w_i^{t-1},
+  \label{eq:ada:wt}
 \end{equation}
-where $h_j(x_i)$ is the responce of a single DT.
-The coefficent $\alpha_j$, is the weight associated with the $j^{th}$ DT which is calculated to be
+where the $c$ is determined to be
 \begin{equation}
-  \alpha_j = \frac12\ln\left(\frac{1-\epsilon_j}{\epsilon_j}\right)
+  c_i^t = e^{\alpha_t\gamma_i^t}.
 \end{equation}
-where $\epsilon_j$ is the weighted error for a single DT
+Here, $\gamma_i^t$ is unity if event $i$ was classified incorrectly in tree $t-1$, otherwise it is
+zero.
+The value of $\alpha_t$ is the weight that the DT carries, and is given by
 \begin{equation}
-  \epsilon_j = \frac{\sum_{y_i\neq h(x_i)}w_i}{\sum_{i=1} h(x_i)w_i}.
+  \alpha_t = \frac12\ln\left(\frac{1-\epsilon_t}{\epsilon_t}\right)
 \end{equation}
-Each event in the training sample is given a weight which changes as the BDT is trained.
-Initially each event has unit weight, $w_i^{(1)}=1$, but this changes to
+where $\epsilon$ is the weighted error rate.
+Weights are then renormalised such that they sum to unity.
+Multiple DTs are made in this fashion, forming a forest; where the response of the BDT classifier
+is a combination of responces from all DTs in the forest.
+The total response of a BDT, $T$, for an event characterized by $x_i$, is
 \begin{equation}
-  w_i^{(m)} = e^{-y_iC_m(x_i)},
+  T(x_i) = \sum_{t=1}^{N_\mathrm{trees}} \alpha_tT_t(x_i)
+  \label{eq:ada:fullbdt}
 \end{equation}
-for subsequent DTs, which boosts, thus boosting the importance of misclassified events.
-Decision tree number $m+1$ is then calculated using the above equations, and added to the total
-BDT.
+where $T_t(x_i)$ is the response of tree $t$, which returns one if it classifies $x_i$ as being
+signal-like, and negative one if it is background-like.
+
+This reweighting proceedure articficially fluctuates the training sample which is used to train
+each DT.
+
+
+%For a training sample, described by the varibles $x_i$ with true responses $f(x_i)\in{-1,1}$,
+%a BDT produced with the AdaBoost algorithm gives the output of
+%\begin{equation}
+  %T_m = \sum_{j=1}^{m}\alpha_jh_j(x_i),
+%\end{equation}
+%where $h_j(x_i)$ is the responce of a single DT.
+%The coefficent $\alpha_j$, is the weight given to DT $j$, which is calculated as
+%\begin{equation}
+  %\alpha_j = \frac12\ln\left(\frac{1-\epsilon_j}{\epsilon_j}\right)
+%\end{equation}
+%where $\epsilon_j$ is the weighted error for a single DT
+%\begin{equation}
+  %%\epsilon_j = \frac{\sum_{y_i\neq h(x_i)}w_i}{\sum_{i=1} h(x_i)w_i}.
+  %\epsilon_j = \frac{W_\mathrm{misclassified}}{W_\mathrm{total}}
+%\end{equation}
+%Each event in the training sample is given a weight which changes as the BDT is trained.
+%Initially each event has unit weight, $w_i^{(1)}=1$, but this changes to
+%\begin{equation}
+  %w_i^{(m)} = e^{-y_iC_m(x_i)},
+%\end{equation}
+%for subsequent DTs, which boosts, thus boosting the importance of misclassified events.
+%Decision tree number $m+1$ is then calculated using the above equations, and added to the total
+%BDT.
 
 
 \section{uBoost}
 \label{sec:bdt:uboost}
+The uniform Boosting, uBoost, alorithm~\cite{Stevens:2013dya} is designed to give a uniform
+response in the signal efficiency of some variables $\zeta_i$.
+The proceedure of creating a uniform BDT, uBDT, builds from the weigting technique used in the
+AdaBoost algorithm, but additional weight is applied to events that lie in a region of parameter
+space which is not prefoming with the desired efficiency.
+Consider a BDT whose signal efficiency in the variables $\zeta_i$ is required to be $\epsilon$.
+The weighting of each event is modified from that used in the AdaBoost algorithm in \Eq{eq:ada:wt}
+to
+\begin{equation}
+  w_i^t = u_i^t\times c_i^t \times w_i^{t-1},
+\end{equation}
+where $u$ deontes a weighting proportional to the distance away from $\epsilon$ in the local
+region:
+\begin{equation}
+  u_i^t = e^{\beta_t(\bar\epsilon-\epsilon_i^t}.
+\end{equation}
+The boosting parameter $\beta$ is calculated as
+\begin{equation}
+  \beta_t = \frac12\ln\left(\frac{1-e_t}{e_t}\right)
+\end{equation}
+and
+\begin{equation}
+  e_t = \sum_i w_i^{t-1}c_i^t\left|\bar\epsilon-\epsilon_i^t\right|.
+\end{equation}
+
+This leads to a single BDT whose response is analagous to \Eq{eq:ada:fullbdt} but with the addition
+of the target efficiency $\bar\epsilon$
+\begin{equation}
+  T(x_i,\bar\epsilon) = \sum_{t=1}^{N_\mathrm{trees}} \alpha_tT_t(x_i,\bar\epsilon).
+  \label{eq:ada:fullbdt}
+\end{equation}
+Therefore, a single of these BDTs is assiciated with a given target efficiency, where
+fraction of $T(x_i,\epsilon)>\bar T(\bar\epsilon)$ is $\bar\epsilon$.
+An arbiary number of BDTs can be concatinated, each with a different target efficiency, and the
+total response is
+\begin{equation}
+  \mathcal{T}(x_i) =
+  \frac1N\sum_{e=1}^{N}\Theta\left(T(x_i, \bar\epsilon) - \bar T(\bar\epsilon)\right).
+\end{equation}
 
 
 
 
 
 
+%builds on the AdaBoost algorithm;
+%with additional weight given to events in the training sample
 
 %This resulting split leaves two sub-nodes, one classifing predominantly background- and the other
 %predominantly signal-like events.
