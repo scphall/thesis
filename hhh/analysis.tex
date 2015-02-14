@@ -27,10 +27,22 @@ Each hadron must have $\pt>500\gev$.
 For the \phik system, the additional constraint that the \decay{\phi}{\kk} object must have an
 invariant mass within $12\mev$ of $m_\phi^\pdg$.
 
+To change the signal yields into branching fractions normalization channels were needed.
+The normalization channel for the decays \btokpipimumu and \btophikmumu are \btopsitwosk and
+\btojpsiphik (where \psitwostojpsipipi and \jpsitomumu) respectively.
+These are chosen to have the same final state particles as the signal decays to ensure that PID
+efficiencies cancel.
+The decay \btojpsikpipi is also used in this analysis for cross-checks and in training the BDT (as
+described in \Sect{sec:hhh:bdt}).
+All these decays were subject to the same selection criteria except for requirements on the
+invariant mass of the dimuon pair.
+For each \psitwos and \jpsi candidate, it is required that
+$|m_{\mu\mu}-m_\psitwos^\pdg|<50\mev$ and
+$|m_{\mu\mu}-m_\jpsi^\pdg|<50\mev$ respectively.
+
 
 
 \subsection{Peaking backgrounds}
-
 Processes with the same final state as \btokpipimumu and \btophikmumu are not smoothly distributed
 in $m_{K\pi\pi\mu\mu}$, rather they peak under the signal.
 The tree level decays \decay{\Bp}{\jpsi\kpipi} and \decay{\Bp}{\jpsi\phik}, where
@@ -82,7 +94,7 @@ This potential background was removed by calculating the invariant mass of each 
 $\mu^+K^-$ combination, where the hadron was assigned the muon mass.
 If the mass of this object fell within $50\mev$ of $m_\jpsi$ or $m_\psitwos$, then the candidate
 was vetoed.
-Figure~\reF{fig:hhh:misid} shows the effect on these vetoes, and demonstraaaates that a large part
+Figure~\ref{fig:hhh:misid} shows the effect on these vetoes, and demonstraaaates that a large part
 of the background that is removed by these vetoes is from the decay
 $\decay{\Bp}{\jpsi\rho(770)^0\Kp}$.
 
@@ -113,8 +125,35 @@ Other peaking backgrounds D0...
 
 
 \subsection{Multivariate selection}
+\label{sec:hhh:bdt}
 Combinatorial background was suppressed using a BDT trained using the AdaBoost
-algorithm~\cite{AdaBoost}; for more details please refer to \Sect{sec:bdt:ada}.
+algorithm~\cite{AdaBoost}, which is described in detail in \Sect{sec:bdt:ada}.
+This BDT was trained using the variables listed in \Tab{hhh:tab:bdtvars}, where the signal and
+background samples were taken from data.
+The sample of data used as the signal-proxy wa w
+
+The signal-proxy used taken from  the of \btojpsikpipi
+
+
+\begin{table}
+  \caption{\small
+    Input variables used to train the BDT to distinguish between signal \btokpipimumu decays and
+    combinatorial backgrounds.
+  }
+  \label{hhh:tab:bdtvars}
+  \begin{center}
+    \begin{tabular}{cr}\hline
+      Particle & Variable\\ \hline\hline
+      $\Bp$ & $\pt$\\
+      & $\chisq_{IP}$\\
+      & $\chisq_{FD}$\\
+      & $\chisq_{Vtx}$\\
+      & ${\rm DIRA}$\\ \hline
+      $\Kp, \pip, \pim, \mup, \mun$ & $\pt$\\
+      & $\chisq_{IP}$\\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
 
 
 
