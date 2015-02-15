@@ -11,7 +11,7 @@ with muons in the final state.
 %There is large overlap between the...
 
 Candidate \Bp hadrons are then formed from combinations of three hadrons and a pair of opposite
-sign nuons.
+sign muons.
 Fully reconstructed candidates must form a good quality vertex, with a \chisq of the vertex fit
 $<6$.
 This secondary vertex must be well displaced from any PV, having a flight distance inconsistent
@@ -94,7 +94,7 @@ This potential background was removed by calculating the invariant mass of each 
 $\mu^+K^-$ combination, where the hadron was assigned the muon mass.
 If the mass of this object fell within $50\mev$ of $m_\jpsi$ or $m_\psitwos$, then the candidate
 was vetoed.
-Figure~\ref{fig:hhh:misid} shows the effect on these vetoes, and demonstraaaates that a large part
+Figure~\ref{fig:hhh:misid} shows the effect on these vetoes, and demonstrates that a large part
 of the background that is removed by these vetoes is from the decay
 $\decay{\Bp}{\jpsi\rho(770)^0\Kp}$.
 
@@ -106,12 +106,12 @@ $\decay{\Bp}{\jpsi\rho(770)^0\Kp}$.
     \caption{\small
       Invariant mass of the combination of a muon and a hadron of the opposite charge
       reconstructed under the muon mass hypothesis.
-      The left-hand plot shows the distributions before the veto of isidentification of the \jpsi
+      The left-hand plot shows the distributions before the veto of misidentification of the \jpsi
       and \psitwos, while the right-hand plot shows the distribution after the vetoes.
       The blue circles are the distribution of $m(\mu\mu\to\mu\pi)$ (solid circles having the same
       charge as the kaon) and red square show the $m(\mu\mu\to\mu K)$ distribution.
       There is a feature at low mass in the $m(\mu\mu\to\mu\pi)$ spectrum which is removed by the
-      vetoes, and originates from the backgrtound decay $\decay{\Bp}{\jpsi\rho(770)^0\Kp}$.
+      vetoes, and originates from the background decay $\decay{\Bp}{\jpsi\rho(770)^0\Kp}$.
     }
     \label{fig:hhh:misid}
   \end{center}
@@ -128,12 +128,17 @@ Other peaking backgrounds D0...
 \label{sec:hhh:bdt}
 Combinatorial background was suppressed using a BDT trained using the AdaBoost
 algorithm~\cite{AdaBoost}, which is described in detail in \Sect{sec:bdt:ada}.
-This BDT was trained using the variables listed in \Tab{hhh:tab:bdtvars}, where the signal and
-background samples were taken from data.
-The sample of data used as the signal-proxy wa w
+Both signal and background samples used for BDT training were taken from data.
+The sample of data used as the signal-proxy was from  the decay \btojpsikpipi, which had been
+\emph{sWeighted}~\cite{splot} for the purpose of removing combinatorial background from the
+training sample.
+For the background sample, selected signal mode data was taken from the upper mass sideband of the
+\Bp candidate mass, in the range $5530<m_{K\pi\pi\mu\mu}<5780\mev$.
+These candidates are not used for the determination of the signal yield, and at this high mass are
+comprised solely of combinatorial background.
 
-The signal-proxy used taken from  the of \btojpsikpipi
-
+This BDT was trained using selection of geometric and kinematic variables, the exact variables are
+listed in \Tab{hhh:tab:bdtvars}.
 
 \begin{table}
   \caption{\small
@@ -142,15 +147,125 @@ The signal-proxy used taken from  the of \btojpsikpipi
   }
   \label{hhh:tab:bdtvars}
   \begin{center}
-    \begin{tabular}{cr}\hline
-      Particle & Variable\\ \hline\hline
-      $\Bp$ & $\pt$\\
-      & $\chisq_{IP}$\\
-      & $\chisq_{FD}$\\
-      & $\chisq_{Vtx}$\\
-      & ${\rm DIRA}$\\ \hline
-      $\Kp, \pip, \pim, \mup, \mun$ & $\pt$\\
-      & $\chisq_{IP}$\\ \hline
+    \begin{tabular}{lc}\\\toprule
+      Particle & Variable\\\midrule
+      \Bp & \pt\\
+      & \chisqip \\
+      & \chisqfd\\
+      & \chisqvtx\\
+      & $\theta_\mathrm{dir}$\\\midrule
+      Tracks & \pt\\
+      & \chisqip\\
+      %\hline
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+\subsubsection[Optimization of \btokpipimumu cuts]
+{Optimization of \tmath{\btokpipimumu} cuts}
+The determination of the optimum cut value on the BDT was made in conjunction with optimizing PID
+criteria on each hadron.
+For the decay \btokpipimumu, a requirement that $\dllkpi(\Kp)-\dllkpi(\pip)>10$ was made, this
+simply ensured that of the two hadrons with the same sign, the one identified as a kaon had more of
+a kaon like signature than the other.
+Then, optimization was made in the three dimensions of BDT, $\dllkpi(\Kp)$ and $\dllkpi(\pi^\pm)$
+by maximising the figure of merit $S/\sqrt{S+B}$, where $S$ and $B$ are the expected signal and
+background yields respectively.
+The value of $S$ was determined by scaling the weighted sum of selected \btojpsikpipi events,
+$N_{\jpsi\kpipi}$, according to
+\begin{equation}
+  S =
+  \frac{
+    \BF\left(\decay{\Bp}{\kone{1270}\mumu}\right)
+    \BF\left(\decay{\kone{1270}}{\kpipi}\right)
+  }{
+    \BF\left(\decay{\Bp}{\jpsi\kpipi}\right)
+    \BF\left(\decay{\jpsi}{\mumu}\right)
+  }
+  \cdot
+  N_{\jpsi\kpipi}.
+\end{equation}
+Where, branching fraction values used in this calculation are taken to be
+$\BF\left(\decay{\kone{1270}}{\kpipi}\right) = 35.7\,\%$~\cite{PDG2012},
+$\BF\left(\jpsitomumu\right) = 5.93\,\%$~\cite{PDG2012} and
+$\BF\left(\btojpsikpipi\right) = 8.1\e{-4}$~\cite{PDG2012}.
+Estimation of the branching fraction of the signal decay \decay{\Bp}{\kone{1270}\mumu} is made
+assuming the ratio of the branching fractions for the known decays \decay{B}{X\mumu} to
+\decay{B}{X\mumu}
+is the same for $X$ being the \kone{1270} or \Kstarent.
+Thus,
+\begin{align}
+  \BF\left(\decay{\Bp}{\kone{1270}\mumu}\right)
+  &=
+  \BF\left(\decay{\Bp}{\kone{1270}\gamma}\right)
+  \cdot\frac{
+    \BF\left(\decay{\Bp}{K^*(892)^0\mumu}\right)
+  }{
+  \BF\left(\decay{\Bp}{K^*(892)^0\gamma}\right)
+  }\nonumber\\
+  &=\left(1.05\pm0.34\right)\e{-6}.
+\end{align}
+
+%This optimization was performed using the cross-check channel \btojpsikpipi, where $S$ was defined
+%as the weighted sum of events that pass a given set of cuts, and $B$ was
+%where $S$ is defined as the
+
+The value of the estimated background yield, $B$, was determined from interpolating signal
+\btokpipimumu candidates from the sidebands into the mass regions around the mass of the \Bp meson.
+Candidates falling in the low and high mass sidebands
+(defined by $5000<m_{K\pi\pi\mu\mu}<m_{\Bp}^\pdg-120\mev$ and
+$m_{\Bp}^\pdg+120<m_{K\pi\pi\mu\mu}<5750\mev$ respectively),
+were fitted to an exponential, and the value of $B$ was taken to be the integral of this
+distribution within $60\mev$ of the known \Bp mass~\cite{PDG2012}.
+
+
+\subsubsection[Optimization of \btokpipimumu cuts]
+{Optimization of \tmath{\btokpipimumu} cuts}
+This channel follows a similar procedure for optimization as for the decay \btokpipimumu.
+The optimization is performed in multiple dimensions (BDT and $\dllkpi(K^\pm)$) with the chosen
+selection of cuts maximizing the figure of merit $S/\sqrt{S+B}$.
+
+\begin{equation}
+  S =
+  \frac{
+    \BF\left(\decay{\Bp}{\phi\Kp\mumu}\right)
+  }{
+    \BF\left(\decay{\Bp}{\jpsi\phik}\right)
+    \BF\left(\decay{\jpsi}{\mumu}\right)
+  }
+  \cdot
+  N_{\jpsi\phi\Kp}.
+\end{equation}
+
+
+\begin{align}
+  \BF\left(\decay{\Bp}{\phi\Kp\mumu}\right)
+  &=
+  \BF\left(\decay{\Bp}{\phi\Kp\gamma}\right)
+  \cdot\frac{
+    \BF\left(\decay{\Bp}{K^*(892)^0\mumu}\right)
+  }{
+    \BF\left(\decay{\Bp}{K^*(892)^0\gamma^{}}\right)
+  }\nonumber\\
+  &=\left(0.66\pm0.12\right)\e{-7}.
+\end{align}
+
+
+
+\begin{table}
+  \caption{\small
+    THINGS
+  }
+  \label{tab:hhh:opt}
+  \begin{center}
+    \begin{tabular}{lrrc}\toprule
+      \ccell{Decay} & \ccell{$S$} & \ccell{$B$} & \ccell{$S/\sqrt{S+B}$} \\
+      \midrule
+      \btokpipimumu & 304 & 166 & 14.0 \\
+      \btophikmumu  &  28 &   8 & \pz4.7 \\
+      \bottomrule
     \end{tabular}
   \end{center}
 \end{table}
@@ -159,11 +274,7 @@ The signal-proxy used taken from  the of \btojpsikpipi
 
 
 
-
-
-
-\subsection{Particle identification}
-\subsection{Reweighting of variables}
+%\subsection{Reweighting of variables}
 
 
 

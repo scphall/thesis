@@ -1,33 +1,77 @@
 \section[Differential branching fraction measurements of the decay \btokpipimumu]{
-  Differential branching fraction measurements of the decay $\boldsymbol{\btokpipimumu}$
+  Differential branching fraction measurements of the decay \tmath{\btokpipimumu}
 }
 
 Given the statistics available for this channel, the differential branching fraction,
 $\dBF(\btokpipimumu)\dqsq$ was calculated in bins of \qsq.
 The differential branching fraction for a bin of width $\Delta\qsq$ is
-\begin{multline}
+%\begin{multline}
+  %\frac{d}{\dqsq}\BF\left(\btokpipimumu\right)
+  %=
+  %\frac{1}{\Delta\qsq} \cdot
+  %\frac{\num{sig}}{\num{norm}} \cdot
+  %\frac{\eff{norm}}{\eff{sig}} \\
+  %\times\BF\left(\btopsitwosk\right) \cdot
+  %\BF\left(\psitwostojpsipipi\right) \cdot
+  %\BF\left(\jpsitomumu\right),
+%\end{multline}
+\begin{equation}
   \frac{d}{\dqsq}\BF\left(\btokpipimumu\right)
   =
   \frac{1}{\Delta\qsq} \cdot
   \frac{\num{sig}}{\num{norm}} \cdot
-  \frac{\eff{norm}}{\eff{sig}} \\
-  \times\BF\left(\btopsitwosk\right) \cdot
+  \frac{\eff{norm}}{\eff{sig}} \cdot
+  \BF_\mathrm{tot}\left(\btopsitwosk\right)
+\end{equation}
+where,
+\begin{equation}
+  \BF_\mathrm{tot}\left(\btopsitwosk\right)
+  =
+  \BF\left(\btopsitwosk\right) \cdot
   \BF\left(\psitwostojpsipipi\right) \cdot
   \BF\left(\jpsitomumu\right),
-\end{multline}
-where \num{sig} is the yield of the signal decay \btokpipimumu in the given \qsq bin and \num{norm}
+\end{equation}
+\num{sig} is the yield of the signal decay \btokpipimumu in the given \qsq bin and \num{norm}
 is the yield of the normalization channel.
 Total efficiencies for reconstruction and selection are denoted by \eff{sig} and \eff{norm} for the
 signal and normalization channels respectively.
 
 The normalization channel was chosen to be \btopsitwosk, where \psitwostojpsipipi and \jpsitomumu,
-which has a total brnaching fraction of $(1.264 \pm 0.0052)\e{-5}$~\cite{PDG2012}.
-This was chosen for the normlization channel over the decay \btojpsikpipi because it has a relavive
+which has a total branching fraction of $(1.264 \pm 0.0052)\e{-5}$~\cite{PDG2012}.
+This was chosen for the normalization channel over the decay \btojpsikpipi because it has a relative
 uncertainty of $4\,\%$ rather than $16\,\%$ for $\BF(\btojpsikpipi) = (8.1\pm1.3)\e{-4}$.
 
 
-
-
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}
+  \begin{center}
+    \caption{\small
+      %Signal yields for the decay $\btokpipimumu$
+      %and resulting differential branching fractions in bins of \qsq.
+      %The first contribution to the uncertainty is statistical, the second systematic,
+      %where the uncertainty due to the branching fraction of the normalisation channel is included.
+      %The $q^2$ binning used corresponds to the binning used in previous analyses of
+      %$b\to s\mup\mun$
+      %decays~\cite{LHCb-PAPER-2013-017,LHCb-PAPER-2013-037,LHCb-PAPER-2013-019}.
+      %Results are also presented for the $q^2$ range from $1$ to $6\gevgevcccc$, where theory
+      %predictions are expected to be most reliable.
+    }
+    \label{tab:hhh:diffbf}
+    \begin{tabular}{ccc}\toprule
+      \qsq bin $[\gevgevcccc]$  & $N_\sig$ & $\tfrac{\dBF}{\dqsq}\;[\e{-8}\pergevgevcccc]$
+      \\\midrule
+      $[\pz0.10,\pz2.00]$ & $134.1\,^{+12.9}_{-12.3}$     & $7.01\,^{+0.69}_{-0.65} \pm 0.47$ \\
+      $[\pz2.00,\pz4.30]$ & $\pz56.5\,^{+\pz9.7}_{-\pz9.1}$ & $2.34\,^{+0.41}_{-0.38} \pm 0.15$ \\
+      $[\pz4.30,\pz8.68]$ & $119.9\,^{+14.6}_{-13.7}$     & $2.30\,^{+0.28}_{-0.26} \pm 0.20$ \\
+      $[10.09,12.86]$     & $\pz54.0\,^{+10.1}_{-\pz9.4}$   & $1.83\,^{+0.34}_{-0.32} \pm 0.17$ \\
+      $[14.18,19.00]$     & $\pzz3.3\,^{+\pz2.8}_{-\pz2.1}$ & $0.10\,^{+0.08}_{-0.06} \pm 0.01$ \\
+      %\midrule
+      %$[\pz1.00,\pz6.00]$ & $144.8\,^{+14.9}_{-14.3}$     & $2.75\,^{+0.29}_{-0.28} \pm 0.16$ \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+}
 
 %Due to the high statistics of the decay \btokpipimumu, its braching fraction was also measured
 %differentially, in bins of the invariant mass squared of the dimuon system (\qsq).
@@ -51,13 +95,13 @@ uncertainty of $4\,\%$ rather than $16\,\%$ for $\BF(\btojpsikpipi) = (8.1\pm1.3
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.48\textwidth]{b2kpipimumu}
-    \includegraphics[width=0.48\textwidth]{q2_r2}
-    \includegraphics[width=0.48\textwidth]{q2_r3}
-    \includegraphics[width=0.48\textwidth]{q2_r4}
-    \includegraphics[width=0.48\textwidth]{q2_r5}
-    \includegraphics[width=0.48\textwidth]{q2_r6}
+    \includegraphics[width=0.48\textwidth]{kpipimumu_q2_r2}
+    \includegraphics[width=0.48\textwidth]{kpipimumu_q2_r3}
+    \includegraphics[width=0.48\textwidth]{kpipimumu_q2_r4}
+    \includegraphics[width=0.48\textwidth]{kpipimumu_q2_r5}
+    \includegraphics[width=0.48\textwidth]{kpipimumu_q2_r6}
     \caption{\small
-      Invariant mass distriburtions of \btokpipimumu candidates in bins of \qsq with projections of
+      Invariant mass distributions of \btokpipimumu candidates in bins of \qsq with projections of
       fits overlaid, the upper left plot is a separate fit to the full \qsq range.
       The signal signal component (light blue) is modelled by the sum of two Gaussian
       distributions, and the background component (dark blue) is an exponential function.
@@ -74,13 +118,53 @@ uncertainty of $4\,\%$ rather than $16\,\%$ for $\BF(\btojpsikpipi) = (8.1\pm1.3
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.48\textwidth]{b2psi2sk}
     \includegraphics[width=0.48\textwidth]{b2kpipijpsi}
+    \includegraphics[width=0.48\textwidth]{b2psi2sk}
     \caption{\small
+      Distributions of the invariant mass of the
+      (a) cross-check channel \btojpsikpipi and
+      (b) normalization mode \btopsitwosk.
+      Projections from the fit are overlayed, where the light blue is the yield of the indicated
+      decay, and the dark blue is the background component.
     }
-    \label{}
+    \label{fig:hhh:norm}
   \end{center}
 \end{figure}
+
+
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{kpipi_fromjpsi}
+    \includegraphics[width=0.48\textwidth]{kpipi_frommumu}
+    \caption{\small
+      Invariant mass distributions of the \kpipi object, from the
+      (a) signal decay \btokpipimumu and the
+      (b) control channel \btojpsikpipi which have been background subtracted
+      using the \emph{sPlot}~\cite{splot} technique.
+      The vertical lines indicate the central masses of the \kone{1270} and \kone{1400}
+      resonances.
+    }
+    \label{fig:hhh:kpipi}
+  \end{center}
+\end{figure}
+
+
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{diffbf}
+    \caption{\small
+      Differential branching fraction $\tfrac{d}{\dqsq}\BF\left(\btokpipimumu\right)$
+      (as given in Table~\protect\ref{tab:hhh:diffbf}), where the
+      errors shown include both statistical and systematic uncertainties.
+      Shaded areas indicate the vetoed \jpsi and \psitwos resonances.
+    }
+    \label{fig}
+  \end{center}
+\end{figure}
+
+
 
 
 
