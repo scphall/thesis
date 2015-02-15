@@ -123,7 +123,6 @@ Other peaking backgrounds D0...
 
 
 
-
 \subsection{Multivariate selection}
 \label{sec:hhh:bdt}
 Combinatorial background was suppressed using a BDT trained using the AdaBoost
@@ -165,6 +164,7 @@ listed in \Tab{hhh:tab:bdtvars}.
 
 \subsubsection[Optimization of \btokpipimumu cuts]
 {Optimization of \tmath{\btokpipimumu} cuts}
+\label{sssec:opt:kpipi}
 The determination of the optimum cut value on the BDT was made in conjunction with optimizing PID
 criteria on each hadron.
 For the decay \btokpipimumu, a requirement that $\dllkpi(\Kp)-\dllkpi(\pip)>10$ was made, this
@@ -220,13 +220,21 @@ $m_{\Bp}^\pdg+120<m_{K\pi\pi\mu\mu}<5750\mev$ respectively),
 were fitted to an exponential, and the value of $B$ was taken to be the integral of this
 distribution within $60\mev$ of the known \Bp mass~\cite{PDG2012}.
 
+After calculating the figure of merit for a range of different cuts, the maximum figure of merit
+was found (as shown in \Tab{tab:hhh:opt}), and corresponding cut values used for the analysis.
+The exact requirements for the PID were that $\dllkpi(\Kp)>3.5$, $\dllkpi(\pi^\pm)<14.5$ and
+$\mathrm{BDT}>0.025$.
 
-\subsubsection[Optimization of \btokpipimumu cuts]
-{Optimization of \tmath{\btokpipimumu} cuts}
+
+\subsubsection[Optimization of \btophikmumu cuts]
+{Optimization of \tmath{\btophikmumu} cuts}
 This channel follows a similar procedure for optimization as for the decay \btokpipimumu.
-The optimization is performed in multiple dimensions (BDT and $\dllkpi(K^\pm)$) with the chosen
+Optimization was performed in multiple dimensions (BDT and $\dllkpi(K^\pm)$) with the chosen
 selection of cuts maximizing the figure of merit $S/\sqrt{S+B}$.
-
+The calculation of $B$ was made in the same way as described above, and the
+value of $S$ was determined in a similar way, by scaling the \emph{sWeighted} sum of candidates
+that passed given cuts by the ratio of known branching fractions.
+Therefore,
 \begin{equation}
   S =
   \frac{
@@ -238,8 +246,8 @@ selection of cuts maximizing the figure of merit $S/\sqrt{S+B}$.
   \cdot
   N_{\jpsi\phi\Kp}.
 \end{equation}
-
-
+BLAH
+BLAH
 \begin{align}
   \BF\left(\decay{\Bp}{\phi\Kp\mumu}\right)
   &=
@@ -251,17 +259,18 @@ selection of cuts maximizing the figure of merit $S/\sqrt{S+B}$.
   }\nonumber\\
   &=\left(0.66\pm0.12\right)\e{-7}.
 \end{align}
-
+BLAH
 
 
 \begin{table}
   \caption{\small
-    THINGS
+    Expected values for $S$ and $B$ for the maximum value of the figure of merit $S/\sqrt{S+B}$.
+    These are taken from the 2012 sample only.
   }
   \label{tab:hhh:opt}
   \begin{center}
     \begin{tabular}{lrrc}\toprule
-      \ccell{Decay} & \ccell{$S$} & \ccell{$B$} & \ccell{$S/\sqrt{S+B}$} \\
+      \cellc{Decay} & \cellc{$S$} & \cellc{$B$} & \cellc{$S/\sqrt{S+B}$} \\
       \midrule
       \btokpipimumu & 304 & 166 & 14.0 \\
       \btophikmumu  &  28 &   8 & \pz4.7 \\
@@ -272,9 +281,9 @@ selection of cuts maximizing the figure of merit $S/\sqrt{S+B}$.
 
 
 
-
-
 %\subsection{Reweighting of variables}
+
+
 
 
 
