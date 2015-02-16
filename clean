@@ -7,13 +7,18 @@ then
   exit
 fi
 DIR=$(echo $1 | sed 's/\///')
-rm -vf $AUXDIR/$1.*
 if [ -f $DIR/main.tex ]
 then
   echo Cleaning $DIR
+  rm -vf $AUXDIR/$1.*
   touch $DIR/main.tex
+elif [ $1 = "bak" ]
+then
+  echo "Cleaning .bak files"
+  rm -v */*.bak
 else
   echo "clean help"
   echo "Clean a specific subdirectory and make ready for remaking"
 fi
+
 
