@@ -9,11 +9,14 @@ must be made in order to determine the branching fractions for the decays \btokp
 These efficiencies were calculated using simulated events; therefore, in order that the above
 efficiencies are correct it is imperitive that thesimulated events describe the data accurately.
 
-There are some variables which are known to be poorly described in data, particularly track
+There are some variables which are known to be poorly described in simulation, particularly track
 multiplicity and the \chisqvtx of the \Bp candidate.
-Track multiplicity is known to be poorly modeled by simulation, as can be seen in
-\Fig{fig:hhh:ntracks}.
-
+The effects of these discrepancies are minimalised by reweighting simulated events using
+the distributions of \btojpsikpipi.
+Track multiplicity is known to be poorly described in simulation, generally the number of tracks is
+less than in data, these discrepancies are illustrated in \Fig{fig:hhh:ntracks}.
+Aside from the direct differencies, the low track multiplicity of in sumulated events is a
+contributing factor of PID variables being badly described in simulations.
 
 \begin{figure}
   \begin{center}
@@ -26,6 +29,45 @@ Track multiplicity is known to be poorly modeled by simulation, as can be seen i
     \label{fig:hhh:ntracks}
   \end{center}
 \end{figure}
+
+To ensure that efficiencies from PID cuts are determined accurately from simulation, the variables
+must be corrected.
+This is done with data driven methods, using highly pure samples of pions, kaons
+and muons (which came from the decays \decay{\Dstarp}{\Dz\pip}, where \decay{\Dz}{\Km\pip}, and
+\jpsitomumu).
+For each track in the simulated \Bp candidate, a new PID variable is rasampled from PID
+distributions of the pure track samples as a function of the track's $\eta$, $p$ and track
+multiplicity.
+Only required for kaons and pions, the muon PID distribution is well described in simulation.
+Figure~\ref{fig:hhh:pid} shows the effect of this resampling technique, it is observed that the
+simulated PID distributions that have been resampled matches data distributions much more than the
+raw distributions; the differences that remain are accounted for in the systematic uncertainties.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{pid_Kplus}
+    \includegraphics[width=0.48\textwidth]{pid_piplus}\\
+    \includegraphics[width=0.48\textwidth]{pid_piminus}
+    \caption{\small
+      The effect of PID resampling for simulated tracks using pure samples of pions, kaons and
+      muons.
+      There is marked improvement in the similarity of the (black circles) \btojpsikpipi data and
+      simulated events before (red line) resampling and after (red squares).
+    }
+    \label{fig:hhh:pid}
+  \end{center}
+\end{figure}
+
+
+%Tracking efficiencies and isMuon
+
+
+
+
+
+
+
+
 
 
 
