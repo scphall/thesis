@@ -3,15 +3,15 @@
 
 The CKM matrix is defined as:
 \begin{equation}
-  V = \left(V_{uL}V_{dL}^\dagger\right) =
+  \VCKM = \left(\V{uL}V_{dL}^\dagger\right) =
   \begin{pmatrix}
     \V{ud} & \V{us} & \V{ub} \\
     \V{cd} & \V{cs} & \V{cb} \\
     \V{td} & \V{ts} & \V{tb} \\
   \end{pmatrix},
 \end{equation}
-where each $|V_{ij}|$ parameterizes the probability of an up-type quark, $i$, transistioning to a
-down-type quark $j$.
+where each $|V_{ij}|$ parameterizes the probability of an up-type quark, $i$, transistioning to
+down-type quark $j$ in a weak interaction.
 In the SM, it is assumed that the total charged current couplings of up- to down-type quarks is the
 same as down- to up-type.
 This means that the CKM matrix is unitary, $V^\dagger V = \mathbb{1}$, and therefore it contains
@@ -33,14 +33,20 @@ matrix.
 %complex phase ($\delta$).
 
 There are many ways of representing the CKM matrix, one way is as a product of three rotation
-matrices, one of which contains the complex phase, this is the \emph{standard} parameterization.
+matrices, one of which contains the complex phase, this is the known as the \emph{standard}
+parameterization.
 The \emph{Wolfenstein} parameterization is obtained by defining
 \begin{align}
-  \sin\theta_{12}&=\lambda,
-  & \sin\theta_{23}&=A\lambda^2,
-  & \mathrm{and}&
-  & e^{-i\delta}\sin\theta_{13} &= A\lambda^3(\rho-i\eta),
+  \sin\theta_{12}&=\lambda, \nonumber\\
+  \sin\theta_{23}&=A\lambda^2, \nonumber\\
+  e^{-i\delta}\sin\theta_{13} &= A\lambda^3(\rho-i\eta),
 \end{align}
+%\begin{align}
+  %\sin\theta_{12}&=\lambda,
+  %& \sin\theta_{23}&=A\lambda^2,
+  %& \mathrm{and}&
+  %& e^{-i\delta}\sin\theta_{13} &= A\lambda^3(\rho-i\eta),
+%\end{align}
 %Because this matrix can be written as a product of three rotation
 %matrices (with angles $\theta_{12}$, $\theta_{13}$ and $\theta_{23}$) and the CP violating phase
 %($\delta$), it can be parameterized in terms of $\lambda$, $A$, $\rho$ and $\eta$.
@@ -49,14 +55,14 @@ The \emph{Wolfenstein} parameterization is obtained by defining
 %and Taylor expanding products of the three rotation matrices, it can be shown that:
 which results in
 \begin{align}
-  V\simeq
+  \VCKM\simeq
     \begin{pmatrix}
       %1-\tfrac12\lambda & \lambda & A\lambda^3(\rho-i\eta+\tfrac{i}2\eta\lambda^2) \\
       %-\lambda & 1-\lambda^2-i\eta A^2\lambda^4 & A\lambda^2(1+i\eta\lambda^2) \\
       %A\lambda^3(1-\rho-i\eta) & -A\lambda^2 & 1 \\
-      1-\tfrac12\lambda & \lambda & A\lambda^3(\rho-i\eta) \\
+      1-\tfrac12\lambda & \lambda & A\lambda^3\big(\rho-i\eta\big) \\
       -\lambda & 1-\lambda^2 & A\lambda^2 \\
-      A\lambda^3(1-\rho-i\eta) & -A\lambda^2 & 1 \\
+      A\lambda^3\big(1-\rho-i\eta\big) & -A\lambda^2 & 1 \\
     \end{pmatrix}.
   \label{eq:th:wolfenstein}
 \end{align}
@@ -64,14 +70,15 @@ which results in
 %\begin{align}
   %\lambda &= 0.22537\pm0.00061, & A =
 %\end{align}
-Since $A,\lambda\neq0$, it is clear that $V$ is not diagonal, and therefore flavour changing
-currents are allowed in the SM.
+Since $A\neq0$ and $\lambda\neq0$, it is clear that \VCKM is not diagonal, and therefore flavour
+changing currents are allowed in the SM.
 However, the diagonal elements are close to unity and the CKM matrix exhibits a strong
-hierarchichal structure, for which there is no explaination in the SM.
+hierarchichal structure, such that it is most probable that weak currents do not violate flavour.
+%for which there is no explaination in the SM.
 
 
 
-Unitarity can be expressed as
+The unitarity condition can be expressed as
 $V_{\alpha\beta}^{\phantom{\dagger}}V_{\beta\gamma}^* = \delta_{\alpha\gamma}$
 %\begin{equation}
   %V_{\alpha\beta}^{\phantom{\dagger}}V_{\beta\gamma}^* = \delta_{\alpha\gamma},
@@ -80,17 +87,18 @@ $V_{\alpha\beta}^{\phantom{\dagger}}V_{\beta\gamma}^* = \delta_{\alpha\gamma}$
   %\sum_{i=1}^3\left(V_{ij}^*V_{jk}\right) = \mathbb{1},
   %\label{eq:th:unitarity}
 %\end{equation}
-which gives six equations, when $\delta_{\alpha\gamma} = 0$, of the form:
+which, when $\alpha\neq\gamma$, gives six equations of the form:
 \begin{align}
   %\sum_{i=1}^3V_{ij}^*V_{ki} &= 0 && \sum_{i=1}^3V_{ji}^*V_{ik} =0, & j&\neq k;
-  \sum_{\alpha=1}^3V_{\alpha\beta}^*V_{\gamma\alpha}^{\phantom{*}} &= 0
+  \phantom{\beta\neq\gamma}&&\sum_{\alpha=1}^3V_{\alpha\beta}^*V_{\gamma\alpha}^{\phantom{*}} &= 0
   && \sum_{\alpha=1}^3V_{\beta\alpha}^*V_{\alpha\gamma}^{\phantom{*}}=0, & \beta&\neq\gamma.
   \label{eq:th:offdiag}
 \end{align}
 These equations map closed triangles on the complex plane.
-Two of these triangles have all sides of similar length
-($\mathcal{O}(\lambda^3)$).
-One of these is referred to as \emph{the} Unitarity Triangle (UT) and is described by
+%Two of these triangles have all sides of similar length
+One of these triangeles, which has sides of similar length,
+$\big(\mathcal{O}(\lambda^3)\big)$,
+is known as \emph{the} Unitarity Triangle (UT) and is described by
 %Taking the equations of the triangles in Eq.~\ref{eq:th:unitarity} where all sides have length of
 %$\mathcal{O}(\lambda^3)$ leaves two triangles, one of which is:
 \begin{equation}
@@ -98,23 +106,25 @@ One of these is referred to as \emph{the} Unitarity Triangle (UT) and is describ
   1 + \frac{\V{ud}\Vconj{ub}}{\V{cd}\Vconj{cb}} + \frac{\V{td}\Vconj{tb}}{\V{cd}\Vconj{cb}} = 0.
   \label{eq:th:ut}
 \end{equation}
-The UT has a base of unit length and an apex at
-%$\bar\rho+i\bar\eta = (1-\tfrac12\lambda^2)(\rho+i\eta)$.
-\begin{equation}
+The UT is depicted in \Fig{fig:th:ut}, it has a base of unit length, an apex at
+\begin{align}
   %\bar\rho+i\bar\eta = (1-\tfrac12\lambda^2)(\rho+i\eta)
-  \bar\rho+i\bar\eta = (1-\tfrac12\lambda^2)(\rho+i\eta) =
-  \frac{\V{ud}\Vconj{ub}}{\V{cd}\Vconj{cb}}
-\end{equation}
+  \bar\rho+i\bar\eta &= (1-\tfrac12\lambda^2)(\rho+i\eta) \nonumber\\
+  &=\frac{\V{ud}\Vconj{ub}}{\V{cd}\Vconj{cb}}
+\end{align}
 %If divided through by $\V{cd}\Vconj{cb}$, then Eq.~\ref{eq:th:ut} can be mapped onto the complex
 %plane, where the apex is at $\bar\rho+i\bar\eta = (1-\tfrac12\lambda^2)(\rho+i\eta)$.
-and the angles are
+%and the angles are
+and forms the angles
 \begin{align}
-  \alpha &=    \arg\left(-\frac{\V{td}\Vconj{tb}}{\V{ud}\Vconj{ub}}\right), &
-  \beta  &=\pi-\arg\left( \frac{\V{td}\Vconj{tb}}{\V{cd}\Vconj{cb}}\right), & &\mathrm{and} &
+  \alpha &=    \arg\left(-\frac{\V{td}\Vconj{tb}}{\V{ud}\Vconj{ub}}\right), \nonumber\\
+  \beta  &=\pi-\arg\left( \frac{\V{td}\Vconj{tb}}{\V{cd}\Vconj{cb}}\right), \nonumber\\
+  %& &\mathrm{and}
   \gamma &=    \arg\left( \frac{\V{ud}\Vconj{ub}}{\V{cd}\Vconj{cb}}\right).
 \end{align}
+which define phase differences between edges.
 %are phases between CKM matrix elements.
-This triangle is depicted in \Fig{fig:th:ut}.
+%This triangle is depicted in \Fig{fig:th:ut}.
 %, is simply a graphical representation of the CKM matrix.
 %Measurements of CKM matrix elements constrain the angles, side lengths and apex of the UT, these
 %constraints are also shown in Fig.~\ref{fig:th:ut}.
@@ -145,11 +155,14 @@ is shown in \Fig{fig:th:ut}.
 If additional CP-violating phases were to exist beyond the SM, their effect would be seen in global
 fits of the UT.
 
+
 Each CKM matrix element is ususally measured in a particular way.
-For example, the elements \V{td} and \V{ts} are measured using $B-\bar B$ oscillations since tree
+For example, the elements \Vtxt{td} and \Vtxt{ts} are measured using $B-\Bbar$ oscillations since tree
 level determination using \tquark quarks is difficult to do with precision.
 However, the nature of NP is unknown and could effect different processes in different ways.
-A good example of this is \V{ub}, which is the CKM element known to the lowest degree of accuracy.
+A good example of this is \Vtxt{ub}, which is the CKM element known to the lowest degree of accuracy.
+
+
 
 %A determination of \V{ub}
 %can be made using inclusive and exculsive measurements of
