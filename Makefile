@@ -15,10 +15,17 @@ MAINS = $(wildcard */main.tex)
 TARGETS = $(addsuffix .pdf,$(addprefix $(PDFDIR)/,$(subst /main.tex,,$(MAINS))))
 BIBSOURCES = $(wildcard $(BIBSOURCES)/*.bib)
 
+UNAME := $(shell uname)
+OPEN = open $(PDFDIR)/recent.pdf
+ifeq ($(UNAME),Linux)
+	OPEN=evince $(PDFDIR)/recent.pdf &
+endif
+
+
 all: $(TARGETS)
 
 $(PDFDIR)/%.pdf: %/*.tex
-	sed 's/XXX/$*/g' thesis/template.tex > $(OUTDIR)/$*.tex
+	sed 's/XXX/$*/g' Thesis/template.tex > $(OUTDIR)/$*.tex
 	$(LATEX) --output-directory=$(OUTDIR) $(OUTDIR)/$*
 	bibtex $(OUTDIR)/$*
 	xindy -L english -C utf8 -I xindy -M \
@@ -30,7 +37,7 @@ $(PDFDIR)/%.pdf: %/*.tex
 	mv -f $(OUTDIR)/$*.pdf $(PDFDIR)/recent.pdf
 
 open:
-	open $(PDFDIR)/recent.pdf
+	@$(OPEN)
 
 .PHONY: info clean count
 info:
@@ -45,3 +52,5 @@ count:
 	@date "+%m-%d-%Y" >> $(META)
 	@texcount -inc -total Thesis/main.tex | tee -a $(META)
 	@texcount -inc -total Thesis/main.tex | tr : "|" | grep -v Total >> README.md
+
+
