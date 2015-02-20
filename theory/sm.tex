@@ -126,7 +126,7 @@ Inserting Eq.~\ref{eq:th:phi2} into Eq.~\ref{eq:th:laghiggs1} gives:
   \frac{1}{2}\big(\partial_\mu H\big)\big(\partial^\mu H\big)
   +\mu^2H^2
   +\left(m_W^2W_\mu^+W^{-\mu} + \frac{m_Z^2}{2}Z_\mu Z^\mu\right)
-  \cdot
+  %\cdot
   \left(1 + \frac{H}{v}\right)^{\!2}
   \label{eq:th:laghiggs2}
 \end{equation}
@@ -150,15 +150,17 @@ and so cannot be added to \Lag{SM}.
 Instead, masses are generated through the Yukawa couplings (\Lag{Yuk} in \Eq{eq:th:lag}), which
 describe interactions between all fermionic fields and the Higgs doublet, and can be written
 \begin{equation}
-  \Lag{Yuk} = \sum_{\substack{\ell=\\e,\mu,\tau}}\left(\Lag{Yuk}^\ell\right) + \Lag{Yuk}^q,
+  %\Lag{Yuk} = \sum_{\substack{\ell=\\e,\mu,\tau}}\big(\Lag{Yuk}^\ell\big) + \Lag{Yuk}^q,
+  \Lag{Yuk} = \sum_{\ell}\big(\Lag{Yuk}^\ell\big) + \Lag{Yuk}^q,
   \label{eq:th:yukking}
 \end{equation}
-where $\ell$ and $q$ denote the lepton and quark interactions, respectively.
+%where $\ell$ and $q$ denote the lepton and quark interactions, respectively.
+where term denote lepton ($\ell\in{e,\mu,\tau}$ and quark interactions, respectively.
 %
 Each lepton term:
 \begin{equation}
   \Lag{Yuk}^\ell
-  = - g_\ell\big(\bar\chi_L\Phi \ell_R + \bar \ell_R\Phi^\dagger\chi_L\big),
+  = - g_\ell\Big(\bar\chi_L\Phi \ell_R + \bar \ell_R\Phi^\dagger\chi_L\Big),
 \end{equation}
 where $g_\ell$ is a coupling constant, contains the chiral operators $\ell_R$ and
 \begin{align}
@@ -168,7 +170,7 @@ After SSB the Lagrangian becomes
 \begin{align}
   \Lag{Yuk}^\ell
   %= - \frac{v}{\sqrt{2}}g_\ell \big(\bar\ell_L\ell_R + \bar\ell_R\ell_L\big)\cdot
-  = - m_\ell \big(\bar\ell_L\ell_R + \bar\ell_R\ell_L\big)\cdot
+  = - m_\ell \Big(\bar\ell_L\ell_R + \bar\ell_R\ell_L\Big)%\cdot
   \left(1 + \frac{H}{v}\right)
 \end{align}
 where
@@ -224,7 +226,7 @@ After SSB, and the Higgs acquires a VEV, \Eq{eq:th:lagyukq} becomes:
   + y_{ij}^\dquark\bar\dquark_L^i\dquark_{R,j},
   + \mathrm{h.c.}
   \right)
-  \cdot
+  %\cdot
   \left(1 + \frac{H}{v}\right).
   \label{eq:th:lagyuk2}
 \end{equation}
@@ -233,8 +235,8 @@ Similar to lepton masses, in \Eq{eq:leptonmass}, quark mass are defined as
   m_{ij}^u = -\frac{1}{\sqrt{2}}vy_{ij}^u &&
   m_{ij}^d = -\frac{1}{\sqrt{2}}vy_{ij}^d.
 \end{align}
-However, it is more convenient to change a basis in which the matrix $m^q$ is diagonal, using the
-rotation matrices $V_L$ and $V_R$
+However, it is more convenient to change a basis in which the matrix $m^q$, where $q\in\{u,d\}$ is
+diagonal, using the rotation matrices $V_L$ and $V_R$
 \begin{align}
   m_{il}^{u\prime} =  \big(V_L^{u\dagger}\big)_{ij} m_{jk}^u\big(V_R^u\big)_{kl} &&
   m_{il}^{d\prime} =  \big(V_L^{d\dagger}\big)_{ij} m_{jk}^d\big(V_R^d\big)_{kl}
@@ -244,7 +246,7 @@ This transformation is exactly equivalent to transforming the up- and
 down-type chiral quark fields accordingly
 \begin{align}
   q_L^\prime = \big(V_L^q\big)q_{L}^{} &&
-  q_R^\prime = \big(V_R^q\big)q_{R}^{},
+  q_R^\prime = \big(V_R^q\big)q_{R}^{}.
 \end{align}
 Applying these transformations to all parts of \Lag{SM} leaves the majority of it unchanged, since
 $V_{L}^{q\dagger} V_{L}^{q} = V_{R}^{q\dagger} V_{R}^{q} = \mathbb{1}$.
@@ -275,7 +277,7 @@ However, this is not the case in the charged current (CC) part of \Lag{\it q}; w
     \VCKMconj\bar d_L^{\,\prime} u_L^\prime W^-_\mu
   \bigg].
 \end{align}
-The matrix $\VCKM=\V{uL}V_{dL}^\dagger$ is known as the \ckm
+The matrix $\VCKM=V^{\phantom{\dagger}}_{uL}V_{dL}^\dagger$ is known as the \ckm
 matrix and parameterizes the couplings between up- and down-type quarks in charged weak currents.
 
 

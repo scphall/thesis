@@ -10,11 +10,11 @@ The \ckm matrix is defined as:
     \V{td} & \V{ts} & \V{tb} \\
   \end{pmatrix},
 \end{equation}
-where each $|V_{ij}|$ parameterizes the probability of an up-type quark, $i$, transitioning to
-down-type quark $j$ in a weak interaction.
+where each $|V_{ij}|$ parameterizes the probability of an up-type quark, of generation $i$,
+transitioning to down-type quark, $j$, in a weak interaction.
 In the SM, it is assumed that the total charged current couplings of up- to down-type quarks is the
 same as down- to up-type.
-This means that the CKM matrix is unitary, $V^\dagger V = \mathbb{1}$, and therefore it contains
+This means that the CKM matrix is unitary, $\VCKMconj\VCKM = \mathbb{1}$, and therefore it contains
 four physical parameters: three angles ($\theta_{12}$, $\theta_{13}$ and $\theta_{23}$) and one
 complex phase ($\delta$).
 In fact, the observation of CPV in kaon mixing led to the prediction of a third generation before
@@ -79,7 +79,8 @@ hierarchical structure, such that it is most probable that weak currents do not 
 
 
 The unitarity condition can be expressed as
-$V_{\alpha\beta}^{\phantom{\dagger}}V_{\beta\gamma}^* = \delta_{\alpha\gamma}$
+$\Vconj{\alpha\beta}\V{\beta\gamma}=\delta_{\alpha\gamma}$
+%$V_{\alpha\beta}^{\phantom{\dagger}}V_{\beta\gamma}^* = \delta_{\alpha\gamma}$
 %\begin{equation}
   %V_{\alpha\beta}^{\phantom{\dagger}}V_{\beta\gamma}^* = \delta_{\alpha\gamma},
   %\boldsymbol{V}_{ij}\boldsymbol{V}_{jk}^\dagger = \delta_{ik}.
@@ -87,11 +88,13 @@ $V_{\alpha\beta}^{\phantom{\dagger}}V_{\beta\gamma}^* = \delta_{\alpha\gamma}$
   %\sum_{i=1}^3\left(V_{ij}^*V_{jk}\right) = \mathbb{1},
   %\label{eq:th:unitarity}
 %\end{equation}
-which, when $\alpha\neq\gamma$, gives six equations of the form:
+which, when $\delta_{\alpha\gamma}=0$, gives six equations of the form:
 \begin{align}
   %\sum_{i=1}^3V_{ij}^*V_{ki} &= 0 && \sum_{i=1}^3V_{ji}^*V_{ik} =0, & j&\neq k;
-  \phantom{\beta\neq\gamma}&&\sum_{\alpha=1}^3V_{\alpha\beta}^*V_{\gamma\alpha}^{\phantom{*}} &= 0
-  && \sum_{\alpha=1}^3V_{\beta\alpha}^*V_{\alpha\gamma}^{\phantom{*}}=0, & \beta&\neq\gamma.
+  \phantom{\beta\neq\gamma}
+  &&\sum_{\beta=1}^3V_{\alpha\beta}^*V_{\beta\gamma}^{\phantom{*}} = 0,
+  &&\sum_{\beta=1}^3V_{\alpha\beta}^{\phantom{*}}V_{\beta\gamma}^*=0;
+  &&\alpha\neq\gamma.
   \label{eq:th:offdiag}
 \end{align}
 These equations map closed triangles on the complex plane.
@@ -118,10 +121,13 @@ The \ut is depicted in \Fig{fig:th:ut}, it has a base of unit length, an apex at
 %and the angles are
 and forms the angles
 \begin{align}
-  \alpha &=    \arg\left(-\frac{\V{td}\Vconj{tb}}{\V{ud}\Vconj{ub}}\right), \nonumber\\
-  \beta  &=\pi-\arg\left( \frac{\V{td}\Vconj{tb}}{\V{cd}\Vconj{cb}}\right), \nonumber\\
-  %& &\mathrm{and}
-  \gamma &=    \arg\left( \frac{\V{ud}\Vconj{ub}}{\V{cd}\Vconj{cb}}\right).
+  \alpha &= \arg\left(-\frac{\V{td}\Vconj{tb}}{\V{ud}\Vconj{ub}}\right), \nonumber\\
+  \beta  &= \arg\left(-\frac{\V{cd}\Vconj{cb}}{\V{td}\Vconj{tb}}\right), \nonumber\\
+  \gamma &= \arg\left(-\frac{\V{ud}\Vconj{ub}}{\V{cd}\Vconj{cb}}\right).
+  %\alpha &=    \arg\left(-\frac{\V{td}\Vconj{tb}}{\V{ud}\Vconj{ub}}\right), \nonumber\\
+  %\beta  &=\pi-\arg\left( \frac{\V{td}\Vconj{tb}}{\V{cd}\Vconj{cb}}\right), \nonumber\\
+  %%& &\mathrm{and}
+  %\gamma &=    \arg\left( \frac{\V{ud}\Vconj{ub}}{\V{cd}\Vconj{cb}}\right).
 \end{align}
 which define phase differences between edges.
 %are phases between CKM matrix elements.
@@ -143,6 +149,9 @@ which define phase differences between edges.
     where the base has been normalized to unit length.
     Alongside is shown the same triangle with coloured bands indicating various constraints on
     side lengths, angles and position of the apex.
+    The constraints on \V{ub} from the combination of inclusive and exclusive modes
+    ($|\V{ub}|_\mathrm{SL}$) is given separately to a value obtained using
+    $\BF\left(\decay{\Bp}{\taup\nu_\tau}\right)$, ($|\V{ub}|_{\tau\nu}$).
   }
   \label{fig:th:ut}
 \end{figure}
@@ -165,10 +174,6 @@ is shown in \Fig{fig:th:ut}.
 %However, the nature of NP is unknown and could effect different processes in different ways.
 %A good example of this is \Vtxt{ub}, which is the CKM element known to the lowest degree of accuracy.
 %}
-
-
-
-
 
 
 
