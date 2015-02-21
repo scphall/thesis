@@ -39,6 +39,7 @@ $(PDFDIR)/%.pdf: %/*.tex
 open:
 	@$(OPEN)
 
+
 .PHONY: info clean count
 info:
 	@echo $(TARGETS)
