@@ -1,0 +1,109 @@
+%\documentclass{standalone}
+%\documentclass[a4paper,class=article,border=0pt]{standalone}
+\documentclass[tikz,margin=0.5pt]{standalone}
+\usepackage{tikz}
+\usepackage{pdftricks}
+\begin{psinputs}
+  \usepackage{pstricks}
+  \usepackage{pst-node}
+\end{psinputs}
+%\documentclass{article}
+%\documentclass[margin=3pt,pdftricks]{standalone}
+%\begin{psinputs}
+  %\usepackage{pstricks}
+  %\usepackage{pst-node}
+%\end{psinputs}
+\usepackage{pgfplots}
+\usepackage{xparse}
+\usepackage{graphicx}
+\usetikzlibrary{shapes,arrows,positioning}
+\input{symbols-feyn}
+
+\usetikzlibrary{positioning,arrows,patterns}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{calc}
+
+\tikzset{
+  %photon/.style={decorate, decoration={snake,amplitude=5}, draw=black},
+  photon/.style={decorate, decoration={snake}, draw=black},
+  photonloop/.style={decorate, decoration={snake,segment length=8.3}, draw=black},
+  higgs/.style={decorate, dashed, draw=black},
+  fermion/.style={draw=black, postaction={decorate},
+    decoration={markings,mark=at position .55 with {\arrow{>}}}},
+  antifermion/.style={draw=black, postaction={decorate},
+    decoration={markings,mark=at position .55 with {\arrow{<}}}},
+  vertex/.style={draw,shape=circle,fill=black,minimum size=3pt,inner sep=0pt},
+  svertex/.style={draw,shape=circle,fill=black,minimum size=0.75pt,inner sep=0pt},
+}
+
+\NewDocumentCommand\semiloop{O{black}mmmmm}
+{%
+  \draw[#1]
+    let \p1 = (#2),
+        \n1 = {(#3)},
+        \n2 = {(#4)},
+        \n3 = {(#5)}
+    in (#2) #6 arc (\n3:\n2:\n1);
+}
+
+
+
+% Flowchart
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110,
+  minimum width=3cm, minimum height=1cm, text centered, draw=black,
+fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text
+centered, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text
+centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+
+
+
+\begin{document}
+
+\begin{tikzpicture}[node distance=1cm and 1cm,line width=1.1pt]
+  \coordinate[label=left:\bquark] (i1);
+  \coordinate[label=above left:$V_{tb}$,vertex,right=1.5 of i1] (v1);
+  \coordinate[label=above right:$V_{ts}$,vertex,right=1.5 of v1] (v2);
+  \coordinate[right=0.6 of v2] (d2);
+  \coordinate[left=0.3 of v2] (d3);
+  \coordinate[vertex,above=0.67 of d3] (v5);
+  \coordinate[vertex,above=1.5 of d2] (v6);
+  \coordinate[label=right:\squark,right=1.6 of v2] (o1);
+  \coordinate[label=right:\mun,above=1 of o1] (o7);
+  \coordinate[label=right:\mup,above=2 of o1] (o8);
+  \draw[fermion] (v1) arc (180:0:0.85) ++(-1.1,1.0) node[left] {\tquark};
+  \draw[photonloop] (v2) arc (0:-180:0.85) ++(1.4,-0.55) node[left] {$W^+$};
+  \draw[fermion] (i1) -- (v1);
+  \draw[fermion] (v2) -- (o1);
+  \draw[photon] (v6) -- (v5) node [black,midway,yshift=1em,xshift=-1em] {$\gamma/Z$};
+  \draw[fermion] (v6) -- (o7);
+  \draw[antifermion] (v6) -- (o8);
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[node distance=1cm and 1cm,line width=1.1pt]
+  \coordinate[label=left:\bquark] (i1);
+  \coordinate[label=above left:$V_{tb}$,vertex,right=1.5 of i1] (v1);
+  \coordinate[vertex,above=1.5 of v1] (v2);
+  \coordinate[label=above right:$V_{ts}$,vertex,right=1.5 of v1] (v3);
+  \coordinate[vertex,right=1.5 of v2] (v4);
+  \coordinate[label=right:\squark,right=1.5 of v3] (o1);
+  \coordinate[label=right:\mup,above=2.2 of o1] (o2);
+  \coordinate[label=right:\mun,above=2.8 of o1] (o3);
+  \draw[fermion] (i1) -- (v1);
+  \draw[fermion] (v1) -- (v3) node[midway,above] {$\tquark$};
+  \draw[fermion] (v3) -- (o1);
+  \draw[fermion] (v2) -- (v4) node[midway,below] {${\nu}_\mu$};
+  \draw[photon] (v1) -- (v2) node[midway,xshift=-1em,yshift=0.5em] {\Wm};
+  \draw[photon] (v3) -- (v4) node[midway,xshift=1.4em,yshift=0.5em] {\Wp};
+  \draw[fermion] (v2) -- (o3);
+  \draw[antifermion] (v4) -- (o2);
+\end{tikzpicture}
+
+\end{document}
+
