@@ -120,6 +120,14 @@ $\decay{\Bp}{\jpsi\rho(770)^0\Kp}$.
 Other peaking backgrounds D0...
 
 
+Semileptonic cascades, where a \bquark decays via $\decay{b}{c\mun\bar\nu_\mu}$ and subsequently
+$\decay{c}{s\mup\nu_\mu}$, can have branching fractions as high as $\mathcal{O}(10^{-4})$.
+For example, the decay $\decay{\Bp}{\Dm\pip\mup\nu_\mu}$ followed by
+$\decay{\Dm}{\Kp\pim\mun\bar\nu_\mu}$ has a total branching fraction of
+$(1.6\pm0.3)\e{-4}$~\cite{PDG2014}.
+Selection requrements on the \chisqvtx suppress these decays significantly, and the energy lost to
+the neutrinos means that this background peaks considerably below the known \Bp mass.
+
 
 
 
@@ -220,10 +228,22 @@ $m_{\Bp}^\pdg+120<m_{K\pi\pi\mu\mu}<5750\mev$ respectively),
 were fitted to an exponential, and the value of $B$ was taken to be the integral of this
 distribution within $60\mev$ of the known \Bp mass~\cite{PDG2012}.
 
-After calculating the figure of merit for a range of different cuts, the maximum figure of merit
+Figure~\ref{fig:kpipi:opt} shows the value of the figure of merit for different BDT and PID cuts.
+The maximum figure of merit
 was found (as shown in \Tab{tab:hhh:opt}), and corresponding cut values used for the analysis.
 The exact requirements for the PID were that $\dllkpi(\Kp)>3.5$, $\dllkpi(\pi^\pm)<14.5$ and
 $\mathrm{BDT}>0.025$.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{blank}
+    \includegraphics[width=0.48\textwidth]{blank}
+    \caption{\small
+      FILL IN.
+    }
+    \label{fig:kpipi:opt}
+  \end{center}
+\end{figure}
 
 
 \subsubsection[Optimization of \btophikmumu cuts]
@@ -238,29 +258,42 @@ Therefore,
 \begin{equation}
   S =
   \frac{
-    \BF\left(\decay{\Bp}{\phi\Kp\mumu}\right)
+    \BF\big(\decay{\Bp}{\phi\Kp\mumu}\big)
   }{
-    \BF\left(\decay{\Bp}{\jpsi\phik}\right)
-    \BF\left(\decay{\jpsi}{\mumu}\right)
+    \BF\big(\decay{\Bp}{\jpsi\phik}\big)
+    \BF\big(\decay{\jpsi}{\mumu}\big)
   }
   \cdot
-  N_{\jpsi\phi\Kp}.
+  N\big(\jpsi\phi\Kp\big).
 \end{equation}
-BLAH
-BLAH
+where $N\big(\jpsi\phik\big)$ is the weighted number of selected \btojpsiphik events.
+The expected background yield is determined using an exponential fit across the signal region, as
+is done for the \btokpipimumu channel.
+The prediction for the branching fraction of the signal channel is taken to be
 \begin{align}
-  \BF\left(\decay{\Bp}{\phi\Kp\mumu}\right)
+  \BF\big(\decay{\Bp}{\phi\Kp\mumu}\big)
   &=
-  \BF\left(\decay{\Bp}{\phi\Kp\gamma}\right)
+  \BF\big(\decay{\Bp}{\phi\Kp\gamma}\big)
   \cdot\frac{
-    \BF\left(\decay{\Bp}{K^*(892)^0\mumu}\right)
+    \BF\big(\decay{\Bp}{K^*(892)^0\mumu}\big)
   }{
-    \BF\left(\decay{\Bp}{K^*(892)^0\gamma^{}}\right)
+    \BF\big(\decay{\Bp}{K^*(892)^0\gamma^{}}\big)
   }\nonumber\\
-  &=\left(0.66\pm0.12\right)\e{-7}.
+  &=\big(0.66\pm0.12\big)\e{-7}.
 \end{align}
-BLAH
+Figure~\ref{fig:phik:opt} shows the variation of the figure of metric for different values of the
+BDT and $\dllkpi(K)$ cuts, the optimal values are given in \Table{tab:hhh:opt}.
 
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{blank}
+    \includegraphics[width=0.48\textwidth]{blank}
+    \caption{\small
+      FILL IN.
+    }
+    \label{fig:phik:opt}
+  \end{center}
+\end{figure}
 
 \begin{table}
   \caption{\small
@@ -281,11 +314,11 @@ BLAH
 
 
 
+
+
+
+
 %\subsection{Reweighting of variables}
-
-
-
-
 
 
 %\section{Backgrounds}
