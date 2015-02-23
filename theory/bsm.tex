@@ -37,6 +37,7 @@ Determinations of \V{ub} from these sources are:
   |\V{ub}| &= \big(3.28\pm{0.29}\big)\e{-3},  & \big(\mathrm{inclusive}\big)\text{\cite{PDG2014}}&\nonumber\\
   |\V{ub}| &= \big(4.22\pm{0.42}\big)\e{-3},  & \big(\decay{\Bp}{\taup\nu_\tau}\big)\text{\cite{PDG2012}}&\nonumber\\
   %|\V{ub}| &= \big(4.22\pm{0.42}\big)\e{-3}  & \big(\decay{\Bp}{\taup\nu_\tau}\big)\text{\cite{{PhysRevD.88.031102}&\nonumber
+  \label{eq:th:vub}
 \end{align}
 limits on \ut measurements are shown in \Fig{fig:th:ut}.
 There are obvious tensions between the inclusive and exclusive modes, which could hint at some new
@@ -105,6 +106,7 @@ becomes a field, the quanta of which are called axions.
 
 
 \subsection{Manifestation of physics beyond the SM}
+\label{sec:th:bsm:man}
 
 The most general way to parameterize NP is with an effective Lagrangian describing generic
 interactions at an energy scale $\mu$, in which long and short distance effects are separated.
@@ -118,7 +120,7 @@ given dimension, $d$:
   \Lag{eff}
   =
   \Lag{SM} + \sum_d\frac1{\Lambda^{d-4}}
-  + \sum_ic_i^{(d)}\mathcal{O}_i^{(d)}.
+  \sum_ic_i^{(d)}\mathcal{O}_i^{(d)}.
   \label{eq:th:lageff}
 \end{equation}
 Processes that cause FCNCs contribute in $d=6$, and can be written as
@@ -157,7 +159,7 @@ flavour structure.
 The effective Hamiltonian for the FCNC $\decay{b}{s\ell^+\ell^-}$ is given by:
 \begin{equation}
   \Ham{eff} = -4\frac{G_F}{\sqrt{2}}\Vconj{ts}\V{tb}\frac{e^2}{16\pi^2}
-  \sum_{i}\big(c_i(\mu)\mathcal{O}_i(\mu) c_i(\mu)^\prime\mathcal{O}_i^\prime(\mu)\big)
+  \sum_{i}\big(c_i(\mu)\mathcal{O}_i(\mu)+c_i(\mu)^\prime\mathcal{O}_i^\prime(\mu)\big)
 \end{equation}
 similar to \Eq{eq:th:lageff}, where the coefficients are known as Wilson coefficients, which
 correspond to the Wilson operators $\mathcal{O}_{1-10}$.
@@ -165,14 +167,14 @@ The operators $\mathcal{O}_{1-6}$ are sensitive to long distance contributions s
 loops.
 Operators which are particularly sensitive to NP contributions in \decay{b}{s\mumu} transitions are
 \begin{align}
-  \Op{7} &= \frac{m_b}{e}\big(\bar s \sigma_{\mu\nu}P_Rb\big)F^{\mu\nu}
-  &\Op{7}^\prime &= \frac{m_b}{e}\big(\bar s \sigma_{\mu\nu}P_Lb\big)F^{\mu\nu}
+  \Op{7\pz} &= \frac{m_b}{e}\big(\bar s \sigma_{\mu\nu}P_Rb\big)F^{\mu\nu}
+  &\Op{7\pz}^\prime &= \frac{m_b}{e}\big(\bar s \sigma_{\mu\nu}P_Lb\big)F^{\mu\nu}
   \nonumber\\
   %\mathcal{O}_8 &= g\frac{m_b}{e^2}\big(\bar s \sigma_{\mu\nu}T^aP_Rb\big)G^{\mu\nu a}
   %&\mathcal{O}_8^\prime &= g\frac{m_b}{e^2}\big(\bar s \sigma_{\mu\nu}T^aP_Rb\big)G^{\mu\nu a}
   %\\
-  \Op{9} &= \big(\bar s\gamma_\mu P_Lb\big)\big(\bar\ell\gamma^\mu\ell\big)
-  &\Op{9}^\prime &= \big(\bar s\gamma_\mu P_Rb\big)\big(\bar\ell\gamma^\mu\ell\big)
+  \Op{9\pz} &= \big(\bar s\gamma_\mu P_Lb\big)\big(\bar\ell\gamma^\mu\ell\big)
+  &\Op{9\pz}^\prime &= \big(\bar s\gamma_\mu P_Rb\big)\big(\bar\ell\gamma^\mu\ell\big)
   \nonumber\\
   \Op{10} &= \big(\bar s\gamma_\mu P_Lb\big)\big(\bar\ell\gamma^\mu\gamma_5\ell\big)
   &\Op{10}^\prime &= \big(\bar s\gamma_\mu P_Rb\big)\big(\bar\ell\gamma^\mu\gamma_5\ell\big)
@@ -220,20 +222,25 @@ mixing with a $H$ or $Z$.
 The axion could be such a particle, as could the inflaton or dark $Z$; models including these
 particles are further detailed in \Sec{sec:db:intro}.
 
-
 %Dark Matter is the lightest supersymmetric particle which is stable and messenger particle is super
 %goldstino
-Supersymmetry (SUSY) is a popular theory which solves a host of problems with the SM.
-It introduces a new spectrum of particles, each of which mirrors a SM particle but whose spin
-differs by half.
-This new symmetry immediately solves the hierarchy problem and supplies a Dark Matter candidate in
-the shape of the lightest supersymmetric particles.
-The messenger particles are super goldtinos that arise from the breaking of the symmetry,
-
-
-However, the scale of the masses of the new particles are undefined, meaning
-they could appear anywhere from a few TeV up to the Planck scale.
-
+Supersymmetry (SUSY) theory which indroduces an additional super-particle for each SM fermion and
+gauge boson, whose spin is different by a half integer.
+The Higgs sector in SUSY comprises four Higgs doublets; two are spin-0 and two are spin-$\tfrac12$,
+and then there are two each for $Y=\pm\tfrac12$.
+After SUSY is broken there are five Higgs physical scalar particles, two are CP-even ($h^0$,
+$H^0$) one is CP-odd scalar ($A^0$) and two charged are charged ($H^\pm$).
+Supersymmetry supplies a Dark Matter candidate in the shape of the lightest supersymmetric
+particle, which could communicate with the visible sector via a super-golstino.
+It also immediately solves the hierarchy problem.
+The masses of the super-particles are unconstrained, and could be anywhere between a few TeV and
+the Planck scale.
+%The theory of SUSY immediately solves the hierarcy problem and provide a candidate for Dark Matter
+%in the shape of the lightest supersymmetric particle.
+%Super-goldstino
+%The messenger particles are super goldtinos that arise from the breaking of the symmetry,
+%However, the scale of the masses of the new particles are undefined, meaning
+%they could appear anywhere from a few TeV up to the Planck scale.
 
 
 The most pessimistic solution to the flavour problem is Minimal Flavour Violation (MFV)
@@ -248,7 +255,6 @@ be many TeV.
 The relatively high luminosity of interactions supplied by the \lhc mean that \lhcb is also
 sensitive to low coupling strengths, such as messenger particles from the dark sector.
 The following chapters explore a variety of different searches for beyond Standard Model physics.
-
 
 
 

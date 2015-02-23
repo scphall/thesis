@@ -93,16 +93,17 @@ centered, draw=black, fill=green!30]
   \coordinate[label=above right:$V_{ts}$,vertex,right=1.5 of v1] (v3);
   \coordinate[vertex,right=1.5 of v2] (v4);
   \coordinate[label=right:\squark,right=1.5 of v3] (o1);
-  \coordinate[label=right:\mup,above=2.2 of o1] (o2);
+  %\coordinate[label=right:\mup,above=2.2 of o1] (o2);
   \coordinate[label=right:\mun,above=2.8 of o1] (o3);
+  \coordinate[label=right:\mup,right=1.5 of v4] (o4);
   \draw[fermion] (i1) -- (v1);
   \draw[fermion] (v1) -- (v3) node[midway,above] {$\tquark$};
   \draw[fermion] (v3) -- (o1);
-  \draw[fermion] (v2) -- (v4) node[midway,below] {${\nu}_\mu$};
+  \draw[antifermion] (v2) -- (v4) node[midway,below] {${\bar\nu}_\mu$};
   \draw[photon] (v1) -- (v2) node[midway,xshift=-1em,yshift=0.5em] {\Wm};
   \draw[photon] (v3) -- (v4) node[midway,xshift=1.4em,yshift=0.5em] {\Wp};
   \draw[fermion] (v2) -- (o3);
-  \draw[antifermion] (v4) -- (o2);
+  \draw[antifermion] (v4) -- (o4);
 \end{tikzpicture}
 
 \end{document}

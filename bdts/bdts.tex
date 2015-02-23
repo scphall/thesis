@@ -1,15 +1,15 @@
 %\chapter{BDTs}
 
 The analyses detailed in \Chap{ch:hhh}, \Chap{ch:dsphi} and \Chap{ch:db} of this thesis, make
-prodigious use of multivariate techniques for the removal of combinatorial backgrounds.
-Combinatorial background is formed from a random combination of tracks that happen to form a well
-defined vertex and pass selection criteria.
+prodigious use of multivariate techniques to reduce combinatorial backgrounds.
+Combinatorial background is formed from a random combination of tracks which appear to form a
+vertex and pass selection criteria.
 To remove these backgrounds multivariate analysis (MVA) techniques can be employed.
 A multivariate discriminator exploits correlations between weakly discriminating variables to
 produce a single, more separating, classifier.
 
-An MVA algorithm takes a sample of the signal and background candidates to separate, and a set of
-variables to be used.
+An MVA algorithm takes as inpuy a sample of the signal and background candidates which are to be
+separated, and a set of variables to be used.
 Samples of events are split in two, some are used for training the MVA, and the remaining are used
 for testing it.
 The input, or training, variables define an $n$-dimensional space populated by the input samples.
@@ -21,82 +21,111 @@ a weighted training sample, including negative weights, and can exploit non-line
 between variables~\cite{Breiman,Roe}.
 
 A BDT is composed of a combination of numerous Decision Trees (DTs), each of which is a classifier
-in its own right, but can only distinguish between high density populations of signal and
+--- albeit a weak classifier ---
+in its own right, and can only distinguish between high density populations of signal and
 background candidates.
-The objective is to use DTs to best separate signal and background.
-Training a DT begins with a single node, a decision is chosen which best separates the signal from
-background based on the value of the $\mathrm{G}_{ini}$ index, which is defined as
+
+Training a DT begins with a single parent node populated by the whole
+training sample, which inhabits the parameter space defined by the
+variables $x_i$, whose true distribution is $f(x_i)$.
+The sample on the parent node is split by selecting a cut based on maximizing some figure of merit.
+%This is then repeated until the child nodes reach a threshold of purity, where purity, $p$, is defined
+%This is then repeated until the child nodes reach a threshold of purity, where purity, $p$, is defined
+%as
+This process of splitting is repeated until there is no possible improvement in the purity of child
+nodes, where purity is defined as
+%at which point the node is dubbed a leaf and is not split.
+\begin{align}
+  p_\mathrm{sig} = \big(1-\eff{bkg}\big)\nonumber\\
+  p_\mathrm{bkg} = \big(1-\eff{sig}\big),
+\end{align}
+for signal and background respectively.
+The final child nodes, or leaves, are each associated with signal or background depending on the
+purity of the sample which populates it.
+Each leaf therefore maps out an area in $n$-dimensions, and is classified as a signal or background leaf
+depending on the purity of the training sample enclosed by that area.
+The hypothesised category, as output by the DT, $h(x_i)$, will ideally be equal to $f(x_i)$, but in reality there will be
+events which are misclassified.
+A figure of merit which is often used to determine the cut used at each node is the $G_{ini}$
+index, which is defined as
+%Training a DT begins with a single node, a decision is chosen which best separates the signal from
+%background based on the value of the $\mathrm{G}_{ini}$ index, which is defined as
 \begin{equation}
-  \mathrm{G}_{ini} = 2(1-\eff{sig})(1-\eff{bkg}) = 2\cdot\frac{b}{s+b}\cdot\frac{s}{s+b}
+  \mathrm{G}_{ini} = 2p_\mathrm{bkg}p_\mathrm{sig}
+  = 2\big(1-\eff{sig})(1-\eff{bkg}\big)
+  = 2\cdot\frac{b}{s+b}\cdot\frac{s}{s+b}
   = \frac{2sb}{(s+b)^2},
 \end{equation}
 where $s$ and $b$ are the weighted sum of signal and background candidates, respectively, at the
 node of interest.
-The efficiency of signal and background are denoted by \eff{sig} and \eff{bkg}, and the purity of a
-node is defined as $1-\varepsilon$.
-The decision, or cut, which results in the largest reduction in $\mathrm{G}_{ini}$ is the one that
-is chosen, since for a pure child node the aim is for a pure sample of signal or background, that
-is an efficiency \eff{sig} or \eff{bkg} to be zero.
-This process of splitting is repeated until there is no possible improvement in the purity of child
-nodes, at which point the node is dubbed a leaf and is not split.
-Each leaf maps out an area in $n$-dimensions, and is classified as a signal or background leaf
-depending on the purity of the training sample enclosed by that area.
-Candidates from the other samples can then be traced through the DT and assigned as being
-consistent with either signal or background.
-However, some candidates in the training sample will be misclassified.
+%The efficiency of signal and background are denoted by \eff{sig} and \eff{bkg}, and the purity of a
+%node is defined as $1-\varepsilon$.
+%The decision, or cut, which results in the largest reduction in $\mathrm{G}_{ini}$ is the one that
+%is chosen, since for a pure child node the aim is for a pure sample of signal or background, that
+%is an efficiency \eff{sig} or \eff{bkg} to be zero.
+%This process of splitting is repeated until there is no possible improvement in the purity of child
+%nodes, at which point the node is dubbed a leaf and is not split.
+%Each leaf maps out an area in $n$-dimensions, and is classified as a signal or background leaf
+%depending on the purity of the training sample enclosed by that area.
+%Candidates from the other samples can then be traced through the DT and assigned as being
+%consistent with either signal or background.
+%However, some candidates in the training sample will be misclassified.
 
-Decision Trees have the advantage of clarity over other machine learning algorithms such as neural
-nets, and can be written down exactly.
-They are also insensitive to variables with very little separation power because the
+Decision Trees have the advantages over other machine learning algorithms ---
+such as neural nets --- of being able to deal with weighted training samples, and being insensitive
+to variables with very little separation power because the
 $\mathrm{G}_{ini}$ index never identifies a cut on them as being profitable.
 However, DTs are sensitive to statistical fluctuations in the training sample.
-
-To negate this problem DTs can be \emph{Boosted} using one of a number of algorithms.
+To negate this problem DTs can be \emph{Boosted} using any one of a number of algorithms.
 The procedure of boosting removes the power of that statistical fluctuations has over the final
 Boosted Decision Tree (BDT).
 
-A different approach to training BDTs is taken in each of the analyses in this thesis.
-Each technique is outlined in the following sections.
+A different boosting method is used to train the BDT for each analyses in this thesis.
+The algorithms used are outlined in the remainder of this Chapter.
 
 
 \section{Bagging}
 \label{sec:bdt:bag}
 Bootstrap aggregating, or bagging~\cite{Bagging}, is a method of boosting whereby the effects of
-statistical fluctuations are lessened by making many independent DTs and using the average
-response.
-Assume a true distribution, $f(x_i)$, where $x_i$ are the training variables.
-The hypothesised value, from the output of a single DT, is $h_\alpha(x_i)$, for $1<\alpha<n$, where
-$n$ is the number of DTs and each DT has a weight, $w_\alpha$ assiciated with it.
-Using these definitions, it is possible to define three errors, namely:
+statistical fluctuations are lessened by making many independent DTs and using the
+and making a decision based on the average response.
+%Assume a true distribution, $f(x_i)$, where $x_i$ are the training variables.
+If the final BDT is composed of $n$ DTs, it is
+Training $n$ DTs, it is possible to define three errors, namely:
 square of the error of a single estimator
+%The hypothesised value, from the output of a single DT, is $h_t(x_i)$, for $1<t<n$, where
+%$n$ is the number of DTs and each DT has a weight, $w_\alpha$ assiciated with it.
+%Using these definitions, it is possible to define three errors, namely:
+%square of the error of a single estimator
 \begin{equation}
-  \epsilon_\alpha(x_i) = \left(f(x_i)-h_\alpha(x_i)\right)^2;
+  \epsilon_t(x_i) = \big(f(x_i)-h_t(x_i)\big)^2
   \label{eq:bdt:bag1}
 \end{equation}
+where the index $t$ denotes a signle DT;
 the weighted average of individual errors
 \begin{equation}
-  \bar\epsilon(x_i) = \sum_{\alpha=1}^nw_\alpha\epsilon_\alpha(x_i)
+  \bar\epsilon(x_i) = \frac1n\sum_{t=1}^n\epsilon_t(x_i);
   \label{eq:bdt:bag2}
 \end{equation}
 and the error of an ensemble of DTs
 \begin{equation}
-  e(x_i) = \left(f(x_i)-\bar h(x_i)\right)^2.
+  e(x_i) = \big(f(x_i)-\bar h(x_i)\big)^2.
   \label{eq:bdt:bag3}
 \end{equation}
-The weighted variance of response of the estimators $h_\alpha$ around a weighted mean is defined as
+The weighted variance of response of the estimators $h_t$ around a weighted mean is defined as
 \begin{equation}
-  V(x_i) = \sum_{\alpha=1}^nw_\alpha\left(h_\alpha(x_i) - \bar h(x_i)\right)^2.
+  V(x_i) = \frac1n\sum_{t=1}^nt\big(h_t(x_i) - \bar h(x_i)\big)^2.
   \label{eq:bdt:bag4}
 \end{equation}
-By inserting $f(x_i)-f(x_i)$ into \Eq{eq:bdt:bag4}, manipulating the algebra and remembering that
-$\sum_\alpha=1$, the relationship
+By inserting $f(x_i)-f(x_i)$ into \Eq{eq:bdt:bag4}, manipulating the algebra, the relationship
 \begin{equation}
   e(x_i) = \bar\epsilon(x_i) - V(x_i)
   \label{eq:bdt:bag5}
 \end{equation}
-can be derived.
+emerges.
 The means that the error squared of the ensemble of DTs is equal to the average error squared of an
-individual estimator, minus the weighted variance; therefore the process of bagging reduces the
+individual estimator, minus the weighted variance.
+Therefore the process of bagging reduces the
 effect of statistical fluctuations in the training samples~\cite{Krogh95neuralnetwork}.
 
 A bagged BDT is trained by randomly selecting events, with replacement, to train a single DT.
@@ -113,19 +142,26 @@ classifier, in the range zero to one.
 \section{AdaBoost}
 \label{sec:bdt:ada}
 The Adaptive Boost, AdaBoost, algorithm~\cite{AdaBoost} negates the effect of statistical
-fluctuations in a data set by increaging the weights of misclassified events.
-The algorithm begins by training a DT as described above, where each event has unit weight.
+fluctuations in a data set by increasing the weights of misclassified events.
+The algorithm begins by training a single DT as described above, where each event has unit weight.
 For subsequent DTs, the weight for each event, $i$, is modified for a tree $t$, to be
 \begin{equation}
   w_i^t = c_i^t \times w_i^{t-1},
   \label{eq:ada:wt}
 \end{equation}
-where the $c$ is determined to be
-\begin{equation}
-  c_i^t = e^{\alpha_t\gamma_i^t}.
-\end{equation}
-Here, $\gamma_i^t$ is unity if event $i$ was classified incorrectly in tree $t-1$, otherwise it is
-zero.
+where $c$ is determined to be
+\begin{align}
+  c_i^t &= \exp\big(\alpha_t\gamma_i^t\big),
+  &&
+  \gamma_i^t=\left\{
+    \begin{array}{l}
+      0\quad\text{event $i$ classified incorrectly by tree $t-1$} \\
+      1\quad\text{event $i$ classified correctly by tree $t-1$}
+    \end{array}
+  \right.
+\end{align}
+%Here, $\gamma_i^t$ is unity if event $i$ was classified incorrectly in tree $t-1$, otherwise it is
+%zero.
 The value of $\alpha_t$ is the weight that the DT carries, and is given by
 \begin{equation}
   \alpha_t = \frac12\ln\left(\frac{1-\epsilon_t}{\epsilon_t}\right)
@@ -133,10 +169,11 @@ The value of $\alpha_t$ is the weight that the DT carries, and is given by
 where $\epsilon$ is the weighted error rate.
 Weights are then renormalised such that they sum to unity.
 Multiple DTs are made in this fashion, forming a forest; where the response of the BDT classifier
-is a combination of responces from all DTs in the forest.
-The total response of a BDT, $T$, for an event characterized by $x_i$, is
+is a combination of responses from all DTs in the forest.
+The total response of a BDT, $T$, is
+%for an event characterized by $x_i$, is
 \begin{equation}
-  T(x_i) = \sum_{t=1}^{N_\mathrm{trees}} \alpha_tT_t(x_i)
+  T(x_i) = \sum_{t=1}^{n} \alpha_tT_t(x_i)
   \label{eq:ada:fullbdt}
 \end{equation}
 where $T_t(x_i)$ is the response of tree $t$, which returns one if it classifies $x_i$ as being
@@ -173,21 +210,21 @@ each DT.
 
 \section{uBoost}
 \label{sec:bdt:uboost}
-The uniform Boosting, uBoost, alorithm~\cite{Stevens:2013dya} is designed to give a uniform
+The uniform Boosting, uBoost, algorithm~\cite{Stevens:2013dya} is designed to give a uniform
 response in the signal efficiency of some variables $\zeta_i$.
-The proceedure of creating a uniform BDT, uBDT, builds from the weigting technique used in the
+The proceedure of creating a uniform BDT, uBDT, builds from the weighting technique used in the
 AdaBoost algorithm, but additional weight is applied to events that lie in a region of parameter
-space which is not prefoming with the desired efficiency.
+space which is not performing with the desired efficiency.
 Consider a BDT whose signal efficiency in the variables $\zeta_i$ is required to be $\epsilon$.
 The weighting of each event is modified from that used in the AdaBoost algorithm in \Eq{eq:ada:wt}
 to
 \begin{equation}
   w_i^t = u_i^t\times c_i^t \times w_i^{t-1},
 \end{equation}
-where $u$ deontes a weighting proportional to the distance away from $\epsilon$ in the local
+where $u$ denotes a weighting proportional to the distance away from $\epsilon$ in the local
 region:
 \begin{equation}
-  u_i^t = e^{\beta_t(\bar\epsilon-\epsilon_i^t}.
+  u_i^t = \exp\big(\beta_t(\bar\epsilon-\epsilon_i^t)\big).
 \end{equation}
 The boosting parameter $\beta$ is calculated as
 \begin{equation}
@@ -198,20 +235,22 @@ and
   e_t = \sum_i w_i^{t-1}c_i^t\left|\bar\epsilon-\epsilon_i^t\right|.
 \end{equation}
 
-This leads to a single BDT whose response is analagous to \Eq{eq:ada:fullbdt} but with the addition
+This leads to a single BDT whose response is analogous to \Eq{eq:ada:fullbdt} but with the addition
 of the target efficiency $\bar\epsilon$
 \begin{equation}
-  T(x_i,\bar\epsilon) = \sum_{t=1}^{N_\mathrm{trees}} \alpha_tT_t(x_i,\bar\epsilon).
+  T(x_i,\bar\epsilon) = \sum_{t=1}^{n_\mathrm{trees}} \alpha_tT_t(x_i,\bar\epsilon).
   \label{eq:ada:fullbdt}
 \end{equation}
-Therefore, a single of these BDTs is assiciated with a given target efficiency, where
-fraction of $T(x_i,\epsilon)>\bar T(\bar\epsilon)$ is $\bar\epsilon$.
-An arbiary number of BDTs can be concatinated, each with a different target efficiency, and the
-total response is
+Therefore, a single of these BDTs is associated with a given target efficiency, where
+fraction of $T(x_i,\epsilon)>\Xbar{T}(\bar\epsilon)$ is $\bar\epsilon$.
+An arbitrary number of BDTs, $N$, can be concatenated, each with a different target efficiency, and
+the total response is
 \begin{equation}
   \mathcal{T}(x_i) =
-  \frac1N\sum_{e=1}^{N}\Theta\left(T(x_i, \bar\epsilon) - \bar T(\bar\epsilon)\right).
+  \frac1N\sum_{e=1}^{n}\Theta\left(T(x_i, \bar\epsilon) - \Xbar{T}(\bar\epsilon)\right).
 \end{equation}
+For $\mathcal{T}(x_i)$ to be a continuous distribution, $N\!\to\infty$, however in practice
+$N\sim100$ is all that is needed for analysis.
 
 
 
