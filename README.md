@@ -13,3 +13,5 @@ Number of math inlines| 386
 Number of math displayed| 75
 Files| 28
 
+
+![](Thesis/metadata.pdf?raw=true)
