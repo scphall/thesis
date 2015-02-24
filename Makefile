@@ -54,6 +54,5 @@ count:
 	@texcount -inc -total Thesis/main.tex | tee -a $(META)
 	@texcount -inc -total Thesis/main.tex | tr : "|" | grep -v Total >> README.md
 	@python python/metadata.py
-	@echo "\n<figure>\n\t![](Thesis/metadata.pdf)\n</figure>" >> README.md
 
 
