@@ -3,7 +3,7 @@ import re
 import pandas
 import datetime
 import pylab as pl
-mdpath = os.path.abspath(os.path.join(os.getcwd(), '..', 'Thesis'))
+mdpath = 'Thesis'
 mdfile = os.path.join(mdpath, 'metadata')
 
 lines = []
@@ -35,7 +35,7 @@ df.T['words'].plot(
 pl.xlabel('Date')
 pl.ylabel('Word count')
 pl.xticks(rotation=20)
-pl.savefig(os.path.join(mdpath, 'metedata.pdf'))
+pl.savefig(os.path.join(mdpath, 'metadata.pdf'))
 
 
 

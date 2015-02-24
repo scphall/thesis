@@ -14,4 +14,6 @@ Number of math displayed| 75
 Files| 28
 
 
-![](Thesis/metadata.pdf?raw=true)
+<figure>
+	![](Thesis/metadata.pdf)
+</figure>
