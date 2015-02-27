@@ -1,15 +1,9 @@
 \section{Efficiency calculations}
-Measurements of the total selection efficiencies
-$\eff{tot}(\btokpipimumu)$,
-$\eff{tot}(\btopsitwosk)$,
-$\eff{tot}(\btophikmumu)$, and
-$\eff{tot}(\btojpsiphik)$,
-must be made in order to determine the branching fractions for the decays \btokpipimumu and
-\btophikmumu.
+
+
 These efficiencies were calculated using simulated events; therefore, in order that the above
 efficiencies are correct it is imperitive that the simulated events describe the data accurately.
 Where there are discrepancies, the simulations must be corrected.
-
 There are some variables which are known to be poorly described in simulation, particularly track
 multiplicity and the \chisqvtx of the \Bp candidate.
 The effects of these discrepancies are minimalised by reweighting simulated events using
@@ -62,28 +56,15 @@ raw distributions; the differences that remain are accounted for in the systemat
 %Reweighting
 
 Tracking efficiency varies depending upon the regions of the detector through which the paricle
-passes...
-These effects are different in data and simulation.
-
-
-
+passes, and the modelling of the detector in the simultion behaves differently to in actualoty.
+To correct for this, each candidate is weighted based on the relavtive treacking effeciency between
+data and simulation, this is dependent upon $m$ and $\eta$.
+The same is true for the responce of the {\tt isMuon} variable.
+After all rewighting all the aforementioned varialbes in simulated events, the BDT distributions
+are seen to be in agreement, this is shown in \Fig{fig:kpipi:bdt}.
 %Geometric efficiencies
 %Tracking efficiencies and isMuon
-
-
-
-
-
-
-
-
-
-
-
-
-
-After all the rewighting of simulated events, the BDT distributions are seen to be in agreement,
-this is shown in \Fig{fig:kpipi:bdt}.
+%Geometric efficiencies
 
 \begin{figure}
   \begin{center}
@@ -97,6 +78,49 @@ this is shown in \Fig{fig:kpipi:bdt}.
     \label{fig:kpipi:bdt}
   \end{center}
 \end{figure}
+
+MAKE A PLOT OF TABLES...
+
+Once the simulation has been corrected, the total efficincy, \eff{tot} was calculated for each
+normalization and signal mode.
+The value for \eff{tot} is calculated to be $\eff{geo}\eff{reco\&sel}\eff{trig}$, where:
+\eff{goe} is the geometric efficiency relating to the probabliity of all tracks passing throught
+the \lhcb dectecor volume;
+\eff{reco\&sel} is the reconstruction and selection efficiency;
+\eff{trig} trigger efficiency.
+
+Efficiencies for the normalization modes
+$\eff{reco\&sel\&trig}(\btopsitwosk)=(0.4123\pm0.0026)\,\%$, and
+$\eff{reco\&sel\&trig}(\btojpsiphik)=(2.1121\pm0.0013)\,\%$, are calculated
+
+
+$\eff{tot}(\btokpipimumu)$,
+$\eff{tot}(\btophikmumu)$, and
+must be made in order to determine the branching fractions for the decays \btokpipimumu and
+\btophikmumu.
+
+For the decays \btopsitwosk and \btojpsiphik the physics models are well defined, and simulation of
+these events is strainghtforward.
+However, the lack of a model for the inclusive decay \btokpipimumu necessitates an approximation
+must be made with regards to decay model.
+An appropriate choice is the physics model where the \kpipi comes via the \kone{1270} resonance,
+from \Ref{Hatanaka:2008gu} and $\thetakone=34^\circ$.
+
+
+\btopsitwosk lower eff because of low momentum pions from \psitwos decay.
+
+Efficiency calculated in bins of \qsq
+
+Systematic uncertainties in ...
+
+
+
+
+Efficiencies for the decay \btokpipimumu are evaluated using the physics model as given in
+This is more physical than usi
+
+
+
 
 
 
