@@ -79,50 +79,47 @@ are seen to be in agreement, this is shown in \Fig{fig:kpipi:bdt}.
   \end{center}
 \end{figure}
 
-MAKE A PLOT OF TABLES...
+\bam{MAKE A PLOT OF TABLES...}
 
 Once the simulation has been corrected, the total efficincy, \eff{tot} was calculated for each
-normalization and signal mode.
+normalization and signal mode using simulated events.
 The value for \eff{tot} is calculated to be $\eff{geo}\eff{reco\&sel}\eff{trig}$, where:
-\eff{goe} is the geometric efficiency relating to the probabliity of all tracks passing throught
-the \lhcb dectecor volume;
+\eff{geo} is the geometric efficiency;
 \eff{reco\&sel} is the reconstruction and selection efficiency;
 \eff{trig} trigger efficiency.
+The Geometric efficiency defines the probability that a \Bp decays into daughter particles which
+all pass through the \lhcb detector volume.
 
-Efficiencies for the normalization modes
-$\eff{reco\&sel\&trig}(\btopsitwosk)=(0.4123\pm0.0026)\,\%$, and
-$\eff{reco\&sel\&trig}(\btojpsiphik)=(2.1121\pm0.0013)\,\%$, are calculated
-
-
-$\eff{tot}(\btokpipimumu)$,
-$\eff{tot}(\btophikmumu)$, and
-must be made in order to determine the branching fractions for the decays \btokpipimumu and
-\btophikmumu.
-
-For the decays \btopsitwosk and \btojpsiphik the physics models are well defined, and simulation of
-these events is strainghtforward.
-However, the lack of a model for the inclusive decay \btokpipimumu necessitates an approximation
-must be made with regards to decay model.
-An appropriate choice is the physics model where the \kpipi comes via the \kone{1270} resonance,
-from \Ref{Hatanaka:2008gu} and $\thetakone=34^\circ$.
+%relating to the probabliity of all tracks passing throught the \lhcb dectecor volume;
+%Efficiencies for the normalization modes
+%$\eff{reco\&sel\&trig}(\btopsitwosk)=(0.4123\pm0.0026)\,\%$, and
+%$\eff{reco\&sel\&trig}(\btojpsiphik)=(2.1121\pm0.0013)\,\%$, are calculated
 
 
-\btopsitwosk lower eff because of low momentum pions from \psitwos decay.
+%$\eff{tot}(\btokpipimumu)$,
+%$\eff{tot}(\btophikmumu)$, and
+%must be made in order to determine the branching fractions for the decays \btokpipimumu and
+%\btophikmumu.
 
-Efficiency calculated in bins of \qsq
-
-Systematic uncertainties in ...
-
-
-
-
-Efficiencies for the decay \btokpipimumu are evaluated using the physics model as given in
-This is more physical than usi
-
-
+%For the decays \btopsitwosk and \btojpsiphik the physics models are well defined, and simulation of
+%these events is strainghtforward.
+%However, the lack of a model for the inclusive decay \btokpipimumu necessitates an approximation
+%must be made with regards to decay model.
+%An appropriate choice is the physics model where the \kpipi comes via the \kone{1270} resonance,
+%from \Ref{Hatanaka:2008gu} and $\thetakone=34^\circ$.
 
 
-
+Since, efficiency calculations require reliable simulated samples of decays, reliable physics
+models must be used.
+This raises a dilemma deciding how to calculate the efficincy of the signal decays \btokpipimumu
+and \btophikmumu, because no physics models exist for them.
+For the decay \btokpipimumu, an appropriate choice
+was the physics model for \decay{\Bp}{\kone{1270}\mumu}
+from \Ref{Hatanaka:2008gu} and $\thetakone=34^\circ$, because this was assumed to be a dominant
+contribution.
+A phasespace model is used for the signal decay \btophikmumu.
+These models introduce systematic uncertainties, which are discussed in \Sec{ssec:kpipi:syst} and
+\Sec{ssec:phik:syst}.
 
 
 

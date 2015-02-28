@@ -37,8 +37,8 @@ signal and normalization channels respectively.
 
 The normalization channel was chosen to be \btopsitwosk, where \psitwostojpsipipi and \jpsitomumu,
 which has a total branching fraction of $(1.264 \pm 0.0052)\e{-5}$~\cite{PDG2012}.
-This was chosen for the normalization channel over the decay \btojpsikpipi because it has a relative
-uncertainty of $4\,\%$ rather than $16\,\%$ for $\BF(\btojpsikpipi) = (8.1\pm1.3)\e{-4}$.
+This was chosen for the normalization channel over the decay \btojpsikpipi because it has a
+relative uncertainty of $4\,\%$ rather than $16\,\%$ for $\BF(\btojpsikpipi) = (8.1\pm1.3)\e{-4}$.
 
 the yield  of the normalization channel is extracted from an unbinned extended maximum likelihood
 fit to the invariant mass distribution of \btopsitwosk candidates.
@@ -82,8 +82,8 @@ is a problem below that.
 The combinatorial backgorund shape is an exponential distribution, where the exponent and yield was
 allowed to float in the fit; however, in the regions where charmonium vetoes are effective, the
 steps in the background are fixed using sideband data.
-The signal function was a \bam{Cant remember, double or single Crystal Ball}, where all the shape
-parameters were fixed in a fit to the cross-check decay \btojpsikpipi.
+The signal function was also the sum of Gaussians with power law tails, where the parameters are
+all fixed to the values from the fit to the cross-check channel.
 Figure~\ref{fig:kpipi:q2fits} shows the invariant mass distribution for all \btokpipimumu
 candidates for the whole \qsq region and for each bin.
 The total yield of \btokpipimumu candidates is $N(\kpipi\mumu)=367\,^{+24}_{-23}$.
@@ -104,7 +104,6 @@ The total yield of \btokpipimumu candidates is $N(\kpipi\mumu)=367\,^{+24}_{-23}
       In the three \qsq bins $4.30<\qsq<8.68\gevgev$, $10.09<\qsq<12.86\gevgev$, and
       $14.18<\qsq<19.00\gevgev$ scaling factors in the background components are used to account
       the removal of the radiative tails of charmonium vetoes.
-      The lower right
     }
     \label{fig:kpipi:q2fits}
   \end{center}
@@ -114,10 +113,18 @@ Differential branching fractions were calculated with \Eq{eq:kpipi:diffbf} where
 extracted from fits in \Fig{fig:kpipi:q2fits}.
 These results are shown graphically in \Fig{fig:kpipi:diffbf} and are given numerically --- along
 with signal yields --- are shown in \Tab{tab:kpipi:diffbf}.
-The integrated branching fraction is then calculated to be:
+The sum over all \qsq bins results in an integrated branching fraction of
 \begin{equation}
   \BF\big( \btokpipimumu \big)=
-  \big(4.36\,^{+0.29}_{-0.27}\stat\pm0.21\syst\pm0.18\norm\big)\e{-7}.
+  \big(3.43\,^{+0.23}_{-0.21}\stat\pm0.15\syst\pm0.14\normerr\big)\e{-7}.
+\end{equation}
+The fraction of signal events removed by the charmonium vetoes is determined from simulated
+\decay{\Bp}{\kone{1270}\mumu} events % changing the form factors
+to be $(21.3\pm1.5)\,\%$.
+Accounting for this, the adjusted integrated branching fraction is
+\begin{equation}
+  \BF\big( \btokpipimumu \big)=
+  \big(4.36\,^{+0.29}_{-0.27}\stat\pm0.21\syst\pm0.18\normerr\big)\e{-7}.
 \end{equation}
 Since the uncertainty due to the normalization channel branching fraction is singnificant, the
 ratio of branching fractions is also quoted
@@ -157,7 +164,7 @@ ratio of branching fractions is also quoted
     \includegraphics[width=0.48\textwidth]{diffbf}
     \caption{\small
       Differential branching fraction $\tfrac{d}{\dqsq}\BF\left(\btokpipimumu\right)$
-      (as given in Table~\protect\ref{tab:hhh:diffbf}), where the
+      (as given in Table~\protect\ref{tab:kpipi:diffbf}), where the
       errors shown include both statistical and systematic uncertainties.
       Shaded areas indicate the vetoed \jpsi and \psitwos resonances.
     }
@@ -171,7 +178,7 @@ Numerous broad resonances are visible in the distributions.
 The \kpipi system from the resonant \btojpsikpipi decay shows significant, though not dominant,
 contributions from the \kone{1270} state.
 There is also a contribution visible as $m_\kpipi\simeq1750\mev$, similar to resonances seen by
-\belle~\bam{ref}.
+\belle~\ref{Guler:2010if}.
 
 
 
@@ -208,10 +215,59 @@ There is also a contribution visible as $m_\kpipi\simeq1750\mev$, similar to res
 
 
 
-\subsection{Systematic uncertainties}
+\subsection[Systematic uncertainties for the decay \btokpipimumu]
+{Systematic uncertainties for the decay \tmath{\btokpipimumu}}
+\label{ssec:kpipi:syst}
+
+
+\subsubsection{Branching fracion of normalization channel}
+The branching fraction of the decay \btopsitwosk is~\cite{PDG2012}
+\begin{equation}
+  \BF_\mathrm{tot}\big(\btopsitwosk\big)
+  =\big(1.264\pm0.052\big)\e{-5}.
+\end{equation}
+The uncertainty on this is fully correlated between all \qsq bins.
+
+
+\subsubsection{Corrections to simulation}
+%\subsubsection{Tracking effectiency}
+Estimated by redetermining relative efficienices without the tracking efficiency correction
+%\subsubsection{PID efficiency}
+Without using resampling
+%\subsubsection{IsMuon and PIDmu requiremene}
+Without
+%\subsubsection{Reweighting of variables}
+Without
+
+
+\subsubsection{Modelling of decay}
+%\subsubsection{\qsq model}
+%\subsubsection{Kpipi composistion}
+%\subsubsection{Angle \thetakone}
+%\subsubsection{Charmonium vetoes}
+Multiple MC samples at generator level, each with different form factors (assumed to be
+uncorrelated)
+Each FF is chosen from a number folllowing gaussian distribution with mean of central value and
+std of the err on the FF parameters.
+
+
+\subsubsection{Fits}
+%\subsubsection{Signal mass model}
+Single, not double, CB
+%\subsubsection{Background mass model}
+linear
+
+
+\subsubsection{Selection}
+%\subsubsection{Trigger}
+%\subsubsection{Peaking backgrounds}
+
+%Negligible
 
 
 
+%\subsubsection{Relative uncertanty}
+%Negligible
 
 
 
