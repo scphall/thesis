@@ -43,9 +43,9 @@
 %\usepackage{subcaption}
 \usepackage{graphicx}
 \usepackage{color}
-\usepackage{colortbl}
+%\usepackage{colortbl}
 \usepackage{verse}
-\usepackage{bbold}
+%\usepackage{bbold}
 
 \usepackage{tikz}
 \usepackage{pdftricks}
@@ -203,6 +203,15 @@ end#1\endcsname
   \renewcommand{\footrulewidth}{0pt}% Line at the footer visible
 }
 
+
+%\newcommand{\shortdate}{\ifnum\number\day<10 0\fi \number\day \space%
+  %\ifcase \month \or January\or February\or March\or April\or May%
+  %\or June\or July\or August\or September\or October\or November\or December\fi,%
+%\number \year}
+\newcommand{\shortdate}{%\ifnum\number\day<10 0\fi \number\day \space%
+  \ifcase \month \or January\or February\or March\or April\or May%
+  \or June\or July\or August\or September\or October\or November\or December\fi,%
+\space\number \year}
 
 
 

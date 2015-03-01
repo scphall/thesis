@@ -1,18 +1,17 @@
 #!/bin/bash
 
 AUXDIR=aux
-if [ $# -eq 0 ]
+DIR=Thesis
+if [ $# -ne 0 ]
 then
-  echo "No arguments supplied"
-  exit
+  DIR=$(echo $1 | sed 's/\///')
 fi
-DIR=$(echo $1 | sed 's/\///')
 if [ -f $DIR/main.tex ]
 then
   echo Cleaning $DIR
-  rm -vf $AUXDIR/$1.*
+  rm -f $AUXDIR/$DIR.*
   touch $DIR/main.tex
-elif [ $1 = "bak" ]
+elif [ $DIR = "bak" ]
 then
   echo "Cleaning .bak files"
   rm -v */*.bak
