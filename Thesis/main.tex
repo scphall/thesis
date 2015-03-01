@@ -1,20 +1,25 @@
 %\maketitle
 \pagenumbering{roman}
 \nolinenumbers
+
 \input{Thesis/title}
 \pagestyle{fancy}
 %\fancyhead[RE,LO]{{\bf \thechapter.}~\leftmark}
-\linenumbers
 \input{Thesis/abstract}
 \pagebreak
 \input{Thesis/declaration}
 \pagebreak
 \input{Thesis/acknowledgements}
 \pagebreak
+
 \tableofcontents\thispagestyle{fancy}
 \pagebreak
+
+\addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
 \pagebreak
+
+\addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
 \pagebreak
 
@@ -25,12 +30,13 @@
 \pagenumbering{arabic}
 \fancyhead[RE,LO]{{\bf \thechapter.}~\leftmark}
 
+\linenumbers
 %\input{intro/main}
 
-%\input{theory/main}
-%\input{lhcb/main}
-%\input{bdts/main}
-%\input{dsphi/main}
+\input{theory/main}
+\input{lhcb/main}
+\input{bdts/main}
+\input{dsphi/main}
 \input{hhh/main}
 
 %\input{db/main}

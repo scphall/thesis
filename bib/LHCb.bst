@@ -364,9 +364,9 @@ FUNCTION {format.eprint}
     { ""}
         { eprint #1 #6 substring$ "arXiv:" =
           eprint #5 #1 substring$ "." =
-          or  
-              { format.eprint.newarXivid } 
-              { format.eprint.oldarXivid } 
+          or
+              { format.eprint.newarXivid }
+              { format.eprint.oldarXivid }
         if$
       }
   if$
@@ -374,22 +374,22 @@ FUNCTION {format.eprint}
 
 
 FUNCTION {format.eprint.paren}
-{ eprint missing$ { "" } { eprint empty$ { "" } {format.eprint} 
-    			   if$ 
-			  } 
+{ eprint missing$ { "" } { eprint empty$ { "" } {format.eprint}
+    			   if$
+			  }
   if$
 }
 
 FUNCTION {format.lhcbid.internal}
-{ "\href{http://cdsweb.cern.ch/search?p=" number * 
-  "&f=reportnumber&action_search=Search&c=LHCb+Internal+Notes&c=LHCb+Analysis+Notes} {" * 
-  number * "}" * 
+{ "\href{http://cdsweb.cern.ch/search?p=" number *
+  "&f=reportnumber&action_search=Search&c=LHCb+Internal+Notes&c=LHCb+Analysis+Notes} {" *
+  number * "}" *
 }
 
 FUNCTION {format.lhcbid.public}
-{ "\href{http://cdsweb.cern.ch/search?p=" number * 
-  "&f=reportnumber&action_search=Search&c=LHCb+Reports&c=LHCb+Conference+Proceedings&c=LHCb+Conference+Contributions&c=LHCb+Notes&c=LHCb+Theses&c=LHCb+Papers} {" * 
-  number * "}" * 
+{ "\href{http://cdsweb.cern.ch/search?p=" number *
+  "&f=reportnumber&action_search=Search&c=LHCb+Reports&c=LHCb+Conference+Proceedings&c=LHCb+Conference+Contributions&c=LHCb+Notes&c=LHCb+Theses&c=LHCb+Papers} {" *
+  number * "}" *
 }
 
 FUNCTION {format.lhcbid}
@@ -434,6 +434,7 @@ FUNCTION {format.title}
 { title empty$
     { "" }
     { "\ifthenelse{\boolean{articletitles}}{{\it " title "t" change.case$ * "}, " *  "}{}" * }
+    %{ "{\it " title "t" change.case$ * "}, " * }
   if$
 }
 
@@ -794,16 +795,16 @@ FUNCTION {format.articlenodoi}
   { journal missing$
     { format.eprint output }
     { journal empty$ { format.eprint output } {
-      journal ".\ " "." find.replace 
-      ". " "." find.replace 
-      "." ".\ " find.replace 
+      journal ".\ " "." find.replace
+      ". " "." find.replace
+      "." ".\ " find.replace
       "journal" output.check
       blank.sep
       format.volume output
       blank.sep
       format.date.paren "year" output.check
       month empty$ { format.number output }
-        		  'skip$ if$ 
+        		  'skip$ if$
       blank.sep
       format.pages.norange output }
       if$
@@ -836,20 +837,20 @@ FUNCTION {format.articledoi}
     { journal empty$ { format.eprint output } {
       "\href{http://dx.doi.org/" doi * "}{" * "doi" output.check
       article.sep
-      journal ".\ " "." find.replace 
-      ". " "." find.replace 
-      "." ".\ " find.replace 
+      journal ".\ " "." find.replace
+      ". " "." find.replace
+      "." ".\ " find.replace
       "journal" output.check
       blank.sep
       format.volume output
       blank.sep
       format.date.paren "year" output.check
       month empty$ { format.number output }
-        		  'skip$ if$ 
+        		  'skip$ if$
       blank.sep
-      format.pages.norange 
+      format.pages.norange
       "}" *
-      output } 
+      output }
       if$
       }
     if$
@@ -1254,7 +1255,7 @@ ITERATE {longest.label.pass}
 %     { preamble$ write$ newline$ }
 %   if$
 %   "\providecommand{\href}[2]{#2}"
-%   "\begingroup\raggedright\begin{thebibliography}{" * longest.label  * 
+%   "\begingroup\raggedright\begin{thebibliography}{" * longest.label  *
 %   "}" * write$ newline$ }
 
 FUNCTION {begin.bib}

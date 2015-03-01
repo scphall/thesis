@@ -46,6 +46,7 @@
 \usepackage{color}
 \usepackage{colortbl}
 \usepackage{verse}
+\usepackage{bm}
 %\usepackage{bbold}
 
 \usepackage{tikz}
@@ -125,7 +126,6 @@
 \newboolean{articletitles}
 \setboolean{articletitles}{true} % False removes titles in references
 
-
 \newboolean{uprightparticles}
 \setboolean{uprightparticles}{false} %True for upright particle symbols
 
@@ -163,7 +163,7 @@ end#1\endcsname
 % Get hyperlinks to captions and in references.
 % These do not work with revtex. Use "hypertext" as class option instead.
 \usepackage{hyperref}    % Hyperlinks in references
-\usepackage[all]{hypcap} % Internal hyperlinks to floats.
+\usepackage[all]{hypcap} % Internal hyperlinks to floats.  bookmarks
 
 %\usepackage[acronym]{glossaries}
 \usepackage[nopostdot,nogroupskip,xindy,nonumberlist]{glossaries}
