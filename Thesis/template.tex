@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper]{report}
+\documentclass[11pt,a4paper,twoside]{report}
 
 \input{preamble/preamble}
 
@@ -17,10 +17,12 @@
 
 \input{XXX/main}
 
+\fancyhead[RE,LO]{\bf Bibliography}
 \bibliographystyle{bib/LHCb}
 \bibliography{bib/main,bib/db,bib/LHCb-PAPER,bib/LHCb-CONF,bib/LHCb-DP}
 
 \iftoggle{appendix}{
+  \fancyhead[RE,LO]{\bf \leftmark}
   \input{Thesis/appendices}
 }{
 }

@@ -1,32 +1,40 @@
 % This file contains all the default packages and modifications for
 % LHCb formatting
 
+% Show layouts
+\usepackage{layout}
+%\usepackage{showframe}
 %% %%%%%%%%%%%%%%%%%%
 %%  Page formatting
 %% %%%%%%%%%%%%%%%%%%
-\textheight=230mm
-\textwidth=160mm
-\oddsidemargin=7mm
-\evensidemargin=-10mm
-\topmargin=-10mm
-\headsep=20mm
-\columnsep=5mm
-\addtolength{\belowcaptionskip}{0.5em}
+%\textheight=230mm
+%\textwidth=160mm
+%%\oddsidemargin=7mm
+%%\evensidemargin=-10mm
+%\oddsidemargin=7mm
+%\evensidemargin=7mm
+%\topmargin=-10mm
+%\headsep=20mm
+%\columnsep=5mm
+%\addtolength{\belowcaptionskip}{0.5em}
+\footskip=25pt
 
-\renewcommand{\textfraction}{0.01}
-\renewcommand{\floatpagefraction}{0.99}
-\renewcommand{\topfraction}{0.9}
-\renewcommand{\bottomfraction}{0.9}
+%\renewcommand{\textfraction}{0.01}
+%\renewcommand{\floatpagefraction}{0.99}
+%\renewcommand{\topfraction}{0.9}
+%\renewcommand{\bottomfraction}{0.9}
 
+\usepackage[a4paper,top=2.5cm,bottom=2.0cm,left=2.5cm,right=2.5cm,asymmetric]{geometry}
+%\usepackage[a4paper,left=1.5cm,right=1.5cm,asymmetric]{geometry}
 
-\setlength{\hoffset}{-2cm}
-\setlength{\voffset}{-2cm}
-% Page defaults ...
-\topmargin=0.5cm
-\oddsidemargin=2.5cm
-\textwidth=16cm
-\textheight=22cm
-% Allow the page size to vary a bit ...
+%\setlength{\hoffset}{-2cm}
+%\setlength{\voffset}{-2cm}
+%% Page defaults ...
+%\topmargin=0.5cm
+%%\oddsidemargin=2.5cm
+%\textwidth=16cm
+%\textheight=22cm
+%% Allow the page size to vary a bit ...
 \raggedbottom
 % To avoid Latex to be too fussy with line breaking ...
 \sloppy
@@ -183,14 +191,15 @@ end#1\endcsname
 \fancyhf{}
 \renewcommand{\chaptermark}[1]{ \markboth{{\bf #1}}{} }
 \renewcommand{\sectionmark}[1]{ \markright{{\bf #1}}{} }
+\fancyfoot[C]{\thepage}
 
 
-\fancyhead[LE,RO]{}
+%\fancyhead[LE,RO]{}
 %\fancyhead[LE,RO]{{\bf \thepage}}
 %\fancyhead[RE,LO]{{\bf \thechapter.}~\leftmark}
-\fancyhead[RE,LO]{}
-\fancyfoot[CE,CO]{}
-\fancyfoot[LE,RO]{}
+%\fancyhead[RE,LO]{}
+%\fancyfoot[CE,CO]{}
+%\fancyfoot[LE,RO]{}
 \fancyfoot[C]{{\bf \thepage}}
 %\fancyhead[RE]{\chaptername~\thechapter}
 \renewcommand{\headrulewidth}{0.5pt}
