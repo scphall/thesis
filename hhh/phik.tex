@@ -1,5 +1,5 @@
-\section[Branching fraction of the decay \btophikmumu]{Branching fraction of the decay
-  $\boldsymbol{\btophikmumu}$}
+\section[Branching fraction of the decay \btophikmumu]
+{Branching fraction of the decay $\boldsymbol{\btophikmumu}$}
 
 The branching fraction of the signal decay \btophikmumu is determined relative to the normalization
 channel \btojpsiphik:
@@ -31,20 +31,19 @@ $N\big(\btojpsiphik\big)=1908\pm63$.
 The above values lead to a measured branching fraction of
 \begin{equation}
   \BF\big(\btophikmumu\big)=
-  \big(0.81\,^{+0.18}_{-0.16}\stat\pm0.03\syst\pm0.27\normerr\big).
+  \big(0.81\,^{+0.18}_{-0.16}\stat\pm0.03\syst\pm0.27\normerr\big)\e{-7}.
 \end{equation}
 However, the charmonium vetoes remove $\big(2\,^{+10}_{-\pz2}\big)\,\%$ of signal events, as
 calculated using simulated events.
 Taking this into account results in a value of
 \begin{equation}
   \BF\big(\btophikmumu\big)=
-  \big(0.82\,^{+0.19}_{-0.17}\stat\,^{+0.10}_{-0.04}\syst\pm0.27\normerr\big).
+  \big(0.82\,^{+0.19}_{-0.17}\stat\,^{+0.10}_{-0.04}\syst\pm0.27\normerr\big)\e{-7}.
 \end{equation}
 The ratio of branching fractions of the signal and normalization channels is
-
 \begin{equation}
   \frac{ \BF\big(\btophikmumu\big) }{ \BF\big(\btojpsiphik\big) }
-  =\big(1.58\,^{+0.36}_{-0.32}\stat\,^{+0.19}_{-0.07}\syst\big),
+  =\big(1.58\,^{+0.36}_{-0.32}\stat\,^{+0.19}_{-0.07}\syst\big)\e{-3},
 \end{equation}
 which is quoted because there are large relative uncertainties associated with the branching
 fraction of the normalization channel ($\sim33\,\%$).
@@ -86,6 +85,9 @@ fraction of the normalization channel ($\sim33\,\%$).
 \end{figure}
 
 
+\bam{WILKS}
+
+
 %The normalization channel has a large relative uncertaity on its measured branching fraction
 %$\BF\big(\btojpsiphik\big)=\big(5.2\pm1.7\big)\e{-5}$~\cite{PDG2012}.
 %With
@@ -93,6 +95,41 @@ fraction of the normalization channel ($\sim33\,\%$).
 
 \subsection{Systematic uncertainties}
 \label{ssec:phik:syst}
+
+Sytematic uncertainties contributing to the measurement of $\BF(\btophikmumu)$ are determined in
+very similar ways as for the measurement of $\BF(\btokpipimumu)$, as detailed in
+\Sec{ssec:kpipi:syst}.
+The uncertainties introduced by correcting the simulated events by weighting and resampling are
+calculated in the same way as for the decay \btokpipimumu.
+The systematic uncertainty arising from the signal mass model was evaluated by
+subsituting the nominal double Gaussian with a power-law tail, for a single Gaussian with a tail
+and recalculating the signal yield.
+Similarly, the systematic from the background model is evaluated by repeating the fit with a first
+order, rather than a second order, polynomial.
+The uncertainty on the \qsq distribution in the simulation was estimated by reweighting the from
+the nominal phasespace simulation to the distribution of the \decay{\Bp}{\kone{1270}\mumu} mode.
+\bam{rew 1\%}
+\bam{model 3\%}
+\bam{limited stat on eff 1.5\%}
+\bam{trigger 1.5\%}
+\bam{\qsq 1.5\%}
+
+The fraction of events that are removed by the charmonium vetoes are determined from simulation.
+But, as discussed, the \qsq distribution that is described by the \btophikmumu simulation was
+inaccurate since there is no theoretical prediction available.
+To circumnavigate this problem, generator level simulated events is used to obtain the central
+value.
+Vetoed fractions are then calculated by generating events whose \qsq distribution is taken from the
+\decay{\Bp}{\kone{1270}\mumu} decay, where the mass of the \kone{1270} system is replaced with an
+estimated mass of the \phik system.
+The value of $m_{\phik}=1960\mev$, which is taken fro the sWeighted $m_{\kpipi}$ distribution from
+data.
+In this way, it was determined that $(2\,^{+10}_{-\pz2})\,\%$ of signal events were removed by the
+charmonium vetoes.
+
+
+%To circumnavigate this dilemma
+
 
 %reweighting etc same as above...
 %signal, single, not nominal double CB
