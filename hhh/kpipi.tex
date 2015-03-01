@@ -1,3 +1,4 @@
+%&spell
 \section[Differential branching fraction measurements of the decay \btokpipimumu]{
   Differential branching fraction measurements of the decay \tmath{\btokpipimumu}
 }
@@ -32,7 +33,7 @@ where,
 \end{equation}
 \num{sig} is the yield of the signal decay \btokpipimumu in the given \qsq bin and \num{norm}
 is the yield of the normalization channel.
-Total efficiencies for reconstruction and selection are denoted by \eff{sig} and \eff{norm} for the
+Total deficiencies for reconstruction and selection are denoted by \eff{sig} and \eff{norm} for the
 signal and normalization channels respectively.
 
 The normalization channel was chosen to be \btopsitwosk, where \psitwostojpsipipi and \jpsitomumu,
@@ -42,10 +43,10 @@ relative uncertainty of $4\,\%$ rather than $16\,\%$ for $\BF(\btojpsikpipi) = (
 
 the yield  of the normalization channel is extracted from an unbinned extended maximum likelihood
 fit to the invariant mass distribution of \btopsitwosk candidates.
-The function used to fit the data constitiutes a signal and background component.
+The function used to fit the data constitutes a signal and background component.
 Signal candidates are modelled using the sum of two Gaussian functions, each having a power-law
 tail at low-mass.
-The paramters of the tail shared between the Gaussians, and all parameters are taken from a fit to
+The parameters of the tail shared between the Gaussians, and all parameters are taken from a fit to
 the high statistics mode of the cross-check channel \btojpsikpipi.
 The background function is made of en exponential --- to model combinatorial background --- and a
 Gaussian --- to model partially reconstructed candidates --- at low mass.
@@ -77,9 +78,9 @@ $N(\psitwos\Kp)=5128\pm67$ and $N(\jpsi\kpipi)=59\,335\pm343$.
 
 Yields of the signal decay in regions of \qsq were extracted from fits using a distribution that
 was fixed to as large an extent as possible.
-The lower limit of the fit was taken to be $5150\mev$, because partially recontructed background
+The lower limit of the fit was taken to be $5150\mev$, because partially reconstructed background
 is a problem below that.
-The combinatorial backgorund shape is an exponential distribution, where the exponent and yield was
+The combinatorial background shape is an exponential distribution, where the exponent and yield was
 allowed to float in the fit; however, in the regions where charmonium vetoes are effective, the
 steps in the background are fixed using sideband data.
 The signal function was also the sum of Gaussians with power law tails, where the parameters are
@@ -116,8 +117,10 @@ with signal yields --- are shown in \Tab{tab:kpipi:diffbf}.
 The sum over all \qsq bins results in an integrated branching fraction of
 \begin{equation}
   \BF\big( \btokpipimumu \big)=
-  \big(3.43\,^{+0.23}_{-0.21}\stat\pm0.15\syst\pm0.14\normerr\big)\e{-7}.
+  \big(3.43\,^{+0.23}_{-0.21}\stat\pm0.15\syst\pm0.14\normerr\big)\e{-7};
 \end{equation}
+where quoted uncertainties are statistical, systematic and due to the errors on the branching
+fraction of the normalization channel.
 The fraction of signal events removed by the charmonium vetoes is determined from simulated
 \decay{\Bp}{\kone{1270}\mumu} events % changing the form factors
 to be $(21.3\pm1.5)\,\%$.
@@ -126,12 +129,17 @@ Accounting for this, the adjusted integrated branching fraction is
   \BF\big( \btokpipimumu \big)=
   \big(4.36\,^{+0.29}_{-0.27}\stat\pm0.21\syst\pm0.18\normerr\big)\e{-7}.
 \end{equation}
-Since the uncertainty due to the normalization channel branching fraction is singnificant, the
+\bam{WILKS.}
+
+Since the uncertainty due to the normalization channel branching fraction is significant, the
 ratio of branching fractions is also quoted
 \begin{equation}
   \frac{ \BF\big( \btokpipimumu \big) }{ \BF\big( \btopsitwosk \big) } =
   \big(6.95\,^{+0.46}_{-0.43}\stat\pm0.34\syst\big)\e{-4}.
 \end{equation}
+Where the value used is~\cite{PDG2012}
+$\BF_\mathrm{tot}\big(\btopsitwosk\big)$,
+and the uncertainty is fully correlated between \qsq bins.
 
 {\renewcommand{\arraystretch}{1.2}
 \begin{table}
@@ -172,7 +180,7 @@ ratio of branching fractions is also quoted
   \end{center}
 \end{figure}
 
-Figure~\ref{fig:kpipi:kpipi} subtracted invariant mass distrributions of the \kpipi systems in the
+Figure~\ref{fig:kpipi:kpipi} subtracted invariant mass distribution's of the \kpipi systems in the
 cases for both decays \btojpsikpipi and \btokpipimumu.
 Numerous broad resonances are visible in the distributions.
 The \kpipi system from the resonant \btojpsikpipi decay shows significant, though not dominant,
@@ -219,53 +227,100 @@ There is also a contribution visible as $m_\kpipi\simeq1750\mev$, similar to res
 {Systematic uncertainties for the decay \tmath{\btokpipimumu}}
 \label{ssec:kpipi:syst}
 
+Systematic uncertainties introduced to the measurement of the differential branching fraction of
+\btokpipimumu can be categorised into three main categories:
+corrections applied to simulated events,
+the fits to the signal and normalization channels, and
+modelling of the signal decay.
+The following section describes the methods used to calculate systematic uncertainties from each
+source.
 
-\subsubsection{Branching fracion of normalization channel}
-The branching fraction of the decay \btopsitwosk is~\cite{PDG2012}
-\begin{equation}
-  \BF_\mathrm{tot}\big(\btopsitwosk\big)
-  =\big(1.264\pm0.052\big)\e{-5}.
-\end{equation}
-The uncertainty on this is fully correlated between all \qsq bins.
+% Reweighting and PID
+Section~\ref{sec:hhh:eff} describes the process of correcting simulated events such that they best
+describe data.
+This procedure introduces systematic uncertainties which must be accounted for.
+This is done by recalculating the relative efficiency for each \qsq bin:
+without reweighting track multiplicity and $\chisqvtx(B)$;
+without accounting for differences in tracking and {\tt isMuon} efficiencies;
+and without performing PID resampling.
+Each source of uncertainty is treated separately, and the total systematic uncertainty is taken to
+be the difference in the branching fraction with the newly calculated relative efficiency.
+
+% Fits
+In order to assess the degree of uncertainty introduced by the distributions used to model the
+signal and background components.
+The systematic uncertainty is taken to be the difference between the nominal branching fraction,
+and the branching recalculated using different signal or background components in the fit.
+A single Gaussian with a power-law tail is used as an alternative signal model and --- in a
+different fit --- a linear function is used to describe the background.
+
+The way the signal decay is modelled in simulation were the source of numerous systematic
+uncertainties.
+Efficiencies were calculated using simulated data using the model described in
+\Ref{Hatanaka:2008gu}, but this is imperfect for a number of reasons.
+This model mismatches the data in \qsq, $m_\kpipi$; it also assumes that $\thetakone=-34^\circ$,
+and was used to determine the fraction of signal removed by charmonium vetoes.
+
+To assess the systematic introduced by the difference between the \qsq distribution in data and
+simulation a different decay model was used.
+Rather than the efficiency for the signal channel being determined from simulated
+\decay{\Bp}{\kone{1270}\mumu} generated with the model in \Ref{Hatanaka:2008gu}, it was decayed
+using a phasespace model.
+The differences in the invariant mass distribution of \kpipi cannot be assessed using simulation
+because of the difficulties associated with theoretically describing \kpipi resonances.
+Instead, the signal effiecincies are calculated after being reweighted to match the sWeighted
+$m(\kpipi)$ distribution from signal, as shown in \Fig{fig:kpipi:kpipi}.
+Systematic uncertainties from these two sources are assessed by redetermining branching fractions
+using these new signal efficiencies.
+
+The value of the mixing angle \thetakone has been a source of some theoretical contention, where
+$\thetakone=-34^\circ$ or
+$-57^\circ$~\cite{PhysRevD.47.1252,Tayduganov:2011ui,Hatanaka:2008xj,Cheng:2011pb,Divotgey:2013jba,Cheng:2013cwa}.
+But, more recently measurements favour a value of approximately
+$-(34\pm13)^\circ$~\cite{Hatanaka:2008xj,Cheng:2011pb,Divotgey:2013jba,Cheng:2013cwa}.
+To estimate the systematic uncertainty associated with this value, the simulated data was
+reweighted on an event-by-event basis such that the value of \thetakone was varied by $1\,\sigma$.
+This was done by interfacing with \evtgen~\cite{Lange:2001uf} directly.
+
+The probability of a particle decaying into a given final state is done in \evtgen using
+a probability density function --- based on the decay model --- which is
+dependent upon the momenta of the final state particles.
+By calculating the probability of the decay with $\thetakone=-34^\circ$, and other angles, one can
+reweight the simulated data to match data from any angles.
+
+The signal efficiency was recalculated after varying the \thetakone by $1\,\sigma$ in simulated
+\decay{\Bp}{\kone{1270}\mumu} events.
+Branching fractions were then evaluated using these new efficiencies, and the maximum difference
+from the nominally calculated value is taken as the systematic uncertainty.
+The same procedure was used to calculate systematics with respect to $\thetakone=-57^\circ$, and
+the values are found to be consistent with $-(34\pm13)^\circ$.
+
+Charmonium vetoes removes a percentage of signal candidates, that must be accounted for in order to
+calculate the total integrated branching fraction.
+This fraction is subject to a systematic uncertainty due to the mismodelling of the \qsq
+distribution in the simulated signal events.
+Form factors in \Ref{Hatanaka:2008gu} gave the central value of $21.3\,\%$.
+Vaying these form factors at generator level by a random number from a Gaussian distribution, whose
+standard devatioin is the error on the form factor.
+This is done multiple times and leads to an uncertainty of $1.5\,\%$.
 
 
-\subsubsection{Corrections to simulation}
-%\subsubsection{Tracking effectiency}
-Estimated by redetermining relative efficienices without the tracking efficiency correction
-%\subsubsection{PID efficiency}
-Without using resampling
-%\subsubsection{IsMuon and PIDmu requiremene}
-Without
-%\subsubsection{Reweighting of variables}
-Without
+%The trigger selection also introduces some systematic uncertainty...
+%TISTOS method
+%$$
+ %e_TOS = N_tis\&tos / N_tis
+%$$
+%tis is number of events triggered independently of the signal candidate
+%tis\&tos is number of evennts triggered by both
+%small disagreements at L0, use ratio of L0 for data and simulation to rw MC redetermined relative
+%effs
 
 
-\subsubsection{Modelling of decay}
-%\subsubsection{\qsq model}
-%\subsubsection{Kpipi composistion}
-%\subsubsection{Angle \thetakone}
-%\subsubsection{Charmonium vetoes}
-Multiple MC samples at generator level, each with different form factors (assumed to be
-uncorrelated)
-Each FF is chosen from a number folllowing gaussian distribution with mean of central value and
-std of the err on the FF parameters.
-
-
-\subsubsection{Fits}
-%\subsubsection{Signal mass model}
-Single, not double, CB
-%\subsubsection{Background mass model}
-linear
-
-
-\subsubsection{Selection}
+%\subsubsection{Selection}
 %\subsubsection{Trigger}
+
 %\subsubsection{Peaking backgrounds}
-
 %Negligible
-
-
-
 %\subsubsection{Relative uncertanty}
 %Negligible
 
