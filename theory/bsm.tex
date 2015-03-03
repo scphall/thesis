@@ -153,6 +153,7 @@ A gauge invariant term that can be added to \Lag{QCD} is
 \begin{equation}
   \Lag{QCD}^\theta = \theta\frac{g^2}{32\pi^2}
   F_{\mu\nu}^\alpha\widetilde F^{\mu\nu}_\alpha,
+  \label{eq:strongcp}
 \end{equation}
 where $\theta$ and $g$ are constants, and $\alpha$ indicates a sum over colours.
 The operator $F_{\mu\nu}$ is the gluon field strength tensor, and
@@ -168,16 +169,130 @@ Bounds placed on the value of the neutron dipole moment, $|d_n| <2.9\e{-26}\,\ma
 $\theta<10^{-19}$~\cite{Crewther:PQref9}, when \emph{a priori} it could be in the range
 $0<\theta<2\pi$.
 This occurrence of fine tuning is referred to as the \emph{strong CP problem}.
-A solution to this problem is to introduce an additional chiral symmetry, such that $\theta$
-becomes a field, the quanta of which are called axions.
+%A solution to this problem is to introduce an additional chiral symmetry, such that $\theta$
+%becomes a field, the quanta of which are called axions.
 %The axion model is discussed in more detail in \Sect{sec:db:theory}.
 
-\bam{Paragraph about the fact we don't know where and how NP enters.}
-To explore general physics coupings it is useful to introduce the Operator Product Expansion (OPE).
+%\bam{Paragraph about the fact we don't know where and how NP enters.}
+
+Despite the evidence for BSM physics, it is not known how it manifests itself.
+There are numerous theories which seek to explain away various problems.
+
+New physics models accommodate Dark Matter in different ways.
+Some models have a \emph{dark} or \emph{hidden} sector which, apart from gravity, only
+communicates with the visible sector feebly via messenger particles.
+These messenger particles could potentially be observed after they decay into SM particles after
+mixing with a $H$ or $Z$.
+A solution to the strong CP problem is to introduce an additional chiral symmetry, such that
+$\theta$, in \Eq{eq:strongcp}, becomes a field: the quanta of which are called axions.
+This axion could be the messenger particle between the dark and visible
+sectors~\cite{Peccei:2006as}.
+%, as could the inflaton or dark $Z$; models including these
+%particles are further detailed in \Sec{sec:db:intro}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Flavour problem}
+%The most pessimistic solution to the flavour problem is Minimal Flavour Violation (MFV)
+%which simply assumes that beyond SM physics follows a Yukawa coupling like structure in the flavour
+%sector, this would lead to no discernible new physics in the flavour sector.
+The most general way to parameterize NP is with an effective Lagrangian describing generic
+interactions at an energy scale $\mu$, in which long and short distance effects are separated.
+Long distance (equivalently low energy) effects are described by coefficients, $c$, which can be
+calculated using perturbative methods.
+Short distance (or high energy) effects are characterized by terms of operators, $\mathcal{O}$,
+which must be calculated non-peturbatively because they contain QCD interactions.
+The resulting effective Lagrangian includes a sum over all processes, $i$, which contribute at a
+given dimension, $d$:
+\begin{equation}
+  \Lag{eff}
+  =
+  \Lag{SM} + \sum_d\frac1{\Lambda^{d-4}}
+  \sum_ic_i^{(d)}\mathcal{O}_i^{(d)}.
+  \label{eq:th:lageff}
+\end{equation}
+Processes that cause FCNCs contribute in $d=6$, and can be written as
+\begin{equation}
+  \Delta\mathcal{L}^\mathrm{FCNC}
+  =
+  \sum_{i\neq j}\frac{c_{ij}}{\Lambda^2}
+  \left(\Xbar{\mathcal{O}}_{Li}\gamma^\mu\mathcal{O}_{Lj}\right)^2,
+\end{equation}
+where $c_{ij}$ are dimensionless FCNC couplings, where $i$ and $j$ are different quark generations.
+Bounds set on the energy scale $\Lambda$ by the analysis in \Ref{Isidori:2010kg} are:
+\begin{equation}
+  \Lambda > \frac{|c_{ij}|^\frac12}{|\Vconj{ti}\V{tj}|}\times4.4\tev
+  \sim
+  \left\{
+    \begin{array}{l}
+      |c_{sd}|^\frac12\times 1.3\e{4}\tev \\
+      |c_{bd}|^\frac12\times 5.1\e{2}\tev \\
+      |c_{bs}|^\frac12\times 1.1\e{2}\tev \\
+    \end{array}\right.
+\end{equation}
+These values are calculated under the assumption that NP has a natural flavour structure, where
+$c_{ij}\sim\mathcal{O}(1)$.
+So, either couplings are of order unity and NP begins to contribute at over $100\tev$; or couplings
+strengths are $\mathrm{O}(10^{-5})$ and NP contributes at the $1\tev$ level;
+it is expected for NP to appear at the $1\tev$ scale in order to solve the hierarchy problem.
+Either way, there is a conflict between the most natural coupling and energy scale; this is known
+as the \emph{flavour problem}.
+This leads to a host of contradictions, leading to the conclusion that NP has a highly non-generic
+flavour structure.
+
+The most pessimistic solution to the flavour problem is Minimal Flavour Violation (MFV)
+which simply assumes that beyond SM physics follows a Yukawa coupling like structure in the flavour
+sector, this would lead to no discernible new physics in the flavour sector.
+Assuming that nature has not chosen MFV, then contradictions from flavour problem indicate that NP
+searches should be made for both: particles
+with high mass, and particles which have small coupling strengths.
+The \lhcb experiment can probe the mass scale, since precision measurements of tree and loop
+diagrams are sensitive to virtual particles contributing at all orders, whose on-shell mass could
+be many TeV.
+The relatively high luminosity of interactions supplied by the \lhc mean that \lhcb is also
+sensitive to low coupling strengths, such as messenger particles from the dark sector.
+The following chapters explore a variety of different searches for beyond Standard Model physics.
 
 
 
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%Dark Matter is the lightest supersymmetric particle which is stable and messenger particle is super
+%goldstino
+Supersymmetry (SUSY)
+supplies a Dark Matter candidate in the shape of the lightest supersymmetric
+particle (LSP), which could communicate with the visible sector via a super-golstino.
+The LSP is stable becuase of R-parity conservation.
+Supersymmetry is a theory which introduces an additional super-particle for each SM fermion and
+gauge boson, whose spin is different by a half integer.
+The Higgs sector in SUSY comprises four Higgs doublets; two are spin-0 and two are spin-$\tfrac12$,
+and then there are two each for $Y=\pm\tfrac12$.
+After SUSY is broken there are five Higgs physical scalar particles, two are CP-even ($h^0$,
+$H^0$) one is CP-odd scalar ($A^0$) and two charged are charged ($H^\pm$).
+It also immediately solves the hierarchy problem.
+Unfortunately, masses of the super-particles are unconstrained, and could be anywhere between a few
+TeV and the Planck scale.
+
+Some searches look directly for evidence of NP, this is the case for the analysis detailed in
+\Chap{ch:db}, where a new particle, \db, is searched for in the dimuon invariant mass spectrum of
+\decay{\Bd}{\Kstarent\mumu} consistent with \decay{\db}{\mumu}.
+This is sensitive to a range of models which predict a light particle with a mass in the rtange
+$2m_\mu\lesssim m_\db\lesssim4000\mev$, such as the axion model.
+It is also sensitive to the $P^0$ that was potentially seen by the Hyper-CP experiment.
+
+Instead of counting on NP to behave in an expected way, it is possible to search in a model
+independent way by exploring general physics couplings.j
+To do this it is useful to introduce the Operator Product Expansion (OPE).
 
 
