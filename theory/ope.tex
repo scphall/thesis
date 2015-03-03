@@ -4,39 +4,103 @@
 %which simply assumes that beyond SM physics follows a Yukawa coupling like structure in the flavour
 %sector, this would lead to no discernible new physics in the flavour sector.
 
-Effective field theories are based on the premise that they processes are defined by the typical
-energy scale, $\mu$, at which they operate.
+
+When describing macroscopic physical systems, it is freqyentkly necessary to simplilfy the situation by makeing
+certaian assumptions about the distance scales involoved.
+Effective field theories do the same thing in particle physics:
+By decoupling the short range from the long range interactions they can be treated separately.
 Contributions from particles with very high mass, much greater than $\mu$ are suppressed.
 An equally valid interpretation is that massive, unstable particles have short lifetimes and can
 only interact over very small distances.
-Processes operating at different energy scales are separated both spatially and temporally; and are
-therefore decoupled.
-
-Effective field theories allow processes to be modelled at a scale relevant to the particles
-involved.
-This is often applied to weak interactions of the \bquark quark.
-Instead of calculating \bquark decays using the full range of processes outlined by the SM, the
-particles who contribute at scales above $m_\bquark$ are integrated out, above a scale $\Lambda$,
-leaving the physics that is most relevant at the scale $\mu\simeq m_\bquark$.
-Here, processes are dominated by QCD, but higher scale effects still contribute.
+These simplifications are greatly advantageous, allowing processes to be modelled at a scale
+relecant to the paricles invloved.
 A canonical example of this is Fermi's effective theory of weak decays which predates electroweak
 theory; in it, a process (such as $\beta$-decay) is collapsed into a four point interaction.
 
-
-The most general way to parameterize the full effective theory is with an effective Hamiltonian
-describing generic
-interactions at an energy scale $\mu$, in which long and short distance effects are separated.
-Long distance (equivalently low energy) effects are described by coefficients, $c$, which can be
-calculated using perturbative methods.
-Short distance (or high energy) effects are characterized by terms of operators, $\mathcal{O}$,
-which must be calculated non-peturbatively because they contain QCD interactions.
-The resulting effective Hamiltonian includes a sum over all processes, $i$, which contribute at a
-given dimension, $d$:
+Creating an effective field theory for particle physics begins by defining an energy scale,
+$\Lambda$, above which the long and short range interactions are separated.
+Fior the case of a \bquark hadron decay, with initial state $\bra{i}$ and final state $\ket{f}$,
+the energies are of order $m_\bquark$.
+In the fill treatment of the SN, contributions from the \tquark quark and weak bosons --- which all
+have masses $\mathcal{O}(100\gev)$ --- must be accounted for.
+Therefore, an approproate choice for the $\Lambda$ is $\sim m_W$.
+Heavy fields above $\Lambda$ are then integrated out and are parameterized by Wilson coefficients,
+$C$, which are complex numbers.
+The remaining physics is encapsulated in the long distances operators $\mathcal{O}$, each having
+its own gauge group defining a particular type of process.
+Transitionn matrix elements for the interac iotn in the effective Hamiltonian are
 \begin{equation}
   \bra{f}\Ham{full}\ket{i} =
-  \left.\sum_{d}\frac{1}{\Lambda^{d-4}}
-  \sum_i c_i^{(d)}\bra{f}\Op{i}^{(d)}\ket{i}\right|_{\Lambda}.
+  \left.
+  \sum_j C_j(\Lambda)\bra{f}\Op{j}^{(d)}\ket{i}\right|_{\Lambda}.
 \end{equation}
+Which is simply a weighted sum over the long distance matrix elements $\bra{f}\Op{j}\ket{i}$.
+
+The above sum runs over an infinite number of operators, which is clearly impractical.
+To simplify matters one can extract factors of $\Lambda^{-1}$ from the Wilson coefficients which
+makes the coefficients dimensionless.
+This modifies the effective Hamiltonian to be a sum over dimensions, $d$:
+\begin{equation}
+  \bra{f}\Ham{full}\ket{i} =
+  \left.\sum_{d}\frac{1}{\Lambda^{d}}
+  \sum_i c_j^{(d)}\bra{f}\Op{j}^{(d)}\ket{i}\right|_{\Lambda}.
+\end{equation}
+This is entirely general, and one can calculate the Wilson coefficients to a high degree of
+accuracy --- using perturbative methods --- in the SM and many BSM extensions.
+Calculating the long distance operators is more challenging, however, because they contain QCD
+processes.
+
+This approach leads to an effective Hamiltonian, with Wilson coefficients which are entirely
+independent of the underlying physical processes.
+In this way, measurements from different decays all have access to multiple processes, and can be
+compared.
+Resulting measurements can then be used to favour or disfavour entire classes of NP.
+
+
+
+%Effective field theories are based on the premise that they processes are defined by the typical
+%energy scale, $\mu$, at which they operate\footnote{Section taken from \cite{Mannel:2004ce}}.
+%Contributions from particles with very high mass, much greater than $\mu$ are suppressed.
+%An equally valid interpretation is that massive, unstable particles have short lifetimes and can
+%only interact over very small distances.
+%Processes operating at different energy scales are separated both spatially and temporally; and are
+%therefore decoupled.
+
+%Effective field theories allow processes to be modelled at a scale relevant to the particles
+%involved.
+%This is often applied to weak interactions of the \bquark quark.
+%Instead of calculating \bquark decays using the full range of processes outlined by the SM, the
+%particles who contribute at scales above $m_\bquark$ are integrated out, above a scale $\Lambda$,
+%leaving the physics that is most relevant at the scale $\mu\simeq m_\bquark$.
+%Here, processes are dominated by QCD, but higher scale effects still contribute.
+%A canonical example of this is Fermi's effective theory of weak decays which predates electroweak
+%theory; in it, a process (such as $\beta$-decay) is collapsed into a four point interaction.
+
+
+%The most general way to parameterize the full effective theory is with an effective Hamiltonian
+%describing generic interactions at an energy scale $\mu$.
+%Long distance effects are encapsulated in operators $\mathcal{O}$, each defining a particular gauge
+%structure.
+%The high energy (short distance) effects that have been integrated out are simply described by
+%Wilson coefficients $c$, which are complex numbers.
+%The resulting effective Hamiltonian includes a sum over all processes, $i$, which contribute at a
+%given dimension, $d$:
+%\begin{equation}
+  %\bra{f}\Ham{full}\ket{i} =
+  %\left.\sum_{d}\frac{1}{\Lambda^{d-4}}
+  %\sum_i c_i^{(d)}\bra{f}\Op{i}^{(d)}\ket{i}\right|_{\Lambda}.
+%\end{equation}
+%This is entirely general, and one can calculate the Wilson coefficients to a high degree of
+%accuracy --- using perturbative methods --- in the SM and many BSM extensions.
+%Long distance (equivalently low energy) effects are described by coefficients, $c$, which can be
+%Short distance (or high energy) effects are characterized by terms of operators, $\mathcal{O}$,
+%which must be calculated non-peturbatively because they contain QCD interactions.
+%Values of Wilson coefficients are independent to the precise mediating process,
+%and are sensitive to the underlying physics model.
+%This means that Wilson coefficients can be compared between different measurements, and used to
+%exclude or favour entire classes of BSM physics.
+
+
 
 
 
@@ -52,7 +116,9 @@ given dimension, $d$:
 %loops.
 %Operators which are particularly sensitive to NP contributions in \decay{b}{s\mumu} transitions are
 %\begin{align}
-  %\Op{7\pz} &= \frac{m_b}{e}\big(\bar s \sigma_{\mu\nu}P_Rb\big)F^{\mu\nu}
+  %\Op{7\pz} &= \frac{m_b}{e}\big(\bar s \sigma_{\mu\nu}P_Rb\big)F^{\mu\nu}long distance matrix
+  %elements $\bra{f}\Op}\ket{i}$.
+
   %&\Op{7\pz}^\prime &= \frac{m_b}{e}\big(\bar s \sigma_{\mu\nu}P_Lb\big)F^{\mu\nu}
   %\nonumber\\
   %%\mathcal{O}_8 &= g\frac{m_b}{e^2}\big(\bar s \sigma_{\mu\nu}T^aP_Rb\big)G^{\mu\nu a}
