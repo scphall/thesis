@@ -1,4 +1,4 @@
-\subsection{Operator Product Expansion}
+\section{Operator Product Expansion}
 
 %The most pessimistic solution to the flavour problem is Minimal Flavour Violation (MFV)
 %which simply assumes that beyond SM physics follows a Yukawa coupling like structure in the flavour
@@ -103,13 +103,37 @@ Resulting measurements can then be used to favour or disfavour entire classes of
 
 
 
-\subsection{OPE in  dsphi and kpipimumu}
+\subsection[Operator product expansion for \btodsphi]
+{Operator product expansion for $\boldsymbol{\btodsphi}$}
 
+For the decay \btodsphi, the effective Hamiltonian
+is~\cite{Zou:2009zza,Mohanta:2002wf,PhysRevD.76.057701,Lu:2001yz}:
+\begin{equation}
+  \Ham{eff}=
+  \frac{G_F}{\sqrt{2}} \V{ub}\Vconj{cs}
+  \big[
+    C_1(\mu)\Op{1}+C_2(\mu)\Op{2}
+    \big]
+\end{equation}
+where
+\begin{align}
+  \Op{1} = \big(\bar b\gamma_\muP_Lu\big) \big(\bar c\gamma_\muP_Ls\big) \nonumber\\
+  \Op{2} = \big(\bar b\gamma_\muP_Ls\big) \big(\bar c\gamma_\muP_Lu\big)
+\end{align}
+and $C_{1,2}$ are Wilson coefficients defined at scale $\mu=m_b$.
+The operators \Op{1} and \Op{2} both describe the transition $\bar b\!\to\bar scu$.
+
+
+
+
+
+\subsection[Operator product expansion for \btokpipimumu and \btophikmumu]
+{Operator product expansion for $\boldsymbol{\btokpipimumu}$ and $\boldsymbol{\btophikmumu}$}
 
 The effective Hamiltonian for the FCNC $\decay{b}{s\ell^+\ell^-}$ is given by:
 \begin{equation}
   \Ham{eff} = -4\frac{G_F}{\sqrt{2}}\Vconj{ts}\V{tb}\frac{e^2}{16\pi^2}
-  \sum_{i}\big(c_i(\mu)\mathcal{O}_i(\mu)+c_i(\mu)^\prime\mathcal{O}_i^\prime(\mu)\big)
+  \sum_{i}\big[c_i(\mu)\mathcal{O}_i(\mu)+c_i(\mu)^\prime\mathcal{O}_i^\prime(\mu)\big]
 \end{equation}
 similar to \Eq{eq:th:lageff}, where the coefficients are known as Wilson coefficients, which
 correspond to the Wilson operators $\mathcal{O}_{1-10}$.
@@ -225,10 +249,6 @@ introduce significant CPV.
 %The other option is to search for \emph{direct} evidence of NP, such as in the invariant mass spectrum of
 %a combination of particles.
 
-
-
-
-\bam{The analysis...}
 
 
 
