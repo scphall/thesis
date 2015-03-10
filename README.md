@@ -13,3 +13,4 @@ Number of math inlines| 434
 Number of math displayed| 79
 Files| 30
 
+![](https://github.com/scphall/thesis/blob/master/Thesis/metadata.pdf)
