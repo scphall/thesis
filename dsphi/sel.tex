@@ -72,6 +72,8 @@ a signal sample of \decay{\Bs}{\Dsm\pip} sWeighted~\cite{splot} data, and backgr
 sidebands.
 This BDT uses an unusually large array of training variables, given in Table~\ref{tab:dsphi:vars},
 which include PID, and track quality variables.
+In total, five variables are input for the parent \Ds and $\phi$, and 23 properties for each
+daughter track.
 Similarly for the \decay{\phi}{\kk} BDT, the signal sample was \decay{\Bs}{\jpsi\phi}.
 
 
@@ -127,41 +129,27 @@ In order to maximize the signal yield, the full selected dataset was separated i
 defined by the helicity angle and the invariant mass of the $\phi$ candidate, these regions are
 shown in \Table{tab:dsphi:hel}.
 
-%\begin{table}
-  %\caption{\small
-    %Fit regions used to search for the decay \btodsphi.
-    %Approximately $89\,\%$ was expected to be in region \rA, \rB.
-  %}
-  %\label{tab:dsphi:hel}
-  %\begin{center}
-    %\begin{tabular}{llll}
-      %\toprule
-      %&\multicolumn{2}{c}{$|m_{KK}-m_\phi^\pdg| (MeV)$}\\
-      %$|\cos\thetahel| &  20 \\
-      %\multirow{3}{*}{Defenders} \\
-      %\\
-      %\\
-      %\bottomrule
-    %\end{tabular}
-  %\end{center}
-%\end{table}
-\begin{tabular}{ |l|l|l| }
-  \hline
-  \multicolumn{3}{ |c| }{Team sheet} \\
-  \hline
-  Goalkeeper & GK & Paul Robinson \\ \hline
-  \multirow{4}{*}{Defenders} & LB & Lucus Radebe \\
-   & DC & Michael Duburry \\
-    & DC & Dominic Matteo \\
-     & RB & Didier Domi \\ \hline
-     \multirow{3}{*}{Midfielders} & MC & David Batty \\
-      & MC & Eirik Bakke \\
-       & MC & Jody Morris \\ \hline
-       Forward & FW & Jamie McMaster \\ \hline
-       \multirow{2}{*}{Strikers} & ST & Alan Smith \\
-        & ST & Mark Viduka \\
-        \hline
-      \end{tabular}
+\begin{table}
+  \caption{\small
+    Fit regions used to search for the decay \btodsphi.
+    Approximately $89\,\%$ was expected to be in region \rA.
+  }
+  \label{tab:dsphi:hel}
+  \begin{center}
+    \begin{tabular}{cccc}
+      \toprule
+      &&\multicolumn{2}{c}{$|m_{KK}-m_\phi^\pdg|$ (MeV)}\\
+      &&$\in[0,20]$&$\in[20,40]$ \\
+      \midrule
+      \multirow{2}{*}{$|\cos\thetahel|$}
+      &$>0.4$ & \rA & \rB \\
+      &$<0.4$ & \rC & \rD \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
 
 
 
