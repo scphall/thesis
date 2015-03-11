@@ -2,15 +2,14 @@ thesis
 ======
 Backup of the ol' thesis.
 
-Fri 06 Mar | Total
+Wed 11 Mar | Total
 ---|---
-Words in text| 11479
-Words in headers| 109
-Words outside text (captions, etc.)| 854
-Number of headers| 39
+Words in text| 12096
+Words in headers| 117
+Words outside text (captions, etc.)| 862
+Number of headers| 44
 Number of floats/tables/figures| 27
-Number of math inlines| 434
-Number of math displayed| 79
-Files| 30
+Number of math inlines| 461
+Number of math displayed| 80
+Files| 31
 
-![](https://github.com/scphall/thesis/blob/master/Thesis/metadata.pdf)

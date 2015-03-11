@@ -36,9 +36,12 @@
 
 % B -> Ds phi
 \def\btodsphi {\decay{\Bp}{\Dsp\phi}\xspace}
+\def\btodsstrphi {\decay{\Bp}{\Dssp\phi}\xspace}
 \def\bctodsphi {\decay{\Bc}{\Dsp\phi}\xspace}
 \def\btodskstar   {\decay{\Bp}{\Dsp\Kstarbz}}
 \def\btodkstar    {\decay{\Bp}{\Dp\Kstarbz}}
+\def\bstodskstrk  {\decay{\Bsb}{\Dsp\Kstarz\Km}}
+\def\bstodsstrkstrk {\decay{\Bsb}{\Dssp\Kstarz\Km}}
 
 
 % B -> hhhmumu
@@ -50,13 +53,19 @@
 \def\thetakone{\ensuremath{\theta_{\Kone}}\xspace}
 \def\sinthetakone{\ensuremath{\sin\theta_{\Kone}}\xspace}
 \def\costhetakone{\ensuremath{\cos\theta_{\Kone}}\xspace}
+\def\thetahel{\ensuremath{\theta_\mathrm{hel}}\xspace}
+
+\newcommand\regionX[1]{{\ensuremath{\mathbf{#1}}}\xspace}
+\def\rA{\regionX{A}}
+\def\rB{\regionX{B}}
 
 \def\pipi{\ensuremath{\pip\pim}\xspace}
 \def\kpipi{{\ensuremath{\Kp\pip\pim}}\xspace}
 \def\kkpi{{\ensuremath{\Kp\Km\pip}}\xspace}
 \def\phik{{\ensuremath{\phi\Kp}}\xspace}
 \def\kphi{{\ensuremath{\phi\Kp}}\xspace}
-\def\pdg{\ensuremath{\mathrm{PDG}}\xspace}
+\def\pdg{{\ensuremath{\mathrm{PDG}}}\xspace}
+\def\bdt{{\ensuremath{\mathrm{PDG}}}\xspace}
 
 
 \def\btokpipimumu{\mbox{\decay{\Bp}{\Kp\pip\pim\mumu}}}
@@ -73,6 +82,9 @@
 \def\btokonemumu{\mbox{\decay{\Bp}{\Konep(1270)\mumu}}}
 \def\btokstmumu{\mbox{\decay{\Bp}{\Kstarz\mumu}}}
 \def\jpsitomumu{\mbox{\decay{\jpsi}{\mumu}}}
+\def\bstodspi{\mbox{\decay{\Bs}{\Dsm\pip}}}
+\def\bstojpsiphi{\mbox{\decay{\Bs}{\jpsi\phi}}}
+
 \newcommand\kone[1]{\ensuremath{K_1(#1)^+}\xspace}
 
 \def\Kstarent{\ensuremath{K^*(892)^0}\xspace}

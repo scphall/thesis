@@ -1,16 +1,171 @@
 \section{Selection}
 
-LIST
+%LIST
+%
+%Rely on HLT2 tolo lines
+%cuts designed to mimic HLT1 and HL2 topo triggers:
+%B
+%sum pt $>$ 5\gev
+%VHI2DOF $<$ 10
+%BPVIPCHI2 $<$25
+%BPVLTIME$>$0.2\ps
+%BIRA$>$0.999
+%
+%D
+%sum PT $>$1.8GeV
+%MAXDOCA$<$0.5mm
+%VCHI2DOF $<$10
+%BPVVDCHI2$>$36
+%
+%D tracks
+%TRCHI2<4
+%PT>100MeV
+%P>1Gev
+%MIPCHI2>4
+%DLL<20()-10)
+%
+%phi
+%sumPT>1
+%VCHI2DOF<16
+%BPVVDCHI2>16
+%
+%phi tracks
+%TRCHI2<4
+%PT>100MeV
+%P>2GEv
+%DLL<20()-10)
+%
+%Min one track \& two...
+
+
+
+
+
 
 The \decay{\Ds}{\kkpi} and \decay{\phi}{\kk} candidates are required to have invariant masses
 within 25 and $20\mev$ of their known masses~\cite{PDG2012} respectively.
 
+B mass is found by constraining the Ds to its nominal mass
+
+D and Lc vetoes
+D to KKpi
 
 
+
+\subsection{Boosted Decision Tree}
+Combinatorial background is reduced using a BDT.
 Boosted Decision Trees were trained using the bagging method, as described in \Sec{sec:bdt:bag}, to
 identify the decays \decay{\Ds}{\kkpi} and \decay{\phi}{\kk}.
 The signal and background data used to train these BDTs came entirely from data.
-Signal samples came from the decays $\decay{\Bbar^0_{s}{\Ds\pim}$ and $\decay{\Bs}{\jpsi\phi}$
-data, which was background subtracted by sWeighting~\cite{sPlot}.
-Background samples were taken from the sideband distributions of the same data.
+%Signal samples came from the decays $\decay{\Bbar^0_{s}{\Ds\pim}$ and $\decay{\Bs}{\jpsi\phi}$
+%data, which was background subtracted by sWeighting~\cite{splot}.
+%Background samples were taken from the sideband distributions of the same data.
+The BDT technique used in this analysis, also used in \Ref{LHCb-CONF-2012-009}, is different to
+other analyses in this thesis in that a BDT is trained for each the \Ds and $\phi$.
+The boosting technique used here was bagging, which --- as described in \Sec{sec:bdt:bag} --- gives
+a response in the range $0<\mathrm{BDT}<1$.
+Cutting on the product of the two BDT responses improves the performance, and therefore the cut is
+$\bdt_{\Ds}\times\bdt_\phi>X$, as opposed to $\bdt_{\Ds}>X_1$ and $\bdt_\phi>X_2$.
+
+The BDT used to separate background from the signal \decay{\Ds}{\kkpi} decays was trained using
+a signal sample of \decay{\Bs}{\Dsm\pip} sWeighted~\cite{splot} data, and background from the \Dsm
+sidebands.
+This BDT uses an unusually large array of training variables, given in Table~\ref{tab:dsphi:vars},
+which include PID, and track quality variables.
+Similarly for the \decay{\phi}{\kk} BDT, the signal sample was \decay{\Bs}{\jpsi\phi}.
+
+
+\subsection{Optimization}
+The cut for the BDT wang the metric $S/\sqrt{S+B}$,
+In this case, the number of signal events, $S$, was estimated from the yield from the decay
+\decay{\Bs}{\Dsm\pip}, according to:
+\begin{equation}
+  S = \frac{ \BF\big(\btodsphi\big) }{ \BF\big(\bstodspi\big) }
+  \frac{ \eff{geo}\big(\btodsphi\big) }{ \eff{geo}\big(\bstodspi\big) }
+  \frac{f_d}{f_s}.
+  \num{\bstodspi}
+\end{equation}
+Here, \eff{geo} is the geometric efficiency caused by the detector, and $f_s/f_d$ quantifies
+fraction of \Bs mesons produced relative to \Bd mesons.
+The background yield is estimated as:
+\begin{equation}
+  B = c\cdot N^\mathrm{comb}\big(\bstodspi\big)\cdot N^\mathrm{comb}\big(\bstojpsiphi\big),
+\end{equation}
+where $N^\mathrm{comb}$ indicates the yield of combinatoric background for a given decay, and
+$c$ is a constant scaled such that
+$N^\mathrm{comb}\big(\bstodspi\big)\cdot
+N^\mathrm{comb}\big(\bstojpsiphi\big)=N^\mathrm{comb}\big(\btodsphi\big)$ with no BDT cut.
+The optimizatoin proceedure results in the optimal cut as $\bdt_{\Ds}\times\bdt_\phi>0.57$.
+
+
+
+\subsection{Helicity angle}
+There are no backgrounds which contribute to a peaking component below the \Bp mass for the decay
+\btodsphi.
+However, on top of the combinatorial background, the low-mass side has a number of compoents which
+result from excited \Dssp or \Kstarz.
+The most significant of these are the decays
+\footnote{
+  For these decays the \Kstarz refers to the $K^*(892)^0$ meson.
+}
+\btodsstrphi, \bstodskstrk and \bstodsstrkstrk.
+
+A \Bp meson has quantum numbers $J^P=0^-$, and the \Ds and $\phi$ mesons have
+quantum numbers $0^-$ and $1^-$ respectively.
+Therefore the decay \btodsphi is a transistion of a pseudoscalar to a pseudoscalar and a vector
+meson.
+In order for angular momentum to be conserved, the vector particle must be produced in the $j=0$
+state, where the spin is orthogonal to the particle's momentum.
+The $\phi$ is the vector meson in the decay \btodsphi, in its final state it is lonitudinally
+polarized, and its daughter kaons have an angular distribution proportional to $\cos^2\thetahel$;
+where \thetahel is the helicity angle, defined as the angle between the \Kp and the \Bp in the rest frame of the \Ds.
+This fact is used to further separate the signal decay \btodsphi from other backgrounds.
+
+These backgrounds do not have to have a $\phi$ meson in a longitudilnally polarized, and therefore
+the $\cos\thetahel$ distribution can be used to separate the signal decay from backgrounds.
+In order to maximize the signal yield, the full selected dataset was separated into four regions
+defined by the helicity angle and the invariant mass of the $\phi$ candidate, these regions are
+shown in \Table{tab:dsphi:hel}.
+
+%\begin{table}
+  %\caption{\small
+    %Fit regions used to search for the decay \btodsphi.
+    %Approximately $89\,\%$ was expected to be in region \rA, \rB.
+  %}
+  %\label{tab:dsphi:hel}
+  %\begin{center}
+    %\begin{tabular}{llll}
+      %\toprule
+      %&\multicolumn{2}{c}{$|m_{KK}-m_\phi^\pdg| (MeV)$}\\
+      %$|\cos\thetahel| &  20 \\
+      %\multirow{3}{*}{Defenders} \\
+      %\\
+      %\\
+      %\bottomrule
+    %\end{tabular}
+  %\end{center}
+%\end{table}
+\begin{tabular}{ |l|l|l| }
+  \hline
+  \multicolumn{3}{ |c| }{Team sheet} \\
+  \hline
+  Goalkeeper & GK & Paul Robinson \\ \hline
+  \multirow{4}{*}{Defenders} & LB & Lucus Radebe \\
+   & DC & Michael Duburry \\
+    & DC & Dominic Matteo \\
+     & RB & Didier Domi \\ \hline
+     \multirow{3}{*}{Midfielders} & MC & David Batty \\
+      & MC & Eirik Bakke \\
+       & MC & Jody Morris \\ \hline
+       Forward & FW & Jamie McMaster \\ \hline
+       \multirow{2}{*}{Strikers} & ST & Alan Smith \\
+        & ST & Mark Viduka \\
+        \hline
+      \end{tabular}
+
+
+
+
+
+
 
