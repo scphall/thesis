@@ -1,4 +1,23 @@
 \section{Calculation of the branching fraction}
+The branching fraction of the decay \btodsphi is determined with respect to the normalization
+channel \btodsd using
+\begin{equation}
+  \BF\big(\btodsphi\big) =
+  \frac{\varepsilon\big(\decay{\Bp}{\Ds\Dzb}\big)}{\varepsilon\big(\btodsphi\big)}
+  \cdot
+  \frac{\BF\big(\decay{\Dzb}{\Km\pip}\big)}{\BF\big(\phitokk\big)}
+  \cdot
+  \frac{N\big(\btodsphi\big)}{N\big(\decay{\Bp}{\Ds\Dzb}\big)}
+  \cdot
+  \BF\big(\btodsd\big)
+  , \\
+\end{equation}
+where $N$ denotes a yield and $\varepsilon$ denotes an efficiency.
+This choice of normalization channel means that the values of the branching fraction
+$\decay{\Ds}{\kkpi}$, which has a $5\pc$ uncertainty, cancels.
+%Reference~\cite{LHCb-CONF-2012-009} details an analysis including the decay \btodsd
+%is measured with an --- almost --- identical selection.
+%Values for the normalizaton channel were previoiusly calculated in \Ref{LHCb-CONF-2012-009}.
 
 The signal yield of the decay \btodsphi is determined by performing an unbinned maximum likelihood
 fit to the invariant mass spectrum of the candidate \Bp mesons.
@@ -6,6 +25,44 @@ The fit is done simltaneously to the four regions indicated in \Tab{tab:dsphi:he
 additional constraints to be placed on the background distribution.
 In the fit, there are several components: the signal \btodsphi; combinatorial background; and
 specific backgrounds that peak below the \Bp mass.
+
+
+\section{Efficiency calculations}
+Table~\ref{tab:dsphi:eff} contains a summary of all efficiencies relevant to this analysis.
+
+Since the branching fraction
+
+\begin{table}
+  \caption{\small
+    Efficiencies, in \%, for the signal decay \btodsphi and the normalization channel \btodsd.
+    The veto efficiency of \btodsphi is assumed to be the same as for \btodsd.
+  }
+  \label{tab:dsphi:eff}
+  \begin{center}
+    \begin{tabular}{ccccc}\toprule
+      &\btodsphi&\btodsd\\
+      \midrule
+      \eff{geo}
+      & $14.62\pm0.05$ & $12.75\pm0.05$ \\
+      \eff{reco\&strip}
+      & $\pz1.53\pm0.04$ & $\pz1.98\pm0.04$ \\
+      \eff{trig}
+      & $95.8\pm0.3$ & $94.4\pm0.3$ \\
+      \eff{bdt}
+      & $51.4\pm0.2$ & $99.2\pm0.2$ \\
+      \eff{vetoes}
+      & $95.0$ & $95.0\pm0.2$ \\
+      \eff{\chisqip}
+      & $86.0\pm0.9$ & $75.0\pm0.6$ \\
+      \midrule
+      \eff{tot}
+      & $0.091\pm0.003$ & $0.166\pm0.003$ \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\subsection{Contributions to the mass fit}
 
 The signal shape is a Gaussian function with parameters that were fixed from a fit to simulated
 events.
@@ -30,21 +87,68 @@ understanding the background component that is directly under the signal compone
 
 The background shapes for \btodsstrphi and \bstodskstrk are taken from simulated events,
 reconstructed as \btodsphi candidates.
-Since the shapes of these reconstruced candidates are non-trivial, a kernel density estimation
+Since the shapes of these reconstructed candidates are non-trivial, a kernel density estimation
 technique~\cite{Cranmer:2000du} is used to understand these shapes.
 
 There were no simulated events available with which to understand the shape of the \bstodsstrkstrk
 background.
 Instead the shape taken from the \bstodskstrk background is convolved with a distribution
-parameterising the loss of a photon (or pion) as seen between the decays \btodsstrphi and
+parameterizing the loss of a photon (or pion) as seen between the decays \btodsstrphi and
 \bstodskstrk.
 
 The shapes of peaking background contributions are taken from kernel density
 estimates of simulated events, as described.
 Yields of background components are also fixed from...
 Therefore, the only floating parameters in the simultaneous fit is the total signal yield and the
-cominatorial background yields and shape.
-However the combiatorial background between regions is fixed.
+combinatorial background yields and shape.
+However the combinatorial background between regions is fixed.
+
+\begin{table}
+  \caption{\small
+    Fit parameters used in in the fit to determine the yield of the decay \btodsphi.
+    A label of $f$, means that the value is fixed in the fit; and labels of $s$ and $d$ mean
+    constrained using simulated events and data over a wider mass range, respectively.
+    The yield of the background from \bstodsstrkstrk is also fixed to be $67\pc$ of
+    $N\big(\bstodskstrk\big)$
+  }
+  \label{}
+  \begin{center}
+    \begin{tabular}{ccccc}
+      \toprule
+      Fit component & Parameter & Value & Parameter & Value \\
+      \midrule
+      \btodsphi
+      & yield \rA & $6.00\pm2.70$
+      & \rC/\rA   & $0.075\pc$ $f$ \\
+      & $\mu$     & $5283\mev$ $f$
+      & \rB/\rA   & $0.044\pc$ $f$ \\
+      & $\sigma$     & $5283\mev$ $f$
+      & \rD/\rA   & $0.003\pc$ $f$ \\
+      \midrule
+      \btodsstrphi
+      & yield \rA & $8.67\pm7.36$
+      & \rB/\rA   & $0.044$ $f$ \\
+      & \rC/\rA   & $0.00\pm0.12$
+      & \rD/\rC   & $0.044$ $f$ \\
+      \midrule
+      \bstodskstrk
+      & yield \rA & $4.94\pm1.29$
+      & \rA/\rB, \rC/\rD & $0.50\pm0.24$ $s$ \\
+      & \rA/\rC, \rB/\rD & $1.50\pm0.34$ $s$ \\
+      %\midrule
+      %\bstodsstrkstrk
+      %& yield/$N\big(\bstodskstrk\big)$ & 1.5 $f$ \\
+      \midrule
+      Combinatorial
+      & yield \rA & $24.0\pm6.7$
+      & yield \rB & $16.5\pm6.0$ \\
+      & \rA/\rC & 1.5 $f$
+      & \rB/\rD & 1.5 $f$ \\
+      & exponent & $-(1.8\pm0.2)\e{-3}$ $d$ \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
 
 Figure~\ref{fig:dsphi:fits} shows the results of the fit of the signal and background functions to
 the signal candidates from data.
@@ -52,8 +156,6 @@ The total signal yield gives a value of $N\big(\btodsphi\big)=6.7\,^{+4.5}_{-2.6
 statistical significance of $3.6\stdev$, as calculated using Wilks Theorem~\cite{wilks1938}.
 This is confirmed with an ensemble of $10^5$ toy datasets.
 
-The branching fraction is normalized to the decay \decay{\Bp}{\Ds\Dzb} which is analysed in detail
-in \Ref{LHCb-CONF-2012-009}.
 
 $\BF\big(\btodsd\big)=\big(1.00\pm0.17\big)\e{-2}$
 $\BF\big(\decay{\Dzb}{\Km\pip}\big)=\big(3.88\pm0.05\big)\e{-2}$
@@ -94,7 +196,18 @@ $\BF\big(\phitokk\big)=\big(48.9\pm0.5\big)\e{-2}$
 
 
 
-\section{Systematics}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

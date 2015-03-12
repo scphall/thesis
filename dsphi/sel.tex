@@ -38,17 +38,118 @@
 %Min one track \& two...
 
 
+The data sample used in this analysis is the
+$1\invfb$ collected by the \lhcb detector in 2011 from $pp$
+collisions with a centre-of-mass energy of $7\tev$.
+Events are selected if they fire {\tt L0Hadron TOS} or {\tt L0Global TIS}.
+Further trigger requirements are applied at the \hlttwo level, where events are required to pass at
+least one of the topological triggers (see \Sec{sec:lhcb:trig} for more details) with {\tt TOS}.
+
+Candidate \Ds and \phii mesons are reconstructed only in the decays \decay{\Ds}{\kkpi} and
+\phitokk, where the \Ds decay is the Cabibbo favoured mode.
+Each daughter track has a $\chisqtrk/\ndof<4$, a \pt of at least $100\mev$, and a minimum momentum
+of $1$ or $2\gev$ for tracks originating from the \Ds and \phii, respectively.
+Each track in the event must also be detached from the PV, and are only accepted if the
+$\chisqvtx/\ndof$ increases by more than four when the track is used in the vertex fit, compared to
+when it is omitted.
+Very loose PID requirements are also placed on the tracks, this is more to reduce the rate of the
+stripping line that to identify pions and kaons, this is done later in the selection process.
+
+The \Ds and \phii are also subject to reqiurements on the \chisq of the vertex separation,
+\chisqvs, which is tighter for the \Ds becuase of its finite lifetime.
+Full stripping requirements are given in \Tab{tab:dsphi:sel}.
+
+\begin{table}
+  \caption{\small
+    Stripping selection applied to the \btodsphi candidates.
+  }
+  \label{tab:dsphi:sel}
+  \begin{center}
+    \begin{tabular}{cccc}
+      \toprule
+      Particle & \multicolumn{3}{c}{Cut} \\
+      \midrule
+      \Bp
+      & $\sum\pt^\mathrm{tracks}$ &$>$& $5\gev$ \\
+      & \chisqvtx/\ndof &$<$& 10 \\
+      & \chisqip &$<$& 25 \\
+      & $\tau$ &$>$& $0.2\ps$ \\
+      & $\cos\thetadir$ &$>$& $0.999$ \\
+      %& $\bdt_\mathrm{strip}$ &$>$& 0.05 \\
+      \midrule
+      \Ds
+      & $\sum\pt^\mathrm{tracks}$ &$>$& $1.8\gev$ \\
+      & \chisqvtx/\ndof &$<$& 10 \\
+      & DOCA &$<$& $0.5\mm$ \\
+      \midrule
+      Tracks from \Ds
+      & \pt &$>$& $100\mev$ \\
+      & $p$ &$>$& $1\gev$ \\
+      & $\chisqtrk/\ndof$ &$<$& $4$ \\
+      & $\min\chisqip$ &$>$& $4$ \\
+      & \chisqvs &$>$& 36 \\
+      & $\dllkpi(K)$ &$>$& $-10$ \\
+      & $\dllkpi(\pi)$ &$<$& $20$ \\
+      \midrule
+      \phii
+      & $\sum\pt^\mathrm{tracks}$ &$>$& $1\gev$ \\
+      & \chisqvtx/\ndof &$<$& 16 \\
+      \midrule
+      Tracks from $\phi$
+      & \pt &$>$& $100\mev$ \\
+      & $p$ &$>$& $2\gev$ \\
+      & $\chisqtrk/\ndof$ &$<$& $4$ \\
+      & $\min\chisqip$ &$>$& $4$ \\
+      & \chisqvs &$>$& 16 \\
+      %\midrule
+      %STUFF FOR 1 AND 2 TRACKS
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+After the stripping selection, further cuts are applied.
+The invariant mass of the \Ds candidates are required to be within $25\mev$j
+its nominal value cited in \Ref{PDG2012}.
+Cuts are also applied to reconstructed \phii mass, this is described later, in \Sec{sec:dsphi:hel}.
+The decay vertex of the \Ds is required to be downstream of the decay vertex of the \Bp, and the
+$p$-value formed from the sum of the \chisqip and \chisqvtx of the \Bp candidate is also required
+to be greater than $0.1\pc$.
+
+There is potential for cross-feed between a \Dp meson decaying into a $\Km\pip\pip$ final stateand
+the signal \Ds final state if the \pip is misidentified as a \Kp.
+The resulting invariant \kkpi combination --- with one kaon being a misidentified pion --- may fall
+within $25\mev$ of the nominal \Ds mass.
+%This is possible because the \Ds is approximately $100\mev$ heavier than the \Dp.
+There is also contamination from the decay \decay{\Lc}{p\Km\pip}.
+These two modes of cross-feeds are suppressed by a series of conditions.
+Firstly, if the mass of the \kk pair from the \Ds decay is within $10\mev$ of the \phii mass, then
+the candidate is accepted as coming from the decay \decay{\Ds}{\kkpi}.
+Otherwise, a track is assigned the mass of a pion or proton, so as the new object is consistent
+with a \kkpi or $p\Km\pip$ respectively.
+If the invariant mass of this newly reconstructed object falls within the nominal mass of the \Dp
+or \Lc, then the ambiguous (swapped) track is subject to the stringent PID requirements of
+$\dllkpi>10$ or $\dllkp>0$, respectively.
 
 
 
-
-The \decay{\Ds}{\kkpi} and \decay{\phi}{\kk} candidates are required to have invariant masses
-within 25 and $20\mev$ of their known masses~\cite{PDG2012} respectively.
-
-B mass is found by constraining the Ds to its nominal mass
-
-D and Lc vetoes
-D to KKpi
+%In order to remove candidates from \Dp cross-feed,
+%if the new $\Km\pip\pip$ mass falls within $25\mev$ of $m_{\Dp}^\pdg$,
+%the kaon pair must either form an invariant mass within
+%$10\mev$ of the known \phii mass, or the ambiguous track must pass stringent PID requirements
+%($\dllkpi(\Kp)>10$).
+%If the mass of the $p\Km\pip$ object falls within $25\mev$ of the \Lc mass,
+%The candidate decay chain is then subject to the stripping requirements, which are outlined in
+%\Tab{tab:dsphi:sel}.
+%Requirements in the stripping are that the \Ds vertex is downstream of the \Bp and the vertices are
+%well defined.
+%One variable listed in \Tab{tab:dsphi:sel} is $\bdt_\mathrm{strip}$, which is the output of a BBDT
+%in the stripping, whose input variables are a few kinematic and geometric variables of the \Bp and
+%\Ds.
+%The cut on this BBDT is very loose, and is approximately 100\pc efficient
+%The \decay{\Ds}{\kkpi} and \decay{\phi}{\kk} candidates are required to have invariant masses
+%within 25 and $20\mev$ of their known masses~\cite{PDG2012} respectively.
 
 
 
@@ -101,17 +202,8 @@ The optimizatoin proceedure results in the optimal cut as $\bdt_{\Ds}\times\bdt_
 
 
 
-\subsection{Helicity angle}
-There are no backgrounds which contribute to a peaking component below the \Bp mass for the decay
-\btodsphi.
-However, on top of the combinatorial background, the low-mass side has a number of compoents which
-result from excited \Dssp or \Kstarz.
-The most significant of these are the decays
-\footnote{
-  For these decays the \Kstarz refers to the $K^*(892)^0$ meson.
-}
-\btodsstrphi, \bstodskstrk and \bstodsstrkstrk.
-
+\subsection{Fit regions}
+\label{sec:dsphi:hel}
 A \Bp meson has quantum numbers $J^P=0^-$, and the \Ds and $\phi$ mesons have
 quantum numbers $0^-$ and $1^-$ respectively.
 Therefore the decay \btodsphi is a transistion of a pseudoscalar to a pseudoscalar and a vector
@@ -123,11 +215,45 @@ polarized, and its daughter kaons have an angular distribution proportional to $
 where \thetahel is the helicity angle, defined as the angle between the \Kp and the \Bp in the rest frame of the \Ds.
 This fact is used to further separate the signal decay \btodsphi from other backgrounds.
 
-These backgrounds do not have to have a $\phi$ meson in a longitudilnally polarized, and therefore
-the $\cos\thetahel$ distribution can be used to separate the signal decay from backgrounds.
-In order to maximize the signal yield, the full selected dataset was separated into four regions
-defined by the helicity angle and the invariant mass of the $\phi$ candidate, these regions are
-shown in \Table{tab:dsphi:hel}.
+There are no backgrounds which contribute to a peaking component below the \Bp mass for the decay
+\btodsphi.
+However, on top of the combinatorial background, the low-mass side has a number of compoents which
+result from excited \Dssp or \Kstarz.
+The most significant of these are the decays
+\footnote{
+  For these decays the \Kstarz refers to the $K^*(892)^0$ meson.
+}
+\btodsstrphi, \bstodskstrk and \bstodsstrkstrk, which all contain at least one final state particle
+that is not reconstructed.
+These peaking backgrounds do not necessarily result in a longitudilnally polarized \phii.
+
+It is possible to remove about $93\pc$ of of background by requiring that $|\cos\thetahel|>0.4$,
+this is the same cut value as used in \Ref{LHCb-PAPER-2011-008}.
+Therefore, two regions are defined in terms of $\cos\thetahel$, and both are used in a simultaneous
+fit.
+
+%The signal region for the \phii candidate is defined to be within $20\mev$ of $m_\phii^\pdg$.
+%A sideband region is defined to be $20<m_
+
+%These peaking backgournds, and the combinatorial background,
+%do not have to have a $\phi$ meson in a longitudilnally polarized.
+%Therefore, the $\cos\thetahel$ distribution should be flat for all backgrounds.
+
+%can be used to separate the signal decay from backgrounds.
+
+%In order to maximize the signal yield, the full selected dataset was separated into four regions
+%defined by the helicity angle and the invariant mass of the $\phi$ candidate, these regions are
+%shown in \Table{tab:dsphi:hel}.
+
+Fit regions are further split according to the invariant mass of the \phii candididate.
+A signal region is defined for \phitokk candidates with a mass within $20\mev$ of the nominal \phii
+mass, and a sideband region is defined for candidates with a mass in the range
+$20<m_\phi^\pdg<40\mev$.
+
+The resulting fit regions --- defined by \thetahel and $m_\kk$ --- have a signal region, \rA,
+containing most of the signal, and a purely background region, \rD.
+By performing a simultaneous fit to the four regions, which are defined explicitly in
+\Tab{tab:dsphi:hel}, there is a better grasp on all the backgrounds.
 
 \begin{table}
   \caption{\small
@@ -148,10 +274,6 @@ shown in \Table{tab:dsphi:hel}.
     \end{tabular}
   \end{center}
 \end{table}
-
-
-
-
 
 
 
