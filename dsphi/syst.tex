@@ -1,19 +1,88 @@
 \section{Systematic uncertainties}
 \label{sec:dsphi:syst}
 
-The dominant systematic uncertainty was from the mass fits, which is unsurprising considering the
+Sources of systematic uncertainty appear at all levels of the selection and modelling of the decay.
+The following section lists each contribution and defends the choice of the cvalue of the
+uncertainty assigned.
+It should be noted that it is only the relative efficiency between the signal and normalization
+channels that contributes to the systematics, rather than their absolute values.
+
+The selection of candidate \btodsphi decays is the source of some small uncertainty.
+
+
+%sel
+%geometry desccribed well
+%and reco
+%discrepancy in IP resolution, but very loose cut, not an issue
+%1\% to account for imperfect modelling in simulation
+%BDT eff from data, so not a problem
+%
+%Trig
+%\lone is reliable above 4\gev in \pt,
+%using only these candidates, the trigger eff alters by 4\%, this is the systematic we apply
+%statistically limited
+%
+%BDT
+%BtoDD \cite{LHCb-PAPER-2012-001}
+%has 1\% syst
+%additional phi BDT has 2\% syst
+%
+%Veto
+%Both channels has \Ds, so effs mainly cancel
+%only difference is from decay kinematics
+%given the eff of these cuts, difference must be ever so small
+%Above, we assume the ratio is 1.0
+%In data, the diffenece between B to Dspi an B to DsD is 1.5\%
+%The \phii is much nearer in mass than \Dz than pi, so the difference should be small
+%1\%
+%
+%Mass windows
+%\Ds mass has same eff for sig and norm
+%difference is between D0 and \phii
+%
+%Mass fits
+%\begin{itemize}
+  %\item signal shape:
+    %run with shape free, 5\% higher yield, we assign ths at the syst
+  %\item \btodsstphi:
+    %remove completely leads to 1\% change in yiled
+  %\item \bstodskstrk:
+    %ratio \rA/\rB and \rC/\rD constrained from sim
+    %instead we fix this 100 times lower yield dhanges by 3\%
+    %100 times higher is 2\%.
+    %The ration of \rA/\rC  and \rB/\rD varied by large amounts leading to 5\% change n yield
+    %we don't know ratios precisely, we do know to within a factor of 2, within this range 1\% syst
+  %\item \bstodsstrkstrk:
+    %remove entirely changes yiled by 1\%
+  %\item comb:
+    %leave slope fere, tield changes by 5\%, but this is a clear overestimate, 3.5\%
+%\end{itemize}
+%
+%Total is 5\%, none of these alterations lead to a significance of lower than 3\stdev
+%
+%SWave contamination
+%could be some small Swave
+%other channels percent level contaminations are seen, but when considered next to the systematic
+%from normalization, this is negligible
+%Statistics too limited to do precise extraction
+%
+%Limited MC
+%3\% on ratio of effs
+
+Contributions from all sources of systematic uncertainties are summarized in \Tab{tab:dsphi:syst}.
+The dominant systematic uncertainty --- discounting the uncertainties on the branchinng fraction of
+the normalization channel --- was from the mass fits, which is unsurprising considering the
 complexity of the fit, and the treatment of the backgrounds.
-
-
-
-
+Regardless of the constraints that are --- or are not --- included in the fit, the lowest
+significance obtained is still greater than $3\stdev$.
+Therefore the significance was quoted as greater than $3\stdev$.
 
 \begin{table}
   \caption{\small
     Summary of the systematic uncertainties contributing to the branching fraction of the decay
     \btodsphi.
   }
-  \label{}
+  \label{tab:dsphi:syst}
   \begin{center}
     \begin{tabular}{cc}
       \toprule
@@ -22,12 +91,12 @@ complexity of the fit, and the treatment of the backgrounds.
       Selection & $\pz1$ \\
       Trigger & $\pz4$ \\
       BDT & $\pz3$ \\
-      Veto & $\pz1$ \\
+      \Dp and \Lc vetoes & $\pz1$ \\
       Mass Windows & $\pz3$ \\
-      MC Stats & $\pz3$ \\
+      Simulation statistics & $\pz3$ \\
       %Total Selection & 7 \\
-      Mass Shape & $\pz5$ \\
-      BKGDs & $\pz5$ \\
+      Mass shape & $\pz5$ \\
+      Background shapes & $\pz5$ \\
       %Total Mass Fit & 7 \\
       Total & 10 \\
       \bottomrule
