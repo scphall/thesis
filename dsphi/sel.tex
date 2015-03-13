@@ -133,6 +133,31 @@ or \Lc, then the ambiguous (swapped) track is subject to the stringent PID requi
 $\dllkpi>10$ or $\dllkp>0$, respectively.
 
 
+There are no backgrounds which contribute to a peaking component directly below the \Bp mass for
+the decay \btodsphi.
+However, on top of the combinatorial background, the low-mass side has a number of compoents which
+result from excited \Dssp or \Kstarz.
+The most significant of these are the decays
+\footnote{
+  For these decays the \Kstarz refers to the $K^*(892)^0$ meson.
+}
+\btodsstrphi, \bstodskstrk and \bstodsstrkstrk, which all contain at least one final state particle
+that is not reconstructed.
+
+The decay \bstodskstrk has never been observed, but given the branching fraction of the decay
+$\decay{\Bd}{\Dm\Kstarzb\Kp}$ is $(8.8\pm1.9)\e{-4}$~\cite{PDG2012}, it should be in the
+\btodsphi selection.
+There is no contribution from the $\decay{\Bd}{\Dm\Kstarzb\Kp}$ mode, because the loss in mass from
+the pion means that it peaks too low.
+As well as this, the decay \bstodsstrkstrk was also expected to be present in the sample, though at
+lower mass.
+
+
+
+
+%These peaking backgrounds do not necessarily result in a longitudilnally polarized \phii.
+%They are however, irriducible, and must be accounted for in the fit, this is described later in
+%\Sec{sec:dsphi:fit}.
 
 %In order to remove candidates from \Dp cross-feed,
 %if the new $\Km\pip\pip$ mass falls within $25\mev$ of $m_{\Dp}^\pdg$,
@@ -215,22 +240,13 @@ polarized, and its daughter kaons have an angular distribution proportional to $
 where \thetahel is the helicity angle, defined as the angle between the \Kp and the \Bp in the rest frame of the \Ds.
 This fact is used to further separate the signal decay \btodsphi from other backgrounds.
 
-There are no backgrounds which contribute to a peaking component below the \Bp mass for the decay
-\btodsphi.
-However, on top of the combinatorial background, the low-mass side has a number of compoents which
-result from excited \Dssp or \Kstarz.
-The most significant of these are the decays
-\footnote{
-  For these decays the \Kstarz refers to the $K^*(892)^0$ meson.
-}
-\btodsstrphi, \bstodskstrk and \bstodsstrkstrk, which all contain at least one final state particle
-that is not reconstructed.
-These peaking backgrounds do not necessarily result in a longitudilnally polarized \phii.
 
-It is possible to remove about $93\pc$ of of background by requiring that $|\cos\thetahel|>0.4$,
+It is possible to remove about $93\pc$ of background by requiring that $|\cos\thetahel|>0.4$,
 this is the same cut value as used in \Ref{LHCb-PAPER-2011-008}.
 Therefore, two regions are defined in terms of $\cos\thetahel$, and both are used in a simultaneous
 fit.
+This also allows the combinatorial and peaking bacgrounds to be separated from the signal becuase
+these do not necessarily have a longitudilnally polarized \phii.
 
 %The signal region for the \phii candidate is defined to be within $20\mev$ of $m_\phii^\pdg$.
 %A sideband region is defined to be $20<m_
@@ -250,7 +266,7 @@ A signal region is defined for \phitokk candidates with a mass within $20\mev$ o
 mass, and a sideband region is defined for candidates with a mass in the range
 $20<m_\phi^\pdg<40\mev$.
 
-The resulting fit regions --- defined by \thetahel and $m_\kk$ --- have a signal region, \rA,
+The resulting fit regions --- defined by \thetahel and $m_{\kk}$ --- have a signal region, \rA,
 containing most of the signal, and a purely background region, \rD.
 By performing a simultaneous fit to the four regions, which are defined explicitly in
 \Tab{tab:dsphi:hel}, there is a better grasp on all the backgrounds.

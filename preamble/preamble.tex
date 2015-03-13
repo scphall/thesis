@@ -182,7 +182,35 @@ end#1\endcsname
   \fancyhf{}%
   \fancyfoot[C]{{\bf \thepage}}%
   \fancyhead[RE,LO]{\leftmark}
+  \renewcommand{\headrulewidth}{0.5pt}
 }
+
+%\lhead{\leftmark}
+%\rhead{\rightmark}
+%% using leftmark and rightmark requires redefinition of the following to look proper
+%\makeatletter
+%\renewcommand\tableofcontents{%
+  %\section*{\contentsname
+    %\@mkboth{%
+    %}{\MakeUppercase\contentsname}}
+    %%\MakeUppercase\contentsname}{}}
+    %%}{}}
+  %\@starttoc{toc}%
+%}
+%\makeatother
+\makeatletter
+%% patch \listoffigures not to issue \@mkboth but \markboth
+%% and to issue \addcontentsline
+\patchcmd{\listoffigures}
+{\@mkboth{\MakeUppercase\listfigurename}{\MakeUppercase\listfigurename}}
+{\addcontentsline{toc}{chapter}{\listfigurename}\markboth{\listfigurename}{}}
+{}{}
+\patchcmd{\listoftables}
+{\@mkboth{\MakeUppercase\listtablename}{\MakeUppercase\listtablename}}
+{\addcontentsline{toc}{chapter}{\listtablename}\markboth{\listtablename}{}}
+{}{}
+\makeatother
+
 
 
 %\newcommand{\shortdate}{\ifnum\number\day<10 0\fi \number\day \space%

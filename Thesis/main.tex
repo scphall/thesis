@@ -12,16 +12,27 @@
 \input{Thesis/acknowledgements}
 \pagebreak
 
-\tableofcontents\thispagestyle{fancy}
+%\lhead{}
+%\rhead{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+\tableofcontents
+\pagestyle{chapters}
+\fancyhead[RE,LO]{\bf Contents}
 \pagebreak
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
+\fancyhead[RE,LO]{\bf List of Figures}
 \pagebreak
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
 \addcontentsline{toc}{chapter}{\listtablename}
+\fancyhead[RE,LO]{\bf List of tables}
 \listoftables
 \pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \input{Thesis/poem}
