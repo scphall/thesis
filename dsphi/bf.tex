@@ -1,7 +1,7 @@
 \section{Calculation of the branching fraction}
 \label{sec:dsphi:bf}
 The branching fraction of the decay \btodsphi is determined with respect to the normalization
-channel \btodsd using
+channel \btodsd, where $\decay{\Dz}{\Km\pip}$, using
 \begin{equation}
   \BF\big(\btodsphi\big) =
   \frac{\varepsilon\big(\decay{\Bp}{\Ds\Dzb}\big)}{\varepsilon\big(\btodsphi\big)}
@@ -12,6 +12,7 @@ channel \btodsd using
   \cdot
   \BF\big(\btodsd\big)
   , \\
+  \label{eq:dsphi:bf}
 \end{equation}
 where $N$ denotes a yield and $\varepsilon$ denotes an efficiency.
 This choice of normalization channel means that the values of the branching fraction
@@ -22,16 +23,17 @@ $\decay{\Ds}{\kkpi}$, which has a $5\pc$ uncertainty, cancels.
 
 The signal yield of the decay \btodsphi is determined by performing an unbinned maximum likelihood
 fit to the invariant mass spectrum of the candidate \Bp mesons.
-The fit is done simltaneously to the four regions indicated in \Tab{tab:dsphi:hel}, this enables
+The fit is done simultaneously to the four regions indicated in \Tab{tab:dsphi:hel}, this enables
 additional constraints to be placed on the background distribution.
 In the fit, there are several components: the signal \btodsphi; combinatorial background; and
 specific backgrounds that peak below the \Bp mass.
 
 
 \section{Efficiency calculations}
-Table~\ref{tab:dsphi:eff} contains a summary of all efficiencies relevant to this analysis.
-
-Since the branching fraction
+Efficiencies relevant to the calculation of the
+branching fraction, given in \Eq{eq:dsphi:bf}, were
+calculated using simulated events of the decays \btodsphi and \btodsd.
+A summary of these efficiencies can be found in \Tab{tab:dsphi:eff}.
 
 \begin{table}
   \caption{\small
@@ -96,7 +98,7 @@ The $\phi$ from the decay \btodsstrphi does not need to be longitudinally polari
 Therefore the background from the decay \btodsstrphi contributes in all fit regions.
 Since the shapes of these reconstructed candidates are non-trivial, a kernel density estimation
 technique~\cite{Cranmer:2000du} is used to describe the shape.
-Figure~\ref{fig:dsphi:sigshape} shows theds kernelized distribution for the whole set of simulated
+Figure~\ref{fig:dsphi:sigshape} shows the kernelized distribution for the whole set of simulated
 events, as well as each individual helicity region.
 It was assumed that \Dssp was unpolarized, as observed in many other cases where a
 $B$ decays into a vector-vector final state.
@@ -109,14 +111,15 @@ between the two helicity regions.
     \includegraphics[width=0.48\textwidth]{blank}\\
     \includegraphics[width=0.48\textwidth]{blank}
     \includegraphics[width=0.48\textwidth]{blank}
-    \caption{\small
-      Signal shape from simuated events
+    \caption[Shape contributions from signal \btodsphi, and \btodsstrphi]
+    {
+      Signal shape from simulated events
       Shapes of peaking background contributions for
-      deacys of the form $\decay{\Bs}{D_s^{(*)+}\Kstarz\Kp}$.
+      decays of the form $\decay{\Bs}{D_s^{(*)+}\Kstarz\Kp}$.
       The contributions from \btodsstrphi and \bstodskstrk are kernelized distributions from
       simulated events.
       The \bstodsstrkstrk shape is obtained by convolving the
-      effecto of missing a photon or pion with the \bstodskstrk spectrum.
+      effect of missing a photon or pion with the \bstodskstrk spectrum.
     }
     \label{fig:dsphi:sigshape}
   \end{center}
@@ -134,20 +137,21 @@ The largest uncertainty here was from the yield of this component.
 
 Just as was done with the signal component, the ratios between yields of each fit region was fixed
 using simulation.
-Approximatly $95\pc$ of the contribution from the decay \btodsstrphi is expected to be in the
+Approximately $95\pc$ of the contribution from the decay \btodsstrphi is expected to be in the
 signal region.
 
 
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.48\textwidth]{blank}
-    \caption{\small
-      Shapes of paeking backgrond contributions for
-      deacys of the form $\decay{\Bs}{D_s^{(*)+}\Kstarz\Kp}$.
+    \caption[Shapes of background contributions of \bstodskstrk and \bstodskstrk]
+    {\small
+      Shapes of peaking background contributions for
+      decays of the form $\decay{\Bs}{D_s^{(*)+}\Kstarz\Kp}$.
       The contribution from \bstodskstrk is a kernelized distribution from
       simulated events.
       The \bstodsstrkstrk shape is obtained by convolving the
-      effecto of missing a photon or pion with the \bstodskstrk spectrum.
+      effect of missing a photon or pion with the \bstodskstrk spectrum.
     }
     \label{fig:dsphi:bkgshape}
   \end{center}
@@ -168,7 +172,7 @@ $\decay{\Bsb}{D_s^{(*)+}\Kstarz\Km}$.
 These arise when the pion from the \decay{\Kstarz}{\Kp\pim} is not reconstructed.
 Since there is missing energy from the pion (and photon in the case of the \Dssp decay), these peak
 significantly below the \Bp mass.
-However, their background shapes are non-trivial, extending upto just below the signal window,
+However, their background shapes are non-trivial, extending up to just below the signal window,
 and therefore a good understanding of the shapes are required.
 Once again, kernel density estimation techniques~\cite{Cranmer:2000du} were used; these shapes are
 show in \Fig{fig:dsphi:bkgshape}.
@@ -182,10 +186,15 @@ Instead the shape taken from the \bstodskstrk background is convolved with a dis
 parameterizing the loss of a photon (or pion) as seen between the decays \btodsstrphi and
 \bstodskstrk.
 
-Yields from these decays can, cleearly, not be estimated.
+
+Yields from these decays can, clearly, not be estimated.
 Especially since the yield from the decay \bstodskstrk is highly sensitive to the width of the
 $a_1(1260)$ --- because it decays into $\Kstar K$ --- which is poorly known.
-However, the ratio of branching fractions
+However, the ratios of yields for the \bstodskstrk decay can be determined using simulated events.
+The ratios between the yields from \rA/\rB and \rC/\rD was found to be $0.5\pm0.24$, and between the
+regions \rA/\rC and \rB/\rD was determined to be $1.50\pm.034$.
+These values are used as Gaussian constraints in the fit.
+The ratio of branching fractions
 \begin{equation}
   \frac{\BF\big(\decay{\Bd}{\Dm\Kstarz\Kp}\big)}
   {\BF\big(\decay{\Bd}{\Dstarm\Kstarz\Kp}\big)}
@@ -193,30 +202,37 @@ However, the ratio of branching fractions
 \end{equation}
 and it is reasonable to expect the same to be true for the branching fraction ratio for the
 \bstodskstrk and \bstodsstrkstrk modes.
-
-
+Therefore, the ration of yields for each region is fixed to $1.5$.
 
 %The background shapes for \btodsstrphi and \bstodskstrk are taken from simulated events,
 %reconstructed as \btodsphi candidates.
 %Since the shapes of these reconstructed candidates are non-trivial, a
 
+%The shapes of peaking background contributions are taken from kernel density
+%estimates of simulated events, as described.
+%Yields of background components are also fixed from...
+%Therefore, the only floating parameters in the simultaneous fit is the total signal yield and the
+%combinatorial background yields and shape.
+%However the combinatorial background between regions is fixed.
 
-The shapes of peaking background contributions are taken from kernel density
-estimates of simulated events, as described.
-Yields of background components are also fixed from...
-Therefore, the only floating parameters in the simultaneous fit is the total signal yield and the
-combinatorial background yields and shape.
-However the combinatorial background between regions is fixed.
+The last remaining background component to be constrained is that of the combinatorial background,
+which is modelled with a decaying exponential function.
+Since the distribution of $\cos\thetahel$ is flat for combinations of random tracks, the yields
+between the regions \rA/\rC and \rB/\rD  are fixed to $1.5$,
+The value of the slope is Gaussian constrained to a fit across a wider range of mass in data.
+
+A summary of constraints applied to the fit is given in \Table{fig:tab:constraints}.
 
 \begin{table}
-  \caption{\small
+  \caption[Constraints applied to the fit to \btodsphi data]
+  {\small
     Fit parameters used in in the fit to determine the yield of the decay \btodsphi.
     A label of $f$, means that the value is fixed in the fit; and labels of $s$ and $d$ mean
     constrained using simulated events and data over a wider mass range, respectively.
     The yield of the background from \bstodsstrkstrk is also fixed to be $67\pc$ of
     $N\big(\bstodskstrk\big)$
   }
-  \label{}
+  \label{fig:tab:constraints}
   \begin{center}
     \begin{tabular}{ccccc}
       \toprule
@@ -256,16 +272,10 @@ However the combinatorial background between regions is fixed.
 \end{table}
 
 Figure~\ref{fig:dsphi:fits} shows the results of the fit of the signal and background functions to
-the signal candidates from data.
+the \btodsphi candidates from data.
 The total signal yield gives a value of $N\big(\btodsphi\big)=6.7\,^{+4.5}_{-2.6}$, with a
 statistical significance of $3.6\stdev$, as calculated using Wilks Theorem~\cite{wilks1938}.
 This is confirmed with an ensemble of $10^5$ toy datasets.
-
-
-$\BF\big(\btodsd\big)=\big(1.00\pm0.17\big)\e{-2}$
-$\BF\big(\decay{\Dzb}{\Km\pip}\big)=\big(3.88\pm0.05\big)\e{-2}$
-$\BF\big(\phitokk\big)=\big(48.9\pm0.5\big)\e{-2}$
-
 
 \begin{figure}
   \begin{center}
@@ -273,56 +283,33 @@ $\BF\big(\phitokk\big)=\big(48.9\pm0.5\big)\e{-2}$
     \includegraphics[width=0.48\textwidth]{B2Dsphi_regionB}\\
     \includegraphics[width=0.48\textwidth]{B2Dsphi_regionC}
     \includegraphics[width=0.48\textwidth]{B2Dsphi_regionD}
-    \caption{\small
+    \caption[Fits to \btodsphi data]
+    {\small
       Fits to the four analysis regions, as given in Table~\ref{tab:dsphi:hel}, in the search for
       the decay \btodsphi.
-      The region \rA is contians the majority of the signal candidates, while region \rD contains
+      The region \rA is contains the majority of the signal candidates, while region \rD contains
       none.
     }
     \label{fig:dsphi:fits}
   \end{center}
 \end{figure}
 
-
-
-
-
-%\begin{align}
-  %\BF\big(\btodsphi\big) &=
-  %\frac{\varepsilon\big(\decay{\Bp}{\Ds\Dzb}\big)}{\varepsilon\big(\btodsphi\big)}
-  %\cdot
-  %\frac{\BF\big(\decay{\Dzb}{\Km\pip}\big)}{\BF\big(\phitokk\big)}
-  %\cdot
-  %\frac{N\big(\btodsphi\big)}{N\big(\decay{\Bp}{\Ds\Dzb}\big)} \nonumber\\
-  %&=\big(1.87\,^{+1.25}_{-0.73}\stat\pm0.19\syst\pm0.32\normerr\big)\e{-6}.
-  %\label{eq:dsphi:bf}
-%\end{align}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Using \Eq{eq:dsphi:bf}, the branching fraction of the decay \btodsphi was determined to be
+\begin{equation}
+  \BF\big(\btodsphi\big) =
+  \big(1.87\,^{+1.25}_{-0.73}\stat\pm0.19\syst\pm0.32\normerr\big)\e{-6}.
+  \label{eq:dsphi:result}
+\end{equation}
+This assumes the branching fraction values of
+$\BF\big(\btodsd\big)=\big(1.00\pm0.17\big)\e{-2}$,
+$\BF\big(\decay{\Dzb}{\Km\pip}\big)=\big(3.88\pm0.05\big)\e{-2}$, and
+$\BF\big(\phitokk\big)=\big(48.9\pm0.5\big)\e{-2}$~\cite{PDG2012}.
+The uncertainties in the branching fraction of the normalization channel introduced a systematic
+uncertainty of $17\ps$.
+Other systematic uncertainties are included in the above result, and are discussed in
+\Sec{sec:dsphi:syst}.
+The above result has a branching fraction which is higher than the SM predictions, although there
+are large uncertainties associated with both the theoretical and experimental values.
 
 
 

@@ -116,6 +116,8 @@ Cuts are also applied to reconstructed \phii mass, this is described later, in \
 The decay vertex of the \Ds is required to be downstream of the decay vertex of the \Bp, and the
 $p$-value formed from the sum of the \chisqip and \chisqvtx of the \Bp candidate is also required
 to be greater than $0.1\pc$.
+Charmless backgrounds are suppressed by requreing that the \chisqfd from the \Bp vertex was greater
+than two.
 
 There is potential for cross-feed between a \Dp meson decaying into a $\Km\pip\pip$ final stateand
 the signal \Ds final state if the \pip is misidentified as a \Kp.
@@ -217,12 +219,12 @@ Here, \eff{geo} is the geometric efficiency caused by the detector, and $f_s/f_d
 fraction of \Bs mesons produced relative to \Bd mesons.
 The background yield is estimated as:
 \begin{equation}
-  B = c\cdot N^\mathrm{comb}\big(\bstodspi\big)\cdot N^\mathrm{comb}\big(\bstojpsiphi\big),
+  B = c\cdot N_\mathrm{c}\big(\bstodspi\big)\cdot N_\mathrm{c}\big(\bstojpsiphi\big),
 \end{equation}
-where $N^\mathrm{comb}$ indicates the yield of combinatoric background for a given decay, and
+where $N_\mathrm{c}$ indicates the yield of combinatoric background for a given decay, and
 $c$ is a constant scaled such that
-$N^\mathrm{comb}\big(\bstodspi\big)\cdot
-N^\mathrm{comb}\big(\bstojpsiphi\big)=N^\mathrm{comb}\big(\btodsphi\big)$ with no BDT cut.
+$N_\mathrm{c}\big(\bstodspi\big)\cdot
+N_\mathrm{c}\big(\bstojpsiphi\big)=N_\mathrm{c}\big(\btodsphi\big)$ with no BDT cut.
 The optimizatoin proceedure results in the optimal cut as $\bdt_{\Ds}\times\bdt_\phi>0.57$.
 
 
