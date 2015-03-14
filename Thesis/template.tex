@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper,twoside]{report}
+\documentclass[12pt,a4paper,twoside]{report}
 
 
 \usepackage{etoolbox}
@@ -17,9 +17,10 @@
 
 \input{XXX/main}
 
+\clearpage
+\addcontentsline{toc}{chapter}{\bf Bibliography}
 \fancyhead[RE,LO]{\bf Bibliography}
 \bibliographystyle{bib/LHCb}
-\addcontentsline{toc}{chapter}{\bf Bibliography}
 \bibliography{bib/main,bib/db,bib/LHCb-PAPER,bib/LHCb-CONF,bib/LHCb-DP}
 
 \iftoggle{appendix}{

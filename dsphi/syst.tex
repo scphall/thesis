@@ -14,60 +14,58 @@ As descrbed abocve, the efficiency of the BDT is evaluated using data, so there 
 difference in the efficiency ratio.
 In total, a $1\pc$ uncertainty is assigned for the selection.
 
-There are some differences be
+There are some differences between the performance of the trigger in data and in the simulation.
+The HLT lines were observed to be described well in simulation.
+Also, it was observed that the \lone hardware triggers is reliable above $\pt>4\gev$, but slightly
+mismodelled at low \pt.
+Using only the events above $4\gev$, it was observed that the trigger efficiency alters by about
+$4\pc$.
+This is the value of the systematic uncertainty that is appied.
 
+Both the signal and normalization channels have a \Ds, and therefore efficiencies from the \Dp and
+\Lc vetoes cancel to a large extent.
+Given that these cuts are very efficient, the difference must be negligible, and in
+\Tab{tab:dsphi:eff} the efficiency ratio is assumed to be unity.
+The only differences between the two modes are due the decay kinematics, since the \phii is lighter
+than the \Dz.
+There is a difference of $1.5\pc$ between \eff{veto} for the decays \bstodspi and \btodsd, and
+since the mass of the \phii is nearer the \Dz mass than the pion mass, a systematic uncertainty of
+$1\pc$ is assigned.
 
-%Trig
-%\lone is reliable above 4\gev in \pt,
-%using only these candidates, the trigger eff alters by 4\%, this is the systematic we apply
-%statistically limited
-%
-%BDT
-%BtoDD \cite{LHCb-PAPER-2012-001}
-%has 1\% syst
-%additional phi BDT has 2\% syst
-%
-%Veto
-%Both channels has \Ds, so effs mainly cancel
-%only difference is from decay kinematics
-%given the eff of these cuts, difference must be ever so small
-%Above, we assume the ratio is 1.0
-%In data, the diffenece between B to Dspi an B to DsD is 1.5\%
-%The \phii is much nearer in mass than \Dz than pi, so the difference should be small
-%1\%
-%
+%The window around the \Ds was evaluated by comparing simulated events with data for the high
+%statistics decay \bstodspi.
+%The BDT selection is assigned a systematic uncertainty of $3\pc$ using comparisons with data.
 %Mass windows
 %\Ds mass has same eff for sig and norm
 %difference is between D0 and \phii
-%
-%Mass fits
-%\begin{itemize}
-  %\item signal shape:
-    %run with shape free, 5\% higher yield, we assign ths at the syst
-  %\item \btodsstphi:
-    %remove completely leads to 1\% change in yiled
-  %\item \bstodskstrk:
-    %ratio \rA/\rB and \rC/\rD constrained from sim
-    %instead we fix this 100 times lower yield dhanges by 3\%
-    %100 times higher is 2\%.
-    %The ration of \rA/\rC  and \rB/\rD varied by large amounts leading to 5\% change n yield
-    %we don't know ratios precisely, we do know to within a factor of 2, within this range 1\% syst
-  %\item \bstodsstrkstrk:
-    %remove entirely changes yiled by 1\%
-  %\item comb:
-    %leave slope fere, tield changes by 5\%, but this is a clear overestimate, 3.5\%
-%\end{itemize}
-%
+
+There are other systemaic uncertainties that affected the selection.
+The BDT cut was assigned an uncertainty of $3\pc$ which was due to the sample sizes of the
+validation samples used to calculate the efficiencies.
+Mass windows around the \Ds and \phii lead to a $3\pc$ systematic uncertainty.
+Also, the low statistics of the simulation samples used to deduce efficicies led to a $3\pc$
+uncertainty.
+
+The mass fits introduced systematic uncertainties from each component.
+If the parameters in the signal shape are allowed to float the fit results in a yield which is
+$5\%$ higher than the nominal fit.
+This is assigned as a systematic uncertainty.
+
+
+The total uncertainty from the background shape is $5\pc$; and is estimating by making the
+following changes to the background model.
+By removing either the \btodsstrphi or \bstodsstrkstrk components, the yield changes by only $1\pc$.
+Changing the contraints on \rA/\rB and \rC/\rD for \bstodskstrk fby a factor of 2 results in a
+$1\pc$ change in signal yield.
+The combinatorial background was estimated by allowing the slope to float free, this led to an
+approximate $3.5\pc$ systematic uncertainty.
 %Total is 5\%, none of these alterations lead to a significance of lower than 3\stdev
-%
+
 %SWave contamination
 %could be some small Swave
 %other channels percent level contaminations are seen, but when considered next to the systematic
 %from normalization, this is negligible
 %Statistics too limited to do precise extraction
-%
-%Limited MC
-%3\% on ratio of effs
 
 Contributions from all sources of systematic uncertainties are summarized in \Tab{tab:dsphi:syst}.
 The dominant systematic uncertainty --- discounting the uncertainties on the branchinng fraction of
@@ -78,7 +76,8 @@ significance obtained is still greater than $3\stdev$.
 Therefore the significance was quoted as greater than $3\stdev$.
 
 \begin{table}
-  \caption{\small
+  \caption[Systematic uncertainties]
+  {\small
     Summary of the systematic uncertainties contributing to the branching fraction of the decay
     \btodsphi.
   }

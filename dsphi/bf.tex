@@ -35,8 +35,27 @@ branching fraction, given in \Eq{eq:dsphi:bf}, were
 calculated using simulated events of the decays \btodsphi and \btodsd.
 A summary of these efficiencies can be found in \Tab{tab:dsphi:eff}.
 
+The majority of the efficiencies listed in \Tab{tab:dsphi:eff} are calculated using simulated
+\btodsphi events.
+However, caluclating the efficiency of the BDT variable using simulated events is not reliable,
+because of the number of PID --- and other --- variables that are poorly described by simulation.
+Therefore, the value of \eff{BDT} is determined with a data driven method.
+
+To obtain the BDT efficiency the validation sample for each BDT is taken, and binned in three
+dimensions: \pt, \chisqfd, and BDT.
+The variables \pt and \chisqfd are used becuase they are two of the most powerful variables in the
+\bdt and well described by simulation.
+The large statistics of the validation sample mean that in each bin defined by \pt and \chisqfd
+there is a BDT distribution.
+Then, each individual simulated event is assigned an efficiency based on the BDT distribution in
+the bin defined by the \pt and \chisqfd of the \Ds or \phii.
+These individual efficiencies can then be amalgamated into an overall efficiency.
+This method is also used in \Ref{LHCb-PAPER-2012-001}.
+
+
 \begin{table}
-  \caption{\small
+  \caption[Efficiencies for calculating $\BF\big(\btodsphi\big)$]
+  {\small
     Efficiencies, in \%, for the signal decay \btodsphi and the normalization channel \btodsd.
     The veto efficiency of \btodsphi is assumed to be the same as for \btodsd.
   }
@@ -66,7 +85,9 @@ A summary of these efficiencies can be found in \Tab{tab:dsphi:eff}.
 \end{table}
 
 
-MORE DETAIL ESP BDT
+
+
+
 
 
 
