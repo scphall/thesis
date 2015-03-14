@@ -5,34 +5,33 @@
 %sector, this would lead to no discernible new physics in the flavour sector.
 
 
-When describing macroscopic physical systems, it is freqyentkly necessary to simplilfy the situation by makeing
-certaian assumptions about the distance scales involoved.
+When describing macroscopic physical systems, it is frequently necessary to simplify the situation by making
+certain assumptions about the distance scales involved.
 Effective field theories do the same thing in particle physics:
 By decoupling the short range from the long range interactions they can be treated separately.
 Contributions from particles with very high mass, much greater than $\mu$ are suppressed.
 An equally valid interpretation is that massive, unstable particles have short lifetimes and can
 only interact over very small distances.
 These simplifications are greatly advantageous, allowing processes to be modelled at a scale
-relecant to the paricles invloved.
+relevant to the particles involved.
 A canonical example of this is Fermi's effective theory of weak decays which predates electroweak
 theory; in it, a process (such as $\beta$-decay) is collapsed into a four point interaction.
 
 Creating an effective field theory for particle physics begins by defining an energy scale,
 $\Lambda$, above which the long and short range interactions are separated.
-Fior the case of a \bquark hadron decay, with initial state $\bra{i}$ and final state $\ket{f}$,
+For the case of a \bquark hadron decay, with initial state $\bra{i}$ and final state $\ket{f}$,
 the energies are of order $m_\bquark$.
 In the fill treatment of the SN, contributions from the \tquark quark and weak bosons --- which all
 have masses $\mathcal{O}(100\gev)$ --- must be accounted for.
-Therefore, an approproate choice for the $\Lambda$ is $\sim m_W$.
+Therefore, an appropriate choice for the $\Lambda$ is $\sim m_W$.
 Heavy fields above $\Lambda$ are then integrated out and are parameterized by Wilson coefficients,
 $C$, which are complex numbers.
 The remaining physics is encapsulated in the long distances operators $\mathcal{O}$, each having
 its own gauge group defining a particular type of process.
-Transitionn matrix elements for the interac iotn in the effective Hamiltonian are
+Transition matrix elements for the interaction in the effective Hamiltonian are
 \begin{equation}
   \bra{f}\Ham{eff}\ket{i} =
-  \left.
-  \sum_j C_j(\Lambda)\bra{f}\Op{j}^{(d)}\ket{i}\right|_{\Lambda}.
+  \sum_j C_j(\Lambda)\bra{f}\Op{j}^{(d)}\ket{i}\Big|_{\Lambda}.
 \end{equation}
 Which is simply a weighted sum over the long distance matrix elements $\bra{f}\Op{j}\ket{i}$.
 
@@ -42,8 +41,8 @@ makes the coefficients dimensionless.
 This modifies the effective Hamiltonian to be a sum over dimensions, $d$:
 \begin{equation}
   \bra{f}\Ham{eff}\ket{i} =
-  \left.\sum_{d}\frac{1}{\Lambda^{d}}
-  \sum_i c_j^{(d)}\bra{f}\Op{j}^{(d)}\ket{i}\right|_{\Lambda}.
+  \sum_{d}\frac{1}{\Lambda^{d}}
+  \sum_i c_j^{(d)}\bra{f}\Op{j}^{(d)}\ket{i}\Big|_{\Lambda}.
 \end{equation}
 This is entirely general, and one can calculate the Wilson coefficients to a high degree of
 accuracy --- using perturbative methods --- in the SM and many BSM extensions.
