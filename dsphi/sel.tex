@@ -198,11 +198,42 @@ $\bdt_{\Ds}\times\bdt_\phi>X$, as opposed to $\bdt_{\Ds}>X_1$ and $\bdt_\phi>X_2
 The BDT used to separate background from the signal \decay{\Ds}{\kkpi} decays was trained using
 a signal sample of \decay{\Bs}{\Dsm\pip} sWeighted~\cite{splot} data, and background from the \Dsm
 sidebands.
-This BDT uses an unusually large array of training variables, given in Table~\ref{tab:dsphi:vars},
+This BDT uses an unusually large array of training variables, given in \Tab{tab:dsphi:vars},
 which include PID, and track quality variables.
 In total, five variables are input for the parent \Ds and $\phi$, and 23 properties for each
 daughter track.
 Similarly for the \decay{\phi}{\kk} BDT, the signal sample was \decay{\Bs}{\jpsi\phi}.
+
+
+
+\begin{table}
+  \caption[BDT variables]
+  {\small
+    List of training variables used in the \Ds and \phii BDTs.
+    Each BDT uses five variables associated with the parent particle and 23 variables from each
+    daughter track.
+  }
+  \label{tab:dsphi:vars}
+  \begin{center}
+    \begin{tabular}{clp{0.4\textwidth}}
+      \toprule
+      Particle & \multicolumn{2}{c}{Variable} \\
+      \midrule
+      \Ds, \phii
+      & Kinematic variables & $p$, \pt \\
+      & Geometric variables & \chisqvtx, \chisqip, \chisqfd \\
+      \midrule
+      Tracks
+      & Kinematic variables & $p$, \pt \\
+      & Geometric variables & $\min(\chisqip)$ \\
+      & Track variables     & 4 variables characterizing the track quality \\
+      & PID variables       & 16 variables containing PID information, such as {\tt isMuon} and DLL
+      variables from the \rich detectors \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+
 
 
 \subsection{Optimization}
