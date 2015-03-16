@@ -112,6 +112,8 @@
 \setboolean{uprightparticles}{false} %True for upright particle symbols
 
 \usepackage{preamble/slashed}
+\usepackage{dsfont}
+\usepackage{bbold}
 %\usepackage[printonlyused,withpage]{acronym}
 %\setacronymstyle{long-short}
 
@@ -182,7 +184,8 @@ end#1\endcsname
 \fancypagestyle{chapters}{%
   \fancyhf{}%
   \fancyfoot[C]{{\bf \thepage}}%
-  \fancyhead[RE,LO]{\leftmark}
+  %\fancyhead[RE,LO]{\leftmark}
+  \fancyhead[R]{\leftmark}
   \renewcommand{\headrulewidth}{0.5pt}
 }
 
@@ -224,6 +227,8 @@ end#1\endcsname
 \space\number \year}
 
 
+\setlength{\parskip}{\medskipamount}
+\newlength{\currentparskip}
 
 
 % Make this the last packages you include before the \begin{document}

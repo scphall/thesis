@@ -14,7 +14,7 @@ where each $|V_{ij}|$ parameterizes the probability of an up-type quark, of gene
 transitioning to down-type quark, $j$, in a weak interaction.
 In the SM, it is assumed that the total charged current couplings of up- to down-type quarks is the
 same as down- to up-type.
-This means that the CKM matrix is unitary, $\VCKMconj\VCKM = \mathbb{1}$, and therefore it contains
+This means that the CKM matrix is unitary, $\VCKMconj\VCKM = \mathds{1}$, and therefore it contains
 four physical parameters: three angles ($\theta_{12}$, $\theta_{13}$ and $\theta_{23}$) and one
 complex phase ($\delta$).
 In fact, the observation of CPV in kaon mixing led to the prediction of a third generation before
@@ -49,25 +49,24 @@ matrix.
 
 There are many ways of representing the CKM matrix, one way is as a product of three rotation
 matrices, one of which contains the complex phase, this is the known as the \emph{standard}
-parameterization.
-The \emph{Wolfenstein} parameterization is obtained by defining
+parameterization:
+\begin{equation}
+  \VCKM =
+  \begin{pmatrix}
+    \cxx{12}\cxx{13} & \sxx{12}\cxx{13} & \sxx{13}e^{-i\delta} \\
+    -\sxx{12}\cxx{23}-\cxx{12}\sxx{23}\sxx{13}e^{i\delta} &
+    \cxx{12}\cxx{23}-\sxx{12}\sxx{23}\sxx{13}e^{i\delta} & \sxx{23}\cxx{13} \\
+    \sxx{12}\sxx{23}-\cxx{12}\cxx{23}\sxx{13}e^{i\delta} &
+    -\cxx{12}\sxx{23}-\sxx{12}\cxx{23}\sxx{13}e^{i\delta} & \cxx{23}\cxx{13} \\
+  \end{pmatrix}.
+\end{equation}
+A convenient simplification is the \emph{Wolfenstein} parameterization, which is obtained by
+defining
 \begin{align}
   \sin\theta_{12}&=\lambda, \nonumber\\
   \sin\theta_{23}&=A\lambda^2, \nonumber\\
   e^{-i\delta}\sin\theta_{13} &= A\lambda^3(\rho-i\eta),
 \end{align}
-%\begin{align}
-  %\sin\theta_{12}&=\lambda,
-  %& \sin\theta_{23}&=A\lambda^2,
-  %& \mathrm{and}&
-  %& e^{-i\delta}\sin\theta_{13} &= A\lambda^3(\rho-i\eta),
-%\end{align}
-%Because this matrix can be written as a product of three rotation
-%matrices (with angles $\theta_{12}$, $\theta_{13}$ and $\theta_{23}$) and the CP violating phase
-%($\delta$), it can be parameterized in terms of $\lambda$, $A$, $\rho$ and $\eta$.
-%Where: $\sin\theta_{12}=\lambda$,
-%$\sin\theta_{23}=A\lambda^2$ and $e^{-i\delta}\sin\theta_{13} = A\lambda^3(\rho-i\eta)$.
-%and Taylor expanding products of the three rotation matrices, it can be shown that:
 which results in
 \begin{align}
   \VCKM\simeq
@@ -81,16 +80,17 @@ which results in
     \end{pmatrix}.
   \label{eq:th:wolfenstein}
 \end{align}
-%where
-%\begin{align}
-  %\lambda &= 0.22537\pm0.00061, & A =
-%\end{align}
-Since $A\neq0$ and $\lambda\neq0$, it is clear that \VCKM is not diagonal, and therefore flavour
+The values of the Wolfenstein parameters are:
+\begin{align}
+  \lambda &= 0.22537\pm0.00061, && A&=0.814\,^{+0.023}_{-0.024}.
+\end{align}
+Since $A\neq0$ and $\lambda\neq0$ it is clear that \VCKM is not diagonal, and therefore flavour
 changing currents are allowed in the SM.
-However, the diagonal elements are close to unity and the CKM matrix exhibits a strong
-hierarchical structure, such that it is most probable that weak currents do not violate flavour.
+However, the \ckm matrix does exhibit a stringly hierarchic structure, such that iut is most
+probable that a weak interaction will be intra-generational.
+%However, the diagonal elements are close to unity and the CKM matrix exhibits a strong
+%hierarchical structure, such that it is most probable that weak currents do not violate flavour.
 %for which there is no explaination in the SM.
-
 
 
 The unitarity condition can be expressed as
@@ -165,8 +165,8 @@ which define phase differences between edges.
     Alongside is shown the same triangle with coloured bands indicating various constraints on
     side lengths, angles and position of the apex.
     The constraints on \V{ub} from the combination of inclusive and exclusive modes
-    ($|\V{ub}|_\mathrm{SL}$) is given separately to a value obtained using
-    $\BF\left(\decay{\Bp}{\taup\nu_\tau}\right)$, ($|\V{ub}|_{\tau\nu}$).
+    ($\left|\V{ub}\right|_\mathrm{SL}$) is given separately to a value obtained using
+    $\BF\left(\decay{\Bp}{\taup\nu_\tau}\right)$, ($\left|\V{ub}\right|_{\tau\nu}$).
   }
   \label{fig:th:ut}
 \end{figure}
@@ -175,20 +175,8 @@ Precise determination of the CKM matrix elements is important, for  they are eac
 parameters of the SM.
 They also contain all the information about flavour violation and CPV that is allowed within the
 framework of the quark sector in the SM.
-This information is represented by the \ut, a current fit of measurement of angles and side lengths
-is shown in \Fig{fig:th:ut}.
-
-%\bam{This is to be moved:
-%If additional CP-violating phases were to exist beyond the SM, their effect would be seen in global
-%fits of the UT.}
-%
-%\bam{
-%Each CKM matrix element is ususally measured in a particular way.
-%For example, the elements \Vtxt{td} and \Vtxt{ts} are measured using $B-\Bbar$ oscillations since tree
-%level determination using \tquark quarks is difficult to do with precision.
-%However, the nature of NP is unknown and could effect different processes in different ways.
-%A good example of this is \Vtxt{ub}, which is the CKM element known to the lowest degree of accuracy.
-%}
+This information is encapsulated in the \ut.
+Current measurements of angles and side lengths are shown in \Fig{fig:th:ut}.
 
 
 
