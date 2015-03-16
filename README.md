@@ -4,12 +4,12 @@ Backup of the ol' thesis.
 
 Mon 16 Mar | Total
 ---|---
-Words in text| 14983
-Words in headers| 145
-Words outside text (captions, etc.)| 1139
-Number of headers| 51
-Number of floats/tables/figures| 36
-Number of math inlines| 576
-Number of math displayed| 89
+Words in text| 14834
+Words in headers| 135
+Words outside text (captions, etc.)| 1113
+Number of headers| 49
+Number of floats/tables/figures| 35
+Number of math inlines| 564
+Number of math displayed| 84
 Files| 36
 
