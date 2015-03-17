@@ -80,7 +80,10 @@ The Lagrangian of the Higgs field is:
   \label{eq:th:laghiggs1}
 \end{align}
 where $\mu$ and $\lambda$ are constants, and $D_\mu$ is the covariant derivative.
-Taking $\mu^2<0$ and $\lambda>0$ shifts the minimum of the potential $V(\Phi)$ away from zero by a distance
+Taking $\mu^2<0$ and $\lambda>0$,
+as shown in \Fig{fig:th:higgspot},
+shifts the minimum of the potential $V(\Phi)$ away from zero by a
+distance
 \begin{equation}
   v = \sqrt{\frac{\mu^2}{\lambda}}.
 \end{equation}
@@ -112,7 +115,6 @@ gauge, become the longitudinal components of the weak vector bosons, and $\Phi$ 
   \label{eq:th:phi2}
 \end{equation}
 The physics Higgs boson is denoted by $H$.
-%Using this in Eq.~\ref{eq:th:laghiggs1} gives:
 Inserting Eq.~\ref{eq:th:phi2} into Eq.~\ref{eq:th:laghiggs1} gives:
 %\begin{multline}
   %\Lag{Higgs} =
@@ -137,12 +139,26 @@ Inserting Eq.~\ref{eq:th:phi2} into Eq.~\ref{eq:th:laghiggs1} gives:
 Thus: there is spontaneous symmetry breaking (SSB) of the local $U_Y(1)$ gauge group; weak gauge
 bosons become massive, and photons remain massless; as is consistent with observations.
 
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.6\textwidth]{higgs_potential}
+    \caption{\small
+      The shape of the Higgs potential, $V(\Phi)$, for the simple case of $\Phi=\phi_1+i\phi_2$ and
+      $\mu^2<0$ and $\lambda>0$.
+      Spontaneous symmetry breaking occurs when the vacuum settles in a minma, this choice of
+      direction breaks the symmetry of the gauge.
+      A section of the potential is not shown, in order to appreciate the shape of the potential.
+    }
+    \label{fig:th:higgspot}
+  \end{center}
+\end{figure}
+
 %It is not possible to directly insert mass terms for fermions, because the required terms
 %($m(\bar\psi_L\psi_R+\bar\psi_R\psi_L$) are not allowed \bam{ELABORATE}.
 All fermions (excepting neutrinos) also acquire mass after the SSB.
 The Dirac mass term for a chiral field would have the form:
 \begin{equation}
-  \Lag{mass} = -m_\psi\big(\bar\psi_R\psi_L + \bar\psi_L\psi_R\big),
+  \Lag{mass} = -m_\psi\big(\xbar\psi_R\psi_L + \xbar\psi_L\psi_R\big),
 \end{equation}
 but the left- and right-handed fields
 transform differently under local gauge transformations
@@ -166,14 +182,13 @@ $\ell_R$ and
 via
 \begin{equation}
   \Lag{Yuk}^\ell
-  = - g_\ell\big(\bar\chi_L\Phi \ell_R + \bar \ell_R\Phi^\dagger\chi_L\big),
+  = - g_\ell\big(\xbar\chi_L\Phi \ell_R + \xbar \ell_R\Phi^\dagger\chi_L\big),
 \end{equation}
 where $g_\ell$ is a coupling constant.
 After SSB the Lagrangian becomes
 \begin{align}
   \Lag{Yuk}^\ell
-  %= - \frac{v}{\sqrt{2}}g_\ell \big(\bar\ell_L\ell_R + \bar\ell_R\ell_L\big)\cdot
-  = - m_\ell \big(\bar\ell_L\ell_R + \bar\ell_R\ell_L\big)%\cdot
+  = - m_\ell \big(\xbar\ell_L\ell_R + \xbar\ell_R\ell_L\big)%\cdot
   \left(1 + \frac{H}{v}\right)
 \end{align}
 where
@@ -182,13 +197,6 @@ where
   \label{eq:leptonmass}
 \end{equation}
 is the lepton mass and is dependent on the fundamental SM parameters $g_\ell$ and $v$
-%\begin{align}
-  %\Lag{Yuk}^\ell
-  %&= - g_\ell\big(\bar\chi_L\Phi \ell_R + \bar \ell_R\Phi^\dagger\chi_L\big) \nonumber\\
-  %&= - \frac{v}{\sqrt{2}}g_\ell \big(\bar\ell_L\ell_R + \bar\ell_R\ell_L\big)\cdot
-  %\left(1 + \frac{H}{v}\right)
-     %%- \frac{g_\ell}{\sqrt{2}}H\left(\bar\ell_L\ell_R + \bar\ell_R\ell_L\right),
-%\end{align}
 
 Yukawa interactions for quarks involve the right-handed chiral operators of the up- and down-type
 quarks, $q_R^i$ for $q\in{u,d}$, and the left-handed doublet
@@ -205,26 +213,13 @@ where $\widetilde\Phi_i = \varepsilon_{ij}\Phi_k$ and there is an implict sum ov
 $i$ and $j$.
 The coupling constants, $y^{q}$, are $3\times3$ matrices characterizing Yukawa coupling strengths
 between generations.
-%The story for $\Lag{Yuk}^q$ is a bit more involved.
-%Before SSB:
-%\begin{align}
-  %\Lag{Yuk}^q &= - y_{ij}^u\bar Q_L^i\Phi u_R^j
-  %- y_{ij}^d\bar Q_L^i\tilde\Phi d_R^j + \mathrm{h.c.},
-  %\label{eq:th:lagyukq}
-%\end{align}
-%where there is an implicit sum over all generations $i$ and $j$, $y^{u,d}$ is a $3\times3$ matrix
-%characterizing the Yukawa couplings between quark generations,
-%\begin{align}
-  %\tilde\Phi_i &= \varepsilon_{ij}\Phi_j,
-    %\qquad \mathrm{and} \quad Q_L = \begin{pmatrix}u_L \\ d_L \end{pmatrix}.
-%\end{align}
 After SSB, and the Higgs acquires a VEV, \Lag{Yuk} becomes:
 \begin{equation}
   \Lag{Yuk}^q =
   - \frac{v}{\sqrt{2}}
   \left(
-  y_{ij}^\uquark\bar\uquark_L^i\uquark_{R,j}
-  + y_{ij}^\dquark\bar\dquark_L^i\dquark_{R,j},
+  y_{ij}^\uquark\uquarkbar_L^i\uquark_{R,j}
+  + y_{ij}^\dquark\dquarkbar_L^i\dquark_{R,j},
   + \mathrm{h.c.}
   \right)
   %\cdot
@@ -271,17 +266,17 @@ In the charged current (CC) part of \Lag{\it q}; which transforms as:
 \begin{align}
   \Lag{\it q}^\mathrm{CC}
   &= i\frac{g}{2}\gamma^\mu
-  \bigg[\bar u_Ld_LW^+_\mu + \bar d_Lu_LW^-_\mu
+  \bigg[\uquarkbar_Ld_LW^+_\mu + \dquarkbar_Lu_LW^-_\mu
   \bigg]  \nonumber\\
   &= i\frac{g}{2}\gamma^\mu
   \bigg[
-    \bar u_L^\prime\left(V_{uL}^{\phantom{\dagger}}V_{dL}^\dagger\right)d_L^{\,\prime} W^+_\mu +
-    \bar d_L^{\,\prime}\left(V_{dL}^{\phantom{\dagger}}V_{uL}^\dagger\right)u_L^\prime W^-_\mu
+    \uquarkbar_L^\prime\left(V_{uL}^{\phantom{\dagger}}V_{dL}^\dagger\right)d_L^{\,\prime} W^+_\mu +
+    \dquarkbar_L^{\,\prime}\left(V_{dL}^{\phantom{\dagger}}V_{uL}^\dagger\right)u_L^\prime W^-_\mu
   \bigg]  \nonumber\\
   &= i\frac{g}{2}\gamma^\mu
   \bigg[
-    \VCKM\bar u_L^\prime d_L^{\,\prime} W^+_\mu +
-    \VCKMconj\bar d_L^{\,\prime} u_L^\prime W^-_\mu
+    \VCKM\uquarkbar_L^\prime d_L^{\,\prime} W^+_\mu +
+    \VCKMconj\dquarkbar_L^{\,\prime} u_L^\prime W^-_\mu
   \bigg].
 \end{align}
 The matrix $\VCKM=V^{\phantom{\dagger}}_{uL}V_{dL}^\dagger$ is known as the \ckm

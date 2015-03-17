@@ -1,8 +1,8 @@
 The decay \btodsphi proceeds via the annihilation of the constituent quarks in a \Bp meson into
 a virtual \Wp boson in the SM\footnote{
-  This analysis was published in \Ref{Aaij:2012zh}.}.
-To achieve the final state, the \Wp decays into a $\cquark\bar\squark$ pair and an additional
-$\squark\bar\squark$ pair must be \emph{popped} from the QCD field.
+  This analysis was published in \Ref{LHCb-PAPER-2012-025}.}.
+To achieve the final state, the \Wp decays into a $\cquark\squarkbar$ pair and an additional
+$\squark\squarkbar$ pair must be \emph{popped} from the QCD field.
 This is the only diagram that can perpetuate such a decay at tree level because the initial state
 quarks are all different to those in the final state.
 Annihilation decays of \Bp mesons are rare in the SM due to the magnitude of $|\V{ub}|$ (see
@@ -14,22 +14,24 @@ Predictions for the brancing fraction $\BF\big(\btodsphi\big)$ are calculated us
 by the effective Hamiltonian~\cite{Zou:2009zza,Mohanta:2002wf,PhysRevD.76.057701,Lu:2001yz}:
 \begin{equation}
   \Ham{eff}=
-  -\frac{G_F}{\sqrt{2}} \V{ub}\Vconj{cs}
+  -4\frac{G_F}{\sqrt{2}} \V{ub}\Vconj{cs}
   \big[
     C_1(\Lambda)\Op{1}+C_2(\Lambda)\Op{2}
     \big]
 \end{equation}
 where
 \begin{align}
-  \Op{1} &= \big(\bar b\gamma_\mu P_Lu\big) \big(\bar c\gamma_\mu P_Ls\big) \nonumber\\
-  \Op{2} &= \big(\bar b\gamma_\mu P_Ls\big) \big(\bar c\gamma_\mu P_Lu\big).
+  \Op{1} &= \big(\bquarkbar\gamma_\mu P_Lu\big) \big(\cquarkbar\gamma_\mu P_Ls\big) \nonumber\\
+  \Op{2} &= \big(\bquarkbar\gamma_\mu P_Ls\big) \big(\cquarkbar\gamma_\mu P_Lu\big).
 \end{align}
 and $C_{1,2}$ are Wilson coefficients defined at scale $\Lambda=m_b$.
-The short distance operators \Op{1} and \Op{2} both describe the transition $\bar b\!\to\bar scu$.
+Projection operators $P_{L,R}$ are defined as $P_L=\tfrac12(1-\gamma_5)$ and
+$P_R=\tfrac12(1+\gamma_5)$.
+The short distance operators \Op{1} and \Op{2} both describe the transition $b\!\to scu$.
 Despite the relatively simple effective Hamiltonian, QCD effects make $\BF\big(\btodsphi\big)$ very
 difficult to predict.
 Figure~\ref{fig:dsphi:feyn} shows hows Feynman diagrams for a first order decay of \btodsphi in the
-SM and SUSY, where the $\squark\bar\squark$ pair are produced by a decaying gluon which could have
+SM and SUSY, where the \ssbar pair are produced by a decaying gluon which could have
 originated from any of the four quarks.
 If the gluon were to be from one of the initial state quarks then the assumption of factorization
 does not hold.

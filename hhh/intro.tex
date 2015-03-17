@@ -17,6 +17,99 @@
 %These final states have added challenges because they result from the decay of numerous strange
 %resonances.
 
+%\begin{figure}
+  %\begin{center}
+    %\includegraphics[scale=1]{feynman_hhh_kpipimumu}
+    %\includegraphics[scale=1]{feynman_hhh_phikmumu}
+    %\caption[Feynman diagrams for \btokpipimumu and \btophikmumu]
+    %{\small
+      %Feynman diagrams illustrating how the decays \btokpipimumu and \btophikmumu can proceed in
+      %the SM.
+    %}
+    %\label{fig:hhh:feyn}
+  %\end{center}
+%\end{figure}
+
+%This has additional interest in that, not only does it probe the FCNC, but the \kpipi system can
+%result from the decay of numerous strange resonances.
+
+The decays \btokpipimumu and \btophikmumu both proceed via \decay{\bquark}{\squark\mumu} FCNC
+transitions, which are forbidden at tree level in the SM.
+Therefore, these processes are potentially sensitive to NP contributing
+to the decay amplitude as virtual particles in loops.
+%Figure~\ref{fig:hhh:feyn} shows the pengiun diagrams which propagate these decays in the SM.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection[Operator product expansion for \btokpipimumu and \btophikmumu]
+%{Operator product expansion for $\boldsymbol{\btokpipimumu}$ and $\boldsymbol{\btophikmumu}$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[scale=1]{feynman_btosmumu_penguin}
+    \includegraphics[scale=1]{feynman_btosmumu_box}
+    \caption[Schematic Feynman diagrams for loop and box diagrams]
+    {\small
+      Schematic Feynman diagrams for the
+      (left) penguin loop diagrams corresponding to the operators \Op{7} and \Op{9} depending on
+      whether a $\gamma$ or $Z$ is emitted from the loop;
+      (right) \Op{10} box diagram mediated by \Wp bosons.
+    }
+    \label{fig:hhh:loops}
+  \end{center}
+\end{figure}
+
+The effective Hamiltonian for $\decay{b}{s\ell^+\ell^-}$ FCNCs is given by:
+\begin{equation}
+  \Ham{eff} = -4\frac{G_F}{\sqrt{2}}\Vconj{ts}\V{tb}\frac{e^2}{16\pi^2}
+  \sum_{i=1}^{10}\big[C_i(\Lambda)\mathcal{O}_i(\Lambda)
+    +C_i^\prime(\Lambda)\mathcal{O}_i^\prime(\Lambda)\big]
+\end{equation}
+as in \Eq{eq:th:opeham}. %, where the coefficients are known as Wilson coefficients, which
+%correspond to the Wilson operators $\mathcal{O}_{1-10}$.
+The operators $\mathcal{O}_{1-6}$ are sensitive to long distance contributions such as \ccbar
+loops.
+Operators which are particularly sensitive to NP contributions in \decay{b}{s\mumu} transitions are
+\begin{align}
+  \Op{7\pz} &= \frac{m_b}{e}\big(\bar\squark\sigma_{\mu\nu}P_Rb\big)F^{\mu\nu}
+  %$\bra{f}\Op}\ket{i}$.
+  &\Op{7\pz}^\prime &= \frac{m_b}{e}\big(\bar s \sigma_{\mu\nu}P_Lb\big)F^{\mu\nu}
+  \nonumber\\
+  %\mathcal{O}_8 &= g\frac{m_b}{e^2}\big(\bar s \sigma_{\mu\nu}T^aP_Rb\big)G^{\mu\nu a}
+  %&\mathcal{O}_8^\prime &= g\frac{m_b}{e^2}\big(\bar s \sigma_{\mu\nu}T^aP_Rb\big)G^{\mu\nu a}
+  %\\
+  \Op{9\pz} &= \big(\bar s\gamma_\mu P_Lb\big)\big(\bar\ell\gamma^\mu\ell\big)
+  &\Op{9\pz}^\prime &= \big(\bar s\gamma_\mu P_Rb\big)\big(\bar\ell\gamma^\mu\ell\big)
+  \nonumber\\
+  \Op{10} &= \big(\bar s\gamma_\mu P_Lb\big)\big(\bar\ell\gamma^\mu\gamma_5\ell\big)
+  &\Op{10}^\prime &= \big(\bar s\gamma_\mu P_Rb\big)\big(\bar\ell\gamma^\mu\gamma_5\ell\big)
+  \phantom{\frac{1}{1}}
+  %\\
+  %\mathcal{O}_{S} &= \frac{m_b}{m_{B_s}}\big(\bar s\gamma_\mu P_Rb\big)\big(\bar\ell\ell\big)
+  %\\
+  %\mathcal{O}_{P} &= \frac{m_b}{m_{B_s}}\big(\bar s\gamma_\mu P_Rb\big)\big(\bar\ell\gamma_5\ell\big)
+\end{align}
+where $P_{L,R}$ are the left and right projection operators.
+The operators \Op{7} and \Op{9} describe the emission of a photon or $Z$ from a penguin loop,
+and \Op{10} corresponds to a box type diagram with \Wp; these are shown in \Fig{fig:hhh:loops}.
+Primed operators are the suppressed helicity, whose contributions are vanishingly small in the SM.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+The decay \btokpipimumu can propagate as shown in \Fig{fig:hhh:feyn}, this
+has similarities with the decay $\decay{\Bp}{K^*(892)^0\mumu}$.
+Both propagate in the same way, but the latter's final state is $\kpi\mumu$ --- the decay
+\btokpipimumu requires an additional \uubar pair.
+The decay $\decay{\Bp}{K^*(892)^0\mumu}$ is of considerable interest because, not only does it
+involve an FCNC, but its angular distributions are sensitive to NP.
+
 \begin{figure}
   \begin{center}
     \includegraphics[scale=1]{feynman_hhh_kpipimumu}
@@ -29,23 +122,6 @@
     \label{fig:hhh:feyn}
   \end{center}
 \end{figure}
-
-%This has additional interest in that, not only does it probe the FCNC, but the \kpipi system can
-%result from the decay of numerous strange resonances.
-
-The decays \btokpipimumu and \btophikmumu both proceed via \decay{\bquark}{\squark\mumu} FCNC
-transitions, which are forbidden at tree level in the SM.
-Therefore, these processes are potentially sensitive to NP contributing
-to the decay amplitude as virtual particles in loops.
-Figure~\ref{fig:hhh:feyn} shows the pengiun diagrams which propagate these decays in the SM.
-
-There are also similarities between the decay $\decay{\Bp}{K^*(892)^0\mumu}$, which has the final
-state
-$\kpi\mumu$ and the signal decays.
-Both involve a \decay{\bquark}{\squark\mumu} transition and a spectator quark; but they differ in
-the hadronization in to get the final state.
-The decay $\decay{\Bp}{K^*(892)^0\mumu}$ is of considerable interest because, not only does it
-involve an FCNC, but there are also angular distributions that are sensitive to NP.
 
 The \kpipi system in the decay \btokpipimumu results from the decay of a variety of strange
 resonances.

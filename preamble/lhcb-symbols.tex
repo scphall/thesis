@@ -327,27 +327,28 @@
 \def\Z      {\ensuremath{\PZ^0}\xspace}
 
 %% Quarks
+\newcommand\xbar[1]  {\kern 0.1em\overline{\kern -0.1em #1}{}\xspace}
 
 \def\quark     {\ensuremath{\Pq}\xspace}
-\def\quarkbar  {\ensuremath{\overline \quark}\xspace}
+\def\quarkbar  {\ensuremath{\xbar \quark}\xspace}
 \def\qqbar     {\ensuremath{\quark\quarkbar}\xspace}
 \def\uquark    {\ensuremath{\Pu}\xspace}
-\def\uquarkbar {\ensuremath{\overline \uquark}\xspace}
+\def\uquarkbar {\ensuremath{\xbar \uquark}\xspace}
 \def\uubar     {\ensuremath{\uquark\uquarkbar}\xspace}
 \def\dquark    {\ensuremath{\Pd}\xspace}
-\def\dquarkbar {\ensuremath{\overline \dquark}\xspace}
+\def\dquarkbar {\ensuremath{\xbar \dquark}\xspace}
 \def\ddbar     {\ensuremath{\dquark\dquarkbar}\xspace}
 \def\squark    {\ensuremath{\Ps}\xspace}
-\def\squarkbar {\ensuremath{\overline \squark}\xspace}
+\def\squarkbar {\ensuremath{\xbar \squark}\xspace}
 \def\ssbar     {\ensuremath{\squark\squarkbar}\xspace}
 \def\cquark    {\ensuremath{\Pc}\xspace}
-\def\cquarkbar {\ensuremath{\overline \cquark}\xspace}
+\def\cquarkbar {\ensuremath{\xbar \cquark}\xspace}
 \def\ccbar     {\ensuremath{\cquark\cquarkbar}\xspace}
 \def\bquark    {\ensuremath{\Pb}\xspace}
-\def\bquarkbar {\ensuremath{\overline \bquark}\xspace}
+\def\bquarkbar {\ensuremath{\xbar \bquark}\xspace}
 \def\bbbar     {\ensuremath{\bquark\bquarkbar}\xspace}
 \def\tquark    {\ensuremath{\Pt}\xspace}
-\def\tquarkbar {\ensuremath{\overline \tquark}\xspace}
+\def\tquarkbar {\ensuremath{\xbar \tquark}\xspace}
 \def\ttbar     {\ensuremath{\tquark\tquarkbar}\xspace}
 
 %% Light mesons
@@ -676,7 +677,7 @@
 \def\yprime     {\ensuremath{y^{\prime}}\xspace}
 \def\ycp        {\ensuremath{y_{\CP}}\xspace}
 \def\agamma     {\ensuremath{A_{\Gamma}}\xspace}
-\def\kpi        {\ensuremath{\PK\Ppi}\xspace}
+\def\kpi        {\ensuremath{\Kp\pim}\xspace}
 \def\kk         {\ensuremath{\Kp\Km}\xspace}
 \def\dkpi       {\decay{\PD}{\PK\Ppi}}
 \def\dkk        {\decay{\PD}{\PK\PK}}
