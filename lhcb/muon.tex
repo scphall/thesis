@@ -35,7 +35,13 @@ Layout of the \lhcb muon system is shown in \Fig{fig:lhcb:muonside}.
     \includegraphics[width=0.48\textwidth]{muonside}
     \caption[LHCb muon system]
     {\small
-      The LHCb muon system.
+      Side-on view of the LHCb muon system.
+      The M1 station is located upstream of the calorimeters, and M2--5 are all downstream.
+      Relative scales are the same, but absolute dimensions scale with distance from the $pp$
+      interaction point, such that the angular coverage is identical for each station.
+      Between stations M2--5 are $80\cm$ thick iron filters.
+      Regions R1--4 indicate where the resolution is the same, this is shown clearly in
+      Fig.~\protect\ref{fig:lhcb:muonpad}.
     }
     \label{fig:lhcb:muonside}
   \end{center}
@@ -54,7 +60,8 @@ order to increase the momentum resolution.
 The inclusion of the M1 station is primarily to provide improved momentum resolution in the
 trigger, giving a momentum resolution of approximately $20\pc$.
 In total, the absorber material is 20 interaction lengths, such that only highly penetrating muons
-reach M4--5.
+reach M4--5, in order to pass through all the muon stations a muon must have a \pt of at least
+$6\gev$.
 Therefore, stations M1--3 have excellent spacial resolution, whereas the stations M4--5 are
 primarily used for identifying highly penetrating muons.
 
@@ -79,7 +86,9 @@ The criteria is dependent upon the muon momentum, and defined exactly in \Tab{ta
 
 \begin{table}
   \caption{\small
-    Criteria for {\tt isMuon}
+    The {\tt isMuon} flag is an important variable used to identify muons.
+    The criteria depends on the particle's measured momentum.
+    If the {\tt isMuon} condition returns a true then the particle is identified to be a muon.
   }
   \label{tab:lhcb:ismuon}
   \begin{center}

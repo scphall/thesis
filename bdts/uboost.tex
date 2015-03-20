@@ -1,0 +1,96 @@
+\section{uBoost}
+\label{sec:bdt:uboost}
+The uniform Boosting, uBoost, algorithm\footnote{
+  This section is based on \Ref{Stevens:2013dya}} is designed to give a uniform
+response in the signal efficiency of some variables $\zeta_i$.
+The proceedure of creating a uniform BDT, uBDT, builds from the weighting technique used in the
+AdaBoost algorithm, but additional weight is applied to events that lie in a region of parameter
+space which is not performing with the desired efficiency.
+Consider a BDT whose signal efficiency in the variables $\zeta_i$ is required to be $\epsilon$.
+The weighting of each event is modified from that used in the AdaBoost algorithm in \Eq{eq:ada:wt}
+to
+\begin{equation}
+  w_i^t = u_i^t\times c_i^t \times w_i^{t-1},
+\end{equation}
+where $u$ denotes a weighting proportional to the distance away from $\epsilon$ in the local
+region:
+\begin{equation}
+  u_i^t = \exp\big(\beta_t(\bar\epsilon-\epsilon_i^t)\big).
+\end{equation}
+The boosting parameter $\beta$ is calculated as
+\begin{equation}
+  \beta_t = \frac12\ln\left(\frac{1-e_t}{e_t}\right)
+\end{equation}
+and
+\begin{equation}
+  e_t = \sum_i w_i^{t-1}c_i^t\left|\bar\epsilon-\epsilon_i^t\right|.
+\end{equation}
+
+This leads to a single BDT whose response is analogous to \Eq{eq:ada:fullbdt} but with the addition
+of the target efficiency $\bar\epsilon$
+\begin{equation}
+  T(x_i,\bar\epsilon) = \sum_{t=1}^{n_\mathrm{trees}} \alpha_tT_t(x_i,\bar\epsilon).
+  \label{eq:ada:fullbdt}
+\end{equation}
+Therefore, a single of these BDTs is associated with a given target efficiency, where
+fraction of $T(x_i,\epsilon)>\Xbar{T}(\bar\epsilon)$ is $\bar\epsilon$.
+An arbitrary number of BDTs, $N$, can be concatenated, each with a different target efficiency, and
+the total response is
+\begin{equation}
+  \mathcal{T}(x_i) =
+  \frac1N\sum_{e=1}^{n}\Theta\left(T(x_i, \bar\epsilon) - \Xbar{T}(\bar\epsilon)\right).
+\end{equation}
+For $\mathcal{T}(x_i)$ to be a continuous distribution, $N\!\to\infty$, however in practice
+$N\sim100$ is all that is needed for analysis.
+
+
+
+
+
+
+%builds on the AdaBoost algorithm;
+%with additional weight given to events in the training sample
+
+%This resulting split leaves two sub-nodes, one classifing predominantly background- and the other
+%predominantly signal-like events.
+%This is known as splitting.
+%Each split
+
+%The process of spilitting can continue
+%
+%the other
+
+
+
+
+%Each of the analyses in this thesis uses the Boosted Decision Tree (BDT) algorithm because it can
+%handle
+
+
+
+
+%A Decision Tree (DT) is a tree-like graph of decisions where, in this case, the edges correspond to
+%cuts on training variables and the final nodes are deemed to result in signal- of
+%background-like events.
+
+%A single DT is formed using a sample of signal and background candidates and a list of training
+%variables which might weakly separate the two.
+%A cut on a training variable is chosen to best separate the signal from the backgtround sample.
+%Each candidate is then defined as being most signal- or background-like depending on this cut.
+%This process can continue, splitting the sample down further, until...
+
+%\section{Bagging and boosting}
+%This algorithm will produce a DT whose output is weakly correlated to the true distribution of
+%candidates.
+%In order to increse the correlation, the technique of boosting is applied.
+%The process of boosting with reference to a DT is to weight events that are misclassified by the
+%DT, and then retrain the DT taking them into account.
+%There are are many varieties of boosting,
+
+
+
+
+
+
+%The boosted decision tree (BDT) is a machine
+%\cite{AdaBoost}
