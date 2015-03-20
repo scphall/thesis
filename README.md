@@ -2,14 +2,14 @@ thesis
 ======
 Backup of the ol' thesis.
 
-Thu 19 Mar | Total
+Fri 20 Mar | Total
 ---|---
-Words in text| 15441
-Words in headers| 135
-Words outside text (captions, etc.)| 1275
-Number of headers| 49
-Number of floats/tables/figures| 39
-Number of math inlines| 594
-Number of math displayed| 89
-Files| 39
+Words in text| 15655
+Words in headers| 139
+Words outside text (captions, etc.)| 1350
+Number of headers| 51
+Number of floats/tables/figures| 44
+Number of math inlines| 597
+Number of math displayed| 91
+Files| 41
 

@@ -49,6 +49,7 @@ pl.xlabel('Date')
 pl.ylabel('Word count')
 df.T['figs'].plot(
     marker='s', linestyle=':', color='g',
+    alpha=0.5,
     secondary_y=True,
 )
 pl.ylabel('Figure count', color='g')

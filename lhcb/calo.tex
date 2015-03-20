@@ -9,6 +9,8 @@
 The general structure of the calorimetry system is that of an \ecal followed by an \hcal, but
 before both these stations there are additional calorimetry systems designed to provide some \pid
 in the trigger; this is discussed later.
+The primary function of the calorimetry system is for triggering high \pt hadrons, electrons and
+photons --- this is described in detail in \Sec{sec:lhcb:trig}.
 
 The \spd is positioned just downstream of M1, which in turn is immediately downstream of \richtwo
 and set apart from the other muon stations M2--4.
@@ -21,28 +23,37 @@ particles and hadrons.
 
 The \ecal is a shashlik detector, made of alternating layers of lead, reflector, and scintillating
 material.
-Light from the scintillators is guided to arrays of photomultipliers, where it is converted into
-electrical signals.
+Light from the scintillators is guided to photomultiplier tubes by wavelength shifting fibres.
 This \ecal subdetector is 25 radiation lengths long,  ensuring that all electromagnetic energy is
 deposited before the \hcal.
 The energy resolution of the \ecal is
 \begin{equation}
-  \frac{\sigma_E}{E} = \frac{10\pc}{\sqrt{E}} \oplus 1\%,
+  \frac{\sigma_E}{E} = \frac{10\pc}{\sqrt{E}} \oplus 1\pc,
 \end{equation}
 where $E$ is in GeV.
 
-Two additional subdetectors, the \spd and \presh, provide some particle identification at trigger
-level; details of the trigger are provided later.
-Showers caused by the interaction of electromagnetic particles interacting with a thin lead plate
-are detected in the \presh.
-Further upstream of the layer of lead is the \spd, which identifies charged tracks.
-The \hcal consists of layers of iron and scintillating tiles which run parallel to oncoming
-particles.
+Figure~\ref{fig:lhcb:calo} shows the difference in geometry between the \ecal and \hcal.
+The \hcal also has a shashlik design (where the scintillators are interleaved with iron), but where
+the faces of the tiles in the \ecal are oriented
+towards the incoming particle flux, the \hcal tiles are oriented longitudinally.
 Each subdetector within the calorimetry system has increased cell density near the beam to cope
 with higher track multiplicity in this region
-Due to restrictions in space, the \hcal is only 5.6 nuclear interaction lengths long, and has a
-resolution of $\sigma_E/E = (69\pm5)\%/\sqrt{E} \oplus (9\pm2)\%$, where $E$ is in GeV.
+Due to restrictions in space, the \hcal is only 5.6 nuclear interaction lengths long and has a
+resolution of
+\begin{equation}
+  \frac{\sigma_E}{E} = \frac{(69\pm5)\pc}{\sqrt{E}} \oplus (9\pm2)\pc,
+\end{equation}
+where $E$ is in GeV.
+% trigger does not need full shower containment, so optimized for space
 
-
-
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.98\textwidth]{calo_structure.pdf}
+    \caption[The LHCb calorimeters]
+    {\small
+      Geometry of the \lhcb \hcal and \ecal.
+    }
+    \label{fig:lhcb:calo}
+  \end{center}
+\end{figure}
 
