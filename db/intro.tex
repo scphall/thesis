@@ -1,6 +1,134 @@
 \section{Introduction}
 \label{sec:db:intro}
 
+As described in \Sec{ch:th}, the SM cannot explain \dm, which is evidenced by a
+number of experimental observations.
+Little is known about dark matter except that it interacts only, or at least predominantly,
+gravitationally and is therefore not visible to astronomical observations.
+Dark matter hints at the existence of a dark sector, housing particles that do not interact with
+\sm particles through the strong, or electroweak forces.
+The dark sector may contain a rich variety of distinct particles operating through forces that are
+hitherto unknown.
+The only way that the dark sector could communicate with our visible sector, apart from gravity,
+is via mediating messenger particles, which would be light particles --- with masses below the weak scale ---
+and couple feebly to \sm particles.
+The messenger particles could interact via a number of \emph{portals}, which include the vector,
+axion, Higgs, and neutrino sectors.
+
+
+Many extensions of the SM predict the existence of a new light boson.
+As all interactions in the SM are gauged, it is reasonable to assume that the same can be said of
+interactions in the dark sector.
+If so, then they would contain new vector bosons such as so-called dark photons (referred to as
+$A^{\prime}$), dark $Z$ bosons (referred to as $Z_d$).
+%A particular model that would anticipate the observation of a light vector boson would one which
+%includes a dark $Z$ (or photon).
+%Such models are motivated by the existence of dark matter and also the $3.6\,\sigma$ deviation
+%exhibited between the theoretical and experimental measurements of the anomalous magnetic moment of
+%the muon, $a_\mu=\tfrac12(g_\mu-2)$~\cite{PDG2012}.
+A $Z_d$ that weakly couples to the visible sector with low mass
+($10\lesssim m_{Z_d}\lesssim500\mev$) would add corrections to the theoretical value of $a_\mu$
+bringing it in line with what is seen experimentally.
+Such models are outlined in Refs.~\cite{Davoudiasl:2012qa,Davoudiasl:2012ag,Lee:2014lga}.
+%Other models might include such particles as Inflatons~\cite{Bezrukov:2009yw} and
+%Axions~\cite{Peccei:2006as}.
+Other models include the Pecci-Quinn axion~\cite{PhysRevLett.38.1440}, as described in \Sec{ch:th},
+which solves the strong \CP problem by the addition of a pseudoscalar axion particle.
+
+Limits on these particles...
+
+%\begin{table}
+  %\caption{\small
+  %}
+  %\label{}
+  %\begin{center}
+    %\begin{tabular}{}
+      %Portal & Particles & Operator(s) \\
+      %Vector & Dark photons & $B_{\mu\nu}F^{\mu\nu}$ \\
+      %Axion & Pseudoscalars & $B_{\mu\nu}F^{\mu\nu}$ \\
+    %\end{tabular}
+  %\end{center}
+%\end{table}
+
+In general, extensions to the SM include bosons that couple to fermions proportionally to
+their masses.
+This occurs either due to mixing with the SM Higgs boson or due to the fact that the
+new bosons arise via a symmetry breaking process similar to the Higgs mechanism.
+Therefore, processes that are mediated via loops that contain top quarks are excellent places to
+search for such particles.
+
+In this analysis the dimuon component of the decay \btokstrmumu, where \kstartokpi, is analysed
+searching for evidence of \dbtomumu, where \db is a new dark boson.
+Figure~\ref{fig:feynman} shows a Feynman diagram of a potential process.
+The following analysis is as general as possible, in that neither the mass, nor the lifetime of the
+new \db is assumed.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[scale=1]{feynman_inf}
+  \caption{\small
+    Feynman diagram showing the decay \btokstrdb, where the \db interacts by mixing with the
+    Higgs or $Z$, which then decays into a dimuon pair.
+  }
+  \label{fig:feynman}
+\end{center}
+\end{figure}
+
+The spin of the particle is not assumed either.
+A similar analysis might search for a \db in \decay{\Bp}{\Kp\mumu}, where one might expect
+additional sensitivity to scalar particles.
+However, this is not the case.
+Reference~\cite{Batell:2009jf} gives decay rates for decays of the type \decay{B}{K\db} to be:
+\begin{align}
+  \Gamma\big(\decay{B}{K\db}\big) &= \Gamma_0
+  \frac{\lambda_{K}\big(m_{B}^2-m_{K}^2\big)^2}{m_{B}^6}
+  \left[f_0\!\left(m_\db^2\right)\right]
+  \\
+  \Gamma\big(\decay{B}{\Kstar\db}\big) &= \Gamma_0
+  \frac{\lambda_{\Kstar}^3}{m_{B}^6}
+  \left[A_0\!\left(m_\db^2\right)\right]
+  \\
+  \intertext{where the phasespace factor is}
+  \lambda_\kappa &= \left[
+    \left( m_B^2 - m_\db^2 - m_\kappa^2 \right)^2
+    -4m_\db^2m_\kappa^2
+    \right]^\frac12,
+    \label{eq:db:bx}
+\end{align}
+form factors are denoted as $f_0$ $A_0$, and $\Gamma_0$  is a constant.
+Figure~\ref{fig:db:kx} shows that the phasespace factor is the dominant factor in the shape for all
+the decays, and that searching for a particle, \db, in the decays \decay{\Bd}{\Kstarz\db} and
+\decay{\Bp}{\Kp\db} is equally sensitive for $m_\db\lesssim2000\mev$.
+%For example, Fig.~\ref{fig:th:kx} shows how the branching fraction of \decay{\Bd}{\Kstar\db} is
+%expected to vary with the mass of the \db, in comparison to \decay{\Bd}{K\db}.
+
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{bf_b2ks_root}
+    \includegraphics[width=0.48\textwidth]{bf_b2kv_root}
+    \caption{\small
+      Branching fraction predictions, from Eq.~\protect\ref{eq:db:bx},
+      for decays of the form $\decay{B}{KX}$, where $X$ is either
+      (left) a scalar (S) or
+      (right) a vector (V).
+      The parameters $\theta$ and $f_q$ are parameters of the model.
+      %Note that for these plots $\mathrm{ln}\left(\Lambda_\mathrm{UV}/m_t\right)$ is set to one.
+      The shapes of the curves are dominated by the available phasespace, and sensitivity is
+      comparable for $m_\db\lesssim2000\mev$.
+      %this is taken from Ref~\cite{Batell:2009jf}.
+    }
+    \label{fig:db:kx}
+  \end{center}
+\end{figure}
+
+
+The following analysis is a fully frequentist search for a new particle \db, with an unknown mass
+ans lifetime.
+This is done in the two dimensions of mass and lifetime using the method described in
+\Sec{sec:db:strategy}.
+
+
 %The existence of dark matter in the universe is overwhelmingly supported by experimental evidence from galactic rotation curves, gravitational lensing, and acoustic modes in the CMB.
 %As there are no viable dark matter candidate particles in the Standard Model (SM), new {\em dark} particles must exist.
 %Dark matter provides strong evidence for a \emph{dark sector}, containing particles which only
@@ -14,7 +142,7 @@
 %%undiscovered particle.
 %The following analysis note details the search for a hypothetical Dark Boson, \db, of
 %unknown mass and lifetime.
-%
+
 %Many extensions of the SM predict the existence of a new light boson.
 %As all interactions in the SM are gauged, it is reasonable to assume that the same can be said of
 %interactions in the dark sector.
@@ -31,7 +159,7 @@
 %Such models are outlined in Refs.~\cite{Davoudiasl:2012qa,Davoudiasl:2012ag,Lee:2014lga}.
 %Other models might include such particles as Inflatons~\cite{Bezrukov:2009yw} and
 %Axions~\cite{Peccei:2006as}.
-%
+
 %Many beyond SM regimes include a new boson which, as a result of electroweak symmetry breaking or a
 %similar mechanism, couple to fermions proportionally to their mass.
 %%In general, extensions to the SM often include bosons that couple to fermions proportionally to
@@ -51,7 +179,7 @@
   %\label{fig:feynman}
 %\end{center}
 %\end{figure}
-%
+
 %%Many models which propose such a particle, but generally (for $m<m(B)$) they are dark
 %%sector particles and only interact with the visible sector by mixing with the Higgs or $Z$ boson.
 %%Some general theories predict particles known as:
@@ -189,4 +317,3 @@
 %
 
 
-\cite{PDG2012}
