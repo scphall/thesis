@@ -115,6 +115,22 @@ This approach is not only fast, but $9\pc$ more efficient than using a cuts base
 
 %There are also \hlttwo BBDT$\mu$ lines, which are
 
+Events that are selected are flagged as either
+Triggered on signal \tos, or
+Triggered independently of signal \tis --- the latter meaning that the event was triggered by
+a different particle in the event.
+This allows the analyst the ability to calculate an estimate of the trigger efficiency in data
+using the {\tt TISTOS} method.
+One can get an approximate trigger efficiency using
+\begin{equation}
+  \varepsilon_\mathrm{trig}^\mathtt{TISTOS} =
+  \frac{N_\mathtt{TIS}}{N_\mathtt{TIS\&TOS}}.
+\end{equation}
+This can be useful because while simulated events can contain events which were not triggered, this
+is, obviously, not the case for data.
+This is not perfect becuase \tis $b$-hadron candidates are ususally fired by the other $b$-hadron
+in the event (from \decay{g}{\bbbar}), and the kinematics between the two are highly correlated.
+
 
 %Trigger 2011 \cite{LHCb-DP-2012-004}
 %Trigger 2012 \cite{Albrecht:2013fba}
