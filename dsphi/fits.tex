@@ -1,0 +1,342 @@
+\subsection{Mass fit}
+\label{sec:dsphi:fit}
+The signal yield of the decay \btodsphi is determined by performing an unbinned maximum likelihood
+fit to the invariant mass spectrum of the candidate \Bp mesons.
+
+%The fit is done simultaneously to the four regions indicated in \Tab{tab:dsphi:hel}, this enables
+%additional constraints to be placed on the background distribution.
+
+In the fit, there are several components: the signal \btodsphi; combinatorial background; and
+specific backgrounds that peak below the \Bp mass.
+The final state particles in this analysis of the decay \btodsphi are $\kkpi\kk$, given the mass
+cuts on the \Ds and \phii candidates, there are no sources of background which peak at the \Bp
+mass.
+However, there are backgrounds from genuine $B$-hadron decays in which a particle --- or multiple
+particles --- are not reconstructed.
+These backgrounds form below the mass of the \Bp.
+All these specific backgrounds are irreducible and must be accounted for in the fit.
+
+After the selection requirements
+the most significant of these are the decays\footnote{
+  For these decays, the \Kstarz refers to the $K^*(892)^0$ meson.
+}:
+%\begin{align}
+  %%&\decay{\Bp}{(\Dss\!\to(\Ds\to\kkpi)\gamma)(\phi\to\kk)}\\
+  %%&\decay{\Bp}{\Dss\phi} \to (\Ds\gamma)\phi\to(\kkpi\gamma)(\kk)
+  %&\Bp \!\to \Dss\phi \!\to (\Ds\gamma)\phi \!\to (\kkpi\gamma)(\kk) \\
+  %&\Bsb \!\to \Ds\Kstarz\Kp \!\to (\kkpi)(\kpi)\Kp \\
+%\end{align}
+%\begin{align}
+  %\Bp &\!\to \Dss\phi &\!\to& (\Ds\gamma)\phi &\!\to& (\kkpi\gamma)(\kk) \\
+  %\Bsb &\!\to \Ds\Kstarz\Kp &\!\to& (\kkpi)(\kpi)\Kp \\
+  %\Bsb &\!\to \Dss\Kstarz\Kp &\!\to& (\Ds\gamma)\Kstarz\Kp &\!\to& (\kkpi\gamma)(\kpi)\Kp \\
+%\end{align}
+  %\btodsstrphi
+  %\bstodskstrk
+  %\bstodsstrkstrk.
+%\btodsstrphi, \bstodskstrk and \bstodsstrkstrk.
+%which all contain at least one final state particle that is not reconstructed.
+\begin{center}
+  \begin{tabular}{llll}
+    $\Bp\to$ & \Dss & \phii \\
+    & \;\nlto $\Ds\gamma$ & \;\nlto $\boldsymbol{\kk}$ \\
+    & \phantom{\Ds}\nlto $\boldsymbol{\kkpi}$ \\\rule{0pt}{4ex}
+    $\Bsb\to$ & \Ds & \Kstarz & $\boldsymbol{\Km}$ \\
+    & \;\nlto $\boldsymbol{\kkpi}$ & \;\nlto $\boldsymbol{\Kp}\pim$ \\\rule{0pt}{4ex}
+    $\Bsb\to$ & \Dss & \Kstarz & $\boldsymbol{\Km}$ \\
+    & \;\nlto$\Ds\gamma$ & \;\nlto$\boldsymbol{\Kp}\pim$ \\
+    & \phantom{\Ds}\nlto $\boldsymbol{\kkpi}$ \\
+  \end{tabular}
+\end{center}
+where an emboldened particle indicates a reconstructed track.
+The decay \bstodskstrk has never been observed, but given that the branching fraction of the decay
+$\decay{\Bd}{\Dm\Kstarzb\Kp}$ is $(8.8\pm1.9)\e{-4}$~\cite{PDG2012}, it should be in the
+\btodsphi selection.
+There is no contribution in the mass range of interest from the \decay{\Bd}{\Dm\Kstarzb\Kp} mode,
+because of the mass difference between the \Bs and \Bd mesons.
+As well as \bstodskstrk, the decay \bstodsstrkstrk was also expected to be present in the sample.
+
+
+%There are no backgrounds which contribute to a peaking component directly below the \Bp mass for
+%the decay \btodsphi.
+%However, on top of the combinatorial background, the low-mass side has a number of components which
+%result from excited \Dssp or \Kstarz.
+
+
+Both the \Bp and \Ds mesons have quantum numbers $J^P=0^-$, and the \phii is $1^-$ .
+Therefore the decay \btodsphi is a transition of a pseudoscalar to a pseudoscalar and a vector
+meson.
+In order for angular momentum to be conserved, the vector particle must be produced in the $j=0$
+state, where the spin is orthogonal to the particle's momentum.
+Therefore, the vector \phii in the decay \btodsphi must be lonitudinally polarized in the final
+state, and its daughter kaons have an angular distribution proportional to $\cos^2\thetahel$, as
+shown in \Fig{fig:dsphi:hel}.
+The angle \thetahel is the helicity angle of the \phii, defined as the angle between the \Kp and
+the \Bp in the rest frame of the \phii.
+This is used to further separate the signal decay \btodsphi from other backgrounds.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{blank}
+    \caption{\small
+      FILL IN with \btodsphi helicity angle plot.
+    }
+    \label{fig:dsphi:hel}
+  \end{center}
+\end{figure}
+
+It is possible to remove about $93\pc$ of background by requiring that $|\cos\thetahel|>0.4$,
+this is the same cut value as used in \Ref{LHCb-PAPER-2011-008}.
+Therefore, two regions are defined in terms of $\cos\thetahel$, and both are used in a simultaneous
+fit.
+This also allows the combinatorial and peaking backgrounds to be separated from the signal because
+these do not necessarily have a longitudilnally polarized \phii.
+
+%The signal region for the \phii candidate is defined to be within $20\mev$ of $m_\phii^\pdg$.
+%A sideband region is defined to be $20<m_
+
+%These peaking backgournds, and the combinatorial background,
+%do not have to have a $\phi$ meson in a longitudilnally polarized.
+%Therefore, the $\cos\thetahel$ distribution should be flat for all backgrounds.
+
+%can be used to separate the signal decay from backgrounds.
+
+%In order to maximize the signal yield, the full selected dataset was separated into four regions
+%defined by the helicity angle and the invariant mass of the $\phi$ candidate, these regions are
+%shown in \Table{tab:dsphi:hel}.
+
+Fit regions are further split according to the invariant mass of the \phii candidate.
+A signal region is defined for \phitokk candidates with a mass within $20\mev$ of the nominal \phii
+mass, and a sideband region is defined for candidates with a mass in the range
+\mbox{$20<\left|m_\phi^\pdg-m_\kk\right|<40\mev$}.
+
+The resulting fit regions --- defined by \thetahel and $m_{\kk}$ --- have a signal region, \rA,
+containing most of the signal, and a purely background region, \rD.
+By performing a simultaneous fit to the four regions, which are defined explicitly in
+\Tab{tab:dsphi:hel}, there is a better grasp on all the backgrounds.
+
+\begin{table}
+  \caption[Fit regions]
+  {\small
+    Fit regions used to search for the decay \btodsphi.
+    Approximately $89\,\%$ was expected to be in region \rA.
+  }
+  \label{tab:dsphi:hel}
+  \begin{center}
+    \begin{tabular}{cccc}
+      \toprule
+      &&\multicolumn{2}{c}{$|m_{\kk}-m_\phi^\pdg|$ (MeV)}\\
+      &&$\in[0,20]$&$\in[20,40]$ \\
+      \midrule
+      \multirow{2}{*}{$|\cos\thetahel|$}
+      &$>0.4$ & \rA & \rB \\
+      &$<0.4$ & \rC & \rD \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+
+%\subsection{Contributions to the mass fit}
+The mass fit constitutes a simultaneous fit to four regions, in each of which there are four
+background distributions as well as a signal component (a total of at least 32 free parameters).
+Clearly this is very challenging, especially considering that there are low statistics and complex
+background models.
+It is therefore necessary to use relationships --- derived from simulation or data --- to fix as
+many parameters as possible.
+The following section will outline how the shape of each distribution is derived and how different
+parameter are constrained.
+
+The signal shape is described by a A Gaussian function, with a mean $\mu$ and standard deviation
+$\sigma$.
+Figure~\ref{fig:dsphi:sigshape} shows the Gaussian distribution that has been fitted to simulated
+events of the decay \btodsphi.
+The value of $\sigma$ from this fit is $11\mev$, which is then scaled up by $20\pc$ to account for
+differences in resolution between simulation and data.
+The mean, $\mu$, is fixed to be $5283\mev$, which is the mean mass observed in
+\decay{\Bp}{\Dz\pip} (and also observed in the \Bs mode).
+It is also determined from simulation that the total signal is distributed between the regions:
+\rA 89\pc, \rB 4\pc, \rC 7\pc, and in \rD there is negligible expected signal contribution.
+Therefore, in the following, \rA and \rD may be referred to as the signal and background regions,
+respectively.
+
+The shape of \Bp candidates originating from the \btodsstrphi background is taken from simulated
+events.
+The $\phi$ from the decay \btodsstrphi does not need to be longitudinally polarized because the
+\Dssp is a vector meson ($J^P=1^-$).
+Therefore the background from the decay \btodsstrphi contributes in all fit regions.
+Since the shapes of these reconstructed candidates are non-trivial, a kernel density estimation
+technique~\cite{Cranmer:2000du} is used to describe the shape.
+Figure~\ref{fig:dsphi:sigshape} shows the kernelized distribution for the whole set of simulated
+events, as well as each individual helicity region.
+It was assumed that \Dssp was unpolarized, as observed in many other cases where a
+$B$ decays into a vector-vector final state.
+Despite this, different \phii polarizations caused the shape of the distribution to differ
+between the two helicity regions.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{blank}
+    \includegraphics[width=0.48\textwidth]{blank}\\
+    \includegraphics[width=0.48\textwidth]{blank}
+    \includegraphics[width=0.48\textwidth]{blank}
+    \caption[Shape contributions from signal \btodsphi, and \btodsstrphi]
+    {
+      Signal shape from simulated events
+      Shapes of peaking background contributions for
+      decays of the form $\decay{\Bs}{D_s^{(*)+}\Kstarz\Kp}$.
+      The contributions from \btodsstrphi and \bstodskstrk are kernelized distributions from
+      simulated events.
+      The \bstodsstrkstrk shape is obtained by convolving the
+      effect of missing a photon or pion with the \bstodskstrk spectrum.
+    }
+    \label{fig:dsphi:sigshape}
+  \end{center}
+\end{figure}
+
+It was expected that $\sim7$ events from the decay \btodsstrphi contribute to the background of the
+four fit regions, spread over $\sim300\mev$.
+At this level, the difference in the true distributions and those shown in \Fig{fig:dsphi:sigshape}
+--- especially considering rising shape is the same for all polarizations of the \phii ---
+leads to a negligible difference in yield.
+For this reason, the longitudinally polarized \btodsstrphi component was used in all regions of the
+fit.
+The largest uncertainty here was from the yield of this component.
+%Far larger, is the systematic effect from the yield.
+
+Just as was done with the signal component, the ratios between yields of each fit region was fixed
+using simulation.
+Approximately $95\pc$ of the contribution from the decay \btodsstrphi is expected to be in the
+signal region.
+
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{blank}
+    \caption[Shapes of background contributions of \bstodskstrk and \bstodskstrk]
+    {\small
+      Shapes of peaking background contributions for
+      decays of the form $\decay{\Bs}{D_s^{(*)+}\Kstarz\Kp}$.
+      The contribution from \bstodskstrk is a kernelized distribution from
+      simulated events.
+      The \bstodsstrkstrk shape is obtained by convolving the
+      effect of missing a photon or pion with the \bstodskstrk spectrum.
+    }
+    \label{fig:dsphi:bkgshape}
+  \end{center}
+\end{figure}
+
+
+%Therefore the value of $\cos\thetahel$ is uniformly
+%distributed between zero and one.
+%The photon from the decaying \Dssp is not reconstructed, and therefore the background from the
+%decay \btodsstrphi peaks below the nominal \Bp mass.
+
+
+%The decay \btodsstrkstrk has never been observed
+
+
+Other sources of background that peak below the mass of the \Bp meson are from the decay modes
+$\decay{\Bsb}{D_s^{(*)+}\Kstarz\Km}$.
+These arise when the pion from the \decay{\Kstarz}{\Kp\pim} is not reconstructed.
+Since there is missing energy from the pion (and photon in the case of the \Dssp decay), these peak
+significantly below the \Bp mass.
+However, their background shapes are non-trivial, extending up to just below the signal window,
+and therefore a good understanding of the shapes are required.
+Once again, kernel density estimation techniques~\cite{Cranmer:2000du} were used; these shapes are
+show in \Fig{fig:dsphi:bkgshape}.
+
+As mentioned previously, the decays \bstodskstrk and \bstodsstrkstrk have never been observed, but
+are expected to contribute.
+The shape for \bstodskstrk is taken directly from kernelized simulated events.
+There were no simulated events available with which to understand the shape of the \bstodsstrkstrk
+background.
+Instead the shape taken from the \bstodskstrk background is convolved with a distribution
+parameterizing the loss of a photon (or pion) as seen between the decays \btodsstrphi and
+\bstodskstrk.
+
+
+Yields from these decays can, clearly, not be estimated.
+Especially since the yield from the decay \bstodskstrk is highly sensitive to the width of the
+$a_1(1260)$ --- because it decays into $\Kstar K$ --- which is poorly known.
+However, the ratios of yields for the \bstodskstrk decay can be determined using simulated events.
+The ratios between the yields from \rA/\rB and \rC/\rD was found to be $0.5\pm0.24$, and between the
+regions \rA/\rC and \rB/\rD was determined to be $1.50\pm.034$.
+These values are used as Gaussian constraints in the fit.
+The ratio of branching fractions
+\begin{equation}
+  \frac{\BF\big(\decay{\Bd}{\Dm\Kstarz\Kp}\big)}
+  {\BF\big(\decay{\Bd}{\Dstarm\Kstarz\Kp}\big)}
+  \sim 1.5,
+\end{equation}
+and it is reasonable to expect the same to be true for the branching fraction ratio for the
+\bstodskstrk and \bstodsstrkstrk modes.
+Therefore, the ration of yields for each region is fixed to $1.5$.
+
+%The background shapes for \btodsstrphi and \bstodskstrk are taken from simulated events,
+%reconstructed as \btodsphi candidates.
+%Since the shapes of these reconstructed candidates are non-trivial, a
+
+%The shapes of peaking background contributions are taken from kernel density
+%estimates of simulated events, as described.
+%Yields of background components are also fixed from...
+%Therefore, the only floating parameters in the simultaneous fit is the total signal yield and the
+%combinatorial background yields and shape.
+%However the combinatorial background between regions is fixed.
+
+The last remaining background component to be constrained is that of the combinatorial background,
+which is modelled with a decaying exponential function.
+Since the distribution of $\cos\thetahel$ is flat for combinations of random tracks, the yields
+between the regions \rA/\rC and \rB/\rD  are fixed to $1.5$,
+The value of the slope is Gaussian constrained to a fit across a wider range of mass in data.
+
+A summary of constraints applied to the fit is given in \Table{fig:tab:constraints}.
+
+\begin{table}
+  \caption[Constraints applied to the fit to \btodsphi data]
+  {\small
+    Fit parameters used in in the fit to determine the yield of the decay \btodsphi.
+    A label of $f$, means that the value is fixed in the fit; and labels of $s$ and $d$ mean
+    constrained using simulated events and data over a wider mass range, respectively.
+    The yield of the background from \bstodsstrkstrk is also fixed to be $67\pc$ of
+    $N\big(\bstodskstrk\big)$
+  }
+  \label{fig:tab:constraints}
+  \begin{center}
+    \begin{tabular}{ccccc}
+      \toprule
+      Fit component & Parameter & Value & Parameter & Value \\
+      \midrule
+      \btodsphi
+      & yield \rA & $6.00\pm2.70$
+      & \rC/\rA   & $0.075$ $f$ \\
+      & $\mu$     & $5283\mev$ $f$
+      & \rB/\rA   & $0.044$ $f$ \\
+      & $\sigma$     & $13.2\mev$ $f$
+      & \rD/\rA   & $0.003\pc$ $f$ \\
+      \midrule
+      \btodsstrphi
+      & yield \rA & $8.67\pm7.36$
+      & \rB/\rA   & $0.044$ $f$ \\
+      & \rC/\rA   & $0.00\pm0.12$
+      & \rD/\rC   & $0.044$ $f$ \\
+      \midrule
+      \bstodskstrk
+      & yield \rA & $4.94\pm1.29$
+      & \rA/\rB, \rC/\rD & $0.50\pm0.24$ $s$ \\
+      & \rA/\rC, \rB/\rD & $1.50\pm0.34$ $s$ \\
+      %\midrule
+      %\bstodsstrkstrk
+      %& yield/$N\big(\bstodskstrk\big)$ & 1.5 $f$ \\
+      \midrule
+      Combinatorial
+      & yield \rA & $24.0\pm6.7$
+      & yield \rB & $16.5\pm6.0$ \\
+      & \rA/\rC & 1.5 $f$
+      & \rB/\rD & 1.5 $f$ \\
+      & exponent & $-(1.8\pm0.2)\e{-3}$ $d$ \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}

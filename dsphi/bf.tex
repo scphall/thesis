@@ -24,15 +24,9 @@ $\decay{\Ds}{\kkpi}$, which has a $5\pc$ uncertainty, cancels.
 
 \input{dsphi/fits}
 
-The signal yield of the decay \btodsphi is determined by performing an unbinned maximum likelihood
-fit to the invariant mass spectrum of the candidate \Bp mesons.
-The fit is done simultaneously to the four regions indicated in \Tab{tab:dsphi:hel}, this enables
-additional constraints to be placed on the background distribution.
-In the fit, there are several components: the signal \btodsphi; combinatorial background; and
-specific backgrounds that peak below the \Bp mass.
 
 
-\section{Efficiency calculations}
+\subsection{Efficiency calculations}
 Efficiencies relevant to the calculation of the
 branching fraction, given in \Eq{eq:dsphi:bf}, were
 calculated using simulated events of the decays \btodsphi and \btodsd.
@@ -65,22 +59,28 @@ This method is also used in \Ref{LHCb-PAPER-2012-001}.
   \label{tab:dsphi:eff}
   \begin{center}
     \begin{tabular}{ccccc}\toprule
-      &\btodsphi&\btodsd\\
+      $\varepsilon$&\btodsphi&\btodsd\\
       \midrule
-      \eff{geo}
+      %\eff{geo}
+      Geometrical
       & $14.62\pm0.05$ & $12.75\pm0.05$ \\
       \eff{reco\&strip}
       & $\pz1.53\pm0.04$ & $\pz1.98\pm0.04$ \\
-      \eff{trig}
+      %\eff{trig}
+      Trigger
       & $95.8\pm0.3$ & $94.4\pm0.3$ \\
-      \eff{bdt}
+      %\eff{BDT}
+      BDT
       & $51.4\pm0.2$ & $99.2\pm0.2$ \\
-      \eff{vetoes}
+      %\eff{vetoes}
+      \Dp and \Lc vetoes
       & $95.0$ & $95.0\pm0.2$ \\
-      \eff{\chisqip}
+      %\eff{\chisqip}
+      \chisqip
       & $86.0\pm0.9$ & $75.0\pm0.6$ \\
       \littlerule
-      \eff{tot}
+      %\eff{tot}
+      Total
       & $0.091\pm0.003$ & $0.166\pm0.003$ \\
       \bottomrule
     \end{tabular}
@@ -124,7 +124,7 @@ $\BF\big(\btodsd\big)=\big(1.00\pm0.17\big)\e{-2}$,
 $\BF\big(\decay{\Dzb}{\Km\pip}\big)=\big(3.88\pm0.05\big)\e{-2}$, and
 $\BF\big(\phitokk\big)=\big(48.9\pm0.5\big)\e{-2}$~\cite{PDG2012}.
 The uncertainties in the branching fraction of the normalization channel introduced a systematic
-uncertainty of $17\ps$.
+uncertainty of $17\pc$.
 Other systematic uncertainties are included in the above result, and are discussed in
 \Sec{sec:dsphi:syst}.
 The above result has a branching fraction which is higher than the SM predictions, although there
