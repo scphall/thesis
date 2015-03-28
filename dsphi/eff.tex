@@ -1,0 +1,76 @@
+\subsection{Efficiency calculations}
+The calculation of the branching fraction $\BF(\btodsphi)$ requires the total efficiencies for the
+signal and normalization channels.
+These are calculated as the product of all efficiencies that contribute to the final selection.
+For the majority of stages in the selection process, the efficiency can be calculated using
+simulated events of \btodsphi and \btodsd.
+However, the efficiency for the BDT cut cannot be estimated with simulation because the \pid
+variables, upon which the BDT output depends, are poorly described by simulation.
+
+%Efficiencies relevant to the calculation of the
+%branching fraction, given in \Eq{eq:dsphi:bf}, were
+%calculated using simulated events of the decays \btodsphi and \btodsd.
+
+%The majority of the efficiencies listed in \Tab{tab:dsphi:eff} are calculated using simulated
+%\btodsphi events.
+%However, calculating the efficiency of the BDT variable using simulated events is not reliable,
+%because of the number of PID --- and other --- variables that are poorly described by simulation.
+%Therefore, the value of \eff{BDT} is determined with a data driven method.
+
+To obtain the efficiency of $\bdt(X)$, for $X\in\{\Ds,\phi\}$, the validation sample is, and binned
+in three dimensions: $\pt(X)$, $\chisqfd(X)$, and $\bdt(X)$.
+Here, \chisqfd is the flight distance of $X$ in units of \chisq.
+The variables \pt and \chisqfd are used because they are two of the most discriminating variables
+in the \bdt, and well described by simulation.
+The large statistics of the validation sample mean that in each bin defined by \pt and \chisqfd
+there is a BDT distribution.
+Then, each individual simulated event is assigned an efficiency based on the BDT distribution in
+the bin defined by the \pt and \chisqfd of the \Ds or \phii.
+These individual efficiencies can then be amalgamated into an overall efficiency.
+This method is also used in \Ref{LHCb-PAPER-2012-001}.
+
+A summary of all efficiencies can be found in \Tab{tab:dsphi:eff}.
+
+
+\begin{table}
+  \caption[Efficiencies for calculating $\BF\big(\btodsphi\big)$]
+  {\small
+    Efficiencies, in \%, for the signal decay \btodsphi and the normalization channel \btodsd.
+    The veto efficiency of \btodsphi is assumed to be the same as for \btodsd.
+    All efficiencies were calculated using simulated events, with the exception of the \bdt, which
+    is calculated using a data driven method, as described in text.
+  }
+  \label{tab:dsphi:eff}
+  \begin{center}
+    \begin{tabular}{lcccc}\toprule
+      \cellc{Source of efficiency}&\btodsphi&\btodsd\\
+      \midrule
+      %\eff{geo}
+      Geometrical
+      & $14.62\pm0.05$ & $12.75\pm0.05$ \\
+      %\eff{reco\&strip}
+      Reconstruction and stripping
+      & $\pz1.53\pm0.04$ & $\pz1.98\pm0.04$ \\
+      %\eff{trig}
+      Trigger
+      & $95.8\pm0.3$ & $94.4\pm0.3$ \\
+      %\eff{BDT}
+      BDT
+      & $51.4\pm0.2$ & $99.2\pm0.2$ \\
+      %\eff{vetoes}
+      \Dp and \Lc vetoes
+      & $95.0$ & $95.0\pm0.2$ \\
+      %\eff{\chisqip}
+      \chisqip
+      & $86.0\pm0.9$ & $75.0\pm0.6$ \\
+      \littlerule
+      %\eff{tot}
+      Total
+      & $0.091\pm0.003$ & $0.166\pm0.003$ \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+
