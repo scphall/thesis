@@ -10,13 +10,28 @@ channel \btojpsiphik:
   \cdot\BF\big(\jpsitomumu\big).
 \end{equation}
 Here, $N^\prime\big(\btophikmumu\big)$ denotes the number of signal events extracted from an
-unbinned fit of \btophikmumu candidates, with each event weighted by the relative efficiency
-$\varepsilon\big(\btojpsiphik\big) / \varepsilon_{\qsq}\big(\btophikmumu\big)$.
+weighted unbinned maximum likelihood fit of \btophikmumu candidates.
+Each event is weighted by the relative efficiency:
+\begin{equation}
+  \frac{\varepsilon\big(\btojpsiphik\big)}{\varepsilon_{\qsq}\big(\btophikmumu\big)},
+\end{equation}
+where the denominator is the efficiency of the signal decay, \btophikmumu, in bins of \qsq,
+as shown in \Fig{fig:hhh:phikeff}.
 This is done because the efficiency of the decay \btophikmumu was shown to vary significantly over
 the full \qsq range, the weights are determined in bins of \qsq.
 The branching fraction measurements used were
 $\BF\big(\btojpsiphik\big)=\big(5.2\pm1.7\big)\e{-5}$~\cite{PDG2012},
 and $\big(\jpsitomumu\big)=5.93\pm0.06$~\cite{PDG2012}.
+
+%\begin{figure}
+  %\begin{center}
+    %\includegraphics[width=0.48\textwidth]{blank}
+    %\caption{\small
+      %The efficiency of the signal decay \btokphimumu in bins of \qsq.
+    %}
+    %\label{fig:hhh:phikeff}
+  %\end{center}
+%\end{figure}
 
 Yeilds for both the signal and normalization channels are extracted from unbinned maximum
 likelihood fits of the invariant mass of the \Bp candidates.
