@@ -22,6 +22,8 @@ $\decay{\Ds}{\kkpi}$, which has a $5\pc$ uncertainty, cancels.
 %Values for the normalizaton channel were previoiusly calculated in \Ref{LHCb-CONF-2012-009}.
 
 %The
+Yield of normalization channel
+$N(\btodsd) = 5182.0\pm73.9$
 
 \begin{figure}
   \begin{center}
@@ -49,10 +51,19 @@ This is confirmed with an ensemble of $10^5$ toy datasets.
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.48\textwidth]{B2Dsphi_regionA}
-    \includegraphics[width=0.48\textwidth]{B2Dsphi_regionB}\\
-    \includegraphics[width=0.48\textwidth]{B2Dsphi_regionC}
-    \includegraphics[width=0.48\textwidth]{B2Dsphi_regionD}
+    \begin{tikzpicture}
+      \coordinate[] (p0);
+      \coordinate[right=0.5\textwidth of p0] (p1);
+      \coordinate[below=0.2\textheight of p0] (p2);
+      \coordinate[right=0.5\textwidth of p2] (p3);
+      \coordinate[right=0.10\textwidth of p1] (t0);
+      \coordinate[above=0.03\textheight of t0] (t1);
+      \draw (p0) node {\includegraphics[width=0.48\textwidth]{B2Dsphi_regionA}};
+      \draw (p1) node {\includegraphics[width=0.48\textwidth]{B2Dsphi_regionB}};
+      \draw (p2) node {\includegraphics[width=0.48\textwidth]{B2Dsphi_regionC}};
+      \draw (p3) node {\includegraphics[width=0.48\textwidth]{B2Dsphi_regionD}};
+      \draw (t1) node {\includegraphics[width=0.2\textwidth]{dsphi_legend}};
+    \end{tikzpicture}
     \caption[Fits to \btodsphi data]
     {\small
       Fits to the four analysis regions, as given in Table~\ref{tab:dsphi:hel}, in the search for
