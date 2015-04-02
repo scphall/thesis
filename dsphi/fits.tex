@@ -333,44 +333,48 @@ A summary of constraints applied to the fit is given in \Table{fig:tab:constrain
     Fit parameters used in in the fit to determine the yield of the decay \btodsphi.
     A label of $f$, means that the value is fixed in the fit; and labels of $s$ and $d$ mean
     constrained using simulated events and data over a wider mass range, respectively.
-    The yield of the background from \bstodsstrkstrk is also fixed to be $67\pc$ of
-    $N\big(\bstodskstrk\big)$
+    %The yield of the background from \bstodsstrkstrk is also fixed to be $67\pc$ of
+    %$N\big(\bstodskstrk\big)$
+    The use of {\bf R} for the constraints of \bstodsstrkstrk indicate that it applies in each
+    fit region separately.
   }
   \label{fig:tab:constraints}
   \begin{center}
-    \begin{tabular}{ccccc}
+    \begin{tabular}{cccc}
       \toprule
-      Fit component & Parameter & Value & Parameter & Value \\
+      Fit component & Parameter & Value & \\
       \midrule
       \btodsphi
-      & yield \rA & $6.00\pm2.70$
-      & \rC/\rA   & $0.075$ $f$ \\
-      & $\mu$     & $5283\mev$ $f$
-      & \rB/\rA   & $0.044$ $f$ \\
-      & $\sigma$     & $13.2\mev$ $f$
-      & \rD/\rA   & $0.003\pc$ $f$ \\
-      \midrule
+      & yield \rA & $6.00\pm2.70$\\
+      & \rB/\rA   & $0.044$ & $f$ \\
+      & \rC/\rA   & $0.075$ & $f$ \\
+      & \rD/\rA   & $0.003\pc$ & $f$ \\
+      & $\mu$     & $5283\mev$ & $f$\\
+      & $\sigma$     & $13.2\mev$ & $f$\\
+      \littlerule
       \btodsstrphi
-      & yield \rA & $8.67\pm7.36$
-      & \rB/\rA   & $0.044$ $f$ \\
-      & \rC/\rA   & $0.00\pm0.12$
-      & \rD/\rC   & $0.044$ $f$ \\
-      \midrule
+      & yield \rA & $8.67\pm7.36$\\
+      & \rB/\rA   & $0.044$ & $f$ \\
+      & \rC/\rA   & $0.00\pm0.12$\\
+      & \rD/\rC   & $0.044$ & $f$ \\
+      \littlerule
       \bstodskstrk
-      & yield \rA & $4.94\pm1.29$
-      & \rA/\rB, \rC/\rD & $0.50\pm0.24$ $s$ \\
-      & \rA/\rC, \rB/\rD & $1.50\pm0.34$ $s$ \\
-      %\midrule
-      %\bstodsstrkstrk
-      %& yield/$N\big(\bstodskstrk\big)$ & 1.5 $f$ \\
-      \midrule
+      & yield \rA & $4.94\pm1.29$\\
+      & \rA/\rB, \rC/\rD & $0.50\pm0.24$ & $s$ \\
+      & \rA/\rC, \rB/\rD & $1.50\pm0.34$ & $s$ \\
+      \littlerule
+      \bstodsstrkstrk
+      & $\displaystyle{\frac{\mathrm{yield}\;{\bf R}}{\mathrm{yield}(\bstodskstrk)\;{\bf R}}}$
+      & 1.5& $f$ \\
+      \littlerule
       Combinatorial
-      & yield \rA & $24.0\pm6.7$
+      & yield \rA & $24.0\pm6.7$\\
       & yield \rB & $16.5\pm6.0$ \\
-      & \rA/\rC & 1.5 $f$
-      & \rB/\rD & 1.5 $f$ \\
-      & exponent & $-(1.8\pm0.2)\e{-3}$ $d$ \\
+      & \rA/\rC & 1.5 & $f$\\
+      & \rB/\rD & 1.5 & $f$ \\
+      & exponent & $-(1.8\pm0.2)\e{-3}$ & $d$ \\
       \bottomrule
     \end{tabular}
   \end{center}
 \end{table}
+
