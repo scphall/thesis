@@ -1,53 +1,94 @@
-\section{The Flavour Problem and Minimal Flavour Violation}
+\section{The flavour problem}
 
-The most general way to parameterize NP is with an effective Lagrangian describing generic
-interactions at an energy scale $\mu$, in which long and shory distance effects are separated.
-Long distance (equivilently low energy) effects are described by coefficients, $c$, which can be
-calculated using peturbative methods.
-Short distance (high energy) effects are parameterized in terms of operators, $\mathcal{O}$,
-which must be calculated non-peturbativly because they contain QCD interactions.
-The resulting effective Lagrangian includes a sum over all processes, $i$, which contribute at a
-given dimension, $d$:
+Historically, indirect evidence for \np has pointed theorists towards predicting the structure of
+the \sm before observations could be made directly.
+For example, \CPV observed in the kaon sector in 1964 led to the prediction of a third generation of
+quarks by Kobayashi and Maskawa in 1973.
+The \bquark quark was not discovered until 1977.
+
+
+%\begin{itemize}
+  %\item Access to higher energy scales in virtual particles in loops
+  %\item Direct searches, see particles
+  %\item high mass needs energy, small couplings need lumi
+%\end{itemize}
+
+
+
+
+
+The addition of \np particles introduce terms defining their mass, and the way in which they couple
+to other particles and forces, must be added to the Lagrangian.
+These additional free parameters are entirely unknown, and by precise measurements the physics
+community places bounds on \np particle masses and parameters.
+However, it is impossible to do this without making assumptions, albeit reasonable ones.
+Typically, natural models are favoured, with generic couplings of order unity and the
+scale at which \np enters is $\mathcal{O}(1\tev)$.
+
+Just as in \Eq{eq:th:opehamnorm}, one can write an effective Lagrangian for $\Delta F=2$ down-type
+FCNCs containing \np:
 \begin{equation}
-  \Lag{eff}
-  =
-  \Lag{SM} + \sum_d\frac1{\Lambda^{d-4}}
-  + \sum_ic_i^{(d)}\mathcal{O}_i^{(d)}.
-\end{equation}
-Processes that cause FCNCs contribute in $d=6$, and can be wiritten as
-\begin{equation}
-  \Delta\mathcal{L}^\mathrm{FCNC}
-  =
+  \Delta\mathcal{L}^{\Delta F=2} =
   \sum_{i\neq j}\frac{c_{ij}}{\Lambda^2}
-  \left(\Xbar{\mathcal{O}}_{Li}\gamma^\mu\mathcal{O}_{Lj}\right)^2,
+  \big(\Xbar{Q}_{Li}\gamma^\mu Q_{Lj}\big)^2.
 \end{equation}
-where $c_{ij}$ are dimensionless FCNC couplings, where $i$ and $j$ are different quark generations.
-Bounds set on the energy scale $\Lambda$ by the analysis in \Ref{Isidori:2010kg} are:
+Constraints on the coupling constants for $c_{sd}$, $c_{bd}$, and $c_{bs}$ are taken from
+values of $\Kz-\Kzb$, $\Bd-\Bdb$, and $\Bs-\Bsb$ mixing measurements, respectively.
+An analysis in \Ref{Isidori:2010kg} gives constraints on the energy scale from these couplings:
 \begin{equation}
   \Lambda > \frac{|c_{ij}|^\frac12}{|\Vconj{ti}\V{tj}|}\times4.4\tev
   \sim
   \left\{
     \begin{array}{l}
-      %1.3\e{4}\tev\times |c_{sd}|^\frac12 \\
-      %5.1\e{2}\tev\times |c_{bd}|^\frac12 \\
-      %1.1\e{2}\tev\times |c_{bs}|^\frac12 \\
       |c_{sd}|^\frac12\times 1.3\e{4}\tev \\
       |c_{bd}|^\frac12\times 5.1\e{2}\tev \\
       |c_{bs}|^\frac12\times 1.1\e{2}\tev \\
-    \end{array}\right.
+    \end{array}\right..
 \end{equation}
-These values are calculated under the assumption that NP has a natural flavour structure, where
-$c_{ij}\approx\mathcal{O}(1)$.
+This introduces a conflict in the quest for naturalness, between generic couplings and \np entering
+at the TeV scale.
+%These values are calculated under the assumption that NP has a natural flavour structure, where
+%$c_{ij}\approx\mathcal{O}(1)$.
 So, either couplings are of order unity and NP begins to contribute at over $100\tev$; or couplings
 strengths are $\mathrm{O}(10^{-5})$ and NP contributes at the $1\tev$ level;
-it is expected for NP to appear at the $1\tev$ scale in order to solve the hierarcy problem.
-Either way, there is a conflict between the most natural coupling and energy scale; this is known
-as the flavour problem.
-%So must conclude that NP has a highly non-generic flacour structure.
+it is expected for NP to appear at the $1\tev$ scale in order to solve the hierarchy problem.
+%Either way, there is a conflict between the most natural coupling and energy scale; this is known
+%as the flavour problem.
+This contradiction is known as the \emph{flavour problem}.
 
-A solution to the flavour problem is the Minimal Flavour Violation (MFV) hypoethesis.
+A solution to the flavour problem is the Minimal Flavour Violation (MFV) hypothesis.
 This is the, somewhat pessimistic, view that the flavour structure of NP mirrors that of the Yukawa
 couplings; leading to NP flavour changing transitions to be hidden by those seen in the SM.
 
 
+The contradiction of the flavour problem introduces a decision as to how to search for beyond the
+\sm physics.
+If \np particles were to be of high mass one would search at the \emph{energy frontier},
+however if the coupling strengths of \np are weak then one would search at the
+\emph{luminosity frontier}.
+The \lhcb detector offers an excellent environment to search at both or these frontiers.
+Firstly, the \lhc supplies \lhcb with (upto) $14\tev$, although it does not have full $4\pi$
+coverage.
+Secondly, the luminosity frontier is, arguably, accessible because the precision tracking and \pid
+capabilities of the \lhcb detector.
+This means that \lhcb can observe decays such as \decay{\Bs}{\mumu} which has a branching fraction
+of $\big(2.8\,^{+0.7}_{-0.6}\e{-9}\big)$~\cite{LHCb-PAPER-2014-049}.
 
+
+
+
+
+
+%The \lhcb detector is ideally placed to search for \np at the
+%luminosity frontier, because although the lumin
+%the luminosity is not as high as the $B$-factories
+
+
+%\begin{itemize}
+  %\item Conflict of scales
+  %\item MFV
+  %\item Energy and luminosity frontiers
+  %\item Scales from K mixing and B mixing
+%\end{itemize}
+
+%So must conclude that NP has a highly non-generic flacour structure.

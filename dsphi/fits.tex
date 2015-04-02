@@ -1,22 +1,8 @@
-\subsection{Mass fit}
+\subsection{Mass fits}
 \label{sec:dsphi:fit}
+
 The signal yield of the decay \btodsphi is determined by performing an unbinned maximum likelihood
 fit to the invariant mass spectrum of the candidate \Bp mesons.
-Invariant mass distributions of
-selected candidate \Ds and \phii mesons are shown in \Fig{fig:dsphi:mesons}.
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.48\textwidth]{blank}
-    \includegraphics[width=0.48\textwidth]{blank}
-    \caption{\small
-      Invariant mass distributions of the
-      (left) \Ds, and
-      (right) \phii candidates.
-    }
-    \label{fig:dsphi:mesons}
-  \end{center}
-\end{figure}
 
 %The fit is done simultaneously to the four regions indicated in \Tab{tab:dsphi:hel}, this enables
 %additional constraints to be placed on the background distribution.
@@ -92,9 +78,15 @@ This is used to further separate the signal decay \btodsphi from other backgroun
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.48\textwidth]{blank}
+    \includegraphics[width=0.48\textwidth]{thetahel}
+    %\includegraphics[width=0.48\textwidth]{thetahel2}
     \caption{\small
-      FILL IN with \btodsphi helicity angle plot.
+      Distribution of $\cos\thetahel$, where \thetahel is the angle between the \Bp and \Kp in the
+      rest frame of the \phii from simulated events.
+      The shaded region indicates $|\cos\thetahel|>0.4$, which defines the signal region.
+      For the decay \btodsphi, where the \Bp and \Ds mesons are both pseudoscalars, and the
+      \phii is a vector, the \phii is forced into the $j=0$ state.
+      Therefore, the angular distrubution of \thetahel is proportional to $\cos^2\thetahel$.
     }
     \label{fig:dsphi:hel}
   \end{center}
@@ -192,21 +184,19 @@ between the two helicity regions.
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.48\textwidth]{blank}
-    \includegraphics[width=0.48\textwidth]{blank}\\
-    \includegraphics[width=0.48\textwidth]{blank}
-    \includegraphics[width=0.48\textwidth]{blank}
-    \caption[Shape contributions from signal \btodsphi, and \btodsstrphi]
+    \includegraphics[width=0.48\textwidth]{b2dsstrphi_sig}
+    \includegraphics[width=0.48\textwidth]{b2dsstrphi_hel}\\
+    \includegraphics[width=0.48\textwidth]{b2dsstrphi_both}
+    \caption[Shape contributions from \btodsstrphi]
     {
-      Signal shape from simulated events
-      Shapes of peaking background contributions for
-      decays of the form $\decay{\Bs}{D_s^{(*)+}\Kstarz\Kp}$.
-      The contributions from \btodsstrphi and \bstodskstrk are kernelized distributions from
-      simulated events.
-      The \bstodsstrkstrk shape is obtained by convolving the
-      effect of missing a photon or pion with the \bstodskstrk spectrum.
+      Distributions of the invariant mass distribution of simulated events of \btodsstrphi
+      in the indicated fit regions and the resulting kernelized function.
+      The shape of these background distributions varies depending on the helicity cut, but the
+      rising edge on the right hand side is the same in each case.
+      In the fit to the data, the distribution made from all events.
+      The vertical line indicates the \Bp mass.
     }
-    \label{fig:dsphi:sigshape}
+    \label{fig:dsphi:dsstrphi}
   \end{center}
 \end{figure}
 
@@ -228,17 +218,46 @@ signal region.
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.48\textwidth]{blank}
-    \caption[Shapes of background contributions of \bstodskstrk and \bstodskstrk]
+    \includegraphics[width=0.48\textwidth]{bs2dskkstr_sig}
+    \includegraphics[width=0.48\textwidth]{bs2dskkstr_hel}
+    \caption[Shapes of background contributions of \bstodskstrk]
     {\small
-      Shapes of peaking background contributions for
-      decays of the form $\decay{\Bs}{D_s^{(*)+}\Kstarz\Kp}$.
-      The contribution from \bstodskstrk is a kernelized distribution from
-      simulated events.
-      The \bstodsstrkstrk shape is obtained by convolving the
-      effect of missing a photon or pion with the \bstodskstrk spectrum.
+      Distributions of the invariant mass distribution of simulated events of \bstodskstrk in the
+      (left) signal helicity regions \rA and \rB, and
+      (right) background helicity regions \rC and \rD.
+      The pale blue shapes at lower mass are from the the signal region in $m_\kk$, and the dark
+      shapes are shifted up in mass by $35\mev$ to model the \phii mass siedbands.
     }
-    \label{fig:dsphi:bkgshape}
+    \label{fig:dsphi:bstodskstrk}
+  \end{center}
+\end{figure}
+
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{bs2dsstrkstrk}
+    \caption[Shapes of background contributions of \bstodsstrkstrk]
+    {\small
+      Distribution of the \bstodsstrkstrk background shape, in regions \rA and \rB, relative to
+      that of the \bstodskstrk from region \rA.
+      The \bstodsstrkstrk background in \rC and \rD are the same as those shown, but shifted up in
+      mass by $5\mev$.
+      The shape of the \bstodsstrkstrk background is made by shifting the displayed data down in
+      mass and smearing to account for the additional lost photon from the \Dss.
+      This resulting shape is then kernelized.
+      %The filled light blue distribution is an estimate of the \bstodsstrkstrk shape, which is made
+      %using the shown data, and accounting for the lost photon from the \Dss with a drop in mass
+      %and a smearing in resolution.
+      %The randomization is what introduces the hump structure at around $4950\mev$.
+      %Shapes of peaking background contributions for
+      %decays of the form $\decay{\Bs}{D_s^{(*)+}\Kstarz\Km}$.
+      %The contribution from \bstodskstrk is a kernelized distribution from
+      %simulated events.
+      %The \bstodsstrkstrk shape is obtained by convolving the
+      %effect of missing a photon or pion with the \bstodskstrk spectrum.
+      The vertical line indicates the \Bp mass.
+    }
+    \label{fig:dsphi:bstodsstrkstrk}
   \end{center}
 \end{figure}
 

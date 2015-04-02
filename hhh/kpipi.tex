@@ -14,22 +14,22 @@ The differential branching fraction for a bin of width $\Delta\qsq$ is
   %\frac{\eff{norm}}{\eff{sig}} \cdot
   %\frac{\BF_\mathrm{tot}\left(\btopsitwosk\right)}{\Delta\qsq}
 %\end{equation}
-\begin{equation}
+\begin{multline}
   \frac{d}{\dqsq}\BF\big(\btokpipimumu\big)
-  =
+  \\=
   \frac{N\big(\kpipi\mumu\big)}{N\big(\psitwos\Kp\big)} \cdot
   \frac{\varepsilon\big(\psitwos\Kp\big)}{\varepsilon\big(\kpipi\mumu\big)} \cdot
   \frac{\BF_\mathrm{tot}\big(\btopsitwosk\big)}{\Delta\qsq}
   \label{eq:kpipi:diffbf}
-\end{equation}
+\end{multline}
 where,
-\begin{equation}
+\begin{equation*}
   \BF_\mathrm{tot}\big(\btopsitwosk\big)
   =
   \BF\big(\btopsitwosk\big) \cdot
   \BF\big(\psitwostojpsipipi\big) \cdot
   \BF\big(\jpsitomumu\big),
-\end{equation}
+\end{equation*}
 \num{sig} is the yield of the signal decay \btokpipimumu in the given \qsq bin and \num{norm}
 is the yield of the normalization channel.
 Total deficiencies for reconstruction and selection are denoted by \eff{sig} and \eff{norm} for the
@@ -116,28 +116,29 @@ extracted from fits in \Fig{fig:kpipi:q2fits}.
 These results are shown graphically in \Fig{fig:kpipi:diffbf} and are given numerically --- along
 with signal yields --- are shown in \Tab{tab:kpipi:diffbf}.
 The sum over all \qsq bins results in an integrated branching fraction of
-\begin{equation}
+\begin{equation*}
   \BF\big( \btokpipimumu \big)=
   \big(3.43\,^{+0.23}_{-0.21}\stat\pm0.15\syst\pm0.14\normerr\big)\e{-7};
-\end{equation}
+\end{equation*}
 where quoted uncertainties are statistical, systematic and due to the errors on the branching
 fraction of the normalization channel.
 The fraction of signal events removed by the charmonium vetoes is determined from simulated
 \decay{\Bp}{\kone{1270}\mumu} events % changing the form factors
 to be $(21.3\pm1.5)\,\%$.
 Finally, the adjusted integrated branching fraction is
-\begin{equation}
+\begin{equation*}
   \BF\big( \btokpipimumu \big)=
   \big(4.36\,^{+0.29}_{-0.27}\stat\pm0.21\syst\pm0.18\normerr\big)\e{-7}.
-\end{equation}
-\bam{WILKS.}
+\end{equation*}
+The statistical significance of this result is in excess of $20\stdev$ according to Wilks'
+theorem~\cite{wilks1938}.
 
 Since the uncertainty due to the normalization channel branching fraction is significant, the
 ratio of branching fractions is also quoted
-\begin{equation}
+\begin{equation*}
   \frac{ \BF\big( \btokpipimumu \big) }{ \BF\big( \btopsitwosk \big) } =
   \big(6.95\,^{+0.46}_{-0.43}\stat\pm0.34\syst\big)\e{-4}.
-\end{equation}
+\end{equation*}
 Where the value used is~\cite{PDG2012}
 $\BF_\mathrm{tot}\big(\btopsitwosk\big)$,
 and the uncertainty is fully correlated between \qsq bins.
@@ -152,9 +153,9 @@ and the uncertainty is fully correlated between \qsq bins.
     }
     \label{tab:kpipi:diffbf}
     \begin{tabular}{ccc}\toprule
-      \qsq bin $\left[\gevgevcccc\right]$
+      \qsq bin $\left(\gevgev\right)$
       & $N_\sig$
-      & $\tfrac{\dBF}{\dqsq}\;\left[\e{-8}\pergevgevcccc\right]$
+      & $\tfrac{\dBF}{\dqsq}\;\left(\e{-8}\,\mathrm{GeV}^{-2}\right)$
       \\\midrule
       $[\pz0.10,\pz2.00]$ & $134.1\,^{+12.9}_{-12.3}$     & $7.01\,^{+0.69}_{-0.65} \pm 0.47$ \\
       $[\pz2.00,\pz4.30]$ & $\pz56.5\,^{+\pz9.7}_{-\pz9.1}$ & $2.34\,^{+0.41}_{-0.38} \pm 0.15$ \\
@@ -247,10 +248,11 @@ This is done by recalculating the relative efficiency for each \qsq bin:
 without reweighting track multiplicity and $\chisqvtx(B)$;
 without accounting for differences in tracking and {\tt isMuon} efficiencies;
 and without performing PID resampling.
+The resulting systematic uncertainty from the selection was assigned a value of $1\pc$.
 Each source of uncertainty is treated separately, and the total systematic uncertainty is taken to
 be the difference in the branching fraction with the newly calculated relative efficiency.
-\bam{selection 1\%}
-\bam{trigger 1\%}
+%\bam{selection 1\%}
+%\bam{trigger 1\%}
 
 % Fits
 In order to assess the degree of uncertainty introduced by the distributions used to model the
@@ -259,7 +261,7 @@ The systematic uncertainty is taken to be the difference between the nominal bra
 and the branching recalculated using different signal or background components in the fit.
 A single Gaussian with a power-law tail is used as an alternative signal model and --- in a
 different fit --- a linear function is used to describe the background.
-\bam{2\%}
+The modelling of the mass distributions led to a systematic uncertainty of $2\pc$.
 
 The way the signal decay is modelled in simulation were the source of numerous systematic
 uncertainties.
@@ -301,6 +303,7 @@ Branching fractions were then evaluated using these new efficiencies, and the ma
 from the nominally calculated value is taken as the systematic uncertainty.
 The same procedure was used to calculate systematics with respect to $\thetakone=-57^\circ$, and
 the values are found to be consistent with $-(34\pm13)^\circ$.
+This led to an assigned uncertainty of
 \bam{1-2\%}.
 
 Charmonium vetoes removes a percentage of signal candidates, that must be accounted for in order to
@@ -333,6 +336,60 @@ This is done multiple times and leads to an uncertainty of $1.5\,\%$.
 %Negligible
 
 
+
+
+
+\begin{table}
+  \caption{\small
+    Systematic uncertainties on the differential branching fraction \mbox{${\rm d}{\cal
+    B}(\Bu\to\Kp\pip\pim\mup\mun)/{\rm d}q^2$} in bins of $q^2$ $[\times 10^{-8} \gev^{-2}]$.
+  }
+  \label{tab:kpipi:syst}
+  \begin{center}
+  \begin{tabular}{lccccc}\toprule
+    & \multicolumn{5}{c}{$q^2$ bin $[\gev^2]$}\\
+    Source
+    & \celll{$[0.10,$}
+    & \celll{$[2.00,$}
+    & \celll{$[4.30,$}
+    & \celll{$[10.09,$}
+    & \celll{$[14.19,$}
+    %& $[\pz2.00,\pz4.30]$
+    %& $[\pz4.30,\pz8.68]$
+    %& $[10.09,12.86]$
+    %& $[14.19,19.0]$
+    \\
+    & \celll{$\phantom{[}2.00]$}
+    & \celll{$\phantom{[}4.30]$}
+    & \celll{$\phantom{[}8.68]$}
+    & \celll{$\phantom{[}12.86]$}
+    & \celll{$\phantom{[}19.00]$}
+    %& $[\pz2.00,\pz4.30]$
+    %& $[\pz4.30,\pz8.68]$
+    %& $[10.09,12.86]$
+    %& $[14.19,19.0]$
+    \\ \midrule
+    Norm.~channel \BF      &   0.288 &   0.096 &   0.094 &   0.075 &   0.004 \\  % x10e-8
+    Tracking eff.          &   0.080 &   0.020 &   0.024 &   0.012 &   0.000 \\  % x10e-8
+    Reweighting            &   0.106 &   0.006 &   0.034 &   0.006 &   0.000 \\  % x10e-8
+    PID eff.               &   0.060 &   0.057 &   0.041 &   0.044 &   0.002 \\  % x10e-8
+    {\tt IsMuon} and {\tt PIDmu} eff. &   0.055 &   0.020 &   0.018 &   0.010 &   0.000 \\  % x10e-8
+    Sig.~mass model        &   0.138 &   0.052 &   0.052 &   0.039 &   0.002 \\  % x10e-8
+    Bkg.~mass model        &   0.154 &   0.038 &   0.052 &   0.093 &   0.003 \\  % x10e-8
+    \qsq model             &   0.087 &   0.047 &   0.027 &   0.094 &   0.002 \\  % x10e-8
+    $K^+\pipi$ composition &   0.175 &   0.009 &   0.010 &   0.061 &   0.004 \\  % x10e-8
+    $\theta_{K_1}$         &   0.110 &   0.036 &   0.062 &   0.003 &   0.001 \\  % x10e-8
+    Rel.~eff.              &   0.014 &   0.005 &   0.003 &   0.003 &   0.000 \\  % x10e-8
+    Peaking bkg.           &   0.000 &   0.000 &   0.126 &   0.000 &   0.000 \\  % x10e-8
+    Trigger                &   0.152 &   0.052 &   0.042 &   0.011 &   0.000 \\  % x10e-8
+    \littlerule
+    $\Sigma$ & 0.473 & 0.154 & 0.201 & 0.175 & 0.007 \\
+    \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+%\scalebox{0.8}{
+  %{\setlength{\tabcolsep}{0.25em}
 
 
 

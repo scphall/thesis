@@ -50,7 +50,7 @@ Candidate \phii mesons are reconstructed from the decay mode \phitokk, and are o
 invariant \kk mass, $m_\kk$, is within $40\mev$ of the known \phii mass~\cite{PDG2012}
 --- this is extremely loose in order to be able to constrain background components.
 The \Ds meson is only reconstructed from the Cabibbo favoured decay \dstokkpi, and the candidate
-mass, $m_\kpipi$, must fall within $25\mev$ of the nominal \Ds mass~\cite{PDG2012} and lie
+mass, $m_\kkpi$, must fall within $25\mev$ of the nominal \Ds mass~\cite{PDG2012} and lie
 downstream of the \Bp vertex.
 All tracks forming the candidate particles must fulfill requirements on the transverse momentum,
 $\pt>100\mev$, and tracks from the \Ds(\phii), $p>1(2)\gev$.
@@ -178,6 +178,27 @@ $\dllkpi>10$ or $\dllkp>0$, respectively.
 
 
 
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{tgen_dveto}
+    \includegraphics[width=0.48\textwidth]{tgen_lcveto}
+    \caption{\small
+      Simple phasespace simulations at generator level of the decay \decay{\Ds}{\kkpi}, along side
+      (left) \decay{\Dp}{\kpipiss}, and
+      (right) \decay{\Lc}{\pkpi},
+      The distributions of the \Dp and \Lc decays, where one particle has been misidentified as a
+      \Kp are also shown.
+      Distributions after the misidentification are shown with a dotted outline, and sit under the
+      \Ds mass peak.
+      Each peak has the same integral.
+    }
+    \label{}
+  \end{center}
+\end{figure}
+
+
+
+
 %These peaking backgrounds do not necessarily result in a longitudilnally polarized \phii.
 %They are however, irriducible, and must be accounted for in the fit, this is described later in
 %\Sec{sec:dsphi:fit}.
@@ -278,6 +299,33 @@ $c$ is a constant scaled such that
 $N_\mathrm{c}\big(\bstodspi\big)\cdot
 N_\mathrm{c}\big(\bstojpsiphi\big)=N_\mathrm{c}\big(\btodsphi\big)$ with no BDT cut.
 The optimization procedure results in the optimal cut as $\bdt_{\Ds}\times\bdt_\phi>0.57$.
+
+
+
+Invariant mass distributions of
+selected candidate \Ds and \phii mesons are shown in \Fig{fig:dsphi:mesons}.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{spectrum_ds}
+    \includegraphics[width=0.48\textwidth]{spectrum_phi}
+    \caption{\small
+      Invariant mass distributions of the candidate
+      (left) \decay{\Ds}{\kkpi}, and
+      (right) \decay{\phii}{\kk} candidates.
+      The \kkpi spectrum shows a range of masses, where the vertical black lines indicate the
+      boundaries of the mass cut $|m_{\kkpi}-m_{\Ds}^\pdg|<25\mev$, where the shaded candidates are
+      those that are accepted.
+      On the far left of this distribution, a mass peak from \decay{\Dp}{\kkpi} is also visible.
+      The \decay{\phi}{\kk} spectrum is shown in the range $|m_{\kk}-m_{\phi}^\pdg|<40\mev$,
+      and the signal region is indicated by the vertical black lines and shaded data.
+    }
+    \label{fig:dsphi:mesons}
+  \end{center}
+\end{figure}
+
+
+
 
 
 
