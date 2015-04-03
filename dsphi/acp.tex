@@ -2,18 +2,19 @@
 {Direct $\boldsymbol{C\!P}$ asymmetry}
 \label{sec:dsphi:acp}
 
-The value of \acp for the decay \btodsphi is calculated using
+The \CP asymmetry is defined in \Eq{eq:dsphi:acpdef}, but this must be modified to account for
+background in the sample:
 \begin{equation}
   \acp\big(\btodsphi\big)=
-  \frac{N_--N_+}{N_-+N_+-N_\mathrm{bkg}},
+  \frac{N(\decay{\Bm}{\Dsm\phi})-N(\btodsphi)}
+  {N(\decay{\Bm}{\Dsm\phi})+N(\btodsphi)-N_\mathrm{bkg}}.
   \label{eq:dsphi:acp}
 \end{equation}
-where $N_-$ and $N_+$ are defined as the signal yields from the charge specific decays \btodsphi
-and \decay{\Bm}{\Dsm\phi}, respectively.
-The term $N_\mathrm{bkg}$ denotes the amount of background contaminating the signal.
+Here, the yields, $N$, refer to the decay with the indicated charge, and
+$N_\mathrm{bkg}$ denotes the amount of background contaminating the signal.
 
-Values of $N_+$, $N_-$ and $N_\mathrm{bkg}$ are determined by defining a signal region, which
-extends $\pm2\stdev$ either side of the mean \Bp mass in region \rA, where $\mu=5283\mev$ and
+Values of $N$ and $N_\mathrm{bkg}$ are determined by defining a signal region, which
+extends $2\stdev$ either side of the mean \Bp mass in region \rA, where $\mu=5283\mev$ and
 $\sigma=13.2\mev$.
 In this region, the number of \Bp and \Bm candidates are $N_+=3$ and $N_-=3$.
 The background prediction is determined by integrating across this region, which results in

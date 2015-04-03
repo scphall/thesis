@@ -1,4 +1,3 @@
-%&spell
 %The \lhcb collaboration has published many interesting results involving a \decay{b}{s\mumu} FCNC,
 %many of these involve the decay
 %\decay{B}{K\mumu}~\cite{LHCb-PAPER-2012-024,LHCb-PAPER-2012-021,LHCb-PAPER-2012-011}.
@@ -34,9 +33,9 @@
 %result from the decay of numerous strange resonances.
 
 The decays \btokpipimumu and \btophikmumu both proceed via \decay{\bquark}{\squark\mumu} FCNC
-transitions, which are forbidden at tree level in the SM.
-Therefore, these processes are potentially sensitive to NP contributing
-to the decay amplitude as virtual particles in loops.
+transitions, which are forbidden at tree level in the \sm.
+Therefore, these processes are potentially sensitive to virtual \np particles contributing
+to the decay amplitude in loops.
 %Figure~\ref{fig:hhh:feyn} shows the pengiun diagrams which propagate these decays in the SM.
 
 
@@ -60,16 +59,16 @@ to the decay amplitude as virtual particles in loops.
   \end{center}
 \end{figure}
 
-The effective Hamiltonian for $\decay{b}{s\ell^+\ell^-}$ FCNCs is given by:
+The effective Hamiltonian for $\decay{b}{s\ell^+\ell^-}$ FCNCs is given by
 \begin{equation}
   \Ham{eff} = -4\frac{G_F}{\sqrt{2}}\Vconj{ts}\V{tb}\frac{e^2}{16\pi^2}
   \sum_{i=1}^{10}\big[C_i(\Lambda)\mathcal{O}_i(\Lambda)
-    +C_i^\prime(\Lambda)\mathcal{O}_i^\prime(\Lambda)\big]
+    +C_i^\prime(\Lambda)\mathcal{O}_i^\prime(\Lambda)\big],
 \end{equation}
 as in \Eq{eq:th:opeham}. %, where the coefficients are known as Wilson coefficients, which
 %correspond to the Wilson operators $\mathcal{O}_{1-10}$.
-The operators $\mathcal{O}_{1-6}$ are sensitive to long distance contributions such as \ccbar
-loops.
+The operators \Op{1-6} encapsulate long distance contributions, such as \ccbar
+loops, and \Op{8} is the gluonic penguin operator.
 Operators which are particularly sensitive to NP contributions in \decay{b}{s\mumu} transitions are
 \begin{align}
   \Op{7\pz} &= \frac{m_b}{e}\big(\bar\squark\sigma_{\mu\nu}P_Rb\big)F^{\mu\nu}
@@ -83,14 +82,13 @@ Operators which are particularly sensitive to NP contributions in \decay{b}{s\mu
   &\Op{9\pz}^\prime &= \big(\bar s\gamma_\mu P_Rb\big)\big(\bar\ell\gamma^\mu\ell\big)
   \nonumber\\
   \Op{10} &= \big(\bar s\gamma_\mu P_Lb\big)\big(\bar\ell\gamma^\mu\gamma_5\ell\big)
-  &\Op{10}^\prime &= \big(\bar s\gamma_\mu P_Rb\big)\big(\bar\ell\gamma^\mu\gamma_5\ell\big)
-  \phantom{\frac{1}{1}}
+  &\Op{10}^\prime &= \big(\bar s\gamma_\mu P_Rb\big)\big(\bar\ell\gamma^\mu\gamma_5\ell\big).
+  %\phantom{\frac{1}{1}}
   %\\
   %\mathcal{O}_{S} &= \frac{m_b}{m_{B_s}}\big(\bar s\gamma_\mu P_Rb\big)\big(\bar\ell\ell\big)
   %\\
   %\mathcal{O}_{P} &= \frac{m_b}{m_{B_s}}\big(\bar s\gamma_\mu P_Rb\big)\big(\bar\ell\gamma_5\ell\big)
 \end{align}
-where $P_{L,R}$ are the left and right projection operators.
 The operators \Op{7} and \Op{9} describe the emission of a photon or $Z$ from a penguin loop,
 and \Op{10} corresponds to a box type diagram with \Wp; these are shown in \Fig{fig:hhh:loops}.
 Primed operators are the suppressed helicity, whose contributions are vanishingly small in the SM.

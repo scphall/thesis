@@ -39,38 +39,55 @@
 %Min one track \& two...
 
 
-The data sample used in this analysis is the
-$1\invfb$ collected by the \lhcb detector in 2011 from $pp$
-collisions with a centre-of-mass energy of $7\tev$.
-Events are selected if they fulfil {\tt L0Hadron TOS} or {\tt L0Global TIS}, trigger requirements.
+The data sample used in this analysis amounts to
+$1\invfb$ of $pp$ collisions at $7\tev$ collected by the \lhcb detector in 2011.
+Events are selected by the trigger at hardware level if they fulfill the requirements of the \lone
+hadron trigger, or any track in the event fulfills any \lone trigger line reqiurement (\tis).
 Further trigger requirements are applied at the \hlttwo level, where events are required to pass at
-least one of the hadronic topological triggers (see \Sec{sec:lhcb:trig} for more details) with {\tt TOS}.
+least one of the hadronic topological triggers (see \Sec{sec:lhcb:trig} for more details) with
+\tos.
 
-Candidate \phii mesons are reconstructed from the decay mode \phitokk, and are only accepted if the
-invariant \kk mass, $m_\kk$, is within $40\mev$ of the known \phii mass~\cite{PDG2012}
---- this is extremely loose in order to be able to constrain background components.
-The \Ds meson is only reconstructed from the Cabibbo favoured decay \dstokkpi, and the candidate
-mass, $m_\kkpi$, must fall within $25\mev$ of the nominal \Ds mass~\cite{PDG2012} and lie
-downstream of the \Bp vertex.
-All tracks forming the candidate particles must fulfill requirements on the transverse momentum,
+The \Ds meson is only reconstructed from the Cabibbo favoured decay \dstokkpi,
+which has a branching fraction of $(5.39\pm0.21)\e{-2}$.
+Furthermore, the mass of the reconstructed particle must fall within $25\mev$ of
+$m_{\Ds}^\pdg=1968.30\pm0.11\mev$; where the superscript \pdg indicates the nominal mass of the
+indicated particle from \ref{PDG2012}.
+The \Ds meson decays weakly, and therefore has a non-zero lifetime,
+$\tau_{\Ds}=(5.00\pm0.07)\e{-13}$, and thus an extremely narrow width, so the value of $25\mev$
+is primarily to account for detector resolution effects.
+In order for the candidate to have the correct decay topology, it is also required that the \Ds
+vertex lies downstream of the \Bp decay vertex.
+
+Candidate \phii mesons are reconstructed from the decay mode \phitokk, where
+$\BF(\phitokk)=(0.498\pm0.005)$ and are accepted if the
+invariant \kk mass, $\mass{\kk}$, is within $40\mev$ of
+$\mass{\phi}^\pdg=(1019.461\pm0.019\mev$~\cite{PDG2012}.
+The \phii meson decays strongly, and therefore has a narrow width,
+$\Gamma_\phi=(4.266\pm0.031)\mev$, and the detector resolution is better for the \phii than the \Ds
+because of its mass and that it has zero lifetime.
+Therefore, a mass window of $40\mev$ is extremely wide; but further mass constraints of the \phii
+are applied in the signal yield fit, such that the signal region is defined by a window that
+extends only $20\mev$ from $\mass{\phi}^\pdg$.
+
+All tracks forming the candidate mesons must fulfill requirements on the transverse momentum,
 $\pt>100\mev$, and tracks from the \Ds(\phii), $p>1(2)\gev$.
 Geometrical constraints are also placed on the tracks.
 The \chisq per degree of freedom of the track fit, $\chisqtrk/\ndof$, must be less than four, and
 $\min\left(\chisqip\right)>4$.
 The variable \chisqip is defined as the increase in \chisqvtx when the signal track is combined
 with the PV; the $\min\left(\chisqip\right)$ is the minimum \chisqip with respect to all PVs.
-Loose PID requirements are also placed on the tracks in order to reduce the retention rate of the
-stripping line.
+Loose PID requirements are also placed on all tracks, and further PID constraints are applied in
+the \bdt, which is detailed later.
 
 The \Bp vertex fit is performed by constraining the mass of the \Ds to its known
 mass~\cite{PDG2012}, and the resulting vertex fit must have a \chisqvtx per degree of freedom of
 less than ten.
-The angle between the vector formed by the PV and \Bp decay vertex and the vector formed by the
-momentum of all the daughter tracks is the direction angle, \thetadir.
-Were the resolution of the \lhcb detector to be perfect, a real decay would have $\cos\thetadir=1$,
-for this analysis a constraint of $\cos\thetadir>0.999$ is applied.
-In order to remove prompt background from the PV, the lifetime of the \Bp, $\tau_{\Bp}$, must be
-greater than $0.2\ps$.
+A requirement of $\cos\thetadir>0.999$ must also be met.
+The angle \thetadir is defined as the angle between the momentum vector of the \Bp candidate and
+the vector formed by the PV and decay vertex of the \Bp.
+Were the resolution of the \lhcb detector to be perfect, a real decay would have $\cos\thetadir=1$.
+Prompt background from the PV is suppressed by requiring that the lifetime of the \Bp,
+$\tau_{\Bp}$, is greater than $0.2\ps$.
 Cuts applied in the stripping selection are summarized in \Tab{tab:dsphi:sel}.
 
 
@@ -83,7 +100,7 @@ Cuts applied in the stripping selection are summarized in \Tab{tab:dsphi:sel}.
 %when it is omitted.
 %Very loose PID requirements are also placed on the tracks, this is more to reduce the rate of the
 %stripping line that to identify pions and kaons, this is done later in the selection process.
-%
+
 %The \Ds and \phii are also subject to requirements on the \chisq of the vertex separation,
 %\chisqvs, which is tighter for the \Ds because of its finite lifetime.
 %Full stripping requirements are given in \Tab{tab:dsphi:sel}.
@@ -159,46 +176,6 @@ Cuts applied in the stripping selection are summarized in \Tab{tab:dsphi:sel}.
 
 
 
-
-
-There is potential for cross-feed from the decay \decay{\Dp}{\Km\pip\pip} and
-the signal \Ds final state if one of the \pip{s} is misidentified as a \Kp.
-The resulting invariant \kkpi combination --- with one kaon being a misidentified pion --- may fall
-within $25\mev$ of the nominal \Ds mass.
-%This is possible because the \Ds is approximately $100\mev$ heavier than the \Dp.
-Similarly, there is potential contamination from the decay \decay{\Lc}{p\Km\pip}.
-These two modes of cross-feeds are suppressed by a series of conditions.
-Firstly, if the mass of the \kk pair from the \Ds decay is within $10\mev$ of the \phii mass, then
-the candidate is accepted as coming from the decay \decay{\Ds}{\kkpi}.
-Otherwise, a track is assigned the mass of a pion or proton, so as the new object is consistent
-with a \kkpi or $p\Km\pip$, respectively.
-If the invariant mass of this newly reconstructed object falls within the nominal mass of the \Dp
-or \Lc, then the ambiguous (swapped) track is subject to the stringent PID requirements of
-$\dllkpi>10$ or $\dllkp>0$, respectively.
-
-
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.48\textwidth]{tgen_dveto}
-    \includegraphics[width=0.48\textwidth]{tgen_lcveto}
-    \caption{\small
-      Simple phasespace simulations at generator level of the decay \decay{\Ds}{\kkpi}, along side
-      (left) \decay{\Dp}{\kpipiss}, and
-      (right) \decay{\Lc}{\pkpi},
-      The distributions of the \Dp and \Lc decays, where one particle has been misidentified as a
-      \Kp are also shown.
-      Distributions after the misidentification are shown with a dotted outline, and sit under the
-      \Ds mass peak.
-      Each peak has the same integral.
-    }
-    \label{}
-  \end{center}
-\end{figure}
-
-
-
-
 %These peaking backgrounds do not necessarily result in a longitudilnally polarized \phii.
 %They are however, irriducible, and must be accounted for in the fit, this is described later in
 %\Sec{sec:dsphi:fit}.
@@ -222,11 +199,15 @@ $\dllkpi>10$ or $\dllkp>0$, respectively.
 
 
 
-\subsection{Boosted Decision Tree}
-Separation of \Ds and \phii candidates from the combinatorial background is done using a pair of
-BDTs, one each to identify the decays \decay{\Ds}{\kkpi} and \decay{\phi}{\kk}.
-The technique of using two different BDTs is also used in \decay{B}{DD} decays in
-\Ref{LHCb-CONF-2012-009}.
+\subsection{Suppression of combinatorial background}
+A pair of \bdt{s} are employed to
+separate \dstokkpi and \phitokk candidates from combinatorial background, one each to identify the
+decays \dstokkpi and \phitokk, with topologies consistent with coming from a parent $B$-meson.
+The methodology used to train each \bdt is the same.
+Both are trained using the bagging algorithm using the same set of input variables.
+This technique of using a \bdt to identify each meson is also used in
+\Ref{LHCb-CONF-2012-009}, which measures branching fraction ratios of various \decay{B}{DD} decays.
+
 %Each BDT was trained using the bagging method, as described in \Sec{sec:bdt:bag}.
 %The signal and background data used to train these BDTs came entirely from data.
 %Signal samples came from the decays $\decay{\Bbar^0_{s}{\Ds\pim}$ and $\decay{\Bs}{\jpsi\phi}$
@@ -234,20 +215,29 @@ The technique of using two different BDTs is also used in \decay{B}{DD} decays i
 %Background samples were taken from the sideband distributions of the same data.
 %The BDT technique used in this analysis, also used in \Ref{LHCb-CONF-2012-009}, is different to
 %other analyses in this thesis in that a BDT is trained for each the \Ds and $\phi$.
-The boosting technique used here was bagging, which --- as described in \Sec{sec:bdt:bag} --- gives
-a response in the range $0<\mathrm{BDT}<1$.
-Cutting on the product of the two BDT responses improves the performance, and therefore the cut is
-$\bdt_{\Ds}\times\bdt_\phi>X$, as opposed to $\bdt_{\Ds}>X_1$ and $\bdt_\phi>X_2$.
 
-The BDT used to separate background from the signal \decay{\Ds}{\kkpi} decays was trained using
-a signal sample of \decay{\Bs}{\Dsm\pip} sWeighted~\cite{splot} data, and background from the \Dsm
-sidebands.
-This BDT uses an unusually large array of training variables, given in \Tab{tab:dsphi:vars},
-which include PID, and track quality variables.
-In total, five variables are input for the parent \Ds and $\phi$, and 23 properties for each
-daughter track.
-Similarly for the \decay{\phi}{\kk} BDT, the signal sample was \decay{\Bs}{\jpsi\phi}, where
-\jpsitomumu.
+The \bdt trained to identify \dstokkpi was trained using a pure sample of \dstokkpi decays from the
+high statistics channel \decay{\Bsb}{\Dsp\pim}.
+The signal sample was background subtracted using the sWeighting technique~\cite{splot}, and the
+background sample is taken from the mass sidebands of the \Ds meson.
+Similarly, for the \phii \bdt, the signal sample was sWeighted and the background comes from the
+\phii mass sidebands; but the sample is taken from the high statistics \bstojpsiphi mode.
+
+Considering that each \bdt was trained on data, variables that are poorly described in simulation
+can be used in the training.
+In total, there are five kinematic and geometric training variables for the parent meson.
+For the daughter tracks there are a total of 23 variables, including kinematic, geometric and \pid
+variables.
+A summary of all training variables is given in \Tab{tab:dsphi:vars}.
+
+
+%The BDT used to separate background from the signal \decay{\Ds}{\kkpi} decays was trained using
+%a signal sample of \decay{\Bs}{\Dsm\pip} sWeighted~\cite{splot} data, and background from the \Dsm
+%sidebands.
+%This BDT uses an unusually large array of training variables, given in \Tab{tab:dsphi:vars},
+%which include PID, and track quality variables.
+
+
 
 
 \begin{table}
@@ -279,31 +269,131 @@ Similarly for the \decay{\phi}{\kk} BDT, the signal sample was \decay{\Bs}{\jpsi
 \end{table}
 
 
-The cut for the BDT was optimized using the metric $S/\sqrt{S+B}$,
+The cut for the \bdt was optimized using the metric $S/\sqrt{S+B}$,
 In this case, the number of signal events, $S$, was estimated from the yield from the decay
 \decay{\Bs}{\Dsm\pip}, according to:
 \begin{equation}
-  S = \frac{ \BF\big(\btodsphi\big) }{ \BF\big(\bstodspi\big) }
-  \frac{ \eff{geo}\big(\btodsphi\big) }{ \eff{geo}\big(\bstodspi\big) }
+  S = \frac{ \BF\big(\btodsphi\big) }{ \BF\big(\Bsb\!\to\Ds\pim\big) }
+  \frac{ \eff{geo}\big(\btodsphi\big) }{ \eff{geo}\big(\Bsb\!\to\Ds\pim\big) }
   \frac{f_d}{f_s}
-  N\big(\bstodspi\big).
+  N\big(\Bsb\!\to\Ds\pim\big),
 \end{equation}
-Here, \eff{geo} is the geometric efficiency of the \lhcb detector, and $f_s/f_d$ quantifies
-fraction of \Bs mesons produced relative to \Bd mesons.
-The background yield is estimated as:
+$f_s/f_d$ quantifies the fraction of \Bs mesons produced relative to \Bd mesons.
+The geometric efficiency, \eff{geo}, is the efficiency introduced by the shape of the \lhcb, and
+the necessity that all daughter particles must travel through the detector.
+Background yield for a given cut is estimated as:
 \begin{equation}
   B = c\cdot N_\mathrm{c}\big(\bstodspi\big)\cdot N_\mathrm{c}\big(\bstojpsiphi\big),
 \end{equation}
-where $N_\mathrm{c}$ indicates the yield of combinatoric background for a given decay, and
-$c$ is a constant scaled such that
-$N_\mathrm{c}\big(\bstodspi\big)\cdot
-N_\mathrm{c}\big(\bstojpsiphi\big)=N_\mathrm{c}\big(\btodsphi\big)$ with no BDT cut.
-The optimization procedure results in the optimal cut as $\bdt_{\Ds}\times\bdt_\phi>0.57$.
+where $N_\mathrm{c}$ indicates the yield of the combinatoric background for the indicated decay,
+and $c$ is a constant scaled such that $N_\mathrm{c}\big(\bstodspi\big)\cdot
+N_\mathrm{c}\big(\bstojpsiphi\big)=N_\mathrm{c}\big(\btodsphi\big)$ with no \bdt cut.
+The optimization procedure results in the optimal cut as $\bdt_{\Ds}\times\bdt_\phi>0.57$, as is
+shown in \Fig{fig:dsphi:opt}.
+
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{dsphi_opt}
+    \caption{\small
+      Value of the figure of merit $S/\sqrt{S+B}$ is shown as a function of the \bdt response,
+      $\bdt_{\Ds}\times\bdt_{\phi}$.
+      The maximum value of the figure of merit is 0.57, which is chosen as the final \bdt cut.
+    }
+    \label{fig:dsphi:opt}
+  \end{center}
+\end{figure}
+
+
+%The boosting technique used here was bagging, which --- as described in \Sec{sec:bdt:bag} --- gives
+%a response in the range $0<\mathrm{BDT}<1$.
+%Cutting on the product of the two BDT responses improves the performance, and therefore the cut is
+%$\bdt_{\Ds}\times\bdt_\phi>X$, as opposed to $\bdt_{\Ds}>X_1$ and $\bdt_\phi>X_2$.
+
+
+
+\subsection{Vetoes of \Dp and \Lc decays}
+There are few backgrounds from real particles that could contaminate the final selection after the
+\bdt selection.
+The decay topology of \dstokkpi is very similar to the other weak decays \decay{\Dp}{\kpipiss} and
+\decay{\Lc}{\pkpi}.
+These have relatively large branching fractions~\cite{PDG2012}:
+\begin{align}
+  \BF(\decay{\Dp}{\kpipiss}) &= (9.13\pm0.19)\e{-2} \\
+  \BF(\decay{\Lc}{\pkpi}) &= (5.0\pm1.3)\e{-2},
+\end{align}
+and if the daughter \pip(\proton) from the \Dp(\Lc) decay is misidentified as a \Kp.
+%the resulting invariant mass combination can fall within $25\mev$ of \mass{\Ds}.
+Henceforth, the notation $h_i$ will be used to denote a particle assigned the mass of an $h$ which
+has been identified as an $i$.
+Simple generator level simulations of phasespace illustrate that
+the mass combination of $\Kp_\pi\Km\pip$ and $\Kp_p\Km\pip$ from a real \Dp or \Lc, respectively,
+can fall within $25\mev$ of $\mass{\Ds}^\pdg$; as shown in \Fig{fig:dsphi:veto}.
+
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{tgen_dveto}
+    \includegraphics[width=0.48\textwidth]{tgen_lcveto}
+    \caption{\small
+      Simple phasespace simulations at generator level of the decay \decay{\Ds}{\kkpi}, along side
+      (left) \decay{\Dp}{\kpipiss}, and
+      (right) \decay{\Lc}{\pkpi},
+      The distributions of the \Dp and \Lc decays, where one particle has been misidentified as a
+      \Kp are also shown.
+      Distributions after the misidentification are shown with a dotted outline, and sit under the
+      \Ds mass peak.
+      Magnitudes of each peak are meaningless, each having the same integral.
+    }
+    \label{fig:dsphi:veto}
+  \end{center}
+\end{figure}
+
+The cross-feed from the \Dp and \Lc is suppressed by vetoes, whereby tight \pid constraints are
+applied if the \dstokkpi candidate could have come from either a \Dp or \Lc.
+Firstly, if the invariant mass of the \kk pair is lies within $10\mev$ of the nominal \phii mass
+then it is highly likely that it is a real \Ds decaying via \decay{\Ds}{\phi\pip}, which has a
+branching fraction of $(4.5\pm0.4)\e{-2}$ and therefore the \kkpi combination is immediately
+accepted as a \Ds candidate.
+Secondly, if the invariant mass of the $p_K\Km\pip(\Km\pip_K\pip)$ object falls within $25\mev$ of
+the known \Dp(\Lc) mass the ambiguous particle is subject to harsh \pid requirements, such that:
+$\dllkpi>10(\dllkp>0$).
+These vetoes are highly, $\approx95\pc$, efficient.
+
+
+
+%There is potential for cross-feed from the decay \decay{\Dp}{\kpipiss} and
+%the signal \Ds final state if one of the \pip{s} is misidentified as a \Kp.
+%The resulting invariant \kkpi combination --- with one kaon being a misidentified pion --- may fall
+%within $25\mev$ of the nominal \Ds mass.
+%%This is possible because the \Ds is approximately $100\mev$ heavier than the \Dp.
+%Similarly, there is potential contamination from the decay \decay{\Lc}{p\Km\pip}.
+%These two modes of cross-feeds are suppressed by a series of conditions.
+%Firstly, if the mass of the \kk pair from the \Ds decay is within $10\mev$ of the \phii mass, then
+%the candidate is accepted as coming from the decay \decay{\Ds}{\kkpi}.
+%Otherwise, a track is assigned the mass of a pion or proton, so as the new object is consistent
+%with a \kkpi or $p\Km\pip$, respectively.
+%If the invariant mass of this newly reconstructed object falls within the nominal mass of the \Dp
+%or \Lc, then the ambiguous (swapped) track is subject to the stringent PID requirements of
+%$\dllkpi>10$ or $\dllkp>0$, respectively.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 Invariant mass distributions of
-selected candidate \Ds and \phii mesons are shown in \Fig{fig:dsphi:mesons}.
+selected candidate \Ds and \phii mesons after the selection are shown in \Fig{fig:dsphi:mesons}.
 
 \begin{figure}
   \begin{center}
@@ -323,105 +413,4 @@ selected candidate \Ds and \phii mesons are shown in \Fig{fig:dsphi:mesons}.
     \label{fig:dsphi:mesons}
   \end{center}
 \end{figure}
-
-
-
-
-
-
-%\subsection{Fit regions}
-%\label{sec:dsphi:hel}
-%The final state particles in this analysis of the decay \btodsphi are $\kkpi\kk$, given the mass
-%cuts on the \Ds and \phii candidates, there are no sources of background which peak at the \Bp
-%mass.
-%However, there are backgrounds from genuine $B$-hadron decays in which a particle --- or multiple
-%particles --- are not reconstructed.
-%These backgrounds form below the mass of the \Bp.
-%After the selection requirements
-%%There are no backgrounds which contribute to a peaking component directly below the \Bp mass for
-%%the decay \btodsphi.
-%%However, on top of the combinatorial background, the low-mass side has a number of components which
-%%result from excited \Dssp or \Kstarz.
-%The most significant of these are the decays\footnote{
-  %For these decays the \Kstarz refers to the $K^*(892)^0$ meson.
-%}
-%\btodsstrphi, \bstodskstrk and \bstodsstrkstrk.
-%%which all contain at least one final state particle that is not reconstructed.
-
-%The decay \bstodskstrk has never been observed, but given that the branching fraction of the decay
-%$\decay{\Bd}{\Dm\Kstarzb\Kp}$ is $(8.8\pm1.9)\e{-4}$~\cite{PDG2012}, it should be in the
-%\btodsphi selection.
-%There is no contribution from the \decay{\Bd}{\Dm\Kstarzb\Kp} mode, because the loss in mass from
-%the pion means that it peaks too low.
-%As well as this, the decay \bstodsstrkstrk was also expected to be present in the sample, though at
-%lower mass.
-
-
-
-%A \Bp meson has quantum numbers $J^P=0^-$, and the \Ds and $\phi$ mesons have
-%quantum numbers $0^-$ and $1^-$ respectively.
-%Therefore the decay \btodsphi is a transition of a pseudoscalar to a pseudoscalar and a vector
-%meson.
-%In order for angular momentum to be conserved, the vector particle must be produced in the $j=0$
-%state, where the spin is orthogonal to the particle's momentum.
-%The $\phi$ is the vector meson in the decay \btodsphi, in its final state it is lonitudinally
-%polarized, and its daughter kaons have an angular distribution proportional to $\cos^2\thetahel$;
-%where \thetahel is the helicity angle, defined as the angle between the \Kp and the \Bp in the rest frame of the \Ds.
-%This fact is used to further separate the signal decay \btodsphi from other backgrounds.
-
-
-%It is possible to remove about $93\pc$ of background by requiring that $|\cos\thetahel|>0.4$,
-%this is the same cut value as used in \Ref{LHCb-PAPER-2011-008}.
-%Therefore, two regions are defined in terms of $\cos\thetahel$, and both are used in a simultaneous
-%fit.
-%This also allows the combinatorial and peaking backgrounds to be separated from the signal because
-%these do not necessarily have a longitudilnally polarized \phii.
-
-%%The signal region for the \phii candidate is defined to be within $20\mev$ of $m_\phii^\pdg$.
-%%A sideband region is defined to be $20<m_
-
-%%These peaking backgournds, and the combinatorial background,
-%%do not have to have a $\phi$ meson in a longitudilnally polarized.
-%%Therefore, the $\cos\thetahel$ distribution should be flat for all backgrounds.
-
-%%can be used to separate the signal decay from backgrounds.
-
-%%In order to maximize the signal yield, the full selected dataset was separated into four regions
-%%defined by the helicity angle and the invariant mass of the $\phi$ candidate, these regions are
-%%shown in \Table{tab:dsphi:hel}.
-
-%Fit regions are further split according to the invariant mass of the \phii candidate.
-%A signal region is defined for \phitokk candidates with a mass within $20\mev$ of the nominal \phii
-%mass, and a sideband region is defined for candidates with a mass in the range
-%$20<m_\phi^\pdg<40\mev$.
-
-%The resulting fit regions --- defined by \thetahel and $m_{\kk}$ --- have a signal region, \rA,
-%containing most of the signal, and a purely background region, \rD.
-%By performing a simultaneous fit to the four regions, which are defined explicitly in
-%\Tab{tab:dsphi:hel}, there is a better grasp on all the backgrounds.
-
-%\begin{table}
-  %\caption[Fit regions]
-  %{\small
-    %Fit regions used to search for the decay \btodsphi.
-    %Approximately $89\,\%$ was expected to be in region \rA.
-  %}
-  %\label{tab:dsphi:hel}
-  %\begin{center}
-    %\begin{tabular}{cccc}
-      %\toprule
-      %&&\multicolumn{2}{c}{$|m_{KK}-m_\phi^\pdg|$ (MeV)}\\
-      %&&$\in[0,20]$&$\in[20,40]$ \\
-      %\midrule
-      %\multirow{2}{*}{$|\cos\thetahel|$}
-      %&$>0.4$ & \rA & \rB \\
-      %&$<0.4$ & \rC & \rD \\
-      %\bottomrule
-    %\end{tabular}
-  %\end{center}
-%\end{table}
-
-
-
-
 
