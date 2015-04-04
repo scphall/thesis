@@ -85,7 +85,7 @@ are seen to be in agreement, this is shown in \Fig{fig:kpipi:bdt}.
 
 Once the simulation has been corrected, the total efficiency, \eff{tot} was calculated for each
 normalization and signal mode using simulated events.
-The value for \eff{tot} is calculated to be $\eff{geo}\eff{reco\&sel}\eff{trig}$, where:
+The value for \eff{tot} is calculated to be $\eff{geo}\times\eff{reco\&sel}\times\eff{trig}$, where:
 \eff{geo} is the geometric efficiency;
 \eff{reco\&sel} is the reconstruction and selection efficiency;
 \eff{trig} trigger efficiency.
@@ -119,7 +119,8 @@ For the decay \btokpipimumu, an appropriate choice
 was the physics model for \decay{\Bp}{\kone{1270}\mumu}
 from \Ref{Hatanaka:2008gu} and $\thetakone=34^\circ$, because this was assumed to be a dominant
 contribution.
-A phasespace model is used for the signal decay \btophikmumu.
+As there is no available physics model for the decay \btophikmumu, simulated events are produced
+using a phasespace model.
 These models introduce systematic uncertainties, which are discussed in \Sec{ssec:kpipi:syst} and
 \Sec{ssec:phik:syst}.
 

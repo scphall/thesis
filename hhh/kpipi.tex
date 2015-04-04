@@ -64,9 +64,9 @@ The parameters of the tail shared between the Gaussians, and all parameters are 
 the high statistics mode of the cross-check channel \btojpsikpipi.
 The background function is made of en exponential --- to model combinatorial background --- and a
 Gaussian --- to model partially reconstructed candidates --- at low mass.
-The same function is used to fit $m(\jpsi\kpipi)$ the control channel.
+The same function is used to fit \mass{\jpsi\kpipi} the control channel.
 These fits are shown in \Fig{fig:kpipi:norm} and they yield
-$N(\psitwos\Kp)=5128\pm67$ and $N(\jpsi\kpipi)=59\,335\pm343$.
+$N\big(\btopsitwosk\big)=5128\pm67$ and $N\big(\btojpsikpipi\big)=59\,335\pm343$.
 
 \begin{figure}
   \begin{center}
@@ -102,7 +102,7 @@ The signal function was also the sum of Gaussians with power law tails, where th
 all fixed to the values from the fit to the cross-check channel.
 Figure~\ref{fig:kpipi:q2fits} shows the invariant mass distribution for all \btokpipimumu
 candidates for the whole \qsq region and for each bin.
-The total yield of \btokpipimumu candidates is $N(\kpipi\mumu)=367\,^{+24}_{-23}$.
+The total yield of \btokpipimumu candidates is $N(\btokpipimumu)=367\,^{+24}_{-23}$.
 
 \begin{figure}
   \begin{center}
@@ -216,8 +216,8 @@ and the uncertainty is fully correlated between \qsq bins.
   \end{center}
 \end{figure}
 
-Figure~\ref{fig:kpipi:kpipi} subtracted invariant mass distribution's of the \kpipi systems in the
-cases for both decays \btojpsikpipi and \btokpipimumu.
+Figure~\ref{fig:kpipi:kpipi} shows th subtracted invariant mass distribution's of the \kpipi
+systems in the cases for both decays \btojpsikpipi and \btokpipimumu.
 Numerous broad resonances are visible in the distributions.
 The \kpipi system from the resonant \btojpsikpipi decay shows significant, though not dominant,
 contributions from the \kone{1270} state.
@@ -260,8 +260,9 @@ There is also a contribution visible as $m_\kpipi\simeq1750\mev$, similar to res
 
 
 
-\subsection[Systematic uncertainties for the decay \btokpipimumu]
-{Systematic uncertainties for the decay \tmath{\btokpipimumu}}
+\subsection[Systematic uncertainties for the measurement of the branching fraction of the decay
+  \btokpipimumu]{Systematic uncertainties for the measurement of the branching fraction of the
+    decay \tmath{\btokpipimumu}}
 \label{ssec:kpipi:syst}
 
 Systematic uncertainties introduced to the measurement of the differential branching fraction of
@@ -335,8 +336,7 @@ Branching fractions were then evaluated using these new efficiencies, and the ma
 from the nominally calculated value is taken as the systematic uncertainty.
 The same procedure was used to calculate systematics with respect to $\thetakone=-57^\circ$, and
 the values are found to be consistent with $-(34\pm13)^\circ$.
-This led to an assigned uncertainty of
-\bam{1-2\%}.
+This led to an assigned uncertainty of $\approx1.5\pc$.
 
 Charmonium vetoes removes a percentage of signal candidates, that must be accounted for in order to
 calculate the total integrated branching fraction.
@@ -401,34 +401,27 @@ This is done multiple times and leads to an uncertainty of $1.5\,\%$.
     %& $[10.09,12.86]$
     %& $[14.19,19.0]$
     \\ \midrule
-    Norm.~channel \BF      &   0.288 &   0.096 &   0.094 &   0.075 &   0.004 \\  % x10e-8
-    Tracking eff.          &   0.080 &   0.020 &   0.024 &   0.012 &   0.000 \\  % x10e-8
+    $\BF\big(\btopsitwosk\big)$      &   0.288 &   0.096 &   0.094 &   0.075 &   0.004 \\  % x10e-8
+    Tracking efficiency    &   0.080 &   0.020 &   0.024 &   0.012 &   0.000 \\  % x10e-8
     Reweighting            &   0.106 &   0.006 &   0.034 &   0.006 &   0.000 \\  % x10e-8
-    PID eff.               &   0.060 &   0.057 &   0.041 &   0.044 &   0.002 \\  % x10e-8
-    {\tt IsMuon} and {\tt PIDmu} eff. &   0.055 &   0.020 &   0.018 &   0.010 &   0.000 \\  % x10e-8
-    Sig.~mass model        &   0.138 &   0.052 &   0.052 &   0.039 &   0.002 \\  % x10e-8
-    Bkg.~mass model        &   0.154 &   0.038 &   0.052 &   0.093 &   0.003 \\  % x10e-8
+    PID efficiency         &   0.060 &   0.057 &   0.041 &   0.044 &   0.002 \\  % x10e-8
+    {\tt IsMuon} and {\tt PIDmu} efficiencies &   0.055 &   0.020 &   0.018 &   0.010 &   0.000 \\  % x10e-8
+    Signal mass model        &   0.138 &   0.052 &   0.052 &   0.039 &   0.002 \\  % x10e-8
+    Background mass model    &   0.154 &   0.038 &   0.052 &   0.093 &   0.003 \\  % x10e-8
     \qsq model             &   0.087 &   0.047 &   0.027 &   0.094 &   0.002 \\  % x10e-8
     $K^+\pipi$ composition &   0.175 &   0.009 &   0.010 &   0.061 &   0.004 \\  % x10e-8
-    $\theta_{K_1}$         &   0.110 &   0.036 &   0.062 &   0.003 &   0.001 \\  % x10e-8
-    Rel.~eff.              &   0.014 &   0.005 &   0.003 &   0.003 &   0.000 \\  % x10e-8
-    Peaking bkg.           &   0.000 &   0.000 &   0.126 &   0.000 &   0.000 \\  % x10e-8
+    \thetakone             &   0.110 &   0.036 &   0.062 &   0.003 &   0.001 \\  % x10e-8
+    Relative efficiencies  &   0.014 &   0.005 &   0.003 &   0.003 &   0.000 \\  % x10e-8
+    Peaking backgrounds    &   0.000 &   0.000 &   0.126 &   0.000 &   0.000 \\  % x10e-8
     Trigger                &   0.152 &   0.052 &   0.042 &   0.011 &   0.000 \\  % x10e-8
     \littlerule
-    $\Sigma$ & 0.473 & 0.154 & 0.201 & 0.175 & 0.007 \\
+    Total    & 0.473 & 0.154 & 0.201 & 0.175 & 0.007 \\
     \bottomrule
     \end{tabular}
   \end{center}
 \end{table}
 %\scalebox{0.8}{
   %{\setlength{\tabcolsep}{0.25em}
-
-
-
-
-
-
-
 
 
 

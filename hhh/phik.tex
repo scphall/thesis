@@ -32,12 +32,13 @@ and $\big(\jpsitomumu\big)=5.93\pm0.06$~\cite{PDG2012}.
       signal event by.
       There are no events in the $14.18<\qsq<19.00\gevgev$ bin which is present in the
       \btokpipimumu analysis.
+      Light blue shaded regions indicate the vetoed \jpsi and \psitwos regions.
     }
     \label{fig:hhh:phikeff}
   \end{center}
 \end{figure}
 
-Yeilds for both the signal and normalization channels are extracted from unbinned maximum
+Yields for both the signal and normalization channels are extracted from unbinned maximum
 likelihood fits of the invariant mass of the \Bp candidates.
 The signal component for the normalization channel is the sum of two Gaussian functions, with a
 power-law tail on the low mass side; the same function is used for fitting the weighted signal
@@ -115,23 +116,21 @@ fraction of the normalization channel ($\sim33\,\%$).
 \subsection{Systematic uncertainties}
 \label{ssec:phik:syst}
 
-Sytematic uncertainties contributing to the measurement of $\BF(\btophikmumu)$ are determined in
+Systematic uncertainties contributing to the measurement of $\BF(\btophikmumu)$ are determined in
 very similar ways as for the measurement of $\BF(\btokpipimumu)$, as detailed in
 \Sec{ssec:kpipi:syst}.
 The uncertainties introduced by correcting the simulated events by weighting and resampling are
 calculated in the same way as for the decay \btokpipimumu.
 The systematic uncertainty arising from the signal mass model was evaluated by
-subsituting the nominal double Gaussian with a power-law tail, for a single Gaussian with a tail
+substituting the nominal double Gaussian with a power-law tail, for a single Gaussian with a tail
 and recalculating the signal yield.
 Similarly, the systematic from the background model is evaluated by repeating the fit with a first
 order, rather than a second order, polynomial.
+These changes in the fit model lead to to a total systematic uncertainty of $\approx3\pc$.
 The uncertainty on the \qsq distribution in the simulation was estimated by reweighting the from
 the nominal phasespace simulation to the distribution of the \decay{\Bp}{\kone{1270}\mumu} mode.
-\bam{rew 1\%}
-\bam{model 3\%}
-\bam{limited stat on eff 1.5\%}
-\bam{trigger 1.5\%}
-\bam{\qsq 1.5\%}
+Therefore, a photon pole at low \qsq is introduced.
+The total systematic uncertainty evaluates to $\approx1.5\pc$.
 
 The fraction of events that are removed by the charmonium vetoes are determined from simulation.
 But, as discussed, the \qsq distribution that is described by the \btophikmumu simulation was
@@ -146,6 +145,9 @@ data.
 In this way, it was determined that $(2\,^{+10}_{-\pz2})\,\%$ of signal events were removed by the
 charmonium vetoes.
 
+All other systematic uncertainties are evaluated in the same way as in the analysis of the decay
+\btokpipimumu, and are summarized in \Table{tab:phik:syst}.
+
 
 \begin{table}
   \caption{\small
@@ -156,17 +158,18 @@ charmonium vetoes.
   \begin{tabular}{lc}\toprule
     Source & $[\times10^{-8}]$
     \\\midrule
-    Norm.~channel \BF      &   2.688        \\  % x10e-8
+    $\BF\big(\btojpsiphik\big)$  &   2.688        \\  % x10e-8
     \littlerule
-    Tracking eff.          &   0.057        \\  % x10e-8
+    Tracking efficiency        &   0.057        \\  % x10e-8
     Reweighting            &   0.020        \\  % x10e-8
-    PID eff.               &   0.047        \\  % x10e-8
-    {\tt IsMuon} and {\tt PIDmu} eff. &   0.013     \\  % x10e-8
-    Rel.~eff.              &   0.065        \\  % x10e-8
-    Bkg.~mass model        &   0.245        \\  % x10e-8
-    Sig.~mass model        &   0.128        \\  % x10e-8
+    PID resampling               &   0.047        \\  % x10e-8
+    {\tt IsMuon} and {\tt PIDmu} efficiencies &   0.013     \\  % x10e-8
+    Relative efficiency    &   0.065        \\  % x10e-8
+    Background mass model        &   0.245        \\  % x10e-8
+    Signal mass model        &   0.128        \\  % x10e-8
     Trigger                &   0.123        \\  % x10e-8
     \qsq model             &   0.118        \\  % x10e-8
+    %\littlerule
     %Charmonium veto        &   $^{+0.931}_{-0.166}$ \\
     \bottomrule
   \end{tabular}
