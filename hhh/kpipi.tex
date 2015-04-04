@@ -15,11 +15,12 @@ The differential branching fraction for a bin of width $\Delta\qsq$ is
   %\frac{\BF_\mathrm{tot}\left(\btopsitwosk\right)}{\Delta\qsq}
 %\end{equation}
 \begin{multline}
-  \frac{d}{\dqsq}\BF\big(\btokpipimumu\big)
-  \\=
-  \frac{N\big(\kpipi\mumu\big)}{N\big(\psitwos\Kp\big)} \cdot
-  \frac{\varepsilon\big(\psitwos\Kp\big)}{\varepsilon\big(\kpipi\mumu\big)} \cdot
-  \frac{\BF_\mathrm{tot}\big(\btopsitwosk\big)}{\Delta\qsq}
+  \frac{d}{\dqsq}\BF\big(\btokpipimumu\big)=
+  \\
+  \frac{1}{\Delta\qsq} \cdot
+  \frac{N\big(\btokpipimumu\big)}{N\big(\btopsitwosk\big)} \cdot
+  \frac{\varepsilon\big(\btopsitwosk\big)}{\varepsilon\big(\btokpipimumu\big)} \cdot
+  \BF_\mathrm{tot}\big(\btopsitwosk\big)
   \label{eq:kpipi:diffbf}
 \end{multline}
 where,
@@ -34,6 +35,20 @@ where,
 is the yield of the normalization channel.
 Total deficiencies for reconstruction and selection are denoted by \eff{sig} and \eff{norm} for the
 signal and normalization channels respectively.
+The efficiency for each \qsq bin is shown in \Fig{fig:hhh:kpipieff}.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{kpipi_eff}
+    \caption{\small
+      The efficiency of the signal decay \btokpipimumu in bins of \qsq for three different physics
+      models.
+      Differential branching fractions $\dBF(\btokpipimumu)/\dqsq$, are calculated using simulation
+      of $\decay{\Bp}{K_1(1270)^+\mumu}$, however, other models result in similar efficiencies.
+    }
+    \label{fig:hhh:kpipieff}
+  \end{center}
+\end{figure}
 
 The normalization channel was chosen to be \btopsitwosk, where \psitwostojpsipipi and \jpsitomumu,
 which has a total branching fraction of $(1.264 \pm 0.0052)\e{-5}$~\cite{PDG2012}.
@@ -110,6 +125,23 @@ The total yield of \btokpipimumu candidates is $N(\kpipi\mumu)=367\,^{+24}_{-23}
     \label{fig:kpipi:q2fits}
   \end{center}
 \end{figure}
+
+%\begin{figure}[h]
+  %\begin{center}
+    %\includegraphics[width=0.48\textwidth]{q2vk1_eff}
+    %\caption{\small Efficiencies of reconstructed simulated events with respect to generator level
+      %distributions of $\Bu\!\to K_1(1270)^+\mumu$ in bins of \qsq and \mass{\kpipi}.
+      %The shape of the efficiency distribution is dominated by \qsq, and is relatively flat in
+      %the \mass{\kpipi} dimension.
+      %Vetoes \jpsi and \psitwos regions are indicated by black lines.
+    %}
+    %\label{fig:q2vk1eff}
+  %\end{center}
+%\end{figure}
+
+
+
+
 
 Differential branching fractions were calculated with \Eq{eq:kpipi:diffbf} where yields were
 extracted from fits in \Fig{fig:kpipi:q2fits}.

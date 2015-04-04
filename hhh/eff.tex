@@ -7,7 +7,7 @@ efficiencies are correct it is imperitive that the simulated events describe the
 Where there are discrepancies, the simulations must be corrected.
 There are some variables which are known to be poorly described in simulation, particularly track
 multiplicity and the \chisqvtx of the \Bp candidate.
-The effects of these discrepancies are minimalised by reweighting simulated events using
+The effects of these discrepancies are minimized by reweighting simulated events using
 the distributions of \btojpsikpipi.
 Track multiplicity is known to be poorly described in simulation, generally the number of tracks is
 less than in data, these discrepancies are illustrated in \Fig{fig:hhh:ntracks}.
@@ -83,22 +83,20 @@ are seen to be in agreement, this is shown in \Fig{fig:kpipi:bdt}.
   \end{center}
 \end{figure}
 
-\bam{MAKE A PLOT OF TABLES...}
-
-Once the simulation has been corrected, the total efficincy, \eff{tot} was calculated for each
+Once the simulation has been corrected, the total efficiency, \eff{tot} was calculated for each
 normalization and signal mode using simulated events.
 The value for \eff{tot} is calculated to be $\eff{geo}\eff{reco\&sel}\eff{trig}$, where:
 \eff{geo} is the geometric efficiency;
 \eff{reco\&sel} is the reconstruction and selection efficiency;
 \eff{trig} trigger efficiency.
 The Geometric efficiency defines the probability that a \Bp decays into daughter particles which
-all pass through the \lhcb detector volume.
+all pass through the \lhcb detector volume, and is approximately $15\pc$ for each signal and
+normalization channel.
 
 %relating to the probabliity of all tracks passing throught the \lhcb dectecor volume;
 %Efficiencies for the normalization modes
 %$\eff{reco\&sel\&trig}(\btopsitwosk)=(0.4123\pm0.0026)\,\%$, and
 %$\eff{reco\&sel\&trig}(\btojpsiphik)=(2.1121\pm0.0013)\,\%$, are calculated
-
 
 %$\eff{tot}(\btokpipimumu)$,
 %$\eff{tot}(\btophikmumu)$, and
@@ -115,7 +113,7 @@ all pass through the \lhcb detector volume.
 
 Since, efficiency calculations require reliable simulated samples of decays, reliable physics
 models must be used.
-This raises a dilemma deciding how to calculate the efficincy of the signal decays \btokpipimumu
+This raises a dilemma deciding how to calculate the efficiency of the signal decays \btokpipimumu
 and \btophikmumu, because no physics models exist for them.
 For the decay \btokpipimumu, an appropriate choice
 was the physics model for \decay{\Bp}{\kone{1270}\mumu}
@@ -129,107 +127,28 @@ These models introduce systematic uncertainties, which are discussed in \Sec{sse
 
 
 
-\begin{table}
-  \caption{\small
-    Geometric efficiencies for...
-  }
-  \label{tab:dsphi:geo}
-  \begin{center}
-    \begin{tabular}{lc}\toprule
-      \cellc{Decay} & Geometric efficiency (\%) \\\midrule
-      $\Bp\!\to \jpsi K_1(1270)^+$   & $15.19\pm0.03$ \\
-      $\Bp\!\to \psi(2S) \Kp$   & $15.06\pm0.03$ \\
-      $\Bp\!\to K_1(1270)^+ \mumu$   & $15.14\pm0.02$ \\
-      $\Bp\!\to K_1(1400)^+ \mumu$   & $14.90\pm0.02$ \\
-      $\Bp\!\to K_1(1270)^+ \mumu_\mathrm{phsp}$   & $15.14\pm0.03$ \\
-      $\Bp\!\to\phi\Kp\mumu$   & $16.17\pm0.03$ \\
-      $\Bp\!\to\jpsi\phi\Kp$   & $16.31\pm0.03$ \\
-      \bottomrule
-    \end{tabular}
-  \end{center}
-\end{table}
-
-
-
-
-
-
-
 %\begin{table}
-  %\caption{Efficiencies in bins of \qsq\ for all Monte Carlo samples used in the analysis.}
-  %\centering
-%\scalebox{0.9}{
-  %\begin{tabular}{lclll}\hline
-    %Decay & \qsq\ bin & $\epsilon_{\rm reco\&sel} (\%)$ & $\epsilon_{\rm trig} (\%)$ & $\epsilon_{\rm reco\&sel}\epsilon_{\rm trig} (\%)$  \\\hline
-%%    Decay & \qsq\ bin & $\epsilon_{\rm reco\&sel} (\%)$ & $\epsilon_{\rm trig} (\%)$ & $\epsilon_{\rm tot} (\%)$  \\\hline
-    %\hline
-    %$\Bu\to K_1^+(1270){\mup\mun}$ %-34
-    %& $[\pz0.10,\pz2.00]$    & $1.384 \pm 0.003$      & $73.468 \pm 0.230$    & $1.0172 \pm 0.0038$   \\   % $ROOTFILEPATH/b2kpipimumu_mc2012_k1mumu_-34.pre.root
-    %& $[\pz2.00,\pz4.30]$    & $1.406 \pm 0.003$      & $75.542 \pm 0.282$    & $1.0624 \pm 0.0047$   \\   % $ROOTFILEPATH/b2kpipimumu_mc2012_k1mumu_-34.pre.root
-    %& $[\pz4.30,\pz8.68]$     & $1.487 \pm 0.001$      & $80.957 \pm 0.105$    & $1.2042 \pm 0.0019$   \\   % $ROOTFILEPATH/b2kpipimumu_mc2012_k1mumu_-34.pre.root
-    %& $[10.09,12.86]$        & $1.199 \pm 0.001$      & $90.018 \pm 0.158$    & $1.0798 \pm 0.0023$   \\   % $ROOTFILEPATH/b2kpipimumu_mc2012_k1mumu_-34.pre.root
-    %& $[14.18,19.00]$        & $0.752 \pm 0.003$      & $93.570 \pm 0.578$    & $0.7035 \pm 0.0053$   \\   % $ROOTFILEPATH/b2kpipimumu_mc2012_k1mumu_-34.pre.root
-    %& $\cup\qsq$             & $1.309 \pm 0.001$      & $82.584 \pm 0.056$    & $1.0814 \pm 0.0009$   \\   % $ROOTFILEPATH/b2kpipimumu_mc2012_k1mumu_-34.pre.root
-    %\hline
-    %$\Bu\to K_1^+(1270){\mup\mun}_{phsp}$
-    %& $[\pz0.10,\pz2.00]$    & $1.379 \pm 0.003$      & $74.673 \pm 0.233$    & $1.0299 \pm 0.0038$   \\   % $ROOTFILEPATH/b2kpipimumu_mc2012_k1mumu_phsp.pre.root
-    %& $[\pz2.00,\pz4.30]$    & $1.412 \pm 0.003$      & $73.741 \pm 0.211$    & $1.0415 \pm 0.0035$   \\   % $ROOTFILEPATH/b2kpipimumu_mc2012_k1mumu_phsp.pre.root
-    %& $[\pz4.30,\pz8.68]$     & $1.518 \pm 0.002$      & $78.426 \pm 0.150$    & $1.1903 \pm 0.0027$   \\   % $ROOTFILEPATH/b2kpipimumu_mc2012_k1mumu_phsp.pre.root
-    %& $[10.09,12.86]$        & $1.269 \pm 0.004$      & $90.105 \pm 0.398$    & $1.1431 \pm 0.0061$   \\   % $ROOTFILEPATH/b2kpipimumu_mc2012_k1mumu_phsp.pre.root
-    %& $[14.18,19.00]$        & $0.745 \pm 0.011$      & $96.430 \pm 2.077$    & $0.7180 \pm 0.0188$   \\   % $ROOTFILEPATH/b2kpipimumu_mc2012_k1mumu_phsp.pre.root
-    %& $\cup\qsq$             & $1.403 \pm 0.001$      & $78.259 \pm 0.076$    & $1.0977 \pm 0.0013$   \\   % $ROOTFILEPATH/b2kpipimumu_mc2012_k1mumu_phsp.pre.root
-    %\hline
-    %$\Bu\to K_1^+(1400){\mup\mun}$ %-34
-    %& $[\pz0.10,\pz2.00]$    & $1.318 \pm 0.003$      & $75.247 \pm 0.257$    & $0.9920 \pm 0.0040$   \\   % $ROOTFILEPATH/b2kpipimumu_mc2012_kprime1mumu_-34.pre.root
-    %& $[\pz2.00,\pz4.30]$    & $1.333 \pm 0.003$      & $75.431 \pm 0.234$    & $1.0058 \pm 0.0037$   \\   % $ROOTFILEPATH/b2kpipimumu_mc2012_kprime1mumu_-34.pre.root
-    %& $[\pz4.30,\pz8.68]$     & $1.446 \pm 0.002$      & $81.556 \pm 0.158$    & $1.1792 \pm 0.0027$   \\   % $ROOTFILEPATH/b2kpipimumu_mc2012_kprime1mumu_-34.pre.root
-    %& $[10.09,12.86]$        & $1.283 \pm 0.004$      & $90.150 \pm 0.374$    & $1.1568 \pm 0.0058$   \\   % $ROOTFILEPATH/b2kpipimumu_mc2012_kprime1mumu_-34.pre.root
-    %& $[14.18,19.00]$        & $0.777 \pm 0.017$      & $91.468 \pm 2.966$    & $0.7107 \pm 0.0280$   \\   % $ROOTFILEPATH/b2kpipimumu_mc2012_kprime1mumu_-34.pre.root
-    %& $\cup\qsq$             & $1.356 \pm 0.001$      & $80.270 \pm 0.081$    & $1.0887 \pm 0.0013$   \\   % $ROOTFILEPATH/b2kpipimumu_mc2012_kprime1mumu_-34.pre.root
-    %\hline
-    %$\Bu\to \psitwos \Kp$
-    %& $\cup\qsq$  & $0.436 \pm 0.003$      & $94.483 \pm 0.122$    & $0.4123 \pm 0.0026$   \\   % $ROOTFILEPATH/b2kpipimumu_mc2012_psi2sk.pre.root
-    %\hline
-    %$\Bu\to \jpsi\Kp\pip\pim$
-    %& $\cup\qsq$  & $1.285 \pm 0.006$      & $87.309 \pm 0.080$    & $1.1218 \pm 0.0054$   \\   % $ROOTFILEPATH/b2kpipimumu_mc2012_k1jpsi.pre.root
-    %\hline
-    %$\Bu\to\phi\Kp\mumu$
-    %& $[\pz0.10,\pz2.00]$     & $0.868 \pm 0.001$      & $72.454 \pm 0.153$    & $0.6286 \pm 0.0016$   \\   % $ROOTFILEPATH/kkk/b2kkkmumu_mc2012_kphimumu.pre.root
-    %& $[\pz2.00,\pz4.30]$     & $1.491 \pm 0.002$      & $71.693 \pm 0.139$    & $1.0690 \pm 0.0024$   \\   % $ROOTFILEPATH/kkk/b2kkkmumu_mc2012_kphimumu.pre.root
-    %& $[\pz4.30,\pz8.68]$     & $2.646 \pm 0.003$      & $79.220 \pm 0.123$    & $2.0959 \pm 0.0039$   \\   % $ROOTFILEPATH/kkk/b2kkkmumu_mc2012_kphimumu.pre.root
-    %& $[10.09,12.86]$         & $2.275 \pm 0.023$      & $90.991 \pm 1.359$    & $2.0703 \pm 0.0375$   \\   % $ROOTFILEPATH/kkk/b2kkkmumu_mc2012_kphimumu.pre.root
-    %& $\cup\qsq$  & $1.467 \pm 0.001$      & $75.247 \pm 0.060$    & $1.1040 \pm 0.0010$   \\   % $ROOTFILEPATH/kkk/b2kkkmumu_mc2012_kphimumu.pre.root
-    %\hline
-    %$\Bu\to\jpsi\phi\Kp$
-    %& $\cup\qsq$  & $2.421 \pm 0.001$      & $87.224 \pm 0.044$    & $2.1121 \pm 0.0013$       \\   % $ROOTFILEPATH/kkk/b2kkkmumu_mc2012_kphijpsi.pre.root
-    %\bottomrule
-  %\end{tabular}
-%}
-  %\label{tab:eff:q2effs}
+  %\caption{\small
+    %Geometric efficiencies for...
+  %}
+  %\label{tab:dsphi:geo}
+  %\begin{center}
+    %\begin{tabular}{lc}\toprule
+      %\cellc{Decay} & Geometric efficiency (\%) \\\midrule
+      %$\Bp\!\to \jpsi K_1(1270)^+$   & $15.19\pm0.03$ \\
+      %$\Bp\!\to \psi(2S) \Kp$   & $15.06\pm0.03$ \\
+      %$\Bp\!\to K_1(1270)^+ \mumu$   & $15.14\pm0.02$ \\
+      %$\Bp\!\to K_1(1400)^+ \mumu$   & $14.90\pm0.02$ \\
+      %$\Bp\!\to K_1(1270)^+ \mumu_\mathrm{phsp}$   & $15.14\pm0.03$ \\
+      %$\Bp\!\to\phi\Kp\mumu$   & $16.17\pm0.03$ \\
+      %$\Bp\!\to\jpsi\phi\Kp$   & $16.31\pm0.03$ \\
+      %\bottomrule
+    %\end{tabular}
+  %\end{center}
 %\end{table}
 
 
 
 
-%Efficiencies
-\begin{figure}[h]
-  \begin{center}
-    \includegraphics[width=0.9\textwidth]{q2vk1_eff}
-    \caption{\small Efficiencies of reconstructed MC, of $\Bu\to K_1^+(1270) \mup\mun$
-      where the $K_1^+(1270)$ decays via the phasespace model and the physics model,
-    with respect to generator level simulation.}
-    \label{fig:q2vk1eff}
-  \end{center}
-\end{figure}
 
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.48\textwidth]{kpipi_eff}
-    \caption{\small
-      The efficiency of the signal decay \btokphimumu in bins of \qsq.
-    }
-    \label{fig:hhh:phikeff}
-  \end{center}
-\end{figure}
 

@@ -1,39 +1,10 @@
-%The \lhcb collaboration has published many interesting results involving a \decay{b}{s\mumu} FCNC,
-%many of these involve the decay
-%\decay{B}{K\mumu}~\cite{LHCb-PAPER-2012-024,LHCb-PAPER-2012-021,LHCb-PAPER-2012-011}.
-%transisiton with a spectator quark, and then the decay of the \Kstar.
-
-%Recently there has been much interest surrounding an observed $3.7\stdev$ deviation from
-%theoretial predictions in the value of an observable in the angular distribution of the decay
-%\decay{\Bd}{\Kstarent\mumu}~\cite{LHCb-PAPER-2013-037}.
-%This decay proceeds via a \decay{\bquark}{\squark\mumu} FCNC where the other quark in the $B$ meson
-%is a spectator.
-%Analagous diagrams are possible, whereby additional quarks contribute to the final state
-%forming either a $\kpipi\mumu$ or $\phik\mumu$ system.
-%Figure~\ref{fig:hhh:feyn} shows ways that these final states might be formed from decaying $B$
-%mesons.
-
-%These final states have added challenges because they result from the decay of numerous strange
-%resonances.
-
-%\begin{figure}
-  %\begin{center}
-    %\includegraphics[scale=1]{feynman_hhh_kpipimumu}
-    %\includegraphics[scale=1]{feynman_hhh_phikmumu}
-    %\caption[Feynman diagrams for \btokpipimumu and \btophikmumu]
-    %{\small
-      %Feynman diagrams illustrating how the decays \btokpipimumu and \btophikmumu can proceed in
-      %the SM.
-    %}
-    %\label{fig:hhh:feyn}
-  %\end{center}
-%\end{figure}
-
 %This has additional interest in that, not only does it probe the FCNC, but the \kpipi system can
 %result from the decay of numerous strange resonances.
 
 The decays \btokpipimumu and \btophikmumu both proceed via \decay{\bquark}{\squark\mumu} FCNC
-transitions, which are forbidden at tree level in the \sm.
+transitions, which are forbidden at tree level in the \sm\footnote{All mentions of the \phii
+  refer implicitly to the $\phi(1020)$ meson.
+}.
 Therefore, these processes are potentially sensitive to virtual \np particles contributing
 to the decay amplitude in loops.
 %Figure~\ref{fig:hhh:feyn} shows the pengiun diagrams which propagate these decays in the SM.
@@ -50,10 +21,10 @@ to the decay amplitude in loops.
     \includegraphics[scale=1]{feynman_btosmumu_box}
     \caption[Schematic Feynman diagrams for loop and box diagrams]
     {\small
-      Schematic Feynman diagrams for the
-      (left) penguin loop diagrams corresponding to the operators \Op{7} and \Op{9} depending on
-      whether a $\gamma$ or $Z$ is emitted from the loop;
-      (right) \Op{10} box diagram mediated by \Wp bosons.
+      Schematic Feynman diagrams for the operators \Op7, \Op9, and \Op{10} which are most sensitive
+      to the \decay{\bquark}{\squark\mumu} FCNC.
+      Operators (left) \Op7 and \Op9 are the photon and $Z$ mediated penguin diagrams, respectively.
+      The operator \Op{10} (right) is the box diagram for the same transition.
     }
     \label{fig:hhh:loops}
   \end{center}
@@ -84,29 +55,32 @@ Operators which are particularly sensitive to NP contributions in \decay{b}{s\mu
   \Op{10} &= \big(\bar s\gamma_\mu P_Lb\big)\big(\bar\ell\gamma^\mu\gamma_5\ell\big)
   &\Op{10}^\prime &= \big(\bar s\gamma_\mu P_Rb\big)\big(\bar\ell\gamma^\mu\gamma_5\ell\big).
   %\phantom{\frac{1}{1}}
-  %\\
   %\mathcal{O}_{S} &= \frac{m_b}{m_{B_s}}\big(\bar s\gamma_\mu P_Rb\big)\big(\bar\ell\ell\big)
-  %\\
   %\mathcal{O}_{P} &= \frac{m_b}{m_{B_s}}\big(\bar s\gamma_\mu P_Rb\big)\big(\bar\ell\gamma_5\ell\big)
 \end{align}
-The operators \Op{7} and \Op{9} describe the emission of a photon or $Z$ from a penguin loop,
-and \Op{10} corresponds to a box type diagram with \Wp; these are shown in \Fig{fig:hhh:loops}.
+The operator \Op{7} describes the FCNC via a photonic penguin, and \Op{8} is the $Z$ penguin
+operator.
+Operator \Op{10} corresponds to the box diagram for with mediating \Wp bosons.
+Figure~\ref{fig:hhh:loops} shows schematic Feynman diagrams for \Op7, \Op8, and \Op{10}
 Primed operators are the suppressed helicity, whose contributions are vanishingly small in the SM.
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+The decay \btokpipimumu and \btophikmumu proceed via a \decay{\bquark}{\squark\mumu} FCNC with a
+spectator \uquark quark, the decays mediated by penguin loops are shown in \Fig{fig:hhh:feyn}.
+In this way, both these decays are the same as the FCNC decay $\decay{\Bd}{K^{*0}\mumu}$, but
+differ in the \qqbar pairs that are popped from the QCD field.
+There is considerable interest surrounding the decay $\decay{\Bp}{K^*(892)^0\mumu}$, becuase
+not only is it an FCNC, but its angular distributions are alse sensitive to NP.
+Furtheremore, a $x\stdev$ deviation is observed in the $P_5^\prime$ parameter in \lhcb data in
+comparison to theoretical predictions~\cite{CAT}.
 
 
 
-The decay \btokpipimumu can propagate as shown in \Fig{fig:hhh:feyn}, this
-has similarities with the decay $\decay{\Bp}{K^*(892)^0\mumu}$.
-Both propagate in the same way, but the latter's final state is $\kpi\mumu$ --- the decay
-\btokpipimumu requires an additional \uubar pair.
-The decay $\decay{\Bp}{K^*(892)^0\mumu}$ is of considerable interest because, not only does it
-involve an FCNC, but its angular distributions are sensitive to NP.
+%has similarities with the decay $\decay{\Bp}{K^*(892)^0\mumu}$.
+%Both propagate in the same way, but the latter's final state is $\kpi\mumu$ --- the decay
+%\btokpipimumu requires an additional \uubar pair.
 
 \begin{figure}
   \begin{center}
@@ -115,7 +89,7 @@ involve an FCNC, but its angular distributions are sensitive to NP.
     \caption[Feynman diagrams for \btokpipimumu and \btophikmumu]
     {\small
       Feynman diagrams illustrating how the decays \btokpipimumu and \btophikmumu can proceed in
-      the SM.
+      the SM via operators \Op7 or \Op9.
     }
     \label{fig:hhh:feyn}
   \end{center}
@@ -149,13 +123,13 @@ Here, \thetakone is the mixing angle and has been measured to be both $-34^\circ
 $-57^\circ$~\cite{PhysRevD.47.1252,Tayduganov:2011ui,Hatanaka:2008xj,Cheng:2011pb,Divotgey:2013jba,Cheng:2013cwa}.
 However, more recent measurements favour a value of
 $-(34\pm13)^\circ$~\cite{Hatanaka:2008xj,Cheng:2011pb,Divotgey:2013jba,Cheng:2013cwa},
-and the most recent rule out the soloution at $-57^\circ$~\cite{Divotgey:2013jba,Cheng:2013cwa}
+and the most recent rule out the solution at $-57^\circ$ entirely~\cite{Divotgey:2013jba,Cheng:2013cwa}
 (but with a different sign convention).
 
 
 
-Due to the unknown composition of the $m_\kpipi$ spectrum an inclusive prediction of the branching
-fraction $\BF(\btokpipimumu)$ does not exist.
+Due to the unknown composition of the \mass{\kpipi} spectrum an inclusive prediction of the
+branching fraction $\BF(\btokpipimumu)$ does not exist.
 However, the branching fraction of the rare decay \decay{\Bp}{\kone{1270}\mumu} is predicted to
 be~\cite{Hatanaka:2008gu}
 \begin{equation}
@@ -163,11 +137,11 @@ be~\cite{Hatanaka:2008gu}
 \end{equation}
 where uncertainties arise from form-factor calculations and the mixing angle, respectively.
 The \kone{1270} then decays into the \kpipi final state
---- via both a non-resonant decay and various resonaces ---
+--- via both a non-resonant decay and various resonances ---
 with a branching fraction of
 $\BF\big(\decay{\kone{1270}}{\kpipi}\big)=\big(35.7\pm3.7\big)\,\%$~\cite{PDG2012}.
 
-Figure~\ref{fig:th:thetak1} shows the theorecitcal \qsq distribution for the decay
+Figure~\ref{fig:th:thetak1} shows the theoretical \qsq distribution for the decay
 $\decay{\Bp}{K_1^+\mumu}$ for both the \kone{1270} and \kone{1400} and varying \thetakone.
 The \decay{b}{s\mumu} can be mediated by a real photon which, for some values of \thetakone, can be
 transversely polarized.
@@ -192,21 +166,20 @@ decay via a photon is forbidden.
   \end{center}
 \end{figure}
 
-The decay $\Bp\!\to\phi(1020)\Kp\mumu$ where \decay{\phi}{\kk} has no branching fraction
-predictions
-\footnote{All mentions of the $\phi$ meson are implicitly
-  referencing the $\phi(1020)$.
-}.
-The expected brnahcing fraction for the decay \btophikmumu is for it to be lower with respect to
-that of \btokpipimumu, because it requires an \ssbar to be \emph{popped} from the vacuum.
+There are no predictions for the branching fraction of the decay \btophikmumu,
+but one would expect it to be smaller than that of the decay \btokpipimumu.
+This is becuase it requires an \ssbar to be popped from the QCD field rather than a \uubar and
+\ddbar pair.
 
 Absent from this analysis are the searches for the decays \decay{\Bp}{\Kp\Km\pip\mumu}
 and \decay{\Bp}{\pipi\pim\mumu}.
 These were not included because they are suppressed by a factor of $|\V{td}/\V{ts}|^2\simeq23$ and
 suffer from large backgrounds.
 
-
-\bam{The following chapter...}
+The following chapter is an analysis of the decays \btokpipimumu and \btophikmumu in which
+branching fractions for each decay is measured.
+Also, a measurement of the differential bracnhing fraction of \btokpipimumu is made in bins of
+\qsq; where \qsq is the invariant mass of the dimuon object squared.
 
 
 
