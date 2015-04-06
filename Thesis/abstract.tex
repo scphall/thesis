@@ -1,16 +1,22 @@
 %\setcounter{page}{2}
+%\chapter*{\centering Declaration}
 \begin{abstract}
+  %\newgeometry{left=4.5cm,right=4.5cm}
   \chapter*{\centering Abstract}
   %\thispagestyle{fancy}
 
   \begin{center}
-    \begin{minipage}{0.8\textwidth}
+  {\setlength{\currentparskip}{\parskip}% save the value
+  \begin{minipage}{0.8\textwidth}
+    \setlength{\parskip}{\currentparskip}% restore the value
       Used a herd of cats to hunt out the king of all the bees.
       The Bee King handed over his trident of power in exchange for a can of beans with a sugary
       coating.
       Physics ensued.
-    \end{minipage}
+    \end{minipage}}
   \end{center}
+%\chapter*{\centering Declaration}
+%\restoregeometry
 
 \end{abstract}
 %\setcounter{page}{3}

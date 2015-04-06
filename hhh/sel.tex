@@ -41,6 +41,44 @@ $\big|m_{\mu\mu}-m_{\psitwos}^\pdg\big|<50\mev$ and
 $\big|m_{\mu\mu}-m_\jpsi^\pdg\big|<50\mev$ respectively.
 
 
+\begin{table}
+  \caption{\small
+    Requirements in the {\tt BuToK1MuMuLine} stripping line in {\tt Stripping20}.
+    The variable {\tt ADOCACHI2CUT} is the \chisq distance of the closest approach
+    (below a threshold) for all two particle combinations, and {\tt DIRA} is the
+    angle between the reconstructed \Bp momentum and that from the hits in the
+    \velo.
+  }
+  \label{tab:hhh:strip}
+  \begin{center}
+    \begin{tabular}{llcr}\toprule
+      Particle & Variable & \multicolumn{2}{c}{Value} \\ \midrule
+      $B$
+      & \chisqvtx               &  $<$ & $6.0$ \\
+      & \chisqip               &  $<$ & $16.0$ \\
+      & \chisqfd               &  $>$ & $121.0$ \\\littlerule
+      \kpipi
+      & Vtx $\chi^2$  &  $<$ & $12.0$ \\
+      & $\mathtt{\,DIRA}$    &  $>$ & $-0.9$ \\
+      & \mass{\kpipi}          &  $\in$ & $[750, 2400]\mev$\\
+      & ADOCACHI2CUT & $<$ & $ 20$ \\
+      & \chisqip          &  $<$ & $4.0$ \\
+      & \chisqfd            &  $>$ & $25.0$ \\\littlerule
+      \mumu
+      & \chisqvtx     &  $<$ & $12.0$ \\
+      & \chisqfd                &  $>$ & $81.0$ \\
+      tracks  & \chisqip     &  $>$ & $16.0$ \\
+      & track $\chisq/$ndof         &   $<$ & $2.5$ \\\littlerule
+      \Kp, \pip
+      & $p_T$                  &   $>$ & $500$ \\
+      \mup & \ismuon  \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+
 
 \subsection{Peaking backgrounds}
 Processes with the same final state as \btokpipimumu and \btophikmumu are not smoothly distributed
