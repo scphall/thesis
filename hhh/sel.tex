@@ -2,10 +2,10 @@
 
 Signal candidates for the decays \btokpipimumu and \btophikmumu must first pass the \lone muon
 trigger.
-Subsequent software trigger stages required that at least one final-state muon has $\pt>1.6\gev$
-and at least one hadron has $\pt>1.0\gev$, both of which had an IP larger than $100\mum$ with
+Subsequent software trigger stages required that at least one final-state muon has $\pt>1.0\gev$
+and at least one hadron has $\pt>1.6\gev$, both of which have an IP larger than $100\mum$ with
 respect to any PV in the event.
-The response of the topological BBDT in the \hlttwo must be consistent with a decaying $B$ meson
+The response of the topological BBDT in \hlttwo must be consistent with a decaying $B$ meson
 with muons in the final state.
 
 %There is large overlap between the...
@@ -15,30 +15,36 @@ sign muons.
 Fully reconstructed candidates must form a good quality vertex, with a \chisq of the vertex fit
 $<6$.
 This secondary vertex must be well displaced from any PV, having a flight distance inconsistent
-with zero; ($\chisqfd>121$).
-The angle between the \Bp candidate momentum vector and the direction defined by the PV to \Bp decay
-vertex must be less than $14\mrad$.
+with zero, $\chisqfd>121$.
+%The angle between the \Bp candidate momentum vector and the direction defined by the PV to \Bp decay
+%vertex must be less than $14\mrad$.
 Each track must satisfy $\chisqip>16$, where the \chisqip of a track is defined as the change in
 \chisqip when calculated with and without the track in question.
-The muons must both satisfy the {\tt isMuon} criteria and have $\dllmupi>0$.
-Hadrons have PID criteria applied later, after optimization.
-Each hadron must have $\pt>500\gev$ and
+The muons must both satisfy the {\tt isMuon} criteria and have $\dllmupi>0$,
+while \pid criteria for hadrons are applied later.
+Each hadron must have $\pt>500\mev$ and
 the total invariant mass of the \kpipi system is required to be in the range
 $750<\mass{\kpipi}<2400\mev$.
 For the \phik system, the additional constraint that the \decay{\phi}{\kk} object must have an
-invariant mass within $12\mev$ of $m_\phi^\pdg$.
+invariant mass within $12\mev$ of $m_\phi^\pdg$ is applied.
 
-To convert the signal yields into branching fractions normalization channels were needed.
-The normalization channel for the decays \btokpipimumu and \btophikmumu are \btopsitwosk and
-\btojpsiphik (where \psitwostojpsipipi and \jpsitomumu) respectively.
-These are chosen to have the same final state particles as the signal decays to ensure that PID and
-tracking efficiencies cancel, to first order.
-The decay \btojpsikpipi is also used in this analysis for cross-checks and in training the BDT (as
-described in \Sect{sec:hhh:bdt}).
-All these decays were subject to the same selection criteria except for requirements on the
-invariant mass of the dimuon pair.
-Both the \jpsi and \psitwos candidates are required to be within $50\mev$ of their known
-masses~\cite{PDG2012}.
+There are other decay channels which are used throughout this analysis, specifically:
+\btojpsikpipi, \btopsitwosk, and \btojpsiphik.
+In all these decays \psitwostojpsipipi and \jpsitomumu.
+These are each selected by requiring that both \jpsi and \psitwos candidates have an invariant
+mass within $50\mev$ of their known masses~\cite{PDG2012}.
+
+%To convert the signal yields into branching fractions normalization channels were needed.
+%The normalization channel for the decays \btokpipimumu and \btophikmumu are \btopsitwosk and
+%\btojpsiphik (where \psitwostojpsipipi and \jpsitomumu) respectively.
+%These are chosen to have the same final state particles as the signal decays to ensure that PID and
+%tracking efficiencies cancel, to first order.
+%The decay \btojpsikpipi is also used in this analysis for cross-checks and in training the BDT (as
+%described in \Sect{sec:hhh:bdt}).
+%All these decays were subject to the same selection criteria except for requirements on the
+%invariant mass of the dimuon pair.
+%Both the \jpsi and \psitwos candidates are required to be within $50\mev$ of their known
+%masses~\cite{PDG2012}.
 %For each \psitwos and \jpsi candidate, it is required that
 %$\big|m_{\mu\mu}-m_{\psitwos}^\pdg\big|<50\mev$ and
 %$\big|m_{\mu\mu}-m_\jpsi^\pdg\big|<50\mev$ respectively.
@@ -52,16 +58,16 @@ masses~\cite{PDG2012}.
   }
   \label{tab:hhh:strip}
   \begin{center}
-    \begin{tabular}{llcr}\toprule
-      Particle & Variable & \multicolumn{2}{c}{Value} \\ \midrule
-      $B$
+    \begin{tabular}{llcrc}\toprule
+      Particle & Variable & \multicolumn{3}{c}{Value} \\ \midrule
+      \Bp
       & \chisqvtx               &  $<$ & $6.0$ \\
       & \chisqip               &  $<$ & $16.0$ \\
       & \chisqfd               &  $>$ & $121.0$ \\\littlerule
       \kpipi
       & Vtx $\chi^2$  &  $<$ & $12.0$ \\
       %& $\mathtt{\,DIRA}$    &  $>$ & $-0.9$ \\
-      & \mass{\kpipi}          &  $\in$ & $[750, 2400]\mev$\\
+      & \mass{\kpipi}          &  $\in$ & $[750, 2400]$ & MeV\\
       %& ADOCACHI2CUT & $<$ & $ 20$ \\
       & \chisqip          &  $<$ & $4.0$ \\
       & \chisqfd            &  $>$ & $25.0$ \\\littlerule
@@ -71,7 +77,7 @@ masses~\cite{PDG2012}.
       tracks  & \chisqip     &  $>$ & $16.0$ \\
       & track $\chisq/$ndof         &   $<$ & $2.5$ \\\littlerule
       \Kp, \pip
-      & $p_T$                  &   $>$ & $500$ \\
+      & $p_T$                  &   $>$ & $500$ & MeV \\
       \mup & \ismuon  \\
       \bottomrule
     \end{tabular}
@@ -81,9 +87,9 @@ masses~\cite{PDG2012}.
 
 
 
-\subsection{Peaking backgrounds}
-Processes with the same final state as \btokpipimumu and \btophikmumu are not smoothly distributed
-in $m_{K\pi\pi\mu\mu}$, rather they peak under the signal.
+\subsection{Background contributions}
+%Processes with the same final state as \btokpipimumu and \btophikmumu are not smoothly distributed
+%in \mass{\kpipimumu}, rather they peak under the signal.
 The tree level decays \decay{\Bp}{\jpsi\kpipi} and \decay{\Bp}{\jpsi\phik}, where
 \decay{\jpsi}{\mumu}, have large branching fractions:
 \begin{align}
@@ -94,21 +100,22 @@ The tree level decays \decay{\Bp}{\jpsi\kpipi} and \decay{\Bp}{\jpsi\phik}, wher
   \cdot \BF\big(\jpsitomumu\big)
   &= \big(3.1 \pm 1.1\big)\e{-6},
 \end{align}
-and the same final state particles.
+and the same final state particles as the signal modes.
+They therefore constitute peaking backgrounds that lie under the signal peak.
 The same is true for the large contributions from \decay{\Bp}{\psitwos\kpipi} and
 \decay{\Bp}{\psitwos\phik} decays, where \decay{\psitwos}{\mumu}.
 These contributions from charmonium decays constitute large, irreducible backgrounds and must be
 removed with vetoes around the \jpsi and \psitwos masses.
 The vetoes used remove events where the invariant dimuon mass falls in either region
-$2946<m_{\mu\mu}<3176\mev$ or $3586<m_{\mu\mu}<3766\mev$.
+$2946<m_{\mumu}<3176\mev$ or $3586<m_{\mumu}<3766\mev$.
 
 Figure~\ref{fig:hhh:charmvetoes} shows the boundaries defined by these vetoes on data.
 Mis-reconstructed decays to charmonium contribute to the upper mass sideband.
 To remove these, the veto windows are extended up by $40\mev$ in the region
-$5330<m_{K\pi\pi\mu\mu}<5450\mev$.
+$5330<\mass{\kpipimumu}<5450\mev$.
 Radiative tails from the decays \decay{\jpsi}{\mumu\gamma} and \decay{\psitwos}{\mumu\gamma} are
 suppressed by extending the vetoes down by $250\mev$ and $100\mev$ respectively in the region
-$m_{K\pi\pi\mu\mu}<5230\mev$.
+$\mass{\kpipimumu}<5230\mev$.
 
 %However, the amount of contamination from decaying \jpsi and \psitwos is so great that both show
 %evidence of asymmetric tails from
@@ -131,9 +138,9 @@ $m_{K\pi\pi\mu\mu}<5230\mev$.
   \end{center}
 \end{figure}
 
-Given the large branching fractions of the charmonium decays given above, and the probability of
-misidentifying a pion as a muon is $\mathcal{O}(1\,\%)$,~\cite{LHCb-DP-2013-001}, and slightly less
-for kaon, there could have been significant contamination from mis-identified candidates.
+Considering the large branching fractions of the charmonium decays given above, and the probability of
+misidentifying a pion as a muon is $\mathcal{O}(1\pc)$~\cite{LHCb-DP-2013-001} (somewhat less for a
+kaon) there could have been significant contamination from mis-identified candidates.
 This background was removed by calculating the invariant mass of each $\mu^+\pi^-$ and
 $\mu^+K^-$ combination, where the hadron was assigned the muon mass.
 If the mass of this object fell within $50\mev$ of $m_\jpsi$ or $m_\psitwos$, then the candidate
@@ -165,29 +172,17 @@ $\decay{\Bp}{\jpsi\rho(770)^0\Kp}$.
   \end{center}
 \end{figure}
 
-\begin{figure}[h]
-  \begin{center}
-    \includegraphics[height=0.23\textheight]{trackeff}
-    \includegraphics[height=0.23\textheight]{muoneff}
-  \end{center}
-  \caption{
-    The ratio of efficiencies for (top) tracking, and (bottom) \ismuon between data and simulation.
-    Simulated tracks in simulation are reweighted according to their momentum and psudorapidity.
-    For the lower plot, the calibration sample does not contain muons with $\pt<800\mev$, this
-    geometric threshold is indicated by the white line.
-  }
-  \label{fig:hhh:trackeff}
-\end{figure}
 
 %Other peaking backgrounds D0...
 Other background contributions can come from doubly misidentified fully hadronic decays, such as
 the decay \decay{\Bd}{\Dzb\pip\pipi} followed by \decay{\Dzb}{\kpi}, which
 has a total branching fraction of $(2.21\pm0.85)\e{-4}$~\cite{PDG2012}.
-This decay has a final state of $\Kp\pip\pipi\pim$, therefore if a pair of pions are misidentified
-as muons the final state of \kpipimumu would be mimicked, and therefore should be considered as a
+This decay has a final state of $\kpipi\pipi$.
+If a pair of opposite sign pions are misidentified
+as muons, the final state of \kpipimumu is mimicked, and therefore should be considered as a
 background.
 The same can be said for the decay \decay{\Bd}{\Dzb\pip} and \decay{\Dzb}{\Km\pip\pipi},
-which has a total branching fraction of $(3.88\pm0.15)$.
+which has a total branching fraction of $(3.88\pm0.15)\e{-4}$.
 
 In order to ascertain if these charmed decays are potential backgrounds, invariant mass
 distributions are inspected for evidence of \Dz mesons.
@@ -196,9 +191,9 @@ $\Kp\pi^+_\mu$ distribution\footnote{
   Where, as defined previously, the notation $h_i$ is a particle under the mass hypothesis of $h$
   which was reconstructed as an $i$.
 }.
-This is shown in \Fig{fig:hhh:dzbkg}.
+%This is shown in \Fig{fig:hhh:dzbkg}.
 To remove the small possible contribution from \decay{\Bd}{\Dzb\pip\pipi} events which fall within
-$30\mev$ of the nominal \Dz mass in the $\Kp\pi^+_\mu$ spectrum are vetoed.
+$30\mev$ of the nominal \Dz mass in the $\Kp\pi^-_\mu$ spectrum are vetoed.
 
 
 

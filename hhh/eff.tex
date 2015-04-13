@@ -37,7 +37,7 @@ must be corrected.
 This is done with data driven methods, using highly pure samples of pions, kaons
 and muons (which came from the decays \decay{\Dstarp}{\Dz\pip}, where \decay{\Dz}{\Km\pip}, and
 \jpsitomumu).
-For each track in the simulated \Bp candidate, a new PID variable is rasampled from PID
+For each track in the simulated \Bp candidate, a new PID variable is resampled from PID
 distributions of the pure track samples as a function of the track's $\eta$, $p$ and track
 multiplicity.
 Only required for kaons and pions, the muon PID distribution is well described in simulation.
@@ -63,16 +63,32 @@ raw distributions; the differences that remain are accounted for in the systemat
 
 %Reweighting
 
-Tracking efficiency varies depending upon the regions of the detector through which the paricle
-passes, and the modelling of the detector in the simultion behaves differently to in actualoty.
-To correct for this, each candidate is weighted based on the relavtive treacking effeciency between
+Tracking efficiency varies depending upon the regions of the detector through which the particle
+passes, and the modelling of the detector in the simulation behaves differently to in actuality.
+To correct for this, each candidate is weighted based on the relative tracking efficiency between
 data and simulation, this is dependent upon $m$ and $\eta$.
-The same is true for the responce of the {\tt isMuon} variable.
-After all rewighting all the aforementioned varialbes in simulated events, the BDT distributions
+The same is true for the response of the {\tt isMuon} variable.
+Figure~\ref{fig:hhh:trackeff} shows how the tracking efficiency and \ismuon criteria are corrected
+for throughout the detector volume.
+After all reweighting all the aforementioned variables in simulated events, the BDT distributions
 are seen to be in agreement, this is shown in \Fig{fig:kpipi:bdt}.
 %Geometric efficiencies
 %Tracking efficiencies and isMuon
 %Geometric efficiencies
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[height=0.23\textheight]{trackeff}
+    \includegraphics[height=0.23\textheight]{muoneff}
+  \end{center}
+  \caption{
+    The ratio of efficiencies for (top) tracking, and (bottom) \ismuon between data and simulation.
+    Simulated tracks in simulation are reweighted according to their momentum and psudorapidity.
+    For the lower plot, the calibration sample does not contain muons with $\pt<800\mev$, this
+    geometric threshold is indicated by the white line.
+  }
+  \label{fig:hhh:trackeff}
+\end{figure}
 
 \begin{figure}
   \begin{center}

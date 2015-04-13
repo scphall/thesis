@@ -115,29 +115,29 @@ Cuts applied in the stripping selection are summarized in \Tab{tab:dsphi:sel}.
   }
   \label{tab:dsphi:sel}
   \begin{center}
-    \begin{tabular}{cccc}
+    \begin{tabular}{llcrc}
       \toprule
-      Candidate & \multicolumn{3}{c}{Cut} \\
+      Candidate & \multicolumn{4}{c}{Cut} \\
       \midrule
       \Bp
       %\multirow{5}{*}{\Bp}
-      & $\sum p_T^\mathrm{tracks}$ &$>$& $5\gev$ \\
+      & $\sum p_T^\mathrm{tracks}$ &$>$& $5$ & GeV \\
       & \chisqvtx/\ndof &$<$& 10 \\
       & \chisqip &$<$& 25 \\
-      & $\tau$ &$>$& $0.2\ps$ \\
+      & $\tau$ &$>$& $0.2$ & ps \\
       & $\cos\thetadir$ &$>$& $0.999$ \\
       %& $\bdt_\mathrm{strip}$ &$>$& 0.05 \\
       \littlerule
       \Ds
       %\multirow{3}{*}{\Ds}
-      & $\sum p_T^\mathrm{tracks}$ &$>$& $1.8\gev$ \\
+      & $\sum p_T^\mathrm{tracks}$ &$>$& $1.8$ & GeV \\
       & \chisqvtx/\ndof &$<$& 10 \\
-      & DOCA &$<$& $0.5\mm$ \\
+      & DOCA &$<$& $0.5$ & mm \\
       \littlerule
       Tracks from \Ds
       %\multirow{6}{*}{Tracks from \Ds}
-      & \pt &$>$& $100\mev$ \\
-      & $p$ &$>$& $1\gev$ \\
+      & \pt &$>$& $100$ & MeV \\
+      & $p$ &$>$& $1$  & GeV\\
       & $\chisqtrk/\ndof$ &$<$& $4$ \\
       & $\min\!\left(\chisqip\right)$ &$>$& $4$ \\
       & \chisqfd &$>$& 36 \\
@@ -146,13 +146,13 @@ Cuts applied in the stripping selection are summarized in \Tab{tab:dsphi:sel}.
       \littlerule
       \phii
       %\multirow{2}{*}{$\phi$}
-      & $\sum\pt^\mathrm{tracks}$ &$>$& $1\gev$ \\
+      & $\sum\pt^\mathrm{tracks}$ &$>$& 1&GeV   \\
       & \chisqvtx/\ndof &$<$& 16 \\
       \littlerule
       Tracks from $\phi$
       %\multirow{4}{*}{Tracks from $\phi$}
-      & \pt &$>$& $100\mev$ \\
-      & $p$ &$>$& $2\gev$ \\
+      & \pt &$>$& 100 & MeV \\
+      & $p$ &$>$& 2 & GeV \\
       & $\chisqtrk/\ndof$ &$<$& $4$ \\
       & $\min\!\left(\chisqip\right)$ &$>$& $4$ \\
       & \chisqfd &$>$& 16 \\
@@ -274,12 +274,12 @@ In this case, the number of signal events, $S$, was estimated from the yield fro
 \decay{\Bs}{\Dsm\pip}, according to:
 \begin{equation}
   S = \frac{ \BF\big(\btodsphi\big) }{ \BF\big(\Bsb\!\to\Ds\pim\big) }
-  \frac{ \eff{geo}\big(\btodsphi\big) }{ \eff{geo}\big(\Bsb\!\to\Ds\pim\big) }
+  \frac{ \eff{gen}\big(\btodsphi\big) }{ \eff{gen}\big(\Bsb\!\to\Ds\pim\big) }
   \frac{f_d}{f_s}
   N\big(\Bsb\!\to\Ds\pim\big),
 \end{equation}
 $f_s/f_d$ quantifies the fraction of \Bs mesons produced relative to \Bd mesons.
-The geometric efficiency, \eff{geo}, is the efficiency introduced by the shape of the \lhcb, and
+The generator level efficiency, \eff{gen}, is the efficiency introduced by the shape of the \lhcb, and
 the necessity that all daughter particles must travel through the detector.
 Background yield for a given cut is estimated as:
 \begin{equation}
@@ -312,7 +312,8 @@ shown in \Fig{fig:dsphi:opt}.
 
 
 
-\subsection{Vetoes of \Dp and \Lc decays}
+\subsection[Vetoes of contributions from the decays {\decay{\Dp}{\kpipiss}} and \decay{\Lc}{\pkpi}]
+{Vetoes of contributions from the decays $\boldsymbol{\decay{\Dp}{\kpipiss}}$ and $\boldsymbol{\decay{\Lc}{\pkpi}}$}
 There are few backgrounds from real particles that could contaminate the final selection after the
 \bdt selection.
 The decay topology of \dstokkpi is very similar to the other weak decays \decay{\Dp}{\kpipiss} and
