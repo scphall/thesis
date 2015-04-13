@@ -19,7 +19,7 @@ these discrepancies are illustrated in \Fig{fig:hhh:ntracks}.
 Aside from the direct differences, the low track multiplicity of in simulated events is a
 contributing factor of PID variables being badly described in simulations.
 
-\begin{figure}
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=0.48\textwidth]{ntracks}
     \caption[Differences between track multiplicity in data and simulation]
@@ -37,15 +37,16 @@ must be corrected.
 This is done with data driven methods, using highly pure samples of pions, kaons
 and muons (which came from the decays \decay{\Dstarp}{\Dz\pip}, where \decay{\Dz}{\Km\pip}, and
 \jpsitomumu).
-For each track in the simulated \Bp candidate, a new PID variable is resampled from PID
-distributions of the pure track samples as a function of the track's $\eta$, $p$ and track
-multiplicity.
-Only required for kaons and pions, the muon PID distribution is well described in simulation.
+For each hadron track in the simulated \Bp candidate, a new PID variable is resampled from PID
+distributions of the pure track samples as a function of the track's pseudorapidity, momentum, and
+track multiplicity.
 Figure~\ref{fig:hhh:pid} shows the effect of this resampling technique, it is observed that the
 simulated PID distributions that have been resampled matches data distributions much better than the
 raw distributions; the differences that remain are accounted for in the systematic uncertainties.
+Muon \pid distributions are sufficiently well modelled in simulation that correcting them is
+unnecessary.
 
-\begin{figure}
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=0.48\textwidth]{pid_Kplus}
     \includegraphics[width=0.48\textwidth]{pid_piplus}\\
@@ -76,7 +77,7 @@ are seen to be in agreement, this is shown in \Fig{fig:kpipi:bdt}.
 %Tracking efficiencies and isMuon
 %Geometric efficiencies
 
-\begin{figure}[h]
+\begin{figure}[t]
   \begin{center}
     \includegraphics[height=0.23\textheight]{trackeff}
     \includegraphics[height=0.23\textheight]{muoneff}
@@ -90,7 +91,7 @@ are seen to be in agreement, this is shown in \Fig{fig:kpipi:bdt}.
   \label{fig:hhh:trackeff}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=0.48\textwidth]{bdt_k1jpsi}
     \includegraphics[width=0.48\textwidth]{bdt_psi2sk}
@@ -148,33 +149,21 @@ These models introduce systematic uncertainties, which are discussed in \Sec{sse
 
 The efficiency for each \qsq bin is shown in \Fig{fig:hhh:kpipieff}.
 
-\begin{figure}
+\begin{figure}[t]
   \begin{center}
     \includegraphics[width=0.48\textwidth]{kpipi_eff}
-    \caption{\small
-      The efficiency of the signal decay \btokpipimumu in bins of \qsq for three different physics
-      models.
-      Differential branching fractions $\dBF(\btokpipimumu)/\dqsq$, are calculated using simulation
-      of $\decay{\Bp}{K_1(1270)^+\mumu}$, however, other models result in similar efficiencies.
-    }
-    \label{fig:hhh:kpipieff}
-  \end{center}
-\end{figure}
-
-\begin{figure}
-  \begin{center}
     \includegraphics[width=0.48\textwidth]{phik_eff}
     \caption{\small
-      Efficiency of the signal decay \btokphimumu in bins of \qsq, as used to reweight each
-      signal event by.
-      There are no events in the $14.18<\qsq<19.00\gevgev$ bin which is present in the
-      \btokpipimumu analysis.
+      The efficiency of the signal decay
+      (left) \btokpipimumu, showing a range of decay models; and
+      (right) \btophikmumu in bins of \qsq.
+      For the \btophikmumu analysis, there are no events in the $14.18<\qsq<19.00\gevgev$ bin which
+      is present in the \btokpipimumu analysis.
       Light blue shaded regions indicate the vetoed \jpsi and \psitwos regions.
     }
-    \label{fig:hhh:phikeff}
+    \label{fig:hhh:effs}
   \end{center}
 \end{figure}
-
 
 
 

@@ -214,6 +214,7 @@ the neutrinos means that this background peaks considerably below the known \Bp 
       Background from the cascade decay $\decay{\Bp}{\Dm\pip\mup\nu_\mu}$, where
       $\decay{\Dm}{\Kp\pim\mun\bar\nu_\mu}$ does extend as high in mass as the nominal \Bp mass,
       due to lost energy from neutrinos.
+      The vertical black line indicates the nominal mass of the \Bp meson.
     }
     \label{fig:hhh:cascade}
   \end{center}
@@ -284,20 +285,25 @@ listed in \Tab{hhh:tab:bdtvars}.
 \end{table}
 
 
-\subsubsection{Optimization of particle identification criteria and multivariate selection}
+\subsubsection{Optimization of particle identification criteria and multivariate classifier}
 \label{sssec:opt:kpipi}
-The determination of the optimum cut value on the BDT is required in conjunction with optimizing PID
-criteria on each hadron.
-For the decay \btokpipimumu, a requirement that $\dllkpi(\Kp)-\dllkpi(\pip)>10$ was made, this
-simply ensured that of the two hadrons with the same sign, the one identified as a kaon had more of
+The determination of the optimum cut value on the BDT is required in conjunction with optimizing
+\pid criteria on each hadron.
+For the decay \btokpipimumu, a requirement that $\dllkpi(\Kp)-\dllkpi(\pip)>10$ is made, to
+ensure that of the two hadrons with the same sign, the one identified as a kaon had more of
 a kaon like signature than the other.
+This also reduces the number of multiple candidates per event.
+%Before this cut is applied $98\pc$ of events have a multiple candidates, where another candidate in
+%the event is a K pi swap down to 0.
+Before this cut, there is, on average, 1.32 candidates per event within $3\stdev$ of
+$\mass{\Bp}^{\pdg}$, which is reduced to 1.05 candidates per event.
 Then, optimization was made in the three dimensions of BDT, $\dllkpi(\Kp)$ and $\dllkpi(\pi^\pm)$
 by maximising the figure of merit $S/\sqrt{S+B}$, where $S$ and $B$ are the expected signal and
 background yields respectively.
 The value of $S$ was determined by scaling the weighted sum of selected \btojpsikpipi events,
-$N\big(\jpsi\kpipi\big)$, according to
-\begin{equation}
-  S =
+$N\big(\btojpsikpipi\big)$, according to
+\begin{multline}
+  S\big(\btokpipimumu\big) = \\
   \frac{
     \BF\big(\decay{\Bp}{\kone{1270}\mumu}\big)
     \BF\big(\decay{\kone{1270}}{\kpipi}\big)
@@ -306,16 +312,17 @@ $N\big(\jpsi\kpipi\big)$, according to
     \BF\big(\decay{\jpsi}{\mumu}\big)
   }
   \cdot
-  N\big(\btojpsikpipi\big),
-\end{equation}
-where, branching fraction values used in this calculation are taken to be
-$\BF\big(\decay{\kone{1270}}{\kpipi}\big) = 35.7\,\%$~\cite{PDG2012},
-$\BF\big(\jpsitomumu\big) = 5.93\,\%$~\cite{PDG2012} and
-$\BF\big(\btojpsikpipi\big) = 8.1\e{-4}$~\cite{PDG2012}.
+  N\big(\btojpsikpipi\big).
+\end{multline}
+Branching fraction values used in this calculation are taken to be
+$\BF\big(\decay{\kone{1270}}{\kpipi}\big) = (35.7\pm3.7)\e{-2}$,
+$\BF\big(\jpsitomumu\big) = (5.93\pm0.06)\e{-2}$, and
+$\BF\big(\btojpsikpipi\big) = (8.1\pm1.3)\e{-4}$~\cite{PDG2012}.
 Estimation of the branching fraction of the signal decay \decay{\Bp}{\kone{1270}\mumu} is made
-assuming the ratio of the branching fractions for the known decays \decay{B}{X\mumu} to
-\decay{B}{X\mumu}
-is the same for $X$ being the \kone{1270} or \Kstarent.
+assuming the ratio of the branching fractions for the known decays $\decay{B}{X_s\mumu}$ to
+$\decay{B}{X_s\gamma}$
+is the same for $X_s\in\{\kone{1270},\Kstarent\}$.
+%being the \kone{1270} or \Kstarent.
 Thus,
 \begin{align}
   \BF\big(\decay{\Bp}{\kone{1270}\mumu}\big)
@@ -333,18 +340,19 @@ Thus,
 %as the weighted sum of events that pass a given set of cuts, and $B$ was
 %where $S$ is defined as the
 
-The value of the estimated background yield, $B$, was determined from interpolating signal
-\btokpipimumu candidates from the sidebands into the mass regions around the mass of the \Bp meson.
-Candidates falling in the low and high mass sidebands
-(defined by $5000<\mass{\kpipimumu}<\mass{\Bp}^\pdg-120\mev$ and
-$m_{\Bp}^\pdg+120<\mass{\kpipimumu}<5750\mev$ respectively),
-were fitted to an exponential, and the value of $B$ was taken to be the integral of this
-distribution within $60\mev$ of the known \Bp mass~\cite{PDG2012}.
+The value of the estimated background yield, $B$, is determined from interpolating
+\btokpipimumu candidates from the mass sidebands into the regions around the mass of the \Bp meson.
+Candidates falling in the low and high mass sidebands,
+defined by
+%$5000<\mass{\kpipimumu}<\mass{\Bp}^\pdg-120\mev$
+$\mass{\kpipimumu}\in[5000,\mass{\Bp}^\pdg-120]\mev$
+and
+%$m_{\Bp}^\pdg+120<\mass{\kpipimumu}<5750\mev$
+$\mass{\kpipimumu}\in[m_{\Bp}^\pdg+120,5750]\mev$
+respectively,
+are fit to an exponential, and the value of $B$ taken to be the integral of this
+distribution within $3\stdev$ of the known \Bp mass~\cite{PDG2012}.
 
-The maximum value of the figure of merit
-was found (as shown in \Tab{tab:hhh:opt}), and corresponding cut values used for the analysis.
-The exact requirements for the PID were that $\dllkpi(\Kp)>3.5$, $\dllkpi(\pi^\pm)<14.5$ and
-$\mathrm{BDT}>0.025$.
 
 \begin{figure}
   \begin{center}
@@ -368,10 +376,10 @@ but only in two dimensions  (BDT and $\dllkpi(K^\pm)$).
 %selection of cuts maximizing the figure of merit $S/\sqrt{S+B}$.
 The calculation of $B$ was made in the same way as described above, and the
 value of $S$ was determined in a similar way, by scaling the \emph{sWeighted} sum of candidates
-that passed given cuts by the ratio of known branching fractions.
-Therefore,
+that passed given cuts.
+So,
 \begin{equation}
-  S =
+  S\big(\btophikmumu\big) = \\
   \frac{
     \BF\big(\decay{\Bp}{\phi\Kp\mumu}\big)
   }{
@@ -379,7 +387,7 @@ Therefore,
     \BF\big(\decay{\jpsi}{\mumu}\big)
   }
   \cdot
-  N\big(\jpsi\phi\Kp\big).
+  N\big(\btojpsiphik\big).
 \end{equation}
 where $N\big(\jpsi\phik\big)$ is the weighted number of selected \btojpsiphik events.
 The expected background yield is determined using an exponential fit across the signal region, as
@@ -397,7 +405,7 @@ The prediction for the branching fraction of the signal channel is taken to be
   &=\big(0.66\pm0.12\big)\e{-7}.
 \end{align}
 Figure~\ref{fig:phik:opt} shows the variation of the figure of metric for different values of the
-BDT and $\dllkpi(K)$ cuts, the optimal values are given in \Table{tab:hhh:opt}.
+\bdt and $\dllkpi(K)$ cuts.
 
 \begin{figure}
   \begin{center}
@@ -409,6 +417,15 @@ BDT and $\dllkpi(K)$ cuts, the optimal values are given in \Table{tab:hhh:opt}.
     \label{fig:phik:opt}
   \end{center}
 \end{figure}
+
+The maximum value of the figure of merit was found, and corresponding cut values used for the
+analysis.
+The exact requirements for the PID were that $\dllkpi(\Kp)>3.5$, $\dllkpi(\pi^\pm)<14.5$ and
+$\mathrm{BDT}>0.025$.
+After the full selection multiple candidates are removed at random such that there is, at most, one
+\btokpipimumu candidate per event.
+For the analysis of the decay \btophikmumu, the optimization procedure yields cut values of
+$\dllkpi(K)>-3$ and $\bdt>0.05$.
 
 %\begin{table}
   %\caption[Expected yields]
