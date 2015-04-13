@@ -1,17 +1,22 @@
 \section{Efficiency calculations}
 \label{sec:hhh:eff}
 
-
-These efficiencies were calculated using simulated events; therefore, in order that the above
-efficiencies are correct it is imperitive that the simulated events describe the data accurately.
-Where there are discrepancies, the simulations must be corrected.
+Although the normalization channels have the same final state particles, the efficiency does not
+completely cancel due to kinematic differences.
+Therefore the relative efficiency between signal and normalization decays must be calculated.
+The efficiency for each decay is computed using simulated events, under the assumption that the
+simulation accurately describes data, where there are discrepancies the simulations must be corrected.
+%These efficiencies were calculated using simulated events; therefore, in order that the above
+%efficiencies are correct it is imperative that the simulated events describe the data accurately.
+%Where there are discrepancies, the simulations must be corrected.
 There are some variables which are known to be poorly described in simulation, particularly track
 multiplicity and the \chisqvtx of the \Bp candidate.
 The effects of these discrepancies are minimized by reweighting simulated events using
 the distributions of \btojpsikpipi.
-Track multiplicity is known to be poorly described in simulation, generally the number of tracks is
-less than in data, these discrepancies are illustrated in \Fig{fig:hhh:ntracks}.
-Aside from the direct differencies, the low track multiplicity of in sumulated events is a
+Track multiplicity is known to be poorly described in simulation, generally there are fewer tracks
+in simulation than observed in data,
+these discrepancies are illustrated in \Fig{fig:hhh:ntracks}.
+Aside from the direct differences, the low track multiplicity of in simulated events is a
 contributing factor of PID variables being badly described in simulations.
 
 \begin{figure}
@@ -37,7 +42,7 @@ distributions of the pure track samples as a function of the track's $\eta$, $p$
 multiplicity.
 Only required for kaons and pions, the muon PID distribution is well described in simulation.
 Figure~\ref{fig:hhh:pid} shows the effect of this resampling technique, it is observed that the
-simulated PID distributions that have been resampled matches data distributions much more than the
+simulated PID distributions that have been resampled matches data distributions much better than the
 raw distributions; the differences that remain are accounted for in the systematic uncertainties.
 
 \begin{figure}
@@ -85,11 +90,11 @@ are seen to be in agreement, this is shown in \Fig{fig:kpipi:bdt}.
 
 Once the simulation has been corrected, the total efficiency, \eff{tot} was calculated for each
 normalization and signal mode using simulated events.
-The value for \eff{tot} is calculated to be $\eff{geo}\times\eff{reco\&sel}\times\eff{trig}$, where:
-\eff{geo} is the geometric efficiency;
+The value for \eff{tot} is calculated to be $\eff{gen}\times\eff{reco\&sel}\times\eff{trig}$, where:
+\eff{gen} is the generator selection efficiency;
 \eff{reco\&sel} is the reconstruction and selection efficiency;
 \eff{trig} trigger efficiency.
-The Geometric efficiency defines the probability that a \Bp decays into daughter particles which
+The generator efficiency defines the probability that a \Bp decays into daughter particles which
 all pass through the \lhcb detector volume, and is approximately $15\pc$ for each signal and
 normalization channel.
 
@@ -111,8 +116,8 @@ normalization channel.
 %from \Ref{Hatanaka:2008gu} and $\thetakone=34^\circ$.
 
 
-Since, efficiency calculations require reliable simulated samples of decays, reliable physics
-models must be used.
+Since efficiency calculations require reliable simulated samples of decays, accurate physics
+models must, or should, be used.
 This raises a dilemma deciding how to calculate the efficiency of the signal decays \btokpipimumu
 and \btophikmumu, because no physics models exist for them.
 For the decay \btokpipimumu, an appropriate choice
@@ -124,6 +129,35 @@ using a phasespace model.
 These models introduce systematic uncertainties, which are discussed in \Sec{ssec:kpipi:syst} and
 \Sec{ssec:phik:syst}.
 
+
+The efficiency for each \qsq bin is shown in \Fig{fig:hhh:kpipieff}.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{kpipi_eff}
+    \caption{\small
+      The efficiency of the signal decay \btokpipimumu in bins of \qsq for three different physics
+      models.
+      Differential branching fractions $\dBF(\btokpipimumu)/\dqsq$, are calculated using simulation
+      of $\decay{\Bp}{K_1(1270)^+\mumu}$, however, other models result in similar efficiencies.
+    }
+    \label{fig:hhh:kpipieff}
+  \end{center}
+\end{figure}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{phik_eff}
+    \caption{\small
+      Efficiency of the signal decay \btokphimumu in bins of \qsq, as used to reweight each
+      signal event by.
+      There are no events in the $14.18<\qsq<19.00\gevgev$ bin which is present in the
+      \btokpipimumu analysis.
+      Light blue shaded regions indicate the vetoed \jpsi and \psitwos regions.
+    }
+    \label{fig:hhh:phikeff}
+  \end{center}
+\end{figure}
 
 
 

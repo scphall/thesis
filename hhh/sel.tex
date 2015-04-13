@@ -21,33 +21,34 @@ vertex must be less than $14\mrad$.
 Each track must satisfy $\chisqip>16$, where the \chisqip of a track is defined as the change in
 \chisqip when calculated with and without the track in question.
 The muons must both satisfy the {\tt isMuon} criteria and have $\dllmupi>0$.
-Hadrons have PID criteria applied later, after optimization, but the total invariant mass of the
-\kpipi system is required to be below $2400\mev$.
-Each hadron must have $\pt>500\gev$.
+Hadrons have PID criteria applied later, after optimization.
+Each hadron must have $\pt>500\gev$ and
+the total invariant mass of the \kpipi system is required to be in the range
+$750<\mass{\kpipi}<2400\mev$.
 For the \phik system, the additional constraint that the \decay{\phi}{\kk} object must have an
 invariant mass within $12\mev$ of $m_\phi^\pdg$.
 
-To change the signal yields into branching fractions normalization channels were needed.
+To convert the signal yields into branching fractions normalization channels were needed.
 The normalization channel for the decays \btokpipimumu and \btophikmumu are \btopsitwosk and
 \btojpsiphik (where \psitwostojpsipipi and \jpsitomumu) respectively.
-These are chosen to have the same final state particles as the signal decays to ensure that PID
-efficiencies cancel.
+These are chosen to have the same final state particles as the signal decays to ensure that PID and
+tracking efficiencies cancel, to first order.
 The decay \btojpsikpipi is also used in this analysis for cross-checks and in training the BDT (as
 described in \Sect{sec:hhh:bdt}).
 All these decays were subject to the same selection criteria except for requirements on the
 invariant mass of the dimuon pair.
-For each \psitwos and \jpsi candidate, it is required that
-$\big|m_{\mu\mu}-m_{\psitwos}^\pdg\big|<50\mev$ and
-$\big|m_{\mu\mu}-m_\jpsi^\pdg\big|<50\mev$ respectively.
+Both the \jpsi and \psitwos candidates are required to be within $50\mev$ of their known
+masses~\cite{PDG2012}.
+%For each \psitwos and \jpsi candidate, it is required that
+%$\big|m_{\mu\mu}-m_{\psitwos}^\pdg\big|<50\mev$ and
+%$\big|m_{\mu\mu}-m_\jpsi^\pdg\big|<50\mev$ respectively.
 
 
 \begin{table}
   \caption{\small
-    Requirements in the {\tt BuToK1MuMuLine} stripping line in {\tt Stripping20}.
-    The variable {\tt ADOCACHI2CUT} is the \chisq distance of the closest approach
-    (below a threshold) for all two particle combinations, and {\tt DIRA} is the
-    angle between the reconstructed \Bp momentum and that from the hits in the
-    \velo.
+    Requirements in the stripping line.
+    %The variable {\tt ADOCACHI2CUT} is the \chisq distance of the closest approach
+    %(below a threshold) for all two particle combinations.
   }
   \label{tab:hhh:strip}
   \begin{center}
@@ -59,9 +60,9 @@ $\big|m_{\mu\mu}-m_\jpsi^\pdg\big|<50\mev$ respectively.
       & \chisqfd               &  $>$ & $121.0$ \\\littlerule
       \kpipi
       & Vtx $\chi^2$  &  $<$ & $12.0$ \\
-      & $\mathtt{\,DIRA}$    &  $>$ & $-0.9$ \\
+      %& $\mathtt{\,DIRA}$    &  $>$ & $-0.9$ \\
       & \mass{\kpipi}          &  $\in$ & $[750, 2400]\mev$\\
-      & ADOCACHI2CUT & $<$ & $ 20$ \\
+      %& ADOCACHI2CUT & $<$ & $ 20$ \\
       & \chisqip          &  $<$ & $4.0$ \\
       & \chisqfd            &  $>$ & $25.0$ \\\littlerule
       \mumu
@@ -101,13 +102,13 @@ removed with vetoes around the \jpsi and \psitwos masses.
 The vetoes used remove events where the invariant dimuon mass falls in either region
 $2946<m_{\mu\mu}<3176\mev$ or $3586<m_{\mu\mu}<3766\mev$.
 
+Figure~\ref{fig:hhh:charmvetoes} shows the boundaries defined by these vetoes on data.
 Mis-reconstructed decays to charmonium contribute to the upper mass sideband.
 To remove these, the veto windows are extended up by $40\mev$ in the region
 $5330<m_{K\pi\pi\mu\mu}<5450\mev$.
 Radiative tails from the decays \decay{\jpsi}{\mumu\gamma} and \decay{\psitwos}{\mumu\gamma} are
 suppressed by extending the vetoes down by $250\mev$ and $100\mev$ respectively in the region
 $m_{K\pi\pi\mu\mu}<5230\mev$.
-Figure~{fig:hhh:charmvetoes} shows the boundaries defined by these vetoes on data.
 
 %However, the amount of contamination from decaying \jpsi and \psitwos is so great that both show
 %evidence of asymmetric tails from
@@ -131,9 +132,9 @@ Figure~{fig:hhh:charmvetoes} shows the boundaries defined by these vetoes on dat
 \end{figure}
 
 Given the large branching fractions of the charmonium decays given above, and the probability of
-misidentifying a muon as a pion is $\mathcal{O}(1\,\%)$,~\cite{LHCb-DP-2013-001}, and slightly less
+misidentifying a pion as a muon is $\mathcal{O}(1\,\%)$,~\cite{LHCb-DP-2013-001}, and slightly less
 for kaon, there could have been significant contamination from mis-identified candidates.
-This potential background was removed by calculating the invariant mass of each $\mu^+\pi^-$ and
+This background was removed by calculating the invariant mass of each $\mu^+\pi^-$ and
 $\mu^+K^-$ combination, where the hadron was assigned the muon mass.
 If the mass of this object fell within $50\mev$ of $m_\jpsi$ or $m_\psitwos$, then the candidate
 was vetoed.
@@ -148,13 +149,16 @@ $\decay{\Bp}{\jpsi\rho(770)^0\Kp}$.
     \includegraphics[width=0.45\textwidth]{hhhmisid_post}
     \caption[Backgrounds from misidentified charmonia]
     {\small
-      Invariant mass of the combination of a muon and a hadron of the opposite charge
-      reconstructed under the muon mass hypothesis.
-      The left-hand plot shows the distributions before the veto of misidentification of the \jpsi
-      and \psitwos, while the right-hand plot shows the distribution after the vetoes.
-      The blue circles are the distribution of $m(\mu\mu\to\mu\pi)$ (solid circles having the same
-      charge as the kaon) and red square show the $m(\mu\mu\to\mu K)$ distribution.
-      There is a feature at low mass in the $m(\mu\mu\to\mu\pi)$ spectrum which is removed by the
+      Invariant mass of the combination of a muon and a reconstructed hadron of the opposite charge
+      under the muon mass hypothesis (left) before, and (right) after the veto in the decay
+      \btokpipimumu.
+      Both pions are included in the same histogram and scaled such that it has the same number of
+      entries as for the kaon.
+      %The left-hand plot shows the distributions before the veto of misidentification of the \jpsi
+      %and \psitwos, while the right-hand plot shows the distribution after the vetoes.
+      %The blue circles are the distribution of $m(\mu\mu\to\mu\pi)$ (solid circles having the same
+      %charge as the kaon) and red square show the $m(\mu\mu\to\mu K)$ distribution.
+      There is a feature at low mass in the $m(\mup\misid{\mu}{\pi}^-)$ spectrum which is removed by the
       vetoes, and originates from the background decay $\decay{\Bp}{\jpsi\rho(770)^0\Kp}$.
     }
     \label{fig:hhh:misid}
@@ -168,7 +172,7 @@ $\decay{\Bp}{\jpsi\rho(770)^0\Kp}$.
   \end{center}
   \caption{
     The ratio of efficiencies for (top) tracking, and (bottom) \ismuon between data and simulation.
-    Simulated tracks in simulation are reweighted according to their momentum and $\eta$.
+    Simulated tracks in simulation are reweighted according to their momentum and psudorapidity.
     For the lower plot, the calibration sample does not contain muons with $\pt<800\mev$, this
     geometric threshold is indicated by the white line.
   }
@@ -176,8 +180,8 @@ $\decay{\Bp}{\jpsi\rho(770)^0\Kp}$.
 \end{figure}
 
 %Other peaking backgrounds D0...
-Other background contributions can come from doubly misidentified fully hadronic decays.
-The decay \decay{\Bd}{\Dzb\pip\pipi} followed by \decay{\Dzb}{\kpi}
+Other background contributions can come from doubly misidentified fully hadronic decays, such as
+the decay \decay{\Bd}{\Dzb\pip\pipi} followed by \decay{\Dzb}{\kpi}, which
 has a total branching fraction of $(2.21\pm0.85)\e{-4}$~\cite{PDG2012}.
 This decay has a final state of $\Kp\pip\pipi\pim$, therefore if a pair of pions are misidentified
 as muons the final state of \kpipimumu would be mimicked, and therefore should be considered as a
@@ -196,25 +200,25 @@ This is shown in \Fig{fig:hhh:dzbkg}.
 To remove the small possible contribution from \decay{\Bd}{\Dzb\pip\pipi} events which fall within
 $30\mev$ of the nominal \Dz mass in the $\Kp\pi^+_\mu$ spectrum are vetoed.
 
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.48\textwidth]{hhh_cascade}
-    \caption{\small
-      \Dz backgrounds.
-    }
-    \label{fig:hhh:dzbkg}
-  \end{center}
-\end{figure}
-
-Semileptonic cascades, where a \bquark decays via $\decay{b}{c\mun\bar\nu_\mu}$ and subsequently
-$\decay{c}{s\mup\nu_\mu}$, can have branching fractions as high as $\mathcal{O}(10^{-4})$.
-For example, the decay $\decay{\Bp}{\Dm\pip\mup\nu_\mu}$ followed by
-$\decay{\Dm}{\Kp\pim\mun\bar\nu_\mu}$ has a total branching fraction of
-$(1.6\pm0.3)\e{-4}$~\cite{PDG2014}.
-Selection requirements on the \chisqvtx suppress these decays significantly, and the energy lost to
-the neutrinos means that this background peaks considerably below the known \Bp mass.
 
 
+%% SEMILEPTONIC DECAYS
+%Semileptonic cascades, where a \bquark decays via $\decay{b}{c\mun\bar\nu_\mu}$ and subsequently
+%$\decay{c}{s\mup\nu_\mu}$, can have branching fractions as high as $\mathcal{O}(10^{-4})$.
+%For example, the decay $\decay{\Bp}{\Dm\pip\mup\nu_\mu}$ followed by
+%$\decay{\Dm}{\Kp\pim\mun\bar\nu_\mu}$ has a total branching fraction of
+%$(1.6\pm0.3)\e{-4}$~\cite{PDG2014}.
+%Selection requirements on the \chisqvtx suppress these decays significantly, and the energy lost to
+%the neutrinos means that this background peaks considerably below the known \Bp mass.
+%\begin{figure}
+  %\begin{center}
+    %\includegraphics[width=0.48\textwidth]{hhh_cascade}
+    %\caption{\small
+      %\Dz backgrounds from cascade decays
+    %}
+    %\label{fig:hhh:dzbkg}
+  %\end{center}
+%\end{figure}
 
 
 \subsection{Multivariate selection}
@@ -226,13 +230,35 @@ The sample of data used as the signal-proxy was from  the decay \btojpsikpipi, w
 \emph{sWeighted}~\cite{splot} for the purpose of removing combinatorial background from the
 training sample.
 For the background sample, selected signal mode data was taken from the upper mass sideband of the
-\Bp candidate mass, in the range $5530<m_{K\pi\pi\mu\mu}<5780\mev$.
+\Bp candidate mass, in the range $5530<\mass{\kpipimumu}<5780\mev$.
 These candidates are not used for the determination of the signal yield, and at this high mass are
 comprised solely of combinatorial background.
 
 This BDT was trained using selection of geometric and kinematic variables, the exact variables are
 listed in \Tab{hhh:tab:bdtvars}.
 
+%\begin{table}
+  %\caption[BDT training variables]
+  %{\small
+    %Input variables used to train the BDT to distinguish between signal \btokpipimumu decays and
+    %combinatorial backgrounds.
+  %}
+  %\label{hhh:tab:bdtvars}
+  %\begin{center}
+    %\begin{tabular}{lc}\\\toprule
+      %Particle & Variable\\\midrule
+      %\Bp & \pt\\
+      %& \chisqip \\
+      %& \chisqfd\\
+      %& \chisqvtx\\
+      %& $\theta_\mathrm{dir}$\\\littlerule
+      %Tracks & \pt\\
+      %& \chisqip\\
+      %%\hline
+      %\bottomrule
+    %\end{tabular}
+  %\end{center}
+%\end{table}
 \begin{table}
   \caption[BDT training variables]
   {\small
@@ -241,15 +267,14 @@ listed in \Tab{hhh:tab:bdtvars}.
   }
   \label{hhh:tab:bdtvars}
   \begin{center}
-    \begin{tabular}{lc}\\\toprule
-      Particle & Variable\\\midrule
-      \Bp & \pt\\
-      & \chisqip \\
-      & \chisqfd\\
-      & \chisqvtx\\
-      & $\theta_\mathrm{dir}$\\\littlerule
-      Tracks & \pt\\
-      & \chisqip\\
+    \begin{tabular}{lccccc}\\\toprule
+      Particle & \multicolumn{5}{c}{Variables}\\\midrule
+      \Bp & \pt
+      & \chisqip
+      & \chisqfd
+      & \chisqvtx
+      & $\theta_\mathrm{dir}$\\
+      Tracks & \pt & \chisqip\\
       %\hline
       \bottomrule
     \end{tabular}
@@ -257,10 +282,9 @@ listed in \Tab{hhh:tab:bdtvars}.
 \end{table}
 
 
-\subsubsection[Optimization of \btokpipimumu cuts]
-{Optimization of \tmath{\btokpipimumu} cuts}
+\subsubsection{Optimization of particle identification criteria and multivariate selection}
 \label{sssec:opt:kpipi}
-The determination of the optimum cut value on the BDT was made in conjunction with optimizing PID
+The determination of the optimum cut value on the BDT is required in conjunction with optimizing PID
 criteria on each hadron.
 For the decay \btokpipimumu, a requirement that $\dllkpi(\Kp)-\dllkpi(\pip)>10$ was made, this
 simply ensured that of the two hadrons with the same sign, the one identified as a kaon had more of
@@ -280,9 +304,9 @@ $N\big(\jpsi\kpipi\big)$, according to
     \BF\big(\decay{\jpsi}{\mumu}\big)
   }
   \cdot
-  N\big(\btojpsikpipi\big).
+  N\big(\btojpsikpipi\big),
 \end{equation}
-Where, branching fraction values used in this calculation are taken to be
+where, branching fraction values used in this calculation are taken to be
 $\BF\big(\decay{\kone{1270}}{\kpipi}\big) = 35.7\,\%$~\cite{PDG2012},
 $\BF\big(\jpsitomumu\big) = 5.93\,\%$~\cite{PDG2012} and
 $\BF\big(\btojpsikpipi\big) = 8.1\e{-4}$~\cite{PDG2012}.
@@ -310,8 +334,8 @@ Thus,
 The value of the estimated background yield, $B$, was determined from interpolating signal
 \btokpipimumu candidates from the sidebands into the mass regions around the mass of the \Bp meson.
 Candidates falling in the low and high mass sidebands
-(defined by $5000<m_{K\pi\pi\mu\mu}<m_{\Bp}^\pdg-120\mev$ and
-$m_{\Bp}^\pdg+120<m_{K\pi\pi\mu\mu}<5750\mev$ respectively),
+(defined by $5000<\mass{\kpipimumu}<\mass{\Bp}^\pdg-120\mev$ and
+$m_{\Bp}^\pdg+120<\mass{\kpipimumu}<5750\mev$ respectively),
 were fitted to an exponential, and the value of $B$ was taken to be the integral of this
 distribution within $60\mev$ of the known \Bp mass~\cite{PDG2012}.
 
@@ -332,11 +356,14 @@ $\mathrm{BDT}>0.025$.
 \end{figure}
 
 
-\subsubsection[Optimization of \btophikmumu cuts]
-{Optimization of \tmath{\btophikmumu} cuts}
-This channel follows a similar procedure for optimization as for the decay \btokpipimumu.
-Optimization was performed in multiple dimensions (BDT and $\dllkpi(K^\pm)$) with the chosen
-selection of cuts maximizing the figure of merit $S/\sqrt{S+B}$.
+%\subsubsection[Optimization of \btophikmumu cuts]
+%{Optimization of \tmath{\btophikmumu} cuts}
+
+The optimization procedure for the decay \btophikmumu employs a similar strategy as \btokpipimumu,
+but only in two dimensions  (BDT and $\dllkpi(K^\pm)$).
+%This channel follows a similar procedure for optimization as for the decay \btokpipimumu.
+%Optimization was performed in multiple dimensions (BDT and $\dllkpi(K^\pm)$) with the chosen
+%selection of cuts maximizing the figure of merit $S/\sqrt{S+B}$.
 The calculation of $B$ was made in the same way as described above, and the
 value of $S$ was determined in a similar way, by scaling the \emph{sWeighted} sum of candidates
 that passed given cuts by the ratio of known branching fractions.

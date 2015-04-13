@@ -24,31 +24,14 @@ The differential branching fraction for a bin of width $\Delta\qsq$ is
   \label{eq:kpipi:diffbf}
 \end{multline}
 where,
-\begin{equation*}
-  \BF_\mathrm{tot}\big(\btopsitwosk\big)
-  =
-  \BF\big(\btopsitwosk\big) \cdot
-  \BF\big(\psitwostojpsipipi\big) \cdot
-  \BF\big(\jpsitomumu\big),
-\end{equation*}
+%\begin{equation*}
+$\BF_\mathrm{tot}\big(\btopsitwosk\big) = \BF\big(\btopsitwosk\big) \cdot
+\BF\big(\psitwostojpsipipi\big) \cdot \BF\big(\jpsitomumu\big) $,
+%\end{equation*}
 \num{sig} is the yield of the signal decay \btokpipimumu in the given \qsq bin and \num{norm}
 is the yield of the normalization channel.
 Total deficiencies for reconstruction and selection are denoted by \eff{sig} and \eff{norm} for the
 signal and normalization channels respectively.
-The efficiency for each \qsq bin is shown in \Fig{fig:hhh:kpipieff}.
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.48\textwidth]{kpipi_eff}
-    \caption{\small
-      The efficiency of the signal decay \btokpipimumu in bins of \qsq for three different physics
-      models.
-      Differential branching fractions $\dBF(\btokpipimumu)/\dqsq$, are calculated using simulation
-      of $\decay{\Bp}{K_1(1270)^+\mumu}$, however, other models result in similar efficiencies.
-    }
-    \label{fig:hhh:kpipieff}
-  \end{center}
-\end{figure}
 
 The normalization channel was chosen to be \btopsitwosk, where \psitwostojpsipipi and \jpsitomumu,
 which has a total branching fraction of $(1.264 \pm 0.0052)\e{-5}$~\cite{PDG2012}.
@@ -62,21 +45,21 @@ Signal candidates are modelled using the sum of two Gaussian functions, each hav
 tail at low-mass.
 The parameters of the tail shared between the Gaussians, and all parameters are taken from a fit to
 the high statistics mode of the cross-check channel \btojpsikpipi.
-The background function is made of en exponential --- to model combinatorial background --- and a
-Gaussian --- to model partially reconstructed candidates --- at low mass.
+The background function is made of an exponential, to model combinatorial background, and a
+Gaussian at low mass to model partially reconstructed candidates.
 The same function is used to fit \mass{\jpsi\kpipi} the control channel.
 These fits are shown in \Fig{fig:kpipi:norm} and they yield
 $N\big(\btopsitwosk\big)=5128\pm67$ and $N\big(\btojpsikpipi\big)=59\,335\pm343$.
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.48\textwidth]{b2psi2sk}
     \includegraphics[width=0.48\textwidth]{b2kpipijpsi}
+    \includegraphics[width=0.48\textwidth]{b2psi2sk}
     \caption[Fits to \btojpsikpipi and \btopsitwosk candidates]
     {\small
       Distributions of the invariant mass of the
-      (a) cross-check channel \btojpsikpipi and
-      (b) normalization mode \btopsitwosk.
+      (left) cross-check channel \btojpsikpipi and
+      (right) normalization mode \btopsitwosk.
       Projections from the fit are overlayed, where the light blue is the yield of the indicated
       decay, and the dark blue is the background component.
     }
@@ -94,15 +77,15 @@ $N\big(\btopsitwosk\big)=5128\pm67$ and $N\big(\btojpsikpipi\big)=59\,335\pm343$
 Yields of the signal decay in regions of \qsq were extracted from fits using a distribution that
 was fixed to as large an extent as possible.
 The lower limit of the fit was taken to be $5150\mev$, because partially reconstructed background
-is a problem below that.
+becomes significant below that.
 The combinatorial background shape is an exponential distribution, where the exponent and yield was
 allowed to float in the fit; however, in the regions where charmonium vetoes are effective, the
 steps in the background are fixed using sideband data.
 The signal function was also the sum of Gaussians with power law tails, where the parameters are
 all fixed to the values from the fit to the cross-check channel.
-Figure~\ref{fig:kpipi:q2fits} shows the invariant mass distribution for all \btokpipimumu
+Figure~\ref{fig:kpipi:q2fits} shows the invariant mass distribution for all signal
 candidates for the whole \qsq region and for each bin.
-The total yield of \btokpipimumu candidates is $N(\btokpipimumu)=367\,^{+24}_{-23}$.
+The total signal yield is measured to be $N(\btokpipimumu)=367\,^{+24}_{-23}$.
 
 \begin{figure}
   \begin{center}
@@ -208,7 +191,7 @@ and the uncertainty is fully correlated between \qsq bins.
     \caption[Differenctial branching fractions of \btokpipimumu]
     {\small
       Differential branching fraction $\tfrac{d}{\dqsq}\BF\left(\btokpipimumu\right)$
-      (as given in Table~\protect\ref{tab:kpipi:diffbf}), where the
+      as given in Table~\protect\ref{tab:kpipi:diffbf}, where the
       errors shown include both statistical and systematic uncertainties.
       Shaded areas indicate the vetoed \jpsi and \psitwos resonances.
     }
@@ -222,7 +205,7 @@ Numerous broad resonances are visible in the distributions.
 The \kpipi system from the resonant \btojpsikpipi decay shows significant, though not dominant,
 contributions from the \kone{1270} state.
 There is also a contribution visible as $m_\kpipi\simeq1750\mev$, similar to resonances seen by
-\belle~\ref{Guler:2010if}.
+\belle~\cite{Guler:2010if}.
 
 
 
@@ -247,9 +230,10 @@ There is also a contribution visible as $m_\kpipi\simeq1750\mev$, similar to res
     \includegraphics[width=0.48\textwidth]{kpipi_frommumu}
     \caption[Invariant mass distributions of \kpipi]
     {\small
-      Invariant mass distributions of the \kpipi object, from the
-      (a) signal decay \btokpipimumu and the
-      (b) control channel \btojpsikpipi which have been background subtracted
+      Invariant mass distributions of the \kpipi system, from the
+      (left) control channel \btojpsikpipi, and the
+      (right) signal decay \btokpipimumu
+      which have been background subtracted
       using the \emph{sPlot}~\cite{splot} technique.
       The vertical lines indicate the central masses of the \kone{1270} and \kone{1400}
       resonances.
@@ -268,17 +252,15 @@ There is also a contribution visible as $m_\kpipi\simeq1750\mev$, similar to res
 Systematic uncertainties introduced to the measurement of the differential branching fraction of
 \btokpipimumu can be categorised into three main categories:
 corrections applied to simulated events,
-the fits to the signal and normalization channels, and
+the fits model used to describe the signal and normalization channels, and
 modelling of the signal decay.
-The following section describes the methods used to calculate systematic uncertainties from each
-source.
 
 % Reweighting and PID
 Section~\ref{sec:hhh:eff} describes the process of correcting simulated events such that they best
 describe data.
 This procedure introduces systematic uncertainties which must be accounted for.
 This is done by recalculating the relative efficiency for each \qsq bin:
-without reweighting track multiplicity and $\chisqvtx(B)$;
+without reweighting track multiplicity and the \chisq of the fit to the \Bp vertex;
 without accounting for differences in tracking and {\tt isMuon} efficiencies;
 and without performing PID resampling.
 The resulting systematic uncertainty from the selection was assigned a value of $1\pc$.
@@ -310,10 +292,10 @@ Rather than the efficiency for the signal channel being determined from simulate
 using a phasespace model.
 The differences in the invariant mass distribution of \kpipi cannot be assessed using simulation
 because of the difficulties associated with theoretically describing \kpipi resonances.
-Instead, the signal effiecincies are calculated after being reweighted to match the sWeighted
+Instead, the signal efficiencies are calculated after being reweighted to match the sWeighted
 $m(\kpipi)$ distribution from signal, as shown in \Fig{fig:kpipi:kpipi}.
-Systematic uncertainties from these two sources are assessed by redetermining branching fractions
-using these new signal efficiencies.
+%Systematic uncertainties from these two sources are assessed by redetermining branching fractions
+%using these new signal efficiencies.
 
 The value of the mixing angle \thetakone has been a source of some theoretical contention, where
 $\thetakone=-34^\circ$ or
@@ -322,13 +304,13 @@ But, more recently measurements favour a value of approximately
 $-(34\pm13)^\circ$~\cite{Hatanaka:2008xj,Cheng:2011pb,Divotgey:2013jba,Cheng:2013cwa}.
 To estimate the systematic uncertainty associated with this value, the simulated data was
 reweighted on an event-by-event basis such that the value of \thetakone was varied by $1\,\sigma$.
-This was done by interfacing with \evtgen~\cite{Lange:2001uf} directly.
+%This was done by interfacing with \evtgen~\cite{Lange:2001uf} directly.
 
-The probability of a particle decaying into a given final state is done in \evtgen using
-a probability density function --- based on the decay model --- which is
-dependent upon the momenta of the final state particles.
-By calculating the probability of the decay with $\thetakone=-34^\circ$, and other angles, one can
-reweight the simulated data to match data from any angles.
+%The probability of a particle decaying into a given final state is done in \evtgen using
+%a probability density function --- based on the decay model --- which is
+%dependent upon the momenta of the final state particles.
+%By calculating the probability of the decay with $\thetakone=-34^\circ$, and other angles, one can
+%reweight the simulated data to match data from any angles.
 
 The signal efficiency was recalculated after varying the \thetakone by $1\,\sigma$ in simulated
 \decay{\Bp}{\kone{1270}\mumu} events.
@@ -343,8 +325,8 @@ calculate the total integrated branching fraction.
 This fraction is subject to a systematic uncertainty due to the mismodelling of the \qsq
 distribution in the simulated signal events.
 Form factors in \Ref{Hatanaka:2008gu} gave the central value of $21.3\,\%$.
-Vaying these form factors at generator level by a random number from a Gaussian distribution, whose
-standard devatioin is the error on the form factor.
+Varying these form factors at generator level by a random number from a Gaussian distribution, whose
+standard devation is the uncertainty on the form factor.
 This is done multiple times and leads to an uncertainty of $1.5\,\%$.
 
 
@@ -373,8 +355,9 @@ This is done multiple times and leads to an uncertainty of $1.5\,\%$.
 
 \begin{table}
   \caption{\small
-    Systematic uncertainties on the differential branching fraction \mbox{${\rm d}{\cal
-    B}(\Bu\to\Kp\pip\pim\mup\mun)/{\rm d}q^2$} in bins of $q^2$ $[\times 10^{-8} \gev^{-2}]$.
+    Systematic uncertainties on the differential branching fraction
+    %\mbox{${\rm d}{\cal B}(\Bu\to\Kp\pip\pim\mup\mun)/{\rm d}q^2$}
+    \btokpipimumu in bins of $q^2$ $[\times 10^{-8} \gev^{-2}]$.
   }
   \label{tab:kpipi:syst}
   \begin{center}
@@ -402,18 +385,27 @@ This is done multiple times and leads to an uncertainty of $1.5\,\%$.
     %& $[14.19,19.0]$
     \\ \midrule
     $\BF\big(\btopsitwosk\big)$      &   0.288 &   0.096 &   0.094 &   0.075 &   0.004 \\  % x10e-8
-    Tracking efficiency    &   0.080 &   0.020 &   0.024 &   0.012 &   0.000 \\  % x10e-8
-    Reweighting            &   0.106 &   0.006 &   0.034 &   0.006 &   0.000 \\  % x10e-8
-    PID efficiency         &   0.060 &   0.057 &   0.041 &   0.044 &   0.002 \\  % x10e-8
-    {\tt IsMuon} and {\tt PIDmu} efficiencies &   0.055 &   0.020 &   0.018 &   0.010 &   0.000 \\  % x10e-8
-    Signal mass model        &   0.138 &   0.052 &   0.052 &   0.039 &   0.002 \\  % x10e-8
-    Background mass model    &   0.154 &   0.038 &   0.052 &   0.093 &   0.003 \\  % x10e-8
-    \qsq model             &   0.087 &   0.047 &   0.027 &   0.094 &   0.002 \\  % x10e-8
-    $K^+\pipi$ composition &   0.175 &   0.009 &   0.010 &   0.061 &   0.004 \\  % x10e-8
-    \thetakone             &   0.110 &   0.036 &   0.062 &   0.003 &   0.001 \\  % x10e-8
-    Relative efficiencies  &   0.014 &   0.005 &   0.003 &   0.003 &   0.000 \\  % x10e-8
-    Peaking backgrounds    &   0.000 &   0.000 &   0.126 &   0.000 &   0.000 \\  % x10e-8
-    Trigger                &   0.152 &   0.052 &   0.042 &   0.011 &   0.000 \\  % x10e-8
+    %Tracking efficiency    &   0.080 &   0.020 &   0.024 &   0.012 &   0.000 \\  % x10e-8
+    %Reweighting            &   0.106 &   0.006 &   0.034 &   0.006 &   0.000 \\  % x10e-8
+    %PID efficiency         &   0.060 &   0.057 &   0.041 &   0.044 &   0.002 \\  % x10e-8
+    %Muon PID efficiencies  &   0.055 &   0.020 &   0.018 &   0.010 &   0.000 \\  % x10e-8
+    %Signal mass model      &   0.138 &   0.052 &   0.052 &   0.039 &   0.002 \\  % x10e-8
+    %Background mass model  &   0.154 &   0.038 &   0.052 &   0.093 &   0.003 \\  % x10e-8
+    %\qsq model             &   0.087 &   0.047 &   0.027 &   0.094 &   0.002 \\  % x10e-8
+    %$K^+\pipi$ composition &   0.175 &   0.009 &   0.010 &   0.061 &   0.004 \\  % x10e-8
+    %\thetakone             &   0.110 &   0.036 &   0.062 &   0.003 &   0.001 \\  % x10e-8
+    %Relative efficiencies  &   0.014 &   0.005 &   0.003 &   0.003 &   0.000 \\  % x10e-8
+    %Peaking backgrounds    &   0.000 &   0.000 &   0.126 &   0.000 &   0.000 \\  % x10e-8
+    %Trigger                &   0.152 &   0.052 &   0.042 &   0.011 &   0.000 \\  % x10e-8
+    %\littlerule
+    Corrections to simulation & 0.218 & 0.082 & 0.074 & 0.048 & 0.002 \\
+    \kpipi composition        & 0.175 & 0.009 & 0.010 & 0.061 & 0.004 \\
+    Value of \thetakone       & 0.110 & 0.036 & 0.062 & 0.003 & 0.001 \\
+    \qsq model                & 0.087 & 0.047 & 0.027 & 0.094 & 0.002 \\
+    Mass model: background    & 0.154 & 0.038 & 0.052 & 0.093 & 0.003 \\
+    Mass model: signal        & 0.138 & 0.052 & 0.052 & 0.039 & 0.002 \\
+    Relative efficiencies     & 0.014 & 0.005 & 0.003 & 0.003 & 0.000 \\
+    Peaking backgrounds       & 0.000 & 0.000 & 0.126 & 0.000 & 0.000 \\
     \littlerule
     Total    & 0.473 & 0.154 & 0.201 & 0.175 & 0.007 \\
     \bottomrule

@@ -7,9 +7,9 @@ channel \btojpsiphik:
   \BF\big(\btokphimumu\big)=
   \frac{ N^\prime\big(\btophikmumu\big) }{ N\big(\btophikmumu\big) }
   \cdot\BF\big(\btojpsiphik\big)
-  \cdot\BF\big(\jpsitomumu\big).
+  \cdot\BF\big(\jpsitomumu\big),
 \end{equation}
-Here, $N^\prime\big(\btophikmumu\big)$ denotes the number of signal events extracted from an
+here, $N^\prime\big(\btophikmumu\big)$ denotes the number of signal events extracted from an
 weighted unbinned maximum likelihood fit of \btophikmumu candidates.
 Each event is weighted by the relative efficiency:
 \begin{equation}
@@ -24,19 +24,6 @@ The branching fraction measurements used were
 $\BF\big(\btojpsiphik\big)=\big(5.2\pm1.7\big)\e{-5}$~\cite{PDG2012},
 and $\big(\jpsitomumu\big)=5.93\pm0.06$~\cite{PDG2012}.
 
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.48\textwidth]{phik_eff}
-    \caption{\small
-      The efficiency of the signal decay \btokphimumu in bins of \qsq, as used to reweight each
-      signal event by.
-      There are no events in the $14.18<\qsq<19.00\gevgev$ bin which is present in the
-      \btokpipimumu analysis.
-      Light blue shaded regions indicate the vetoed \jpsi and \psitwos regions.
-    }
-    \label{fig:hhh:phikeff}
-  \end{center}
-\end{figure}
 
 Yields for both the signal and normalization channels are extracted from unbinned maximum
 likelihood fits of the invariant mass of the \Bp candidates.
@@ -83,7 +70,7 @@ fraction of the normalization channel ($\sim33\,\%$).
       The signal component (light blue) is modelled by the sum of two Gaussian distributions, each
       with a power-law tail on the low-mass side; and the background component is a second order
       Chebychev polynomial.
-      Variiables describing the signal shape in the fit to \btophikmumu are fixed by the fit to
+      Variables describing the signal shape in the fit to \btophikmumu are fixed by the fit to
       \btojpsiphik.
     }
     \label{fig:phik:fit}
@@ -159,16 +146,23 @@ All other systematic uncertainties are evaluated in the same way as in the analy
     Source & $[\times10^{-8}]$
     \\\midrule
     $\BF\big(\btojpsiphik\big)$  &   2.688        \\  % x10e-8
-    \littlerule
-    Tracking efficiency        &   0.057        \\  % x10e-8
-    Reweighting            &   0.020        \\  % x10e-8
-    PID resampling               &   0.047        \\  % x10e-8
-    {\tt IsMuon} and {\tt PIDmu} efficiencies &   0.013     \\  % x10e-8
-    Relative efficiency    &   0.065        \\  % x10e-8
-    Background mass model        &   0.245        \\  % x10e-8
-    Signal mass model        &   0.128        \\  % x10e-8
-    Trigger                &   0.123        \\  % x10e-8
-    \qsq model             &   0.118        \\  % x10e-8
+    %%\littlerule
+    %Tracking efficiency          &   0.057        \\  % x10e-8
+    %Reweighting                  &   0.020        \\  % x10e-8
+    %PID resampling               &   0.047        \\  % x10e-8
+    %Muon PID efficiencies        &   0.013     \\  % x10e-8
+    %Relative efficiency          &   0.065        \\  % x10e-8
+    %Background mass model        &   0.245        \\  % x10e-8
+    %Signal mass model            &   0.128        \\  % x10e-8
+    %Trigger                      &   0.123        \\  % x10e-8
+    %\qsq model                   &   0.118        \\  % x10e-8
+    %%\littlerule
+    %%Charmonium veto        &   $^{+0.931}_{-0.166}$ \\
+    Corrections to simulation    &   0.145 \\
+    Relative efficiency          &   0.065 \\
+    Mass model: background       &   0.245 \\
+    Mass model: signal           &   0.128 \\
+    \qsq model                   &   0.118 \\
     %\littlerule
     %Charmonium veto        &   $^{+0.931}_{-0.166}$ \\
     \bottomrule
