@@ -197,35 +197,42 @@ $30\mev$ of the nominal \Dz mass in the $\Kp\pi^-_\mu$ spectrum are vetoed.
 
 
 
-%% SEMILEPTONIC DECAYS
-%Semileptonic cascades, where a \bquark decays via $\decay{b}{c\mun\bar\nu_\mu}$ and subsequently
-%$\decay{c}{s\mup\nu_\mu}$, can have branching fractions as high as $\mathcal{O}(10^{-4})$.
-%For example, the decay $\decay{\Bp}{\Dm\pip\mup\nu_\mu}$ followed by
-%$\decay{\Dm}{\Kp\pim\mun\bar\nu_\mu}$ has a total branching fraction of
-%$(1.6\pm0.3)\e{-4}$~\cite{PDG2014}.
-%Selection requirements on the \chisqvtx suppress these decays significantly, and the energy lost to
-%the neutrinos means that this background peaks considerably below the known \Bp mass.
-%\begin{figure}
-  %\begin{center}
-    %\includegraphics[width=0.48\textwidth]{hhh_cascade}
-    %\caption{\small
-      %\Dz backgrounds from cascade decays
-    %}
-    %\label{fig:hhh:dzbkg}
-  %\end{center}
-%\end{figure}
+% SEMILEPTONIC DECAYS
+Semileptonic cascades, where a \bquark decays via $\decay{b}{c\mun\bar\nu_\mu}$ and subsequently
+$\decay{c}{s\mup\nu_\mu}$, can have branching fractions as high as $\mathcal{O}(10^{-4})$.
+For example, the decay $\decay{\Bp}{\Dm\pip\mup\nu_\mu}$ followed by
+$\decay{\Dm}{\Kp\pim\mun\bar\nu_\mu}$ has a total branching fraction of
+$(1.6\pm0.3)\e{-4}$~\cite{PDG2014}.
+Selection requirements on the \chisqvtx suppress these decays significantly, and the energy lost to
+the neutrinos means that this background peaks considerably below the known \Bp mass, as shown in
+\Fig{fig:hhh:cascade}.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{hhh_cascade}
+    \caption{\small
+      Background from the cascade decay $\decay{\Bp}{\Dm\pip\mup\nu_\mu}$, where
+      $\decay{\Dm}{\Kp\pim\mun\bar\nu_\mu}$ does extend as high in mass as the nominal \Bp mass,
+      due to lost energy from neutrinos.
+    }
+    \label{fig:hhh:cascade}
+  \end{center}
+\end{figure}
 
 
 \subsection{Multivariate selection}
 \label{sec:hhh:bdt}
-Combinatorial background was suppressed using a BDT trained using the AdaBoost
+Combinatorial background is suppressed using a BDT trained using the AdaBoost
 algorithm~\cite{AdaBoost}, which is described in detail in \Chap{sec:bdt:ada}.
-Both signal and background samples used for BDT training were taken from data.
-The sample of data used as the signal-proxy was from  the decay \btojpsikpipi, which had been
-\emph{sWeighted}~\cite{splot} for the purpose of removing combinatorial background from the
-training sample.
-For the background sample, selected signal mode data was taken from the upper mass sideband of the
-\Bp candidate mass, in the range $5530<\mass{\kpipimumu}<5780\mev$.
+The signal-proxy are taken from the background subtracted sample of \btojpsikpipi candidates.
+Background-lie events are selected from the upper mass sideband of the dignal selection in the
+range $5530<\mass{\kpipimumu}<5780\mev$.
+%Both signal and background samples used for BDT training were taken from data.
+%The sample of data used as the signal-proxy was from  the decay \btojpsikpipi, which had been
+%\emph{sWeighted}~\cite{splot} for the purpose of removing combinatorial background from the
+%training sample.
+%For the background sample, selected signal mode data was taken from the upper mass sideband of the
+%\Bp candidate mass, in the range $5530<\mass{\kpipimumu}<5780\mev$.
 These candidates are not used for the determination of the signal yield, and at this high mass are
 comprised solely of combinatorial background.
 
@@ -437,7 +444,7 @@ BDT and $\dllkpi(K)$ cuts, the optimal values are given in \Table{tab:hhh:opt}.
 %\section{Summary}
 
 %PID info from the RICH is used to identify final state hadrons
-%PV chosen based on lowest PV of B candidateo
+%PV chosen based on lowest PV of B candidates
 %vertex fit \chisq must increase by more than 121 when including the B candidate daughters
 %fit vertex chi2 < 6
 %Backgorunds of \jpsi and \psitwos must be removed
