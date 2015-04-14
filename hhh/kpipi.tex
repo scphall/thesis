@@ -45,14 +45,12 @@ where $N$ and $\varepsilon$ denote yields and efficiencies, respectively.
 
 The yield  of the normalization channel is extracted from an unbinned extended maximum likelihood
 fit to the invariant mass distribution of \btopsitwosk candidates.
-The function used to fit the data constitutes a signal and background component.
-Signal candidates are modelled using the sum of two Gaussian functions, each having a power-law
-tail at low-mass.
-The parameters of the tail shared between the Gaussians, and all parameters are taken from a fit to
-the high statistics mode of the cross-check channel \btojpsikpipi.
-The background function is made of an exponential, to model combinatorial background, and a
+%The function used to fit the data constitutes a signal and background component.
+The signal shape is modelled using the sum of two Gaussian functions, each having a power-law
+tail at low-mass, where the tail parameters are shared between both Gaussians.
+Background is modelled using the sum of an exponential to model combinatorial background, and a
 Gaussian at low mass to model partially reconstructed candidates.
-The same function is used to fit \mass{\jpsi\kpipi} the control channel.
+The control channel \btojpsikpipi is fit to the same model.
 These fits are shown in \Fig{fig:kpipi:norm} and they yield
 $N\big(\btopsitwosk\big)=5128\pm67$ and $N\big(\btojpsikpipi\big)=59\,335\pm343$.
 
@@ -84,10 +82,14 @@ was fixed to as large an extent as possible.
 The lower limit of the fit was taken to be $5150\mev$, because partially reconstructed background
 becomes significant below that.
 The combinatorial background shape is an exponential distribution, where the exponent and yield was
-allowed to float in the fit; however, in the regions where charmonium vetoes are effective, the
-steps in the background are fixed using sideband data.
-The signal function was also the sum of Gaussians with power law tails, where the parameters are
-all fixed to the values from the fit to the cross-check channel.
+allowed to float in the fit.
+In \qsq regions where charmonium vetoes are effective, the background distribution must account for
+the areas in which charmonium vetoes are extended, this is done by incorporating discrete steps in
+the combinatorial background; the size of which are determined from data.
+%The signal function was also the sum of Gaussians with power law tails, where the parameters are
+%all fixed to the values from the fit to the cross-check channel.
+A fit from the crosscheck channel fixes the signal model used in the lower statistics signal
+channel.
 Figure~\ref{fig:kpipi:q2fits} shows the invariant mass distribution for all signal
 candidates for the whole \qsq region and for each bin.
 The total signal yield is measured to be $N(\btokpipimumu)=367\,^{+24}_{-23}$.
@@ -128,13 +130,11 @@ The total signal yield is measured to be $N(\btokpipimumu)=367\,^{+24}_{-23}$.
 %\end{figure}
 
 
-
-
-
-Differential branching fractions were calculated with \Eq{eq:kpipi:diffbf} where yields were
-extracted from fits in \Fig{fig:kpipi:q2fits}.
-These results are shown graphically in \Fig{fig:kpipi:diffbf} and are given numerically --- along
-with signal yields --- are shown in \Tab{tab:kpipi:diffbf}.
+Differential branching fractions were calculated according to \Eq{eq:kpipi:diffbf}, where yields
+were extracted from fits in \Fig{fig:kpipi:q2fits}.
+Results are shown graphically in \Fig{fig:kpipi:diffbf} and are given numerically --- along
+with signal yields --- in \Tab{tab:kpipi:diffbf}.
+Uncertainty from the normalization channel is fully correlated between all \qsq bins.
 The sum over all \qsq bins results in an integrated branching fraction of
 \begin{equation*}
   \BF\big( \btokpipimumu \big)=
@@ -159,9 +159,9 @@ ratio of branching fractions is also quoted
   \frac{ \BF\big( \btokpipimumu \big) }{ \BF\big( \btopsitwosk \big) } =
   \big(6.95\,^{+0.46}_{-0.43}\stat\pm0.34\syst\big)\e{-4}.
 \end{equation*}
-Where the value used is~\cite{PDG2012}
-$\BF_\mathrm{tot}\big(\btopsitwosk\big)$,
-and the uncertainty is fully correlated between \qsq bins.
+%Where the value used is~\cite{PDG2012}
+%$\BF_\mathrm{tot}\big(\btopsitwosk\big)$,
+%and the uncertainty is fully correlated between \qsq bins.
 
 {\renewcommand{\arraystretch}{1.2}
 \begin{table}
@@ -204,8 +204,8 @@ and the uncertainty is fully correlated between \qsq bins.
   \end{center}
 \end{figure}
 
-Figure~\ref{fig:kpipi:kpipi} shows th subtracted invariant mass distribution's of the \kpipi
-systems in the cases for both decays \btojpsikpipi and \btokpipimumu.
+Figure~\ref{fig:kpipi:kpipi} shows the background subtracted invariant mass distribution's of the
+\kpipi system in the case of both decays \btojpsikpipi and \btokpipimumu.
 Numerous broad resonances are visible in the distributions.
 The \kpipi system from the resonant \btojpsikpipi decay shows significant, though not dominant,
 contributions from the \kone{1270} state.
