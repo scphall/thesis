@@ -116,8 +116,6 @@
 \usepackage{preamble/slashed}
 \usepackage{dsfont}
 \usepackage{bbold}
-%\usepackage[printonlyused,withpage]{acronym}
-%\setacronymstyle{long-short}
 
 %% fix to allow peaceful coexistence of line numbering and
 %% mathematical objects
@@ -151,7 +149,18 @@ end#1\endcsname
 \usepackage{hyperref}    % Hyperlinks in references
 \usepackage[all]{hypcap} % Internal hyperlinks to floats.  bookmarks
 
+\definecolor{britishracinggreen}{rgb}{0.0, 0.26, 0.15}
+\definecolor{linkblue}{rgb}{0.0, 0.28, 0.67}
+\hypersetup{
+  colorlinks=true,% false: boxed links; true: colored links
+  linkcolor=linkblue, % color of internal links (change box color with linkbordercolor)
+  citecolor=black, % color of links to bibliography
+  filecolor=black, % color of file links
+  urlcolor=linkblue   % color of external links
+}
+
 %\usepackage[acronym]{glossaries}
+%\setacronymstyle{long-short}
 \usepackage[nopostdot,nogroupskip,xindy,nonumberlist]{glossaries}
 %\setglossarystyle{altlist}
 %\usepackage{glossary-mcols}

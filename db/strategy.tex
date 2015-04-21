@@ -1,6 +1,97 @@
 \section{Strategy}
 \label{sec:db:strategy}
 
+This analysis is a completely general search for a particle of unknown mass and lifetime, the
+following chapter outlines the strategy employed; exhaustive details can be found in
+\Ref{Williams:2015xfa}.
+Broadly, the search involves a fully frequentest scan of the dimuon invariant mass spectrum from
+\btokstrmumu for an excess of events consistent with \dbtomumu.
+The scan is performed in two dimensions, namely: mass and lifetime.
+
+Firstly, an explanation of the search in the mass dimension will be presented, and then extended to
+to deal with the lifetime dimension.
+
+
+\subsection{Searching in the mass dimensions}
+A scan in mass is performed where the test mass, \mass{t}, is incremented in steps of
+$\tfrac12\sigmam$, where $\sigmam$ is the local mass resolution defined at \mass{t}, and is in the
+range $1\lesssim\sigmam\lesssim6\mev$.
+At each \mass{t} a signal region is defined as $|m-\mass{t}<2\sigmam$ and a sideband, or
+background, region is defined as $3<|m-\mass{t}|<(2x+3)\sigmam$, where
+$x$ defines the width of the sideband regions with respect to the signal region.
+The idea of constructing the two regions is to use the sideband regions to estimate the background
+contribution in the signal window.
+
+At each mass point in the search the number of events in the signal region, $n_s$, and the number
+of events in the background events, $n_b$, are counted.
+If the background is linear --- on average --- in the local mass region, then
+$\langle n_s\rangle=\langle n_b\rangle/2$ if there is no signal contribution.
+However, if there is a signal contribution from a decaying \db then $n_s=s+b$, where $s$ is the
+number of signal events, and $b$ is the background in the signal region, which is estimated from the
+sideband regions.
+Thus, one can construct a likelihood
+\begin{equation}
+  \mathcal{L}(n_s, n_b | s, b) =
+  \mathcal{P}(n_s, s+b) \cdot
+  \mathcal{P}(n_b, xb),
+  \label{eq:db:like1}
+\end{equation}
+where $\mathcal{P}(n, \lambda)$ is the probability of observing $n$ from a Poisson distribution
+parameterize by $\lambda$.
+This just parameterizes the likelihood of the background estimate from the sidebands fluctuating to
+the observed number of events in the signal region.
+Twice, so far, the local linearity of the background has been mentioned as the sole assumption,
+this is important to bare in mind throughout.
+
+The problem with \Eq{eq:db:like1} is that, while $x$ has been chosen, deviations from a linear
+background distribution mean that the actual sideband size with respect to the signal region is not
+$x$.
+Rather, the actual scaling factor is some $y$, with some uncertainty $\sigma_y$.
+This can be accounted for by including an additional term in the likelihood
+\begin{equation}
+  \mathcal{L}(n_s, n_b, x | s, b, y) =
+  \mathcal{P}(n_s, s+b) \cdot
+  \mathcal{P}(n_b, yb) \cdot
+  \mathcal{G}(y,x,\sigma_y),
+  \label{eq:db:like2}
+\end{equation}
+where $\mathcal{G}(n, \mu, \sigma)$ is the probability of observing $n$ given a Gaussian
+distribution with a mean, $\mu$, and standard deviation, $\sigma$.
+
+The dimuon background from the \sm decay of \btokstrmumu is expected to be locally-linear, in the
+absence of resonances, to better than $1\pc$ over the entire mass range.
+However, including resonances in the model lead to significant deviations from linearity.
+The magnitude of the deviation is dependent upon the width of a resonance, $\Gamma$, the size of it
+relative to the local background distribution, and the value of $x$.
+Wide resonances, $\Gamma\gtrsim20\sigmam$, are sufficiently wide not as to be problematic even if
+they dominate the local background distribution.
+Conversely, narrow resonances where $\Gamma\lesssim5\sigmam$ lead to significant deviations from a
+locally-linear background and must, therefore, be vetoed.
+Intermediate resonances, $5\lesssim\Gamma\lesssim20\sigmam$, must be considered on a case-by-case
+basis since they are only troublesome if they account for a large fraction of the local background.
+For this analysis these ranges roughly translate to requiring that resonances with $\Gamma<25\mev$
+will be vetoed, while those with $\Gamma>100\mev$ shall be ignored.
+
+%Practically, the resonances that must be removed from the background are the \phi, \jpsi, \psitwos
+%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
