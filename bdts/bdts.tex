@@ -14,16 +14,16 @@ The input, or training, variables define an $n$-dimensional space populated by t
 The algorithm then classifies regions in this $n$-dimensional space as signal- or background-like;
 such that an arbitrary event placed somewhere in the space would also be classified based on the
 point it inhabits.
-The Boosted Decision Tree (BDT) algorithm is used throughout this thesis because it can handle
+The \BDT algorithm is used throughout this thesis because it can handle
 a weighted training sample, including negative weights, and can exploit non-linear correlations
 between variables~\cite{Breiman,Roe}.
 
-A BDT is composed of a combination of numerous Decision Trees (DTs), each of which is a classifier
+A \BDT is composed of a combination of numerous \DTs, each of which is a classifier
 --- albeit a weak classifier ---
 in its own right, and can only distinguish between high density populations of signal and
 background candidates.
 
-Training a DT begins with a single parent node populated by the whole
+Training a \DT begins with a single parent node populated by the whole
 training sample, which inhabits the parameter space defined by the
 variables $x_i$, whose true distribution is $f(x_i)$.
 The sample on the parent node is split by selecting a cut based on maximizing some figure of merit.
@@ -42,11 +42,11 @@ The final child nodes, or leaves, are each associated with signal or background 
 purity of the sample which populates it.
 Each leaf therefore maps out an area in $n$-dimensions, and is classified as a signal or background leaf
 depending on the purity of the training sample enclosed by that area.
-The hypothesised category, as output by the DT, $h(x_i)$, will ideally be equal to $f(x_i)$, but in reality there will be
+The hypothesised category, as output by the \DT, $h(x_i)$, will ideally be equal to $f(x_i)$, but in reality there will be
 events which are misclassified.
 A figure of merit which is often used to determine the cut used at each node is the $G_{ini}$
 index, which is defined as
-%Training a DT begins with a single node, a decision is chosen which best separates the signal from
+%Training a \DT begins with a single node, a decision is chosen which best separates the signal from
 %background based on the value of the $\mathrm{G}_{ini}$ index, which is defined as
 \begin{equation}
   \mathrm{G}_{ini} = 2p_\mathrm{bkg}p_\mathrm{sig}
@@ -65,7 +65,7 @@ node of interest.
 %nodes, at which point the node is dubbed a leaf and is not split.
 %Each leaf maps out an area in $n$-dimensions, and is classified as a signal or background leaf
 %depending on the purity of the training sample enclosed by that area.
-%Candidates from the other samples can then be traced through the DT and assigned as being
+%Candidates from the other samples can then be traced through the \DT and assigned as being
 %consistent with either signal or background.
 %However, some candidates in the training sample will be misclassified.
 
@@ -73,12 +73,12 @@ Decision Trees have the advantages over other machine learning algorithms ---
 such as neural nets --- of being able to deal with weighted training samples, and being insensitive
 to variables with very little separation power because the
 $\mathrm{G}_{ini}$ index never identifies a cut on them as being profitable.
-However, DTs are sensitive to statistical fluctuations in the training sample.
-To negate this problem DTs can be \emph{Boosted} using any one of a number of algorithms.
+However, \DTs are sensitive to statistical fluctuations in the training sample.
+To negate this problem \DTs can be \emph{Boosted} using any one of a number of algorithms.
 The procedure of boosting removes the power of that statistical fluctuations has over the final
-Boosted Decision Tree (BDT).
+\BDT.
 
-A different boosting method is used to train the BDT for each analyses in this thesis.
+A different boosting method is used to train the \BDT for each analyses in this thesis.
 The algorithms used are outlined in the remainder of this Chapter.
 
 

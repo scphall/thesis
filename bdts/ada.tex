@@ -3,8 +3,8 @@
 The Adaptive Boost, AdaBoost, algorithm\footnote{
   This section is based on \Ref{AdaBoost}} negates the effect of statistical
 fluctuations in a data set by increasing the weights of misclassified events.
-The algorithm begins by training a single DT as described above, where each event has unit weight.
-For subsequent DTs, the weight for each event, $i$, is modified for a tree $t$, to be
+The algorithm begins by training a single \DT as described above, where each event has unit weight.
+For subsequent \DTs, the weight for each event, $i$, is modified for a tree $t$, to be
 \begin{equation}
   w_i^t = c_i^t \times w_i^{t-1},
   \label{eq:ada:wt}
@@ -22,15 +22,15 @@ where $c$ is determined to be
 \end{align}
 %Here, $\gamma_i^t$ is unity if event $i$ was classified incorrectly in tree $t-1$, otherwise it is
 %zero.
-The value of $\alpha_t$ is the weight that the DT carries, and is given by
+The value of $\alpha_t$ is the weight that the \DT carries, and is given by
 \begin{equation}
   \alpha_t = \frac12\ln\left(\frac{1-\epsilon_t}{\epsilon_t}\right)
 \end{equation}
 where $\epsilon$ is the weighted error rate.
 Weights are then renormalised such that they sum to unity.
-Multiple DTs are made in this fashion, forming a forest; where the response of the BDT classifier
-is a combination of responses from all DTs in the forest.
-The total response of a BDT, $T$, is
+Multiple \DTs are made in this fashion, forming a forest; where the response of the \BDT classifier
+is a combination of responses from all \DTs in the forest.
+The total response of a \BDT, $T$, is
 %for an event characterized by $x_i$, is
 \begin{equation}
   T(x_i) = \sum_{t=1}^{n} \alpha_tT_t(x_i)
@@ -39,32 +39,32 @@ The total response of a BDT, $T$, is
 where $T_t(x_i)$ is the response of tree $t$, which returns one if it classifies $x_i$ as being
 signal-like, and negative one if it is background-like.
 
-This reweighting proceedure articficially fluctuates the training sample which is used to train
-each DT.
+This reweighting procedure artificially fluctuates the training sample which is used to train
+each \DT.
 
 
 %For a training sample, described by the varibles $x_i$ with true responses $f(x_i)\in{-1,1}$,
-%a BDT produced with the AdaBoost algorithm gives the output of
+%a \BDT produced with the AdaBoost algorithm gives the output of
 %\begin{equation}
   %T_m = \sum_{j=1}^{m}\alpha_jh_j(x_i),
 %\end{equation}
-%where $h_j(x_i)$ is the responce of a single DT.
-%The coefficent $\alpha_j$, is the weight given to DT $j$, which is calculated as
+%where $h_j(x_i)$ is the responce of a single \DT.
+%The coefficent $\alpha_j$, is the weight given to \DT $j$, which is calculated as
 %\begin{equation}
   %\alpha_j = \frac12\ln\left(\frac{1-\epsilon_j}{\epsilon_j}\right)
 %\end{equation}
-%where $\epsilon_j$ is the weighted error for a single DT
+%where $\epsilon_j$ is the weighted error for a single \DT
 %\begin{equation}
   %%\epsilon_j = \frac{\sum_{y_i\neq h(x_i)}w_i}{\sum_{i=1} h(x_i)w_i}.
   %\epsilon_j = \frac{W_\mathrm{misclassified}}{W_\mathrm{total}}
 %\end{equation}
-%Each event in the training sample is given a weight which changes as the BDT is trained.
+%Each event in the training sample is given a weight which changes as the \B\DT is trained.
 %Initially each event has unit weight, $w_i^{(1)}=1$, but this changes to
 %\begin{equation}
   %w_i^{(m)} = e^{-y_iC_m(x_i)},
 %\end{equation}
-%for subsequent DTs, which boosts, thus boosting the importance of misclassified events.
+%for subsequent \DTs, which boosts, thus boosting the importance of misclassified events.
 %Decision tree number $m+1$ is then calculated using the above equations, and added to the total
-%BDT.
+%\B\DT.
 
 

@@ -5,7 +5,7 @@ trigger.
 Subsequent software trigger stages required that at least one final-state muon has $\pt>1.0\gev$
 and at least one hadron has $\pt>1.6\gev$, both of which have an IP larger than $100\mum$ with
 respect to any PV in the event.
-The response of the topological BBDT in \hlttwo must be consistent with a decaying $B$ meson
+The response of the topological \BBDT in \hlttwo must be consistent with a decaying $B$ meson
 with muons in the final state.
 
 %There is large overlap between the...
@@ -39,7 +39,7 @@ mass within $50\mev$ of their known masses~\cite{PDG2012}.
 %\btojpsiphik (where \psitwostojpsipipi and \jpsitomumu) respectively.
 %These are chosen to have the same final state particles as the signal decays to ensure that PID and
 %tracking efficiencies cancel, to first order.
-%The decay \btojpsikpipi is also used in this analysis for cross-checks and in training the BDT (as
+%The decay \btojpsikpipi is also used in this analysis for cross-checks and in training the \BDT (as
 %described in \Sect{sec:hhh:bdt}).
 %All these decays were subject to the same selection criteria except for requirements on the
 %invariant mass of the dimuon pair.
@@ -223,12 +223,12 @@ the neutrinos means that this background peaks considerably below the known \Bp 
 
 \subsection{Multivariate selection}
 \label{sec:hhh:bdt}
-Combinatorial background is suppressed using a BDT trained using the AdaBoost
+Combinatorial background is suppressed using a \BDT trained using the AdaBoost
 algorithm~\cite{AdaBoost}, which is described in detail in \Chap{sec:bdt:ada}.
 The signal-proxy are taken from the background subtracted sample of \btojpsikpipi candidates.
 Background-lie events are selected from the upper mass sideband of the dignal selection in the
 range $5530<\mass{\kpipimumu}<5780\mev$.
-%Both signal and background samples used for BDT training were taken from data.
+%Both signal and background samples used for \BDT training were taken from data.
 %The sample of data used as the signal-proxy was from  the decay \btojpsikpipi, which had been
 %\emph{sWeighted}~\cite{splot} for the purpose of removing combinatorial background from the
 %training sample.
@@ -237,13 +237,13 @@ range $5530<\mass{\kpipimumu}<5780\mev$.
 These candidates are not used for the determination of the signal yield, and at this high mass are
 comprised solely of combinatorial background.
 
-This BDT was trained using selection of geometric and kinematic variables, the exact variables are
+This \BDT was trained using selection of geometric and kinematic variables, the exact variables are
 listed in \Tab{hhh:tab:bdtvars}.
 
 %\begin{table}
-  %\caption[BDT training variables]
+  %\caption[\BDT training variables]
   %{\small
-    %Input variables used to train the BDT to distinguish between signal \btokpipimumu decays and
+    %Input variables used to train the \BDT to distinguish between signal \btokpipimumu decays and
     %combinatorial backgrounds.
   %}
   %\label{hhh:tab:bdtvars}
@@ -265,7 +265,7 @@ listed in \Tab{hhh:tab:bdtvars}.
 \begin{table}
   \caption[BDT training variables]
   {\small
-    Input variables used to train the BDT to distinguish between signal \btokpipimumu decays and
+    Input variables used to train the \BDT to distinguish between signal \btokpipimumu decays and
     combinatorial backgrounds.
   }
   \label{hhh:tab:bdtvars}
@@ -287,7 +287,7 @@ listed in \Tab{hhh:tab:bdtvars}.
 
 \subsubsection{Optimization of particle identification criteria and multivariate classifier}
 \label{sssec:opt:kpipi}
-The determination of the optimum cut value on the BDT is required in conjunction with optimizing
+The determination of the optimum cut value on the \BDT is required in conjunction with optimizing
 \pid criteria on each hadron.
 For the decay \btokpipimumu, a requirement that $\dllkpi(\Kp)-\dllkpi(\pip)>10$ is made, to
 ensure that of the two hadrons with the same sign, the one identified as a kaon had more of
@@ -297,7 +297,7 @@ This also reduces the number of multiple candidates per event.
 %the event is a K pi swap down to 0.
 Before this cut, there is, on average, 1.32 candidates per event within $3\stdev$ of
 $\mass{\Bp}^{\pdg}$, which is reduced to 1.05 candidates per event.
-Then, optimization was made in the three dimensions of BDT, $\dllkpi(\Kp)$ and $\dllkpi(\pi^\pm)$
+Then, optimization was made in the three dimensions of \BDT, $\dllkpi(\Kp)$ and $\dllkpi(\pi^\pm)$
 by maximising the figure of merit $S/\sqrt{S+B}$, where $S$ and $B$ are the expected signal and
 background yields respectively.
 The value of $S$ was determined by scaling the weighted sum of selected \btojpsikpipi events,
@@ -370,9 +370,9 @@ distribution within $3\stdev$ of the known \Bp mass~\cite{PDG2012}.
 %{Optimization of \tmath{\btophikmumu} cuts}
 
 The optimization procedure for the decay \btophikmumu employs a similar strategy as \btokpipimumu,
-but only in two dimensions  (BDT and $\dllkpi(K^\pm)$).
+but only in two dimensions  (\BDT and $\dllkpi(K^\pm)$).
 %This channel follows a similar procedure for optimization as for the decay \btokpipimumu.
-%Optimization was performed in multiple dimensions (BDT and $\dllkpi(K^\pm)$) with the chosen
+%Optimization was performed in multiple dimensions (\BDT and $\dllkpi(K^\pm)$) with the chosen
 %selection of cuts maximizing the figure of merit $S/\sqrt{S+B}$.
 The calculation of $B$ was made in the same way as described above, and the
 value of $S$ was determined in a similar way, by scaling the \emph{sWeighted} sum of candidates

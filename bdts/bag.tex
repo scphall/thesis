@@ -2,27 +2,27 @@
 \label{sec:bdt:bag}
 Bootstrap aggregating, or bagging\footnote{
   This section is based on \Ref{Bagging}}, is a method of boosting whereby the effects of
-statistical fluctuations are lessened by making many independent DTs and using the
+statistical fluctuations are lessened by making many independent \DTs and using the
 and making a decision based on the average response.
 %Assume a true distribution, $f(x_i)$, where $x_i$ are the training variables.
-If the final BDT is composed of $n$ DTs, it is
-Training $n$ DTs, it is possible to define three errors, namely:
+If the final \BDT is composed of $n$ \DTs, it is
+Training $n$ \DTs, it is possible to define three errors, namely:
 square of the error of a single estimator
-%The hypothesised value, from the output of a single DT, is $h_t(x_i)$, for $1<t<n$, where
-%$n$ is the number of DTs and each DT has a weight, $w_\alpha$ assiciated with it.
+%The hypothesised value, from the output of a single \DT, is $h_t(x_i)$, for $1<t<n$, where
+%$n$ is the number of \DTs and each \DT has a weight, $w_\alpha$ assiciated with it.
 %Using these definitions, it is possible to define three errors, namely:
 %square of the error of a single estimator
 \begin{equation}
   \epsilon_t(x_i) = \big(f(x_i)-h_t(x_i)\big)^2
   \label{eq:bdt:bag1}
 \end{equation}
-where the index $t$ denotes a signle DT;
+where the index $t$ denotes a single \DT;
 the weighted average of individual errors
 \begin{equation}
   \bar\epsilon(x_i) = \frac1n\sum_{t=1}^n\epsilon_t(x_i);
   \label{eq:bdt:bag2}
 \end{equation}
-and the error of an ensemble of DTs
+and the error of an ensemble of \DTs
 \begin{equation}
   e(x_i) = \big(f(x_i)-\bar h(x_i)\big)^2.
   \label{eq:bdt:bag3}
@@ -38,13 +38,13 @@ By inserting $f(x_i)-f(x_i)$ into \Eq{eq:bdt:bag4}, manipulating the algebra, th
   \label{eq:bdt:bag5}
 \end{equation}
 emerges.
-The means that the error squared of the ensemble of DTs is equal to the average error squared of an
+The means that the error squared of the ensemble of \DTs is equal to the average error squared of an
 individual estimator, minus the weighted variance.
 Therefore the process of bagging reduces the
 effect of statistical fluctuations in the training samples~\cite{Krogh95neuralnetwork}.
 
-A bagged BDT is trained by randomly selecting events, with replacement, to train a single DT.
-Hundreds of DTs can then be trained, and the weighted response from all DTs is the result of the
+A bagged \BDT is trained by randomly selecting events, with replacement, to train a single \DT.
+Hundreds of \DTs can then be trained, and the weighted response from all \DTs is the result of the
 classifier, in the range zero to one.
 
 

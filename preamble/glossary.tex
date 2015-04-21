@@ -21,8 +21,15 @@
 \newacronym{DM}{DM}{Dark Matter}
 \newacronym{SM}{SM}{Standard Model}
 \newacronym{BSM}{BSM}{Beyond the Standard Model}
-\newacronym{DM}{DM}{Dark Matter}
+\newacronym{BDT}{BDT}{Boosted Decision Tree}
+\newacronym{uBDT}{uBDT}{Uniform \gls{BDT}}
+\newacronym{DT}{DT}{Decision Tree}
 \newacronym{EFT}{EFT}{Effective Field Theory}
+\newacronym{IP}{IP}{Impact Parameter}
+\newacronym{QCD}{QCD}{Quantum Chromodynamics}
+%\newacronym[longplural={Flavour Changing Neutral Currents},shortplural={FCNCs}]{FCNC}{FCNC}{Flavour Changing Neutral Current}
+\newacronym{FCNC}{FCNC}{Flavour Changing Neutral Current}
+\newacronym{BBDT}{BBDT}{Bonsai \gls{BDT}}
 
 
 \def\np {\gls{NP}\xspace}
@@ -33,8 +40,16 @@
 \def\pid {\gls{PID}\xspace}
 \def\dm {\gls{DM}\xspace}
 \def\sm {\gls{SM}\xspace}
-\def\dm {\gls{DM}\xspace}
 \def\EFT {\gls{EFT}\xspace}
+\def\QCD {\gls{QCD}\xspace}
+\def\BDT {\gls{BDT}\xspace}
+\def\BDTs {\glspl{BDT}\xspace}
+\def\DT {\gls{DT}\xspace}
+\def\DTs {\glspl{DT}\xspace}
+\def\fcnc {\gls{FCNC}\xspace}
+\def\fcncs {\glspl{FCNC}\xspace}
+\def\uBDT {\gls{uBDT}\xspace}
+\def\BBDT {\gls{BBDT}\xspace}
 
 %\newglossaryentry{Linux}
 %{
@@ -44,3 +59,51 @@
   %plural=Linuces
 %}
 %\newacronym[longplural=Frames per Second]{fpsLabel}{FPS}{Frame per Second}
+
+
+
+\newlength\maxlength
+\newlength\thislength
+
+\newglossarystyle{mystyle}
+{%
+  \renewenvironment{theglossary}%
+  {% start of glossary
+   % Find maximum width of the first column:
+    \setlength{\maxlength}{0pt}%
+    \forglsentries[\currentglossary]{\thislabel}%
+    {%
+       \settowidth{\thislength}{\glsentryshort{\thislabel}}%
+       \ifdim\thislength>\maxlength
+         \setlength{\maxlength}{\thislength}%
+       \fi
+    }%
+    % Now calculate the width of the second column:
+    \settowidth{\thislength}{\hspace{1.5em}=\hspace{1em}}%
+    \setlength{\glsdescwidth}{\linewidth-\maxlength-\thislength-2\tabcolsep}%
+    % Start the tabular environment
+    %\begin{tabular}{l@{\hspace{1.5em}=\hspace{1em}}p{\glsdescwidth}}
+    \begin{tabular}{lp{\glsdescwidth}}
+    %\toprule
+    %\multicolumn{1}{l}{\textbf{Abk.}} &
+    %\multicolumn{1}{@{}l}{\textbf{Bedeutung}}\\%
+    %\midrule
+  }%
+  {% end of glossary
+     %\bottomrule
+     \end{tabular}%
+  }%
+  % Header has been incorporated into \begin{theglossary}
+  \renewcommand*{\glossaryheader}{}%
+  % Don't do anything between letter groups
+  \renewcommand*{\glsgroupheading}[1]{}%
+  \renewcommand*{\glsgroupskip}{}%
+  % Set display for each the acronym entry
+  \renewcommand{\glossentry}[2]{%
+    \glstarget{##1}{\glsentryshort{##1}}% short form
+    &
+    \glsentrylong{##1}% long form
+    \\% end of row
+  }%
+  % No sub-entries, so \subglossentry doesn't need redefining
+}
