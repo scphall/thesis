@@ -42,7 +42,7 @@
 The data sample used in this analysis amounts to
 $1\invfb$ of $pp$ collisions at $7\tev$ collected by the \lhcb detector in 2011.
 Events are selected by the trigger at hardware level if they fulfill the requirements of the \lone
-hadron trigger, or any track in the event fulfills any \lone trigger line reqiurement (\tis).
+hadron trigger, or any track in the event fulfills any \lone trigger line requirement (\tis).
 Further trigger requirements are applied at the \hlttwo level, where events are required to pass at
 least one of the hadronic topological triggers (see \Sec{sec:lhcb:trig} for more details) with
 \tos.
@@ -51,7 +51,7 @@ The \Ds meson is only reconstructed from the Cabibbo favoured decay \dstokkpi,
 which has a branching fraction of $(5.39\pm0.21)\e{-2}$.
 Furthermore, the mass of the reconstructed particle must fall within $25\mev$ of
 $m_{\Ds}^\pdg=1968.30\pm0.11\mev$; where the superscript \pdg indicates the nominal mass of the
-indicated particle from \ref{PDG2012}.
+indicated particle from \Ref{PDG2012}.
 The \Ds meson decays weakly, and therefore has a non-zero lifetime,
 $\tau_{\Ds}=(5.00\pm0.07)\e{-13}$, and thus an extremely narrow width, so the value of $25\mev$
 is primarily to account for detector resolution effects.
@@ -61,10 +61,10 @@ vertex lies downstream of the \Bp decay vertex.
 Candidate \phii mesons are reconstructed from the decay mode \phitokk, where
 $\BF(\phitokk)=(0.498\pm0.005)$ and are accepted if the
 invariant \kk mass, $\mass{\kk}$, is within $40\mev$ of
-$\mass{\phi}^\pdg=(1019.461\pm0.019\mev$~\cite{PDG2012}.
-The \phii meson decays strongly, and therefore has a narrow width,
-$\Gamma_\phi=(4.266\pm0.031)\mev$, and the detector resolution is better for the \phii than the \Ds
-because of its mass and that it has zero lifetime.
+$\mass{\phi}^\pdg=(1019.461\pm0.019)\mev$~\cite{PDG2012}.
+The \phii meson decays strongly, and therefore has an appreciable width,
+$\Gamma_\phi=(4.266\pm0.031)\mev$, but the detector resolution is better for the \phii than the \Ds
+because of it has zero lifetime.
 Therefore, a mass window of $40\mev$ is extremely wide; but further mass constraints of the \phii
 are applied in the signal yield fit, such that the signal region is defined by a window that
 extends only $20\mev$ from $\mass{\phi}^\pdg$.
@@ -74,8 +74,9 @@ $\pt>100\mev$, and tracks from the \Ds(\phii), $p>1(2)\gev$.
 Geometrical constraints are also placed on the tracks.
 The \chisq per degree of freedom of the track fit, $\chisqtrk/\ndof$, must be less than four, and
 $\min\left(\chisqip\right)>4$.
-The variable \chisqip is defined as the increase in \chisqvtx when the signal track is combined
-with the PV; the $\min\left(\chisqip\right)$ is the minimum \chisqip with respect to all PVs.
+The variable \chisqip is defined as the increase in the \chisq of the vertex fit (\chisqvtx) when
+the signal track is combined with the PV; the $\min\left(\chisqip\right)$ is the minimum \chisqip
+with respect to all PVs.
 Loose PID requirements are also placed on all tracks, and further PID constraints are applied in
 the \bdt, which is detailed later.
 
@@ -88,7 +89,7 @@ the vector formed by the PV and decay vertex of the \Bp.
 Were the resolution of the \lhcb detector to be perfect, a real decay would have $\cos\thetadir=1$.
 Prompt background from the PV is suppressed by requiring that the lifetime of the \Bp,
 $\tau_{\Bp}$, is greater than $0.2\ps$.
-Cuts applied in the stripping selection are summarized in \Tab{tab:dsphi:sel}.
+Cuts applied in the stripping are summarized in \Tab{tab:dsphi:sel}.
 
 
 %Candidate \Ds and \phii mesons are reconstructed only in the decays \decay{\Ds}{\kkpi} and
@@ -106,7 +107,7 @@ Cuts applied in the stripping selection are summarized in \Tab{tab:dsphi:sel}.
 %Full stripping requirements are given in \Tab{tab:dsphi:sel}.
 
 \begin{table}[!ht]
-  \caption[Selection of \btodsphi candidates.]
+  \caption[Selection requirements of \btodsphi candidates]
   {\small
     Selection applied to the \btodsphi candidates.
     The DOCA variable is defined as the maximum distance of closest approach between all pairs of
@@ -201,7 +202,9 @@ Cuts applied in the stripping selection are summarized in \Tab{tab:dsphi:sel}.
 
 \subsection{Suppression of combinatorial background}
 A pair of \bdt{s} are employed to
-separate \dstokkpi and \phitokk candidates from combinatorial background, one each to identify the
+separate \dstokkpi and \phitokk candidates from combinatorial background; referred to as
+$\bdt_{\Ds}$ and $\bdt{\phi}$, respectively.
+The \bdt{s} are designed to identify the
 decays \dstokkpi and \phitokk, with topologies consistent with coming from a parent $B$-meson.
 The methodology used to train each \bdt is the same.
 Both are trained using the bagging algorithm using the same set of input variables.
@@ -279,8 +282,8 @@ In this case, the number of signal events, $S$, was estimated from the yield fro
   N\big(\Bsb\!\to\Ds\pim\big),
 \end{equation}
 $f_s/f_d$ quantifies the fraction of \Bs mesons produced relative to \Bd mesons.
-The generator level efficiency, \eff{gen}, is the efficiency introduced by the shape of the \lhcb, and
-the necessity that all daughter particles must travel through the detector.
+The generator level efficiency, \eff{gen}, is the efficiency introduced by the acceptance region of
+the \lhcb, and the necessity that all daughter particles must travel through the detector.
 Background yield for a given cut is estimated as:
 \begin{equation}
   B = c\cdot N_\mathrm{c}\big(\bstodspi\big)\cdot N_\mathrm{c}\big(\bstojpsiphi\big),
@@ -324,7 +327,8 @@ These have relatively large branching fractions~\cite{PDG2012}:
   \BF(\decay{\Dp}{\kpipiss}) &= (9.13\pm0.19)\e{-2} \\
   \BF(\decay{\Lc}{\pkpi}) &= (5.0\pm1.3)\e{-2},
 \end{align}
-and if the daughter \pip(\proton) from the \Dp(\Lc) decay is misidentified as a \Kp.
+and if the daughter \pip(\proton) from the \Dp(\Lc) decay is misidentified as a \Kp the decay
+\dstokkpi can be mimicked.
 %the resulting invariant mass combination can fall within $25\mev$ of \mass{\Ds}.
 Henceforth, the notation $h_i$ will be used to denote a particle assigned the mass of an $h$ which
 has been identified as an $i$.

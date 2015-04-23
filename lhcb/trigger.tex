@@ -5,7 +5,7 @@ With a $pp$ interaction rate of $40\mhz$ and 16 subdetector stations, there is t
 associated with each event to write them all to disk.
 Instead a multistage trigger is employed to filter potentially interesting events based on momentum
 and energy of tracks.
-The first level trigger, \lone, is embedded in the hardware of \lhcb and is fully synchronous with
+The \lone is embedded in the hardware of \lhcb and is fully synchronous with
 the bunch crossing rate and reduces the output rate to $1\mhz$.
 Two software triggers are fast enough to perform tracking algorithms and use information from
 multiple subdetectors to reduce the events written to disk to $5\khz$.
@@ -55,7 +55,7 @@ lines respectively.
 Thresholds for \lone trigger lines used in this thesis are given in \Tab{tab:lhcb:trigger}.
 
 \begin{table}
-  \caption[L0 trigger threholds]
+  \caption[Level one trigger threholds]
   {\small
     Thresholds in 2011 and 2012 for \lone trigger lines~\cite{Albrecht:2013fba} used in this thesis.
   }
@@ -75,6 +75,7 @@ Around $80\%$ of the events accepted at \lone are processed by the software trig
 The rest are stored temporarily on hard disks to be processed while the \lhc is not colliding protons.
 This is known as deferred triggering.
 
+Following \lone, there are software \glspl{HLTLabel}.
 The first software trigger, \hltone, performs the full three dimensional \velo track fitting
 algorithms (but with fewer passes than the offline version).
 Candidate \velo tracks for triggers which do not require muons are selected based upon the quality of the
@@ -140,19 +141,3 @@ in the event (from \decay{g}{\bbbar}), and the kinematics between the two are hi
 
 %Triggered candidates are then labelled as {\tt TIS} (Trigger independent of signal) or {\tt TOS}
 %(Trigger on signal).
-%Thi
-%
-%
-%An algorithm is applied
-
-
-
-
-
-
-
-
-
-
-
-
