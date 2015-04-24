@@ -10,8 +10,10 @@ CHAPTERS = $(filter-out \
 					 $(PREAMBLEDIR)/ \
 					 $(BIBDIR)/ \
 					 $(OUTDIR)/,$(wildcard */))
+THESISMAIN = Thesis/main.tex
 
 MAINS = $(wildcard */main.tex)
+MAINS := $(filter-out $(THESISMAIN),$(MAINS)) $(THESISMAIN)
 TARGETS = $(addsuffix .pdf,$(addprefix $(PDFDIR)/,$(subst /main.tex,,$(MAINS))))
 BIBSOURCES = $(wildcard $(BIBSOURCES)/*.bib)
 
