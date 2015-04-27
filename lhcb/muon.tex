@@ -1,24 +1,8 @@
 \subsection{Muon systems}
 
-%Finally, there is the muon system.
-%Each station uses Multi-Wire Projection Chambers exclusively, except for the centre of M1, where
-%the expected flux would age this technology too quickly; in this area Gas Electron Multiplier
-%detectors are used.
-%Like the calorimeters, the muon stations have increased cell density near the beam; however in
-%contrast, the cell density is greater in the bending plane than the non-bending plane in order to
-%increase momentum resolution.
-%Only muon stations M2-5 are used for particle identification; theses are interleaved with plates of
-%$80\cm$ thick lead plates, so only very energetic muons reach M5.
-%For this reason M4 and M5 are used to identify these penetrating muons, while M2 and M3 have
-%increased single hit resolution for momentum measurements.
-%In many \lhcb analyses a muon is identified based on hits within the muon system, the criteria is
-%known as {\tt isMuon}.
-%It is defined as follows: particles with momenta $3<p<6\gev$ must be associated with hits in M2 and M3; if
-%$6<p<10\gev$ there must be hits in M2, M3 and either M4 or M5; else if $p>10\gev$ there must be
-%associated hits in all M2--5.
 
-
-Muons are the only charged particles enetracting enough to poass through the calorimeter system.
+Muons are the only charged particles that interact weakly enough to pass through the calorimeter
+system.
 Muons contribute to the final state of many $b$-hadron decays, including \lhcb{s} flagship
 measurements of  the branching fraction \decay{\Bs}{\mumu} and the angular analysis of
 \decay{\Bd}{\Kstarz\mumu}.
@@ -27,7 +11,7 @@ decays with muons in the final state.
 
 The muon system consists of five muon stations, M1--5.
 The first station, M1, is located directly upstream of the calorimeters; the other stations are all
-downstream of the calorimetery system and are interleaved with $80\cm$ thick iron absorbers.
+downstream of the calorimetry system and are interleaved with $80\cm$ thick iron absorbers.
 Layout of the \lhcb muon system is shown in \Fig{fig:lhcb:muonside}.
 
 \begin{figure}
@@ -47,14 +31,14 @@ Layout of the \lhcb muon system is shown in \Fig{fig:lhcb:muonside}.
   \end{center}
 \end{figure}
 
-Each station uses Multi-Wire Projection Chambers, except for the centre of M1, where
+Each station uses Multi-Wire Proportional Chambers, except for the centre of M1, where
 the expected muon flux would age this technology too quickly; in this area Gas Electron Multiplier
 detectors are used.
 Detector resolution is defined by rectangular logical pads, which have varying spacial resolutions,
 becoming courser as the distance from the beam axis increases.
 These regions are discretized, and labelled R1--4 as shown in Figure~\ref{fig:lhcb:muonpad},
 where the segmentation ratios for $\mathrm{R}1:\mathrm{R}2:\mathrm{R}3:\mathrm{R}4$ are $1:2:4:8$,
-such that the flux in each region is approximately equal.
+such that the occupancy in each region is approximately equal.
 The number of detection cells in the bending plane is greater than in the non-bending plane, in
 order to increase the momentum resolution.
 The inclusion of the M1 station is primarily to provide improved momentum resolution in the
@@ -81,21 +65,21 @@ primarily used for identifying highly penetrating muons.
 
 The muon system provides important \pid information.
 In many \lhcb analyses a muon is identified based on hits within the muon system, the criteria is
-known as {\tt isMuon}.
+known as \ismuon.
 The criteria is dependent upon the muon momentum, and defined exactly in \Tab{tab:lhcb:ismuon}.
 
 \begin{table}
   \caption[Conditions to satisfy the {\tt isMuon} criteria]
   {\small
-    The {\tt isMuon} flag is an important variable used to identify muons.
+    The \ismuon flag is an important variable used to identify muons.
     The criteria depends on the particle's measured momentum.
-    If the {\tt isMuon} condition returns a true then the particle is identified to be a muon.
+    If the \ismuon condition returns a true then the particle is identified to be a muon.
   }
   \label{tab:lhcb:ismuon}
   \begin{center}
     \begin{tabular}{cl}
       \toprule
-      $p(\mu)$ range (GeV)& \cellc{{\tt isMuon} condition} \\
+      $p(\mu)$ range (GeV)& \cellc{\ismuon condition} \\
       \midrule
       \makebox[\widthof{$6<p(\mu)<10$}][r]{$3<p(\mu)<\pz6$}
       & M2 and M3 \\
@@ -107,3 +91,4 @@ The criteria is dependent upon the muon momentum, and defined exactly in \Tab{ta
     \end{tabular}
   \end{center}
 \end{table}
+

@@ -6,9 +6,13 @@
 \newacronym{CKM}{CKM}{Cabibbo-Kobayashi-Maskawa}
 \newacronym{DM}{DM}{Dark Matter}
 \newacronym{DT}{DT}{Decision Tree}
-\newacronym{ECALLabel}{ECAL}{Electron Calorimeter}
+\newacronym{ECALLabel}{ECAL}{Electromagnetic Calorimeter}
 \newacronym{EFT}{EFT}{Effective Field Theory}
 \newacronym{FCNC}{FCNC}{Flavour Changing Neutral Current}
+\newacronym{IT}{IT}{Inner Tracker}
+\newacronym{OT}{OT}{Outer Tracker}
+\newacronym{ST}{ST}{Silicon Tracker}
+\newacronym{HPD}{HPD}{Hybrid Photomultipliers}
 \newacronym{HCALLabel}{HCAL}{Hadron Calorimeter}
 \newacronym{HLTLabel}{HLT}{High Level Trigger}
 \newacronym{HQET}{HQET}{Heavy Quark Effective Theory}
@@ -51,9 +55,12 @@
 \newacronym{HLT2}{HLT2}{High Level Trigger 2}
 \newacronym{TIS}{\ensuremath{\mathtt{TIS}}\xspace}{Trigger Independent of Signal}
 \newacronym{TOS}{\ensuremath{\mathtt{TOS}}\xspace}{Trigger On of Signal}
+\newacronym{BAU}{BAU}{Baryon Asymmetry of the Universe}
+\newacronym{MWPC}{MWPC}{Multi-Wire Proportional Chambers}
 
 %\newacronym[longplural={Flavour Changing Neutral Currents},shortplural={FCNCs}]{FCNC}{FCNC}{Flavour Changing Neutral Current}
 
+\def\BAU {\gls{BAU}\xspace}
 \def\CP {\gls{CP}\xspace}
 \def\CPV {\gls{CPV}\xspace}
 \def\BBDT {\gls{BBDT}\xspace}
@@ -101,6 +108,52 @@
 \newlength\maxlength
 \newlength\thislength
 
+%\newglossarystyle{mystyle}
+%{%
+  %\renewenvironment{theglossary}%
+  %{% start of glossary
+   %% Find maximum width of the first column:
+    %\setlength{\maxlength}{0pt}%
+    %\forglsentries[\currentglossary]{\thislabel}%
+    %{%
+       %\settowidth{\thislength}{\glsentryshort{\thislabel}}%
+       %\ifdim\thislength>\maxlength
+         %\setlength{\maxlength}{\thislength}%
+       %\fi
+    %}%
+    %% Now calculate the width of the second column:
+    %\settowidth{\thislength}{\hspace{1.5em}=\hspace{1em}}%
+    %\setlength{\glsdescwidth}{\linewidth-\maxlength-\thislength-2\tabcolsep}%
+    %% Start the tabular environment
+    %%\begin{tabular}{l@{\hspace{1.5em}=\hspace{1em}}p{\glsdescwidth}}
+    %%\begin{longtable}{lp{\glsdescwidth}@{\hspace{1.5em}\hspace{3em}}}
+    %\begin{longtable}{p{0.1\textwidth}p{0.95\textwidth}}
+    %%\flushleft
+    %%\begin{longtable}{lp{\glsdescwidth}}
+    %%\toprule
+    %%\multicolumn{1}{l}{\textbf{Abk.}} &
+    %%\multicolumn{1}{@{}l}{\textbf{Bedeutung}}\\%
+    %%\midrule
+  %}%
+  %{% end of glossary
+     %%\bottomrule
+     %\end{longtable}%
+     %%\end{tabular}%
+  %}%
+  %% Header has been incorporated into \begin{theglossary}
+  %\renewcommand*{\glossaryheader}{}%
+  %% Don't do anything between letter groups
+  %\renewcommand*{\glsgroupheading}[1]{}%
+  %\renewcommand*{\glsgroupskip}{}%
+  %% Set display for each the acronym entry
+  %\renewcommand{\glossentry}[2]{%
+    %\glstarget{##1}{\glsentryshort{##1}}% short form
+    %&
+    %\glsentrylong{##1}% long form
+    %\\% end of row
+  %}%
+  %% No sub-entries, so \subglossentry doesn't need redefining
+%}
 \newglossarystyle{mystyle}
 {%
   \renewenvironment{theglossary}%
@@ -115,11 +168,14 @@
        \fi
     }%
     % Now calculate the width of the second column:
-    \settowidth{\thislength}{\hspace{1.5em}=\hspace{1em}}%
-    \setlength{\glsdescwidth}{\linewidth-\maxlength-\thislength-2\tabcolsep}%
+    %\settowidth{\thislength}{\hspace{1.5em}=\hspace{1em}}%
+    %\setlength{\glsdescwidth}{\linewidth-\maxlength-\thislength-2\tabcolsep}%
     % Start the tabular environment
     %\begin{tabular}{l@{\hspace{1.5em}=\hspace{1em}}p{\glsdescwidth}}
-    \begin{longtable}{lp{\glsdescwidth}}
+    %\begin{longtable}{lp{\glsdescwidth}@{\hspace{1.5em}\hspace{3em}}}
+    %\begin{longtable}{p{0.1\textwidth}p{0.95\textwidth}}
+    %\flushleft
+    %\begin{longtable}{lp{\glsdescwidth}}
     %\toprule
     %\multicolumn{1}{l}{\textbf{Abk.}} &
     %\multicolumn{1}{@{}l}{\textbf{Bedeutung}}\\%
@@ -127,7 +183,8 @@
   }%
   {% end of glossary
      %\bottomrule
-     \end{longtable}%
+     %\end{longtable}%
+     %\end{tabular}%
   }%
   % Header has been incorporated into \begin{theglossary}
   \renewcommand*{\glossaryheader}{}%
@@ -136,10 +193,10 @@
   \renewcommand*{\glsgroupskip}{}%
   % Set display for each the acronym entry
   \renewcommand{\glossentry}[2]{%
-    \glstarget{##1}{\glsentryshort{##1}}% short form
-    &
+    \makebox[0.12\textwidth][l]{\glstarget{##1}{\glsentryshort{##1}}}% short form
     \glsentrylong{##1}% long form
     \\% end of row
   }%
   % No sub-entries, so \subglossentry doesn't need redefining
 }
+
