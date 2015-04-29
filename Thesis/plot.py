@@ -52,7 +52,7 @@ df.T['figs'].plot(
     alpha=0.5,
     secondary_y=True,
 )
-pl.ylabel('Figure count', color='g')
+pl.ylabel('Float count', color='g')
 pl.yticks(color='g')
 pl.savefig(os.path.join(mdpath, 'metadata.pdf'))
 

@@ -4,7 +4,10 @@ AUXDIR=aux
 DIR=Thesis
 if [ $# -ne 0 ]
 then
-  DIR=$(echo $1 | sed 's/\///')
+  if [ $1 != "m" ] && [ $1 != "make" ];
+  then
+    DIR=$(echo $1 | sed 's/\///')
+  fi
 fi
 if [ -f $DIR/main.tex ]
 then
@@ -19,5 +22,12 @@ else
   echo "clean help"
   echo "Clean a specific subdirectory and make ready for remaking"
 fi
+
+if [ ${!#} = "m" ] || [ ${!#} = "make" ];
+then
+  make
+fi
+
+
 
 

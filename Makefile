@@ -5,11 +5,6 @@ OUTDIR = aux
 PDFDIR = pdfs
 PREAMBLEDIR = preamble
 META = Thesis/metadata
-CHAPTERS = $(filter-out \
-					 $(PDFDIR)/ \
-					 $(PREAMBLEDIR)/ \
-					 $(BIBDIR)/ \
-					 $(OUTDIR)/,$(wildcard */))
 THESISMAIN = Thesis/main.tex
 
 MAINS = $(wildcard */main.tex)
