@@ -12,6 +12,8 @@ MAINS := $(filter-out $(THESISMAIN),$(MAINS)) $(THESISMAIN)
 TARGETS = $(addsuffix .pdf,$(addprefix $(PDFDIR)/,$(subst /main.tex,,$(MAINS))))
 BIBSOURCES = $(wildcard $(BIBSOURCES)/*.bib)
 
+MAINS2 = $(filter-out Thesis,$(subst /main.tex,,$(wildcard */main.tex))) Thesis
+
 UNAME := $(shell uname)
 OPEN = open $(PDFDIR)/recent.pdf
 ifeq ($(UNAME),Linux)
@@ -20,6 +22,7 @@ endif
 
 
 all: $(TARGETS)
+#all: $(MAINS2)
 
 $(PDFDIR)/%.pdf: %/*.tex
 	sed 's/XXX/$*/g' Thesis/template.tex > $(OUTDIR)/$*.tex
@@ -33,6 +36,19 @@ $(PDFDIR)/%.pdf: %/*.tex
 	cp -f $(OUTDIR)/$*.pdf $(PDFDIR)/.
 	mv -f $(OUTDIR)/$*.pdf $(PDFDIR)/recent.pdf
 
+#%: %/*.tex
+	#sed 's/XXX/$*/g' Thesis/template.tex > $(OUTDIR)/$*.tex
+	#$(LATEX) --output-directory=$(OUTDIR) -draftmode $(OUTDIR)/$*
+	#bibtex $(OUTDIR)/$*
+	#xindy -L english -C utf8 -I xindy -M \
+		#$(OUTDIR)/$* -t $(OUTDIR)/$*.glg \
+		#-o $(OUTDIR)/$*.gls $(OUTDIR)/$*.glo
+	#$(LATEX) --output-directory=$(OUTDIR) -draftmode $(OUTDIR)/$*
+	#$(LATEX) --output-directory=$(OUTDIR) $(OUTDIR)/$*
+	#cp -f $(OUTDIR)/$*.pdf $(PDFDIR)/.
+	#mv -f $(OUTDIR)/$*.pdf $(PDFDIR)/recent.pdf
+
+
 open:
 	@$(OPEN)
 
@@ -41,6 +57,7 @@ open:
 info:
 	@echo $(TARGETS)
 	@echo $(MAINS)
+	@echo $(MAINS2)
 
 clean:
 	rm -f $(OUTDIR)/* $(PDFDIR)/*.pdf

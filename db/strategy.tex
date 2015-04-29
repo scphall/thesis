@@ -251,6 +251,8 @@ where $\hat{s}$, $\hat{b}$, and $\hat{y}$ are chosen to maximize the likelihood;
 $\hat{b}(s)$ and $\hat{y}(s)$ maximize the likelihood for a given $s$.
 The solutions to these parameters can be calculated analytically, with few assumptions made,
 and thus the likelihood can be minimized with minimal computational power.
+The profile likelihood can then be formed in the same way as in \Eq{eq:profilelike1} and solved
+analytically.
 
 
 \subsection{Searching in the lifetime dimension}
@@ -263,6 +265,7 @@ individual likelihoods:
   \mathcal{L}(n^p_s, n^p_b, n^d_s, n^d_b, x | s^p, b^p, y^p, s^d, b^d, y^d) =\\
   \mathcal{L}(n^p_s, n^p_b, x | s^p, b^p, y^p) \cdot
   \mathcal{L}(n^d_s, n^d_b, x | s^d, b^d, y^d),
+  \label{eq:db:liketau}
 \end{multline}
 where the superscripts $p$ and $d$ indicate the prompt and displaced regions, respectively.
 
@@ -273,8 +276,10 @@ significantly more complications to the analysis and there is no reason to belie
 a lifetime $\tau\sim3\sigmat$ \emph{a priori}, and therefore shape information is not used.
 
 
+
+
 \subsection{Calculation of $p$-value}
-For each \mass{t} a $p$-value is calculated.
+For each \mass{t} a $p$-value is calculated using the
 Because there are $\mathcal{O}(1000)$ test masses, each of which is not completely independent the
 look elsewhere effect must be accounted for.
 To do this the minimum local $p$-value is translated into a global $p$-value using a trials factor
@@ -286,19 +291,9 @@ which is entirely background.
 This is assuming that there is only one \np particle that can be observed in this analysis.
 The remaining background-like distribution is then turned into a \PDF --- where the region that is
 removed is interpolated across --- from which toy datasets can be generated.
-
-
-
-
-
-
-
-
-\subsection{Global significance}
-
-
-
-The full procedure involves calculating the profile likelihood
+In order to obtain a trials factor, 10 million toy datassets are generated, and the minimum
+$p$-value is plotted in a cumulative distruibution, such that the $y$ axis is the fraction of toy
+datasets with a minimum $p$-value...
 
 
 
@@ -308,6 +303,36 @@ The full procedure involves calculating the profile likelihood
 
 
 
+
+
+\subsection{Limits}
+Upper limits will be set as a function of \mass{\db} and \lifetime{\db}.
+This requires a modification to the likelihood function to
+
+for each \lifetime there is a relattionship between the number of signal events in the prompt and
+displaced regions
+
+gaussian term is added to account for uncertainty (due to eff) in frac of signal expected in prompt
+and displaced regions
+
+another gaussian term is added to the likelihood to account for uncertainty in the abs eff scale of
+the signal
+
+likelihood for each \mass{t}, $\tau$
+\begin{align}
+  \like\big(n_s^p, n_b^p, n_s^d, n_b^d, x, \tau | \dots\big) =
+   &\like\big(n_s^d, n_b^d, x | \varepsilon\cdot s\cdot f,b^p,y^p\big) \\\nonumber
+   &\times\like\big(n_s^p, n_b^p, x | \varepsilon\cdot s\cdot(1-f),b^d,y^d\big)\\\nonumber
+   &\times\mathcal{G}\big(f, f_\mathrm{sim}(\tau),\sigma(f)\big)
+   \times\mathcal{G}\big(\varepsilon, \varepsilon_\mathrm{sim}(\tau),\sigma(\varepsilon)\big)
+\end{align}
+where f is the fraction of signal events in the prompt region, with expected value from simulation
+being $f_\mathrm{sim}$ with uncertainty $\sigma(f)$, $\varepsilon$ is the efficiency (relavtive to
+normalization channel) with expected valu from simulation $\varepsilon_\mathrm{sim}$ and
+uncertainty $\sigma(\varepsilon)$.
+
+Limits are set by scanning the profile likelihood using the same method, including the likelihood
+given
 
 
 
