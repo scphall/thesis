@@ -1,8 +1,8 @@
 \section{Trigger}
 \label{sec:lhcb:trig}
 
-With a $pp$ interaction rate of $40\mhz$ and 16 subdetector stations, there is too much information
-associated with each event to write them all to disk.
+With a $pp$ interaction rate of $40\mhz$ and multiple subdetector stations, there is too much
+information associated with each event to write them all to disk.
 Instead a multistage trigger is employed to filter potentially interesting events based on momentum
 and energy of tracks.
 The \lone is embedded in the hardware of \lhcb and is fully synchronous with
@@ -110,7 +110,7 @@ identify $b$-hadrons decaying into charged tracks using vertex and track informa
 Vertices formed of two, three and four reconstructed tracks displaced from PVs are triggered based
 on the response of a \BBDT~\cite{Gligorov:2012qt}.
 A \BBDT is a Boosted Decision Tree, which are detailed in \Chap{ch:mvas}, whose input and output
-distibutions are distretized so that a simple look-up table can be used to calculate the response.
+distributions are distretized so that a simple look-up table can be used to calculate the response.
 This approach is not only fast, but $9\pc$ more efficient than using a cuts based selection for a
 4-body signal~\cite{Gligorov:2012qt}.
 
@@ -128,7 +128,7 @@ One can get an approximate trigger efficiency using
 \end{equation}
 This can be useful because while simulated events can contain events which were not triggered, this
 is, obviously, not the case for data.
-This is not perfect becuase \tis $b$-hadron candidates are ususally fired by the other $b$-hadron
+This is not perfect because \tis $b$-hadron candidates are usually fired by the other $b$-hadron
 in the event (from \decay{g}{\bbbar}), and the kinematics between the two are highly correlated.
 
 

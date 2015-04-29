@@ -15,7 +15,7 @@ The convention of natural units is used throughout.
 Other conventions are that the indices $\mu$ and $\nu$ are used for four vectors, and generators
 for the $SU_L(2)$ and $SU_C(2)$ are denoted by $\{i,j,k\}$ and $\{a,b,c\}$, respectively.}.
 Each generator in this group corresponds to a spin-1 gauge-boson;
-the $SU_C(3)$ group is obeyed by the strong force in the theory of \QCD.
+the $SU_C(3)$ group is obeyed by the strong force in the theory of \QCD
 while the electroweak sector obeys the $SU_L(2)\otimes U_Y(1)$ gauge group.
 Generators for each group correspond to the vector bosons which mediate
 interactions --- the eight gluons of the strong force, and the $3+1$ electroweak gauge bosons ($Z$,
@@ -30,8 +30,12 @@ which are described by spinor fields, $\psi$, and obey the Dirac equation:
 The fermions of the \sm can be broadly categorized into \emph{quarks} which couple to the strong
 force, and \emph{leptons} which do not.
 There are six quarks: up, down, charm, strange, top, and bottom (\uquark, \dquark, \cquark,
-\squark, \tquark and \bquark); and six leptons: the electron, muon, tau ($e$, $\mu$, $\tau$), and
-their corresponding neutrinos ($\nu_e$, $\nu_\mu$, $\nu_\tau$).
+\squark, \tquark and \bquark); and six leptons:
+the electronic leptons ($\nu_e$, $e$),
+the muonic leptons ($\nu_\mu$, $\mu$),
+the tauonic leptons ($\nu_\tau$, $\tau$),
+%the electron, muon, tau ($e$, $\mu$, $\tau$), and
+%their corresponding neutrinos ($\nu_e$, $\nu_\mu$, $\nu_\tau$).
 All fermions are organized into pairs forming three generations.
 %The fermions of the \sm constitute six leptons (electron, electron neutrino, muon, muon neutrino,
 %tau and tau neutrino) and six quarks ($u$p, $d$own, $c$harm, $s$trange, $t$op and $b$ottom), which
@@ -60,7 +64,7 @@ arise in the \sm, and will be discussed in detail.
 
 There are three fundamental discrete symmetries in the \sm, \gls{C}, \gls{P}, and \gls{T}.
 Violation of \CP and flavour in the \sm is in the \ckm, which emerges
-as a direct consequence of the Higgs mechanism breaking the local electroweak symmetry.
+after the Higgs mechanism breaks the local electroweak symmetry.
 The Higgs doublet, $\Phi$, is defined to be
 \begin{equation}
   \Phi = \frac{1}{\sqrt{2}}
@@ -198,7 +202,7 @@ where
   m_\ell = \frac{v}{\sqrt{2}}g_\ell.
   \label{eq:leptonmass}
 \end{equation}
-is the lepton mass and is dependent on the fundamental \sm parameters $g_\ell$ and $v$
+is the lepton mass and is dependent on the fundamental \sm parameters $g_\ell$ and $v$.
 
 Yukawa interactions for quarks involve the right-handed chiral operators of the up- and down-type
 quarks, $q_R^i$ for $q\in{u,d}$, and the left-handed doublet
@@ -211,7 +215,7 @@ Before \SSB, the Yukawa Lagrangian is
   - y_{ij}^d\Xbar{Q}_L^i\widetilde\Phi d_R^j +\,\mathrm{h.c.}
   \label{eq:th:lagyukq}
 \end{equation}
-where $\widetilde\Phi_i = \varepsilon_{ij}\Phi_k$ and there is an implict sum over the generations
+where $\widetilde\Phi_i = \varepsilon_{ij}\Phi_k$ and there is an implicit sum over the generations
 $i$ and $j$.
 The coupling constants, $y^{q}$, are $3\times3$ matrices characterizing Yukawa coupling strengths
 between generations.
@@ -228,7 +232,7 @@ After \SSB, the Higgs acquires a \VEV, $\Lag{Yuk}^q$ becomes:
   \left(1 + \frac{H}{v}\right).
   \label{eq:th:lagyuk2}
 \end{equation}
-Similar to lepton masses, in \Eq{eq:leptonmass}, quark mass are defined as
+Similar to lepton masses, in \Eq{eq:leptonmass}, quark masses are defined as
 \begin{align}
   m_{ij}^u = \frac{v}{\sqrt{2}}y_{ij}^u &&
   m_{ij}^d = \frac{v}{\sqrt{2}}y_{ij}^d.
@@ -262,9 +266,8 @@ However, this is not the case of \Lag{\it q}.
 
 The Lagrangian $\Lag{\it q}=\Lag{\it q}^\mathrm{NC}+\Lag{\it q}^\mathrm{CC}$, where the
 superscripts denote \NC and charged current \CC components.
-The neutral current part characterizes interactions between quarks and the neutral electroweak
-vector boson.
-In the \CC part of \Lag{\it q}; which transforms as:
+The \NC part of \Lag{\it q} characterizes interactions between quarks and the neutral electroweak
+vector boson, and the \CC part transforms as:
 \begin{align}
   \Lag{\it q}^\mathrm{CC}
   &= i\frac{g}{2}\gamma^\mu

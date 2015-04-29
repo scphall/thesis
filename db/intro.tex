@@ -3,8 +3,8 @@
 
 As described in \Chap{ch:theory}, the \sm cannot explain \dm, which is evidenced by a
 number of experimental observations.
-Little is known about dark matter except that it interacts only, or at least predominantly,
-gravitationally and is therefore not visible to astronomical observations.
+Little is known about dark matter except that it interacts with the \sm sector only, or at least
+predominantly, gravitationally and is therefore not directly visible to astronomical observations.
 Dark matter hints at the existence of a dark sector, housing particles that do not interact with
 \sm particles through the strong, or electroweak forces.
 The dark sector may contain a rich variety of distinct particles operating through forces that are
@@ -14,7 +14,81 @@ is via mediating messenger particles, which would be light particles
 --- with masses below the weak scale ---
 and couple feebly to \sm particles.
 The messenger particles could interact via a number of \emph{portals}, which include the vector,
-axion, Higgs, and neutrino sectors.
+axion, Higgs, and neutrino sectors (although the neutrino portal is not relevant to this analysis),
+with operators as outlined in \Table{tab:db:overview}.
+
+
+\begin{table}
+  \caption{\small
+    %from 1311.0029
+    A summary of portals through which a new dark boson could operate.
+    Terms are defined as:
+    $F_{\mu\nu}$ is the Yang-Mills field;
+    $\widetilde{F}_{\mu\nu}$ is the dark photon field;
+    $\epsilon$ is the (kinetic) mixing of dark and real photon;
+    $a$ is axion field;
+    $f_a$ is scale at which Peccei-Quinn global $U(1)$ symmetry is spontaneously broken;
+    $G_{\mu\nu}$ is the gluon field strength tensor;
+    $S$ is a dark scalar field with coupling strengths $\mu$ and $\lambda$ to the Higgs field;
+    and $N$ is the sterile neutrino.
+  }
+  \label{tab:db:overview}
+  \begin{center}
+    \begin{tabular}{llccc}\toprule
+      \cellc{Portal} & \cellc{Particles} & \multicolumn{3}{c}{Operator(s)}
+      \\\midrule
+      Vector & Dark photons && $-\tfrac{\epsilon}{2\cos\theta_W}B_{\mu\nu}F^{\mu\nu}$ \\
+      Axion & Pseudoscalars & $\tfrac{a}{f_a}F_{\mu\nu}\widetilde{F}^{\mu\nu}$
+      & $\tfrac{a}{f_a}G_{i\mu\nu}\widetilde{G}^{\mu\nu}_i$
+      & $\tfrac{\partial_\mu a}{f_a}\xbar{\psi}\gamma^\mu\gamma^5\psi$ \\
+      Higgs & Dark scalars && $(\mu S + \lambda S^2)H^\dagger H$ \\
+      Neutrino & Sterile neutrinos && $Y_NLHN$ \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+\subsection{Vector portals}
+Since the \sm is known to belong to the
+$SU_C(3)\otimes SU_L(2)\otimes U_Y(1)$
+gauge group, it is reasonable to assume that the structure of the dark sector is also gauged.
+With this hypothesis it is possible to construct a group of particles that are charged under a
+dark $U(1)$ symmetry, with accompanying dark vector bosons, also known as dark photons
+($A^\prime$).
+
+Previous searches for dark photons decaying via \decay{\darkgamma}{\ee} and
+\decay{\darkgamma}{\mumu} have been made at
+at NA48/2 in the decay \decay{\piz}{\gamma\darkgamma}~\cite{CERNNA48/2:2015lha}, and at \babar in
+the interaction $\decay{\ee}{\gamma\darkgamma}$~\cite{Lees:2014xha}.
+High energy \lhc experiments at the \lhc have put stringent limits on new $U(1)$ states under the
+assumption that the coupling of \darkgamma to \sm states is large.
+However, if the coupling of these states is weak then \darkgamma could be light.
+
+While the following analysis is sensitive to these particle, it is not as sensitive as previous
+experiments, such as those in Refs.~\cite{CERNNA48/2:2015lha,Lees:2014xha}, because of the large
+sample sizes available to them and the fact that vector particles tend to couple in a mass
+independent way.
+
+
+
+
+
+
+
+
+\subsection{Scalar portals}
+
+In principal, the following analysis is sensitive to any dark sector particle.
+However, in practice other experiments have searched for dark bosons with mass independent
+couplings with much larger data samples.
+For example, the NA48 and \babar collaborations have both searched for a
+dark photon~\cite{CERNNA48/2:2015lha,Lees:2014xha}.
+
+
+
+
+
 
 
 Many extensions of the SM predict the existence of a new light boson.
@@ -38,33 +112,6 @@ which solves the strong \CP problem by the addition of a pseudoscalar axion part
 
 Limits on these particles...
 
-\begin{table}
-  \caption{\small
-    from 1311.0029
-    $F_{\mu\nu}$ is the Yang-Mills field,
-    $\widetilde{F}_{\mu\nu}$ is the dark photon field,
-    $\epsilon$ is the (kinetic) mixing of dark and real photon,
-    $a$ is axion field,
-    $f_a$ is scale at which PQ global U(1) symmetry is spontaneously borken,
-    $G_{\mu\nu}$ is the gluon field strength tensor,
-    $S$ is a dark scalr field with coupling strengths $\mu$ and $\lambda$ to the Higgs field, $H$,
-    and $N$ is the sterile neutrino.
-  }
-  \label{tab:db:overview}
-  \begin{center}
-    \begin{tabular}{llccc}\toprule
-      \cellc{Portal} & \cellc{Particles} & \multicolumn{3}{c}{Operator(s)}
-      \\\midrule
-      Vector & Dark photons && $-\tfrac{\epsilon}{2\cos\theta_W}B_{\mu\nu}F^{\mu\nu}$ \\
-      Axion & Pseudoscalars & $\tfrac{a}{f_a}F_{\mu\nu}\widetilde{F}^{\mu\nu}$
-      & $\tfrac{a}{f_a}G_{i\mu\nu}\widetilde{G}^{\mu\nu}_i$
-      & $\tfrac{\partial_\mu a}{f_a}\xbar{\psi}\gamma^\mu\gamma^5\psi$ \\
-      Higgs & Dark scalars && $(\mu S + \lambda S^2)H^\dagger H$ \\
-      Neutrino & Sterile neutrinos && $Y_NLHN$ \\
-      \bottomrule
-    \end{tabular}
-  \end{center}
-\end{table}
 
 In general, extensions to the SM include bosons that couple to fermions proportionally to
 their masses.

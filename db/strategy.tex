@@ -73,7 +73,70 @@ For this analysis these ranges roughly translate to requiring that resonances wi
 will be vetoed, while those with $\Gamma>100\mev$ shall be ignored.
 
 %Practically, the resonances that must be removed from the background are the \phi, \jpsi, \psitwos
-%
+
+The profile likelihood, $\Lambda$, is defined as
+\begin{equation}
+  \Lambda(s|n_s,n_b) =
+  \frac
+  {\mathcal{L}(s, \hat{b}(s), \hat{y}(s) | n_s, n_b, x)}
+  {\mathcal{L}(\hat{s}, \hat{b}, \hat{y} | n_s, n_b, x)},
+  \label{eq:profilelike1}
+\end{equation}
+where $\hat{s}$, $\hat{b}$, and $\hat{y}$ are chosen to maximize the likelihood; the functions
+$\hat{b}(s)$ and $\hat{y}(s)$ maximize the likelihood for a given $s$.
+The solutions to these parameters can be calculated analytically, with few assumptions made,
+and thus the likelihood can be minimized with minimal computational power.
+
+
+\subsection{Searching in the lifetime dimension}
+Sensitivity to the lifetime of \db is introduced by splitting the data at each \mass{t} into two
+regions: a prompt region defined by $\tau<3\sigmat$, and a displaced region defined by
+$\tau>3\sigmat$; where \sigmat is defined to be the local lifetime resolution.
+The joint likelihood, which takes account of the two lifetime regions, is then the product of the
+individual likelihoods:
+\begin{multline}
+  \mathcal{L}(n^p_s, n^p_b, n^d_s, n^d_b, x | s^p, b^p, y^p, s^d, b^d, y^d) =\\
+  \mathcal{L}(n^p_s, n^p_b, x | s^p, b^p, y^p) \cdot
+  \mathcal{L}(n^d_s, n^d_b, x | s^d, b^d, y^d),
+\end{multline}
+where the superscripts $p$ and $d$ indicate the prompt and displaced regions, respectively.
+
+The information supplied by the addition of two bins in the lifetime dimension is approximately
+optimal for all \db lifetimes, except for when $\tau\sim3\sigmat$.
+In this case, it is marginally more optimal to include shape information; but this introduces
+significantly more complications to the analysis and there is no reason to believe that the \db has
+a lifetime $\tau\sim3\sigmat$ \emph{a priori}, and therefore shape information is not used.
+
+
+\subsection{Calculation of $p$-value}
+For each \mass{t} a $p$-value is calculated.
+Because there are $\mathcal{O}(1000)$ test masses, each of which is not completely independent the
+look elsewhere effect must be accounted for.
+To do this the minimum local $p$-value is translated into a global $p$-value using a trials factor
+which is calculated using an ensemble of toys.
+
+After the $p$-value at each \mass{t} is calculated, the region in which the lowest $p$-value
+consistent with zero signal will be isolated and removed from the sample; leaving data which
+which is entirely background.
+This is assuming that there is only one \np particle that can be observed in this analysis.
+The remaining background-like distribution is then turned into a \PDF --- where the region that is
+removed is interpolated across --- from which toy datasets can be generated.
+
+
+
+
+
+
+
+
+\subsection{Global significance}
+The full procedure involves calculating the profile likelihood
+
+
+
+
+
+
 
 
 
