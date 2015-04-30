@@ -2,10 +2,9 @@
 \label{sec:bdt:bag}
 Bootstrap aggregating, or bagging\footnote{
   This section is based on \Ref{Bagging}}, is a method of boosting whereby the effects of
-statistical fluctuations are lessened by making many independent \DTs and using the
+statistical fluctuations are lessened by making many independent \DTs and using them
 and making a decision based on the average response.
 %Assume a true distribution, $f(x_i)$, where $x_i$ are the training variables.
-If the final \BDT is composed of $n$ \DTs, it is
 Training $n$ \DTs, it is possible to define three errors, namely:
 square of the error of a single estimator
 %The hypothesised value, from the output of a single \DT, is $h_t(x_i)$, for $1<t<n$, where
@@ -38,7 +37,7 @@ By inserting $f(x_i)-f(x_i)$ into \Eq{eq:bdt:bag4}, manipulating the algebra, th
   \label{eq:bdt:bag5}
 \end{equation}
 emerges.
-The means that the error squared of the ensemble of \DTs is equal to the average error squared of an
+This means that the error squared of the ensemble of \DTs is equal to the average error squared of an
 individual estimator, minus the weighted variance.
 Therefore the process of bagging reduces the
 effect of statistical fluctuations in the training samples~\cite{Krogh95neuralnetwork}.

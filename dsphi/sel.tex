@@ -1,44 +1,6 @@
 \section{Data selection}
 \label{sec:dsphi:sel}
 
-%LIST
-%
-%Rely on HLT2 tolo lines
-%cuts designed to mimic HLT1 and HL2 topo triggers:
-%B
-%sum pt $>$ 5\gev
-%VHI2DOF $<$ 10
-%BPVIPCHI2 $<$25
-%BPVLTIME$>$0.2\ps
-%BIRA$>$0.999
-%
-%D
-%sum PT $>$1.8GeV
-%MAXDOCA$<$0.5mm
-%VCHI2DOF $<$10
-%BPVVDCHI2$>$36
-%
-%D tracks
-%TRCHI2<4
-%PT>100MeV
-%P>1Gev
-%MIPCHI2>4
-%DLL<20-10)
-%
-%phi
-%sumPT>1
-%VCHI2DOF<16
-%BPVVDCHI2>16
-%
-%phi tracks
-%TRCHI2<4
-%PT>100MeV
-%P>2GEv
-%DLL<20-10)
-%
-%Min one track \& two...
-
-
 The data sample used in this analysis amounts to
 $1\invfb$ of $pp$ collisions at $7\tev$ collected by the \lhcb detector in 2011.
 Events are selected by the trigger at hardware level if they fulfill the requirements of the \lone
@@ -53,8 +15,9 @@ Furthermore, the mass of the reconstructed particle must fall within $25\mev$ of
 $m_{\Ds}^\pdg=1968.30\pm0.11\mev$; where the superscript \pdg indicates the nominal mass of the
 indicated particle from \Ref{PDG2012}.
 The \Ds meson decays weakly, and therefore has a non-zero lifetime,
-$\tau_{\Ds}=(5.00\pm0.07)\e{-13}$, and thus an extremely narrow width, so the value of $25\mev$
+$\tau_{\Ds}=(5.00\pm0.07)\e{-13}\sec$, and thus an extremely narrow width, so the value of $25\mev$
 is primarily to account for detector resolution effects.
+\bam{Quote detector resolution.}
 In order for the candidate to have the correct decay topology, it is also required that the \Ds
 vertex lies downstream of the \Bp decay vertex.
 
@@ -74,10 +37,11 @@ $\pt>100\mev$, and tracks from the \Ds(\phii), $p>1(2)\gev$.
 Geometrical constraints are also placed on the tracks.
 The \chisq per degree of freedom of the track fit, $\chisqtrk/\ndof$, must be less than four, and
 $\min\left(\chisqip\right)>4$.
+\bam{Define IP.}
 The variable \chisqip is defined as the increase in the \chisq of the vertex fit (\chisqvtx) when
-the signal track is combined with the PV; the $\min\left(\chisqip\right)$ is the minimum \chisqip
-with respect to all PVs.
-Loose PID requirements are also placed on all tracks, and further PID constraints are applied in
+the signal track is combined with the \pv; the $\min\left(\chisqip\right)$ is the minimum \chisqip
+with respect to all \glspl{PV}.
+Loose \pid requirements are also placed on all tracks, and further \pid constraints are applied in
 the \bdt, which is detailed later.
 
 The \Bp vertex fit is performed by constraining the mass of the \Ds to its known
@@ -85,9 +49,9 @@ mass~\cite{PDG2012}, and the resulting vertex fit must have a \chisqvtx per degr
 less than ten.
 A requirement of $\cos\thetadir>0.999$ must also be met.
 The angle \thetadir is defined as the angle between the momentum vector of the \Bp candidate and
-the vector formed by the PV and decay vertex of the \Bp.
+the vector formed by the \pv and decay vertex of the \Bp.
 Were the resolution of the \lhcb detector to be perfect, a real decay would have $\cos\thetadir=1$.
-Prompt background from the PV is suppressed by requiring that the lifetime of the \Bp,
+Prompt background from the \pv is suppressed by requiring that the lifetime of the \Bp,
 $\tau_{\Bp}$, is greater than $0.2\ps$.
 Cuts applied in the stripping are summarized in \Tab{tab:dsphi:sel}.
 
@@ -96,7 +60,7 @@ Cuts applied in the stripping are summarized in \Tab{tab:dsphi:sel}.
 %\phitokk, where the \Ds decay is the Cabibbo favoured mode.
 %Each daughter track has a $\chisqtrk/\ndof<4$, a \pt of at least $100\mev$, and a minimum momentum
 %of $1$ or $2\gev$ for tracks originating from the \Ds and \phii, respectively.
-%Each track in the event must also be detached from the PV, and are only accepted if the
+%Each track in the event must also be detached from the \pv, and are only accepted if the
 %$\chisqvtx/\ndof$ increases by more than four when the track is used in the vertex fit, compared to
 %when it is omitted.
 %Very loose PID requirements are also placed on the tracks, this is more to reduce the rate of the
@@ -208,6 +172,7 @@ The \bdt{s} are designed to identify the
 decays \dstokkpi and \phitokk, with topologies consistent with coming from a parent $B$-meson.
 The methodology used to train each \bdt is the same.
 Both are trained using the bagging algorithm using the same set of input variables.
+\bam{Why Bagging.}
 This technique of using a \bdt to identify each meson is also used in
 \Ref{LHCb-CONF-2012-009}, which measures branching fraction ratios of various \decay{B}{DD} decays.
 
@@ -252,7 +217,9 @@ A summary of all training variables is given in \Tab{tab:dsphi:vars}.
   }
   \label{tab:dsphi:vars}
   \begin{center}
-    \begin{tabular}{clp{0.50\textwidth}}
+    %\begin{tabular}{clp{0.50\textwidth}}
+    %\begin{tabular}{p{0.1\textwidth}p{0.3\textwidth}p{0.50\textwidth}}
+    \begin{tabular*}{\textwidth}{ll @{\extracolsep{\fill}} p{0.6\textwidth}}
       \toprule
       Particle & \multicolumn{2}{c}{Variable} \\
       \midrule
@@ -267,7 +234,8 @@ A summary of all training variables is given in \Tab{tab:dsphi:vars}.
       & PID variables       & 16 variables containing PID information, such as {\tt isMuon} and DLL
       variables from the \rich detectors \\
       \bottomrule
-    \end{tabular}
+    %\end{tabular}
+    \end{tabular*}
   \end{center}
 \end{table}
 
@@ -324,10 +292,10 @@ The decay topology of \dstokkpi is very similar to the other weak decays \decay{
 \decay{\Lc}{\pkpi}.
 These have relatively large branching fractions~\cite{PDG2012}:
 \begin{align}
-  \BF(\decay{\Dp}{\kpipiss}) &= (9.13\pm0.19)\e{-2} \\
-  \BF(\decay{\Lc}{\pkpi}) &= (5.0\pm1.3)\e{-2},
+  \BF(\decay{\Dp}{\kpipiss}) &= (9.13\pm0.19)\e{-2}, \nonumber\\
+  \BF(\decay{\Lc}{\pkpi}) &= (5.0\pm1.3)\e{-2},\nonumber
 \end{align}
-and if the daughter \pip(\proton) from the \Dp(\Lc) decay is misidentified as a \Kp the decay
+and if the daughter $\pip(\proton)$ from the $\Dp(\Lc)$ decay is misidentified as a \Kp the decay
 \dstokkpi can be mimicked.
 %the resulting invariant mass combination can fall within $25\mev$ of \mass{\Ds}.
 Henceforth, the notation $h_i$ will be used to denote a particle assigned the mass of an $h$ which
@@ -383,19 +351,6 @@ These vetoes are highly, \approx$95\pc$, efficient.
 %If the invariant mass of this newly reconstructed object falls within the nominal mass of the \Dp
 %or \Lc, then the ambiguous (swapped) track is subject to the stringent PID requirements of
 %$\dllkpi>10$ or $\dllkp>0$, respectively.
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
