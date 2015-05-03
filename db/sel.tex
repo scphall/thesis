@@ -2,8 +2,8 @@
 
 This analysis uses the full $3.0\invfb$ of data collected by the \lhcb
 experiment~\Ref{Alves:2008zz} in the years 2011 and 2012 at 7 and $8\tev$ respectively.
-Since the properies of the \db are unknown, a variety of simulated samples of the decay \btokstrdb,
-where \dbtomumu, were generated with a range of \mass{\db} and $\tau_\db$, a summarey of these are
+Since the properties of the \db are unknown, a variety of simulated samples of the decay \btokstrdb,
+where \dbtomumu, were generated with a range of \mass{\db} and $\tau_\db$, a summary of these are
 shown in \Table{tab:db:samples}.
 Also used in this analysis, are simulated events of the decays \btokstrmumu and \btojpsikstr.
 
@@ -40,17 +40,17 @@ backgrounds  di-$b$-hadron backgrounds.
 
 Candidates for the decay \btokstrdb, where \dbtomumu are reconstructed allowing that the \db can
 be displaced from the decay vertex of the \Bd.
-Since the \db could be a long-lived particle, and travel beyond the accempatnce of the \velo before
+Since the \db could be a long-lived particle, and travel beyond the acceptance of the \velo before
 it decays, it is prudent to consider the use of \emph{downstream} tracks.
 Track types are defined by which tracking subdetectors in which they are observed,
 \Fig{fig:db:lldd} shows these various definitions.
 For most \lhcb analyses, the only appropriate track to use are \emph{long} tracks, which have hets
-in each tracking station; long tracks are used in the analyses described in \Chap{ch:dsphi} and
+in each tracking station; long tracks are used in the analyses described in \Chap{ch:hits} and
 \Chap{ch:hhh}.
 The problem with using downstream tracks is that they are not triggered efficiently in \hlttwo.
-For example, a simulated \db with a mass fo $250\mev$ and a lifetime of $100\ps$ has a
-reconstruction adsnd
-stripping efficiency of \approx$0.9\pc$ if the muons are both long tracks, but the equivilent
+For example, a simulated \db with a mass of $250\mev$ and a lifetime of $100\ps$ has a
+reconstruction and
+stripping efficiency of \approx$0.9\pc$ if the muons are both long tracks, but the equivalent
 number for downstream tracks is \approx$2.5\pc$; due to the boost of a light object from a decaying
 \Bd.
 However, the trigger efficiency for this sample is \approx$45\pc$ and $8\pc$ for long and
@@ -65,11 +65,11 @@ For this reason, this analysis deals only with \db candidates formed from long-t
     \caption[Track definitions in the LHCb detector]{
       Schematic diagram of the \lhcb tracking system, showing the \velo, \ttracker, and tracking
       stations T1--3.
-      Track types at \lhcb are defined by the regions through which they travel, as labeled in the
+      Track types at \lhcb are defined by the regions through which they travel, as labelled in the
       diagram.
       Most tracks used in analyses are classified as long tracks, but for long-lived particles
       (such as the \KS) downstream tracks are often also used to increase statistics.
-      This analysis focusses on long tracks.
+      This analysis focused on long tracks.
       %and tracking stations one, two, and three.
       %This analysis focuses on particles decaying into a pair of long tracks.
     }
@@ -138,11 +138,11 @@ has been performed.
       \mup
       & \pt                       & $>$ & 100  & MeV \\
       & {\tt PIDmu}               & $>$ & -5   \\
+      & \ismuon                   & & True \\
       \bottomrule
     \end{tabular}
   \end{center}
 \end{table}
-
 
 
 \subsection{Preselection}
@@ -152,19 +152,75 @@ following subsection.
 The preselection places cuts on topological quantities the combined efficiency of which is
 \approx$90\%$ on all simulated samples.
 
-Cuts are applied to the \Kstar and its daughteres to remove candidates that are clearly
-inconsistent with the dacay  \decay{\Kstarz}{\kpi}.
-Firstly, It is rewquired that the invariant mass of the \decay{\Kstarz}{\kpi} candidate has a mass
+Cuts are applied to the \Kstar and its daughters to remove candidates that are clearly
+inconsistent with the decay  \decay{\Kstarz}{\kpi}.
+Firstly, It is required that the invariant mass of the \decay{\Kstarz}{\kpi} candidate has a mass
 within $100\mev$ of the known mass of the $K^*(892)^0$ meson, which has been measured to be
-$\bam{896\mev}$~\cite{PDG2014}.
+$(895.81\pm0.19)\mev$~\cite{PDG2014}.
 \pid constraints are also applied to each \Kstar daughter: $\dllkpi(\Kp)>-5$, $\dllkpi(\pip)<25$;
 and to ensure that the kaon candidate looks more like a kaon than the pion candidate a cut on the
-difference in DLLs is also applied: $\dllkpi(\Kp)-\dllkpi(\pip)>10$.
+difference in \glspl{DLL} is also applied: $\dllkpi(\Kp)-\dllkpi(\pip)>10$.
 
+Another background from misidentified particles that is removed in the preseleciton is that of a
+decaying \KS meson.
+A \KS has a mass of $(497.61\pm0.02)\mev$~\cite{PDG2012}, a lifetime of
+$(8.954\pm0.004)\e{-11}\sec$~\cite{PDG2012}, and decays
+into two charged pions $(69.20 \pm0.05)\pc$ of the time.
+If these two pions are misidentified as muons then there is significant peaking backround around
+the \KS mass, becuase the mass of a muon and pion are similar.
+To counter this, candidates are vetoed if the mass of $m_{\pi_\mu^+\pi_\mu^-}$ is within $25\mev$
+of the known \KS mass.
 
+Since the \db can be displaced from the \Db decay vertex, a potential background for the decay
+\dbtomumu is from a \mumu pair directly from a \pv.
+This is suppressed by requiring that the transverse flight distance (\FDT) of the \db vertex, with
+respect to the \pv is greater than $0.1\mm$.
 
-A summary of all preselction cuts are shown in \Tab{tab:db:presel}.
+Similar to in \Sec{sec:hhh:sel}, the decay \btokstrdb suffers from backgrounds from
+\decay{\Bd}{\jpsi\Kstarz} where a hadron is misidentified as a hadron and vice versa.
+In this case the background can be suppressed by requiring that neither the \Kp nor the \pim
+satisfy the \ismuon criteria.
+The effect of this cut is shown in \Fig{fig:db:doublemisid}.
+A summary of all preselection cuts are shown in \Tab{tab:db:presel}.
 
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{blank}
+    \caption{
+      Duoble misid
+    }
+    \label{fig:db:doublemisid}
+  \end{center}
+\end{figure}
+
+\begin{table}
+  \caption[Preselection cuts] {
+    Preselection cuts.
+  }
+  \label{tab:presel}
+  \begin{center}
+    \begin{tabular}{llcrl}\toprule
+      Candidate & \multicolumn{3}{c}{Cut}\\
+      \midrule
+      \Bd
+      & $\theta_\mathrm{dir}$ &$<$& 0.03 & rad \\
+      & $\chisqvtx$ &$<$& 15 \\
+      & $\chisqip$ &$<$& 10 \\\littlerule
+      \Kstarz
+      & $|m_{\kpi}-895.8|$ & $<$ & 100 & MeV \\
+      & $\dllkpi(K)-\dllkpi(\pi)$ & $>$ & 10 \\\littlerule
+      \Kp
+      & $\ismuon$ && {\tt False} \\
+      & $\dllkpi$&  $>$ & -5 \\\littlerule
+      \pip
+      & $\ismuon$ && {\tt False} \\
+      & $\dllkpi$&  $<$ & 25 \\\littlerule
+      \db
+      & $F\!D_T$ & $>$ & 0.1 & mm \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
 
 
 %Loose hadron particle identification requirements and a $m(\kpi)$ cut are also made to remove any
@@ -187,34 +243,6 @@ A summary of all preselction cuts are shown in \Tab{tab:db:presel}.
 %Here, \qsq is defined to be the invariant mass of the dimuon pair, squared.
 
 
-\begin{table}
-  \caption[Preselection cuts] {
-    Preselection cuts.
-  }
-  \label{tab:presel}
-  \begin{center}
-    \begin{tabular}{llcrl}\toprule
-      Candidate & \multicolumn{3}{c}{Cut}\\
-      \midrule
-      \Bd
-      & $\theta_\mathrm{dir}$ &$<$& 0.03 & rad \\
-      & $\chisqvtx$ &$<$& 15 \\
-      & $\chisqip$ &$<$& 10 \\\littlerule
-      \Kstarz
-      & $|m_{\kpi}-895.6|$ & $<$ & 100 & MeV \\
-      & $\dllkpi(K)-\dllkpi(\pi)$ & $>$ & 10 \\\littlerule
-      \Kp
-      & $\ismuon$ && {\tt False} \\
-      & $\dllkpi$&  $>$ & -5 \\\littlerule
-      \pip
-      & $\ismuon$ && {\tt False} \\
-      & $\dllkpi$&  $<$ & 25 \\\littlerule
-      \db
-      & $F\!D_T$ & $>$ & 0.1 & mm \\
-      \bottomrule
-    \end{tabular}
-  \end{center}
-\end{table}
 
 
 
