@@ -9,6 +9,8 @@ THESISMAIN = Thesis/main.tex
 
 MAINS = $(wildcard */main.tex)
 MAINS := $(filter-out $(THESISMAIN),$(MAINS)) $(THESISMAIN)
+MAINS := $(filter-out allana/main.tex,$(MAINS))
+MAINS := $(filter-out alltheory/main.tex,$(MAINS))
 TARGETS = $(addsuffix .pdf,$(addprefix $(PDFDIR)/,$(subst /main.tex,,$(MAINS))))
 BIBSOURCES = $(wildcard $(BIBSOURCES)/*.bib)
 
