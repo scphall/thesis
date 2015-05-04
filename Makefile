@@ -22,9 +22,8 @@ endif
 
 
 all: $(TARGETS)
-#all: $(MAINS2)
 
-
+#%: $(PDFDIR)/%.pdf
 
 $(PDFDIR)/%.pdf: %/*.tex
 	sed 's/XXX/$*/g' Thesis/template.tex > $(OUTDIR)/$*.tex

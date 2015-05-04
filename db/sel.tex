@@ -44,7 +44,7 @@ Since the \db could be a long-lived particle, and travel beyond the acceptance o
 it decays, it is prudent to consider the use of \emph{downstream} tracks.
 Track types are defined by which tracking subdetectors in which they are observed,
 \Fig{fig:db:lldd} shows these various definitions.
-For most \lhcb analyses, the only appropriate track to use are \emph{long} tracks, which have hets
+For most \lhcb analyses, the only appropriate track to use are \emph{long} tracks, which have hits
 in each tracking station; long tracks are used in the analyses described in \Chap{ch:hits} and
 \Chap{ch:hhh}.
 The problem with using downstream tracks is that they are not triggered efficiently in \hlttwo.
@@ -61,8 +61,10 @@ For this reason, this analysis deals only with \db candidates formed from long-t
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.48\textwidth]{track}
-    \caption[Track definitions in the LHCb detector]{
+    %\includegraphics[width=0.48\textwidth]{track}
+    \includegraphics[scale=0.7]{track}
+    \caption[Track definitions in the LHCb detector]
+    {
       Schematic diagram of the \lhcb tracking system, showing the \velo, \ttracker, and tracking
       stations T1--3.
       Track types at \lhcb are defined by the regions through which they travel, as labelled in the
@@ -160,13 +162,13 @@ $(895.81\pm0.19)\mev$~\cite{PDG2014}.
 and to ensure that the kaon candidate looks more like a kaon than the pion candidate a cut on the
 difference in \glspl{DLL} is also applied: $\dllkpi(\Kp)-\dllkpi(\pip)>10$.
 
-Another background from misidentified particles that is removed in the preseleciton is that of a
+Another background from misidentified particles that is removed in the preselection is that of a
 decaying \KS meson.
 A \KS has a mass of $(497.61\pm0.02)\mev$~\cite{PDG2012}, a lifetime of
 $(8.954\pm0.004)\e{-11}\sec$~\cite{PDG2012}, and decays
 into two charged pions $(69.20 \pm0.05)\pc$ of the time.
-If these two pions are misidentified as muons then there is significant peaking backround around
-the \KS mass, becuase the mass of a muon and pion are similar.
+If these two pions are misidentified as muons then there is significant peaking background around
+the \KS mass, because the mass of a muon and pion are similar.
 To counter this, candidates are vetoed if the mass of $m_{\pi_\mu^+\pi_\mu^-}$ is within $25\mev$
 of the known \KS mass.
 
@@ -186,7 +188,7 @@ A summary of all preselection cuts are shown in \Tab{tab:db:presel}.
   \begin{center}
     \includegraphics[width=0.48\textwidth]{blank}
     \caption{
-      Duoble misid
+      Double misid
     }
     \label{fig:db:doublemisid}
   \end{center}
@@ -224,13 +226,13 @@ A summary of all preselection cuts are shown in \Tab{tab:db:presel}.
 
 
 \subsection{Multivariate selection}
-Section \ref{sec:uboost} outlines the \uBDT algorithm, which trains a \bdt whereby events are
-boosted based not only on misclassification, but also on how uniform the local response of the \bdt
-is for a give set of varialbes.
-In this case it is important that the \bdt does not bias the sample towards a given mass and
+Section \ref{sec:uboost} outlines the \uBDT algorithm, which trains a \BDT whereby events are
+boosted based not only on misclassification, but also on how uniform the local response of the \BDT
+is for a give set of variables.
+In this case it is important that the \BDT does not bias the sample towards a given mass and
 lifetime, which makes the \uBDT ideal for this analysis.
 That being said, the uBoost algorithm should not be used at the expense of the performance of the
-\bdt.
+\BDT.
 It is observed that the \uBDT algorithm in fact outperforms the AdaBoost algorithm in this case,
 and therefore its use is justified.
 
@@ -238,9 +240,25 @@ A \uBDT is trained using a signal-proxy from simulated events and background tak
 \Bd mass sideband where the \Bd candidate has a mass of over $150\mev$ above the nominal \Bd mass.
 Specifically, the signal-proxy is a concoction of three different simulated samples in which the
 \db has a mass of: 214, 1000, and $4000\mev$; and each has a lifetime of $100\ps$.
-These samples are chosen to give the \uBDT alogorithm input the largest range of masses possible.
+These samples are chosen to give the \uBDT algorithm input the largest range of masses possible.
 The fact that each sample has the same lifetime is unimportant, because $\lifetime{adb}=100\ps$ is
-sufficiently long for there to be a ranbe of lifetimes in the signal-proxy sample.
+sufficiently long for there to be a range of lifetimes in the signal-proxy sample.
+Figure~\ref{fig:db:bdtflat} shows the effect of the uniform boosting, and that the efficiency for
+all masses and lifetimes are approximately flat.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{mvaMassEff}
+    \includegraphics[width=0.48\textwidth]{anaTauEffMVA}
+    \caption{
+      It is observed that the efficiency of the \uBDT as a function of
+      (left) \mdb and
+      (right) \tdb is flat.
+      Here, a cut which is \approx$85\pc$ efficient is applied.
+    }
+    \label{fig:bdt:eff:tau}
+  \end{center}
+\end{figure}
 
 %\begin{equation}
   %P_\sigma = \frac{S}{\sqrt{B} + \frac\sigma2},
@@ -278,26 +296,13 @@ The optimal working point varies from sample to sample due to the fact that the 
 depends on $(m,\tau)$.
 However, the optimal point in the prompt case is approximately $uBDT>0.15$ for all samples, a
 working point that
-is approximately $85\pc$ efficient by construciotnn.
+is approximately $85\pc$ efficient by constructing.
 At this point in the displaced region, there is an estimated zero background.
 This point was calculated used a value of $\sigma=5$, \Eq{eq:db:punzi}, although the result is seen
 to be insensitive to its exact value.
 
-Figure~\ref{fig:db:bdtflat} show
 
 
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.48\textwidth]{mvaMassEff}
-    \includegraphics[width=0.48\textwidth]{anaTauEffMVA}
-    \caption{
-      Efficiency of the \uBDT as a function of
-      (left) \mdb and
-      (right) \tdb.
-    }
-    \label{fig:bdt:eff:tau}
-  \end{center}
-\end{figure}
 
 
 %In \Sect{sec:strategy} it is briefly mentioned that the observed signal yields will be normalized
