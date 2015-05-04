@@ -105,8 +105,7 @@ has been performed.
   }
   \label{tab:stripping}
   \begin{center}
-    \begin{tabular}{llcrl}\toprule
-      Candidate & \multicolumn{4}{c}{Cut} \\\midrule
+    \begin{tabularcuts}
       \Bp
       & $\chisqvtx/\ndf$          & $<$ & 25   \\
       & \chisqip                  & $<$ & 50   \\ % BPVIPCHI2
@@ -140,7 +139,7 @@ has been performed.
       & {\tt PIDmu}               & $>$ & -5   \\
       & \ismuon                   & & True \\
       \bottomrule
-    \end{tabular}
+    \end{tabularcuts}
   \end{center}
 \end{table}
 
@@ -171,7 +170,7 @@ the \KS mass, becuase the mass of a muon and pion are similar.
 To counter this, candidates are vetoed if the mass of $m_{\pi_\mu^+\pi_\mu^-}$ is within $25\mev$
 of the known \KS mass.
 
-Since the \db can be displaced from the \Db decay vertex, a potential background for the decay
+Since the \db can be displaced from the \Bd decay vertex, a potential background for the decay
 \dbtomumu is from a \mumu pair directly from a \pv.
 This is suppressed by requiring that the transverse flight distance (\FDT) of the \db vertex, with
 respect to the \pv is greater than $0.1\mm$.
@@ -199,9 +198,7 @@ A summary of all preselection cuts are shown in \Tab{tab:db:presel}.
   }
   \label{tab:presel}
   \begin{center}
-    \begin{tabular}{llcrl}\toprule
-      Candidate & \multicolumn{3}{c}{Cut}\\
-      \midrule
+    \begin{tabularcuts}
       \Bd
       & $\theta_\mathrm{dir}$ &$<$& 0.03 & rad \\
       & $\chisqvtx$ &$<$& 15 \\
@@ -218,23 +215,33 @@ A summary of all preselection cuts are shown in \Tab{tab:db:presel}.
       \db
       & $F\!D_T$ & $>$ & 0.1 & mm \\
       \bottomrule
-    \end{tabular}
+    \end{tabularcuts}
   \end{center}
 \end{table}
 
 
-%Loose hadron particle identification requirements and a $m(\kpi)$ cut are also made to remove any
-%candidates clearly inconsistent with the decay $\Kstarz\!\to \kpi$.
-%Since the \db lives an unknown amount of time, muons originating from another Primary Vertex (PV).
-%To suppress this possibility, the transverse flight distance, $FD_T$, of the
-%\db is required to be at least $0.1\mm$, this cut is close to $100\%$ efficient for all simulated
-%samples.
-%The $FD_T$ is defined to be the distance in the $x-y$ plane, between the PV and the decay vertex of
-%the \db.
-%This suppresses even the case where the second PV is not reconstructed
-%since the vast majority of all $pp$ collisions happen less than 0.1\mm from the nominal beam
-%line.
-%%The distribution of the radial $PV$ positions is shown in \Fig{fig:pv}.
+\subsection{Other backgrounds from misidentification}
+
+
+\subsection{Multivariate selection}
+Section \ref{sec:uboost} outlines the \uBDT algorithm, which trains a \bdt whereby events are
+boosted based not only on misclassification, but also on how uniform the local response of the \bdt
+is for a give set of varialbes.
+In this case it is important that the \bdt does not bias the sample towards a given mass and
+lifetime, which makes the \uBDT ideal for this analysis.
+That being said, the uBoost algorithm should not be used at the expense of the performance of the
+\bdt.
+
+A \uBDT is trained using a signal-proxy from simulated events and background taken from the upper
+\Bd mass sideband where the \Bd candidate has a mass of over $150\mev$ above the nominal \Bd mass.
+Specifically, the signal-proxy is a concoction of three different simulated samples in which the
+\db has a mass of: 214, 1000, and $4000\mev$; and each has a lifetime of $100\ps$.
+These samples are chosen to give the \uBDT alogorithm input the largest range of masses possible.
+The fact that each sample has the same lifetime is unimportant, because $\lifetime{adb}=100\ps$ is
+sufficiently long for there to be a ranbe of lifetimes in the signal-proxy sample.
+
+
+
 
 %In \Sect{sec:strategy} it is briefly mentioned that the observed signal yields will be normalized
 %with respect to the SM decay \btokstrmumu.
