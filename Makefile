@@ -24,6 +24,8 @@ endif
 all: $(TARGETS)
 #all: $(MAINS2)
 
+
+
 $(PDFDIR)/%.pdf: %/*.tex
 	sed 's/XXX/$*/g' Thesis/template.tex > $(OUTDIR)/$*.tex
 	$(LATEX) --output-directory=$(OUTDIR) -draftmode $(OUTDIR)/$*

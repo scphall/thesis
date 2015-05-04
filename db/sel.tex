@@ -231,6 +231,8 @@ In this case it is important that the \bdt does not bias the sample towards a gi
 lifetime, which makes the \uBDT ideal for this analysis.
 That being said, the uBoost algorithm should not be used at the expense of the performance of the
 \bdt.
+It is observed that the \uBDT algorithm in fact outperforms the AdaBoost algorithm in this case,
+and therefore its use is justified.
 
 A \uBDT is trained using a signal-proxy from simulated events and background taken from the upper
 \Bd mass sideband where the \Bd candidate has a mass of over $150\mev$ above the nominal \Bd mass.
@@ -240,7 +242,62 @@ These samples are chosen to give the \uBDT alogorithm input the largest range of
 The fact that each sample has the same lifetime is unimportant, because $\lifetime{adb}=100\ps$ is
 sufficiently long for there to be a ranbe of lifetimes in the signal-proxy sample.
 
+%\begin{equation}
+  %P_\sigma = \frac{S}{\sqrt{B} + \frac\sigma2},
+%\end{equation}
+%where $\sigma$ is the desired level of observation, $S$ is the amount of signal, and $B$ is the
+%bakground level.
+%The value of $S$ is determined to be the number of signal events that pass a given cut, while $B$
+%is calculated by
 
+%to be the number of events rem
+%using various simulated samples of the decay \btokstrdb, and is
+%simpl
+%
+%a number of simulated samples of \btokstrdb, where the signal is
+%simply the number of
+
+The \uBDT cut is optimized  by maximizing
+the Punzi figure-of-merit, which is defined as
+\begin{equation}
+  \mathcal{P}_\sigma = \frac{S}{\sqrt{B} + \tfrac12\sigma},
+  \label{eq:db:punzi}
+\end{equation}
+where $S$ and $B$ are the signal and background yields, respectively; and $\sigma$ is the desired
+level of observation.
+The signal and background yields are calculated as follows:
+$S$ is the number of simulated events which survive a \uBDT cut;
+$B$ is the yield as estimated using \btokstrdb candidates
+that fall outside $80\mev$ from the nominal \Bd mass~\cite{PDG2014} and within the region .
+The invariant mass distributions of these candidates are fit to a decaying exponential,
+and the background yield is taken to be the integral of this exponential within $60\mev$
+(approximately $3\sigma$) of $m^\mathrm{PDG}(\Bd)$.
+
+The figure-of-merit is considered separately for both the prompt and displaced candidates.
+The optimal working point varies from sample to sample due to the fact that the background yield
+depends on $(m,\tau)$.
+However, the optimal point in the prompt case is approximately $uBDT>0.15$ for all samples, a
+working point that
+is approximately $85\pc$ efficient by construciotnn.
+At this point in the displaced region, there is an estimated zero background.
+This point was calculated used a value of $\sigma=5$, \Eq{eq:db:punzi}, although the result is seen
+to be insensitive to its exact value.
+
+Figure~\ref{fig:db:bdtflat} show
+
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{mvaMassEff}
+    \includegraphics[width=0.48\textwidth]{anaTauEffMVA}
+    \caption{
+      Efficiency of the \uBDT as a function of
+      (left) \mdb and
+      (right) \tdb.
+    }
+    \label{fig:bdt:eff:tau}
+  \end{center}
+\end{figure}
 
 
 %In \Sect{sec:strategy} it is briefly mentioned that the observed signal yields will be normalized
