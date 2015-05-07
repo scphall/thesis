@@ -35,9 +35,10 @@ extends only $20\mev$ from $\mass{\phi}^\pdg$.
 All tracks forming the candidate mesons must fulfill requirements on the transverse momentum,
 $\pt>100\mev$, and tracks from the \Ds(\phii), $p>1(2)\gev$.
 Geometrical constraints are also placed on the tracks.
+One important geometrical variable is the \gls{IP}, which is defined as the perpendicular distance
+between the vertex in question and the line of flight of a particle.
 The \chisq per degree of freedom of the track fit, $\chisqtrk/\ndof$, must be less than four, and
 $\min\left(\chisqip\right)>4$.
-\bam{Define IP.}
 The variable \chisqip is defined as the increase in the \chisq of the vertex fit (\chisqvtx) when
 the signal track is combined with the \pv; the $\min\left(\chisqip\right)$ is the minimum \chisqip
 with respect to all \glspl{PV}.
@@ -172,9 +173,34 @@ The methodology used to train each \bdt is the same.
 Both are trained using the bagging algorithm, as outlined in \Chap{ch:mvas}, with the
 StatPatternRecognition package~\cite{Narsky:2005xpa}, using the same set of
 input variables.
-\bam{Why Bagging.}
 This technique of using a \bdt to identify each meson is also used in
 \Ref{LHCb-CONF-2012-009}, which measures branching fraction ratios of various \decay{B}{DD} decays.
+The bagging boosting technique used --- as described in \Sec{sec:bdt:bag} --- gives
+a response in the range $0<\mathrm{BDT}<1$.
+Therefore it is possible to, naturally, cut on the product of the two \BDT responses,
+$\bdt_{\Ds}\times\bdt_\phi>X$, as opposed to $\bdt_{\Ds}>X_1$ and $\bdt_\phi>X_2$.
+Cutting on the product of the \glspl{BDT} improves the performance of the selection, because a
+very strong \Ds candidate (for example) will be selected at the expense of a slightly weaker \phii
+selection.
+This is demonstrated in \Fig{fig:dsphi:bdtprod}.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{dbdts}
+    \includegraphics[width=0.48\textwidth]{dbdts_sw}
+    \caption[Example distribution of $\mathrm{BDT}_{D_s^+}\times\mathrm{BDT}_{D^0}$ from candidates
+      for the decay \btodsd]
+    {
+      An example distribution of the response for a $\bdt_{\Dz}$ against a $\bdt_{\Ds}$ for a
+      sample of (left) \btodsd candidates where the background dominates and occupies the lower
+      left of the plots, and (right) the same candidates after sWeighting has been applied where
+      the signal peak is observed further towards the upper right.
+      The lines overlayed on the plot are show the boundaries for the cuts of
+      $\bdt_{\Ds}\times\bdt_{\Dz}>0.01$, 0.04, 0.10, 0.20, 0.30, 0.40, and 0.05.
+    }
+    \label{fig:dsphi:bdtprod}
+  \end{center}
+\end{figure}
 
 %Each BDT was trained using the bagging method, as described in \Sec{sec:bdt:bag}.
 %The signal and background data used to train these BDTs came entirely from data.
@@ -251,7 +277,7 @@ In this case, the number of signal events, $S$, was estimated from the yield fro
 \end{equation}
 $f_s/f_d$ quantifies the fraction of \Bs mesons produced relative to \Bd mesons.
 The generator level efficiency, \eff{gen}, is the efficiency introduced by the acceptance region of
-the \lhcb, and the necessity that all daughter particles must travel through the detector.
+the \lhcb detector, and the necessity that all daughter particles must travel through the detector.
 Background yield for a given cut is estimated as:
 \begin{equation}
   B = c\cdot N_\mathrm{c}\big(\bstodspi\big)\cdot N_\mathrm{c}\big(\bstojpsiphi\big),
@@ -277,10 +303,6 @@ shown in \Fig{fig:dsphi:opt}.
 \end{figure}
 
 
-%The boosting technique used here was bagging, which --- as described in \Sec{sec:bdt:bag} --- gives
-%a response in the range $0<\mathrm{BDT}<1$.
-%Cutting on the product of the two BDT responses improves the performance, and therefore the cut is
-%$\bdt_{\Ds}\times\bdt_\phi>X$, as opposed to $\bdt_{\Ds}>X_1$ and $\bdt_\phi>X_2$.
 
 
 
@@ -331,7 +353,7 @@ then it is highly likely that it is a real \Ds decaying via \decay{\Ds}{\phi\pip
 branching fraction of $(4.5\pm0.4)\e{-2}$ and therefore the \kkpi combination is immediately
 accepted as a \Ds candidate.
 Secondly, if the invariant mass of the $p_K\Km\pip(\Km\pip_K\pip)$ object falls within $25\mev$ of
-the known \Dp(\Lc) mass the ambiguous particle is subject to harsh \pid requirements, such that:
+the known $\Dp(\Lc)$ mass the ambiguous particle is subject to harsh \pid requirements, such that:
 $\dllkpi>10(\dllkp>0$).
 These vetoes are highly, \approx$95\pc$, efficient.
 
