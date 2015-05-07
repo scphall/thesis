@@ -31,7 +31,8 @@ The weighted variance of response of the estimators $h_t$ around a weighted mean
   V(x_i) = \frac1n\sum_{t=1}^nt\big(h_t(x_i) - \bar h(x_i)\big)^2.
   \label{eq:bdt:bag4}
 \end{equation}
-By inserting $f(x_i)-f(x_i)$ into \Eq{eq:bdt:bag4}, manipulating the algebra, the relationship
+%By inserting $f(x_i)-f(x_i)$ into \Eq{eq:bdt:bag4}, manipulating the algebra, the relationship
+After some basic algebraic manipulation of \Eq{eq:bdt:bag4}, the relationship
 \begin{equation}
   e(x_i) = \bar\epsilon(x_i) - V(x_i)
   \label{eq:bdt:bag5}
@@ -45,6 +46,14 @@ effect of statistical fluctuations in the training samples~\cite{Krogh95neuralne
 A bagged \BDT is trained by randomly selecting events, with replacement, to train a single \DT.
 Hundreds of \DTs can then be trained, and the weighted response from all \DTs is the result of the
 classifier, in the range zero to one.
+
+The bagging algorithm is used to train two \glspl{BDT} in \Chap{ch:dsphi}, one to identify the \Ds
+meson, and the other to identify the \phii meson, above background combinatorics.
+Both these BDTs are trained using a large number, $\mathcal{O}(50)$ variables, and therefore the
+simplicity of bagging is advantageous.
+Also, because the analysis uses two \glspl{BDT}, it is better to cut on the product of the \BDT
+responses, which is more natural in the case of the bagging algorithm because the response is
+between zero and one.
 
 
 %Random selection of

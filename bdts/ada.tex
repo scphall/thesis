@@ -28,6 +28,8 @@ The value of $\alpha_t$ is the weight that the \DT carries, and is given by
 \end{equation}
 where $\epsilon$ is the weighted error rate.
 Weights are then renormalised such that they sum to unity.
+This reweighting procedure artificially fluctuates the training sample which is used to train
+each \DT.
 Multiple \DTs are made in this fashion, forming a forest; where the response of the \BDT classifier
 is a combination of responses from all \DTs in the forest.
 The total response of a \BDT, $T$, is
@@ -39,8 +41,9 @@ The total response of a \BDT, $T$, is
 where $T_t(x_i)$ is the response of tree $t$, which returns one if it classifies $x_i$ as being
 signal-like, and negative one if it is background-like.
 
-This reweighting procedure artificially fluctuates the training sample which is used to train
-each \DT.
+The AdaBoost algorithm is fast, and often used in High Energy Physics analyses.
+It is implemented in \Chap{ch:hhh} to distinguish signal \btokpipimumu and \btophikmumu candidates
+from combinatorial backgrounds.
 
 
 %For a training sample, described by the varibles $x_i$ with true responses $f(x_i)\in{-1,1}$,

@@ -53,10 +53,10 @@ unnecessary.
     \includegraphics[width=0.48\textwidth]{pid_piminus}
     \caption[Effect of resampling PID variables in simulation]
     {
-      The effect of PID resampling for simulated tracks using pure samples of pions, kaons and
-      muons.
+      The effect of PID resampling for simulated tracks using pure samples of particles.
       There is marked improvement in the similarity of the (black circles) \btojpsikpipi data and
       simulated events before (red line) resampling and after (red squares).
+      \bam{MUON PID PLOT}
     }
     \label{fig:hhh:pid}
   \end{center}
@@ -67,8 +67,8 @@ unnecessary.
 Tracking efficiency varies depending upon the regions of the detector through which the particle
 passes, and the modelling of the detector in the simulation behaves differently to in actuality.
 To correct for this, each candidate is weighted based on the relative tracking efficiency between
-data and simulation, this is dependent upon $m$ and $\eta$.
-The same is true for the response of the {\tt isMuon} variable.
+data and simulation, this is dependent upon $p$ and $\eta$.
+The same is true for the response of the \ismuon variable.
 Figure~\ref{fig:hhh:trackeff} shows how the tracking efficiency and \ismuon criteria are corrected
 for throughout the detector volume.
 After all reweighting all the aforementioned variables in simulated events, the \BDT distributions
@@ -114,7 +114,7 @@ The value for \eff{tot} is calculated to be $\eff{gen}\times\eff{reco\&sel}\time
 \eff{reco\&sel} is the reconstruction and selection efficiency;
 \eff{trig} trigger efficiency.
 The generator efficiency defines the probability that a \Bp decays into daughter particles which
-all pass through the \lhcb detector volume, and is approximately $15\pc$ for each signal and
+all pass through the \lhcb detector acceptance, and is approximately $15\pc$ for each signal and
 normalization channel.
 
 %relating to the probabliity of all tracks passing throught the \lhcb dectecor volume;
@@ -147,9 +147,8 @@ As there is no available physics model for the decay \btophikmumu, simulated eve
 using a phasespace model.
 These models introduce systematic uncertainties, which are discussed in \Sec{ssec:kpipi:syst} and
 \Sec{ssec:phik:syst}.
+The efficiency for each \qsq bin is shown in \Fig{fig:hhh:effs}.
 
-
-The efficiency for each \qsq bin is shown in \Fig{fig:hhh:kpipieff}.
 
 \begin{figure}[t]
   \begin{center}

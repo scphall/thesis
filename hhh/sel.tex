@@ -6,8 +6,8 @@ trigger.
 Subsequent software trigger stages required that at least one final-state muon has $\pt>1.0\gev$
 and at least one hadron has $\pt>1.6\gev$, both of which have an IP larger than $100\mum$ with
 respect to any PV in the event.
-The response of the topological \BBDT in \hlttwo must be consistent with a decaying $B$ meson
-with muons in the final state.
+The response of the topological \BBDT, which was described in \Sec{sec:lhcb:trig}, in \hlttwo must
+be consistent with a decaying $B$ meson with muons in the final state.
 
 %There is large overlap between the...
 
@@ -25,9 +25,10 @@ The muons must both satisfy the \ismuon criteria and have $\dllmupi>0$,
 while \pid criteria for hadrons are applied later.
 Each hadron must have $\pt>500\mev$ and
 the total invariant mass of the \kpipi system is required to be in the range
-$750<\mass{\kpipi}<2400\mev$.
+$750<\mass{\kpipi}<2400\mev$ in order to reduced the rate of accepted events at stripping level.
 For the \phik system, the additional constraint that the \decay{\phi}{\kk} object must have an
-invariant mass within $12\mev$ of $m_\phi^\pdg$ is applied.
+invariant mass within $12\mev$, which is three times the resolution of the \phii, of $m_\phi^\pdg$
+is applied.
 
 There are other decay channels which are used throughout this analysis, specifically:
 \btojpsikpipi, \btopsitwosk, and \btojpsiphik.
@@ -193,8 +194,7 @@ $\Kp\pi^+_\mu$ distribution\footnote{
 }.
 %This is shown in \Fig{fig:hhh:dzbkg}.
 To remove the small possible contribution from \decay{\Bd}{\Dzb\pip\pipi} events which fall within
-$30\mev$ of the nominal \Dz mass in the $\Kp\pi^-_\mu$ spectrum are vetoed.
-
+$30\mev$ of the nominal \Dz mass in the $\Kp\pi^-_\mu$ spectrum are vetoed. \bam{PLOT.}
 
 
 % SEMILEPTONIC DECAYS
@@ -204,7 +204,7 @@ For example, the decay $\decay{\Bp}{\Dm\pip\mup\nu_\mu}$ followed by
 $\decay{\Dm}{\Kp\pim\mun\bar\nu_\mu}$ has a total branching fraction of
 $(1.6\pm0.3)\e{-4}$~\cite{PDG2014}.
 Selection requirements on the \chisqvtx suppress these decays significantly, and the energy lost to
-the neutrinos means that this background peaks considerably below the known \Bp mass, as shown in
+the neutrinos means that this background sits considerably below the known \Bp mass, as shown in
 \Fig{fig:hhh:cascade}.
 
 \begin{figure}
@@ -225,9 +225,10 @@ the neutrinos means that this background peaks considerably below the known \Bp 
 \subsection{Multivariate selection}
 \label{sec:hhh:bdt}
 Combinatorial background is suppressed using a \BDT trained using the AdaBoost
-algorithm~\cite{AdaBoost}, which is described in detail in \Chap{sec:bdt:ada}.
-The signal-proxy are taken from the background subtracted sample of \btojpsikpipi candidates.
-Background-lie events are selected from the upper mass sideband of the dignal selection in the
+algorithm~\cite{AdaBoost}, which is described in detail in \Chap{sec:bdt:ada}, and is implemented
+using the \gls{TMVA}~\cite{Hocker:2007ht}.
+The signal-proxy is taken from the background subtracted sample of \btojpsikpipi candidates.
+Background-like events are selected from the upper mass sideband of the signal selection in the
 range $5530<\mass{\kpipimumu}<5780\mev$.
 %Both signal and background samples used for \BDT training were taken from data.
 %The sample of data used as the signal-proxy was from  the decay \btojpsikpipi, which had been
@@ -405,8 +406,8 @@ The prediction for the branching fraction of the signal channel is taken to be
   }\nonumber\\
   &=\big(0.66\pm0.12\big)\e{-7}.
 \end{align}
-Figure~\ref{fig:phik:opt} shows the variation of the figure of metric for different values of the
-\bdt and $\dllkpi(K)$ cuts.
+Figure~\ref{fig:phik:opt} shows the variation of the figure-of-metrit, $S/\sqrt{S+B}$, for
+different values of the \bdt and $\dllkpi(K)$ cuts.
 
 \begin{figure}
   \begin{center}

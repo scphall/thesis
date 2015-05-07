@@ -5,7 +5,7 @@ The branching fraction of the signal decay \btophikmumu is determined relative t
 channel \btojpsiphik:
 \begin{equation}
   \BF\big(\btokphimumu\big)=
-  \frac{ N^\prime\big(\btophikmumu\big) }{ N\big(\btophikmumu\big) }
+  \frac{ N^\prime\big(\btophikmumu\big) }{ N\big(\btojpsiphik\big) }
   \cdot\BF\big(\btojpsiphik\big)
   \cdot\BF\big(\jpsitomumu\big),
 \end{equation}
@@ -17,52 +17,24 @@ Each event is weighted by the relative efficiency:
 \end{equation}
 where the denominator is the efficiency of the signal decay, \btophikmumu, in bins of \qsq.
 The variation of efficiency in \qsq for the signal decay is shown in
-\Fig{fig:hhh:phikeff}.
+\Fig{fig:hhh:effs}.
 This is done because the efficiency of the decay \btophikmumu was shown to vary significantly over
 the full \qsq range, the weights are determined in bins of \qsq.
 The branching fraction measurements used were
 $\BF\big(\btojpsiphik\big)=\big(5.2\pm1.7\big)\e{-5}$~\cite{PDG2012},
-and $\big(\jpsitomumu\big)=5.93\pm0.06$~\cite{PDG2012}.
-
+and $\BF\big(\jpsitomumu\big)=\big(5.93\pm0.06\big)\e{-2}$~\cite{PDG2012}.
 
 Yields for both the signal and normalization channels are extracted from unbinned maximum
-likelihood fits of the invariant mass of the \Bp candidates.
+likelihood fits of the invariant mass of the \Bp candidates, these fits are shown in
+\Fig{fig:phik:fit}.
 The signal component for the normalization channel is the sum of two Gaussian functions, with a
 power-law tail on the low mass side; the same function is used for fitting the weighted signal
 distribution where all parameters are fixed from a fit to the high statistics normalization mode.
-Combinatorial background is modelled as a second order Chebychev polynomail.
+Combinatorial background is modelled as a second order Chebychev polynomial.
 These fits give the values
 $N^\prime\big(\btokphimumu\big)=25.2\,^{+6.0}_{-5.3}$ and
 $N\big(\btojpsiphik\big)=1908\pm63$.
 The statistical significance of this is $6.6\stdev$ according to Wilks' theorem~\cite{wilks1938}.
-
-The above values lead to a measured branching fraction of
-\begin{equation}
-  \BF\big(\btophikmumu\big)=
-  \big(0.81\,^{+0.18}_{-0.16}\stat\pm0.03\syst\pm0.27\normerr\big)\e{-7}.
-\end{equation}
-However, the charmonium vetoes remove $\big(2\,^{+10}_{-\pz2}\big)\,\%$ of signal events, as
-calculated using simulated events.
-Taking this into account results in a value of
-\begin{equation}
-  \BF\big(\btophikmumu\big)=
-  \big(0.82\,^{+0.19}_{-0.17}\stat\,^{+0.10}_{-0.04}\syst\pm0.27\normerr\big)\e{-7}.
-\end{equation}
-The ratio of branching fractions of the signal and normalization channels is
-\begin{equation}
-  \frac{ \BF\big(\btophikmumu\big) }{ \BF\big(\btojpsiphik\big) }
-  =\big(1.58\,^{+0.36}_{-0.32}\stat\,^{+0.19}_{-0.07}\syst\big)\e{-3},
-\end{equation}
-which is quoted because there are large relative uncertainties associated with the branching
-fraction of the normalization channel (\approx$1\,\%$).
-
-Just as in \kpipi, it is expected that the \phik system will be composed of numerous strange
-resonances.
-However, low statistics and some phasespace limitations make it ipossible to draw and meaningful
-conclusions.
-The background subtracted \phik distributions for the signal and normalization channels are show in
-\Fig{fig:phik:phik}.
-
 
 \begin{figure}
   \begin{center}
@@ -82,6 +54,49 @@ The background subtracted \phik distributions for the signal and normalization c
     \label{fig:phik:fit}
   \end{center}
 \end{figure}
+
+The above values lead to a measured branching fraction of
+\begin{equation}
+  \BF\big(\btophikmumu\big)=
+  \big(0.81\,^{+0.18}_{-0.16}\stat\pm0.03\syst\pm0.27\normerr\big)\e{-7}.
+\end{equation}
+However, the charmonium vetoes remove $\big(2\,^{+10}_{-\pz2}\big)\pc$ of signal events, as
+calculated using simulated events.
+This systematic uncertainty in \btophikmumu is larger than in \btokpipimumu because the \qsq
+distribution in the case of the former drops off and ends in the \jpsi region, as shown in
+\Fig{fig:phik:q2}.
+Taking this into account results in a value of
+\begin{equation}
+  \BF\big(\btophikmumu\big)=
+  \big(0.82\,^{+0.19}_{-0.17}\stat\,^{+0.10}_{-0.04}\syst\pm0.27\normerr\big)\e{-7}.
+\end{equation}
+The ratio of branching fractions of the signal and normalization channels is
+\begin{equation}
+  \frac{ \BF\big(\btophikmumu\big) }{ \BF\big(\btojpsiphik\big) }
+  =\big(1.58\,^{+0.36}_{-0.32}\stat\,^{+0.19}_{-0.07}\syst\big)\e{-3},
+\end{equation}
+which is quoted because there are large relative uncertainties associated with the branching
+fraction of the normalization channel (\approx$1\,\%$).
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{blank}
+    \caption[CHIPS]
+    {
+      \qsq shape of \phik.
+    }
+    \label{}
+  \end{center}
+\end{figure}
+
+
+Just as in \kpipi, it is expected that the \phik system will be composed of numerous strange
+resonances.
+However, low statistics and some phasespace limitations make it impossible to draw and meaningful
+conclusions.
+The background subtracted \phik distributions for the signal and normalization channels are shown
+in \Fig{fig:phik:phik}.
+\bam{MORE HERE.}
 
 
 \begin{figure}
