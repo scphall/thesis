@@ -30,7 +30,6 @@
 %\usepackage{verse}
 \usepackage{array}
 \usepackage[bottom]{footmisc}
-\usepackage[font=small]{caption}
 %\usepackage{bm}
 
 \usepackage{tikz}
@@ -77,11 +76,11 @@
 \renewcommand{\cftdot}{{\color{black!35}.}}
 
 
-\usepackage[justification=justified,singlelinecheck=false]{caption}
-\usepackage[labelfont=bf,format=hang]{caption}
+\usepackage[justification=justified,singlelinecheck=false]{caption} %format=hang
+\usepackage[labelfont=bf]{caption}
+\renewcommand{\captionfont}{\small\onehalfspacing}
 
 \renewcommand{\abstractname}{}
-
 
 \onehalfspacing
 

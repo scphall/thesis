@@ -171,12 +171,7 @@ the mass resolution as a function of mass.
   \begin{center}
     \includegraphics[width=0.42\textwidth]{anaResMass_214_100}
     \includegraphics[width=0.42\textwidth]{anaResMass_250_100}
-    %\includegraphics[width=0.42\textwidth]{anaResMass_500_100}
-    %\includegraphics[width=0.42\textwidth]{anaResMass_800_100}
     \includegraphics[width=0.42\textwidth]{anaResMass_1000_100}
-    %\includegraphics[width=0.42\textwidth]{anaResMass_1500_100}
-    %\includegraphics[width=0.42\textwidth]{anaResMass_2000_100}
-    %\includegraphics[width=0.42\textwidth]{anaResMass_2500_100}
     \includegraphics[width=0.42\textwidth]{anaResMass_4000_100}
   \end{center}
   \caption{
@@ -187,102 +182,93 @@ the mass resolution as a function of mass.
 \end{figure}
 
 
-%\subsection{Parameterizing the efficiency of the \db selection}
-%The shape of the lifetime efficiency distribution varies with mass.
-%At each simulated mass point, the lifetime distribution was parameterized with a simple function,
-%\begin{equation}
-  %\mathcal{T}(\tau) = f\mathcal{G}(\mu, \sigma) + (1-f)\exp\left(-\alpha\tau\right),
-  %\label{eq:eff:parameters}
-%\end{equation}
-%where the parameters depends on dimuon mass.
-%This parameterisation is shown fitted to the lifetime distribution of four mass points in
-%\Fig{fig:eff:fits}.
+\subsection{Parameterizing the efficiency of the \db selection}
+The shape of the lifetime efficiency distribution varies with mass.
+At each simulated mass point, the lifetime distribution was parameterized with a simple function,
+\begin{equation}
+  \mathcal{T}(\tau) = f\mathcal{G}(\mu, \sigma) + (1-f)\exp\left(-\alpha\tau\right),
+  \label{eq:eff:parameters}
+\end{equation}
+where the parameters depends on dimuon mass.
+This parameterisation is shown fitted to the lifetime distribution of four mass points in
+\Fig{fig:eff:fits}.
 
 
-%\begin{figure}
-  %\begin{center}
-    %\subfloat[\label{fig:eff:fit0}]{\includegraphics[width=0.48\textwidth]{anaTauEff_250}}
-    %\subfloat[\label{fig:eff:fit1}]{\includegraphics[width=0.48\textwidth]{anaTauEff_800}}\\
-    %\subfloat[\label{fig:eff:fit2}]{\includegraphics[width=0.48\textwidth]{anaTauEff_2500}}
-    %\subfloat[\label{fig:eff:fit3}]{\includegraphics[width=0.48\textwidth]{anaTauEff_4000}}
-    %\caption{\small
-      %Fits, using the function in Eq.~\protect\ref{eq:eff:parameters},
-      %to the lifetime distributions of simulated events produced with a mass of
-      %\protect\subref{fig:eff:fit0} 250,
-      %\protect\subref{fig:eff:fit1} 800,
-      %\protect\subref{fig:eff:fit2} 2500, and
-      %\protect\subref{fig:eff:fit3} $4000\mev$,
-      %each with $\tau=100\ps$.
-      %The black points are the simulated events, and the black line is the total fit, with light
-      %and dark red lines showing the Gaussian and exponential components, respectively.
-    %}
-    %\label{fig:eff:fits}
-  %\end{center}
-%\end{figure}
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{anaTauEff_214}
+    \includegraphics[width=0.48\textwidth]{anaTauEff_250}\\
+    \includegraphics[width=0.48\textwidth]{anaTauEff_1000}
+    \includegraphics[width=0.48\textwidth]{anaTauEff_4000}
+    \caption{\small
+      Fits, using the function in Eq.~\protect\ref{eq:eff:parameters},
+      to the lifetime distributions of simulated events produced with the masses:
+      214, 250, 1000, and $4000\mev$ (as indicated)
+      each with $\tau_\db=100\ps$.
+      The black points are the simulated events, and the black line is the total fit, with light
+      and dark red lines showing the Gaussian and exponential components, respectively.
+    }
+    \label{fig:eff:fits}
+  \end{center}
+\end{figure}
 
 
-%Samples with different masses are fit with the results for each parameter plotted against dimuon
-%mass in \Fig{fig:eff:spline}.
-%Extrapolation to different masses is done using spline interpolation, as shown in
-%\Fig{fig:eff:spline}.
-%The value of $f$ has large errors, and has little effect on the total shape.
-%A cubic spline models this very poorly because of the fluctuations at low mass, therefore linear
-%regression is used instead.
-%These splines account for all efficiencies except for the efficiency of the uBDT and the geometric
-%acceptance of the \lhcb detector; the uBDT and geometric acceptance are nearly the same for all
-%samples and so nearly cancel in the limit setting.
-%An example of a lifetime efficiency distribution for a given mass is shown in \Fig{fig:eff:effmap},
-%as is the two-dimensional projection, absolute efficiencies have not been included in this.
+Samples with different masses are fit with the results for each parameter plotted against dimuon
+mass in \Fig{fig:eff:spline}.
+Extrapolation to different masses is done using spline interpolation, as shown in
+\Fig{fig:eff:spline}.
+The value of $f$ has large errors, and has little effect on the total shape.
+A cubic spline models this very poorly because of the fluctuations at low mass, therefore linear
+regression is used instead.
+These splines account for all efficiencies except for the efficiency of the uBDT and the geometric
+acceptance of the \lhcb detector; the uBDT and geometric acceptance are nearly the same for all
+samples and so nearly cancel in the limit setting.
+An example of a lifetime efficiency distribution for a given mass is shown in \Fig{fig:eff:effmap},
+as is the two-dimensional projection, absolute efficiencies have not been included in this.
 
-%The efficiency map shown in \Fig{fig:res:mbvtau} was generated using simulated samples where
-%$\tau(\db)=100\ps$ but contains the efficiency at each $\tau$ below 100\ps.
-%It is then possible to obtain the efficiency for any other lifetime as follows:
-%\begin{equation}
-  %\varepsilon(\tau) = \frac{1}{\tau}\int\limits_0^{100\ps} {\rm d}\tau^{\prime} \mathcal{T}(\tau^{\prime}){\rm exp}(-\tau^{\prime}/\tau),
-%%  \left.\exp\left(-\frac{\tau}{x}\right)\right/
-%%  \exp\left(-\frac{\tau}{100\ps}\right),
-%\end{equation}
-%%where $x$ is the `target' lifetime, in ps.
-%The upper lifetime acceptance will be $100\ps$, this is because the efficiency for longer lifetimes
-%is very poor.
+The efficiency map shown in \Fig{fig:res:mbvtau} was generated using simulated samples where
+$\tau(\db)=100\ps$ but contains the efficiency at each $\tau$ below 100\ps.
+It is then possible to obtain the efficiency for any other lifetime as follows:
+\begin{equation}
+  \varepsilon(\tau) = \frac{1}{\tau}\int\limits_0^{100\ps} {\rm d}\tau^{\prime} \mathcal{T}(\tau^{\prime}){\rm exp}(-\tau^{\prime}/\tau),
+%  \left.\exp\left(-\frac{\tau}{x}\right)\right/
+%  \exp\left(-\frac{\tau}{100\ps}\right),
+\end{equation}
+%where $x$ is the `target' lifetime, in ps.
+The upper lifetime acceptance will be $100\ps$, this is because the efficiency for longer lifetimes
+is very poor.
 
 
-%\begin{figure}
-  %\begin{center}
-    %\subfloat[\label{fig:eff:spline:sigma}]{\includegraphics[width=0.48\textwidth]{spline_sigma}}
-    %\subfloat[\label{fig:eff:spline:alpha}]{\includegraphics[width=0.48\textwidth]{spline_alpha}}\\
-    %\subfloat[\label{fig:eff:spline:frac}]{\includegraphics[width=0.48\textwidth]{spline_frac}}
-    %%\subfloat[\label{fig:eff:spline:res}]{\includegraphics[width=-2.32\textwidth]{spline_res}}
-    %%\subfloat[\label{fig:eff:spline:mass}]{\includegraphics[width=0.32\textwidth]{spline_mass}}
-    %\caption{\small
-      %%Parameters and mass resolution as a funtion of mass.
-      %Parameters from Eq.~\protect\ref{eq:eff:parameters} as a function of mass from
-      %simulated events.
-      %The parameters are
-      %\protect\subref{fig:eff:spline:sigma} $\sigma$,
-      %\protect\subref{fig:eff:spline:alpha} $\alpha$, and
-      %\protect\subref{fig:eff:spline:frac} $f$.
-      %Cubic splines are used to parameterize each shape, except for the parameter $f$, where a
-      %linear fit is used.
-      %%Parameters $\sigma$, $f$ and $\alpha$ (see Eq.~\protect\ref{eq:eff:parameters})
-      %%as a function of $m(\infl)$.
-      %%The points are taken from fits to MC, and the adjoining lines show spline interpolation.
-    %}
-    %\label{fig:eff:spline}
-  %\end{center}
-%\end{figure}
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{spline_sigma}
+    \includegraphics[width=0.48\textwidth]{spline_alpha}\\
+    \includegraphics[width=0.48\textwidth]{spline_frac}
+    \caption{
+      Parameters from Eq.~\protect\ref{eq:eff:parameters} as a function of mass from
+      simulated events.
+      The parameters are
+      (upper left) $\sigma$,
+      (upper right) $\alpha$, and
+      (lower) $f$.
+      Splines are used to parameterize each shape, except for the parameter $f$, where a
+      linear fit is used.
+    }
+    \label{fig:eff:spline}
+  \end{center}
+\end{figure}
 
-%\begin{figure}
-  %\begin{center}
-    %\includegraphics[width=0.48\textwidth]{spline_2d}
-    %\caption{\small
-      %Using the parameters in Fig.~\ref{fig:eff:spline} and Eq.~\protect\ref{eq:eff:parameters} the
-      %lifetime distributions are formed for the full two-dimensional projection.
-      %Absolute efficiencies are not folded in here.
-    %}
-    %\label{fig:eff:effmap}
-  %\end{center}
-%\end{figure}
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{spline_2d}
+    \caption{
+      Using the parameters in Fig.~\ref{fig:eff:spline} and Eq.~\protect\ref{eq:eff:parameters} the
+      lifetime distributions are formed for the full two-dimensional projection.
+      Absolute efficiencies are not folded in here.
+    }
+    \label{fig:eff:effmap}
+  \end{center}
+\end{figure}
 
 
 
