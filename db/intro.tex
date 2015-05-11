@@ -1,146 +1,176 @@
 \section{Introduction}
 \label{sec:db:intro}
 
+
+The following chapter outlines the search for an unknown dark boson\footnote{
+  Throughout this chapter \db shall denote a scalar, vector, or
+  other dark boson; unless specifically stated otherwise.
+  Also, all mentions of the \Kstarz will be implicitly referencing the $K^*(892)^0$.
+}, \db, of unknown mass and lifetime that decays via \dbtomumu in candidates consistent with the
+decay $\decay{\Bd}{K^*(892)^0\db}$.
+A fully frequentest method is applied to search for an excess in the dimuon spectrum above the \sm
+background of \btokstrmumu for a range of masses.
+Lifetime information is added by searching for an excess of dimuon candidates in two lifetime bins:
+one prompt, and one displaced.
+
+%An excess of \mumu events is searched for over a range
+%is searched for in the dimuon
+%component, consistent with \dbtomumu.
+%The mass and the lifetime of the \db is not assumed anywhere in the analysis.
+%%in the dimuon component
+%%of the decay \btokstrmumu, consistent with
+%%In this analysis the dimuon component of the decay \btokstrmumu, where \kstartokpi, is analysed
+%%searching for evidence of \dbtomumu, where \db is a new dark boson.
+%%The following analysis is as general as possible, in that neither the mass, nor the lifetime of the
+%%new \db is assumed.
+
 As described in \Chap{ch:theory}, the \sm cannot explain \dm, which is evidenced by a
 number of experimental observations.
 Little is known about dark matter except that it interacts with the \sm sector only, or at least
 predominantly, gravitationally and is therefore not directly visible to astronomical observations.
-Dark matter hints at the existence of a dark sector, housing particles that do not interact with
-\sm particles through the strong, or electroweak forces.
-The dark sector may contain a rich variety of distinct particles operating through forces that are
-hitherto unknown.
-The only way that the dark sector could communicate with our visible sector, apart from gravity,
-is via mediating messenger particles, which would be light particles
---- with masses below the weak scale ---
-and couple feebly to \sm particles.
-The messenger particles could interact via a number of \emph{portals}, which include the vector,
-axion, Higgs, and neutrino sectors (although the neutrino portal is not relevant to this analysis);
-\Table{tab:db:overview} outlines these operators.
+%The inclusion of a dark sector naturally provides a \dm candidate
+%Dark matter hints at the existence of a dark sector, housing particles that do not interact with
+%\sm particles through the strong, or electroweak forces.
+A possible extension to the \sm is to introduce a dark sector, which can contain a rich variety of
+distinct particles operating through forces that are hitherto unknown.
+Dark sector particles would be gauge singlet states with respect to the \sm gauge group, and
+the only way that they could communicate with our visible sector, apart from viavia  gravity,
+is via weakly interacting messenger particles.
+Messenger particles can interact with the \sm particles through one of four \emph{portals}:
+the vector, axion, Higgs, and neutrino portals.
+These portals would provide the only non-gravitational window into the dark sector.
+The interaction terms in the Lagrangian for these portals are shown in \Table{tab:db:overview}, and
+the following paragraphs will go into further detail about the Higgs and vector portals.
 
+%These messenger particles could interact via a number of \emph{portals}, which include the vector,
+%axion, Higgs, and neutrino sectors (although the neutrino portal is not relevant to this analysis);
+%\Table{tab:db:overview} outlines these operators.
+%There are a number of experimental observations, as outlined in \Chap{ch:th} that indicate that the
+%\sm is an incomplete pictures of particle physics.
+%A possible extension to the \sm is to introduce a dark sector, which can contain a spectrum of
+%particles beolonging to a differeny gauge group the \sm particles.
+%The inclusion of a dark sector naturally provides a \dm candidate, and can solve other problems,
+%depending on the exact model.
+%These dark particles typically cannot interact with any of the \sm particles, howeever most models
+%include a messenger particle which can feebly couple to the known spectrum of particles.
+%Messenger particles can interact with the \sm particles through one of four main \emph{portals}:
+%the vector, axion, Higgs, and neutrino portals.
+%The interaction terms in the Lagrangian for these portals are shown in \Table{tab:db:overview}, and
+%the following paragraphs will go into further detail about the Higgs and vector portals.
 
 \begin{table}
   \caption{
     %from 1311.0029
     A summary of portals through which a new dark boson could operate.
     Terms are defined as:
-    $F_{\mu\nu}$ is the Yang-Mills field;
-    $\widetilde{F}_{\mu\nu}$ is the dark photon field;
-    $\epsilon$ is the (kinetic) mixing of dark and real photon;
+    %$F_{\mu\nu}$ is the Yang-Mills field;
+    $F_{\mu\nu}$ is the field strength tensor of the photon;
+    $F^\prime_{\mu\nu}$ is the dark photon field;
+    $\epsilon$ characterizes mixing between the \sm and the dark photon;
     $a$ is axion field;
     $f_a$ is scale at which Peccei-Quinn global $U(1)$ symmetry is spontaneously broken;
     $G_{\mu\nu}$ is the gluon field strength tensor;
     $S$ is a dark scalar field with coupling strengths $\mu$ and $\lambda$ to the Higgs field;
-    and $N$ is the sterile neutrino.
+    and $N$ is the sterile neutrino which couples to a $H$ with a strength $Y_N$.
   }
   \label{tab:db:overview}
   \begin{center}
     \begin{tabular}{llccc}\toprule
       \cellc{Portal} & \cellc{Particles} & \multicolumn{3}{c}{Operator(s)}
       \\\midrule
-      Vector & Dark photons && $-\tfrac{\epsilon}{2\cos\theta_W}B_{\mu\nu}F^{\mu\nu}$ \\
+      Vector & Dark photons && $-\tfrac{\epsilon}{2\cos\theta_W}F_{\mu\nu}F^{\prime\mu\nu}$ \\
       Axion & Pseudoscalars & $\tfrac{a}{f_a}F_{\mu\nu}\widetilde{F}^{\mu\nu}$
       & $\tfrac{a}{f_a}G_{i\mu\nu}\widetilde{G}^{\mu\nu}_i$
       & $\tfrac{\partial_\mu a}{f_a}\xbar{\psi}\gamma^\mu\gamma^5\psi$ \\
       Higgs & Dark scalars && $(\mu S + \lambda S^2)H^\dagger H$ \\
-      Neutrino & Sterile neutrinos && $Y_NLHN$ \\
+      Neutrino & Sterile neutrinos && $Y_N\ell HN$ \\
       \bottomrule
     \end{tabular}
   \end{center}
 \end{table}
 
+The Higgs portal has a scalar messenger particle which can mix with the \sm Higgs.
+There are a number of models which incorporate a scalar messenger particle that interacts with the
+Higgs.
+For example \SUSY, which was introduced in \Chap{ch:theory}, can provide a messenger particle in
+the shape of a super-goldstino.
+Another class of models incorporate an \emph{inflaton}, which is the quanta of the hypothesised
+inflaton field responsible for the inflationary period of the Universe; beginning around
+$t=10^{-36}\sec$~\cite{Bezrukov:2009yw}.
+It is possible that inflatons are light, in the range
+$270<\mass{\db}<10^{4}\mev$~\cite{Bezrukov:2009yw}, and might therefore be accessible in the decay
+\btokstrdb.
+These models can also go towards solving the hierarchy problem and that of the
+\BAU~\cite{Hertzberg:2013mba,Hertzberg:2013jba}.
 
-\subsection{Vector portals}
-Since the \sm is known to belong to the
-$SU_C(3)\otimes SU_L(2)\otimes U_Y(1)$
-gauge group, it is reasonable to assume that the structure of the dark sector is also gauged.
-With this hypothesis it is possible to construct a group of particles that are charged under a
-dark $U(1)$ symmetry, with accompanying dark vector bosons, also known as dark photons
-($A^\prime$).
+The vector portal arises from a dark sector theory with a $U(1)$ gauge symmetry.
+It is known that the \sm is a gauged field theory, and it is therefore reasonable to assume that
+the dark sector is also gauged, but under a different group.
+If this was to be the case, the generator of the \sm $U_Y(1)$ could mix with with generator of the
+dark $U(1)$ group.
+Thus, the photon would kinetically mix with the \emph{dark photon}; where the strength of the
+mixing is characterized by the parameter $\epsilon$.
+%The vector portal is typically mediated by so-called dark photons, which mediate a $U(1)$ gauge
+%which interacts with the \sm $U(1)$ photon via kinetic mixing, which is characterized via the
+%mixing parameter $\epsilon$.
+Figure~\ref{fig:db:darkphotonlimits} shows the existing parameter space for the mass of a dark
+photon depending on the value of $\epsilon$; for $\epsilon\lesssim10^{-3}$ the mass of the dark
+photon could be in the range $1<\mass{\db}<1000\mev$~\cite{Essig:2013lka}, which is accessible with
+the following analysis.
 
-Previous searches for dark photons decaying via \decay{\darkgamma}{\ee} and
-\decay{\darkgamma}{\mumu} have been made at
-at NA48/2 in the decay \decay{\piz}{\gamma\darkgamma}~\cite{CERNNA48/2:2015lha}, and at \babar in
-the interaction $\decay{\ee}{\gamma\darkgamma}$~\cite{Lees:2014xha}.
-High energy \lhc experiments at the \lhc have put stringent limits on new $U(1)$ states under the
-assumption that the coupling of \darkgamma to \sm states is large.
-However, if the coupling of these states is weak then \darkgamma could be light.
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{A-visible-large}
+    \includegraphics[width=0.48\textwidth]{A-visible-zoom}
+    \caption{
+      Parameter space for dark photons, $A^\prime$, with a mass above $1\mev$ showing the $90\pc$
+      confidence level limits from numerous experiments.
+      The parameter $\epsilon$ characterizes the magnitude of mixing between the \sm photon and the
+      dark photon.
+      These plots are taken from Ref.~\protect\cite{Essig:2013lka}.
+    }
+    \label{fig:db:darkphotonlimits}
+  \end{center}
+\end{figure}
 
-While the following analysis is sensitive to these particle, it is not as sensitive as previous
-experiments, such as those in Refs.~\cite{CERNNA48/2:2015lha,Lees:2014xha}, because of the large
-sample sizes available to them and the fact that vector particles tend to couple in a mass
-independent way.
-
-
-
-
-
-
-
-
-\subsection{Scalar portals}
 
 In principal, the following analysis is sensitive to any dark sector particle.
-However, in practice other experiments have searched for dark bosons with mass independent
+However, in practice other experiments have searched directly for dark bosons with mass independent
 couplings with much larger data samples.
-For example, the NA48 and \babar collaborations have both searched for a
-dark photon~\cite{CERNNA48/2:2015lha,Lees:2014xha}.
+For example, the NA48/2 collaboration has searched for a dark photon directly in the decay
+\decay{\piz}{\gamma\darkgamma}~\cite{CERNNA48/2:2015lha}, and the \babar collaboration have
+searched for evidence in the decay $\decay{\ee}{\gamma\darkgamma}$~\cite{Lees:2014xha}.
+However, these decays involve the direct production of a dark photon at tree level.
+Figure~\ref{fig:db:feynman} shows a Feynman diagram of how the decay \btokstrdb might proceed;
+it shows an \fcnc where the \db results from a coupling to a \tquark quark.
+Therefore, searching for evidence of a \btokstrdb where \dbtomumu is particularly sensitive to
+portals which couple strongly to mass.
 
-
-
-
-
-
-
-Many extensions of the SM predict the existence of a new light boson.
-As all interactions in the SM are gauged, it is reasonable to assume that the same can be said of
-interactions in the dark sector.
-If so, then they would contain new vector bosons such as so-called dark photons (referred to as
-$A^{\prime}$), dark $Z$ bosons (referred to as $Z_d$).
-%A particular model that would anticipate the observation of a light vector boson would one which
-%includes a dark $Z$ (or photon).
-%Such models are motivated by the existence of dark matter and also the $3.6\,\sigma$ deviation
-%exhibited between the theoretical and experimental measurements of the anomalous magnetic moment of
-%the muon, $a_\mu=\tfrac12(g_\mu-2)$~\cite{PDG2012}.
-A $Z_d$ that weakly couples to the visible sector with low mass
-($10\lesssim m_{Z_d}\lesssim500\mev$) would add corrections to the theoretical value of $a_\mu$
-bringing it in line with what is seen experimentally.
-Such models are outlined in Refs.~\cite{Davoudiasl:2012qa,Davoudiasl:2012ag,Lee:2014lga}.
-%Other models might include such particles as Inflatons~\cite{Bezrukov:2009yw} and
-%Axions~\cite{Peccei:2006as}.
-Other models include the Pecci-Quinn axion~\cite{PhysRevLett.38.1440}, as described in \Sec{ch:th},
-which solves the strong \CP problem by the addition of a pseudoscalar axion particle.
-
-Limits on these particles...
-
-
-In general, extensions to the SM include bosons that couple to fermions proportionally to
-their masses.
-This occurs either due to mixing with the SM Higgs boson or due to the fact that the
-new bosons arise via a symmetry breaking process similar to the Higgs mechanism.
-Therefore, processes that are mediated via loops that contain top quarks are excellent places to
-search for such particles.
-
-In this analysis the dimuon component of the decay \btokstrmumu, where \kstartokpi, is analysed
-searching for evidence of \dbtomumu, where \db is a new dark boson.
-Figure~\ref{fig:feynman} shows a Feynman diagram of a potential process.
-The following analysis is as general as possible, in that neither the mass, nor the lifetime of the
-new \db is assumed.
+%High energy \lhc experiments at the \lhc have put stringent limits on new $U(1)$ states under the
+%assumption that the coupling of \darkgamma to \sm states is large.
+%However, if the coupling of these states is weak then \darkgamma could be light.
 
 \begin{figure}
   \begin{center}
     \includegraphics[scale=1]{feynman_inf}
-  \caption{
-    Feynman diagram showing the decay \btokstrdb, where the \db interacts by mixing with the
-    Higgs or $Z$, which then decays into a dimuon pair.
-  }
-  \label{fig:feynman}
-\end{center}
+    \caption{
+      Feynman diagram showing the decay \btokstrdb, where the \db interacts by mixing with the
+      Higgs or $Z$, which then decays into a dimuon pair.
+    }
+    \label{fig:db:feynman}
+  \end{center}
 \end{figure}
 
-The spin of the particle is not assumed either.
-A similar analysis might search for a \db in \decay{\Bp}{\Kp\mumu}, where one might expect
-additional sensitivity to scalar particles.
-However, this is not the case.
+
+Na\"{i}vely, one might expect that because the \Bp is a pseudoscalar and the \Kstarz is a vector
+the decay \btokstrdb would be rather more sensitive to a \db that is a vector than a scalar.
+However, simply counting possible spin states that a two body decay can have, leads to the
+conclusion that there is only a factor of about three when considering the branching fractions.
+The angular momentum barrier only begins to be significant when the phasespace for a decay begins
+to be restricted.
+Figure~\ref{fig:db:kx} shows the differences in branching fraction for \btokstrdb and
+\decay{\Bp}{\Kp\db} where \db is a scalar and an pseudoscalar particle; the decay rate predictions
+are taken from an axion portal model in Ref~\cite{Batell:2009jf}.
 Reference~\cite{Batell:2009jf} gives decay rates for decays of the type \decay{B}{K\db} to be:
 \begin{align}
   \Gamma\big(\decay{B}{K\db}\big) &= \Gamma_0
@@ -162,34 +192,117 @@ form factors are denoted as $f_0$ $A_0$, and $\Gamma_0$  is a constant.
 Figure~\ref{fig:db:kx} shows that the phasespace factor is the dominant factor in the shape for all
 the decays, and that searching for a particle, \db, in the decays \decay{\Bd}{\Kstarz\db} and
 \decay{\Bp}{\Kp\db} is equally sensitive for $m_\db\lesssim2000\mev$.
-%For example, Fig.~\ref{fig:th:kx} shows how the branching fraction of \decay{\Bd}{\Kstar\db} is
-%expected to vary with the mass of the \db, in comparison to \decay{\Bd}{K\db}.
-
 
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.48\textwidth]{bf_b2ks_root}
     \includegraphics[width=0.48\textwidth]{bf_b2kv_root}
     \caption{
-      Branching fraction predictions, from Eq.~\protect\ref{eq:db:bx},
+      Decay rate predictions, from Eq.~\protect\ref{eq:db:bx},
       for decays of the form $\decay{B}{KX}$, where $X$ is either
       (left) a scalar (S) or
-      (right) a vector (V).
-      The parameters $\theta$ and $f_q$ are parameters of the model.
-      %Note that for these plots $\mathrm{ln}\left(\Lambda_\mathrm{UV}/m_t\right)$ is set to one.
+      (right) a pseudoscalar (P).
+      The parameters $\theta$ and $f_q$ are parameters of the model in
+      Ref~\cite{Batell:2009jf}.
       The shapes of the curves are dominated by the available phasespace, and sensitivity is
       comparable for $m_\db\lesssim2000\mev$.
-      %this is taken from Ref~\cite{Batell:2009jf}.
     }
     \label{fig:db:kx}
   \end{center}
 \end{figure}
 
 
-The following analysis is a fully frequentist search for a new particle \db, with an unknown mass
-ans lifetime.
-This is done in the two dimensions of mass and lifetime using the method described in
-\Sec{sec:db:strategy}.
+
+
+
+%Many extensions of the SM predict the existence of a new light boson.
+%As all interactions in the SM are gauged, it is reasonable to assume that the same can be said of
+%interactions in the dark sector.
+%If so, then they would contain new vector bosons such as so-called dark photons (referred to as
+%$A^{\prime}$), dark $Z$ bosons (referred to as $Z_d$).
+%%A particular model that would anticipate the observation of a light vector boson would one which
+%%includes a dark $Z$ (or photon).
+%%Such models are motivated by the existence of dark matter and also the $3.6\,\sigma$ deviation
+%%exhibited between the theoretical and experimental measurements of the anomalous magnetic moment of
+%%the muon, $a_\mu=\tfrac12(g_\mu-2)$~\cite{PDG2012}.
+%A $Z_d$ that weakly couples to the visible sector with low mass
+%($10\lesssim m_{Z_d}\lesssim500\mev$) would add corrections to the theoretical value of $a_\mu$
+%bringing it in line with what is seen experimentally.
+%Such models are outlined in Refs.~\cite{Davoudiasl:2012qa,Davoudiasl:2012ag,Lee:2014lga}.
+%%Other models might include such particles as Inflatons~\cite{Bezrukov:2009yw} and
+%%Axions~\cite{Peccei:2006as}.
+%Other models include the Pecci-Quinn axion~\cite{PhysRevLett.38.1440}, as described in \Sec{ch:th},
+%which solves the strong \CP problem by the addition of a pseudoscalar axion particle.
+
+
+
+%In general, extensions to the SM include bosons that couple to fermions proportionally to
+%their masses.
+%This occurs either due to mixing with the SM Higgs boson or due to the fact that the
+%new bosons arise via a symmetry breaking process similar to the Higgs mechanism.
+%Therefore, processes that are mediated via loops that contain top quarks are excellent places to
+%search for such particles.
+
+
+
+%The spin of the particle is not assumed either.
+%A similar analysis might search for a \db in \decay{\Bp}{\Kp\mumu}, where one might expect
+%additional sensitivity to scalar particles.
+%However, this is not the case.
+%Reference~\cite{Batell:2009jf} gives decay rates for decays of the type \decay{B}{K\db} to be:
+%\begin{align}
+  %\Gamma\big(\decay{B}{K\db}\big) &= \Gamma_0
+  %\frac{\lambda_{K}\big(m_{B}^2-m_{K}^2\big)^2}{m_{B}^6}
+  %\left[f_0\!\left(m_\db^2\right)\right]
+  %\\
+  %\Gamma\big(\decay{B}{\Kstar\db}\big) &= \Gamma_0
+  %\frac{\lambda_{\Kstar}^3}{m_{B}^6}
+  %\left[A_0\!\left(m_\db^2\right)\right]
+  %\\
+  %\intertext{where the phasespace factor is}
+  %\lambda_\kappa &= \left[
+    %\left( m_B^2 - m_\db^2 - m_\kappa^2 \right)^2
+    %-4m_\db^2m_\kappa^2
+    %\right]^\frac12,
+    %\label{eq:db:bx}
+%\end{align}
+%form factors are denoted as $f_0$ $A_0$, and $\Gamma_0$  is a constant.
+%Figure~\ref{fig:db:kx} shows that the phasespace factor is the dominant factor in the shape for all
+%the decays, and that searching for a particle, \db, in the decays \decay{\Bd}{\Kstarz\db} and
+%\decay{\Bp}{\Kp\db} is equally sensitive for $m_\db\lesssim2000\mev$.
+%%For example, Fig.~\ref{fig:th:kx} shows how the branching fraction of \decay{\Bd}{\Kstar\db} is
+%%expected to vary with the mass of the \db, in comparison to \decay{\Bd}{K\db}.
+
+%\begin{figure}
+  %\begin{center}
+    %\includegraphics[width=0.48\textwidth]{bf_b2ks_root}
+    %\includegraphics[width=0.48\textwidth]{bf_b2kv_root}
+    %\caption{
+      %Branching fraction predictions, from Eq.~\protect\ref{eq:db:bx},
+      %for decays of the form $\decay{B}{KX}$, where $X$ is either
+      %(left) a scalar (S) or
+      %(right) a vector (V).
+      %The parameters $\theta$ and $f_q$ are parameters of the model.
+      %%Note that for these plots $\mathrm{ln}\left(\Lambda_\mathrm{UV}/m_t\right)$ is set to one.
+      %The shapes of the curves are dominated by the available phasespace, and sensitivity is
+      %comparable for $m_\db\lesssim2000\mev$.
+      %%this is taken from Ref~\cite{Batell:2009jf}.
+    %}
+    %\label{fig:db:kx}
+  %\end{center}
+%\end{figure}
+
+
+%The following analysis is a fully frequentist search for a new particle \db, with an unknown mass
+%ans lifetime.
+%This is done in the two dimensions of mass and lifetime using the method described in
+%\Sec{sec:db:strategy}.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NOTHING BEYOND HERE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %The existence of dark matter in the universe is overwhelmingly supported by experimental evidence from galactic rotation curves, gravitational lensing, and acoustic modes in the CMB.
@@ -349,9 +462,9 @@ This is done in the two dimensions of mass and lifetime using the method describ
 %becomes a field, the quanta of which are called axions.
 %%A solution of the strong CP problem is to introduce a chiral $U(1)$ symmetry which is spontaneously
 %%broken and effectively replaces the CP violating angle $\theta$ with a CP conserving field.
-%
-%
-%
+
+
+
 %\subsection{Inflatons}
 %Cosmological inflation in the early universe (very early, $t=10^{-35}$ to $10^{-34}$\,s can be put
 %down to the existence of a scalar field that weakly couples to SM particles via some mixing with the
@@ -377,6 +490,6 @@ This is done in the two dimensions of mass and lifetime using the method describ
 %\end{align}
 %Where the term $\Lag{SM}$ is the SM Lagrangian without the Higgs potential, which gets
 %modified to that shown in Eq.~\ref{eq:laginf}
-%
+
 
 
