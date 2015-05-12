@@ -39,18 +39,6 @@ $(PDFDIR)/%.pdf: %/*.tex
 	cp -f $(OUTDIR)/$*.pdf $(PDFDIR)/.
 	mv -f $(OUTDIR)/$*.pdf $(PDFDIR)/recent.pdf
 
-#%: %/*.tex
-	@#sed 's/XXX/$*/g' Thesis/template.tex > $(OUTDIR)/$*.tex
-	#$(LATEX) --output-directory=$(OUTDIR) -draftmode $(OUTDIR)/$*
-	#bibtex $(OUTDIR)/$*
-	#xindy -L english -C utf8 -I xindy -M \
-		$(OUTDIR)/$* -t $(OUTDIR)/$*.glg \
-		-o $(OUTDIR)/$*.gls $(OUTDIR)/$*.glo
-	#$(LATEX) --output-directory=$(OUTDIR) -draftmode $(OUTDIR)/$*
-	#$(LATEX) --output-directory=$(OUTDIR) $(OUTDIR)/$*
-	#cp -f $(OUTDIR)/$*.pdf $(PDFDIR)/.
-	#mv -f $(OUTDIR)/$*.pdf $(PDFDIR)/recent.pdf
-
 
 open:
 	@$(OPEN)

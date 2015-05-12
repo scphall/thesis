@@ -1,13 +1,13 @@
-\section{Strategy}
+\section{Analysis strategy}
 \label{sec:db:strategy}
 
-This analysis is a completely general search for a particle of unknown mass and lifetime, the
-following chapter outlines the strategy employed; exhaustive details can be found in
-\Ref{Williams:2015xfa}.
-Broadly, the search involves a fully frequentest scan of the dimuon invariant mass spectrum from
+This analysis is a completely general search for a particle with unknown mass, \mass\db, and
+lifetime, \lifetime\db.
+Exhaustive details of the analysis strategy can be found in \Ref{Williams:2015xfa}, but the
+following section will outline the important points.
+Broadly, the search involves a fully frequentest scan of the dimuon invariant mass spectrum,
+separated into two bins in lifetime, from
 \btokstrmumu for an excess of events consistent with \dbtomumu.
-The scan is performed in two dimensions, namely: mass and lifetime.
-
 Firstly, an explanation of the search in the mass dimension will be presented, and then extended to
 to deal with the lifetime dimension.
 
@@ -37,16 +37,18 @@ Thus, one can construct a likelihood
   \label{eq:db:like1}
 \end{equation}
 where $\mathcal{P}(n, \lambda)$ is the probability of observing $n$ from a Poisson distribution
-parameterize by $\lambda$.
-This just parameterizes the likelihood of the background estimate from the sidebands fluctuating to
+parameterized by $\lambda$.
+This is simply the likelihood of the background estimate from the sidebands fluctuating to
 the observed number of events in the signal region.
-Twice, so far, the local linearity of the background has been mentioned as the sole assumption,
-this is important to bare in mind throughout.
+%Twice, so far, the local linearity of the background has been mentioned as the sole assumption,
+%this is important to bare in mind throughout.
+The sole assumption is that the background is locally-linear at all values of \mass{t}: this is
+important to bare in mind.
 
 The problem with \Eq{eq:db:like1} is that, while $x$ has been chosen, deviations from a linear
-background distribution mean that the actual sideband size with respect to the signal region is not
-$x$.
-Rather, the actual scaling factor is some $y$, with some uncertainty $\sigma_y$.
+background distribution mean that the actual sideband size with respect to the signal region is
+not, in fact, $x$.
+Rather, the actual scale factor is some $y$, with some uncertainty $\sigma_y$.
 This can be accounted for by including an additional term in the likelihood
 \begin{equation}
   \mathcal{L}(n_s, n_b, x | s, b, y) =
@@ -61,7 +63,7 @@ distribution with a mean, $\mu$, and standard deviation, $\sigma$.
 The dimuon background from the \sm decay of \btokstrmumu is expected to be locally-linear, in the
 absence of resonances, to better than $1\pc$ over the entire mass range.
 However, including resonances in the model lead to significant deviations from linearity.
-The magnitude of the deviation is dependent upon the width of a resonance, $\Gamma$, the size of it
+The size of the deviation is dependent upon the width of a resonance, $\Gamma$, its magnitude
 relative to the local background distribution, and the value of $x$.
 Wide resonances, $\Gamma\gtrsim20\sigmam$, are sufficiently wide not as to be problematic even if
 they dominate the local background distribution.
@@ -70,20 +72,24 @@ locally-linear background and must, therefore, be vetoed.
 Intermediate resonances, $5\lesssim\Gamma\lesssim20\sigmam$, must be considered on a case-by-case
 basis since they are only troublesome if they account for a large fraction of the local background.
 For this analysis these ranges roughly translate to requiring that resonances with $\Gamma<25\mev$
-will be vetoed, while those with $\Gamma>100\mev$ shall be ignored.
+will be vetoed, while those with $\Gamma>125\mev$ shall be ignored.
 
 Table~\ref{tab:db:bkg} lists a number of mesons, $X$, that decay to a dimuon final state and could
 contribute as background to the decay \decay{\Bd}{\Kstarz\mumu}.
-The \phii, \jpsi, and \psitwos mesons have the highest branching fraction, and are also among the
+Dimuon decays of the \phii, \jpsi, and \psitwos mesons have the highest branching fractions, and
+are also among the
 narrowest resonances; falling into the $\Gamma\lesssim5\sigmam$ region, and are therefore vetoed.
-The remaining resonances are broad and contribute to the dimuon structures at low mass, it is shown
-in \Ref{Williams:2015xfa} that the local-linearity approximation is accurate to \approx$5\pc$.
-Therefore, below the mass of the \jpsi the values of $x=5$ and $\sigma_y=0.05$ are used.
+The remaining resonances given in \Table{tab:db:bkg} are broad and contribute to the dimuon
+structures at low mass.
+It is shown in \Ref{Williams:2015xfa} that the local-linearity approximation is accurate to
+\approx$5\pc$.
+Below the mass of the \jpsi the values of $x=5$ and $\sigma_y=0.05$ are chosen.
 
 \begin{table}
     \caption{
-      Some particles properties for mesons which decay into a dimuon pair, and the branching
-      fraction for the relevant decays; all numbers are taken from Ref.~\cite{PDG2014}.
+      Some particles properties for mesons, $X$, which decay into a dimuon pair final state, and
+      the branching
+      fractions for the relevant decays~\protect\cite{PDG2014}.
       Central values of mass and width are given in MeV.
     }
     \label{tab:db:bkg}
@@ -139,21 +145,15 @@ Therefore, below the mass of the \jpsi the values of $x=5$ and $\sigma_y=0.05$ a
   \end{center}
 \end{table}
 
-Resonances that lie in the grey area, $5\lesssim\Gamma\lesssim20\sigmam$, are various \ccbar states
-with masses above the mass of the \psitwos.
+Resonances that have a natural width in the no-mans-land, $5\lesssim\Gamma\lesssim20\sigmam$, are
+various \ccbar states with masses above the mass of the \psitwos.
 For example, there is contribution from the $\psi(4160)$ which was observed by \lhcb in the decay
-\decay{\Bd}{\Kp\mumu}~\cite{LHCb-PAPER-2013-039}.
+\decay{\Bp}{\Kp\mumu}~\cite{LHCb-PAPER-2013-039}.
 All known charmonium resonances in this region are wide,
-$\Gamma\sim70\mev$, and are dealt with by reducing the size of the sidebands to $x=1$ and
+$\Gamma\sim70\mev$, and are dealt with by reducing the size of the sidebands, by setting $x=1$ and
 increasing the value of $\sigma_y$ to 0.1.
-A summary of the values of $x$ and $\sigma_y$ are given in \Table{tab:db:xsigmay}.
-
-Reference~\cite{Williams:2015xfa} also investigates the effect of interference effects between
-\btokstrmumu and \decay{\Bd}{\Kstarz\rho(770)}, where \decay{\rho(770)}{\mumu}.
-Considering that the branching fraction of the $\rho(770)$ decay is so small that less than one
-event is to be expected in the data sample used in this analysis, interference effects could
-produce a deviation in from local linearity.
-This deviation could be a maximum of $5\pc$, which is accounted for in the choice of $\sigma_y$.
+A summary of the values of $x$ and $\sigma_y$ for different regions of \mass{t} are given in
+\Table{tab:db:xsigmay}.
 
 \begin{table}
   \caption[Values of $x$ and $\sigma_y$ used]
@@ -164,28 +164,40 @@ This deviation could be a maximum of $5\pc$, which is accounted for in the choic
   \begin{center}
     \begin{tabular}{ccc}\toprule
       Region & $x$ & $\sigma_y$ \\\midrule
-      $\mass{\mumu}<\mass{\jpsi}$ & 5 & 0.05 \\
-      $\mass{\mumu}>\mass{\jpsi}$ & 0 & 0.10 \\
+      $\mass{t}<\mass{\jpsi}$ & 5 & 0.05 \\
+      $\mass{t}>\mass{\jpsi}$ & 1 & 0.10 \\
       \bottomrule
     \end{tabular}
   \end{center}
 \end{table}
 
-The contribution from the decay \decay{\phi}{\mumu} is removed by excluding dimuon candidates in
-the range $1000<\mass{\mumu}<1040\mev$.
-Vetoed regions for the \jpsi and \psitwos are calculated using a theoretical model, in
-Ref.~\cite{Bobeth:2011nj}, to account for the interference effects between the \jpsi, \psitwos and
-the non-resonant dimuon component.
-This model is used to model the shape of these two large \ccbar contributions to the \mumu final
-state with different phases between resonant and non-resonant components, and then this is
-convolved with a Gaussian to account for the resolution of the \lhcb detector, as shown in
-\Fig{fig:db:ccbar}.
+Reference~\cite{Williams:2015xfa} also investigates the effect of interference effects between
+\btokstrmumu and \decay{\Bd}{\Kstarz\rho}, where \decay{\rho}{\mumu}.
+Despite the fact that the total branching fractions of the $\rho$ decay is so small that it is
+expected that less than one event will remain in the final data sample, the cross-term in the
+interference could result in a sizable deviation from local-linearity.
+However, this deviation can only be a maximum of \approx$5\pc$, which is accounted for in the choice
+of $\sigma_y$.
+
+The contribution from the decay \decay{\phi}{\mumu} to the $\Kstarz\mumu$ final state is removed by
+excluding dimuon candidates in the range $1000<\mass{\mumu}<1040\mev$.
+Vetoed regions for the \jpsi and \psitwos are calculated using a theoretical
+model~\cite{Bobeth:2011nj} which can account for the interference effects between the
+\decay{\ccbar}{\mumu} resonances and the non-resonant \mumu component.
+The model is used to generate \glspl{PDF} with different phases in order to find the maximum
+possible deviation from non-linearity in the \mumu spectrum.
+%These \glspl{PDF} are shown in \Fig{fig:db:ccbar}.
+%This model is used to model the shape of these two large \ccbar contributions to the \mumu final
+%state with different phases between resonant and non-resonant components, and then this is
+%convolved with a Gaussian to account for the resolution of the \lhcb detector, as shown in
+%\Fig{fig:db:ccbar}.
 These \glspl{PDF} are used to calculate the regions around the \jpsi and \psitwos where the
-background is locally linear to better than $5\pc$ for various values of $x$.
+background is locally linear to better than $5\pc$ for various values of $x$; examples of them are
+shown in \Fig{fig:db:ccbar}.
 This method results in veto regions which are very similar to those used in
 \Ref{LHCb-CONF-2015-002}, except that the upper boundary of the \psitwos veto is extended to cover
 the $\psi(3770)$.
-All the veto regions for narrow resonances decaying via \decay{X}{\mumu}, are summarized in
+All the vetoed regions to remove narrow resonances decaying via \decay{X}{\mumu}, are summarized in
 \Table{tab:db:narrow}.
 
 \begin{figure}
@@ -193,7 +205,12 @@ All the veto regions for narrow resonances decaying via \decay{X}{\mumu}, are su
     \includegraphics[width=0.48\textwidth]{ccbar_0_0}
     \includegraphics[width=0.48\textwidth]{ccbar_1_57_1_57}
     \caption{
-      PIG
+      Theoretical distributions of the decays \jpsitomumu and \decay{\psitwos}{\mumu} interfering
+      with a non-resonant dimuon component using a model in Ref.~\ref{Bobeth:2011nj} with
+      (left) no phase difference, and
+      (right) maximal phase difference.
+      The solid blue line shows the raw model, and the dotted line is the same distribution which
+      has been convolved with a Gaussian to account for detector resolution effects.
     }
     \label{fig:db:ccbar}
   \end{center}
@@ -202,7 +219,8 @@ All the veto regions for narrow resonances decaying via \decay{X}{\mumu}, are su
 
 \begin{table}
   \caption{
-    DOGS
+    Summary of the vetoes regions in \mass{\mumu} to remove the contributions from the decays
+    \decay{\phi}{\mumu} and various narrow \decay{\psi}{\mumu} to the dimuon distribution.
   }
   \label{tab:db:narrow}
   \begin{center}
@@ -216,29 +234,14 @@ All the veto regions for narrow resonances decaying via \decay{X}{\mumu}, are su
   \end{center}
 \end{table}
 
-
-
-
-
-
-
-
-
 %Narrow resonances, falling in the $\Gamma\lesssim5\sigmam$ region are removed:
 %these include the \phii, \jpsi, and \psitwos.
 %The decay \decay{\phi}{\mumu} is removed by excluding dimuon candidates in the range
 %$1000<\mass{\mumu}<1040\mev$.
 %Charmonuim resonances are vetoed using
 
-
-
 %The largest deviations from a locally-linear background are at the $5\%$ level, which is
 %natrually accounted for by setting \
-
-
-
-
-
 
 %Practically, the resonances that must be removed from the background are the \phi, \jpsi, \psitwos
 
@@ -252,36 +255,41 @@ The profile likelihood, $\Lambda$, is defined as
 \end{equation}
 where $\hat{s}$, $\hat{b}$, and $\hat{y}$ are chosen to maximize the likelihood; the functions
 $\hat{b}(s)$ and $\hat{y}(s)$ maximize the likelihood for a given $s$.
-The solutions to these parameters can be calculated analytically, with few assumptions made,
+The solutions to these functions can be calculated analytically, with few assumptions made,
 and thus the likelihood can be minimized with minimal computational power.
 The profile likelihood can then be formed in the same way as in \Eq{eq:profilelike1} and solved
 analytically.
 
 
 \subsection{Searching in the lifetime dimension}
-Sensitivity to the lifetime of \db is introduced by splitting the data at each \mass{t} into two
+Sensitivity to \lifetime{\db} is introduced by splitting the data at each \mass{t} into two
 regions: a prompt region defined by $\tau<3\sigmat$, and a displaced region defined by
 $\tau>3\sigmat$; where \sigmat is defined to be the local lifetime resolution.
-The joint likelihood, which takes account of the two lifetime regions, is then the product of the
-individual likelihoods:
+The likelihood for each lifetime bin is defined using \Eq{eq:db:like2}, and the joint likelihood is
+simply the product of the two
+individual likelihoods
 \begin{align}
   \mathcal{L}(n^p_s, n^p_b, n^d_s, n^d_b, x | s^p, b^p, y^p, s^d, b^d, y^d) =&
-  \mathcal{L}(n^p_s, n^p_b, x | s^p, b^p, y^p)\\\nonumber
-  &\times\mathcal{L}(n^d_s, n^d_b, x | s^d, b^d, y^d),
+  \mathcal{L}(n^p_s, n^p_b, x | s^p, b^p, y^p)\nonumber\\
+  &\times\mathcal{L}(n^d_s, n^d_b, x | s^d, b^d, y^d).
   \label{eq:db:liketau}
 \end{align}
-where the superscripts $p$ and $d$ indicate the prompt and displaced regions, respectively.
+In these expressions the superscripts $p$ and $d$ indicate the prompt and displaced regions,
+respectively.
 
 The information supplied by the addition of two bins in the lifetime dimension is approximately
 optimal for all \db lifetimes, except for when $\tau\sim3\sigmat$.
-In this case, it is marginally more optimal to include shape information; but this introduces
+In this case, it is marginally more optimal to include shape information of the background
+distribution from the sidebands; but this introduces
 significantly more complications to the analysis and there is no reason to believe that the \db has
-a lifetime $\tau\sim3\sigmat$ \emph{a priori}, and therefore shape information is not used.
+a lifetime $\tau\sim3\sigmat$ \emph{a priori}.
+Therefore the background shape information is not used.
 
 
 \subsection[Calculation of $p$-value]
 {Calculation of $\boldsymbol{p}$-value}
-For each \mass{t} a $p$-value is calculated using the
+At each \mass{t}, a $p$-value is calculated using profile likelihood of the joint likelihood given
+in \Eq{eq:db:liketau}.
 Because there are $\mathcal{O}(1000)$ test masses, each of which is not completely independent the
 look elsewhere effect must be accounted for.
 To do this the minimum local $p$-value is translated into a global $p$-value using a trials factor
