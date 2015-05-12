@@ -34,7 +34,7 @@ The evolution of the total efficiency as a function of mass (for the $100\ps$ sa
   \begin{center}
     \includegraphics[width=0.48\textwidth]{blank}
     \caption{
-      Evolution of the total efficiency, as given in Table~\protect\ref{tab:eff:summary}, where the
+      Evolution of the total efficiency for a \db with $\lifetime{\db}=100\ps$, where
       black points indicate the sampled masses, and the red line is the interpolated cubic spline
       intersecting each point.
     }
@@ -66,15 +66,8 @@ with the understanding of the detector response in this dimuon mass region.
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.42\textwidth]{anaTauResZoom_214}
-    %\includegraphics[width=0.42\textwidth]{anaTauResZoom_220}
-    %\includegraphics[width=0.42\textwidth]{anaTauResZoom_235}
     \includegraphics[width=0.42\textwidth]{anaTauResZoom_250}
-    %\includegraphics[width=0.42\textwidth]{anaTauResZoom_500}
-    %\includegraphics[width=0.42\textwidth]{anaTauResZoom_800}
     \includegraphics[width=0.42\textwidth]{anaTauResZoom_1000}
-    %\includegraphics[width=0.42\textwidth]{anaTauResZoom_1500}
-    %\includegraphics[width=0.42\textwidth]{anaTauResZoom_2000}
-    %\includegraphics[width=0.42\textwidth]{anaTauResZoom_2500}
     \includegraphics[width=0.42\textwidth]{anaTauResZoom_4000}
   \end{center}
   \caption{
@@ -230,7 +223,11 @@ The efficiency map shown in \Fig{fig:res:mbvtau} was generated using simulated s
 $\tau(\db)=100\ps$ but contains the efficiency at each $\tau$ below 100\ps.
 It is then possible to obtain the efficiency for any other lifetime as follows:
 \begin{equation}
-  \varepsilon(\tau) = \frac{1}{\tau}\int\limits_0^{100\ps} {\rm d}\tau^{\prime} \mathcal{T}(\tau^{\prime}){\rm exp}(-\tau^{\prime}/\tau),
+  \varepsilon(\tau) =
+  \frac{1}{\tau}\int\limits_0^{100\ps}
+  \mathcal{T}(\tau^{\prime})
+  \exp\left(-\frac{\tau^{\prime}}{\tau}\right)
+  \,{\rm d}\tau^{\prime},
 %  \left.\exp\left(-\frac{\tau}{x}\right)\right/
 %  \exp\left(-\frac{\tau}{100\ps}\right),
 \end{equation}

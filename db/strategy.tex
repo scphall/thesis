@@ -267,7 +267,7 @@ individual likelihoods:
 \begin{align}
   \mathcal{L}(n^p_s, n^p_b, n^d_s, n^d_b, x | s^p, b^p, y^p, s^d, b^d, y^d) =&
   \mathcal{L}(n^p_s, n^p_b, x | s^p, b^p, y^p)\\\nonumber
-  \times\mathcal{L}(n^d_s, n^d_b, x | s^d, b^d, y^d),
+  &\times\mathcal{L}(n^d_s, n^d_b, x | s^d, b^d, y^d),
   \label{eq:db:liketau}
 \end{align}
 where the superscripts $p$ and $d$ indicate the prompt and displaced regions, respectively.
@@ -277,8 +277,6 @@ optimal for all \db lifetimes, except for when $\tau\sim3\sigmat$.
 In this case, it is marginally more optimal to include shape information; but this introduces
 significantly more complications to the analysis and there is no reason to believe that the \db has
 a lifetime $\tau\sim3\sigmat$ \emph{a priori}, and therefore shape information is not used.
-
-
 
 
 \subsection[Calculation of $p$-value]
@@ -295,57 +293,30 @@ which is entirely background.
 This is assuming that there is only one \np particle that can be observed in this analysis.
 The remaining background-like distribution is then turned into a \PDF --- where the region that is
 removed is interpolated across --- from which toy datasets can be generated.
-In order to obtain a trials factor, 10 million toy datasets are generated, and the minimum
-$p$-value is plotted in a cumulative distribution, such that the $y$ axis is the fraction of toy
-datasets with a minimum $p$-value...
-
-
-
-
-
-
-
-
-
+A conversion from local to global $p$-value can then be calculated by generating 10 million toy
+datasets.
 
 
 \subsection{Limits}
 Upper limits will be set as a function of \mass{\db} and \lifetime{\db}.
-This requires a modification to the likelihood function to
-
-for each \lifetime there is a relationship between the number of signal events in the prompt and
-displaced regions
-
-gaussian term is added to account for uncertainty (due to eff) in frac of signal expected in prompt
-and displaced regions
-
-another Gaussian term is added to the likelihood to account for uncertainty in the abs eff scale of
-the signal
-
-likelihood for each \mass{t}, $\tau$
+This requires further modification to the likelihood function to account for the relationship
+between the number of signal events in the prompt and displaced regions for a given value of
+$\tau$.
+An additional Gaussian terms are added: one to account for the uncertainty in the fraction of signal
+events that are observed in the two lifetime regions, and another to account for the uncertainty in
+the efficiency ratio with respect to the normalization channel.
+The resulting likelihood for a siven \mass{\db} and \lifetime{\db} is given by:
 \begin{align}
   \like\big(n_s^p, n_b^p, n_s^d, n_b^d, x, \tau | \dots\big) =
    &\like\big(n_s^d, n_b^d, x | \varepsilon\cdot s\cdot f,b^p,y^p\big) \\\nonumber
    &\times\like\big(n_s^p, n_b^p, x | \varepsilon\cdot s\cdot(1-f),b^d,y^d\big)\\\nonumber
-   &\times\mathcal{G}\big(f, f_\mathrm{sim}(\tau),\sigma(f)\big)
-   \times\mathcal{G}\big(\varepsilon, \varepsilon_\mathrm{sim}(\tau),\sigma(\varepsilon)\big)
+   &\times\mathcal{G}\big(f, \xbar{f}(\tau),\sigma(f)\big)
+   \times\mathcal{G}\big(\varepsilon, \xbar{\varepsilon}(\tau),\sigma(\varepsilon)\big).
 \end{align}
-where f is the fraction of signal events in the prompt region, with expected value from simulation
-being $f_\mathrm{sim}$ with uncertainty $\sigma(f)$, $\varepsilon$ is the efficiency (relavtive to
-normalization channel) with expected valu from simulation $\varepsilon_\mathrm{sim}$ and
-uncertainty $\sigma(\varepsilon)$.
-
-Limits are set by scanning the profile likelihood using the same method, including the likelihood
-given
-
-
-
-
-
-
-
-
-
+The fraction of signal events in the prompt region is given by $f$,
+which has an expected value from simulation $\xbar{f}$ and an uncertainty $\sigma(f)$.
+The same nomenclature is used for the relative efficiency, $\varepsilon$, which is relative to the
+normalization channel.
 
 
 
