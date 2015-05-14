@@ -15,7 +15,7 @@ The convention of natural units is used throughout.
 Other conventions are that the indices $\mu$ and $\nu$ are used for four vectors, and generators
 for the $SU_L(2)$ and $SU_C(2)$ are denoted by $\{i,j,k\}$ and $\{a,b,c\}$, respectively.}.
 Each generator in this group corresponds to a spin-1 gauge-boson;
-the $SU_C(3)$ group is obeyed by the strong force in the theory of \QCD
+the $SU_C(3)$ group is obeyed by the strong force in the theory of \QCD,
 while the electroweak sector obeys the $SU_L(2)\otimes U_Y(1)$ gauge group.
 Generators for each group correspond to the vector bosons which mediate
 interactions --- the eight gluons of the strong force, and the $3+1$ electroweak gauge bosons ($Z$,
@@ -33,7 +33,10 @@ There are six quarks: up, down, charm, strange, top, and bottom (\uquark, \dquar
 \squark, \tquark and \bquark); and six leptons:
 the electronic leptons ($\nu_e$, $e$),
 the muonic leptons ($\nu_\mu$, $\mu$),
-the tauonic leptons ($\nu_\tau$, $\tau$),
+and the tauonic leptons ($\nu_\tau$, $\tau$).
+Due to the properties of the strong force, quarks can only be observed as colour-neutral bound
+states, usually these are
+mesons (quark-antiquark bound states) and baryons (bound states of three quarks).
 %the electron, muon, tau ($e$, $\mu$, $\tau$), and
 %their corresponding neutrinos ($\nu_e$, $\nu_\mu$, $\nu_\tau$).
 All fermions are organized into pairs forming three generations.
@@ -62,8 +65,8 @@ These latter terms are of fundamental importance as to how flavour, and \CP
 violation
 arise in the \sm, and will be discussed in detail.
 
-There are three fundamental discrete symmetries in the \sm, \gls{C}, \gls{P}, and \gls{T}.
-Violation of \CP and flavour in the \sm is in the \ckm, which emerges
+There are three fundamental discrete symmetries in the \sm: \gls{C}, \gls{P}, and \gls{T}.
+Violation of \CP and flavour in the \sm is in the \ckm matrix, which emerges
 after the Higgs mechanism breaks the local electroweak symmetry.
 The Higgs doublet, $\Phi$, is defined to be
 \begin{equation}
@@ -117,7 +120,7 @@ gauge, become the longitudinal components of the weak vector bosons, and $\Phi$ 
   \end{pmatrix}.
   \label{eq:th:phi2}
 \end{equation}
-The physics Higgs boson is denoted by $H$.
+The physical Higgs boson is denoted by $H$.
 Inserting Eq.~\ref{eq:th:phi2} into Eq.~\ref{eq:th:laghiggs1} gives:
 %\begin{multline}
   %\Lag{Higgs} =
@@ -139,8 +142,8 @@ Inserting Eq.~\ref{eq:th:phi2} into Eq.~\ref{eq:th:laghiggs1} gives:
 \end{equation}
 %where $g$ and $g^\prime$ are coupling constants and other terms are three- and four-point
 %interactions of the Higgs with itself and weak gauge bosons.
-Thus: there is \SSB of the local $U_Y(1)$ gauge group; weak gauge
-bosons become massive, and photons remain massless; as is consistent with observations.
+Thus, there is \SSB of the local $U_Y(1)$ gauge group; weak gauge
+bosons become massive, and photons remain massless: consistent with observations.
 
 \begin{figure}
   \begin{center}
@@ -149,7 +152,7 @@ bosons become massive, and photons remain massless; as is consistent with observ
     {
       The shape of the Higgs potential, $V(\Phi)$, for the simple case of $\Phi=\phi_1+i\phi_2$ and
       $\mu^2<0$ and $\lambda>0$.
-      Spontaneous symmetry breaking occurs when the vacuum settles in a minma, this choice of
+      Spontaneous symmetry breaking occurs when the vacuum settles in a minma, and this choice of
       direction breaks the symmetry of the gauge.
       A section of the potential is not shown, in order to appreciate the shape of the potential.
     }
@@ -157,16 +160,17 @@ bosons become massive, and photons remain massless; as is consistent with observ
   \end{center}
 \end{figure}
 
-All fermions (excepting neutrinos) also acquire mass after the \SSB.
+All fermions (excepting neutrinos) also acquire mass after \SSB.
 The Dirac mass term for a chiral field would have the form:
 \begin{equation}
   \Lag{mass} = -m_\psi\big(\xbar\psi_R\psi_L + \xbar\psi_L\psi_R\big),
+  \label{eq:diracmass}
 \end{equation}
 but the left- and right-handed fields
-transform differently under local gauge transformations
---- because $\psi_L$ and $\psi_R$ have different $U_Y(1)$ charges ---
-and so cannot be added to \Lag{SM} without destroying the gauge invariance without destroying the
-gauge invariance.
+transform differently under local gauge transformations.
+The fields $\psi_L$ and $\psi_R$ have different $U_Y(1)$ charges,
+and so cannot be added to \Lag{SM} without destroying the gauge invariance, hence \Eq{eq:diracmass}
+cannot be used.
 Instead, masses are generated through the Yukawa couplings (\Lag{Yuk} in \Eq{eq:th:lag}), which
 describe interactions between all fermionic fields and the Higgs doublet.
 This can be written
@@ -177,8 +181,8 @@ This can be written
 \end{equation}
 where terms encapsulate lepton ($\ell\in\{e,\mu,\tau\}$) and quark interactions, respectively.
 %where $\ell$ and $q$ denote the lepton and quark interactions, respectively.
-Each lepton term describes the interacion between the Higgs boson and and the chiral fields
-$\ell_R$ and
+Each lepton term describes the interaction between the Higgs boson and the chiral fields
+$\ell_R$ and the spinor
 \begin{align}
   \chi_L = \begin{pmatrix}\nu_L \\ \ell_L \end{pmatrix},
 \end{align}
@@ -196,7 +200,7 @@ After \SSB the Lagrangian becomes
 \end{align}
 where
 \begin{equation}
-  m_\ell = \frac{v}{\sqrt{2}}g_\ell.
+  m_\ell = \frac{v}{\sqrt{2}}g_\ell
   \label{eq:leptonmass}
 \end{equation}
 is the lepton mass and is dependent on the fundamental \sm parameters $g_\ell$ and $v$.
@@ -212,8 +216,8 @@ Before \SSB, the Yukawa Lagrangian is
   - y_{ij}^d\Xbar{Q}_L^i\widetilde\Phi d_R^j +\,\mathrm{h.c.}
   \label{eq:th:lagyukq}
 \end{equation}
-where $\widetilde\Phi_i = \varepsilon_{ij}\Phi_k$ and there is an implicit sum over the generations
-$i$ and $j$.
+where $\widetilde\Phi_i = \varepsilon_{ij}\Phi_k$, there is an implicit sum over the generations
+$i$ and $j$, and the shorthand h.c.~is for hermitian conjugate.
 The coupling constants, $y^{q}$, are $3\times3$ matrices characterizing Yukawa coupling strengths
 between generations.
 After \SSB, the Higgs acquires a \VEV, $\Lag{Yuk}^q$ becomes:
@@ -261,7 +265,8 @@ $V_{L}^{q\dagger} V_{L}^{q} = V_{R}^{q\dagger} V_{R}^{q} = \mathds{1}$ by defini
 %$V_{qL}^\dagger V_{qL} = V_{qR}^\dagger V_{qR} = \mathbb{1}$.
 However, this is not the case of \Lag{\it q}.
 
-The Lagrangian $\Lag{\it q}=\Lag{\it q}^\mathrm{NC}+\Lag{\it q}^\mathrm{CC}$, where the
+The Lagrangian $\Lag{\it q}$ can be decomposed into
+$\Lag{\it q}^\mathrm{NC}+\Lag{\it q}^\mathrm{CC}$, where the
 superscripts denote \NC and charged current \CC components.
 The \NC part of \Lag{\it q} characterizes interactions between quarks and the neutral electroweak
 vector boson, and the \CC part transforms as:

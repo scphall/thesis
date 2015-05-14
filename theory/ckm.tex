@@ -18,8 +18,8 @@ This means that the \ckm matrix is unitary, $\VCKMconj\VCKM = \mathds{1}$, and t
 only four physical parameters: three angles ($\theta_{12}$, $\theta_{13}$ and $\theta_{23}$) and one
 complex phase ($\delta$).
 In fact, the observation of \CPV in kaon mixing led to the prediction of a third generation before
-its discovery because a $3\times3$ matrix is the smallest necessary for a phase to enter a unitary
-matrix.
+its discovery, precisely because a $3\times3$ matrix is the smallest necessary for a phase to enter
+a unitary matrix.
 
 %preferentially
 %hierarchichal
@@ -32,7 +32,6 @@ matrix.
 %four physical parameters: three angles ($\theta_{12}$, $\theta_{13}$ and $\theta_{23}$) and one
 %complex phase ($\delta$).
 
-
 %\begin{equation}
   %\VCKM =
   %\begin{pmatrix}
@@ -44,10 +43,8 @@ matrix.
   %\end{pmatrix}
 %\end{equation}
 
-
-
-
-There are many ways of representing the CKM matrix, one way is as a product of three rotation
+There are many ways of representing the \ckm matrix.
+One way is as a product of three rotation
 matrices, one of which contains the complex phase, this is known as the \emph{standard}
 parameterization:
 \begin{equation}
@@ -132,12 +129,13 @@ is known as \emph{the} \ut and is described by
   1 + \frac{\V{ud}\Vconj{ub}}{\V{cd}\Vconj{cb}} + \frac{\V{td}\Vconj{tb}}{\V{cd}\Vconj{cb}} = 0.
   \label{eq:th:ut}
 \end{equation}
-The \ut is depicted in \Fig{fig:th:ut}, it has a base of unit length, an apex at
+The \ut is depicted in \Fig{fig:th:ut}.
+It has a base of unit length, an apex at
 \begin{align}
   %\bar\rho+i\bar\eta = (1-\tfrac12\lambda^2)(\rho+i\eta)
   \xbar\rho+i\xbar\eta &= \big(1-\tfrac12\lambda^2\big)\big(\rho+i\eta\big)
   \nonumber\\
-  &=\frac{\V{ud}\Vconj{ub}}{\V{cd}\Vconj{cb}}
+  &=\frac{\V{ud}\Vconj{ub}}{\V{cd}\Vconj{cb}},
 \end{align}
 %If divided through by $\V{cd}\Vconj{cb}$, then Eq.~\ref{eq:th:ut} can be mapped onto the complex
 %plane, where the apex is at $\bar\rho+i\bar\eta = (1-\tfrac12\lambda^2)(\rho+i\eta)$.
@@ -146,11 +144,12 @@ and forms the angles
 \begin{align}
   \alpha &= \arg\left(-\frac{\V{td}\Vconj{tb}}{\V{ud}\Vconj{ub}}\right), &
   \beta  &= \arg\left(-\frac{\V{cd}\Vconj{cb}}{\V{td}\Vconj{tb}}\right), &
-  \gamma &= \arg\left(-\frac{\V{ud}\Vconj{ub}}{\V{cd}\Vconj{cb}}\right),
+  \gamma &= \arg\left(-\frac{\V{ud}\Vconj{ub}}{\V{cd}\Vconj{cb}}\right).
   %\alpha &=    \arg\left(-\frac{\V{td}\Vconj{tb}}{\V{ud}\Vconj{ub}}\right), \nonumber\\
   %\beta  &=\pi-\arg\left( \frac{\V{td}\Vconj{tb}}{\V{cd}\Vconj{cb}}\right), \nonumber\\
   %%& &\mathrm{and}
   %\gamma &=    \arg\left( \frac{\V{ud}\Vconj{ub}}{\V{cd}\Vconj{cb}}\right).
+  \label{eq:ut:angles}
 \end{align}
 which define phase differences between edges.
 %are phases between CKM matrix elements.
@@ -160,33 +159,62 @@ which define phase differences between edges.
 %constraints are also shown in Fig.~\ref{fig:th:ut}.
 
 \begin{figure}
-  %\subfloat[\label{fig:th:ut:sch}] {
-  %\subfloat[\label{fig:th:ut:plane}] {
   \begin{center}
-      \includegraphics[scale=1]{diagram_ut}
-      %\includegraphics[width=0.48\textwidth]{diagram_ut}
-      \includegraphics[width=0.47\textwidth]{rhoeta_small_Vub}
+      \includegraphics[scale=1.1]{diagram_ut}
   \end{center}
-  \caption[Unitarity triangle and current constraints]
+  \caption[Schematic diagram of the Unitarity Triangle]
   {
-    Schematic diagram of the Unitarity triangle given in Eq.~\ref{eq:th:ut} on the complex plane,
-    where the base has been normalized to unit length.
-    Alongside is shown the same triangle with coloured bands indicating various constraints on
-    side lengths, angles and position of the apex.
-    The constraints on \V{ub} from the combination of inclusive and exclusive modes
-    ($\left|\V{ub}\right|_\mathrm{SL}$) is given separately to a value obtained using
-    $\BF\left(\decay{\Bp}{\taup\nu_\tau}\right)$, ($\left|\V{ub}\right|_{\tau\nu}$).
+    Schematic diagram of the Unitarity triangle given in Eq.~\protect\ref{eq:th:ut} on the complex
+    plane, where the base has been normalized to unit length.
+    The angles $\alpha$, $\beta$, and $\gamma$ are defined in Eq~\protect\ref{eq:ut:angles}.
   }
   \label{fig:th:ut}
 \end{figure}
 
-Precise determination of the CKM matrix elements is important, for  they are each fundamental
+
+%\begin{figure}
+  %\begin{center}
+      %\includegraphics[scale=1]{diagram_ut}
+      %\includegraphics[width=0.47\textwidth]{rhoeta_small_Vub}
+  %\end{center}
+  %\caption[Unitarity triangle and current constraints]
+  %{
+    %Schematic diagram of the Unitarity triangle given in Eq.~\ref{eq:th:ut} on the complex plane,
+    %where the base has been normalized to unit length.
+    %Alongside is shown the same triangle with coloured bands indicating various constraints on
+    %side lengths, angles and position of the apex, which is taken from the CKMfitter group in
+    %Ref.~\protect\cite{Charles:2015gya}.
+    %The constraints on \V{ub} from the combination of inclusive and exclusive modes
+    %($\left|\V{ub}\right|_\mathrm{SL}$) is given separately to a value obtained using
+    %$\BF\left(\decay{\Bp}{\taup\nu_\tau}\right)$, ($\left|\V{ub}\right|_{\tau\nu}$).
+  %}
+  %\label{fig:th:ut}
+%\end{figure}
+
+
+Precise determination of the \ckm matrix elements is important, for  they are each fundamental
 parameters of the SM.
 They also contain all the information about flavour violation and \CPV that is allowed within the
 framework of the quark sector in the SM.
 This information is encapsulated in the \ut.
-Current measurements of angles and side lengths are shown in \Fig{fig:th:ut}.
+Current measurements of angles and side lengths from \Ref{Charles:2015gya} are shown in
+\Fig{fig:th:ckmfitter}.
 
+%\begin{figure}
+  %\begin{center}
+      %\includegraphics[width=0.60\textwidth]{rhoeta_small_Vub}
+  %\end{center}
+  %\caption[Unitarity triangle and current constraints]
+  %{
+    %Diagram of the \ut with coloured bands indicating various constraints on
+    %side lengths, angles and position of the apex, which is taken from the CKMfitter group in
+    %Ref.~\protect\cite{Charles:2015gya}.
+    %The constraints on \V{ub} from the combination of inclusive and exclusive modes
+    %($\left|\V{ub}\right|_\mathrm{SL}$) is given separately to a value obtained using
+    %$\BF\left(\decay{\Bp}{\taup\nu_\tau}\right)$, ($\left|\V{ub}\right|_{\tau\nu}$).
+  %}
+  %\label{fig:th:ckmfitter}
+%\end{figure}
 
 
 %A determination of \V{ub}
