@@ -14,22 +14,22 @@ to deal with the lifetime dimension.
 
 \subsection{Searching in the mass dimension}
 A scan in mass is performed where the test mass, \mass{t}, is incremented in steps of
-$\tfrac12\sigmam$, where $\sigmam$ is the local mass resolution defined at \mass{t}, and is in the
-range $1\lesssim\sigmam\lesssim6\mev$.
-At each \mass{t} a signal region is defined as $|m-\mass{t}<2\sigmam$ and a sideband, or
-background, region is defined as $3<|m-\mass{t}|<(2x+3)\sigmam$, where
+$\tfrac12\sigmam$, where $\sigmam$ is the local mass resolution defined at \mass{t}.
+In this analysis, \sigmam lies in the range $1\lesssim\sigmam\lesssim6\mev$.
+At each \mass{t} a signal region is defined as $|m-\mass{t}<2|\sigmam$ and a sideband, or
+background, region is defined as $3\sigmam<|m-\mass{t}|<(2x+3)\sigmam$, where
 $x$ defines the width of the sideband regions with respect to the signal region.
 The idea of constructing the two regions is to use the sideband regions to estimate the background
 contribution in the signal window.
 
 At each mass point in the search the number of events in the signal region, $n_s$, and the number
 of events in the background events, $n_b$, are counted.
-If the background is linear --- on average --- in the local mass region, then
-$\langle n_s\rangle=\langle n_b\rangle/2$ if there is no signal contribution.
-However, if there is a signal contribution from a decaying \db then $n_s=s+b$, where $s$ is the
-number of signal events, and $b$ is the background in the signal region, which is estimated from the
-sideband regions.
-Thus, one can construct a likelihood
+If the background is, on average, linear in the local mass region, then if there is no signal
+contribution: $\langle n_s\rangle=\tfrac12\langle n_b\rangle$.
+However, if there is evidence of signal from a decaying \db, then $n_s=s+b$, where $s$ is the
+number of signal events, and $b$ is the background component in the signal region which is
+estimated from the sideband regions.
+Thus, one can construct a likelihood:
 \begin{equation}
   \mathcal{L}(n_s, n_b | s, b) =
   \mathcal{P}(n_s, s+b) \cdot
@@ -45,11 +45,17 @@ the observed number of events in the signal region.
 The sole assumption is that the background is locally-linear at all values of \mass{t}: this is
 important to bare in mind.
 
-The problem with \Eq{eq:db:like1} is that, while $x$ has been chosen, deviations from a linear
-background distribution mean that the actual sideband size with respect to the signal region is
-not, in fact, $x$.
-Rather, the actual scale factor is some $y$, with some uncertainty $\sigma_y$.
-This can be accounted for by including an additional term in the likelihood
+The likelihood given in \Eq{eq:db:like1} assumes that the background is, on average, perfectly
+linear, and therefore that the size of the sideband region is a factor of $x$ larger than the
+signal region.
+But, this may not be the case.
+In reality the sideband region is a factor $y$ greater than the signal region, which can be
+accounted for by modifying the likelihood function to be:
+%The problem with \Eq{eq:db:like1} is that, while $x$ has been chosen, deviations from a linear
+%background distribution mean that the actual sideband size with respect to the signal region is
+%not, in fact, $x$.
+%Rather, the actual scale factor is some $y$, with some uncertainty $\sigma_y$.
+%This can be accounted for by including an additional term in the likelihood
 \begin{equation}
   \mathcal{L}(n_s, n_b, x | s, b, y) =
   \mathcal{P}(n_s, s+b) \cdot
@@ -59,12 +65,14 @@ This can be accounted for by including an additional term in the likelihood
 \end{equation}
 where $\mathcal{G}(n, \mu, \sigma)$ is the probability of observing $n$ given a Gaussian
 distribution with a mean, $\mu$, and standard deviation, $\sigma$.
+The value of $\sigma_y$ is to be chosen.
+This modification allows the uncertainty on the background shape to be immediately accounted for in
+the method, meaning that no additional systematic uncertainty needs to be added.
 
-The dimuon background from the \sm decay of \btokstrmumu is expected to be locally-linear, in the
-absence of resonances, to better than $1\pc$ over the entire mass range.
-However, including resonances in the model lead to significant deviations from linearity.
-The size of the deviation is dependent upon the width of a resonance, $\Gamma$, its magnitude
-relative to the local background distribution, and the value of $x$.
+The dimuon background from the \sm decay \btokstrmumu is expected to be locally-linear, in the
+absence of resonances, to less than $1\pc$ over the entire mass range.
+However, then inclusion of resonances can lead to significant departures from linearity, dependent
+upon the resonance's width ($\Gamma$), magnitude, and the value of $x$.
 Wide resonances, $\Gamma\gtrsim20\sigmam$, are sufficiently wide not as to be problematic even if
 they dominate the local background distribution.
 Conversely, narrow resonances where $\Gamma\lesssim5\sigmam$ lead to significant deviations from a
@@ -72,7 +80,7 @@ locally-linear background and must, therefore, be vetoed.
 Intermediate resonances, $5\lesssim\Gamma\lesssim20\sigmam$, must be considered on a case-by-case
 basis since they are only troublesome if they account for a large fraction of the local background.
 For this analysis these ranges roughly translate to requiring that resonances with $\Gamma<25\mev$
-will be vetoed, while those with $\Gamma>125\mev$ shall be ignored.
+will be vetoed, and those with $\Gamma>125\mev$ shall be ignored.
 
 Table~\ref{tab:db:bkg} lists a number of mesons, $X$, that decay to a dimuon final state and could
 contribute as background to the decay \decay{\Bd}{\Kstarz\mumu}.
@@ -150,8 +158,8 @@ various \ccbar states with masses above the mass of the \psitwos.
 For example, there is contribution from the $\psi(4160)$ which was observed by \lhcb in the decay
 \decay{\Bp}{\Kp\mumu}~\cite{LHCb-PAPER-2013-039}.
 All known charmonium resonances in this region are wide,
-$\Gamma\sim70\mev$, and are dealt with by reducing the size of the sidebands, by setting $x=1$ and
-increasing the value of $\sigma_y$ to 0.1.
+$\Gamma\sim70\mev$, and are dealt with by reducing the size of the sidebands and increasing the
+uncertainty on the background shape, by setting $x=1$ and $\sigma_y=0.1$.
 A summary of the values of $x$ and $\sigma_y$ for different regions of \mass{t} are given in
 \Table{tab:db:xsigmay}.
 
@@ -171,30 +179,32 @@ A summary of the values of $x$ and $\sigma_y$ for different regions of \mass{t} 
   \end{center}
 \end{table}
 
-Reference~\cite{Williams:2015xfa} also investigates the effect of interference effects between
-\btokstrmumu and \decay{\Bd}{\Kstarz\rho}, where \decay{\rho}{\mumu}.
-Despite the fact that the total branching fractions of the $\rho$ decay is so small that it is
-expected that less than one event will remain in the final data sample, the cross-term in the
-interference could result in a sizable deviation from local-linearity.
-However, this deviation can only be a maximum of \approx$5\pc$, which is accounted for in the choice
-of $\sigma_y$.
+Interference effects from the cross-term between
+\btokstrmumu and \decay{\Bd}{\Kstarz\rho}, where \decay{\rho}{\mumu}, could lead to non-linearity
+in the background shape, despite the fact that the total branching fractions of
+$\decay{\Bd}{\Kstarz\rho(\to\mumu)}$ decay is so small that less than one event is expected in the
+data sample.
+However, this deviation can only be a maximum of \approx$5\pc$, which is already accounted for in
+the choice of $\sigma_y=0.05$.
 
 The contribution from the decay \decay{\phi}{\mumu} to the $\Kstarz\mumu$ final state is removed by
 excluding dimuon candidates in the range $1000<\mass{\mumu}<1040\mev$.
 Vetoed regions for the \jpsi and \psitwos are calculated using a theoretical
-model~\cite{Bobeth:2011nj} which can account for the interference effects between the
-\decay{\ccbar}{\mumu} resonances and the non-resonant \mumu component.
-The model is used to generate \glspl{PDF} with different phases in order to find the maximum
-possible deviation from non-linearity in the \mumu spectrum.
+model which can account for the interference effects between the
+\decay{\ccbar}{\mumu} resonances and the non-resonant \mumu component~\cite{Bobeth:2011nj}.
+The model is used to generate \glspl{PDF} with different phase differences between the resonant and
+non-resonant components, which is then convolved with a double Gaussian function to account for
+detector resolution effects; these are shown in \Fig{fig:db:ccbar}.
+%possible deviation from non-linearity in the dimuon spectrum.
 %These \glspl{PDF} are shown in \Fig{fig:db:ccbar}.
 %This model is used to model the shape of these two large \ccbar contributions to the \mumu final
 %state with different phases between resonant and non-resonant components, and then this is
 %convolved with a Gaussian to account for the resolution of the \lhcb detector, as shown in
 %\Fig{fig:db:ccbar}.
-These \glspl{PDF} are used to calculate the regions around the \jpsi and \psitwos where the
-background is locally linear to better than $5\pc$ for various values of $x$; examples of them are
-shown in \Fig{fig:db:ccbar}.
-This method results in veto regions which are very similar to those used in
+After smearing, the \glspl{PDF} are then used to
+calculate the regions around the \jpsi and \psitwos where the
+background is locally linear to better than $5\pc$ for various values of $x$.
+The resulting veto regions which are very similar to those used in
 \Ref{LHCb-CONF-2015-002}, except that the upper boundary of the \psitwos veto is extended to cover
 the $\psi(3770)$.
 All the vetoed regions to remove narrow resonances decaying via \decay{X}{\mumu}, are summarized in
@@ -262,19 +272,19 @@ analytically.
 
 
 \subsection{Searching in the lifetime dimension}
-Sensitivity to \lifetime{\db} is introduced by splitting the data at each \mass{t} into two
-regions: a prompt region defined by $\tau<3\sigmat$, and a displaced region defined by
-$\tau>3\sigmat$; where \sigmat is defined to be the local lifetime resolution.
+Sensitivity to \lifetime{\db} is introduced by splitting the data at each test mass into two
+regions: a prompt and a displaced region, defined by $\tau<3\sigmat$ and
+$\tau>3\sigmat$ respectively; where \sigmat is defined to be the local lifetime resolution.
 The likelihood for each lifetime bin is defined using \Eq{eq:db:like2}, and the joint likelihood is
 simply the product of the two
 individual likelihoods
 \begin{align}
-  \mathcal{L}(n^p_s, n^p_b, n^d_s, n^d_b, x | s^p, b^p, y^p, s^d, b^d, y^d) =&
+  \mathcal{L}(n^p_s, n^p_b, n^d_s, n^d_b, x | s^p, b^p, y^p, s^d, b^d, y^d) &=
   \mathcal{L}(n^p_s, n^p_b, x | s^p, b^p, y^p)\nonumber\\
-  &\times\mathcal{L}(n^d_s, n^d_b, x | s^d, b^d, y^d).
+  &\quad\times\mathcal{L}(n^d_s, n^d_b, x | s^d, b^d, y^d).
   \label{eq:db:liketau}
 \end{align}
-In these expressions the superscripts $p$ and $d$ indicate the prompt and displaced regions,
+In these expressions the superscripts $p$ and $d$ denote the prompt and displaced regions,
 respectively.
 
 The information supplied by the addition of two bins in the lifetime dimension is approximately
@@ -283,12 +293,12 @@ In this case, it is marginally more optimal to include shape information of the 
 distribution from the sidebands; but this introduces
 significantly more complications to the analysis and there is no reason to believe that the \db has
 a lifetime $\tau\sim3\sigmat$ \emph{a priori}.
-Therefore the background shape information is not used.
+Therefore background shape information is not used.
 
 
 \subsection[Calculation of $p$-value]
 {Calculation of $\boldsymbol{p}$-value}
-At each \mass{t}, a $p$-value is calculated using profile likelihood of the joint likelihood given
+At each \mass{t}, a $p$-value is calculated using the profile likelihood of the joint likelihood given
 in \Eq{eq:db:liketau}.
 Because there are $\mathcal{O}(1000)$ test masses, each of which is not completely independent the
 look elsewhere effect must be accounted for.
@@ -313,18 +323,18 @@ $\tau$.
 An additional Gaussian terms are added: one to account for the uncertainty in the fraction of signal
 events that are observed in the two lifetime regions, and another to account for the uncertainty in
 the efficiency ratio with respect to the normalization channel.
-The resulting likelihood for a siven \mass{\db} and \lifetime{\db} is given by:
+The resulting likelihood for a given \mass{\db} and \lifetime{\db} is given by:
 \begin{align}
   \like\big(n_s^p, n_b^p, n_s^d, n_b^d, x, \tau | \dots\big) =
-   &\like\big(n_s^d, n_b^d, x | \varepsilon\cdot s\cdot f,b^p,y^p\big) \\\nonumber
-   &\times\like\big(n_s^p, n_b^p, x | \varepsilon\cdot s\cdot(1-f),b^d,y^d\big)\\\nonumber
-   &\times\mathcal{G}\big(f, \xbar{f}(\tau),\sigma(f)\big)
-   \times\mathcal{G}\big(\varepsilon, \xbar{\varepsilon}(\tau),\sigma(\varepsilon)\big).
+   &\like\big(n_s^d, n_b^d, x | \varepsilon s f,b^p,y^p\big) \\\nonumber
+   &\times\like\big(n_s^p, n_b^p, x | \varepsilon s(1-f),b^d,y^d\big)\\\nonumber
+   &\times\mathcal{G}\big(f, \xbar{f}(\tau_\db),\sigma(f)\big)
+   \times\mathcal{G}\big(\varepsilon, \xbar{\varepsilon}(\tau_\db),\sigma(\varepsilon)\big),
 \end{align}
-The fraction of signal events in the prompt region is given by $f$,
+where the fraction of signal events in the prompt region is given by $f$,
 which has an expected value from simulation $\xbar{f}$ and an uncertainty $\sigma(f)$.
-The same nomenclature is used for the relative efficiency, $\varepsilon$, which is relative to the
-normalization channel.
+The same nomenclature is used for the efficiency measured relative to the normalization channel,
+$\varepsilon$.
 
 
 
