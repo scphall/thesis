@@ -25,21 +25,22 @@ The only background that must be removed from this category is from a real \deca
 where a kaon in the final state is misidentified as being a pion.
 If the mass of the $\Kp K^-_\pi$ candidate lies within $10\mev$ of the known \phii mass, the
 ambiguous pion is subject to the requirements that
-$\mathtt{ProbNNpi}<0.3$ and $\mathtt{ProbNNK>0.3}$.
+$\ProbNN{\pi}<0.3$ and $\ProbNN{K}>0.3$.
 
-Backgrounds from resonsaces decaying into a pair of hadrons which are then mistaken as a pair of
+Backgrounds from resonances decaying into a pair of hadrons which are then mistaken as a pair of
 hadrons are more problematic.
 Misidentification of the decay \decay{\KS}{\pipi} is already dealt with in the preslection, but
-there is also contmaination from other long-lived hadronic states, namely the \Dz and \Lz.
+there is also contamination from other long-lived hadronic states, namely the \Dz and \Lz.
 The decays \decay{\Dz}{\kpi} and \decay{\Lz}{p\pim} are dealt with in a simiar way to the vetoes
 described in \Sec{sec:dsphi:sel:veto}.
 If the invariant mass of the $K^+_\mu\pi^-_\mu(p_\mu\pi^-_\mu)$ candidate falls within $25(10)\mev$
 of the nominal $\Dz(\Lz)$ mass, then the ambiguous muon is subject to the requirement that
-$\mathtt{ProbNNmu}>0.3(\mathtt{ProbNNp<0.3})$.
+$\ProbNN{\mu}>0.3(\ProbNN{p}<0.3)$.
 
 
 \begin{table}
-  \caption{
+  \caption[Double misidentification vetoes]
+  {
    Vetoes from double and single misidentification of particles.
    If, under the alternate hypothesis, the \db or \Kstarz candidate mass falls within the range
    indicated under, the candidates are subject to the given \pid requirements.
@@ -49,11 +50,11 @@ $\mathtt{ProbNNmu}>0.3(\mathtt{ProbNNp<0.3})$.
     \begin{tabular}{lcc}\toprule
       \multicolumn{2}{c}{Mass criteria (MeV)} & PID requirement \\\midrule
       $\left|m(\Kp K^-_\pi) - m^\mathrm{PDG}_\phi\right|$ & $<10$
-      & $\mathtt{ProbNNpi}(\pi)>0.3$ and {\tt ProbNNK$(\pi)<0.3$}
+      & $\ProbNN{pi}(\pi)>0.3$ and \ProbNN{K}$(\pi)<0.3$
       \\\rule{0pt}{3ex}$\left|m(K^+_\mu\pi^-_\mu) - m^\mathrm{PDG}_{\Dz}\right|$& $<25$
-      & $\mathtt{ProbNNmu}(\mu)>0.3$
+      & $\ProbNN{mu}(\mu)>0.3$
       \\\rule{0pt}{3ex}$\left|m(p_\mu\pi^-_\mu) - m^\mathrm{PDG}_{\Lz}\right|$ & $<10$
-      & $\mathtt{ProbNNp}(\mu)<0.3$  \\
+      & $\ProbNN{p}(\mu)<0.3$  \\
       \bottomrule
     \end{tabular}
   \end{center}
@@ -102,7 +103,8 @@ the data from this analysis.
   \begin{center}
     %\includegraphics[height=0.2\textheight]{x1070vlad}
     \includegraphics[height=0.2\textheight]{mumu_kk}
-    \caption{
+    \caption[Invariant mass of the \mumu distribution under the \kk mass hypotheses]
+    {
       %A comparison of
       %(left) the data which observes the \xtsvty~\protect\cite{x1070vlad}, and
       Invariant mass distribution of the $K_\mu^+K_\mu^-$ candidates in data, showing a peak at
@@ -130,7 +132,8 @@ preselection.
     \includegraphics[width=0.48\textwidth]{data_pipi}\\
     \includegraphics[width=0.48\textwidth]{gen_kk}
     \includegraphics[width=0.48\textwidth]{data_kk}
-    \caption{
+    \caption[Analysis of the \decay{\KS}{\pipi} background under the \kk mass hypothesis]
+    {
       A comparison of \decay{\KS}{\pi\pi} under different mass hypotheses, for
       (left) simulated events, and
       (right) events from data.
@@ -142,17 +145,5 @@ preselection.
     \label{fig:db:x1070:2d}
   \end{center}
 \end{figure}
-
-
-
-
-
-
-
-
-
-
-
-
 
 

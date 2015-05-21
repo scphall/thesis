@@ -36,17 +36,24 @@ efficiency for the \sm \btokstrmumu to that of (possibly displaced) \db mode ent
 into the limits and, thus, must be precisely determined; and the use of \TIS events would
 come with a substantial enhancement of the di-$b$-hadron backgrounds.
 The few percent gain in signal efficiency obtained using \TIS is not worth the increase in these
-backgrounds  di-$b$-hadron backgrounds.
+backgrounds di-$b$-hadron backgrounds.
 
-Candidates for the decay \btokstrdb, where \dbtomumu are reconstructed allowing that the \db can
-be displaced from the decay vertex of the \Bd.
-Since the \db could be a long-lived particle, and travel beyond the acceptance of the \velo before
-it decays, it is prudent to consider the use of \emph{downstream} tracks.
-Track types are defined by which tracking subdetectors in which they are observed,
-\Fig{fig:db:lldd} shows these various definitions.
-For most \lhcb analyses, the only appropriate track to use are \emph{long} tracks, which have hits
-in each tracking station; long tracks are used in the analyses described in \Chap{ch:hits} and
-\Chap{ch:hhh}.
+
+Since the \db could be long lived, its decay vertex can lie downstream of the \Bd vertex, and could
+fly far enough to leave acceptance of the \velo before it decays.
+It is therefore wise to consider different \emph{track types}.
+For most \lhcb analyses, the only appropriate tracks to use are \emph{long} tracks, which have
+have been used implicitly throughout this thesis
+Long tracks are fitted using hits in all tracking stations, including the \velo.
+But, it is also possible to reconstruct tracks using only some of the tracking stations; for
+example, a \emph{downstream} track is reconstructed using hits in all tracking stations, but not
+the \velo.
+%Candidates for the decay \btokstrdb, where \dbtomumu are reconstructed allowing that the \db can
+%be displaced from the decay vertex of the \Bd.
+%Since the \db could be a long-lived particle, and travel beyond the acceptance of the \velo before
+%it decays, it is prudent to consider the use of \emph{downstream} tracks.
+%Track types are defined by which tracking subdetectors in which they are observed,
+Figure~\ref{fig:db:lldd} shows the various definitions of track types.
 The problem with using downstream tracks is that they are not triggered efficiently in \hlttwo.
 For example, a simulated \db with a mass of $250\mev$ and a lifetime of $100\ps$ has a
 reconstruction and
@@ -90,8 +97,8 @@ For this reason, this analysis deals only with \db candidates formed from long-t
 The offline selection criteria applied in the stripping are outlined in \Tab{tab:stripping}.
 %The variable {\tt DOCA} is defined as the distance of closest approach between any two pairs of
 %tracks in the candidate.
-This table lists the variables {\tt ProbNNK} and {\tt ProbNNpi}, which are \MVA algorithms giving a
-response $\in[0,1]$ quantifying how kaon or pion like a particle is, respectively.
+This table lists the variables \ProbNN{\pi} and \ProbNN{K} which are \MVA algorithms
+giving a response $\in[0,1]$ quantifying how pion or kaon like a particle is, respectively.
 The full decay chain \btokstrdb and \dbtomumu is reconstructed using a fit in which the \Bd mass is
 constrained to its known value~\cite{PDG2014}.
 All references to $m(\db)$, $m(\Kstar)$ or $\tau(\db)$ are to the values after this vertex fit
@@ -126,16 +133,16 @@ has been performed.
       Tracks
       & $\chisqtrk/\ndf$          & $<$ & 3    \\
       & $\min(\chisqip)$                  & $>$ & 9    \\ % MIPCHI2DV
-      & $\mathcal{P}_\mathrm{gh}$ & $<$ & 0.3  \\
+      & \ProbNN{\mathrm{gh}} & $<$ & 0.3  \\
       \littlerule
       $\Kp$, $\pip$
       & \pt                       & $>$ & 250  & MeV \\
       & $p$                       & $>$ & 2000 & MeV \\
       & \chisqip                  & $>$ & 9 \\
       \Kp
-      & {\tt ProbNNK}             & $>$ & 0.1  \\
+      & \ProbNN{K}             & $>$ & 0.1  \\
       \pip
-      & {\tt ProbNNpi}            & $>$ & 0.2  \\
+      & \ProbNN{pi}           & $>$ & 0.2  \\
       \mup
       & \pt                       & $>$ & 100  & MeV \\
       & {\tt PIDmu}               & $>$ & -5   \\
@@ -147,11 +154,9 @@ has been performed.
 
 
 \subsection{Preselection}
-After the stripping and triggering stages, a loose preselection is applied (see \Tab{tab:presel}).
-The data sample is further purified using a multivariate algorithm, which is discussed in the
-following subsection.
-The preselection places cuts on topological quantities the combined efficiency of which is
-\approx$90\%$ on all simulated samples.
+After the stripping and triggering stages, a loose preselection is applied, cutting on both
+topological and \pid quantities; all these cuts are summarized in \Tab{tab:presel}.
+The topological cuts are very approximately $90\pc$ signal efficient on all simulated samples.
 
 Cuts are applied to the \Kstar and its daughters to remove candidates that are clearly
 inconsistent with the decay  \decay{\Kstarz}{\kpi}.
@@ -186,8 +191,10 @@ A summary of all preselection cuts are shown in \Tab{tab:db:presel}.
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.48\textwidth]{blank}
-    \caption{
+    \includegraphics[width=0.48\textwidth]{double_misid_pi}
+    \includegraphics[width=0.48\textwidth]{double_misid_k}
+    \caption[Effect of the double misidentification veto]
+    {
       Double misid
     }
     \label{fig:db:doublemisid}
@@ -195,7 +202,8 @@ A summary of all preselection cuts are shown in \Tab{tab:db:presel}.
 \end{figure}
 
 \begin{table}
-  \caption[Preselection cuts] {
+  \caption[Preselection cuts]
+  {
     Preselection cuts.
   }
   \label{tab:db:presel}
@@ -227,10 +235,8 @@ A summary of all preselection cuts are shown in \Tab{tab:db:presel}.
 \input{db/bkg}
 
 
-
-
-
 \subsection{Multivariate selection}
+The data sample is purified from combinatorial background using a multivariate selection technique.
 Section \ref{sec:uboost} outlines the \uBDT algorithm, which trains a \BDT whereby events are
 boosted based not only on misclassification, but also on how uniform the local response of the \BDT
 is for a give set of variables.
@@ -255,7 +261,8 @@ all masses and lifetimes are approximately flat.
   \begin{center}
     \includegraphics[width=0.48\textwidth]{mvaMassEff}
     \includegraphics[width=0.48\textwidth]{anaTauEffMVA}
-    \caption{
+    \caption[Signal efficiency of the uBDT as a function of mass and lifetime]
+    {
       It is observed that the efficiency of the \uBDT as a function of
       (left) \mdb and
       (right) \tdb is flat.
