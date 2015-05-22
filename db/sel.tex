@@ -16,14 +16,12 @@ Studies are also performed using simulated events of the decays \btokstrmumu and
   \label{tab:db:samples}
   \begin{center}
     \begin{tabular}{rccccccccccc}\toprule
-    %\begin{tabular*}{\textwidth}{r @{\extracolsep{\fill}} ccccccccccc}\toprule
       $\tau_\db$ (ps) & \multicolumn{10}{c}{\mass{\db} (MeV)} \\\midrule
       10 &&&&&&&&&2500 \\
       100 &214&220&235&250&500&800&1000&1500&2000&2500&4000 \\
       1000 &&&&250&&&&&2500 \\
       \bottomrule
     \end{tabular}
-    %\end{tabular*}
   \end{center}
 \end{table}
 
@@ -104,7 +102,7 @@ constrained to its known value~\cite{PDG2014}.
 All references to $m(\db)$, $m(\Kstar)$ or $\tau(\db)$ are to the values after this vertex fit
 has been performed.
 
-\begin{table}
+\begin{table}[ht!]
   \caption[Stripping selection]
   {
     While the \Bd mass is constrained in the fit, the selection makes a cut on the unconstrained
@@ -167,27 +165,22 @@ $(895.81\pm0.19)\mev$~\cite{PDG2014}.
 and to ensure that the kaon candidate looks more like a kaon than the pion candidate a cut on the
 difference in \glspl{DLL} is also applied: $\dllkpi(\Kp)-\dllkpi(\pip)>10$.
 
-Another background from misidentified particles that is removed in the preselection is that of a
-decaying \KS meson.
-A \KS has a mass of $(497.61\pm0.02)\mev$~\cite{PDG2012}, a lifetime of
-$(8.954\pm0.004)\e{-11}\sec$~\cite{PDG2012}, and decays
-into two charged pions $(69.20 \pm0.05)\pc$ of the time.
-If these two pions are misidentified as muons then there is significant peaking background around
-the \KS mass, because the mass of a muon and pion are similar.
-To counter this, candidates are vetoed if the mass of $m_{\pi_\mu^+\pi_\mu^-}$ is within $25\mev$
-of the known \KS mass.
+The decay \decay{\KS}{\pipi} has a branching fraction of
+$(69.20\pm0.05)\e{-2}$~\cite{PDG2014}, and is removed in the preselection by requiring that
+$|m_{\pi_\mu^+\pi_\mu^-}-m_{\KS}^\mathrm{PDG}|<25$.
+This roughly translates to a cut in the dimuon invariant mass spectrum of
+$436<m_{\mumu}<490\mev$.
 
 Since the \db can be displaced from the \Bd decay vertex, a potential background for the decay
 \dbtomumu is from a \mumu pair directly from a \pv.
 This is suppressed by requiring that the transverse flight distance (\FDT) of the \db vertex, with
 respect to the \pv is greater than $0.1\mm$.
 
-Similar to in \Sec{sec:hhh:sel}, the decay \btokstrdb suffers from backgrounds from
-\decay{\Bd}{\jpsi\Kstarz} where a hadron is misidentified as a hadron and vice versa.
-In this case the background can be suppressed by requiring that neither the \Kp nor the \pim
-satisfy the \ismuon criteria.
-The effect of this cut is shown in \Fig{fig:db:doublemisid}.
-A summary of all preselection cuts are shown in \Tab{tab:db:presel}.
+The high branching fraction of \decay{\Bd}{\jpsi(\to\mumu)\Kstarz} means that there is also
+contamination from decays where a hadron is misidentified as a muon, and vice versa.
+This background can be suppressed by requiring that neither of the \Kstarz daughters satisfy the
+\ismuon criteria, the effect of this cut is shown in \Fig{fig:db:doublemisid}.
+A summary of all preselection cuts is shown in \Tab{tab:db:presel}.
 
 \begin{figure}
   \begin{center}
@@ -225,22 +218,22 @@ A summary of all preselection cuts are shown in \Tab{tab:db:presel}.
       & $\dllkpi$&  $<$ & 25 \\\littlerule
       \db
       & $F\!D_T$ & $>$ & 0.1 & mm \\
+      & $m$  & $\notin$ & $[436,490]$ & MeV \\
       \bottomrule
     \end{tabularcuts}
   \end{center}
 \end{table}
 
 
-\subsection{Other backgrounds from misidentification}
 \input{db/bkg}
 
 
 \subsection{Multivariate selection}
 The data sample is purified from combinatorial background using a multivariate selection technique.
 Section \ref{sec:uboost} outlines the \uBDT algorithm, which trains a \BDT whereby events are
-boosted based not only on misclassification, but also on how uniform the local response of the \BDT
+boosted not only based on misclassification, but also on how uniform the local response of the \BDT
 is for a give set of variables.
-In this case it is important that the \BDT does not bias the sample towards a given mass and
+For the case of this analysis, it is important that the \BDT does not bias the sample towards a given mass and
 lifetime, which makes the \uBDT ideal for this analysis.
 That being said, the uBoost algorithm should not be used at the expense of the performance of the
 \BDT.
@@ -252,8 +245,8 @@ A \uBDT is trained using a signal-proxy from simulated events and background tak
 Specifically, the signal-proxy is a concoction of three different simulated samples in which the
 \db has a mass of: 214, 1000, and $4000\mev$; and each has a lifetime of $100\ps$.
 These samples are chosen to give the \uBDT algorithm input the largest range of masses possible.
-The fact that each sample has the same lifetime is unimportant, because $\lifetime{adb}=100\ps$ is
-sufficiently long for there to be a range of lifetimes in the signal-proxy sample.
+%The fact that each sample has the same lifetime is unimportant, because $\lifetime{\db}=100\ps$ is
+%sufficiently long for there to be a range of lifetimes in the signal-proxy sample.
 Figure~\ref{fig:db:bdtflat} shows the effect of the uniform boosting, and that the efficiency for
 all masses and lifetimes are approximately flat.
 
@@ -268,7 +261,7 @@ all masses and lifetimes are approximately flat.
       (right) \tdb is flat.
       Here, a cut which is \approx$85\pc$ efficient is applied.
     }
-    \label{fig:bdt:eff:tau}
+    \label{fig:db:bdtflat}
   \end{center}
 \end{figure}
 
@@ -296,31 +289,22 @@ the Punzi figure-of-merit, which is defined as
 where $S$ and $B$ are the signal and background yields, respectively; and $\sigma$ is the desired
 level of observation.
 The signal and background yields are calculated as follows:
-$S$ is the number of simulated events which survive a \uBDT cut;
-$B$ is the yield as estimated using \btokstrdb candidates
-that fall outside $80\mev$ from the nominal \Bd mass~\cite{PDG2014} and within the region .
-The invariant mass distributions of these candidates are fit to a decaying exponential,
+$S$ is the number of simulated signal events which survive a \uBDT cut;
+$B$ is the background yield as estimated using \btokstrdb candidates
+that fall outside $80\mev$ from the nominal \Bd mass~\cite{PDG2014}.
+The invariant mass distributions of these candidates in data are fit to a decaying exponential,
 and the background yield is taken to be the integral of this exponential within $60\mev$
-(approximately $3\sigma$) of $m^\mathrm{PDG}(\Bd)$.
+(approximately $3\sigma$) of $m^\mathrm{PDG}_{\Bd}$.
 
 The figure-of-merit is considered separately for both the prompt and displaced candidates.
 The optimal working point varies from sample to sample due to the fact that the background yield
 depends on $(m,\tau)$.
-However, the optimal point in the prompt case is approximately $uBDT>0.15$ for all samples, a
+However, the optimal point in the prompt case is approximately $\uBDT>0.15$ for all samples, a
 working point that
 is approximately $85\pc$ efficient by constructing.
 At this point in the displaced region, there is an estimated zero background.
 This point was calculated used a value of $\sigma=5$, \Eq{eq:db:punzi}, although the result is seen
 to be insensitive to its exact value.
-
-
-
-\subsection{Normalization}
-Limits on the branching fraction shall be calculated with respect to the decay \btokstrmumu,
-restricted to the range $1.1<\qsq<6.0\gevgev$.
-This range is chosen to minimise theoretical uncertainties at low and high \qsq and reduce
-experimental uncertainties by removing the region around the \phii meson which has a central value
-of mass in \qsq of \approx$1.04\gevgev$.
 
 
 

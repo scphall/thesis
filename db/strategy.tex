@@ -16,7 +16,7 @@ to deal with the lifetime dimension.
 A scan in mass is performed where the test mass, \mass{t}, is incremented in steps of
 $\tfrac12\sigmam$, where $\sigmam$ is the local mass resolution defined at \mass{t}.
 In this analysis, \sigmam lies in the range $1\lesssim\sigmam\lesssim6\mev$.
-At each \mass{t} a signal region is defined as $|m-\mass{t}<2|\sigmam$ and a sideband, or
+At each \mass{t} a signal region is defined as $|m-\mass{t}|<2\sigmam$ and a sideband, or
 background, region is defined as $3\sigmam<|m-\mass{t}|<(2x+3)\sigmam$, where
 $x$ defines the width of the sideband regions with respect to the signal region.
 The idea of constructing the two regions is to use the sideband regions to estimate the background
@@ -329,10 +329,10 @@ events that are observed in the two lifetime regions, and another to account for
 the efficiency ratio with respect to the normalization channel.
 The resulting likelihood for a given \mass{\db} and \lifetime{\db} is given by:
 \begin{align}
-  \like\big(n_s^p, n_b^p, n_s^d, n_b^d, x, \tau | \dots\big) =
-   &\like\big(n_s^d, n_b^d, x | \varepsilon s f,b^p,y^p\big) \\\nonumber
-   &\times\like\big(n_s^p, n_b^p, x | \varepsilon s(1-f),b^d,y^d\big)\\\nonumber
-   &\times\mathcal{G}\big(f, \xbar{f}(\tau_\db),\sigma(f)\big)
+  \like\big(n_s^p, n_b^p, n_s^d, n_b^d, x, \tau | \dots\big) &=
+   \like\big(n_s^d, n_b^d, x | \varepsilon s f,b^p,y^p\big) \\\nonumber
+   &\quad\times\like\big(n_s^p, n_b^p, x | \varepsilon s(1-f),b^d,y^d\big)\\\nonumber
+   &\quad\times\mathcal{G}\big(f, \xbar{f}(\tau_\db),\sigma(f)\big)
    \times\mathcal{G}\big(\varepsilon, \xbar{\varepsilon}(\tau_\db),\sigma(\varepsilon)\big),
 \end{align}
 where the fraction of signal events in the prompt region is given by $f$,
@@ -340,8 +340,11 @@ which has an expected value from simulation $\xbar{f}$ and an uncertainty $\sigm
 The same nomenclature is used for the efficiency measured relative to the normalization channel,
 $\varepsilon$.
 
-
-
+The normalization channel used will be the \sm decay \btokstrmumu, restricted to the region
+$1.1<\qsq<6.0\gevgev$.
+This range is chosen to minimize theoretical uncertainties at low and high \qsq and reduce
+experimental uncertainties by removing the region around the \phii meson which has a central value
+of mass in \qsq of \approx$1.04\gevgev$.
 
 
 
