@@ -26,8 +26,7 @@ through one of four \emph{portals}: the vector, axion, Higgs, and neutrino porta
 Interaction terms for messengers in each of these portals are given in
 \Table{tab:db:overview}.
 In most dark sector models, the only way that a \db can be observed is if it mixes with a \sm
-particle, and the superpostition of the two states decays into, in this case, a dimuon pair.
-
+particle, and the superposition of the two states decays into, in this case, a dimuon pair.
 
 \begin{table}
   \caption[Summary of dark boson portals]
@@ -39,11 +38,10 @@ particle, and the superpostition of the two states decays into, in this case, a 
     $F_{\mu\nu}$ is the field strength tensor of the photon;
     $F^\prime_{\mu\nu}$ is the dark photon field;
     $\epsilon$ characterizes mixing between the \sm and the dark photon;
-    $a$ is axion field;
-    $f_a$ is scale at which Peccei-Quinn global $U(1)$ symmetry is spontaneously broken;
+    $f_\db$ is scale at which Peccei-Quinn global $U(1)$ symmetry is spontaneously broken;
     $G_{\mu\nu}$ is the gluon field strength tensor;
     $S$ is a dark scalar field with coupling strengths $\mu$ and $\lambda$ to the Higgs field;
-    and $N$ is the sterile neutrino which couples to a $H$ with a strength $Y_N$.
+    and the sterile neutrino couples to a $H$ with a strength $Y_N$.
   }
   \label{tab:db:overview}
   \begin{center}
@@ -51,11 +49,11 @@ particle, and the superpostition of the two states decays into, in this case, a 
       \cellc{Portal} & \cellc{Particles} & \multicolumn{3}{c}{Operator(s)}
       \\\midrule
       Vector & Dark photons && $-\tfrac{\epsilon}{2\cos\theta_W}F_{\mu\nu}F^{\prime\mu\nu}$ \\
-      Axion & Pseudoscalars & $\tfrac{a}{f_a}F_{\mu\nu}\widetilde{F}^{\mu\nu}$
-      & $\tfrac{a}{f_a}G_{i\mu\nu}\widetilde{G}^{\mu\nu}_i$
-      & $\tfrac{\partial_\mu a}{f_a}\xbar{\psi}\gamma^\mu\gamma^5\psi$ \\
-      Higgs & Dark scalars && $(\mu S + \lambda S^2)H^\dagger H$ \\
-      Neutrino & Sterile neutrinos && $Y_N\ell HN$ \\
+      Axion & Pseudoscalars & $\tfrac{\db}{f_\db}F_{\mu\nu}\widetilde{F}^{\mu\nu}$
+      & $\tfrac{\db}{f_\db}G_{i\mu\nu}\widetilde{G}^{\mu\nu}_i$
+      & $\tfrac{\partial_\mu \db}{f_\db}\xbar{\psi}\gamma^\mu\gamma^5\psi$ \\
+      Higgs & Dark scalars && $(\mu \db + \lambda \db^2)H^\dagger H$ \\
+      Neutrino & Sterile neutrinos && $Y_N\ell H\db$ \\
       \bottomrule
     \end{tabular}
   \end{center}
@@ -124,21 +122,29 @@ portals which couple strongly to mass.
 %assumption that the coupling of \darkgamma to \sm states is large.
 %However, if the coupling of these states is weak then \darkgamma could be light.
 
+Chapter~\ref{ch:theory} introduces the idea of \gls{PQ} symmetry breaking leading to an an axion
+which resolves the strong \CP problem.
+Unlike other dark boson portals, the axion portal introduces a term in the Lagrangian which couples
+messenger axions to fermions directly.
+In order for the axion portal to couple to a dark sector containing TeV-scale \dm, the messenger
+particles are predicted to have a mass in the range $360<\mass{\db}<800\mev$ and a decay
+constant in the range $1\lesssim f_\db\lesssim3\tev$~\cite{Nomura:2008ru}.
+
 \begin{figure}
   \begin{center}
     \includegraphics[scale=1]{feynman_inf}
     \caption[Feynman diagram for the decay \btokstrdb]
     {
-      Feynman diagram showing the decay \btokstrdb, where the \db interacts by mixing with the
-      Higgs or $Z$, which then decays into a dimuon pair.
+      Feynman diagram showing the decay \btokstrdb, and \dbtomumu.
+      Depending on the portal through which the \db acts, it couple directly to the muons, or need
+      to mix with a \sm Higgs, $Z$, or photon.
     }
     \label{fig:db:feynman}
   \end{center}
 \end{figure}
 
-
 Na\"{i}vely, one might expect that because the \Bp is a pseudoscalar and the \Kstarz is a vector
-the decay \btokstrdb would be rather more sensitive to a vector \d than one which is a scalar.
+the decay \btokstrdb would be rather more sensitive to a vector \db than one which is a scalar.
 One might also conclude that to look for a vector \db, a better decay channel in which to search
 would be \decay{\Bp}{\Kp\mumu}; despite its added experimental difficulties.
 However, simply counting possible spin states that a two body decay can have, leads to the
@@ -190,6 +196,10 @@ the decays, and that searching for a particle, \db, in the decays \decay{\Bd}{\K
     \label{fig:db:kx}
   \end{center}
 \end{figure}
+
+
+
+
 
 
 The following chapter introduces an analysis strategy, an overview of the selection, and how the
