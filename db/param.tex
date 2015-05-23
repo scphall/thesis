@@ -1,4 +1,4 @@
-\section{The evolution parameters as a function of mass}
+\section{Evolution of parameters as a function of mass}
 \label{sec:param}
 
 Searching for a \db of unknown mass and lifetime requires knowledge of parameters such as: mass
@@ -48,7 +48,8 @@ and lifetimes of interest.
 %Using generator level simulation, it is determined that $(20.11\pm0.06)\%$ of generated events lie
 %in this region.
 
-\subsection{Mass resolution of the \db candidate}
+\subsection[Mass resolution of the \db candidate]
+{Mass resolution of the $\boldsymbol{\db}$ candidate}
 The size of the signal and background regions are defined in terms of the local mass resolution,
 which varies across the whole mass range.
 To understand the evolution of \sigmam, the mass distribution of various signal samples are fitted
@@ -101,7 +102,8 @@ the known \Bd mass.
 %\end{figure}
 
 
-\subsection{Lifetime resolution}
+\subsection[Lifetime resolution of the \db candidate]
+{Lifetime resolution of the $\boldsymbol{\db}$ candidate}
 Similar to finding the mass resolution as a function of mass, the evolution of the lifetime
 distribution is obtained by extracting the $3\sigmat$ limits from fitted distributions at known \db
 mass points.
@@ -120,26 +122,6 @@ comparable to the resolution of the \velo strips and leads to poor spatial resol
 the \db decay vertex position.
 The resolved muon hits in the \velo are pushed further downstream, such that
 $\tau^\mathrm{meas}_{\db}>\tau^\mathrm{true}_{\db}$.
-This means that the function used to fit $\Delta\tau$ for $\mass{\db}<250\mev$ must be modified to
-account for the tail extending to high $\Delta\tau$ by allowing the mean to shift from zero
-significantly and giving the wider Gaussian an exponential tail.
-Fits to $\Delta\tau$ from \btokstrdb samples with different values of \mass{\db} are shown in
-\Fig{fig:taures:zoom}.
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.42\textwidth]{anaTauResZoom_214}
-    \includegraphics[width=0.42\textwidth]{anaTauResZoom_250}
-    \includegraphics[width=0.42\textwidth]{anaTauResZoom_1000}
-    \includegraphics[width=0.42\textwidth]{anaTauResZoom_4000}
-  \end{center}
-  \caption{
-    Fits to the lifetime resolution parameter, $\Delta\tau$, for individual mass samples.
-    Each fit for $m\geq250\mev$ is made using a double Gaussian function, and for $m<250\mev$ the
-    wider Gaussian has an exponential tail on the right-hand side.
-  }
-  \label{fig:taures:zoom}
-\end{figure}
 
 The effect of a small opening angle can be seen by comparing the measured and true opening angle
 distributions for simulated decays of \btokstrdb, where $\mass{\db}=214\mev$.
@@ -148,7 +130,7 @@ for $\theta_\mathrm{open}\lesssim0.002\rad$ a significant discrepancy between th
 $\thetaopen^\mathrm{true}$ and $\thetaopen^\mathrm{measured}$.
 In the same figure, the evolution of \thetaopen with \mass{\db} at generator level is shown, it can
 be seen that when $\mass{\db}=250\mev$, the opening angle is predominantly larger than $0.002\rad$.
-
+%Applying a cut to \thetaopen is very signal inefficient, so instead
 %it can be seen that there is no bias once the \mumu opening angle exceeds $\sim0.002$ radians.
 %Vetoing all events below this threshold is a very inefficient solution at low dimuon
 %masses, (see Fig.~\ref{fig:opening:gen}).
@@ -181,43 +163,78 @@ be seen that when $\mass{\db}=250\mev$, the opening angle is predominantly large
   \label{fig:opening:gen}
 \end{figure}
 
-The observation of the discrepancy between real and true opening angle can be verified using data
-from a decay channel with very high statistics, for example,
-the decay \decay{\Bd}{\kpi\mumu}, where the muons can come from any resonance.
-Figure~\ref{fig:oa:2d} shows how the opening angle of the \kpi system changes with its invariant
-mass (for $m_{\kpi}<900\mev$); it is seen that at threshold, the opening angle is observed to be
-very small for low masses, especially at threshold, $m_{\Kp} + m_{\pim} = 633.3\mev$.
+The discrepancy between real and true opening angle can be verified using data
+from a decay channel with very high statistics, such as the opening angle of the \kpi system in
+the decay \decay{\Bd}{\kpi\mumu} for for $m_{\kpi}<\mev$.
+Figure~\ref{fig:oa:2d} shows that the opening angle of the \kpi system
+is very low, and a similar peak at $\thetaopen=0$ when $m_{\kpi}$ is near threshold,
+($m_{\Kp} + m_{\pim} = 633.3\mev$).
 A one dimensional plot of the opening angle for $m_{\kpi}<640\mev$ is shown in \Fig{fig:db:openkpi}.
-It is seen that the \kpi opening angle at low mass does indeed have a peak at $\sim\!0$, as
-observed in the simulation in \Fig{fig:oa}
 
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.48\textwidth]{opening_angle_data}
-    \includegraphics[width=0.48\textwidth]{opening_angle_data_2d}
+    %\includegraphics[width=0.48\textwidth]{opening_angle_data_2d}
     \caption[Opening angle of \kpi]
     {
+      Opening angle of the \kpi system in \decay{\Bd}{\kpi\mumu}, where the invariant mass of the
+      \kpi system is close to threshold.
     }
     \label{fig:db:openkpi}
   \end{center}
 \end{figure}
 
-The lifetime resolution is calculated at each mass point using a fit to $\Delta\tau$.
-Each PDF is constructed as the sum of two Gaussian functions.
-However, for the reasons described above, the low mass ($<250\mev$) has a tail extending to high
-lifetimes, and therefore for these samples an exponential tail is added to the Gaussian with larger
-width.
-These fits are shown in \Fig{fig:taures:zoom}; the same distributions for flight distance (without
-fits) are shown in \Fig{fig:fd:zoom}.
-The $3\,\sigma$ lifetime resolution is calculated from the fitted PDFs, which are
-shown in Fig.~\ref{fig:eff:spline:res}.
+Applying a cut to remove events where \thetaopen is small would be very inefficient for a low mass
+\db, and therefore the function used to fit $\Delta\tau$ is modified to account for the positive
+skew.
+For simulated samples generated with $\mass{\db}<250\mev$ the wider of the two Gaussian functions
+is modified to incorporate an exponential tail
+extending to high $\Delta\tau$ and allowing the mean of both Gaussians by allowing the mean to
+shift from zero.
+Fits to $\Delta\tau$ from \btokstrdb samples with different values of \mass{\db} are shown in
+\Fig{fig:taures:zoom}.
+Accounting for this effect allows the $\pm3\sigma_\tau$ values to be taken directly from the fits.
+
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.42\textwidth]{anaTauResZoom_214}
+    \includegraphics[width=0.42\textwidth]{anaTauResZoom_250}
+    \includegraphics[width=0.42\textwidth]{anaTauResZoom_1000}
+    \includegraphics[width=0.42\textwidth]{anaTauResZoom_4000}
+  \end{center}
+  \caption[Fits to the lifetime resolution for simulated \db{s}]
+  {
+    Fits to the lifetime resolution parameter, $\Delta\tau$, for individual mass samples.
+    Each fit for $m\geq250\mev$ is made using a double Gaussian function, and for $m<250\mev$ the
+    wider Gaussian has an exponential tail on the right-hand side.
+  }
+  \label{fig:taures:zoom}
+\end{figure}
+
+The prompt region is defined by $-3\sigma_\tau<\tau_{\mumu}<3\sigma_\tau$ and the displaced region
+by $\tau_{\mumu}>3\sigma_\tau$.
+Figure~\ref{fig:eff:res} shows how $\sigma_\tau$ varies with mass, where each point comes from the
+fits to $\Delta\tau$ described above, and linear spline interpolation is used to access
+$\sigma_\tau$ at all values of \mass{t}.
+
+%The lifetime resolution is calculated at each mass point using a fit to $\Delta\tau$.
+%Each PDF is constructed as the sum of two Gaussian functions.
+%However, for the reasons described above, the low mass ($<250\mev$) has a tail extending to high
+%lifetimes, and therefore for these samples an exponential tail is added to the Gaussian with larger
+%width.
+%These fits are shown in \Fig{fig:taures:zoom}; the same distributions for flight distance (without
+%fits) are shown in \Fig{fig:fd:zoom}.
+%The $3\,\sigma$ lifetime resolution is calculated from the fitted PDFs, which are
+%shown in Fig.~\ref{fig:eff:spline:res}.
 
 
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.48\textwidth]{spline_taures_upper}
     \includegraphics[width=0.48\textwidth]{spline_taures_lower}\\
-    \caption{
+    \caption[Parameterization of lifetime resolution as a function of \db mass]
+    {
       Resolutions for the lifetime of a particle as a function of mass in the
       (upper left) positive and
       (upper right) negative directions at the $3\,\sigma$ levets, used to
@@ -233,16 +250,16 @@ shown in Fig.~\ref{fig:eff:spline:res}.
 
 
 \subsection{Parameterizing the efficiency of the \db selection}
-The shape of the lifetime efficiency distribution varies with mass.
-At each simulated mass point, the lifetime distribution was parameterized with a simple function,
+Setting limits for \db masses and lifetimes requires knowledge of the efficiency for any arbitrary
+\db, as outlined in \Eq{eq:db:lim}.
+To do this, the lifetime distribution for a given mass is fit to a simple function:
 \begin{equation}
-  \mathcal{T}(\tau) = f\mathcal{G}(\mu, \sigma) + (1-f)\exp\left(-\alpha\tau\right),
+  \mathcal{T}(\tau) = f\mathcal{G}(\mu=0, \sigma) + (1-f)\exp\left(-\alpha\tau\right),
   \label{eq:eff:parameters}
 \end{equation}
-where the parameters depends on dimuon mass.
-This parameterisation is shown fitted to the lifetime distribution of four mass points in
-\Fig{fig:eff:fits}.
-
+which depends upon only a few parameters: a $f$, $\sigma$, and $\alpha$.
+There is excellent agreement between $\tau_\db$ distributions from simulated samples of \btokstrdb
+and this simple parameterization, as shown in \Fig{fig:eff:fits}.
 
 \begin{figure}
   \begin{center}
@@ -262,41 +279,18 @@ This parameterisation is shown fitted to the lifetime distribution of four mass 
   \end{center}
 \end{figure}
 
-
-Samples with different masses are fit with the results for each parameter plotted against dimuon
-mass in \Fig{fig:eff:spline}.
-Extrapolation to different masses is done using spline interpolation, as shown in
-\Fig{fig:eff:spline}.
-The value of $f$ has large errors, and has little effect on the total shape.
-A cubic spline models this very poorly because of the fluctuations at low mass, therefore linear
-regression is used instead.
-These splines account for all efficiencies except for the efficiency of the uBDT and the geometric
-acceptance of the \lhcb detector; the \uBDT and geometric acceptance are nearly the same for all
-samples and so nearly cancel in the limit setting.
-An example of a lifetime efficiency distribution for a given mass is shown in \Fig{fig:eff:effmap},
-as is the two-dimensional projection, absolute efficiencies have not been included in this.
-
-The efficiency map shown in \Fig{fig:res:mbvtau} was generated using simulated samples where
-$\tau(\db)=100\ps$ but contains the efficiency at each $\tau$ below 100\ps.
-It is then possible to obtain the efficiency for any other lifetime as follows:
-\begin{equation}
-  \varepsilon(\tau) =
-  \frac{1}{\tau}\int\limits_0^{100\ps}
-  \mathcal{T}(\tau^{\prime})
-  \exp\left(-\frac{\tau^{\prime}}{\tau}\right)
-  \,{\rm d}\tau^{\prime},
-%  \left.\exp\left(-\frac{\tau}{x}\right)\right/
-%  \exp\left(-\frac{\tau}{100\ps}\right),
-\end{equation}
-%where $x$ is the `target' lifetime, in ps.
-The upper lifetime acceptance will be $100\ps$, this is because the efficiency for longer lifetimes
-is very poor.
+The parameters $\sigma$, and $\alpha$ are seen to evolve smoothly as a function of mass, and as
+such spline interpolation is used to determine their values for arbitrary masses.
+Linear regression is used to evolve $f$, because of the large errors on the values of $f$ yielded
+by these fits.
+Figure~\ref{fig:eff:spline} shows how the aforementioned parameters evolve as a function of mass.
 
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.48\textwidth]{spline_sigma}
     \includegraphics[width=0.48\textwidth]{spline_alpha}\\
     \includegraphics[width=0.48\textwidth]{spline_frac}
+    \includegraphics[width=0.48\textwidth]{spline_2d}
     \caption{
       Parameters from Eq.~\protect\ref{eq:eff:parameters} as a function of mass from
       simulated events.
@@ -311,23 +305,49 @@ is very poor.
   \end{center}
 \end{figure}
 
+%The two-dimensional map of parameterized lifetime distributions in \Fig{fig:eff:spline}
+%Ratio of efficiency for a \db with $\lifetime{\db}=0\ps$
 
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.48\textwidth]{spline_eff_2d}
-    \caption{
-      Using the parameters in Fig.~\ref{fig:eff:spline} and Eq.~\protect\ref{eq:eff:parameters} the
-      lifetime distributions are formed for the full two-dimensional projection.
-      Absolute efficiencies are not folded in here.
-    }
-    \label{fig:eff:effmap}
-  \end{center}
-\end{figure}
+%\begin{figure}
+  %\begin{center}
+    %\includegraphics[width=0.48\textwidth]{kpieff.pdf}
+    %\includegraphics[width=0.48\textwidth]{spline_eff_2d}
+    %\caption{
+      %Using the parameters in Fig.~\ref{fig:eff:spline} and Eq.~\protect\ref{eq:eff:parameters} the
+      %lifetime distributions are formed for the full two-dimensional projection.
+      %Absolute efficiencies are not folded in here.
+    %}
+    %\label{fig:eff:effmap}
+  %\end{center}
+%\end{figure}
 
 
 
-\subsection[Efficiency studies using \decay{\Bd}{\jpsi\Kstarz}]
-{Efficiency studies using $\boldsymbol{\decay{\Bd}{\jpsi\Kstarz}}$}
+%Samples with different masses are fit with the results for each parameter plotted against dimuon
+%mass in \Fig{fig:eff:spline}.
+%Extrapolation to different masses is done using spline interpolation, as shown in
+%\Fig{fig:eff:spline}.
+%The value of $f$ has large errors, and has little effect on the total shape.
+%A cubic spline models this very poorly because of the fluctuations at low mass, therefore linear
+%regression is used instead.
+%These splines account for all efficiencies except for the efficiency of the uBDT and the geometric
+%acceptance of the \lhcb detector; the \uBDT and geometric acceptance are nearly the same for all
+%samples and so nearly cancel in the limit setting.
+%An example of a lifetime efficiency distribution for a given mass is shown in \Fig{fig:eff:effmap},
+%as is the two-dimensional projection, absolute efficiencies have not been included in this.
+
+
+By convolving the function $\mathcal{T}(\tau)$ with an exponential, the efficiency for any value of
+lifetime can be derived:
+\begin{equation}
+  \varepsilon(\tau) =
+  \frac{1}{\tau}\int\limits_0^{100\ps}
+  \mathcal{T}(\tau^{\prime})
+  \exp\left(-\frac{\tau^{\prime}}{\tau}\right)
+  \,{\rm d}\tau^{\prime}.
+\end{equation}
+The upper lifetime acceptance is chosen to be $100\ps$, because the efficiency at longer lifetimes,
+for all values of \mass{\db}, is very poor.
 
 
 
