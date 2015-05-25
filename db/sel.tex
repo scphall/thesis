@@ -1,4 +1,5 @@
 \section{Selection}
+\label{sec:db:sel}
 
 This analysis uses the full $3.0\invfb$ of data collected by the \lhcb
 experiment~\cite{Alves:2008zz} in the years 2011 and 2012 at 7 and $8\tev$ respectively.
@@ -228,7 +229,7 @@ A summary of all preselection cuts is shown in \Tab{tab:db:presel}.
 \input{db/bkg}
 
 
-\subsection{Multivariate selection}
+\subsection{Combinatorial background}
 The data sample is purified from combinatorial background using a multivariate selection technique.
 Section \ref{sec:uboost} outlines the \uBDT algorithm, which trains a \BDT whereby events are
 boosted not only based on misclassification, but also on how uniform the local response of the \BDT
@@ -306,6 +307,60 @@ At this point in the displaced region, there is an estimated zero background.
 This point was calculated used a value of $\sigma=5$, \Eq{eq:db:punzi}, although the result is seen
 to be insensitive to its exact value.
 
+While the \uBDT does suppress the combinatorial background, some will still remain.
+The contribution of combinatorial background must be assessed to ensure that it is not a problem.
+Using \Bp candidates that fall above the \Bd mass peak where the contribution is purely
+combinatorial background, an idea of the distribution of \db candidates from random combinations of
+particles can be assessed.
+An analysis reveals that there is an average of \approx$2$ and \approx$0.2$ events in a signal
+window (defined using $\pm2\sigmam$) in the prompt and displaced regions, respectively.
+
+
+%This is done using the following
+%procedure for each of the lifetime regions:
+%\begin{itemize}
+  %\item Perform fit using an exponential function to the upper and lower mass sidebands of the \Bd
+    %candidate mass spectrum.  Sideband regions are defined by the areas outside of $60\mev$ from
+    %the known \Bd mass (approximately $3\,\sigma$).
+    %The fits are shown in \Fig{fig:res:comb}.
+  %\item Calculate the integral of the background function (exponential) in the signal region
+    %(within $60\mev$ of the known \Bd mass).
+    %Let the value of the integral be $m$.
+  %\item Take $m$ events from the upper sideband, and plot the mass of each dimuon candidate that
+    %forms the \Bd candidates.
+%\end{itemize}
+%The resulting invariant dimuon mass spectrum is shown in \Fig{fig:res:comb}; in the prompt case
+%there is an average of 1.8 events in each bin, in the displaced region the number is nearer 0.2.
+%Using bin widths comparable to the signal window size ($20\mev$) it is seen that the estimated
+%number of events per bin is always five or less, with an average of less than one event per bin.
+%A more detailed study will be performed below in wide bins as part of the unblinding strategy.
+
+
+%\begin{figure}
+  %\begin{center}
+    %\includegraphics[width=0.48\textwidth]{combinatorial_prompt_fit}
+    %\includegraphics[width=0.48\textwidth]{combinatorial_displaced_fit}\\
+    %\includegraphics[width=0.48\textwidth]{combinatorial_prompt}
+    %\includegraphics[width=0.48\textwidth]{combinatorial_displaced}
+    %\caption{
+      %Fits to the prompt and displaced regions are shown in
+      %(upper left) and
+      %(upper right) respectively; where the dark blue box indicates the signal
+      %region, and the lighter blue indicates the upper sideband which has the same area as the
+      %background contribution to the signal region.
+      %Combinatorial background estimations from data, as described in text are shown in
+      %(lower left) the prompt region, and
+      %(lower right) the displaced region.
+      %Each bin is $20\mev$ wide, which is comparable to the width of the signal region.
+    %}
+    %\label{fig:res:comb}
+  %\end{center}
+%\end{figure}
+
+
+
+
+
 
 
 %In \Sect{sec:strategy} it is briefly mentioned that the observed signal yields will be normalized
@@ -313,11 +368,6 @@ to be insensitive to its exact value.
 %Specifically the \qsq range $1.1<\qsq<6.0\gevgev$ will be used, because theoretical and
 %experimental uncertainties are low in this region.
 %Here, \qsq is defined to be the invariant mass of the dimuon pair, squared.
-
-
-
-
-
 
 
 %\subsection[Mass of \Bd candidates]{Mass of $\boldsymbol{\Bd}$ candidates}

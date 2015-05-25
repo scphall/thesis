@@ -283,6 +283,8 @@ The parameters $\sigma$, and $\alpha$ are seen to evolve smoothly as a function 
 such spline interpolation is used to determine their values for arbitrary masses.
 Linear regression is used to evolve $f$, because of the large errors on the values of $f$ yielded
 by these fits.
+So, $\sigma$, $\alpha$, and $f$, become functions of mass, therefore $\mathcal{T}$ becomes a
+function of mass and lifetime: $\mathcal{T}(m,\tau)$
 Figure~\ref{fig:eff:spline} shows how the aforementioned parameters evolve as a function of mass.
 
 \begin{figure}
@@ -291,13 +293,15 @@ Figure~\ref{fig:eff:spline} shows how the aforementioned parameters evolve as a 
     \includegraphics[width=0.48\textwidth]{spline_alpha}\\
     \includegraphics[width=0.48\textwidth]{spline_frac}
     \includegraphics[width=0.48\textwidth]{spline_2d}
-    \caption{
+    \caption[Parameterization of lifetime as a function of mass]
+    {
       Parameters from Eq.~\protect\ref{eq:eff:parameters} as a function of mass from
       simulated events.
       The parameters are
       (upper left) $\sigma$,
-      (upper right) $\alpha$, and
-      (lower) $f$.
+      (upper right) $\alpha$,
+      (lower left) $f$, and
+      (lower right) the two-dimensional projection of the total parameterization.
       Splines are used to parameterize each shape, except for the parameter $f$, where a
       linear fit is used.
     }
@@ -305,23 +309,40 @@ Figure~\ref{fig:eff:spline} shows how the aforementioned parameters evolve as a 
   \end{center}
 \end{figure}
 
-%The two-dimensional map of parameterized lifetime distributions in \Fig{fig:eff:spline}
-%Ratio of efficiency for a \db with $\lifetime{\db}=0\ps$
 
-%\begin{figure}
-  %\begin{center}
-    %\includegraphics[width=0.48\textwidth]{kpieff.pdf}
-    %\includegraphics[width=0.48\textwidth]{spline_eff_2d}
-    %\caption{
-      %Using the parameters in Fig.~\ref{fig:eff:spline} and Eq.~\protect\ref{eq:eff:parameters} the
-      %lifetime distributions are formed for the full two-dimensional projection.
-      %Absolute efficiencies are not folded in here.
-    %}
-    %\label{fig:eff:effmap}
-  %\end{center}
-%\end{figure}
+Once the two-dimensional map of $\mathcal{T}(m,\tau)$ has been produced, it is scaled such that at
+for all values of $mu$,
+\begin{equation}
+  \mathcal{T}(m,\tau=0\ns) =
+  \frac{
+    \varepsilon_{\btokstrmumu}^{\tau=0}
+  }{
+    \varepsilon_{\btokstrmumu}^{1.1<\qsq<6.0}
+  }
+  \mathcal{T}(m,\tau).
+\end{equation}
+Here, the numerator $\varepsilon_{\btokstrmumu}^{\tau=0}$ is \qsq dependent and is calculated using
+simulated events, and the denominator $\varepsilon_{\btokstrmumu}^{1.1<\qsq<6.0}$ is the total
+efficiency for candidates in the indicated \qsq region, which is calculated to be $3.93\pc$.
+The ratio
+$\varepsilon_{\btokstrmumu}^{\tau=0} / \varepsilon_{\btokstrmumu}^{1.1<\qsq<6.0}$ is approximately
+equal to one for all values of \mass{\db}.
+Figure~\ref{fig:eff:effmap} shows both the efficiency for a prompt dimuon pair --- or equivalently
+a \db --- as a function of \qsq, and the rescaled distribution of $\mathcal{T}(m,\tau)$, which shall
+be called $\mathcal{R}(m,\tau)$.
 
-
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{kpieff}
+    \includegraphics[width=0.48\textwidth]{spline_eff_2d}
+    \caption{
+      Using the parameters in Fig.~\ref{fig:eff:spline} and Eq.~\protect\ref{eq:eff:parameters} the
+      lifetime distributions are formed for the full two-dimensional projection.
+      Absolute efficiencies are not folded in here.
+    }
+    \label{fig:eff:effmap}
+  \end{center}
+\end{figure}
 
 %Samples with different masses are fit with the results for each parameter plotted against dimuon
 %mass in \Fig{fig:eff:spline}.
@@ -337,18 +358,25 @@ Figure~\ref{fig:eff:spline} shows how the aforementioned parameters evolve as a 
 %as is the two-dimensional projection, absolute efficiencies have not been included in this.
 
 
-By convolving the function $\mathcal{T}(\tau)$ with an exponential, the efficiency for any value of
-lifetime can be derived:
+Thus far, $\mathcal{R}(m,\tau)$ has been calculated.
+To summarize, it is the lifetime distribution for a dark boson where $\tau_\db=100\ps$, which has
+been scaled such that at $\tau=0$ the distribution is equal to
+$\varepsilon_{\btokstrmumu}^{\tau=0} / \varepsilon_{\btokstrmumu}^{1.1<\qsq<6.0}$.
+To assess limits for all values of mass and lifetime initial lifetime distribution must be taken
+into account by convolving $\mathcal{R}(m,\tau)$ with a decaying exponential to derive an efficiency
+map:
 \begin{equation}
-  \varepsilon(\tau) =
+  \varepsilon(m,\tau) =
   \frac{1}{\tau}\int\limits_0^{100\ps}
-  \mathcal{T}(\tau^{\prime})
+  \mathcal{R}(m,\tau^{\prime})
   \exp\left(-\frac{\tau^{\prime}}{\tau}\right)
   \,{\rm d}\tau^{\prime}.
 \end{equation}
 The upper lifetime acceptance is chosen to be $100\ps$, because the efficiency at longer lifetimes,
 for all values of \mass{\db}, is very poor.
 
-
+In \Chap{ch:hhh} efficiencies are calculated using weights to correct for differences between data
+and simulation.
+For the accuracy of this analysis there is no need to do this.
 
 
