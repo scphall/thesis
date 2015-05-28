@@ -5,7 +5,7 @@ This analysis is a completely general search for a particle with unknown mass, \
 lifetime, \lifetime\db.
 Exhaustive details of the analysis strategy can be found in \Ref{Williams:2015xfa}, but the
 following section will outline the important points.
-Broadly, the search involves a fully frequentest scan of the dimuon invariant mass spectrum,
+Broadly, the search involves a fully frequentist scan of the dimuon invariant mass spectrum,
 separated into two bins in lifetime, from
 \btokstrmumu for an excess of events consistent with \dbtomumu.
 Firstly, an explanation of the search in the mass dimension will be presented, and then extended to
@@ -45,12 +45,15 @@ the observed number of events in the signal region.
 The sole assumption is that the background is locally-linear at all values of \mass{t}: this is
 important to bare in mind.
 
-The likelihood given in \Eq{eq:db:like1} assumes that the background is, on average, perfectly
-linear, and therefore that the size of the sideband region is a factor of $x$ larger than the
+The likelihood given in \Eq{eq:db:like1} assumes that the background is, on average, exactly
+linear, and therefore that the size of the sideband region is always factor of $x$ larger than the
 signal region.
 But, this may not be the case.
-In reality the sideband region is a factor $y$ greater than the signal region, which can be
-accounted for by modifying the likelihood function to be:
+In reality the sideband region is a not precisely a factor $x$ larger than the signal region, but
+rather some factor $y$.
+The uncertainty between $x$ and $y$, called $\sigma_y$,
+is accounted for in the likelihood directly, by
+modifying the likelihood function to be
 %The problem with \Eq{eq:db:like1} is that, while $x$ has been chosen, deviations from a linear
 %background distribution mean that the actual sideband size with respect to the signal region is
 %not, in fact, $x$.
@@ -86,7 +89,7 @@ Table~\ref{tab:db:bkg} lists a number of mesons, $X$, that decay to a dimuon fin
 contribute as background to the decay \decay{\Bd}{\Kstarz\mumu}.
 Dimuon decays of the \phii, \jpsi, and \psitwos mesons have the highest branching fractions, and
 are also among the
-narrowest resonances; falling into the $\Gamma\lesssim5\sigmam$ region, and are therefore vetoed.
+narrowest resonances; falling into the $\Gamma\lesssim5\sigmam$ category, and are therefore vetoed.
 The remaining resonances given in \Table{tab:db:bkg} are broad and contribute to the dimuon
 structures at low mass.
 It is shown in \Ref{Williams:2015xfa} that the local-linearity approximation is accurate to
@@ -302,18 +305,19 @@ Therefore background shape information is not used.
 
 \subsection[Calculation of $p$-value]
 {Calculation of $\boldsymbol{p}$-value}
-At each \mass{t}, a $p$-value is calculated using the profile likelihood of the joint likelihood given
-in \Eq{eq:db:liketau}.
+At each \mass{t}, a $p$-value is calculated using the profile likelihood of the joint likelihood
+given in \Eq{eq:db:liketau}.
 Because there are $\mathcal{O}(1000)$ test masses, each of which is not completely independent the
 look elsewhere effect must be accounted for.
 To do this the minimum local $p$-value is translated into a global $p$-value using a trials factor
 which is calculated using an ensemble of toys.
 
+\bam{CLARIFY}
 After the $p$-value at each \mass{t} is calculated, the region in which the lowest $p$-value
 consistent with zero signal will be isolated and removed from the sample; leaving data which
 which is entirely background.
 This is assuming that there is only one \np particle that can be observed in this analysis.
-The remaining background-like distribution is then turned into a \PDF --- where the region that is
+The remaining background-like distribution is then turned into a \PDF\ --- where the region that is
 removed is interpolated across --- from which toy datasets can be generated.
 A conversion from local to global $p$-value can then be calculated by generating 10 million toy
 datasets.
@@ -324,14 +328,14 @@ Upper limits will be set as a function of \mass{\db} and \lifetime{\db}.
 This requires further modification to the likelihood function to account for the relationship
 between the number of signal events in the prompt and displaced regions for a given value of
 $\tau$.
-An additional Gaussian terms are added: one to account for the uncertainty in the fraction of signal
-events that are observed in the two lifetime regions, and another to account for the uncertainty in
-the efficiency ratio with respect to the normalization channel.
+An additional Gaussian terms are added: one to account for the uncertainty in the fraction of
+signal events that are observed in the two lifetime regions, and another to account for the
+uncertainty in the efficiency ratio with respect to the normalization channel.
 The resulting likelihood for a given \mass{\db} and \lifetime{\db} is given by:
 \begin{align}
   \like\big(n_s^p, n_b^p, n_s^d, n_b^d, x, \tau | \dots\big) &=
-   \like\big(n_s^d, n_b^d, x | \varepsilon s f,b^p,y^p\big) \\\nonumber
-   &\quad\times\like\big(n_s^p, n_b^p, x | \varepsilon s(1-f),b^d,y^d\big)\\\nonumber
+   \like\big(n_s^d, n_b^d, x | \varepsilon s f,b^p,y^p\big) \nonumber\\
+   &\quad\times\like\big(n_s^p, n_b^p, x | \varepsilon s(1-f),b^d,y^d\big)\nonumber\\
    &\quad\times\mathcal{G}\big(f, \xbar{f}(\tau_\db),\sigma(f)\big)
    \times\mathcal{G}\big(\varepsilon, \xbar{\varepsilon}(\tau_\db),\sigma(\varepsilon)\big),
    \label{eq:db:lim}
@@ -346,6 +350,12 @@ $1.1<\qsq<6.0\gevgev$.
 This range is chosen to minimize theoretical uncertainties at low and high \qsq and reduce
 experimental uncertainties by removing the region around the \phii meson which has a central value
 of mass in \qsq of \approx$1.04\gevgev$.
+
+
+
+
+
+
 
 
 

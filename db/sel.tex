@@ -41,17 +41,12 @@ backgrounds di-$b$-hadron backgrounds.
 Since the \db could be long lived, its decay vertex can lie downstream of the \Bd vertex, and could
 fly far enough to leave acceptance of the \velo before it decays.
 It is therefore wise to consider different \emph{track types}.
-For most \lhcb analyses, the only appropriate tracks to use are \emph{long} tracks, which have
-have been used implicitly throughout this thesis
+For most \lhcb analyses, the only appropriate tracks to use are \emph{long} tracks, which
+have been used implicitly throughout this thesis.
 Long tracks are fitted using hits in all tracking stations, including the \velo.
 But, it is also possible to reconstruct tracks using only some of the tracking stations; for
 example, a \emph{downstream} track is reconstructed using hits in all tracking stations, but not
 the \velo.
-%Candidates for the decay \btokstrdb, where \dbtomumu are reconstructed allowing that the \db can
-%be displaced from the decay vertex of the \Bd.
-%Since the \db could be a long-lived particle, and travel beyond the acceptance of the \velo before
-%it decays, it is prudent to consider the use of \emph{downstream} tracks.
-%Track types are defined by which tracking subdetectors in which they are observed,
 Figure~\ref{fig:db:lldd} shows the various definitions of track types.
 The problem with using downstream tracks is that they are not triggered efficiently in \hlttwo.
 For example, a simulated \db with a mass of $250\mev$ and a lifetime of $100\ps$ has a
@@ -67,7 +62,6 @@ For this reason, this analysis deals only with \db candidates formed from long-t
 
 \begin{figure}
   \begin{center}
-    %\includegraphics[width=0.48\textwidth]{track}
     \includegraphics[scale=0.7]{track}
     \caption[Track definitions in the LHCb detector]
     {
@@ -78,8 +72,6 @@ For this reason, this analysis deals only with \db candidates formed from long-t
       Most tracks used in analyses are classified as long tracks, but for long-lived particles
       (such as the \KS) downstream tracks are often also used to increase statistics.
       This analysis focused on long tracks.
-      %and tracking stations one, two, and three.
-      %This analysis focuses on particles decaying into a pair of long tracks.
     }
     \label{fig:db:lldd}
   \end{center}
@@ -94,8 +86,6 @@ For this reason, this analysis deals only with \db candidates formed from long-t
 
 
 The offline selection criteria applied in the stripping are outlined in \Tab{tab:stripping}.
-%The variable {\tt DOCA} is defined as the distance of closest approach between any two pairs of
-%tracks in the candidate.
 This table lists the variables \ProbNN{\pi} and \ProbNN{K} which are \MVA algorithms
 giving a response $\in[0,1]$ quantifying how pion or kaon like a particle is, respectively.
 The full decay chain \btokstrdb and \dbtomumu is reconstructed using a fit in which the \Bd mass is
@@ -154,7 +144,7 @@ has been performed.
 
 \subsection{Preselection}
 After the stripping and triggering stages, a loose preselection is applied, cutting on both
-topological and \pid quantities; all these cuts are summarized in \Tab{tab:presel}.
+topological and \pid quantities; all these cuts are summarized in \Tab{tab:db:presel}.
 The topological cuts are very approximately $90\pc$ signal efficient on all simulated samples.
 
 Cuts are applied to the \Kstar and its daughters to remove candidates that are clearly
@@ -168,7 +158,7 @@ difference in \glspl{DLL} is also applied: $\dllkpi(\Kp)-\dllkpi(\pip)>10$.
 
 The decay \decay{\KS}{\pipi} has a branching fraction of
 $(69.20\pm0.05)\e{-2}$~\cite{PDG2014}, and is removed in the preselection by requiring that
-$|m_{\pi_\mu^+\pi_\mu^-}-m_{\KS}^\mathrm{PDG}|<25$.
+$|m_{\pi_\mu^+\pi_\mu^-}-m_{\KS}^\mathrm{PDG}|<25\mev$.
 This roughly translates to a cut in the dimuon invariant mass spectrum of
 $436<m_{\mumu}<490\mev$.
 
@@ -229,38 +219,43 @@ A summary of all preselection cuts is shown in \Tab{tab:db:presel}.
 \input{db/bkg}
 
 
-\subsection{Combinatorial background}
+\subsection{Combinatorial background and multivariate selection}
+\bam{CLARIFY}
 The data sample is purified from combinatorial background using a multivariate selection technique.
-Section \ref{sec:uboost} outlines the \uBDT algorithm, which trains a \BDT whereby events are
+Section~\ref{sec:bdt:uboost} outlines the \uBDT algorithm, which trains a \BDT whereby events are
 boosted not only based on misclassification, but also on how uniform the local response of the \BDT
-is for a give set of variables.
-For the case of this analysis, it is important that the \BDT does not bias the sample towards a given mass and
+is for a given set of variables.
+For the case of this analysis, it is important that the \BDT does not bias the sample towards a
+given mass and
 lifetime, which makes the \uBDT ideal for this analysis.
 That being said, the uBoost algorithm should not be used at the expense of the performance of the
 \BDT.
-It is observed that the \uBDT algorithm in fact outperforms the AdaBoost algorithm in this case,
+The \uBDT algorithm is seen to outperform the AdaBoost algorithm in this case,
 and therefore its use is justified.
 
 A \uBDT is trained using a signal-proxy from simulated events and background taken from the upper
 \Bd mass sideband where the \Bd candidate has a mass of over $150\mev$ above the nominal \Bd mass.
 Specifically, the signal-proxy is a concoction of three different simulated samples in which the
 \db has a mass of: 214, 1000, and $4000\mev$; and each has a lifetime of $100\ps$.
-These samples are chosen to give the \uBDT algorithm input the largest range of masses possible.
+These samples are chosen to give the \uBDT algorithm input the largest range of masses possible;
+particularly a $\mdb=214\mev$ sample was chosen because it is close to threshold and equal to the
+mass of the $P^0$ evidenced in the Hyper-\CP experiment~\cite{Park:2005eka}.
 %The fact that each sample has the same lifetime is unimportant, because $\lifetime{\db}=100\ps$ is
 %sufficiently long for there to be a range of lifetimes in the signal-proxy sample.
-Figure~\ref{fig:db:bdtflat} shows the effect of the uniform boosting, and that the efficiency for
-all masses and lifetimes are approximately flat.
+%Figure~\ref{fig:db:bdtflat} shows the effect of the uniform boosting, and that the efficiency for
+%all masses and lifetimes are approximately flat.
+It is observed that the response of a \uBDT cut does result in a uniform signal efficiency in both
+the mass and lifetime distributions; this is shown in \Fig{fig:db:bdtflat}.
 
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.48\textwidth]{mvaMassEff}
     \includegraphics[width=0.48\textwidth]{anaTauEffMVA}
-    \caption[Signal efficiency of the uBDT as a function of mass and lifetime]
+    \caption[Signal efficiency of a uBDT cut as a function of mass and lifetime]
     {
-      It is observed that the efficiency of the \uBDT as a function of
-      (left) \mdb and
-      (right) \tdb is flat.
-      Here, a cut which is \approx$85\pc$ efficient is applied.
+      Signal efficiencies from simulation for a \uBDT cut which is approximately $85\pc$ efficient,
+      the distributions are are approximately flat in both the (left) mass and (right) lifetime
+      dimensions.
     }
     \label{fig:db:bdtflat}
   \end{center}
@@ -284,10 +279,10 @@ all masses and lifetimes are approximately flat.
 The \uBDT cut is optimized  by maximizing
 the Punzi figure-of-merit, which is defined as
 \begin{equation}
-  \mathrm{Punzi}_\sigma = \frac{S}{\sqrt{B} + \tfrac12\sigma},
+  \mathrm{Punzi}_{\sigma_\mathrm{p}} = \frac{S}{\sqrt{B} + \tfrac12\sigma_\mathrm{p}},
   \label{eq:db:punzi}
 \end{equation}
-where $S$ and $B$ are the signal and background yields, respectively; and $\sigma$ is the desired
+where $S$ and $B$ are the signal and background yields, respectively; and $\sigma_\mathrm{p}$ is the desired
 level of observation.
 The signal and background yields are calculated as follows:
 $S$ is the number of simulated signal events which survive a \uBDT cut;
@@ -300,16 +295,16 @@ and the background yield is taken to be the integral of this exponential within 
 The figure-of-merit is considered separately for both the prompt and displaced candidates.
 The optimal working point varies from sample to sample due to the fact that the background yield
 depends on $(m,\tau)$.
-However, the optimal point in the prompt case is approximately $\uBDT>0.15$ for all samples, a
+However, the optimal point in the prompt case is approximately $\mathrm{uBDT}>0.15$ for all samples, a
 working point that
 is approximately $85\pc$ efficient by constructing.
 At this point in the displaced region, there is an estimated zero background.
-This point was calculated used a value of $\sigma=5$, \Eq{eq:db:punzi}, although the result is seen
-to be insensitive to its exact value.
+This point was calculated using a value of $\sigma=5_\mathrm{p}$, \Eq{eq:db:punzi}, although the
+result is seen to be insensitive to its exact value.
 
 While the \uBDT does suppress the combinatorial background, some will still remain.
 The contribution of combinatorial background must be assessed to ensure that it is not a problem.
-Using \Bp candidates that fall above the \Bd mass peak where the contribution is purely
+Using \Bd candidates that fall above the \Bd mass peak where the contribution is purely
 combinatorial background, an idea of the distribution of \db candidates from random combinations of
 particles can be assessed.
 An analysis reveals that there is an average of \approx$2$ and \approx$0.2$ events in a signal

@@ -2,7 +2,7 @@
 \label{sec:param}
 
 Searching for a \db of unknown mass and lifetime requires knowledge of parameters such as: mass
-resolution, lifetime resolution, and efficiency, at every point on the
+resolution, lifetime resolution, and efficiency; at every point on the
 $(\mass{\db}, \lifetime{\db})$ plane that is searched.
 This is clearly not possible by generating an arbitrary number of simulated signal data.
 Instead, the available simulated samples are used to interpolate (and extrapolate) to all masses
@@ -53,13 +53,14 @@ and lifetimes of interest.
 The size of the signal and background regions are defined in terms of the local mass resolution,
 which varies across the whole mass range.
 To understand the evolution of \sigmam, the mass distribution of various signal samples are fitted
-to a function constructed as the sum of two Gaussian distributions with the same mean.
+to a function constructed as the sum of two Gaussian distributions with the same mean, this is
+known as a double Gaussian.
 Fitted distributions are used to define the $2\sigma$ intervals, and then each point is
 intersected with a cubic spline.
-Figure~{fig:param:mass} shows the resulting spline.
+Figure~\ref{fig:param:mass} shows the resulting spline.
 The mass resolution is observed to be
 \approx$1\mev$ for very low \mass{\db} and quickly increases to a plateau around $2\sigma=15\mev$
-before dropping off again because the invariant mass of the $\kpi\mumu$ system is constrained to
+before dropping off again, because the invariant mass of the $\kpi\mumu$ system is constrained to
 the known \Bd mass.
 
 \begin{figure}
@@ -109,25 +110,46 @@ distribution is obtained by extracting the $3\sigmat$ limits from fitted distrib
 mass points.
 Splines are then used to interpolate to all values of \mass{\db}.
 For each \btokstrdb sample with $m\leq250\mev$,
-$\Delta\tau=\tau^\mathrm{meas}_{\db}-\tau^\mathrm{true}_{\db}$ distribution is fit to the sum of
-two Gaussian functions with the same mean.
+$\Delta\tau=\tau^\mathrm{meas}_{\db}-\tau^\mathrm{true}_{\db}$ distribution is fit to a double
+Gaussian function.
 In samples with $\mass{\db}<250\mev$ the $\Delta\tau$ distribution is observed to be significantly
-distorted from a simple double Gaussian.
+distorted from a simple double Gaussian, as shown in \Fig{fig:taures:zoom}.
 
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.42\textwidth]{anaTauResZoom_214}
+    \includegraphics[width=0.42\textwidth]{anaTauResZoom_250}
+    \includegraphics[width=0.42\textwidth]{anaTauResZoom_1000}
+    \includegraphics[width=0.42\textwidth]{anaTauResZoom_4000}
+  \end{center}
+  \caption[Fits to the lifetime resolution for simulated \db{s}]
+  {
+    Fits to the lifetime resolution parameter, $\Delta\tau$, for individual mass samples.
+    Each fit for $m\geq250\mev$ is made using a double Gaussian function, and for $m<250\mev$ the
+    wider Gaussian has an exponential tail on the right-hand side.
+  }
+  \label{fig:taures:zoom}
+\end{figure}
+
+The distortion from a double Gaussian is explained by the narrow opening angle, \thetaopen, between
+muons for low mass dark bosons.
 When a \db is produced near the dimuon mass threshold when the \db decays into two muons, the
-daughter particles are produced at rest in the frame of the \db.
-Therefore, the two muons have a very narrow opening angle, $\theta_\mathrm{open}$ in the lab frame
-and the separation of their hits in the \velo are
-comparable to the resolution of the \velo strips and leads to poor spatial resolution of
-the \db decay vertex position.
-The resolved muon hits in the \velo are pushed further downstream, such that
-$\tau^\mathrm{meas}_{\db}>\tau^\mathrm{true}_{\db}$.
+daughter particles are produced nearly at rest in the frame of the \db.
+Therefore, the two muons have a very small \thetaopen in the lab frame
+and so the separation of muon hits in the \velo are
+comparable to the resolution of the \velo strips.
+This leads to poor spatial resolution of the \db decay vertex position.
+By the time that the muon hits are resolved from one another the measured vertex is further
+downstream than it really is.
+This effect causes a tail to extend upwards in the $\Delta\tau$ distributions for low \mdb.
+%The resolved muon hits in the \velo are pushed further downstream, such that
+%$\tau^\mathrm{meas}_{\db}>\tau^\mathrm{true}_{\db}$.
 
 The effect of a small opening angle can be seen by comparing the measured and true opening angle
 distributions for simulated decays of \btokstrdb, where $\mass{\db}=214\mev$.
-Figure~\ref{fig:opening:gen} shows that
-for $\theta_\mathrm{open}\lesssim0.002\rad$ a significant discrepancy between the distributions of
-$\thetaopen^\mathrm{true}$ and $\thetaopen^\mathrm{measured}$.
+Figure~\ref{fig:opening:gen} shows a significant discrepancy between the
+$\thetaopen^\mathrm{true}$ and $\thetaopen^\mathrm{measured}$
+distributions for $\theta_\mathrm{open}\lesssim0.002\rad$.
 In the same figure, the evolution of \thetaopen with \mass{\db} at generator level is shown, it can
 be seen that when $\mass{\db}=250\mev$, the opening angle is predominantly larger than $0.002\rad$.
 %Applying a cut to \thetaopen is very signal inefficient, so instead
@@ -166,7 +188,7 @@ be seen that when $\mass{\db}=250\mev$, the opening angle is predominantly large
 The discrepancy between real and true opening angle can be verified using data
 from a decay channel with very high statistics, such as the opening angle of the \kpi system in
 the decay \decay{\Bd}{\kpi\mumu} for for $m_{\kpi}<\mev$.
-Figure~\ref{fig:oa:2d} shows that the opening angle of the \kpi system
+Figure~\ref{fig:db:openkpi} shows that the opening angle of the \kpi system
 is very low, and a similar peak at $\thetaopen=0$ when $m_{\kpi}$ is near threshold,
 ($m_{\Kp} + m_{\pim} = 633.3\mev$).
 A one dimensional plot of the opening angle for $m_{\kpi}<640\mev$ is shown in \Fig{fig:db:openkpi}.
@@ -191,26 +213,10 @@ For simulated samples generated with $\mass{\db}<250\mev$ the wider of the two G
 is modified to incorporate an exponential tail
 extending to high $\Delta\tau$ and allowing the mean of both Gaussians by allowing the mean to
 shift from zero.
-Fits to $\Delta\tau$ from \btokstrdb samples with different values of \mass{\db} are shown in
-\Fig{fig:taures:zoom}.
-Accounting for this effect allows the $\pm3\sigma_\tau$ values to be taken directly from the fits.
-
-
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.42\textwidth]{anaTauResZoom_214}
-    \includegraphics[width=0.42\textwidth]{anaTauResZoom_250}
-    \includegraphics[width=0.42\textwidth]{anaTauResZoom_1000}
-    \includegraphics[width=0.42\textwidth]{anaTauResZoom_4000}
-  \end{center}
-  \caption[Fits to the lifetime resolution for simulated \db{s}]
-  {
-    Fits to the lifetime resolution parameter, $\Delta\tau$, for individual mass samples.
-    Each fit for $m\geq250\mev$ is made using a double Gaussian function, and for $m<250\mev$ the
-    wider Gaussian has an exponential tail on the right-hand side.
-  }
-  \label{fig:taures:zoom}
-\end{figure}
+%Fits to $\Delta\tau$ from \btokstrdb samples with different values of \mass{\db} are shown in
+%\Fig{fig:taures:zoom}.
+Accounting for this effect allows the $\pm3\sigma_\tau$ values to be taken directly from the fits
+in \Fig{fig:taures:zoom}.
 
 The prompt region is defined by $-3\sigma_\tau<\tau_{\mumu}<3\sigma_\tau$ and the displaced region
 by $\tau_{\mumu}>3\sigma_\tau$.
@@ -237,10 +243,10 @@ $\sigma_\tau$ at all values of \mass{t}.
     {
       Resolutions for the lifetime of a particle as a function of mass in the
       (upper left) positive and
-      (upper right) negative directions at the $3\,\sigma$ levets, used to
+      (upper right) negative directions at the $3\,\sigma$ levels, used to
       define prompt and displaced regions.
-      (bottom) shows the $1\,\sigma$ mass resolution as a function of
-      mass.
+      %(bottom) shows the $1\,\sigma$ mass resolution as a function of
+      %mass.
       The black points are from fitted values and the red lines show spline interpolation.
     }
     \label{fig:eff:res}
@@ -251,7 +257,7 @@ $\sigma_\tau$ at all values of \mass{t}.
 
 \subsection{Parameterizing the efficiency of the \db selection}
 Setting limits for \db masses and lifetimes requires knowledge of the efficiency for any arbitrary
-\db, as outlined in \Eq{eq:db:lim}.
+\db, as outlined in Eq.~\ref{eq:db:lim}.
 To do this, the lifetime distribution for a given mass is fit to a simple function:
 \begin{equation}
   \mathcal{T}(\tau) = f\mathcal{G}(\mu=0, \sigma) + (1-f)\exp\left(-\alpha\tau\right),
@@ -280,7 +286,7 @@ and this simple parameterization, as shown in \Fig{fig:eff:fits}.
 \end{figure}
 
 The parameters $\sigma$, and $\alpha$ are seen to evolve smoothly as a function of mass, and as
-such spline interpolation is used to determine their values for arbitrary masses.
+spline interpolation is used to determine their values for arbitrary masses.
 Linear regression is used to evolve $f$, because of the large errors on the values of $f$ yielded
 by these fits.
 So, $\sigma$, $\alpha$, and $f$, become functions of mass, therefore $\mathcal{T}$ becomes a
@@ -310,8 +316,8 @@ Figure~\ref{fig:eff:spline} shows how the aforementioned parameters evolve as a 
 \end{figure}
 
 
-Once the two-dimensional map of $\mathcal{T}(m,\tau)$ has been produced, it is scaled such that at
-for all values of $mu$,
+Once the two-dimensional map of $\mathcal{T}(m,\tau)$ has been produced, it is scaled such that
+for all values of $m$,
 \begin{equation}
   \mathcal{T}(m,\tau=0\ns) =
   \frac{
@@ -328,7 +334,8 @@ The ratio
 $\varepsilon_{\btokstrmumu}^{\tau=0} / \varepsilon_{\btokstrmumu}^{1.1<\qsq<6.0}$ is approximately
 equal to one for all values of \mass{\db}.
 Figure~\ref{fig:eff:effmap} shows both the efficiency for a prompt dimuon pair --- or equivalently
-a \db --- as a function of \qsq, and the rescaled distribution of $\mathcal{T}(m,\tau)$, which shall
+a \db\ --- as a function of \qsq, and the rescaled distribution of $\mathcal{T}(m,\tau)$, which
+shall
 be called $\mathcal{R}(m,\tau)$.
 
 \begin{figure}
@@ -358,13 +365,14 @@ be called $\mathcal{R}(m,\tau)$.
 %as is the two-dimensional projection, absolute efficiencies have not been included in this.
 
 
-Thus far, $\mathcal{R}(m,\tau)$ has been calculated.
-To summarize, it is the lifetime distribution for a dark boson where $\tau_\db=100\ps$, which has
-been scaled such that at $\tau=0$ the distribution is equal to
+%Thus far, $\mathcal{R}(m,\tau)$ has been calculated.
+In summary, $\mathcal{R}(m,\tau)$ is the lifetime distribution for a dark boson where
+$\tau_\db=100\ps$,
+scaled such that at $\tau=0$ the distribution is equal to
 $\varepsilon_{\btokstrmumu}^{\tau=0} / \varepsilon_{\btokstrmumu}^{1.1<\qsq<6.0}$.
 To assess limits for all values of mass and lifetime initial lifetime distribution must be taken
-into account by convolving $\mathcal{R}(m,\tau)$ with a decaying exponential to derive an efficiency
-map:
+into account by convolving $\mathcal{R}(m,\tau)$ with a decaying exponential to derive an
+efficiency map:
 \begin{equation}
   \varepsilon(m,\tau) =
   \frac{1}{\tau}\int\limits_0^{100\ps}
@@ -375,8 +383,8 @@ map:
 The upper lifetime acceptance is chosen to be $100\ps$, because the efficiency at longer lifetimes,
 for all values of \mass{\db}, is very poor.
 
-In \Chap{ch:hhh} efficiencies are calculated using weights to correct for differences between data
-and simulation.
-For the accuracy of this analysis there is no need to do this.
+%In \Chap{ch:hhh} efficiencies are calculated using weights to correct for differences between data
+%and simulation.
+%For the accuracy of this analysis there is no need to do this.
 
 

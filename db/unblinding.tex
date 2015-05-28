@@ -1,14 +1,14 @@
 \section{Unblinding results}
 
-This search for a new dark boson is done blindly to ensure that the analysis is not biased in the
+This search for a new dark boson is done blindly to ensure that no bias is introduced in the
 course of the analysis.
 The data is unblinded in stages to ensure that the selection is behaving as expected on real data.
 
 Before any unblinding the selection is first checked, rather crudely, using data selected which is
 consistent with the decay \decay{\Bd}{\jpsi\Kstarz}.
 The selection applied in the \sm analysis of \btokstrmumu, as described in
-\Ref{LHCb-CONF-2015-002}, yields $320$ thousand candidate decays.
-Using the selection from \Sect{sec:db:sel} and approximately $\sim290$ thousand
+\Ref{LHCb-CONF-2015-002}, yields $320\,000$ candidate decays.
+Using the selection from \Sect{sec:db:sel} and approximately $\sim290\,000$
 \decay{\Bd}{\jpsi\Kstarz} candidates remain,
 therefore only $\sim10\%$ fewer events in this selection, which is not surprising
 considering this search is for a much rarer process than \decay{\Bd}{\Kstarz\mumu} in the \sm.
@@ -46,7 +46,7 @@ the fitted distribution overlayed.
       analysis.
       %for more in depth numbers, please refer to Table~\protect\ref{tab:db:nums126}.
     }
-    \label{fig:fit126}
+    \label{fig:db:norm}
   \end{center}
 \end{figure}
 
@@ -54,19 +54,21 @@ After unblinding the region $1.1<\qsq<6.0\gevgev$, other prompt \qsq regions wer
 confirm that the ratio of \bdt selection efficiencies
 $\varepsilon_\mathrm{BDT}^\mathrm{\qsq bin} / \varepsilon_\mathrm{BDT}^{\decay{\Bd}{\jpsi\Kstarz}}$
 are approximately the same in data and simulation.
-To determine these efficiencies, we apply the pre-BDT selection and perform a fit to determine the
-$B$ yield.  Next, we apply the BDT cut and perform a second fit, then take the ratio of the $B$
-yields, this comparison is shown in \Fig{fig:bdtEffRatio}.
-Data and simulation are shown to be in good agreement, centred around unity with about 5--10\%
-precision.
+To determine these efficiencies, the full selection without the \BDT is taken, and a fit performed
+and the signal yield is extracted.
+Next, the \BDT is applied and a second fit is performed, then take the ratio of the signal
+yields.
+A comparison between these numbers in data and simulation is shown in comparison is shown in
+\Fig{fig:bdtEffRatio}, the two distributions are shown to be in good agreement, centred around
+unity with about 5--10\pc precision.
 This approach ignores the fact that there may be some small peaking background component that gets
 counted as signal pre-BDT cut, but is removed by the BDT.
 Note, however, that in the
 $\varepsilon_\mathrm{BDT}^\mathrm{\qsq bin} / \varepsilon_\mathrm{BDT}^{\decay{\Bd}{\jpsi\Kstarz}}$
 ratio, only the difference in peaking background contributions matters.
-Given that we explicitly
-veto all peaking backgrounds that are visible in the various 2-body mass combinations, we do not
-expect any peaking background contributions at the level of the statistical precision of this test.
+Given that all peaking backgrounds that are visible in the various 2-body mass combinations are
+explicitly vetoed, no peaking background contributions at the level of the statistical precision of
+this test are expected.
 
 \begin{figure}
   \begin{center}
@@ -85,12 +87,13 @@ As time progresses the whole dataset will be unblinded.
 First in binned distributions
 --- which will hide any potential signal, assuming the signal is not extremely obvious ---
 in the prompt and displaced regions.
-From these distributions toy datasets can be generated to be used to convert the local minimum
+From these distributions toy datasets can be generated and used to convert the local minimum
 $p$-value to a global one, the procedure for which is described in \Sect{sec:db:strategy}.
 Systematic uncertainties will be evaluated and upper limits will be set for a range of \mass{\db}
 and \lifetime{\db}.
-If the global $p$-value corresponds to being greater than $\sigma$, then the excess will be fit to
-determine the best-fit mass and lifetime.
+If the global $p$-value corresponds to a evidence for a new particle
+($3\sigma$ or above) then fits will be used to
+determine the best-fit mass and lifetime of the excess.
 
 
 %\section{Blinded distributions}

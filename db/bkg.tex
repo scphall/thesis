@@ -8,9 +8,8 @@ under the incorrect mass hypothesis could pass the selection criteria as either 
 candidate.
 This type of contamination is studied by assigning different mass hypotheses to each final state
 particle and calculating the invariant mass of the \mumu and \kpi candidates.
-If the mass of one of these objects is seen to peak at the mass of a known particle, then the
-contamination is removed  by applying \pid criteria to particles whose reassigned invariant mass
-falls near $\mass{X}$.
+If the mass of one of these objects, after mass reassignment, is seen to peak at the mass of a
+known particle, then the contamination is removed by applying \pid criteria.
 
 Since a selection has been made on the \decay{\Kstarz}{\kpi} candidate using both \pid criteria and
 constraints on the \kpi invariant mass it is expected that there will be little contamination
@@ -30,9 +29,9 @@ $\ProbNN{\pi}<0.3$ and $\ProbNN{K}>0.3$.
 
 Backgrounds from resonances decaying into a pair of hadrons which are then mistaken as a pair of
 hadrons are more problematic.
-Misidentification of the decay \decay{\KS}{\pipi} is already dealt with in the preslection, but
+Misidentification of the decay \decay{\KS}{\pipi} is already dealt with in the preselection, but
 there is also contamination from other long-lived hadronic states, namely the \Dz and \Lz.
-The decays \decay{\Dz}{\kpi} and \decay{\Lz}{p\pim} are dealt with in a simiar way to the vetoes
+The decays \decay{\Dz}{\kpi} and \decay{\Lz}{p\pim} are dealt with in a similar way to the vetoes
 described in \Sec{sec:dsphi:sel:veto}.
 If the invariant mass of the $K^+_\mu\pi^-_\mu(p_\mu\pi^-_\mu)$ candidate falls within $25(10)\mev$
 of the nominal $\Dz(\Lz)$ mass, then the ambiguous muon is subject to the requirement that
@@ -89,8 +88,10 @@ width.
 Therefore, any remaining misidentification-type backgrounds have negligible effect in the analysis.
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection[The \xtsvty]{The $\boldsymbol{\xtsvty}$}
 \label{sec:x1070}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 While searching for potential backgrounds resulting from misidentifying two hadrons as muons, a
 peak was found in the invariant mass spectrum of the $K_\mu^+K_\mu^-$ candidates.
 This peak was consistent with the \xtsvty listed in \Ref{PDG2014}, which has a mass of
@@ -118,11 +119,21 @@ the data from this analysis.
 
 Figure~\ref{fig:db:x1070:2d} shows a comparison of simulated \decay{\KS}{\pipi} decays with the
 observed data near this excess.
-It is clear that \decay{\KS}{\pipi} decays produce a peak around $1070\mev$ under the \kk
+It is clear that \decay{\KS}{\pipi} decays produce a peak around $1072\mev$ under the \kk
 hypothesis.
 There is also a long tail but with low statistics and with a roughly uniform
 background this tail would not be expected to be visible in the data after the \KS veto in the
 preselection.
+
+Initially the \mumu pair under the \kk mass hypothesis appeared to have a contribution from a
+decaying \xtsvty.
+However, this is not the case, and the peak at $m_{K^+_\mu K^-_\mu}=1072\mev$ is due to the decay
+\decay{\KS}{\pipi}.
+Removing events satisfying $|\mass{\pi_\mu^+\pi_\mu^-}-m_{\KS}^\mathrm{PDG}|<25\mev$ removes much
+of the peak at $1072\mev$, bringing it in line with the background.
+Also, the fact that no \decay{\phi}{\kk} is observed in the $m_{K^+_\mu K^-_\mu}$ spectrum
+indicates that there this is a false peak.
+
 
 \begin{figure}
   \begin{center}
