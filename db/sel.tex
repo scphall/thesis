@@ -2,7 +2,7 @@
 \label{sec:db:sel}
 
 This analysis uses the full $3.0\invfb$ of data collected by the \lhcb
-experiment~\cite{Alves:2008zz} in the years 2011 and 2012 at 7 and $8\tev$ respectively.
+experiment~\cite{Alves:2008zz} in the years 2011 and 2012.
 Since the properties of the \db are unknown, a variety of simulated samples of the decay \btokstrdb,
 where \dbtomumu, were generated with a range of \mass{\db} and $\tau_\db$, a summary of these are
 shown in \Table{tab:db:samples}.
@@ -26,8 +26,8 @@ Studies are also performed using simulated events of the decays \btokstrmumu and
   \end{center}
 \end{table}
 
-Reconstructed decays of \btokstrdb are required to fire the \lone triggers for muon, dimuon, or
-hadronic candidates.
+Reconstructed decays of \btokstrdb are required to have been selected by the \lone triggers for
+muon, dimuon, or hadronic candidates.
 Subsequent trigger levels require that the decay has a topology consistent with a $B$-meson
 decaying in to a multi-body final state which includes muons.
 Only \TOS candidates are used in this analysis for two reasons: firstly, the ratio of trigger
@@ -43,10 +43,11 @@ fly far enough to leave acceptance of the \velo before it decays.
 It is therefore wise to consider different \emph{track types}.
 For most \lhcb analyses, the only appropriate tracks to use are \emph{long} tracks, which
 have been used implicitly throughout this thesis.
-Long tracks are fitted using hits in all tracking stations, including the \velo.
+Long tracks are fitted using hits in the tracking stations T1--3, the \velo, and can use \ttracker
+information.
 But, it is also possible to reconstruct tracks using only some of the tracking stations; for
-example, a \emph{downstream} track is reconstructed using hits in all tracking stations, but not
-the \velo.
+example, a \emph{downstream} track is reconstructed using hits in the \ttracker and tracking
+stations T1--3, but not the \velo.
 Figure~\ref{fig:db:lldd} shows the various definitions of track types.
 The problem with using downstream tracks is that they are not triggered efficiently in \hlttwo.
 For example, a simulated \db with a mass of $250\mev$ and a lifetime of $100\ps$ has a
@@ -87,7 +88,7 @@ For this reason, this analysis deals only with \db candidates formed from long-t
 
 The offline selection criteria applied in the stripping are outlined in \Tab{tab:stripping}.
 This table lists the variables \ProbNN{\pi} and \ProbNN{K} which are \MVA algorithms
-giving a response $\in[0,1]$ quantifying how pion or kaon like a particle is, respectively.
+giving a response between zero and one, quantifying how pion or kaon like a particle is, respectively.
 The full decay chain \btokstrdb and \dbtomumu is reconstructed using a fit in which the \Bd mass is
 constrained to its known value~\cite{PDG2014}.
 All references to $m(\db)$, $m(\Kstar)$ or $\tau(\db)$ are to the values after this vertex fit
@@ -96,6 +97,8 @@ has been performed.
 \begin{table}[ht!]
   \caption[Stripping selection]
   {
+    Selection criteria applied to signal candidates.
+    Criteria definitions are defined in text.
     While the \Bd mass is constrained in the fit, the selection makes a cut on the unconstrained
     mass.
     %The variable {\tt DOCA} is defined as the distance of closest approach between any two pairs of
@@ -145,15 +148,16 @@ has been performed.
 \subsection{Preselection}
 After the stripping and triggering stages, a loose preselection is applied, cutting on both
 topological and \pid quantities; all these cuts are summarized in \Tab{tab:db:presel}.
-The topological cuts are very approximately $90\pc$ signal efficient on all simulated samples.
+The topological selection requirements are approximately $90\pc$ signal efficient on all simulated
+samples.
 
-Cuts are applied to the \Kstar and its daughters to remove candidates that are clearly
+Selection requirements are applied to the \Kstar and its daughters to remove candidates that are
 inconsistent with the decay  \decay{\Kstarz}{\kpi}.
-Firstly, It is required that the invariant mass of the \decay{\Kstarz}{\kpi} candidate has a mass
-within $100\mev$ of the known mass of the $K^*(892)^0$ meson, which has been measured to be
+Firstly, the \kpi invariant mass must
+within $100\mev$ of the known $K^*(892)^0$ mass, which has been measured to be
 $(895.81\pm0.19)\mev$~\cite{PDG2014}.
 \pid constraints are also applied to each \Kstar daughter: $\dllkpi(\Kp)>-5$, $\dllkpi(\pip)<25$;
-and to ensure that the kaon candidate looks more like a kaon than the pion candidate a cut on the
+and to ensure that the kaon candidate is more consistent with a kaon than the pion candidate a cut on the
 difference in \glspl{DLL} is also applied: $\dllkpi(\Kp)-\dllkpi(\pip)>10$.
 
 The decay \decay{\KS}{\pipi} has a branching fraction of
@@ -170,7 +174,9 @@ respect to the \pv is greater than $0.1\mm$.
 The high branching fraction of \decay{\Bd}{\jpsi(\to\mumu)\Kstarz} means that there is also
 contamination from decays where a hadron is misidentified as a muon, and vice versa.
 This background can be suppressed by requiring that neither of the \Kstarz daughters satisfy the
-\ismuon criteria, the effect of this cut is shown in \Fig{fig:db:doublemisid}.
+\ismuon criteria, the effect of this cut is shown in \Fig{fig:db:doublemisid}, which shows the
+invariant mass of the hadron-muon pair before and after the requirement that the hadrons fail the
+\ismuon criterion.
 A summary of all preselection cuts is shown in \Tab{tab:db:presel}.
 
 \begin{figure}
@@ -179,7 +185,7 @@ A summary of all preselection cuts is shown in \Tab{tab:db:presel}.
     \includegraphics[width=0.48\textwidth]{double_misid_k}
     \caption[Effect of the double misidentification veto]
     {
-      Double misid
+      Double misi
     }
     \label{fig:db:doublemisid}
   \end{center}
@@ -188,7 +194,7 @@ A summary of all preselection cuts is shown in \Tab{tab:db:presel}.
 \begin{table}
   \caption[Preselection cuts]
   {
-    Summary of preselection cuts applied to the \btokstrdb candidates.
+    Preselection criteria applied to \btokstrdb candidates.
   }
   \label{tab:db:presel}
   \begin{center}
@@ -220,7 +226,7 @@ A summary of all preselection cuts is shown in \Tab{tab:db:presel}.
 
 
 \subsection{Combinatorial background and multivariate selection}
-\bam{CLARIFY}
+%\bam{CLARIFY}
 The data sample is purified from combinatorial background using a multivariate selection technique.
 Section~\ref{sec:bdt:uboost} outlines the \uBDT algorithm, which trains a \BDT whereby events are
 boosted not only based on misclassification, but also on how uniform the local response of the \BDT
@@ -277,7 +283,7 @@ the mass and lifetime distributions; this is shown in \Fig{fig:db:bdtflat}.
 %simply the number of
 
 The \uBDT cut is optimized  by maximizing
-the Punzi figure-of-merit, which is defined as
+the Punzi figure-of-merit~\cite{2003sppp.conf...79P}, which is defined as
 \begin{equation}
   \mathrm{Punzi}_{\sigma_\mathrm{p}} = \frac{S}{\sqrt{B} + \tfrac12\sigma_\mathrm{p}},
   \label{eq:db:punzi}
@@ -290,7 +296,7 @@ $B$ is the background yield as estimated using \btokstrdb candidates
 that fall outside $80\mev$ from the nominal \Bd mass~\cite{PDG2014}.
 The invariant mass distributions of these candidates in data are fit to a decaying exponential,
 and the background yield is taken to be the integral of this exponential within $60\mev$
-(approximately $3\sigma$) of $m^\mathrm{PDG}_{\Bd}$.
+(approximately $3\sigma$) of the known \Bd mass.
 
 The figure-of-merit is considered separately for both the prompt and displaced candidates.
 The optimal working point varies from sample to sample due to the fact that the background yield
@@ -299,7 +305,7 @@ However, the optimal point in the prompt case is approximately $\mathrm{uBDT}>0.
 working point that
 is approximately $85\pc$ efficient by constructing.
 At this point in the displaced region, there is an estimated zero background.
-This point was calculated using a value of $\sigma=5_\mathrm{p}$, \Eq{eq:db:punzi}, although the
+This point was calculated using a value of $\sigma_\mathrm{p}=5$, \Eq{eq:db:punzi}, although the
 result is seen to be insensitive to its exact value.
 
 While the \uBDT does suppress the combinatorial background, some will still remain.
