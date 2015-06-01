@@ -102,36 +102,42 @@ determine the best-fit mass and lifetime of the excess.
 
 Firstly, the look-elsewhere effect must be accounted for, which
 is done using the method outlined in \Sec{sec:db:pval}.
-Figure~\ref{fig:db:mmumu}
-
-
-Using the unblinded
-A fourth order Chebychev polynomial is fit to the unblinded \mass{\mumu} distribution,
-these data
-and
-from this, ten million toy datasets are generated.
-A least ten million are needed in order to be able to probe to $p$-values of $5\stdev$.
-
-The resulting \qsq distribution is shown in \Fig{fig:res:q2} along with a fit to
-
+Figure~\ref{fig:db:mmumu} shows the unblinded dimuon mass distribution fitted to a fourth order
+Chebychev polynomial.
+A toy dataset is generated using this \PDF, full statistical method is applied to find the
+$p$-value at each value of \mass{t}, and thus the minimum $p$-value for a single toy dataset is
+extracted.
+This process is repeated $10^7$ times, as required to achieve $p$-values corresponding to a
+significance of $5\stdev$.
+From the minimum $p$-values the fraction of toy datasets with minimum $p$-values less than some
+value can be computed, and thus a conversion from local to global minimum $p$-value for any given
+toy; and therefore for the data itself.
+Figure~\ref{fig:db:mmumu} also shows this cumulative distribution of minimum local $p$-values from
+$1.5\e{7}$ datasets along with the asymptotic expectation~\cite{Gross:2010qma}.
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.48\textwidth]{}
-    \caption{
+    \includegraphics[width=0.48\textwidth]{mxpdf}
+    \includegraphics[width=0.48\textwidth]{pvalConversion}
+    \caption[]
+    {
     }
     \label{fig:db:mmumu}
   \end{center}
 \end{figure}
 
 
+%From this \PDF ten million toy datasets are generated,
+%Ten million are required to be sensitive to
 
+%Using the unblinded
+%A fourth order Chebychev polynomial is fit to the unblinded \mass{\mumu} distribution,
+%these data
+%and
+%from this, ten million toy datasets are generated.
+%A least ten million are needed in order to be able to probe to $p$-values of $5\stdev$.
 
-
-
-
-
-
+%The resulting \qsq distribution is shown in \Fig{fig:res:q2} along with a fit to
 
 %\section{Blinded distributions}
 %\label{sec:results}

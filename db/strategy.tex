@@ -273,12 +273,14 @@ The profile likelihood, $\Lambda$, is defined as
 \end{equation}
 where $\hat{s}$, $\hat{b}$, and $\hat{y}$ are chosen to maximize the likelihood; the functions
 $\hat{b}(s)$ and $\hat{y}(s)$ maximize the likelihood for a given $s$.
+The function $-2\ln\big(\Lambda(s|n_s,n_b)\big)$ behaves like a \chisq distribution with one degree
+of freedom.
 %The solutions to these functions can be calculated analytically, with few assumptions made,
 %and thus the likelihood can be minimized with minimal computational power.
 %The profile likelihood can then be formed in the same way as in \Eq{eq:profilelike1} and solved
 %analytically.
-The test statistic used for discovery is $\Lambda(0)$, where $\hat{s}$ is restricted to the
-physical region, such that $\hat{s}\geq 0$.
+%The test statistic used for discovery is $\Lambda(0)$, where $\hat{s}$ is restricted to the
+%physical region, such that $\hat{s}\geq 0$.
 
 
 \subsection{Searching in the lifetime dimension}
@@ -296,6 +298,18 @@ individual likelihoods
 \end{align}
 In these expressions the superscripts $p$ and $d$ denote the prompt and displaced regions,
 respectively.
+The combined profile likelihood is then the product of the profile likelihoods for the prompt and
+displaced regions in decay time
+\begin{equation}
+  \Lambda_\mathrm{Tot}
+  =
+  \Lambda(s^p|n_s^p,n_b^p)\cdot
+  \Lambda(s^d|n_s^d,n_b^d).
+\end{equation}
+Asymptotically, $-2\ln\big(\Lambda_\mathrm{Tot}\big)$ behaves as a \chisq distribution with two
+degrees of freedom.
+
+
 
 The information supplied by the addition of two bins in the lifetime dimension is approximately
 optimal for all \db lifetimes, except for when $\tau\sim3\sigmat$.
@@ -328,6 +342,33 @@ A conversion from local to global $p$-value can then be calculated by generating
 datasets.
 This procedure is undertaken later, and described more fully then.
 
+Since this method requires the generation of $\mathcal{O}(10^7)$ datasets to probe down to
+$5\stdev$, if the minimum local $p$-value corresponds to less than this the asymptotic formula
+will be used~\cite{Gross:2010qma}.
+The asymptotic formula uses a few toy datasets to set an upper bound on the conversion of local to
+global minimum $p$-value.
+As shown in \Ref{Davies:1987zz}, this bound is given by
+\begin{equation}
+  P_\mathrm{global} \leq P(\chisq_s > c) + \langle N(c)\rangle,
+  \label{eq:db:asy1}
+\end{equation}
+where $s$ is the number of degrees of freedom of the \chisq, in this case $s=2$.
+The function $N(c)$ gives the number of \emph{upcrossings} of a dataset above the level of $c$,
+where an upcrossing is defined as the point where the $p$-value crosses from below the value of
+$c$, to above it.
+The value of $c$ for a given $p$-value is its significance squared.
+Clearly, for large $p$-values, the ability to obtain a reliable value of $N(c)$ will be highly
+dependent on the datasets used, and therefore an approximation is used.
+Reference~\ref{Gross:2010qma} shows that \Eq{eq:db:asy1} can be approximated to be
+\begin{equation}
+  P_\mathrm{global} \leq P(\chisq_s > c)
+  + \langle N(c)\rangle\left(\frac{c}{c_0}\right)^{\frac12(s-1)}\exp\left(-\frac{c-c_0}{2}\right).
+  \label{eq:db:asy2}
+\end{equation}
+Therefore, once $\langle N(c)\rangle$ has been determined using a few hundred toy datasets, the
+asymptotic boundary is trivial to calculate.
+This can be used to check the final conversion, and used to calculate the global $p$-value should a
+greater than $5\stdev$ be observed.
 
 
 \subsection{Limits}
