@@ -309,6 +309,7 @@ Therefore background shape information is not used.
 
 \subsection[Calculation of $p$-value]
 {Calculation of $\boldsymbol{p}$-value}
+\label{sec:db:pval}
 At each \mass{t}, a $p$-value is calculated using the profile likelihood of the joint likelihood
 given in \Eq{eq:db:liketau}.
 Because there are $\mathcal{O}(1000)$ test masses, each of which is not completely independent the
@@ -323,8 +324,10 @@ which is entirely background.
 This is assuming that there is only one \np particle that can be observed in this analysis.
 The remaining background-like distribution is then turned into a \PDF\ --- where the region that is
 removed is interpolated across --- from which toy datasets can be generated.
-A conversion from local to global $p$-value can then be calculated by generating 10 million toy
+A conversion from local to global $p$-value can then be calculated by generating ten million toy
 datasets.
+This procedure is undertaken later, and described more fully then.
+
 
 
 \subsection{Limits}
