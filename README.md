@@ -2,23 +2,14 @@ thesis
 ======
 Backup of the ol' thesis.
 
-Wed 03 Jun | Total
+Thu 04 Jun | Total
 ---|---
-
-[1;31m!!! Encountered \end without corresponding \begin !!![0m
-
-[1;31m!!! Reached end of file while waiting for }. !!![0m
-
-[1;31m!!! Reached end of file while waiting for \end. !!![0m
-
-[1;31m!!! Environment ended while waiting for nd{equation*}. !!![0m
-Words in text| 24772
-Words in headers| 222
-Words outside text (captions, etc.)| 3143
-Number of headers| 71
+Words in text| 25992
+Words in headers| 229
+Words outside text (captions, etc.)| 3279
+Number of headers| 74
 Number of floats/tables/figures| 88
-Number of math inlines| 1016
-Number of math displayed| 106
-Files| 56
+Number of math inlines| 1045
+Number of math displayed| 108
+Files| 55
 
-(errors|4)

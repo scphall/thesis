@@ -39,7 +39,7 @@ $\ProbNN{\mu}(\Kp_\mu,\pip_\mu)>0.3(\ProbNN{p}(p_\mu)<0.3)$.
 
 
 \begin{table}
-  \caption[Double misidentification vetoes]
+  \caption[Misidentification vetoes]
   {
    Vetoes to suppress double and single misidentification of particles.
    If, under the alternate hypothesis, the \db or \Kstarz candidate mass falls within the range
@@ -61,6 +61,29 @@ $\ProbNN{\mu}(\Kp_\mu,\pip_\mu)>0.3(\ProbNN{p}(p_\mu)<0.3)$.
     \end{tabular}
   \end{center}
 \end{table}
+
+Misidentifying the proton as a pion in the decay \decay{\Lb}{p\Km\mumu} can contaminate the
+selected \btokstrdb candidates.
+Figure~\ref{fig:db:lb} shows the invariant mass distribution of the $p_\pi\Km\mumu$ system for
+candidates where $\ProbNN{p}(p_\pi)>0.2$, a clear peak is observed at the known mass of the \Lb.
+To remove this contamination, if the invariant mass of the \Lb candidate falls with $50\mev$ of the
+nominal \Lb mass, the candidate is vetoed.
+
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{lb2pkmumu}
+    \caption[Contamination from the decay \decay{\Lb}{p\Km\mumu}]
+    {
+      Contamination from the decay \decay{\Lb}{p\Km\mumu}, where the proton is misidentified as a
+      pion, here a cut of $\ProbNN{p}(p_\pi)$ has been applied and a clear peak at the known \Lb
+      mass, $5219.4\mev$, is observed.
+      Candidates are vetoed if they lie within $50\mev$ of the \Lb mass, which is shown as the
+      shaded region.
+    }
+    \label{fig:db:lb}
+  \end{center}
+\end{figure}
 
 %There are also contributions from the decay \decay{\Bd}{\jpsi\Kstarz} and \decay{\jpsi}{\mumu},
 %where one of the hadron is misidentified as a muon, and vice versa.
@@ -91,7 +114,8 @@ Therefore, any remaining misidentification-type backgrounds have negligible effe
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection[The \xtsvty]{The $\boldsymbol{\xtsvty}$}
+\subsection[Possible contamination from the \xtsvty]
+{Possible contamination from the $\boldsymbol{\xtsvty}$}
 \label{sec:x1070}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 While searching for potential backgrounds resulting from misidentifying two hadrons as muons, a
@@ -135,7 +159,7 @@ However, this is not the case, and the peak at $m_{K^+_\mu K^-_\mu}=1072\mev$ is
 Removing events satisfying $|\mass{\pi_\mu^+\pi_\mu^-}-m_{\KS}^\mathrm{PDG}|<25\mev$ removes much
 of the peak at $1072\mev$, bringing it in line with the background.
 Also, the fact that no \decay{\phi}{\kk} is observed in the $m_{K^+_\mu K^-_\mu}$ spectrum
-indicates that there this is a false peak.
+indicates that there this is a false peak and need not be accounted for further.
 
 
 \begin{figure}
