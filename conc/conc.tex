@@ -1,58 +1,93 @@
 \chapter{Conclusions}
 \label{ch:conc}
 
-%\bam{
-%AIM FOR 3 PAGES
-%REFERENCE THE SHIT OUT OF IT
-%}
-
-This thesis presents two analyses undertaken using data collected by the \lhcb experiment
-and a third to be completed, all
-with the objective of searching for evidence of \bsm physics.
-Each analysis looks for evidence in slightly different ways, and use either an indirect or direct
-search approach.
-%using indirect and direct methods, to search for evidence of physics that is
-%inconsistent with our understanding of the \sm of particle physics.
-%These analyses found the first evidence for the decay \btodsphi, the first observations of the
-%decays \btokpipimumu and \btophikmumu, and the search for the decay of a dark boson into a dimuon
-%pair.
+This thesis presents three analyses: two have been published, claiming first
+observations~\cite{LHCb-PAPER-2012-025,LHCb-PAPER-2014-030}, and the third is currently under
+review; all were
+undertaken using data collected by the \lhcb experiment~\cite{Alves:2008zz}.
+Each has the objective of finding evidence of physics \bsm in the decays of $B$ mesons.
+The analysis techniques employed are all slightly different, most obviously the first two analyses
+are indirect searches for \np, while the third is a direct search for an dark boson of unknown mass
+and lifetime.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Dsphi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-An analysis of the decay \btodsphi was presented in \Chap{ch:dsphi}.
+An analysis of the decay \btodsphi is presented in \Chap{ch:dsphi}.
+First evidence for the decay was seen with a statistical significance of greater than $3\stdev$,
+this also constitutes the first evidence for a fully hadronic decay via an annihilation-type
+diagram.
 Measurements made in this analysis were sensitive to \np effects contributing at tree
-level because it proceeds via an annihilation-type diagram, and is mediated by a virtual \Wp.
-This gauge boson can be replaced by a range of charged bosons adding to the amplitude, leading to
-an enhanced branching fraction.
-Additional \np diagrams would also introduce a cross-term in the amplitude, and therefore an
-observed non-zero \CP-asymmetry would be indicative of \np.
+level because it proceeds via an annihilation-type diagram, suppressed by a factor $|\V{ub}|^2$.
+The element \V{ub} has the largest uncertainties in the \ckm matrix and there are historic tensions
+between values of \V{ub} made using inclusive an exclusive modes.
 
-Branching fraction predictions for the decay \btodsphi are of order
-$10^{-7}$~\cite{Zou:2009zza,Mohanta:2002wf,PhysRevD.76.057701,Lu:2001yz}.
-However, this analysis resulted in a higher than expected branching fraction, but one that is
-still compatible with the \sm since large uncertainties in the hadronic form factors make the
-branching fraction very difficult to predict.
-Of the six candidates that were nearest the \Bp mass, three were from a decaying \Bp, and three
-were from a \Bm; meaning that there is zero \CP-asymmetry.
-This value had to be corrected for known asymmetries from detector, and production effects, but
-final value was still consistent with $\acp=0$.
+%This means that the decay amplitude for \btodsphi is suppressed by a factor $|\V{ub}|^2$, making it
+%a rare decay having potentially large contributions at tree-level from \np particles.
 
-The branching fraction calculation sheds no light on the discrepancies observed in measurements of
-\V{ub}.
-A recent measurement from the \lhcb experiment uses the baryonic decay \decay{\Lb}{p\mun\neumb} to
-calculate a value of $\left|\V{ub}\right|$ to be $(3.27\pm0.23)\e{-3}$~\cite{Aaij:2015bfa}.
-This is an exclusive measurement, and as such is in agreement with other exclusive measurements.
-Reference~\cite{Crivellin:2014zpa} asserts that the
+The branching fraction measurement
+\begin{equation*}
+  \BF\big(\btodsphi\big) =
+  \big(1.87\,^{+1.25}_{-0.73}\stat\pm0.19\syst\pm0.32\normerr\big)\e{-6}
+  %\label{eq:dsphi:result}
+\end{equation*}
+is somewhat higher than \sm predictions, which are
+of order $10^{-7}$~\cite{Zou:2009zza,Mohanta:2002wf,PhysRevD.76.057701,Lu:2001yz}, but
+not incompatible considering large theoretical uncertainties.
+This value of $\BF(\btodsphi)$ sheds no light on the true value of \V{ub}.
+Reference~\cite{Crivellin:2014zpa} asserts that these
 discrepancies cannot be explained by new physics, and is rather due to underestimated uncertainties
 in either theory or experiment.
 
-An updated analysis would take advantage of the additional data collected by the \lhcb experiment
-in 2012, and potentially in Run-2 of the \lhc.
-Using additional \Ds decay channels should also be considered, particularly \decay{\Ds}{\pip\pipi}
-which has a branching fraction of $(1.09\pm0.05)\e{-2}$: a factor of about five less than
-$\BF\big(\decay{\Ds}{\kkpi}\big)$.
-However, this would introduce larger and more complex backgrounds.
+Since the decay \btodsphi is mediated by a \Wp boson, in \np scenarios another charged boson, such
+as a $H^+$ from a \gls{twoHDM}, could contribute to the decay amplitude.
+These additional processes could alter the branching fraction significantly, which is not observed,
+or introduce extra phases into the decay, causing the \CP-asymmetry to deviate from $\acp=0$, as
+expected in the \sm.
+The value measured, after correcting for production and detection asymmetries, is
+\begin{equation*}
+  \acp\big(\btodsphi\big)=
+  -\big(0.01\pm0.41\stat\pm0.03\syst\big),
+\end{equation*}
+which is perfectly consistent with \sm expectations.
+
+%sheds no light on the discrepancies observed in measurements of
+%\V{ub}, and nor does the \V{ub} measurement using the decay \decay{\Lb}{p\mun\neumb} which is
+%consistent with other exclusive measurements.
+%Reference~\cite{Crivellin:2014zpa} asserts that these
+%discrepancies cannot be explained by new physics, and is rather due to underestimated uncertainties
+%in either theory or experiment.
+
+%and is mediated by a virtual \Wp.
+%This gauge boson can be replaced by a range of charged bosons adding to the amplitude, leading to
+%an enhanced branching fraction.
+%Additional \np diagrams would also introduce a cross-term in the amplitude, and therefore an
+%observed non-zero \CP-asymmetry would be indicative of \np.
+
+%This annihilation-type decay is mediated by a \Wp boson, which could be replaced by other charged
+%bosons from \bsm models; for a example a charged Higgs from a \gls{twoHDM}.
+%Were this to be the case the value of $\BF(\btodsphi)$ could be significatly different to \sm
+%predictions.
+%Branching fraction predictions for the decay \btodsphi are of order
+%$10^{-7}$~\cite{Zou:2009zza,Mohanta:2002wf,PhysRevD.76.057701,Lu:2001yz}.
+%This analysis resulted in a higher than expected branching fraction, but one that is
+%still compatible with the \sm since large uncertainties in the hadronic form factors make the
+%branching fraction very difficult to predict.
+
+%Another observable in the decay \btodsphi is the \CP-asymmetry, which should be zero in the \sm,
+%because there is only a single phase in the amplitude at leading order.
+%Additional phases from \np could alter the value of \acp to being inconsistent with zero.
+%However, of the six \btodsphi candidates falling within $2\stdev$ of the \Bp mass, three were from
+%a decaying \Bp, and three were the charge conjugate decay from \Bm, giving a raw \acp of zero.
+%After corrections to account for known production and detector asymmetries, the final value of \acp
+%was still consistent with zero.
+
+%An updated analysis would take advantage of the additional data collected by the \lhcb experiment
+%in 2012, and potentially in data collected by \lhcb in Run-2, which begins in 2015.
+%Using additional \Ds decay channels should also be considered, particularly \decay{\Ds}{\pip\pipi}
+%which has a branching fraction of $(1.09\pm0.05)\e{-2}$: a factor of about five less than
+%$\BF\big(\decay{\Ds}{\kkpi}\big)$.
+%However, this would introduce larger and more complex backgrounds.
 %Other annihilation-type diagrams may be useful given larger statistics.
 
 
@@ -61,58 +96,72 @@ However, this would introduce larger and more complex backgrounds.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Chapter~\ref{ch:hhh} presents an analysis leading to the first observations of the two decays
-\btokpipimumu and \btophikmumu.
-Theoretical predictions to these inclusive decay are made difficult by the structure of the strange
-resonance states that contribute to the \kpipi and \phik systems.
-
-The decay \btokpipimumu is a high statistics channel and could be used for future analyses similar to
-those of interest in \btokstrmumu, since both are sensitive to the same operators.
+\btokpipimumu and \btophikmumu\, their branching fractions were measured, as was the differential
+branching fraction of \btokpipimumu in bins of \qsq.
+The integrated branching fractions of these decays are
+\begin{align*}
+  \BF\big( \btokpipimumu \big)&=
+  \big(4.36\,^{+0.29}_{-0.27}\stat\pm0.21\syst\pm0.18\normerr\big)\e{-7}, \\
+  \BF\big(\btophikmumu\big)&=
+  \big(0.82\,^{+0.19}_{-0.17}\stat\,^{+0.10}_{-0.04}\syst\pm0.27\normerr\big)\e{-7}.
+\end{align*}
+%Theoretical predictions to these inclusive decay are made difficult by the structure of the strange
+%resonance states that contribute to the \kpipi and \phik systems.
+The decay \btokpipimumu has a large branching fraction and could be used for future analyses
+similar to those of interest in \btokstrmumu, since both are sensitive to the same operators.
 An angular analysis would help constrain the scalar, pseudoscalar, and tensor amplitudes of the
-decay, all of which are vanishingly small in the \sm, but this is made difficult by the number of
-contributing states to the \kpipi system,
-but with mode statistics it would perhaps be possible to gain a better understanding of these
-strange states.
-It would also be possible to use the dimuon distribution from \btokpipimumu to search for a dark
-boson using the same method outlined in \Chap{ch:db}.
-Although the invariant mass of the \kpipi system is, on average, larger than the \Kstarz mass,
-there is still plenty of phasespace for the dimuon spectrum from \btokpipimumu to be interesting.
-This is because as soon as the mass of the hypothetical dark boson is heavier than twice the mass
-of the $\tau$ the branching fractions (in non-leptophobic models) plummet.
-Therefore, regardless of the decay, it would not be expected to see a new particle in the diumon
-spectrum above $m_\db=2m_\tau\simeq3554\mev$.
+decay, all of which are vanishingly small in the \sm.
+This is made difficult by the number of contributing states to the \kpipi system,
+but with more statistics it will be possible to gain a better understanding of
+strange states that decay into kaons and pions.
+%There doubtless interesting spectroscopy to be done regarding these states.
 
-Given larger statistics, the additional channels \decay{\Bp}{\Kp\Km\pip} and \decay{\Bp}{\pip\pipi}
-may be observable, and give access to the ratio $\V{td}/\V{ts}$ and be complimentary to the current
+%It would also be possible to use the dimuon distribution from \btokpipimumu to search for a dark
+%boson using the same method outlined in \Chap{ch:db}.
+%Although the invariant mass of the \kpipi system is, on average, larger than the \Kstarz mass,
+%there is still plenty of phasespace for the dimuon spectrum from \btokpipimumu to be interesting in
+%the region $m_{\mumu} < 2m_{\tau}$.
+%This is because as soon as the mass of the hypothetical dark boson is heavier than twice the mass
+%of the $\tau$ the branching fractions (in non-leptophobic models) plummet.
+%Therefore, regardless of the decay, it would not be expected to see a new particle in the diumon
+%spectrum above $m_\db=2m_\tau\simeq3554\mev$.
+
+%Future measurements of these decays would benefit from additional statistics.
+%Particularly in order to understand the complex resonance structure observed in the hadronic
+%systems.
+%If one could begin to understand the structure of the \kpipi system, not only would make for
+%interesting spectroscopy measurements, but also it would give a handle on to the \kpipi angular
+%distributions.
+%This, in turn, would make \btokpipimumu sensitive to the same operators to \btokstrmumu.
+
+Given larger statistics, the additional channels \decay{\Bp}{\Kp\Km\pip\mumu} and
+\decay{\Bp}{\pip\pipi\mumu}
+may be observable, and give access to the ratio of \ckm matrix elements $\V{td}/\V{ts}$ and be
+complimentary to the current
 measurements from $B$-meson oscillations.
 
 %The difference in \kpipi distributions...
-Improvements could trivially be made after another measurement of
-$\BF\big(\btojpsiphik\big)$ with reduced uncertainties.
-For this reason, \Ref{LHCb-PAPER-2014-030} quotes the ratio of branching fractions.
 
-Future measurements of these decays would benefit from additional statistics.
-Particularly in order to understand the complex resonance structure observed in the hadronic
-systems.
-If one could begin to understand the structure of the \kpipi system, not only would make for
-interesting spectroscopy measurements, but also it would give a handle on to the \kpipi angular
-distributions.
-This, in turn, would make \btokpipimumu sensitive to the same operators to \btokstrmumu.
+The large uncertainties in the measurement of $\BF(\btophikmumu)$ are primarily due to
+uncertainties propagated from the branching fraction of the normalization channel \btojpsiphik.
+The paper in \Ref{LHCb-PAPER-2014-030} quotes the ratio of branching fractions in order for
+$\BF(\btophikmumu)$ to be calculated given an improved measurement.
 
-The observable $P_5^\prime$ is an angular observable in \btokpipimumu which has reduced theoretical
-observables~\cite{LHCb-PAPER-2013-037} because it nearly free from reliance on form-factors.
-A recent measurement from \lhcb indicates that it is $3.7\stdev$ away from standard model
-predictions in the region $4.0<\qsq<8.0\gevgev$.
+%Given increased statistics and further understanding of the \kpipi system, perhaps a complimentary
+%measurement of $C_9$ could  be made, and the source of the deviation understood.
+%Either additional massive vector particles are contributing, or the \jpsi is
+%The angular observable $P_5^\prime$ is an angular observable in \btokpipimumu which has reduced theoret
+%observables~\cite{LHCb-PAPER-2013-037} because it nearly free from reliance on form-factors.
+%A measurement from \lhcb indicates that it is $3.7\stdev$ away from standard model
+%predictions in the region $4.0<\qsq<8.0\gevgev$.
 
+%Increased data would also allow measurements other three-hadron, two-muon final states.
+%Measurements of the branching fractions of the decays \decay{\Bp}{\pip\pipi\mumu} and
+%\decay{\Bp}{\kk\pip\mumu} would give access to the ratio of \ckm matrix elements $\V{td}/\V{ts}$.
 
-
-Increased data would also allow measurements other three-hadron, two-muon final states.
-Measurements of the branching fractions of the decays \decay{\Bp}{\pip\pipi\mumu} and
-\decay{\Bp}{\kk\pip\mumu} would give access to the ratio of \ckm matrix elements $\V{td}/\V{ts}$.
-
-The decay \btokpipimumu has a relatively large branching fraction, and could be used in future
-searches for \np particles in the dimuon distribution: in a similar way to the analysis described
-in \Chap{ch:db}.
-
+%The decay \btokpipimumu has a relatively large branching fraction, and could be used in future
+%searches for \np particles in the dimuon distribution: in a similar way to the analysis described
+%in \Chap{ch:db}.
 
 %First observations
 %potential in the future to measure vtd/vts, also another background free channel to look for a \db
@@ -128,37 +177,64 @@ in \Chap{ch:db}.
 %sm, uet enhanced in many vsm scenarios., it is stated on lllll tensor
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DARK BOSON
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Finally, a direct search for a dark boson that may belong to any number of \bsm physics models that
-include a dark sector.
-FILL THIS BIT IN, NOT FINISHED THAT CONCLUSION YET, DEPENDS WHAT RESULTS I SHOW.
-\begin{itemize}
-  \item \btokstrdb
-  \item Sensitivity
-  \item Novel statistical techniques make this possible
-  \item Also selection
-  \item Probe regions of parameter space for various models
-  \item Use same techniqes on other mass distributions
-  \item SHIP?
-  \item Models uniquly acessible to \lhcb
-\end{itemize}
+%Finally, a direct search for a dark boson that may belong to any number of \bsm physics models that
+%include a dark sector.
+%\bam{PVALUE SENTENCE.}
+%
+%The projected sensitivity of this analysis probes regions that have, hitherto, been unexplored.
+%Selection techniques, such as uBoost, and novel statistical techniques are set to make these
+%analyses increasingly common; enabling searches for excesses in any invariant mass spectrum that
+%may be interesting.
+%
+%\lhcb lies in a unique position to probe these parameter spaces.
+%
+%%It is possible that the \lhc will be the last energy frontier machine for many years, an
+%
+%There are a great many dark sector models, with particles of with arbitarty lifetimes implying
+%small coupling, therefore intensity frontier.
+%SHIP.
 
+
+Finally, a direct search for a \np particle, \db, belonging to some dark sector is presented using
+\btokstrmumu candidates, and searching for an signal in the dimuon invariant mass spectrum.
+The selection is designed specifically not to bias any corner of the mass-lifetime space that the
+\db might inhabit, this is done primarily with the aid of the uBoost algorithm.
+Efficiencies and resolutions are parameterized using discrete simulated samples of \btokstrdb
+and spline interpolation is used to understand selecting and dynamical effects for any value of
+\mass{\db}.
+A novel strategy was employed to extract the minimum local $p$-value, and so a global $p$-value,
+which is $xxx$ and $m=$.
+The projected limits for an inflaton model indicate that much of the allowed parameter space will
+be excluded for $m_\db<1000\mev$.
+A similar approach could be used in any arbitrary mass spectrum to search for a multitude of
+particles appearing above a smoothly varying background.
+
+%\begin{itemize}
+  %\item \btokstrdb
+  %\item Sensitivity
+  %\item Novel statistical techniques make this possible
+  %\item Also selection
+  %\item Probe regions of parameter space for various models
+  %\item Use same techniqes on other mass distributions
+  %\item SHIP?
+  %\item Models uniquly acessible to \lhcb
+%\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CONCLUSIONS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 In conclusion, the \sm continues in its resilience, seeming to be in agreement to the limit of
 accuracy that experimental high energy particle physics can reach.
 There is a complementarity that exists between indirect and direct measurements.
 Historically, it has often been the case that indications of future discoveries were first
 anticipated by observations made by indirect experiments.
-Precision measurements in the flavour sector will continue to play an important role in cornering
-the nature of \np.
+This looks set to continue,
+as precision measurements in the flavour sector will continue to play an important role in
+cornering the nature of \np.
 Another advantage of indirect measurements is their ability to access vastly higher energy scales
 than direct measurements due to contributions from virtual particles.
 
@@ -167,30 +243,48 @@ discrepancies observed between experiment and theory in various channels.
 As of Run 1 of the \lhc, there has been no clear indication of where new physics may lie, there
 have been no clear-cut indications of \np from rare tree- and loop-level decays, but there are a
 number of discrepancies with significances greater than $3\stdev$.
+
 %\begin{itemize}
   %\item LHCb has different sensitivity to atlas
   %\item C9
   %\item P5 primed
   %\item D*taunu
 %\end{itemize}
-
 %Beyond the interpretation of measurements, the ideal scenario would, of course, to have
 
 Unfortunately, interpretation of precise measurements of $B$ physics observables that can be made
-experimentally are often made difficult by the theoretical framework which must be adopted to make
-predictions.
-Firstly, the theoretical environment must account for multiple energy scales: the scale of \np, the
-electroweak scale, the scale of \QCD, and of hadronic effects.
-The problem can be simplified using \EFT to separate short and long distance effects by integrating
+experimentally are often made difficult by the form-factor parameterization which must be adopted.
+Firstly, the theoretical environment must account for multiple energy scales.
+The \np and electroweak scales are conveniently separated by
+using \EFT to separate short and long distance effects by integrating
 out the heavy fields and dealing only with the dynamics of lighter particles.
-Further simplification to the \QCD effects can be made with \HQET.
+Lastly, \QCD calculations must be made, which is where dominant theoretical uncertainties arise.
+
 
 The idea that nature is natural, is an attractive one.
 As such, it is not unreasonable to expect --- or at least hope --- that \np lives just
 around the corner.
-It is tempting to push to higher energies to look for clear signatures indicative of \np.
-However, there are swathes of parameter space yet to explore at the energies achieved during Run 1
-of the \lhc.
+Run-2 of the \lhc will collide protons with a centre-of-mass energy of $14\tev$ with the aim to see
+signals indicative of \np.
+That being said, there are still areas of parameter space of various theoretical scenarios that are
+accessible at lower masses to probe.
+%It is tempting to push to higher energies to look for clear signatures indicative of \np.
+%However, there are swathes of parameter space yet to explore at the energies achieved during Run 1
+%of the \lhc.
+In the absence of direct evidence from the high energy frontier, it is worth also exploring the
+intensity frontier.
+With the plethora of dark sector models which contain weakly interacting messenger particles, the
+intensity frontier may be a good place to search.
+
+The interplay between direct and indirect searches in the arena of high energy physics
+has long been important, and will continue to be so.
+
+%Considering that the weaker the coupling, the longer lived the \db, an experiment which facilitates
+%a longer decay volume would be an excellent addition to the current particle detectors.
+%Such an experiment is \gls{SHIP}~\cite{Anelli:2015pba,Alekhin:2015byh}, which is a long baseline
+%experiment proposed to be fed by the \sps.
+
+
 
 
 %\begin{itemize}
@@ -198,6 +292,7 @@ of the \lhc.
   %\item LHCb has different sensitivity to atlas
   %\item C9
   %\item P5 primed
+  %\item RK
   %\item D*taunu
   %\item precision tests offered by indirect
 %\end{itemize}
@@ -219,13 +314,6 @@ of the \lhc.
 
 %presented ways of serching for direct evidence of np at lhcb, which is unusual
 %direct and indirect are complimntray
-
-
-
-
-In summary, the interplay between direct and indirect meansurements in the arena of high energy
-physics has long been important, and will continue to be so.
-
 
 
 
