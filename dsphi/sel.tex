@@ -17,7 +17,6 @@ indicated particle from \Ref{PDG2012}.
 The \Ds meson decays weakly, and therefore has a non-zero lifetime,
 $\tau_{\Ds}=(5.00\pm0.07)\e{-13}\sec$, and thus an extremely narrow width, so the value of $25\mev$
 is primarily to account for detector resolution effects.
-\bam{Quote detector resolution.}
 In order for the candidate to have the correct decay topology, it is also required that the \Ds
 vertex lies downstream of the \Bp decay vertex.
 
@@ -27,37 +26,41 @@ invariant \kk mass, $\mass{\kk}$, is within $40\mev$ of
 $\mass{\phi}^\pdg=(1019.461\pm0.019)\mev$~\cite{PDG2012}.
 The \phii meson decays strongly, and therefore has an appreciable width,
 $\Gamma_\phi=(4.266\pm0.031)\mev$, but the detector resolution is better for the \phii than the \Ds
-because of it has zero lifetime.
+because it has zero lifetime.
 Therefore, a mass window of $40\mev$ is extremely wide; but further mass constraints of the \phii
-are applied in the signal yield fit, such that the signal region is defined by a window that
-extends only $20\mev$ from $\mass{\phi}^\pdg$.
+are applied in the fit used to obtain the signal yield: a signal region is defined by a window that
+extends only $20\mev$ from $\mass{\phi}^\pdg$, and a sideband region
 
 All tracks forming the candidate mesons must fulfill requirements on the transverse momentum,
 $\pt>100\mev$, and tracks from the \Ds(\phii), $p>1(2)\gev$.
 Geometrical constraints are also placed on the tracks.
 One important geometrical variable is the \gls{IP}, which is defined as the perpendicular distance
 between the vertex in question and the line of flight of a particle.
-The \chisq per degree of freedom of the track fit, $\chisqtrk/\ndof$, must be less than four, and
-$\min\left(\chisqip\right)>4$.
+The \chisq per degree of freedom of the track fit, $\chisqtrk/\ndof$, must be less than four.
+%and
+%$\min\left(\chisqip\right)>4$.
 The variable \chisqip is defined as the increase in the \chisq of the vertex fit (\chisqvtx) when
 the signal track is combined with the \pv; the $\min\left(\chisqip\right)$ is the minimum \chisqip
-with respect to all \glspl{PV}.
+with respect to all \glspl{PV}, this selection requires $\min\left(\chisqip\right)>4$.
 Loose \pid requirements are also placed on all tracks, and further \pid constraints are applied in
 the \bdt, which is detailed later.
 
-The \Bp vertex fit is performed by constraining the mass of the \Ds to its known
-mass~\cite{PDG2012}, and the resulting vertex fit must have a \chisqvtx per degree of freedom of
+
+The \Bp vertex fit is performed by constraining the mass of the \Ds candidate to its known
+mass~\cite{PDG2012}, and requirement a \chisqvtx per degree of freedom of
 less than ten.
-A requirement of $\cos\thetadir>0.999$ must also be met.
-The angle \thetadir is defined as the angle between the momentum vector of the \Bp candidate and
-the vector formed by the \pv and decay vertex of the \Bp.
-Were the resolution of the \lhcb detector to be perfect, a real decay would have $\cos\thetadir=1$.
+%A requirement of $\cos\thetadir>0.999$ must also be met.
+The angle between the momentum vector of the \Bp candidate and
+the vector formed by the \pv and decay vertex of the \Bp is known as the direction angle,
+\thetadir.
+Were the resolution of the \lhcb detector to be perfect, a real decay would have $\cos\thetadir=1$,
+here $\cos\thetadir$ must be greater than 0.999.
 Prompt background from the \pv is suppressed by requiring that the lifetime of the \Bp,
 $\tau_{\Bp}$, is greater than $0.2\ps$.
 A cut on the \DOCA is applied to the \Ds candidate; where the \DOCA is defined as the maximum
 distance of closest approach between all pairs of daughter particles.
 %To ensure that the
-Cuts applied in the stripping are summarized in \Tab{tab:dsphi:sel}.
+Selection criteria are summarized in \Tab{tab:dsphi:sel}.
 
 %Candidate \Ds and \phii mesons are reconstructed only in the decays \decay{\Ds}{\kkpi} and
 %\phitokk, where the \Ds decay is the Cabibbo favoured mode.
@@ -120,6 +123,7 @@ Cuts applied in the stripping are summarized in \Tab{tab:dsphi:sel}.
       & $\chisqtrk/\ndof$ &$<$& $4$ \\
       & $\min\!\left(\chisqip\right)$ &$>$& $4$ \\
       & \chisqfd &$>$& 16 \\
+      & $\dllkpi(K)$ & $>$ & -2 \\
       %\midrule
       %STUFF FOR 1 AND 2 TRACKS
       \bottomrule
@@ -175,14 +179,15 @@ StatPatternRecognition package~\cite{Narsky:2005xpa}, using the same set of
 input variables.
 This technique of using a \bdt to identify each meson is also used in
 \Ref{LHCb-CONF-2012-009}, which measures branching fraction ratios of various \decay{B}{DD} decays.
-The bagging boosting technique used --- as described in \Sec{sec:bdt:bag} --- gives
-a response in the range $0<\mathrm{BDT}<1$.
-Therefore it is possible to, naturally, cut on the product of the two \BDT responses,
+The bagging boosting technique used gives
+a response between zero and one.
+Therefore, it is natural to cut on the product of the two \BDT responses,
 $\bdt_{\Ds}\times\bdt_\phi>X$, as opposed to $\bdt_{\Ds}>X_1$ and $\bdt_\phi>X_2$.
 Cutting on the product of the \glspl{BDT} improves the performance of the selection, because a
 very strong \Ds candidate (for example) will be selected at the expense of a slightly weaker \phii
-selection.
-This is demonstrated in \Fig{fig:dsphi:bdtprod}.
+selection, this is particularly true for tighter cuts.
+Figure~\ref{fig:dsphi:bdtprod} shows the effect of cutting on $\bdt_{\Ds}\times\bdt_{\Dz}$ in the
+normalization channel \btodsd.
 
 \begin{figure}
   \begin{center}
@@ -196,7 +201,10 @@ This is demonstrated in \Fig{fig:dsphi:bdtprod}.
       left of the plots, and (right) the same candidates after sWeighting has been applied where
       the signal peak is observed further towards the upper right.
       The lines overlayed on the plot are show the boundaries for the cuts of
-      $\bdt_{\Ds}\times\bdt_{\Dz}>0.01$, 0.04, 0.10, 0.20, 0.30, 0.40, and 0.05.
+      $\bdt_{\Ds}\times\bdt_{\Dz}>0.01$, 0.04, 0.10, 0.20, 0.30, 0.40, and 0.50.
+      It is seen that using the product of the \bdt discriminants is more effective for rare decays
+      where a tighter cut will be needed, in this region candidates are selected if their response
+      is particularly positive, at the expense of the other meson.
     }
     \label{fig:dsphi:bdtprod}
   \end{center}
@@ -210,29 +218,30 @@ This is demonstrated in \Fig{fig:dsphi:bdtprod}.
 %The BDT technique used in this analysis, also used in \Ref{LHCb-CONF-2012-009}, is different to
 %other analyses in this thesis in that a BDT is trained for each the \Ds and $\phi$.
 
-The \bdt trained to identify \dstokkpi was trained using a pure sample of \dstokkpi decays from the
+The \dstokkpi \bdt was trained using \dstokkpi decays from data taken from the
 high statistics channel \decay{\Bsb}{\Dsp\pim}.
-The signal sample was background subtracted using the sWeighting technique~\cite{splot}, and the
-background sample is taken from the mass sidebands of the \Ds meson.
-Similarly, for the \phii \bdt, the signal sample was sWeighted and the background comes from the
+The signal sample of \Ds decays came from the \dstokkpi candidates that fell within $3\sigma$ of
+the known \Ds mass, the sample was
+background subtracted using the sWeighting technique~\cite{splot} on the \Bp mass spectrum.
+Background data was taken from candidates falling in the upper mass sideband of the \Bp, and either
+sideband of the \Ds.
+Similarly, for the \phii\ \bdt, the signal sample was sWeighted and the background comes from the
 \phii mass sidebands; but the sample is taken from the high statistics \bstojpsiphi mode.
 
-Considering that each \bdt was trained on data, variables that are poorly described in simulation
-can be used in the training.
+%Considering that each \bdt was trained on data, variables that are poorly described in simulation
+%can be used in the training.
 In total, there are five kinematic and geometric training variables for the parent meson.
 For the daughter tracks there are a total of 23 variables, including kinematic, geometric and \pid
 variables.
+Since the \bdt was trained using data, it is possible to use \pid variables that are poorly
+described in simulation.
 A summary of all training variables is given in \Tab{tab:dsphi:vars}.
-
 
 %The BDT used to separate background from the signal \decay{\Ds}{\kkpi} decays was trained using
 %a signal sample of \decay{\Bs}{\Dsm\pip} sWeighted~\cite{splot} data, and background from the \Dsm
 %sidebands.
 %This BDT uses an unusually large array of training variables, given in \Tab{tab:dsphi:vars},
 %which include PID, and track quality variables.
-
-
-
 
 \begin{table}
   \caption[BDT variables]
@@ -306,26 +315,27 @@ shown in \Fig{fig:dsphi:opt}.
 
 
 
-\subsection[Vetoes of contributions from the decaying {\Dp} and {\Lc} mesons]
-{Vetoes of contributions from the decays $\boldsymbol{\Dp}$ and $\boldsymbol{\Lc}$ mesons}
+\subsection[Vetoes of {\Dp} and {\Lc} deacys]
+{Vetoes of $\boldsymbol{\Dp}$ and $\boldsymbol{\Lc}$ decays}
 \label{sec:dsphi:sel:veto}
 There are few backgrounds from real particles that could contaminate the final selection after the
 \bdt selection.
 The decay topology of \dstokkpi is very similar to the other weak decays \decay{\Dp}{\kpipiss} and
-\decay{\Lc}{\pkpi}.
-These have relatively large branching fractions~\cite{PDG2012}:
+\decay{\Lc}{\pkpi}, which both
+have relatively large branching fractions~\cite{PDG2012}:
 \begin{align}
   \BF(\decay{\Dp}{\kpipiss}) &= (9.13\pm0.19)\e{-2}, \nonumber\\
-  \BF(\decay{\Lc}{\pkpi}) &= (5.0\pm1.3)\e{-2},\nonumber
+  \intertext{and}
+  \BF(\decay{\Lc}{\pkpi}) &= (5.0\pm1.3)\e{-2}.\nonumber
 \end{align}
-and if the daughter $\pip(\proton)$ from the $\Dp(\Lc)$ decay is misidentified as a \Kp the decay
+If the daughter $\pip(\proton)$ from the $\Dp(\Lc)$ decay is misidentified as a \Kp the decay
 \dstokkpi can be mimicked.
 %the resulting invariant mass combination can fall within $25\mev$ of \mass{\Ds}.
 Henceforth, the notation $h_i$ will be used to denote a particle assigned the mass of an $h$ which
 has been identified as an $i$.
-Simple generator level simulations of phasespace illustrate that
+Simple generator level simulations of phasespace, as shown in \Fig{fig:dsphi:veto}, illustrate that
 the mass combination of $\Kp_\pi\Km\pip$ and $\Kp_p\Km\pip$ from a real \Dp or \Lc, respectively,
-can fall within $25\mev$ of $\mass{\Ds}^\pdg$; as shown in \Fig{fig:dsphi:veto}.
+can fall within $25\mev$ of $\mass{\Ds}^\pdg$.
 
 
 \begin{figure}

@@ -17,8 +17,11 @@ variables, upon which the BDT output depends, are poorly described by simulation
 %because of the number of PID --- and other --- variables that are poorly described by simulation.
 %Therefore, the value of \eff{BDT} is determined with a data driven method.
 
-To obtain the efficiency of $\bdt(X)$, for $X\in\{\Ds,\phi\}$, the validation sample is, and binned
-in three dimensions: $\pt(X)$, $\chisqfd(X)$, and $\bdt(X)$.
+To obtain the efficiency of $\bdt_{X}$, for $X\in\{\Ds,\phi\}$ a data driven method is used.
+First, the validation sample is
+binned in three dimensions: $\pt(X)$, $\chisqfd(X)$, and $\bdt_{X}$.
+The bin widths are chosen such that each two dimensional bin in $(\pt,\chisqfd)$ have approximately
+equal statistics.
 Here, \chisqfd is the flight distance of $X$ in units of \chisq.
 The variables \pt and \chisqfd are used because they are two of the most discriminating variables
 in the \bdt, and well described by simulation.
