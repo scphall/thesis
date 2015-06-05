@@ -11,11 +11,13 @@ channel \btojpsiphik:
 \end{equation}
 here, $N^\prime\big(\btophikmumu\big)$ denotes the number of signal events extracted from an
 weighted unbinned maximum likelihood fit of \btophikmumu candidates.
-Each event is weighted by the relative efficiency:
+Each event is weighted by the relative efficiency, so that
 \begin{equation}
-  \frac{\varepsilon\big(\btojpsiphik\big)}{\varepsilon_{\qsq}\big(\btophikmumu\big)},
+  N^\prime\big(\btophikmumu\big)
+  =
+  \sum_i\frac{\varepsilon\big(\btojpsiphik\big)}{\varepsilon_{\qsq}^{(i)}\big(\btophikmumu\big)},
 \end{equation}
-where the denominator is the efficiency of the signal decay, \btophikmumu, in bins of \qsq.
+where the denominator is the efficiency of the signal decay for candidate $i$, in bins of \qsq.
 The variation of efficiency in \qsq for the signal decay is shown in
 \Fig{fig:hhh:effs}.
 This is done because the efficiency of the decay \btophikmumu was shown to vary significantly over
@@ -40,7 +42,7 @@ The statistical significance of this is $6.6\stdev$ according to Wilks' theorem~
   \begin{center}
     \includegraphics[width=0.48\textwidth]{b2phikmumu}
     \includegraphics[width=0.48\textwidth]{b2phikjpsi}
-    \caption[Fits to \btokphimumu and \btojpsiphik]
+    \caption[Fits to \btokphimumu and \btojpsiphik candidates]
     {
       Invariant mass distributions for the
       (left) signal decay \btophikmumu, and
@@ -63,8 +65,8 @@ The above values lead to a measured branching fraction of
 However, the charmonium vetoes remove $\big(2\,^{+10}_{-\pz2}\big)\pc$ of signal events, as
 calculated using simulated events.
 This systematic uncertainty in \btophikmumu is larger than in \btokpipimumu because the \qsq
-distribution in the case of the former drops off and ends in the \jpsi region, as shown in
-\Fig{fig:phik:q2}.
+distribution in the case of the former drops off and ends in the \jpsi region, and reweighting the
+\qsq distribution causes significant differences in the amount vetoed.
 Taking this into account results in a value of
 \begin{equation}
   \BF\big(\btophikmumu\big)=
@@ -105,7 +107,7 @@ and is explained by the spin state of the \jpsi.
   \begin{center}
     \includegraphics[width=0.48\textwidth]{phik_frommumu}
     \includegraphics[width=0.48\textwidth]{phik_fromjpsi}
-    \caption[Invariant mass distributions of \phik]
+    \caption[Invariant mass distributions of \phik in data]
     {
       Distributions of the sWeighted invariant mass \phik object from the decay
       (left) \btophikmumu, and

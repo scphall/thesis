@@ -5,7 +5,7 @@ Signal candidates for the decays \btokpipimumu and \btophikmumu must first pass 
 trigger.
 Subsequent software trigger stages required that at least one final-state muon has $\pt>1.0\gev$
 and at least one hadron has $\pt>1.6\gev$, both of which have an IP larger than $100\mum$ with
-respect to any PV in the event.
+respect to any \PV in the event.
 The response of the topological \BBDT, which was described in \Sec{sec:lhcb:trig}, in \hlttwo must
 be consistent with a decaying $B$ meson with muons in the final state.
 
@@ -26,9 +26,8 @@ while \pid criteria for hadrons are applied later.
 Each hadron must have $\pt>500\mev$ and
 the total invariant mass of the \kpipi system is required to be in the range
 $750<\mass{\kpipi}<2400\mev$ in order to reduced the rate of accepted events at stripping level.
-For the \phik system, the additional constraint that the \decay{\phi}{\kk} object must have an
-invariant mass within $12\mev$, which is three times the resolution of the \phii, of $m_\phi^\pdg$
-is applied.
+For the \phik system, in additional constraint is that the \decay{\phi}{\kk} object must have an
+invariant mass within $12\mev$ of $m_\phi^\pdg$.
 
 There are other decay channels which are used throughout this analysis, specifically:
 \btojpsikpipi, \btopsitwosk, and \btojpsiphik.
@@ -36,25 +35,9 @@ In all these decays \psitwostojpsipipi and \jpsitomumu.
 These are each selected by requiring that both \jpsi and \psitwos candidates have an invariant
 mass within $50\mev$ of their known masses~\cite{PDG2012}.
 
-%To convert the signal yields into branching fractions normalization channels were needed.
-%The normalization channel for the decays \btokpipimumu and \btophikmumu are \btopsitwosk and
-%\btojpsiphik (where \psitwostojpsipipi and \jpsitomumu) respectively.
-%These are chosen to have the same final state particles as the signal decays to ensure that PID and
-%tracking efficiencies cancel, to first order.
-%The decay \btojpsikpipi is also used in this analysis for cross-checks and in training the \BDT (as
-%described in \Sect{sec:hhh:bdt}).
-%All these decays were subject to the same selection criteria except for requirements on the
-%invariant mass of the dimuon pair.
-%Both the \jpsi and \psitwos candidates are required to be within $50\mev$ of their known
-%masses~\cite{PDG2012}.
-%For each \psitwos and \jpsi candidate, it is required that
-%$\big|m_{\mu\mu}-m_{\psitwos}^\pdg\big|<50\mev$ and
-%$\big|m_{\mu\mu}-m_\jpsi^\pdg\big|<50\mev$ respectively.
-
-
 \begin{table}
   \caption{
-    Requirements in the stripping line.
+    Selection criteria applied in the stripping.
     %The variable {\tt ADOCACHI2CUT} is the \chisq distance of the closest approach
     %(below a threshold) for all two particle combinations.
   }
@@ -105,7 +88,7 @@ and the same final state particles as the signal modes.
 They therefore constitute peaking backgrounds that lie under the signal peak.
 The same is true for the large contributions from \decay{\Bp}{\psitwos\kpipi} and
 \decay{\Bp}{\psitwos\phik} decays, where \decay{\psitwos}{\mumu}.
-These contributions from charmonium decays constitute large, irreducible backgrounds and must be
+These charmonium decays are large irreducible backgrounds that must be
 removed with vetoes around the \jpsi and \psitwos masses.
 The vetoes used remove events where the invariant dimuon mass falls in either region
 $2946<m_{\mumu}<3176\mev$ or $3586<m_{\mumu}<3766\mev$.
@@ -141,10 +124,10 @@ $\mass{\kpipimumu}<5230\mev$.
 
 Considering the large branching fractions of the charmonium decays given above, and the probability of
 misidentifying a pion as a muon is $\mathcal{O}(1\pc)$~\cite{LHCb-DP-2013-001} (somewhat less for a
-kaon) there could have been significant contamination from mis-identified candidates.
+kaon) there could be significant contamination from mis-identified candidates.
 This background was removed by calculating the invariant mass of each $\mu^+\pi^-$ and
 $\mu^+K^-$ combination, where the hadron was assigned the muon mass.
-If the mass of this object fell within $50\mev$ of $m_\jpsi$ or $m_\psitwos$, then the candidate
+If the mass of this object fell within $50\mev$ of $m_{\jpsi}$ or $m_{\psitwos}$, then the candidate
 was vetoed.
 Figure~\ref{fig:hhh:misid} shows the effect on these vetoes, and demonstrates that a large part
 of the background that is removed by these vetoes is from the decay
@@ -194,7 +177,8 @@ $\Kp\pi^+_\mu$ distribution\footnote{
 }.
 %This is shown in \Fig{fig:hhh:dzbkg}.
 To remove the small possible contribution from \decay{\Bd}{\Dzb\pip\pipi} events which fall within
-$30\mev$ of the nominal \Dz mass in the $\Kp\pi^-_\mu$ spectrum are vetoed. \bam{PLOT.}
+$30\mev$ of the nominal \Dz mass in the $\Kp\pi^-_\mu$ spectrum are vetoed.
+%\bam{PLOT.}
 
 
 % SEMILEPTONIC DECAYS
@@ -344,16 +328,17 @@ Thus,
 
 The value of the estimated background yield, $B$, is determined from interpolating
 \btokpipimumu candidates from the mass sidebands into the regions around the mass of the \Bp meson.
-Candidates falling in the low and high mass sidebands,
-defined by
-%$5000<\mass{\kpipimumu}<\mass{\Bp}^\pdg-120\mev$
-$\mass{\kpipimumu}\in[5000,\mass{\Bp}^\pdg-120]\mev$
-and
-%$m_{\Bp}^\pdg+120<\mass{\kpipimumu}<5750\mev$
-$\mass{\kpipimumu}\in[m_{\Bp}^\pdg+120,5750]\mev$
-respectively,
-are fit to an exponential, and the value of $B$ taken to be the integral of this
-distribution within $3\stdev$ of the known \Bp mass~\cite{PDG2012}.
+Candidates falling in the low and high mass sidebands are fit to a decaying exponential, and
+value of $B$ taken to be the integral of this fitted distribution within $3\stdev$ of the known \Bp
+mass~\cite{PDG2012}.
+Sideband regions are defined by \Bp candidates with masses between $5000\mev$ and $5750\mev$, but
+more than $120\mev$ from the nominal \Bp mass.
+%%$5000<\mass{\kpipimumu}<\mass{\Bp}^\pdg-120\mev$
+%$\mass{\kpipimumu}\in[5000,\mass{\Bp}^\pdg-120]\mev$
+%and
+%%$m_{\Bp}^\pdg+120<\mass{\kpipimumu}<5750\mev$
+%$\mass{\kpipimumu}\in[m_{\Bp}^\pdg+120,5750]\mev$
+%respectively,
 
 
 %\begin{figure}
@@ -422,12 +407,14 @@ The prediction for the branching fraction of the signal channel is taken to be
 
 The maximum value of the figure of merit was found, and corresponding cut values used for the
 analysis.
-The exact requirements for the PID were that $\dllkpi(\Kp)>3.5$, $\dllkpi(\pi^\pm)<14.5$ and
+Exact requirements for the \pid variables were that $\dllkpi(\Kp)>3.5$, $\dllkpi(\pi^\pm)<14.5$ and
 $\mathrm{BDT}>0.025$.
 After the full selection multiple candidates are removed at random such that there is, at most, one
 \btokpipimumu candidate per event.
 For the analysis of the decay \btophikmumu, the optimization procedure yields cut values of
 $\dllkpi(K)>-3$ and $\bdt>0.05$.
+The value of the \dllkpi criteria is looser for \btophikmumu than for \btokpipimumu because the
+implicit \pid requirements when selecting a \phii candidate.
 
 %\begin{table}
   %\caption[Expected yields]

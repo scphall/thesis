@@ -17,7 +17,7 @@ Track multiplicity is known to be poorly described in simulation, generally ther
 in simulation than observed in data,
 these discrepancies are illustrated in \Fig{fig:hhh:ntracks}.
 Aside from the direct differences, the low track multiplicity of in simulated events is a
-contributing factor of PID variables being badly described in simulations.
+contributing factor of \pid variables being badly described in simulations.
 
 \begin{figure}[t]
   \begin{center}
@@ -32,16 +32,16 @@ contributing factor of PID variables being badly described in simulations.
   \end{center}
 \end{figure}
 
-To ensure that efficiencies from PID cuts are determined accurately from simulation, the variables
+To ensure that efficiencies from \pid cuts are determined accurately from simulation, the variables
 must be corrected.
-This is done with data driven methods, using highly pure samples of pions, kaons
-and muons (which came from the decays \decay{\Dstarp}{\Dz\pip}, where \decay{\Dz}{\Km\pip}, and
+This is done using data driven methods, using highly pure samples of pions, kaons
+and muons (coming from the decays \decay{\Dstarp}{\Dz(\to\kpi)\pip} and
 \jpsitomumu).
-For each hadron track in the simulated \Bp candidate, a new PID variable is resampled from PID
+For each hadron track in the simulated \Bp candidate, a new \pid variable is resampled from \pid
 distributions of the pure track samples as a function of the track's pseudorapidity, momentum, and
 track multiplicity.
 Figure~\ref{fig:hhh:pid} shows the effect of this resampling technique, it is observed that the
-simulated PID distributions that have been resampled matches data distributions much better than the
+simulated \pid distributions that have been resampled matches data distributions much better than the
 raw distributions; the differences that remain are accounted for in the systematic uncertainties.
 Muon \pid distributions are sufficiently well modelled in simulation that correcting them is
 unnecessary.
@@ -53,10 +53,10 @@ unnecessary.
     \includegraphics[width=0.48\textwidth]{pid_piminus}
     \caption[Effect of resampling PID variables in simulation]
     {
-      The effect of PID resampling for simulated tracks using pure samples of particles.
+      The effect of \pid resampling for simulated tracks using pure samples of particles.
       There is marked improvement in the similarity of the (black circles) \btojpsikpipi data and
       simulated events before (red line) resampling and after (red squares).
-      \bam{MUON PID PLOT}
+      %\bam{MUON \pid PLOT}
     }
     \label{fig:hhh:pid}
   \end{center}
@@ -82,8 +82,7 @@ are seen to be in agreement, this is shown in \Fig{fig:kpipi:bdt}.
     \includegraphics[height=0.23\textheight]{trackeff}
     \includegraphics[height=0.23\textheight]{muoneff}
   \end{center}
-  \caption[Differences between the {\tt isMuon} condition and tracking efficiency in data and
-  simulation]
+  \caption[Corrections for {\tt isMuon} and tracking efficiency in simulation]
   {
     The ratio of efficiencies for (top) tracking, and (bottom) \ismuon between data and simulation.
     Simulated tracks in simulation are reweighted according to their momentum and psudorapidity.
