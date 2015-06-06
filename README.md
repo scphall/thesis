@@ -2,9 +2,9 @@ thesis
 ======
 Backup of the ol' thesis.
 
-Fri 05 Jun | Total
+Sat 06 Jun | Total
 ---|---
-Words in text| 26093
+Words in text| 26114
 Words in headers| 227
 Words outside text (captions, etc.)| 3332
 Number of headers| 74

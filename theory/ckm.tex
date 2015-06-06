@@ -12,12 +12,13 @@ The \ckm matrix is defined as:
 \end{equation}
 where each $|V_{ij}|$ parameterizes the probability of an up-type quark, of generation $i$,
 transitioning to down-type quark, $j$, in a weak interaction.
-In the SM, it is assumed that the total charged current couplings of up- to down-type quarks is the
+In the \sm, it is assumed that the total charged current couplings of up- to down-type quarks is the
 same as down- to up-type.
 This means that the \ckm matrix is unitary, $\VCKMconj\VCKM = \mathds{1}$, and therefore it contains
 only four physical parameters: three angles ($\theta_{12}$, $\theta_{13}$ and $\theta_{23}$) and one
 complex phase ($\delta$).
-In fact, the observation of \CPV in kaon mixing led to the prediction of a third generation before
+In fact, the observation of \CPV in kaon mixing~\cite{Christenson:1964fg}
+led to the prediction of a third generation before
 its discovery, precisely because a $3\times3$ matrix is the smallest necessary for a phase to enter
 a unitary matrix.
 
@@ -63,6 +64,7 @@ defining
 \begin{align}
   \sin\theta_{12}&=\lambda, \nonumber\\
   \sin\theta_{23}&=A\lambda^2, \nonumber\\
+  \intertext{and}
   e^{-i\delta}\sin\theta_{13} &= A\lambda^3(\rho-i\eta),
 \end{align}
 which results in
@@ -91,15 +93,17 @@ The values of the Wolfenstein parameters $A$ and $\lambda$ are:
 }
 Since $A\neq0$ and $\lambda\neq0$ it is clear that \VCKM is not diagonal, and therefore flavour
 changing currents are allowed in the SM.
-However, the \ckm matrix does exhibit a strongly hierarchic structure, such that it is most
-probable that a weak interaction is intra-generational.
+However,
+it is most probable that a weak interaction is intra-generational, meaning that
+the \ckm matrix exhibits a strongly hierarchic structure.
 %However, the diagonal elements are close to unity and the CKM matrix exhibits a strong
 %hierarchical structure, such that it is most probable that weak currents do not violate flavour.
 %for which there is no explaination in the SM.
 
 
-The unitarity condition can be expressed as
-$\Vconj{\alpha\beta}\V{\beta\gamma}=\delta_{\alpha\gamma}$
+It has been asserted that the \ckm matrix is unitary, and therefore a
+unitarity condition can be expressed as
+$\Vconj{\alpha\beta}\V{\beta\gamma}=\delta_{\alpha\gamma}$.
 %$V_{\alpha\beta}^{\phantom{\dagger}}V_{\beta\gamma}^* = \delta_{\alpha\gamma}$
 %\begin{equation}
   %V_{\alpha\beta}^{\phantom{\dagger}}V_{\beta\gamma}^* = \delta_{\alpha\gamma},
@@ -108,29 +112,30 @@ $\Vconj{\alpha\beta}\V{\beta\gamma}=\delta_{\alpha\gamma}$
   %\sum_{i=1}^3\left(V_{ij}^*V_{jk}\right) = \mathbb{1},
   %\label{eq:th:unitarity}
 %\end{equation}
-which, when $\delta_{\alpha\gamma}=0$, gives six equations of the form:
+When $\delta_{\alpha\gamma}=0$, this condition gives six equations of the form:
 \begin{align}
   %\sum_{i=1}^3V_{ij}^*V_{ki} &= 0 && \sum_{i=1}^3V_{ji}^*V_{ik} =0, & j&\neq k;
   \phantom{\beta\neq\gamma}
   &&\sum_{\beta=1}^3V_{\alpha\beta}^*V_{\beta\gamma}^{\phantom{*}} = 0,
-  &&\sum_{\beta=1}^3V_{\alpha\beta}^{\phantom{*}}V_{\beta\gamma}^*=0;
-  &&\alpha\neq\gamma.
+  &&\sum_{\beta=1}^3V_{\alpha\beta}^{\phantom{*}}V_{\beta\gamma}^*=0,
+  &&\alpha\neq\gamma;
   \label{eq:th:offdiag}
 \end{align}
-These equations map closed triangles on the complex plane.
-%Two of these triangles have all sides of similar length
-One of these triangles, which has sides of similar length
-$\big(\mathcal{O}(\lambda^3)\big)$
-is known as \emph{the} \ut and is described by
+each mapping a closed triangles on the complex plane.
+Two of these triangles have all sides of similar length
+%One of these triangles, which has sides of similar length
+$\big(\mathcal{O}(\lambda^3)\big)$,
+one of these is
+is known as \emph{the} \ut and is defined by
 %Taking the equations of the triangles in Eq.~\ref{eq:th:unitarity} where all sides have length of
 %$\mathcal{O}(\lambda^3)$ leaves two triangles, one of which is:
 \begin{equation}
   %\V{ud}\Vconj{ub} + \V{cd}\Vconj{cb} + \V{td}\Vconj{tb} = 0.
-  1 + \frac{\V{ud}\Vconj{ub}}{\V{cd}\Vconj{cb}} + \frac{\V{td}\Vconj{tb}}{\V{cd}\Vconj{cb}} = 0.
+  1 + \frac{\V{ud}\Vconj{ub}}{\V{cd}\Vconj{cb}} + \frac{\V{td}\Vconj{tb}}{\V{cd}\Vconj{cb}} = 0,
   \label{eq:th:ut}
 \end{equation}
-The \ut is depicted in \Fig{fig:th:ut}.
-It has a base of unit length, an apex at
+where the length of the base has been normalized to unity.
+The apex of the \ut is at
 \begin{align}
   %\bar\rho+i\bar\eta = (1-\tfrac12\lambda^2)(\rho+i\eta)
   \xbar\rho+i\xbar\eta &= \big(1-\tfrac12\lambda^2\big)\big(\rho+i\eta\big)
@@ -152,6 +157,7 @@ and forms the angles
   \label{eq:ut:angles}
 \end{align}
 which define phase differences between edges.
+Figure~\ref{fig:th:ut} depicts a schematic diagram of the \ut.
 %are phases between CKM matrix elements.
 %This triangle is depicted in \Fig{fig:th:ut}.
 %, is simply a graphical representation of the CKM matrix.
@@ -191,14 +197,16 @@ which define phase differences between edges.
   %\label{fig:th:ut}
 %\end{figure}
 
-
-Precise determination of the \ckm matrix elements is important, for  they are each fundamental
-parameters of the SM.
-They also contain all the information about flavour violation and \CPV that is allowed within the
-framework of the quark sector in the SM.
-This information is encapsulated in the \ut.
-Current measurements of angles and side lengths from \Ref{Charles:2015gya} are shown in
-\Fig{fig:th:ckmfitter}.
+Each \ckm matrix element is a fundamental parameter in the \sm, and is therefore important to
+measure them all; particularly because the \ckm matrix holds all
+%Precise determination of the \ckm matrix elements is important, for  they are each fundamental
+%parameters of the SM.
+%They also contain all the information about flavour violation and \CPV that is allowed within the
+the information about flavour violation and \CPV that is allowed within the
+framework of the quark sector of the \sm.
+All the measurements relating to the \ckm matrix can be shown in the \ut.
+%Current measurements of angles and side lengths from \Ref{Charles:2015gya} are shown in
+%\Fig{fig:th:ckmfitter}.
 
 %\begin{figure}
   %\begin{center}

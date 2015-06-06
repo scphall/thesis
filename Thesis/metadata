@@ -321,50 +321,6 @@ Files: 28
 
 02-27-2015
 Total
-Words in text: 9585
-Words in headers: 95
-Words outside text (captions, etc.): 755
-Number of headers: 35
-Number of floats/tables/figures: 25
-Number of math inlines: 394
-Number of math displayed: 79
-Files: 28
-
-02-27-2015
-Total
-Words in text: 9569
-Words in headers: 97
-Words outside text (captions, etc.): 783
-Number of headers: 36
-Number of floats/tables/figures: 25
-Number of math inlines: 390
-Number of math displayed: 79
-Files: 28
-
-02-27-2015
-Total
-Words in text: 9598
-Words in headers: 134
-Words outside text (captions, etc.): 780
-Number of headers: 50
-Number of floats/tables/figures: 25
-Number of math inlines: 391
-Number of math displayed: 80
-Files: 28
-
-02-27-2015
-Total
-Words in text: 9598
-Words in headers: 100
-Words outside text (captions, etc.): 780
-Number of headers: 36
-Number of floats/tables/figures: 25
-Number of math inlines: 391
-Number of math displayed: 80
-Files: 28
-
-02-27-2015
-Total
 Words in text: 9615
 Words in headers: 113
 Words outside text (captions, etc.): 780
@@ -404,61 +360,6 @@ Words outside text (captions, etc.): 780
 Number of headers: 37
 Number of floats/tables/figures: 25
 Number of math inlines: 405
-Number of math displayed: 80
-Files: 28
-
-03-01-2015
-Total
-Words in text: 10289
-Words in headers: 101
-Words outside text (captions, etc.): 780
-Number of headers: 37
-Number of floats/tables/figures: 25
-Number of math inlines: 407
-Number of math displayed: 80
-Files: 28
-
-03-01-2015
-Total
-Words in text: 10289
-Words in headers: 100
-Words outside text (captions, etc.): 840
-Number of headers: 36
-Number of floats/tables/figures: 27
-Number of math inlines: 407
-Number of math displayed: 80
-Files: 28
-
-03-01-2015
-Total
-Words in text: 10289
-Words in headers: 100
-Words outside text (captions, etc.): 854
-Number of headers: 36
-Number of floats/tables/figures: 27
-Number of math inlines: 407
-Number of math displayed: 80
-Files: 28
-
-03-01-2015
-Total
-Words in text: 10206
-Words in headers: 100
-Words outside text (captions, etc.): 780
-Number of headers: 35
-Number of floats/tables/figures: 25
-Number of math inlines: 407
-Number of math displayed: 80
-Files: 27
-
-03-01-2015
-Total
-Words in text: 10206
-Words in headers: 102
-Words outside text (captions, etc.): 854
-Number of headers: 36
-Number of floats/tables/figures: 27
-Number of math inlines: 407
 Number of math displayed: 80
 Files: 28
 
@@ -1257,79 +1158,6 @@ Files: 49
 
 04-13-2015
 Total
-Words in text: 18024
-Words in headers: 157
-Words outside text (captions, etc.): 2205
-Number of headers: 53
-Number of floats/tables/figures: 59
-Number of math inlines: 694
-Number of math displayed: 97
-Files: 49
-
-04-13-2015
-Total
-Words in text: 17941
-Words in headers: 157
-Words outside text (captions, etc.): 2204
-Number of headers: 53
-Number of floats/tables/figures: 59
-Number of math inlines: 693
-Number of math displayed: 96
-Files: 49
-
-04-13-2015
-Total
-Words in text: 17954
-Words in headers: 157
-Words outside text (captions, etc.): 2204
-Number of headers: 53
-Number of floats/tables/figures: 59
-Number of math inlines: 692
-Number of math displayed: 96
-Files: 49
-
-04-13-2015
-
-[1;31m!!! Reached end of file while waiting for $. !!![0m
-
-[1;31m!!! Reached end of file while waiting for }. !!![0m
-
-[1;31m!!! Reached end of file while waiting for $. !!![0m
-Total
-Words in text: 17769
-Words in headers: 157
-Words outside text (captions, etc.): 2200
-Number of headers: 53
-Number of floats/tables/figures: 57
-Number of math inlines: 681
-Number of math displayed: 94
-Files: 49
-
-(errors:3)
-04-13-2015
-Total
-Words in text: 17954
-Words in headers: 157
-Words outside text (captions, etc.): 2204
-Number of headers: 53
-Number of floats/tables/figures: 59
-Number of math inlines: 692
-Number of math displayed: 96
-Files: 49
-
-04-13-2015
-Total
-Words in text: 17872
-Words in headers: 160
-Words outside text (captions, etc.): 2204
-Number of headers: 53
-Number of floats/tables/figures: 59
-Number of math inlines: 692
-Number of math displayed: 96
-Files: 49
-
-04-13-2015
-Total
 Words in text: 17945
 Words in headers: 160
 Words outside text (captions, etc.): 2213
@@ -1338,17 +1166,6 @@ Number of floats/tables/figures: 59
 Number of math inlines: 702
 Number of math displayed: 95
 Files: 49
-
-04-14-2015
-Total
-Words in text: 17913
-Words in headers: 160
-Words outside text (captions, etc.): 2213
-Number of headers: 53
-Number of floats/tables/figures: 59
-Number of math inlines: 701
-Number of math displayed: 95
-Files: 48
 
 04-14-2015
 Total
@@ -1415,39 +1232,6 @@ Number of floats/tables/figures: 59
 Number of math inlines: 742
 Number of math displayed: 96
 Files: 48
-
-04-29-2015
-Total
-Words in text: 18754
-Words in headers: 177
-Words outside text (captions, etc.): 2172
-Number of headers: 59
-Number of floats/tables/figures: 59
-Number of math inlines: 743
-Number of math displayed: 96
-Files: 48
-
-04-29-2015
-Total
-Words in text: 18967
-Words in headers: 177
-Words outside text (captions, etc.): 2207
-Number of headers: 59
-Number of floats/tables/figures: 60
-Number of math inlines: 756
-Number of math displayed: 96
-Files: 48
-
-04-29-2015
-Total
-Words in text: 19248
-Words in headers: 178
-Words outside text (captions, etc.): 2219
-Number of headers: 60
-Number of floats/tables/figures: 64
-Number of math inlines: 768
-Number of math displayed: 96
-Files: 49
 
 04-29-2015
 Total
@@ -1804,45 +1588,12 @@ Files: 54
 
 05-22-2015
 Total
-Words in text: 23376
-Words in headers: 209
-Words outside text (captions, etc.): 2846
-Number of headers: 70
-Number of floats/tables/figures: 83
-Number of math inlines: 915
-Number of math displayed: 101
-Files: 54
-
-05-22-2015
-Total
-Words in text: 23498
-Words in headers: 209
-Words outside text (captions, etc.): 2899
-Number of headers: 70
-Number of floats/tables/figures: 84
-Number of math inlines: 930
-Number of math displayed: 101
-Files: 55
-
-05-22-2015
-Total
 Words in text: 23578
 Words in headers: 214
 Words outside text (captions, etc.): 2906
 Number of headers: 70
 Number of floats/tables/figures: 84
 Number of math inlines: 932
-Number of math displayed: 101
-Files: 55
-
-05-23-2015
-Total
-Words in text: 24306
-Words in headers: 226
-Words outside text (captions, etc.): 2924
-Number of headers: 73
-Number of floats/tables/figures: 84
-Number of math inlines: 961
 Number of math displayed: 101
 Files: 55
 
@@ -1856,39 +1607,6 @@ Number of floats/tables/figures: 84
 Number of math inlines: 944
 Number of math displayed: 101
 Files: 54
-
-05-25-2015
-Total
-Words in text: 24217
-Words in headers: 216
-Words outside text (captions, etc.): 3031
-Number of headers: 70
-Number of floats/tables/figures: 86
-Number of math inlines: 976
-Number of math displayed: 102
-Files: 55
-
-05-25-2015
-Total
-Words in text: 24348
-Words in headers: 216
-Words outside text (captions, etc.): 3031
-Number of headers: 70
-Number of floats/tables/figures: 86
-Number of math inlines: 980
-Number of math displayed: 102
-Files: 55
-
-05-25-2015
-Total
-Words in text: 24268
-Words in headers: 216
-Words outside text (captions, etc.): 3031
-Number of headers: 70
-Number of floats/tables/figures: 86
-Number of math inlines: 979
-Number of math displayed: 102
-Files: 55
 
 05-26-2015
 Total
@@ -1989,25 +1707,6 @@ Number of math inlines: 1012
 Number of math displayed: 105
 Files: 56
 
-06-03-2015
-
-[1;31m!!! Encountered \end without corresponding \begin !!![0m
-
-[1;31m!!! Reached end of file while waiting for }. !!![0m
-
-[1;31m!!! Reached end of file while waiting for \end. !!![0m
-
-[1;31m!!! Environment ended while waiting for nd{equation*}. !!![0m
-Total
-Words in text: 24772
-Words in headers: 222
-Words outside text (captions, etc.): 3143
-Number of headers: 71
-Number of floats/tables/figures: 88
-Number of math inlines: 1016
-Number of math displayed: 106
-Files: 56
-
 (errors:4)
 06-03-2015
 Total
@@ -2017,17 +1716,6 @@ Words outside text (captions, etc.): 3279
 Number of headers: 72
 Number of floats/tables/figures: 88
 Number of math inlines: 1043
-Number of math displayed: 108
-Files: 55
-
-06-04-2015
-Total
-Words in text: 25992
-Words in headers: 229
-Words outside text (captions, etc.): 3279
-Number of headers: 74
-Number of floats/tables/figures: 88
-Number of math inlines: 1045
 Number of math displayed: 108
 Files: 55
 
@@ -2044,17 +1732,6 @@ Files: 55
 
 06-05-2015
 Total
-Words in text: 26106
-Words in headers: 226
-Words outside text (captions, etc.): 3288
-Number of headers: 74
-Number of floats/tables/figures: 87
-Number of math inlines: 1047
-Number of math displayed: 112
-Files: 55
-
-06-05-2015
-Total
 Words in text: 26093
 Words in headers: 227
 Words outside text (captions, etc.): 3332
@@ -2064,9 +1741,9 @@ Number of math inlines: 1048
 Number of math displayed: 112
 Files: 55
 
-06-05-2015
+06-06-2015
 Total
-Words in text: 26093
+Words in text: 26114
 Words in headers: 227
 Words outside text (captions, etc.): 3332
 Number of headers: 74

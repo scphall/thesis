@@ -3,17 +3,17 @@
 When describing macroscopic physical systems, it is frequently necessary to simplify the situation
 by making assumptions about the distance scales involved.
 One would not, for example, dream of using quantum mechanics to model a ball colliding with a wall
-despite the fact that the treatment would be far more proper than a Newtonian approach.
-An \EFT does the same thing in particle physics
+despite the treatment being far more proper than a Newtonian approach.
+An \EFT works in an equivalent way in particle physics
 by decoupling the short- and long-range interactions, and treating them separately.
-Contributions from particles with very high mass, much greater than some energy scale are
-suppressed.
+Contributions from particles with very high mass, much greater than some pre-defined energy scale
+are suppressed.
 %An equally valid interpretation is that massive, unstable particles have short lifetimes and can
 %only interact over very small distances.
 These simplifications are advantageous, as they allow processes to be modelled at a scale
 relevant to the particles involved.
-A canonical example of this is Fermi's effective theory of weak decays which predates electroweak
-theory; in it, a process (such as $\beta$-decay) is collapsed into a four point interaction.
+%A canonical example of this is Fermi's effective theory of weak decays which predates electroweak
+%theory; in it, a process (such as $\beta$-decay) is collapsed into a four point interaction.
 
 Creating an effective field theory for particle physics begins by defining an energy scale,
 $\Lambda$, which separates the long and short range interactions.
@@ -22,10 +22,10 @@ final state $\ket{f}$,
 the energies are of order $m_\bquark$.
 In the full treatment of the \sm, contributions from the \tquark quark and weak bosons --- which all
 have masses $\mathcal{O}(100\gev)$ --- must be accounted for.
-Therefore, an appropriate choice for $\Lambda$ is $\sim m_W$.
+Therefore, an appropriate choice for $\Lambda$ is \approx$m_W$.
 Heavy fields above $\Lambda$ are then integrated out and are parameterized by complex numbers,
-known as Wilson coefficients, $C$.
-The remaining physics is encapsulated in the long distances operators, $\mathcal{O}$, each having
+known as Wilson coefficients, $C_i$.
+The remaining physics is encapsulated in the long distances operators, $\mathcal{O}_i$, each having
 its own gauge group defining a particular type of process.
 Transition matrix elements for the interaction in the effective Hamiltonian are
 \begin{equation}
@@ -33,12 +33,13 @@ Transition matrix elements for the interaction in the effective Hamiltonian are
   \sum_j C_j(\Lambda)\bra{f}\Op{j}^{(d)}\ket{i}\Big|_{\Lambda}.
   \label{eq:th:opeham}
 \end{equation}
-Which is simply a weighted sum over the long distance matrix elements $\bra{f}\Op{j}\ket{i}$.
+Which is simply a weighted sum over the long distance matrix elements $\bra{f}\Op{j}\ket{i}$ which
+operates in dimension $d$.
 
 The above sum runs over an infinite number of operators --- which is clearly impractical.
 To simplify matters one can extract factors of $\Lambda^{-1}$ from the Wilson coefficients
-making the coefficients dimensionless.
-This modifies the effective Hamiltonian to be a sum over dimensions, $d$:
+making the coefficients dimensionless, which
+modifies the effective Hamiltonian to be a sum over dimensions
 \begin{equation}
   \bra{f}\Ham{eff}\ket{i} =
   \sum_{d}\frac{1}{\Lambda^{d}}
@@ -53,10 +54,10 @@ processes.
 This approach leads to an effective Hamiltonian, with Wilson coefficients which are entirely
 independent of the underlying physical processes and can be calculated to a good degree of accuracy
 in a range of physics models.
-In this way, measurements from different decays all have access to multiple processes and tehrefore
-different Wilson coefficients, so they can be compared.
-Resulting measurements can then be used for predictions of processes, enabling experiments to
-favour or disfavour entire classes of NP.
-
-
+In this way very different observables can be used to make measurements of Wilson coefficients and
+compared independently of the actual process.
+%In this way, measurements from different decays all have access to multiple processes and therefore
+%different Wilson coefficients, so they can be compared.
+Measurements can be used for predictions of processes, and to check the validity of \np models,
+enabling experiments to favour or disfavour entire classes of physics \bsm.
 
