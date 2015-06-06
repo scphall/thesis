@@ -131,35 +131,63 @@ used to calculate it.
 \subsection[Calculation of $p$-value]
 {Calculation of $\boldsymbol{p}$-value}
 
+The unblinded distribution in $m_{\mumu}$ is shown in \Fig{fig:db:mumu}.
+Using the statistical method described in \Sect{sec:db:strategy} the following ranges in \mass{t}
+are scanned:
+\begin{align*}
+  253.4 &< \mass{t} < \pz369.5 \mev \\
+  574.5 &< \mass{t} < \pz906.5 \mev \\
+  1136.0 &< \mass{t} < 2813.0 \mev \\
+  3246.5 &< \mass{t} < 3576.5 \mev \\
+  \intertext{and}
+  3796.0 &< \mass{t} < 4356.0 \mev.
+\end{align*}
+Values of \mass{t} do not reach threshold boundaries because of the widths of the sidebands.
+The minimum local $p$-value is found to be $3.6\e{-3}$ at $m_{t}^\mathrm{min} = 4285.0\mev$.
+
+To convert the $p$-value to a global one, a \PDF is fit to the \mass{\mumu} distribution of the
+prompt and displaced \btokstrdb candidates that lie outside of the vetoed regions, and outside of
+the signal region centred at $m_t^\mathrm{min}$.
+A fourth(second) order Chebychev polynomial is fit to candidates in the prompt(displaced) region.
+From these \glspl{PDF} $1.5\e{7}$ toy datasets are generated, and the minimum $p$-value for each
+one is calculated.
+Constructing a cumulative distribution of these $p$-values makes an easy conversion from loval to
+global $p$-values, this conversion is shown in \Fig{fig:db:mumu}.
+Shown alongside the cumulative histogram is the asymptotic approximation, which is seen to be in
+excellent agreement for local $p$-values less than about $10^{-4}$.
+The histogram converts the local $p$-value to a global $p$-value of $0.63$, equivalent to a shift
+in significance of $2.9\stdev$ to $0.48\stdev$.
+These results show no evidence for a new dark boson in the mass ranges given above.
+
 %253.4 -> 369.5
 %574.5 -> 906.5
 %1136 -> 2813
 %3246.5 -> 3576.5
 %3796 -> 4356
-%3.610859e-03,  42850.35MeV => 2.9sigma
+%3.610859e-03,  4285.035MeV => 2.9sigma
 %0.63322 => 0.48sigma global
 % RooStats::PValueTOSignificance(pval / 2)
 
-Firstly, the look-elsewhere effect must be accounted for, which
-is done using the method outlined in \Sec{sec:db:pval} using all dimuon pairs from \Bd candidates
-that fall within $2.5\stdev$ of the nominal \Bd mass.
-It was decided that if the global $p$-value corresponds to a evidence for a new particle
-($3\sigma$ or above) then fits will be used to
-determine the best-fit mass and lifetime of the excess.
+%Firstly, the look-elsewhere effect must be accounted for, which
+%is done using the method outlined in \Sec{sec:db:pval} using all dimuon pairs from \Bd candidates
+%that fall within $2.5\stdev$ of the nominal \Bd mass.
+%It was decided that if the global $p$-value corresponds to a evidence for a new particle
+%($3\sigma$ or above) then fits will be used to
+%determine the best-fit mass and lifetime of the excess.
 
-Figure~\ref{fig:db:mmumu} shows the unblinded dimuon mass distribution for the prompt and
-displaced regions, fitted to fourth order Chebychev polynomials.
-The displaced region is compatible with the expected contribution from combinatorial background.
-A toy dataset is generated using this \PDF, full statistical method is applied to find the
-$p$-value at each value of \mass{t}, and thus the minimum $p$-value for a single toy dataset is
-extracted.
-This process is repeated $10^7$ times, as required to achieve $p$-values corresponding to a
-significance of $5\stdev$.
-From the minimum $p$-values the fraction of toy datasets with minimum $p$-values less than some
-value can be computed, and thus a conversion from local to global minimum $p$-value for any given
-toy; therefore for the data itself.
-Figure~\ref{fig:db:mmumu} also shows this cumulative distribution of minimum local $p$-values from
-$1.5\e{7}$ datasets along with the asymptotic expectation~\cite{Gross:2010qma}.
+%Figure~\ref{fig:db:mmumu} shows the unblinded dimuon mass distribution for the prompt and
+%displaced regions, fitted to fourth order Chebychev polynomials.
+%The displaced region is compatible with the expected contribution from combinatorial background.
+%A toy dataset is generated using this \PDF, full statistical method is applied to find the
+%$p$-value at each value of \mass{t}, and thus the minimum $p$-value for a single toy dataset is
+%extracted.
+%This process is repeated $10^7$ times, as required to achieve $p$-values corresponding to a
+%significance of $5\stdev$.
+%From the minimum $p$-values the fraction of toy datasets with minimum $p$-values less than some
+%value can be computed, and thus a conversion from local to global minimum $p$-value for any given
+%toy; therefore for the data itself.
+%Figure~\ref{fig:db:mmumu} also shows this cumulative distribution of minimum local $p$-values from
+%$1.5\e{7}$ datasets along with the asymptotic expectation~\cite{Gross:2010qma}.
 
 \begin{figure}
   \begin{center}
@@ -174,11 +202,11 @@ $1.5\e{7}$ datasets along with the asymptotic expectation~\cite{Gross:2010qma}.
 \end{figure}
 
 
-Scanning values of \mass{t} in the ranges:
-
-The minimum local $p$-value observed in data is $xxx$  at $\mass{\mumu}xxx\mev$,
-which corresponds to a global $p$-value of $xxx$; corresponding to a shift in significance of
-$xxx\stdev$ to $xxx\stdev$.
+%Scanning values of \mass{t} in the ranges:
+%
+%The minimum local $p$-value observed in data is $xxx$  at $\mass{\mumu}xxx\mev$,
+%which corresponds to a global $p$-value of $xxx$; corresponding to a shift in significance of
+%$xxx\stdev$ to $xxx\stdev$.
 
 
 
@@ -275,6 +303,8 @@ The total effect of this must be demonstrated.
 An important consideration is the spin of the \db.
 Since the spin of the \db is unknown, there are a range of possible angular distributions that may
 arise, each having a different detection efficiency.
+This can be studied using the angular acceptance models used in the \btokstrmumu angular
+analysis~\cite{LHCb-CONF-2015-002}.
 %The model with which the simulated samples were produced assumes that the \db is a scalar, a vector
 %there may be devaiation
 %
