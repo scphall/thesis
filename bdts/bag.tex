@@ -2,8 +2,8 @@
 \label{sec:bdt:bag}
 Bootstrap aggregating, or bagging\footnote{
   This section is based on \Ref{Bagging}.}, is a method of boosting whereby the effects of
-statistical fluctuations are lessened by making many independent \DTs and using them
-and making a decision based on the average response.
+statistical fluctuations are negated by making many independent \DTs and using them
+to make a decision based on the average response.
 %Assume a true distribution, $f(x_i)$, where $x_i$ are the training variables.
 Training $n$ \DTs, it is possible to define three errors, namely:
 square of the error of a single estimator
@@ -28,7 +28,7 @@ and the error of an ensemble of \DTs
 \end{equation}
 The weighted variance of response of the estimators $h_t$ around a weighted mean is defined as
 \begin{equation}
-  V(x_i) = \frac1n\sum_{t=1}^nt\big(h_t(x_i) - \bar h(x_i)\big)^2.
+  V(x_i) = \frac1n\sum_{t=1}^n\big(h_t(x_i) - \bar h(x_i)\big)^2.
   \label{eq:bdt:bag4}
 \end{equation}
 %By inserting $f(x_i)-f(x_i)$ into \Eq{eq:bdt:bag4}, manipulating the algebra, the relationship

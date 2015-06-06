@@ -4,12 +4,12 @@ The Adaptive Boost, AdaBoost, algorithm\footnote{
   This section is based on \Ref{AdaBoost}.} negates the effect of statistical
 fluctuations in a data set by increasing the weights of misclassified events.
 The algorithm begins by training a single \DT as described above, where each event has unit weight.
-For subsequent \DTs, the weight for each event, $i$, is modified for a tree $t$, to be
+In subsequent \DTs, the weight for each event, $i$, is modified for a tree $t$, to be
 \begin{equation}
   w_i^t = c_i^t \times w_i^{t-1},
   \label{eq:ada:wt}
 \end{equation}
-where $c$ is determined to be
+where $c$ based on the classification of the event in the previous tree, it is determined to be
 \begin{align}
   c_i^t &= \exp\big(\alpha_t\gamma_i^t\big),
   &&
@@ -18,16 +18,16 @@ where $c$ is determined to be
       0\quad\text{event $i$ classified incorrectly by tree $t-1$} \\
       1\quad\text{event $i$ classified correctly by tree $t-1$}
     \end{array}
-  \right.
+  \right..
 \end{align}
 %Here, $\gamma_i^t$ is unity if event $i$ was classified incorrectly in tree $t-1$, otherwise it is
 %zero.
+Weights are then renormalized such that they sum to unity.
 The value of $\alpha_t$ is the weight that the \DT carries, and is given by
 \begin{equation}
   \alpha_t = \frac12\ln\left(\frac{1-\epsilon_t}{\epsilon_t}\right)
 \end{equation}
 where $\epsilon$ is the weighted error rate.
-Weights are then renormalised such that they sum to unity.
 This reweighting procedure artificially fluctuates the training sample which is used to train
 each \DT.
 Multiple \DTs are made in this fashion, forming a forest; where the response of the \BDT classifier

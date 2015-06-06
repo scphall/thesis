@@ -15,21 +15,20 @@ to
 where $u$ denotes a weighting proportional to the distance away from $\epsilon$ in the local
 region:
 \begin{equation}
-  u_i^t = \exp\big(\beta_t(\bar\epsilon-\epsilon_i^t)\big).
+  u_i^t = \exp\big(\beta_t(\bar\epsilon-\epsilon_i^t)\big),
 \end{equation}
+which can be calculated using a nearest neighbours algorithm or by binning.
 The boosting parameter $\beta$ is calculated as
-\begin{equation}
-  \beta_t = \frac12\ln\left(\frac{1-e_t}{e_t}\right)
-\end{equation}
-and
-\begin{equation}
+\begin{align}
+  \beta_t = \frac12\ln\left(\frac{1-e_t}{e_t}\right) \\
+  \intertext{where}
   e_t = \sum_i w_i^{t-1}c_i^t\left|\bar\epsilon-\epsilon_i^t\right|.
-\end{equation}
+\end{align}
 
 This leads to a single \BDT whose response is analogous to \Eq{eq:ada:fullbdt} but with the addition
 of the target efficiency $\bar\epsilon$
 \begin{equation}
-  T(x_i,\bar\epsilon) = \sum_{t=1}^{n_\mathrm{trees}} \alpha_tT_t(x_i,\bar\epsilon).
+  T(x_i,\bar\epsilon) = \sum_{t=1}^{n} \alpha_tT_t(x_i,\bar\epsilon).
   \label{eq:ada:fullbdt}
 \end{equation}
 Therefore, a single of these \BDTs is associated with a given target efficiency, where
@@ -43,10 +42,10 @@ the total response is
 For $\mathcal{T}(x_i)$ to be a continuous distribution, $N\!\to\infty$, however in practice
 $N\sim100$ is all that is needed for analysis.
 
-Using of the uBoost algorithm is well motivated in \Chap{ch:db}, which is a search for a particle
+Using the uBoost algorithm is well motivated in \Chap{ch:db}, which is a search for a particle
 of unknown mass and lifetime.
-The uBoost technique allows a \BDT to be trained, while ensuring that the response does not bias
-the selection towards given lifetimes or masses of the unknown particle.
+The uBoost technique allows a \BDT to be trained, ensuring that the response does not bias
+the selection towards some lifetimes or masses.
 
 
 

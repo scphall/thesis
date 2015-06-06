@@ -2,12 +2,15 @@
 \label{sec:lhcb:trig}
 
 With a $pp$ interaction rate of $40\mhz$ and multiple subdetector stations, there is too much
-information associated with each event to write them all to disk.
-Instead a multistage trigger is employed to filter potentially interesting events based on momentum
-and energy of tracks.
+information associated with each event to write everything all to disk.
+Instead a multistage trigger is employed to filter potentially interesting events based on track
+momentum and energy.
 The \lone is embedded in the hardware of \lhcb and is fully synchronous with
-the bunch crossing rate and reduces the output rate to $1\mhz$.
-Two software triggers are fast enough to perform tracking algorithms and use information from
+the bunch crossing rate, it reduces the output $1\mhz$.
+There are five \lone trigger lines; one each for objects identified as
+photons, electrons, hadrons, muons and pairs of muons (dimuon).
+Two software triggers follow \lone, and are fast enough to perform tracking algorithms and use
+information from
 multiple subdetectors to reduce the events written to disk to $5\khz$.
 The flow of data through the trigger is shown in Fig.~\ref{fig:lhcb:trigger}.
 
@@ -22,33 +25,34 @@ The flow of data through the trigger is shown in Fig.~\ref{fig:lhcb:trigger}.
   \label{fig:lhcb:trigger}
 \end{figure}
 
-There are five \lone trigger lines; one each for photons, electrons, hadrons, muons and dimuon
-objects.
-\lone trigger lines that accept events with muons use information from the muon system, while all
-others rely on calorimeter information.
-A cluster in the \ecal and \hcal is defined as two-by-two calorimeter cells.
+%\lone trigger lines that accept events with muons use information from the muon system, while all
+%others rely on calorimeter information.
+The \lone trigger algorithms for photons, hadrons, and electrons are based on calorimeter objects.
+A single calorimeter cluster is defined as two-by-two calorimeter cells in each the \ecal and
+\hcal.
 For each cluster the transverse energy, $E_T$, is calculated:
 \begin{equation}
   E_T = \sum_{i=1}^4E_i\sin\theta_i,
 \end{equation}
-where $E_i$ is the energy in cluster $i$ and $\theta_i$ is the angle between the average
+where $E_i$ is the energy in cell $i$ and $\theta_i$ is the angle between the average
 interaction point and the cell's centre.
-These clusters are then categorized as follows.
+Clusters are categorized as follows.
 A hadron candidate is the largest $E_T$ cluster in the \hcal summed with the $E_T$ of the \ecal
 cluster in front, if there is one.
 A candidate photon (electron) is the largest $E_T$ deposit with hits in the \presh cells in front and
-no hits (at least one hits) in the nearest \spd cells.
+no hits (at least one hit) in the nearest \spd cells.
 The $E_T$ of each candidate is compared to thresholds, and the event is retained if one or more is
 exceeded.
 
-First level trigger lines associated with muons base their acceptance on measurements of \pt.
+\lone trigger lines associated with muons base their acceptance on measurements of \pt.
 Each quadrant of the muon system is read out independently, so muons which cross boundaries cannot
 be triggered.
-The muon candidates with the highest and second highest \pt are selected from each quadrant by
+Muon candidates with the highest and second highest \pt are selected from each quadrant by
 searching for straight lines through M1-5 in the \plane{z}{y}, and in the \plane{z}{x} if
 $p_T>0.5\gev$.
-The M1 station is used to increase the \pt resolution of tracks, this enables (without the
-tracking information) a resolution of about $25\,\%$ of fully reconstructed tracks.
+The M1 station is used to increase the \pt resolution of muon tracks in the trigger without
+tracking information: this achieves a resolution of about $25\,\%$ that of fully reconstructed
+tracks.
 Events are accepted based on candidates from all quadrants with values of $p_T^\mathrm{max}$ and
 $p_T^\mathrm{max}\times p_T^\mathrm{2^{nd} max}$ greater than thresholds for the muon and dimuon
 lines respectively.
@@ -71,9 +75,11 @@ Thresholds for \lone trigger lines used in this thesis are given in \Tab{tab:lhc
   \end{center}
 \end{table}
 
-Around $80\%$ of the events accepted at \lone are processed by the software triggers immediately.
-The rest are stored temporarily on hard disks to be processed while the \lhc is not colliding protons.
-This is known as deferred triggering.
+Deferred triggering was introduced in 2012.
+It diverts around $20\pc$ of events that pass the \lone trigger to hard disks for processing when
+the \lhc is not colliding protons.
+The $80\%$ of events accepted at are processed immediately by the software triggers, which are run
+on around 2000 computing nodes using \cpp applications.
 
 Following \lone, there are software \glspl{HLTLabel}.
 The first software trigger, \hltone, performs the full three dimensional \velo track fitting
@@ -106,7 +112,8 @@ $p>5\gev$ and $p_T>0.5\gev$ in 2011; which was relaxed to $p_T>0.3\gev$ in 2012 
 triggering.
 
 The output of \hlttwo is dominated by the \emph{topological} trigger lines, which are designed to
-identify $b$-hadrons decaying into charged tracks using vertex and track information.
+identify $b$-hadrons decaying into charged tracks using vertex and track information consistent
+with the decay topology of a $b$-hadron.
 Vertices formed of two, three and four reconstructed tracks displaced from \glspl{PV} are triggered
 based on the response of a \BBDT~\cite{Gligorov:2012qt}.
 A \BBDT is a Boosted Decision Tree, which are detailed in \Chap{ch:mvas}, whose input and output
