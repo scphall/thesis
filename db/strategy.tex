@@ -16,18 +16,26 @@ to deal with the decay time dimension.
 A scan in mass is performed where the test mass, \mass{t}, is incremented in steps of
 $\tfrac12\sigmam$, where $\sigmam$ is the local mass resolution defined at \mass{t}.
 In this analysis, \sigmam lies in the range $1\lesssim\sigmam\lesssim6\mev$.
-At each \mass{t} a signal region is defined as $|m-\mass{t}|<2\sigmam$ and a sideband, or
-background, region is defined as $3\sigmam<|m-\mass{t}|<(2x+3)\sigmam$, where
-$x$ defines the width of the sideband regions with respect to the signal region.
-The purpose of constructing the two regions is to use the sideband regions to estimate the background
-contribution in the signal window.
+At each \mass{t} a signal and background regions are defined as
+\begin{align}
+  |m-\mass{t}|&<2\sigmam \\
+  \intertext{and}
+  3\sigmam<|m-\mass{t}|&<(2x+3)\sigmam,
+\end{align}
+respectively.
+The width of the sideband region with respect to the signal region is defined by $x$.
+Using two sideband regions, one either side of the signal means the background contribution to the
+signal region can be estimated by assuming that the background is, on average, linear over the
+range of interest.
+A gap of $1\sigmam$ separates the signal and background regions to allow for leakage of signal
+candidates beyond $2\sigmam$.
 
 At each mass point in the search the number of events in the signal region, $n_s$, and the number
-of events in the background events, $n_b$, are counted.
+of events in the background region, $n_b$, are counted.
 If the background is, on average, linear in the local mass region, and if there is no signal
-contribution: $\langle n_s\rangle=\tfrac12\langle n_b\rangle$.
+contribution: $\langle n_s\rangle=\tfrac1x\langle n_b\rangle$.
 However, if there is evidence of signal, then $n_s=s+b$, where $s$ is the
-number of signal events, and $b$ is the background component in the signal region which is
+number of signal events, and $b$ is the background component in the signal region, as
 estimated from the sideband regions.
 Thus, one can construct a likelihood:
 \begin{equation}
@@ -45,14 +53,13 @@ the observed number of events in the signal region.
 %The sole assumption is that the background is locally-linear at all values of \mass{t}.
 
 The likelihood given in \Eq{eq:db:like1} assumes that the background is, on average, exactly
-linear, and therefore that the size of the sideband region is always factor of $x$ larger than the
+linear, and that the sideband region is always factor of $x$ larger than the
 signal region.
 %But, this may not be the case.
-In reality, the sideband region is a not precisely a factor $x$ larger than the signal region, but
-rather some factor $y$.
-The uncertainty between $x$ and $y$, called $\sigma_y$,
-is chosen depending on \mass{t}, and
-accounted for in the likelihood directly, by
+In reality, this is not precisely true, and local deviations mean that the actual scaling factor is
+an unknown $y$, with an uncertainty $\sigma_y$, which is accounted for by
+%is chosen depending on \mass{t}, and
+%accounted for in the likelihood directly, by
 modifying the likelihood function to be
 %The problem with \Eq{eq:db:like1} is that, while $x$ has been chosen, deviations from a linear
 %background distribution mean that the actual sideband size with respect to the signal region is
@@ -69,18 +76,166 @@ modifying the likelihood function to be
 Here, $\mathcal{G}(n, \mu, \sigma)$ is the probability of observing $n$ given a Gaussian
 distribution with a mean, $\mu$, and standard deviation, $\sigma$.
 This modification allows the uncertainty on the background shape to be immediately accounted for in
-the method, meaning that no additional systematic uncertainty needs to be added.
+the method, meaning that no additional systematic uncertainty is required.
 
+%Narrow resonances, falling in the $\Gamma\lesssim5\sigmam$ region are removed:
+%these include the \phii, \jpsi, and \psitwos.
+%The decay \decay{\phi}{\mumu} is removed by excluding dimuon candidates in the range
+%$1000<\mass{\mumu}<1040\mev$.
+%Charmonuim resonances are vetoed using
+%The largest deviations from a locally-linear background are at the $5\%$ level, which is
+%natrually accounted for by setting \
+%Practically, the resonances that must be removed from the background are the \phi, \jpsi, \psitwos
+
+The profile likelihood, $\Lambda$, is defined as
+\begin{equation}
+  \Lambda(s|n_s,n_b) =
+  \frac
+  {\mathcal{L}(s, \hat{b}(s), \hat{y}(s) | n_s, n_b, x)}
+  {\mathcal{L}(\hat{s}, \hat{b}, \hat{y} | n_s, n_b, x)},
+  \label{eq:profilelike1}
+\end{equation}
+where $\hat{s}$, $\hat{b}$, and $\hat{y}$ are chosen to maximize the likelihood; the functions
+$\hat{b}(s)$ and $\hat{y}(s)$ maximize the likelihood for a given $s$.
+The function $-2\ln\big(\Lambda(s|n_s,n_b)\big)$ behaves like a \chisq distribution with one degree
+of freedom.
+%The solutions to these functions can be calculated analytically, with few assumptions made,
+%and thus the likelihood can be minimized with minimal computational power.
+%The profile likelihood can then be formed in the same way as in \Eq{eq:profilelike1} and solved
+%analytically.
+%The test statistic used for discovery is $\Lambda(0)$, where $\hat{s}$ is restricted to the
+%physical region, such that $\hat{s}\geq 0$.
+
+
+\subsection{Searching in the lifetime dimension}
+Sensitivity to the lifetime of the \db, \lifetime{\db}, is introduced by splitting the data at each
+test mass into two regions: a prompt and a displaced region, defined by $\tau<3\sigmat$ and
+$\tau>3\sigmat$ respectively; where \sigmat is defined to be the local decay time resolution.
+The joint likelihood simply the product of the two individual likelihoods:
+\begin{align}
+  \mathcal{L}(n^p_s, n^p_b, n^d_s, n^d_b, x | s^p, b^p, y^p, s^d, b^d, y^d) &=
+  \mathcal{L}(n^p_s, n^p_b, x | s^p, b^p, y^p)\nonumber\\
+  &\quad\times\mathcal{L}(n^d_s, n^d_b, x | s^d, b^d, y^d),
+  \label{eq:db:liketau}
+\end{align}
+where superscripts $p$ and $d$ denote the prompt and displaced regions,
+respectively.
+The combined profile likelihood is:
+\begin{equation}
+  \Lambda_\mathrm{Tot}
+  =
+  \Lambda(s^p|n_s^p,n_b^p)\cdot
+  \Lambda(s^d|n_s^d,n_b^d),
+\end{equation}
+and $-2\ln\big(\Lambda_\mathrm{Tot}\big)$ behaves as a \chisq distribution with two
+degrees of freedom.
+From this information a $p$-value for a given mass, can be calculated
+quantifying how incompatible the signal region is with the null
+hypothesis of zero signal.
+
+The information supplied by the addition of two bins in the lifetime dimension is approximately
+optimal for all \db lifetimes, except for when $\tau\sim3\sigmat$.
+In this case, it is marginally more optimal to include shape information of the background
+distribution from the sidebands; but this introduces
+significantly more complications to the analysis.
+%and there is no reason to believe that the \db has
+%a lifetime $\tau\sim3\sigmat$ \emph{a priori}.
+Therefore background shape information is not used.
+
+
+\subsection[Calculation of $p$-value]
+{Calculation of $\boldsymbol{p}$-value}
+\label{sec:db:pval}
+At each \mass{t}, a $p$-value is calculated using the profile likelihood of the joint likelihood
+given in \Eq{eq:db:liketau}.
+Because there are $\mathcal{O}(1000)$ test masses, each of which is not completely independent the
+look-elsewhere effect must be accounted for.
+To do this the minimum local $p$-value is translated into a global $p$-value an ensemble of toys.
+
+%\bam{CLARIFY}
+After the $p$-value at each \mass{t} is calculated, the region in which the lowest $p$-value
+consistent with zero signal will be isolated and removed from the sample; leaving data which
+which is entirely background.
+This is assuming that there is only one \np particle that can be observed in this analysis.
+The remaining background-like distribution is then turned into a \PDF\ --- where the region that is
+removed is interpolated across --- from which toy datasets can be generated.
+%A conversion from local to global $p$-value can then be calculated by generating ten million toy
+%datasets.
+This procedure is undertaken later, and described more fully then.
+
+Since this method requires the generation of $\mathcal{O}(10^7)$ datasets to probe down to
+$5\stdev$, if the minimum local $p$-value corresponds to less than this, the asymptotic formula
+will be used~\cite{Gross:2010qma}.
+The asymptotic formula uses a few toy datasets to set an upper bound on the conversion of local to
+global minimum $p$-value.
+As shown in \Ref{Davies:1987zz}, this bound is given by
+\begin{equation}
+  P_\mathrm{global} \leq P(\chisq_s > c) + \langle N(c)\rangle,
+  \label{eq:db:asy1}
+\end{equation}
+where $s$ is the number of degrees of freedom of the \chisq, in this case $s=2$.
+The function $N(c)$ returns the number of \emph{upcrossings} of a dataset above the level of $c$,
+where an upcrossing is defined to be when the $p$-value crosses from below the value of
+$c$, to above it.
+The value of $c$ for a given $p$-value is its significance squared.
+Clearly, for large $p$-values, the ability to obtain a reliable value of $N(c)$ will be highly
+dependent on the toy datasets generate, and therefore an approximation is needed.
+Reference~\ref{Gross:2010qma} shows that \Eq{eq:db:asy1} can be approximated to be
+\begin{equation}
+  P_\mathrm{global} \leq P(\chisq_s > c)
+  + \langle N(c_0)\rangle
+  \exp\left(-\frac{c-c_0}{2}\right).
+  \left(\frac{c}{c_0}\right)^{\frac{(s-1)}{2}},
+  \label{eq:db:asy2}
+\end{equation}
+where $c_0$ is the number of upcrossings for a small value of $c$, optimally $c=s-1$.
+Therefore, once $\langle N(c_0)\rangle$ has been determined using a few hundred toy datasets, the
+asymptotic boundary is trivial to calculate.
+This can be used to check the final conversion, and used to calculate the global $p$-value should a
+greater than $5\stdev$ be observed.
+
+
+\subsection{Limit setting}
+Upper limits will be set as a function of \mass{\db} and \lifetime{\db}.
+This requires further modification to the likelihood function to account for the relationship
+between the number of signal events in the prompt and displaced regions for a given value of
+decay time.
+Additional Gaussian terms are added: one to account for the uncertainty in the fraction of
+signal events that are observed in the two lifetime regions, and another to account for the
+uncertainty in the efficiency ratio with respect to the normalization channel.
+The resulting likelihood for a given \mass{\db} and \lifetime{\db} is
+\begin{align}
+  \like\big(n_s^p, n_b^p, n_s^d, n_b^d, x, \tau | \dots\big) &=
+   \like\big(n_s^d, n_b^d, x | \varepsilon s f,b^p,y^p\big) \nonumber\\
+   &\quad\times\like\big(n_s^p, n_b^p, x | \varepsilon s(1-f),b^d,y^d\big)\nonumber\\
+   &\quad\times\mathcal{G}\big(f, \xbar{f}(\tau_\db),\sigma(f)\big)
+   \times\mathcal{G}\big(\varepsilon, \xbar{\varepsilon}(\tau_\db),\sigma(\varepsilon)\big),
+   \label{eq:db:lim}
+\end{align}
+where the fraction of signal events in the prompt region is given by $f$,
+which has an expected value from simulation $\xbar{f}$ and an uncertainty $\sigma(f)$.
+The same nomenclature is used for the efficiency measured relative to the normalization channel,
+$\varepsilon$.
+
+The normalization channel used will be the \sm decay \btokstrmumu, restricted to the region
+$1.1<\qsq<6.0\gevgev$.
+This range is chosen to minimize theoretical uncertainties at low and high \qsq and reduce
+experimental uncertainties by removing the region around the \phii meson which is centred at
+$\qsq\simeq1.04\gevgev$.
+
+
+
+\subsection{Resonant backgrounds}
 In the absence of resonances,
 the dimuon background from the \sm decay \btokstrmumu is expected to be locally-linear
-to less than $1\pc$ over the entire mass range.
-However, then inclusion of resonances can lead to significant departures from linearity, dependent
+to within $1\pc$ over the entire mass range.
+However, the inclusion of resonances can lead to significant departures from linearity, dependent
 upon the resonance's width ($\Gamma$), magnitude, and the value of $x$.
-Table~\ref{tab:db:bkg} lists a number of mesons, $X$, that decay to a dimuon final state and could
+Table~\ref{tab:db:bkg} lists a number of mesons that decay to a dimuon final state and could
 contribute as background to the decay \decay{\Bd}{\Kstarz\mumu}.
 Wide resonances, $\Gamma\gtrsim20\sigmam$, such as the $\rho$,
-are sufficiently wide not as to be problematic even if
-they dominate the local background distribution.
+are sufficiently wide not to be problematic, even if they dominate the local background
+distribution.
 Conversely, narrow resonances where $\Gamma\lesssim5\sigmam$ lead to significant deviations from a
 locally-linear background and must be vetoed.
 Dimuon decays of the \phii, \jpsi, and \psitwos mesons have the highest branching fractions, and
@@ -90,7 +245,7 @@ Intermediate resonances, $5\lesssim\Gamma\lesssim20\sigmam$, are considered on a
 basis since they are only troublesome if they account for a large fraction of the local background.
 For this analysis, these ranges roughly translate to requiring that resonances with $\Gamma<25\mev$
 will be vetoed, and those with $\Gamma>125\mev$ shall be ignored.
-Other resonances given in \Table{tab:db:bkg} are broad and contribute to the dimuon
+Other resonances in \Table{tab:db:bkg} are broad, and contribute to the dimuon
 structures at low mass.
 It is shown in \Ref{Williams:2015xfa} that the local-linearity approximation is accurate to
 \approx$5\pc$ in regions where there may be contributions from wide resonances.
@@ -209,11 +364,15 @@ detector resolution effects; these are shown in \Fig{fig:db:ccbar}.
 After smearing, the \glspl{PDF} are then used to
 calculate the regions around the \jpsi and \psitwos where the
 background is locally linear to better than $5\pc$ for various values of $x$.
-The resulting veto regions which are very similar to those used in
+The resulting veto regions are very similar to those used in
 \Ref{LHCb-CONF-2015-002}, except that the upper boundary of the \psitwos veto is extended to cover
 the $\psi(3770)$.
-All the vetoed regions to remove narrow resonances decaying via \decay{X}{\mumu}, are summarized in
+All the vetoed regions to remove narrow resonances are summarized in
 \Table{tab:db:narrow}.
+
+
+
+
 
 \begin{figure}
   \begin{center}
@@ -251,154 +410,6 @@ All the vetoed regions to remove narrow resonances decaying via \decay{X}{\mumu}
     \end{tabular}
   \end{center}
 \end{table}
-
-%Narrow resonances, falling in the $\Gamma\lesssim5\sigmam$ region are removed:
-%these include the \phii, \jpsi, and \psitwos.
-%The decay \decay{\phi}{\mumu} is removed by excluding dimuon candidates in the range
-%$1000<\mass{\mumu}<1040\mev$.
-%Charmonuim resonances are vetoed using
-
-%The largest deviations from a locally-linear background are at the $5\%$ level, which is
-%natrually accounted for by setting \
-
-%Practically, the resonances that must be removed from the background are the \phi, \jpsi, \psitwos
-
-The profile likelihood, $\Lambda$, is defined as
-\begin{equation}
-  \Lambda(s|n_s,n_b) =
-  \frac
-  {\mathcal{L}(s, \hat{b}(s), \hat{y}(s) | n_s, n_b, x)}
-  {\mathcal{L}(\hat{s}, \hat{b}, \hat{y} | n_s, n_b, x)},
-  \label{eq:profilelike1}
-\end{equation}
-where $\hat{s}$, $\hat{b}$, and $\hat{y}$ are chosen to maximize the likelihood; the functions
-$\hat{b}(s)$ and $\hat{y}(s)$ maximize the likelihood for a given $s$.
-The function $-2\ln\big(\Lambda(s|n_s,n_b)\big)$ behaves like a \chisq distribution with one degree
-of freedom.
-%The solutions to these functions can be calculated analytically, with few assumptions made,
-%and thus the likelihood can be minimized with minimal computational power.
-%The profile likelihood can then be formed in the same way as in \Eq{eq:profilelike1} and solved
-%analytically.
-%The test statistic used for discovery is $\Lambda(0)$, where $\hat{s}$ is restricted to the
-%physical region, such that $\hat{s}\geq 0$.
-
-
-\subsection{Searching in the lifetime dimension}
-Sensitivity to the lifetime of the \db, \lifetime{\db}, is introduced by splitting the data at each
-test mass into two regions: a prompt and a displaced region, defined by $\tau<3\sigmat$ and
-$\tau>3\sigmat$ respectively; where \sigmat is defined to be the local decay time resolution.
-The likelihood for each decay time bin is defined using \Eq{eq:db:like2}, and the joint likelihood is
-simply the product of the two
-individual likelihoods
-\begin{align}
-  \mathcal{L}(n^p_s, n^p_b, n^d_s, n^d_b, x | s^p, b^p, y^p, s^d, b^d, y^d) &=
-  \mathcal{L}(n^p_s, n^p_b, x | s^p, b^p, y^p)\nonumber\\
-  &\quad\times\mathcal{L}(n^d_s, n^d_b, x | s^d, b^d, y^d).
-  \label{eq:db:liketau}
-\end{align}
-In these expressions the superscripts $p$ and $d$ denote the prompt and displaced regions,
-respectively.
-The combined profile likelihood is then the product of the profile likelihoods for the prompt and
-displaced regions in decay time
-\begin{equation}
-  \Lambda_\mathrm{Tot}
-  =
-  \Lambda(s^p|n_s^p,n_b^p)\cdot
-  \Lambda(s^d|n_s^d,n_b^d).
-\end{equation}
-Asymptotically, $-2\ln\big(\Lambda_\mathrm{Tot}\big)$ behaves as a \chisq distribution with two
-degrees of freedom.
-
-
-
-The information supplied by the addition of two bins in the lifetime dimension is approximately
-optimal for all \db lifetimes, except for when $\tau\sim3\sigmat$.
-In this case, it is marginally more optimal to include shape information of the background
-distribution from the sidebands; but this introduces
-significantly more complications to the analysis.
-%and there is no reason to believe that the \db has
-%a lifetime $\tau\sim3\sigmat$ \emph{a priori}.
-Therefore background shape information is not used.
-
-
-\subsection[Calculation of $p$-value]
-{Calculation of $\boldsymbol{p}$-value}
-\label{sec:db:pval}
-At each \mass{t}, a $p$-value is calculated using the profile likelihood of the joint likelihood
-given in \Eq{eq:db:liketau}.
-Because there are $\mathcal{O}(1000)$ test masses, each of which is not completely independent the
-look-elsewhere effect must be accounted for.
-To do this the minimum local $p$-value is translated into a global $p$-value using a trials factor
-which is calculated using an ensemble of toys.
-
-%\bam{CLARIFY}
-After the $p$-value at each \mass{t} is calculated, the region in which the lowest $p$-value
-consistent with zero signal will be isolated and removed from the sample; leaving data which
-which is entirely background.
-This is assuming that there is only one \np particle that can be observed in this analysis.
-The remaining background-like distribution is then turned into a \PDF\ --- where the region that is
-removed is interpolated across --- from which toy datasets can be generated.
-A conversion from local to global $p$-value can then be calculated by generating ten million toy
-datasets.
-This procedure is undertaken later, and described more fully then.
-
-Since this method requires the generation of $\mathcal{O}(10^7)$ datasets to probe down to
-$5\stdev$, if the minimum local $p$-value corresponds to less than this the asymptotic formula
-will be used~\cite{Gross:2010qma}.
-The asymptotic formula uses a few toy datasets to set an upper bound on the conversion of local to
-global minimum $p$-value.
-As shown in \Ref{Davies:1987zz}, this bound is given by
-\begin{equation}
-  P_\mathrm{global} \leq P(\chisq_s > c) + \langle N(c)\rangle,
-  \label{eq:db:asy1}
-\end{equation}
-where $s$ is the number of degrees of freedom of the \chisq, in this case $s=2$.
-The function $N(c)$ gives the number of \emph{upcrossings} of a dataset above the level of $c$,
-where an upcrossing is defined as the point where the $p$-value crosses from below the value of
-$c$, to above it.
-The value of $c$ for a given $p$-value is its significance squared.
-Clearly, for large $p$-values, the ability to obtain a reliable value of $N(c)$ will be highly
-dependent on the datasets used, and therefore an approximation is used.
-Reference~\ref{Gross:2010qma} shows that \Eq{eq:db:asy1} can be approximated to be
-\begin{equation}
-  P_\mathrm{global} \leq P(\chisq_s > c)
-  + \langle N(c)\rangle\left(\frac{c}{c_0}\right)^{\frac12(s-1)}\exp\left(-\frac{c-c_0}{2}\right).
-  \label{eq:db:asy2}
-\end{equation}
-Therefore, once $\langle N(c)\rangle$ has been determined using a few hundred toy datasets, the
-asymptotic boundary is trivial to calculate.
-This can be used to check the final conversion, and used to calculate the global $p$-value should a
-greater than $5\stdev$ be observed.
-
-
-\subsection{Limits}
-Upper limits will be set as a function of \mass{\db} and \lifetime{\db}.
-This requires further modification to the likelihood function to account for the relationship
-between the number of signal events in the prompt and displaced regions for a given value of
-decay time.
-An additional Gaussian terms are added: one to account for the uncertainty in the fraction of
-signal events that are observed in the two lifetime regions, and another to account for the
-uncertainty in the efficiency ratio with respect to the normalization channel.
-The resulting likelihood for a given \mass{\db} and \lifetime{\db} is given by:
-\begin{align}
-  \like\big(n_s^p, n_b^p, n_s^d, n_b^d, x, \tau | \dots\big) &=
-   \like\big(n_s^d, n_b^d, x | \varepsilon s f,b^p,y^p\big) \nonumber\\
-   &\quad\times\like\big(n_s^p, n_b^p, x | \varepsilon s(1-f),b^d,y^d\big)\nonumber\\
-   &\quad\times\mathcal{G}\big(f, \xbar{f}(\tau_\db),\sigma(f)\big)
-   \times\mathcal{G}\big(\varepsilon, \xbar{\varepsilon}(\tau_\db),\sigma(\varepsilon)\big),
-   \label{eq:db:lim}
-\end{align}
-where the fraction of signal events in the prompt region is given by $f$,
-which has an expected value from simulation $\xbar{f}$ and an uncertainty $\sigma(f)$.
-The same nomenclature is used for the efficiency measured relative to the normalization channel,
-$\varepsilon$.
-
-The normalization channel used will be the \sm decay \btokstrmumu, restricted to the region
-$1.1<\qsq<6.0\gevgev$.
-This range is chosen to minimize theoretical uncertainties at low and high \qsq and reduce
-experimental uncertainties by removing the region around the \phii meson which has a central value
-of mass in \qsq of \approx$1.04\gevgev$.
-
 
 
 

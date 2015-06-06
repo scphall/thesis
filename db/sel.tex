@@ -26,7 +26,7 @@ Studies are also performed using simulated events of the decays \btokstrmumu and
   \end{center}
 \end{table}
 
-Reconstructed decays of \btokstrdb are required to have been selected by the \lone triggers for
+Reconstructed decays of \btokstrdb that must be selected by the \lone triggers for
 muon, dimuon, or hadronic candidates.
 Subsequent trigger levels require that the decay has a topology consistent with a $B$-meson
 decaying in to a multi-body final state which includes muons.
@@ -41,7 +41,7 @@ backgrounds di-$b$-hadron backgrounds.
 Since the \db could be long lived, its decay vertex can lie downstream of the \Bd vertex, and could
 fly far enough to leave acceptance of the \velo before it decays.
 It is therefore wise to consider different \emph{track types}.
-For most \lhcb analyses, the only appropriate tracks to use are \emph{long} tracks, which
+For most \lhcb analyses, the only appropriate tracks to use are \emph{long} tracks --- as
 have been used implicitly throughout this thesis.
 Long tracks are fitted using hits in the tracking stations T1--3, the \velo, and can use \ttracker
 information.
@@ -57,8 +57,8 @@ number for downstream tracks is \approx$2.5\pc$; due to the boost of a light obj
 \Bd.
 However, the trigger efficiency for this sample is \approx$45\pc$ and $8\pc$ for long and
 downstream candidates respectively.
-There is therefore a factor two more long-track candidates for the $250\mev$ $100\ps$ sample; which
-is a factor of a few hundred for more massive, or shorter lifetime, dark bosons.
+There is therefore a factor two more long-track candidates for the $250\mev$ $100\ps$ sample.
+This is factor grows to a few hundred as the dark boson mass increases or lifetime decreases.
 For this reason, this analysis deals only with \db candidates formed from long-track muons.
 
 \begin{figure}
@@ -88,16 +88,17 @@ For this reason, this analysis deals only with \db candidates formed from long-t
 
 The offline selection criteria applied in the stripping are outlined in \Tab{tab:stripping}.
 This table lists the variables \ProbNN{\pi} and \ProbNN{K} which are \MVA algorithms
-giving a response between zero and one, quantifying how pion or kaon like a particle is, respectively.
-The full decay chain \btokstrdb and \dbtomumu is reconstructed using a fit in which the \Bd mass is
-constrained to its known value~\cite{PDG2014}.
-All references to $m(\db)$, $m(\Kstar)$ or $\tau(\db)$ are to the values after this vertex fit
-has been performed.
+giving a probability-like response between zero and one, quantifying how pion or kaon like a
+particle is.
+The full decay chain \decay{\Bd}{\Kstarz\db(\to\mumu)} is reconstructed using a fit in which the
+\Bd mass is constrained to its known value~\cite{PDG2014}.
+All references to $\mass{\db}$, $\mass{\kpi}$ or $\lifetime{\db}$ are to the values after this
+vertex fit has been performed.
 
 \begin{table}[ht!]
   \caption[Stripping selection]
   {
-    Selection criteria applied to signal candidates.
+    Selection criteria applied to signal candidates in the stripping.
     Criteria definitions are defined in text.
     While the \Bd mass is constrained in the fit, the selection makes a cut on the unconstrained
     mass.
@@ -156,7 +157,7 @@ inconsistent with the decay  \decay{\Kstarz}{\kpi}.
 Firstly, the \kpi invariant mass must
 within $100\mev$ of the known $K^*(892)^0$ mass, which has been measured to be
 $(895.81\pm0.19)\mev$~\cite{PDG2014}.
-\pid constraints are also applied to each \Kstar daughter: $\dllkpi(\Kp)>-5$, $\dllkpi(\pip)<25$;
+\pid constraints are applied to each \Kstar daughter: $\dllkpi(\Kp)>-5$, $\dllkpi(\pip)<25$;
 and to ensure that the kaon candidate is more consistent with a kaon than the pion candidate a cut on the
 difference in \glspl{DLL} is also applied: $\dllkpi(\Kp)-\dllkpi(\pip)>10$.
 
@@ -169,14 +170,14 @@ $436<m_{\mumu}<490\mev$.
 Since the \db can be displaced from the \Bd decay vertex, a potential background for the decay
 \dbtomumu is from a \mumu pair directly from a \pv.
 This is suppressed by requiring that the transverse flight distance (\FDT) of the \db vertex, with
-respect to the \pv is greater than $0.1\mm$.
+respect to the \pv, is greater than $0.1\mm$.
 
 The high branching fraction of \decay{\Bd}{\jpsi(\to\mumu)\Kstarz} means that there is also
 contamination from decays where a hadron is misidentified as a muon, and vice versa.
 This background can be suppressed by requiring that neither of the \Kstarz daughters satisfy the
-\ismuon criteria, the effect of this cut is shown in \Fig{fig:db:doublemisid}, which shows the
-invariant mass of the hadron-muon pair before and after the requirement that the hadrons fail the
-\ismuon criterion.
+\ismuon criteria.
+Figure~\ref{fig:db:doublemisid}, shows the invariant mass of the hadron-muon pair before and after
+the requirement that the hadrons fail the \ismuon criterion.
 A summary of all preselection cuts is shown in \Tab{tab:db:presel}.
 
 \begin{figure}
@@ -238,10 +239,10 @@ is for a given set of variables.
 For the case of this analysis, it is important that the \BDT does not bias the sample towards a
 given mass and
 lifetime, which makes the \uBDT ideal for this analysis.
-That being said, the uBoost algorithm should not be used at the expense of the performance of the
-\BDT.
-The \uBDT algorithm is seen to outperform the AdaBoost algorithm in this case,
-and therefore its use is justified.
+%That being said, the uBoost algorithm should not be used at the expense of the performance of the
+%\BDT.
+%The \uBDT algorithm is seen to outperform the AdaBoost algorithm in this case,
+%and therefore its use is justified.
 
 A \uBDT is trained using a signal-proxy from simulated events and background taken from the upper
 \Bd mass sideband where the \Bd candidate has a mass of over $150\mev$ above the nominal \Bd mass.
@@ -254,7 +255,8 @@ mass of the $P^0$ evidenced in the Hyper-\CP experiment~\cite{Park:2005eka}.
 %sufficiently long for there to be a range of lifetimes in the signal-proxy sample.
 %Figure~\ref{fig:db:bdtflat} shows the effect of the uniform boosting, and that the efficiency for
 %all masses and lifetimes are approximately flat.
-It is observed that the response of a \uBDT cut does result in a uniform signal efficiency in both
+It is observed that the response after a \uBDT selection does result in a uniform signal efficiency
+in both
 the mass and lifetime distributions; this is shown in \Fig{fig:db:bdtflat}.
 
 \begin{figure}
@@ -307,18 +309,18 @@ The optimal working point varies from sample to sample due to the fact that the 
 depends on $(m,\tau)$.
 However, the optimal point in the prompt case is approximately $\mathrm{uBDT}>0.15$ for all samples, a
 working point that
-is approximately $85\pc$ efficient by constructing.
-At this point in the displaced region, there is an estimated zero background.
+is approximately $85\pc$ efficient by construction.
+For this efficiency there os am estimated zero background in for a given value of \mass{\db}.
 This point was calculated using a value of $\sigma_\mathrm{p}=5$, \Eq{eq:db:punzi}, although the
 result is seen to be insensitive to its exact value.
 
-While the \uBDT does suppress the combinatorial background, some will still remain.
-The contribution of combinatorial background must be assessed to ensure that it is not a problem.
-Using \Bd candidates that fall above the \Bd mass peak where the contribution is purely
-combinatorial background, an idea of the distribution of \db candidates from random combinations of
-particles can be assessed.
-An analysis reveals that there is an average of \approx$2$ and \approx$0.2$ events in a signal
-window (defined using $\pm2\sigmam$) in the prompt and displaced regions, respectively.
+%While the \uBDT does suppress the combinatorial background, some will still remain.
+%The contribution of combinatorial background must be assessed to ensure that it is not a problem.
+%Using \Bd candidates that fall above the \Bd mass peak where the contribution is purely
+%combinatorial background, an idea of the distribution of \db candidates from random combinations of
+%particles can be assessed.
+%An analysis reveals that there is an average of \approx$2$ and \approx$0.2$ events in a signal
+%window (defined using $\pm2\sigmam$) in the prompt and displaced regions, respectively.
 
 
 %This is done using the following
