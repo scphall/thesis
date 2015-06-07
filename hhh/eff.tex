@@ -51,11 +51,14 @@ unnecessary.
     \includegraphics[width=0.48\textwidth]{pid_Kplus}
     \includegraphics[width=0.48\textwidth]{pid_piplus}\\
     \includegraphics[width=0.48\textwidth]{pid_piminus}
+    \includegraphics[width=0.48\textwidth]{pid_mu}
     \caption[Effect of resampling PID variables in simulation]
     {
-      The effect of \pid resampling for simulated tracks using pure samples of particles.
+      The effect of \pid resampling for simulated tracks using pure samples of particles for kaons
+      and pions.
       There is marked improvement in the similarity of the (black circles) \btojpsikpipi data and
       simulated events before (red line) resampling and after (red squares).
+      Muon candidates need not be resampled since muon \pid is well described in simulation.
       %\bam{MUON \pid PLOT}
     }
     \label{fig:hhh:pid}
@@ -146,8 +149,11 @@ As there is no available physics model for the decay \btophikmumu, simulated eve
 using a phasespace model.
 These models introduce systematic uncertainties, which are discussed in \Sec{ssec:kpipi:syst} and
 \Sec{ssec:phik:syst}.
-The efficiency for each \qsq bin is shown in \Fig{fig:hhh:effs}.
-
+The efficiencies for signal decays in each \qsq bin are shown in \Fig{fig:hhh:effs}.
+Reliable physics models exist for the normalization channels, which have efficiencies measured to
+be $\varepsilon(\btopsitwosk)=(0.41\pm0.01)\pc$ and $\varepsilon(\btojpsiphik)=(2.11\pm0.01)\%$
+the inefficiency of the former is due to the soft pions from the \psitwos decay failing \pt
+requirements in the stripping.
 
 \begin{figure}[t]
   \begin{center}
