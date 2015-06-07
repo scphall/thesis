@@ -35,8 +35,8 @@ the fitted distribution overlayed.
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.48\textwidth]{norm_channel}
-    \caption[Fit to the normalization channel, \btokstrmumu in the range $1.1<\qsq<6.0\gevgev$]
+    \includegraphics[width=0.6\textwidth]{norm_channel}
+    \caption[Fit to the normalization channel, \btokstrmumu for $1.1<\qsq<6.0\gevgev$]
     {
       Fit to the invariant mass spectrum of the \Bd candidates in selected data in the range
       $1.1<\qsq<6.0\gevgev$.
@@ -74,7 +74,8 @@ unity with about 5--10\pc precision.
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.48\textwidth]{bdtEffRatio}
-    \caption{
+    \caption[Efficiency ratios]
+    {
       Ratio of the efficiencies of the \bdt selection for a range of \qsq bins, as used in the SM
       \btokstrmumu analysis, with respect to the efficiency for \decay{\Bd}{\jpsi\Kstarz}.
       Data and simulation are shown to be in good agreement.
@@ -135,11 +136,10 @@ The unblinded distribution in $m_{\mumu}$ is shown in \Fig{fig:db:mumu}.
 Using the statistical method described in \Sect{sec:db:strategy} the following ranges in \mass{t}
 are scanned:
 \begin{align*}
-  253.4 &< \mass{t} < \pz369.5 \mev \\
-  574.5 &< \mass{t} < \pz906.5 \mev \\
-  1136.0 &< \mass{t} < 2813.0 \mev \\
-  3246.5 &< \mass{t} < 3576.5 \mev \\
-  \intertext{and}
+  253.4 &< \mass{t} < \pz369.5 \mev, \\
+  574.5 &< \mass{t} < \pz906.5 \mev, \\
+  1136.0 &< \mass{t} < 2813.0 \mev, \\
+  3246.5 &< \mass{t} < 3576.5 \mev, \\
   3796.0 &< \mass{t} < 4356.0 \mev.
 \end{align*}
 Values of \mass{t} do not reach threshold boundaries because of the widths of the sidebands.
@@ -158,6 +158,25 @@ excellent agreement for local $p$-values less than about $10^{-4}$.
 The histogram converts the local $p$-value to a global $p$-value of $0.63$, equivalent to a shift
 in significance of $2.9\stdev$ to $0.48\stdev$.
 These results show no evidence for a new dark boson in the mass ranges given above.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{mxpdf}
+    \includegraphics[width=0.48\textwidth]{pvalConversion}
+    \caption[dimuon mass distribution and $p$-value calculation]
+    {
+      Invariant mass distributions of the dimuon pair are shown on the left,
+      prompt and displaced candidates are black and grey points, respectively.
+      Chebychev polynomials fitted to the data are shown as solid blue lines.
+      The red region indicates $|m_{t}-4285.0|<5\sigma$ ($x=1$ in this region).
+      On the right is the result of running the method on $1.5\e{-7}$ toy datasets, used to convert
+      the local $p$-value ($3.6\e{-3}$) to a global one (0.63), this conversion is indicated by the
+      blue dashed line.
+      The result of the asymptotic formula is shown by the red dashed line.
+    }
+    \label{fig:db:mumu}
+  \end{center}
+\end{figure}
 
 %253.4 -> 369.5
 %574.5 -> 906.5
@@ -189,17 +208,6 @@ These results show no evidence for a new dark boson in the mass ranges given abo
 %Figure~\ref{fig:db:mmumu} also shows this cumulative distribution of minimum local $p$-values from
 %$1.5\e{7}$ datasets along with the asymptotic expectation~\cite{Gross:2010qma}.
 
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.48\textwidth]{mxpdf}
-    \includegraphics[width=0.48\textwidth]{pvalConversion}
-    \caption[]
-    {
-      %Invariant mass of dimuon pairs from the selection
-    }
-    \label{fig:db:mmumu}
-  \end{center}
-\end{figure}
 
 
 %Scanning values of \mass{t} in the ranges:
