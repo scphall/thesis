@@ -4,17 +4,17 @@ This search for a new dark boson is done blindly to ensure that no bias is intro
 course of the analysis.
 The data is unblinded in stages to ensure that the selection is behaving as expected on real data.
 
-Before any unblinding, the selection is checked using selected candidates
-consistent with the decay \decay{\Bd}{\jpsi\Kstarz}.
-The selection applied in the \sm analysis of \btokstrmumu, as described in
-\Ref{LHCb-CONF-2015-002}, yields $320\,000$ candidate decays.
-Using the selection from \Sect{sec:db:sel} and approximately \approx$260\,000$
-\decay{\Bd}{\jpsi\Kstarz} candidates remain.
-Therefore only \approx$10\%$ fewer events in this selection, which is not surprising
-considering this search is for a much rarer process than \decay{\Bd}{\Kstarz\mumu} in the \sm, and
-therefore selection requirements are likely to be tighter.
+%Before any unblinding, the selection is checked using selected candidates
+%consistent with the decay \decay{\Bd}{\jpsi\Kstarz}.
+%The selection applied in the \sm analysis of \btokstrmumu, as described in
+%\Ref{LHCb-CONF-2015-002}, yields $320\,000$ candidate decays.
+%Using the selection from \Sect{sec:db:sel} and approximately \approx$260\,000$
+%\decay{\Bd}{\jpsi\Kstarz} candidates remain.
+%Therefore only \approx$10\%$ fewer events in this selection, which is not surprising
+%considering this search is for a much rarer process than \decay{\Bd}{\Kstarz\mumu} in the \sm, and
+%therefore selection requirements are likely to be tighter.
 
-Selected \decay{\Bd}{\jpsi\Kstarz} events are also used to check that the selection was not biased
+Selected \decay{\Bd}{\jpsi\Kstarz} events are used to check that the selection was not biased
 based on neither the year, nor the polarity of the \lhcb magnet.
 No bias is observed, in fact
 efficiencies for the \uBDT are observed to be consistent to the $10^{-4}$ level in all four regions.
@@ -142,9 +142,11 @@ are scanned:
   3246.5 &< \mass{t} < 3576.5 \mev, \\
   3796.0 &< \mass{t} < 4356.0 \mev.
 \end{align*}
-Values of \mass{t} do not reach threshold boundaries because of the widths of the sidebands.
+Values of \mass{t} do not reach threshold boundaries because of the sidebands extending in either
+direction.
 The minimum local $p$-value is found to be $3.6\e{-3}$ at $m_{t}^\mathrm{min} = 4285.0\mev$.
 
+The look-elsewhere effect must be considered.
 To convert the $p$-value to a global one, a \PDF is fit to the \mass{\mumu} distribution of the
 prompt and displaced \btokstrdb candidates that lie outside of the vetoed regions, and outside of
 the signal region centred at $m_t^\mathrm{min}$.
@@ -168,11 +170,12 @@ These results show no evidence for a new dark boson in the mass ranges given abo
       Invariant mass distributions of the dimuon pair are shown on the left,
       prompt and displaced candidates are black and grey points, respectively.
       Chebychev polynomials fitted to the data are shown as solid blue lines.
-      The red region indicates $|m_{t}-4285.0|<5\sigma$ ($x=1$ in this region).
+      The red region indicates $|m_{t}-4285.0|<5\sigmam$ ($x=1$ in this region).
       On the right is the result of running the method on $1.5\e{-7}$ toy datasets, used to convert
       the local $p$-value ($3.6\e{-3}$) to a global one (0.63), this conversion is indicated by the
       blue dashed line.
-      The result of the asymptotic formula is shown by the red dashed line.
+      The result of the asymptotic formula is shown by the red dashed line, and is seen to be an
+      excellent approximation of the true distribution.
     }
     \label{fig:db:mumu}
   \end{center}
@@ -285,7 +288,7 @@ Systematic uncertainties must be assessed in order to set limits.
 Sources of systematic uncertainties are from:
 the ratio of efficiencies $\varepsilon(\btokstrdb)/\varepsilon(\btokstrmumu)$;
 the definition of prompt and displaced regions;
-and the uncertainty on the \sm \btokstrmumu normalization yield.
+and the uncertainty on the \btokstrmumu branching fraction in the range $1.0<\qsq<6.0\gevgev$.
 
 The efficiency ratio $\varepsilon(\btokstrdb)/\varepsilon(\btokstrmumu)$ is approximately one, by
 construction, for each mass at zero lifetime.

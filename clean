@@ -23,10 +23,11 @@ else
   echo "Clean a specific subdirectory and make ready for remaking"
 fi
 
-if [ ${!#} = "m" ] || [ ${!#} = "make" ];
-then
-  make
-fi
+#if [ ${!#} = "m" ] || [ ${!#} = "make" ];
+#then
+  #make
+#fi
+make
 
 
 
