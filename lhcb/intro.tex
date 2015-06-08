@@ -1,22 +1,24 @@
 \section{The LHCb detector}
 
-Before introducing the \lhcb detector, it is helpful to first define a Cartesian coordinate system.
+Before introducing the \lhcb detector, it is helpful to first define the Cartesian coordinate
+system around which the \lhcb detector is built.
 The $z$ direction is defined by the \lhc beam pipe, where the $pp$ interaction point is located
 at $z=0$, and the \lhcb detector extends in the positive $z$ direction.
-Often, the terms \emph{upstream} and \emph{downstream} are useful to refer to being in the
+Often, the terms \emph{upstream} and \emph{downstream} are used to refer to
 negative or positive $z$ direction, respectively.
 An vector originating at the interaction point has an angle $\theta$ with respect to the $z$ axis.
-The $x$ coordinate defines the horizontal direction, and $y$ is vertical.
+The $x$- and $y$-axes define the horizontal and vertical directions, respectively.
 
 The \lhcb detector is a single arm forward spectrometer, reminiscent of a fixed target experiment,
 with an acceptance of $1.8<\eta<4.9$, where pseudorapidity defined as
 \begin{equation}
-  \eta = -\log\left[\tan\left(\frac\theta2\right)\right].
+  \eta = -\ln\left[\tan\left(\frac\theta2\right)\right].
 \end{equation}
-This configuration was chosen because in hadronic interactions \bbbar pairs are predominantly
+A small angular acceptance is used, because
+in hadronic interactions \bbbar pairs are predominantly
 produced with momentum vectors aligned close to the beam line.
 Figure~\ref{fig:lhcb:bbbar} shows the $\theta$ distribution of the \bquark and \bquarkbar quarks
-produced in a $pp$ interaction at $8\tev$.
+produced in simulated \lhc collisions, with a centre-of-mass energy of $8\tev$.
 
 \begin{figure}
   \begin{center}
@@ -59,23 +61,23 @@ produced in a $pp$ interaction at $8\tev$.
 %calorimeters, which are used for triggering; and muon stations which are used for identifying and
 %triggering muons.
 
-The analyses included in this thesis deal exclusively with charged particle final states.
-A charged particle leaving the interaction region is measured with the tracking system, which
+%The analyses included in this thesis deal exclusively with charged particle final states.
+A trajectory of a charged particle leaving the interaction region is measured with the tracking
+system, which
 consists of a vertex detector and four planar tracking stations.
 Part of the detector volume is immersed in a magnet field, provided by a large conventional magnet
 with an integrated field strength of $4\,\mathrm{Tm}$.
 This bends particles in the $x$ direction, providing information about charge and, in conjunction
 with the tracking system, momentum.
-Two Cherenkov detectors are used for offline particle identification, allowing \lhcb to distinguish
+Two Cherenkov detectors are used for offline \pid, allowing \lhcb to distinguish
 between, for example, pions and kaons.
 Further downstream of the tracking systems is the calorimetry system, which is primarily used for
 triggering; but is also used for some particle identification.
-The final subdetector system that a particle might traverse is the muon system.
-This consists of five stations --- which are only be penetrated by the most energetic muons --- and
-is used for tracking, triggering, and \pid.
+The final subdetector system that a particle might traverse is the muon system; which
+consists of five stations, and is used for muon tracking, triggering, and \pid.
 Figure~\ref{fig:lhcb:lhcb} is a schematic diagram of the \lhcb detector, indicating the coordinate
 system and subdetector modules.
-The following sections provide further information about the \lhcb detector.
+The following sections provide further information about \lhcb subdetectors.
 
 
 \begin{figure}
