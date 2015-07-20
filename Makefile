@@ -35,8 +35,8 @@ $(PDFDIR)/%.pdf: %/*.tex
 	xindy -L english -C utf8 -I xindy -M \
 		$(OUTDIR)/$* -t $(OUTDIR)/$*.glg \
 		-o $(OUTDIR)/$*.gls $(OUTDIR)/$*.glo
-	$(LATEX) --output-directory=$(OUTDIR) $(OUTDIR)/$*
-	$(LATEX) --output-directory=$(OUTDIR) $(OUTDIR)/$*
+	#$(LATEX) --output-directory=$(OUTDIR) $(OUTDIR)/$*
+	#$(LATEX) --output-directory=$(OUTDIR) $(OUTDIR)/$*
 	cp -f $(OUTDIR)/$*.pdf $(PDFDIR)/.
 	mv -f $(OUTDIR)/$*.pdf $(PDFDIR)/recent.pdf
 

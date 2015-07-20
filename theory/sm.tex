@@ -93,10 +93,13 @@ There is also a single scalar field in the \sm: the Higgs boson.
   \caption[Fundamental fermions of matter]{
     Fundamental fermions of matter.
     In the \sm each has a corresponding anti-particle of opposite charge.
-    All values are taken from Ref.~\protect\cite{PDG2014}.
+    All values are taken from Ref.~\protect\cite{PDG2014}, where the quark masses are calculated
+    according to the $\overline{\mathrm{MS}}$ renormalization scheme.
+    It is known that neutrinos have non-zero masses, but their precise masses are unknown.
   }
   \label{tab:sm:particles}
   \begin{center}
+    \renewcommand\arraystretch{1.1}
     \begin{tabular}{ccrccrc}
       \toprule
       & \multicolumn{3}{c}{Leptons}
@@ -106,11 +109,14 @@ There is also a single scalar field in the \sm: the Higgs boson.
     & Particle & \cellc{Mass}  & Charge\\
       \midrule
       \multirow{2}{*}{1} & \ep   & $0.511\mev$ & $-1$ & \uquark & $2.3\mev$     & $+\frac{2}{3}$ \\
-      & \neue & $0\phantom{\mev}$  &  $\phantom{-}0$ & \dquark & $4.8\mev$      & $-\frac{1}{3}$ \\
+      & \neue &  &  $\phantom{-}0$ & \dquark & $4.8\mev$      & $-\frac{1}{3}$ \\
+      %& \neue & $0\phantom{\mev}$  &  $\phantom{-}0$ & \dquark & $4.8\mev$      & $-\frac{1}{3}$ \\
       \multirow{2}{*}{2} & \mup   & $0.105\gev$ & $-1$ & \cquark & $1.275\gev$  & $+\frac{2}{3}$ \\
-      & \neum & $0\phantom{\mev}$  &  $\phantom{-}0$ & \squark & $95.0\mev$     & $-\frac{1}{3}$ \\
+      & \neum &  &  $\phantom{-}0$ & \squark & $95.0\mev$     & $-\frac{1}{3}$ \\
+      %& \neum & $0\phantom{\mev}$  &  $\phantom{-}0$ & \squark & $95.0\mev$     & $-\frac{1}{3}$ \\
       \multirow{2}{*}{3} & \taup   & $1.777\gev$ & $-1$ & \tquark & $173\gev$   & $+\frac{2}{3}$ \\
-      & \neut & $0\phantom{\mev}$  &  $\phantom{-}0$ & \bquark & $4.18\gev$     & $-\frac{1}{3}$ \\
+      & \neut &  &  $\phantom{-}0$ & \bquark & $4.18\gev$     & $-\frac{1}{3}$ \\
+      %& \neut & $0\phantom{\mev}$  &  $\phantom{-}0$ & \bquark & $4.18\gev$     & $-\frac{1}{3}$ \\
       \bottomrule
     \end{tabular}
   \end{center}
@@ -236,7 +242,7 @@ consistent with observations.
     {
       The shape of the Higgs potential, $V(\Phi)$, for the simple case of $\Phi=\phi_1+i\phi_2$ and
       $\mu^2<0$ and $\lambda>0$.
-      Spontaneous symmetry breaking occurs when the vacuum settles in a minima, and this choice of
+      Spontaneous symmetry breaking occurs when the vacuum settles in a minimum, and this choice of
       direction breaks the symmetry of the gauge.
       A section of the potential is not shown, to convey the shape of the potential.
     }
@@ -282,7 +288,7 @@ After \SSB the Lagrangian becomes
   = - m_\ell \big(\xbar\ell_L\ell_R + \xbar\ell_R\ell_L\big)%\cdot
   \left(1 + \frac{H}{v}\right)
 \end{align}
-and the lepton masses
+and the \added{charged} lepton masses
 \begin{equation}
   m_\ell = \frac{v}{\sqrt{2}}g_\ell
   \label{eq:leptonmass}
@@ -322,9 +328,14 @@ Similar to lepton masses, in \Eq{eq:leptonmass}, quark masses are defined as
   m_{ij}^u &= \frac{v}{\sqrt{2}}y_{ij}^u \nonumber\\
   m_{ij}^d &= \frac{v}{\sqrt{2}}y_{ij}^d.
 \end{align}
-Thus far, the flavour basis has been used, but it is now more convenient to change to the mass
+\replaced{
+  Thus far, the flavour basis has been used, but it is now more convenient to change to the mass
+basis, in which the matrices $m^{u,d}$ are diagonal, this is done
+}{
+  Thus far, the flavour basis has been used, but it is now more convenient to change to the mass
 basis, in which the matrices $m^{u,d}$ are diagonal., it is more convenient to change to a basis in which the matrix $m^q$
-is diagonal, using the rotation matrices $V_L$ and $V_R$, such that
+is diagonal,
+} using the rotation matrices $V_L$ and $V_R$, such that
 \begin{align}
   {m_{il}^{u}}^\prime &=  \big(V_L^{u\dagger}\big)_{ij} m_{jk}^u\big(V_R^u\big)_{kl} \nonumber\\
   {m_{il}^{d}}^\prime &=  \big(V_L^{d\dagger}\big)_{ij} m_{jk}^d\big(V_R^d\big)_{kl}.
