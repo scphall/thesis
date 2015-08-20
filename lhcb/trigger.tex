@@ -20,7 +20,9 @@ The flow of data through the trigger is shown in Fig.~\ref{fig:lhcb:trigger}.
   \end{center}
   \caption[LHCb trigger sequence in 2012]
   {
-    The flow of the \lhcb trigger system in 2012.
+    The flow of the \lhcb trigger system in 2012,
+    \added{where the $20\pc$ of events that are deferred are
+    processed during machine down-time and proton acceleration stages.}
   }
   \label{fig:lhcb:trigger}
 \end{figure}
@@ -77,9 +79,9 @@ Thresholds for \lone trigger lines used in this thesis are given in \Tab{tab:lhc
 
 Deferred triggering was introduced in 2012.
 It diverts around $20\pc$ of events that pass the \lone trigger to hard disks for processing when
-the \lhc is not colliding protons.
-The $80\%$ of events accepted at are processed immediately by the software triggers, which are run
-on around 2000 computing nodes using \cpp applications.
+the \lhc is not colliding protons; this is shown in \Fig{fig:lhcb:trigger}.
+The remaining $80\pc$ of events are processed immediately by the software triggers, which are
+run on around 2000 computing nodes using \cpp applications.
 
 Following \lone, there are software \glspl{HLTLabel}.
 The first software trigger, \hltone, performs the full three dimensional \velo track fitting
@@ -95,8 +97,8 @@ For trigger lines requiring muons, each \velo track is extrapolated to a window 
 station.
 The size of this window is narrow in the non-bending direction but wide enough to accommodate a $6\gev$
 muon in $x$.
-If there is a deposit in this window then the \velo track, is extrapolated to the cluster and if
-there are hits consistent with this track in any of the muon stations M2, M4 or M5 the track is
+If there is a deposit in this window then the \velo track is extrapolated to the cluster and if
+there are hits consistent with this track in any of the muon stations M2, M4 or M5, the track is
 tagged as belonging to a muon.
 The \velo tracks that are selected by IP or the muon system are extrapolated (or interpolated) into
 the \intr and \ot.
@@ -124,14 +126,14 @@ This approach is not only fast, but $9\pc$ more efficient than using a cuts base
 
 Events that are selected are flagged as either
 Triggered on signal \tos, or
-Triggered independently of signal \tis --- the latter meaning that the event was triggered by
+Triggered independently of signal \tis~--- the latter meaning that the event was triggered by
 a different particle in the event.
 This allows the analyst the ability to calculate an estimate of the trigger efficiency in data
 using the {\tt TISTOS} method.
 One can get an approximate trigger efficiency using
 \begin{equation}
   \varepsilon_\mathrm{trig}^\mathtt{TISTOS} =
-  \frac{N_\mathtt{TIS}}{N_\mathtt{TIS\&TOS}}.
+  \frac {N_\mathtt{TIS\&TOS}} {N_\mathtt{TIS}}.
 \end{equation}
 This can be useful because while simulated events can contain events which were not triggered, this
 is, obviously, not the case for data.

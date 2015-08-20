@@ -2,17 +2,17 @@ The analyses detailed in \Chap{ch:dsphi}, \Chap{ch:hhh} and \Chap{ch:db} make
 prodigious use of multivariate techniques to reduce combinatorial backgrounds.
 Combinatorial backgrounds are formed from random combinations of tracks which appear to form a
 vertex, pass selection criteria, and satisfy relevant \pid assignments.
-To remove these backgrounds \MVA techniques can be employed.
+To remove these backgrounds, \MVA techniques can be employed.
 A multivariate discriminator exploits correlations between weakly discriminating variables to
 produce a single, more separating, classifier.
 
 
 \MVA techniques used in \gls{HEP} tend to be supervised learning algorithms, whereby a selection of
-events are given input, and an algorithm produices a response based on how best to separate them.
+events are given input, and an algorithm produces a response based on how best to separate them.
 Input into the algorithms to separate a background are:
 a sample of the signal and background candidates that must be
 separated, and a set of variables to be used to do so.
-Samples of events are split in two, some are used for training the \MVA, and the remaining are used
+Samples of events are split in two; some are used for training the \MVA, and the remaining are used
 for testing it.
 The input, or training, variables define an $n$-dimensional space populated by the input samples.
 The algorithm then classifies regions in this $n$-dimensional space as signal- or background-like;
@@ -32,20 +32,23 @@ Training a \DT begins with a single parent node populated by the whole
 training sample, which inhabits the parameter space defined by the
 variables $x_i$, whose true distribution is $f(x_i)$.
 The sample on the parent node is split by selecting a cut based on maximizing some figure-of-merit.
-%This is then repeated until the child nodes reach a threshold of purity, where purity, $p$, is defined
-%This is then repeated until the child nodes reach a threshold of purity, where purity, $p$, is defined
-%as
 Child nodes are then split, and the process is repeated
 until there is no possible improvement in the separation of signal and background.
-The definition of improvement is usually related to the signal and background purity of a node:
-%at which point the node is dubbed a leaf and is not split.
-\begin{align}
-  p_\mathrm{sig} = \big(1-\eff{bkg}\big)\nonumber\\
-  p_\mathrm{bkg} = \big(1-\eff{sig}\big).
-\end{align}
+The definition of improvement is usually related to the purity of a node:
+\begin{equation}
+  p = \big(1-\eff{bkg}\big),
+\end{equation}
+where $\eff{sig}$ is the signal efficiency on a given leaf.
+%The definition of improvement is usually related to the signal and background purity of a node:
+%%at which point the node is dubbed a leaf and is not split.
+%\begin{align}
+  %p_\mathrm{sig} = \big(1-\eff{bkg}\big)\nonumber\\
+  %p_\mathrm{bkg} = \big(1-\eff{sig}\big).
+%\end{align}
 The final child nodes, or leaves, are each associated with signal or background depending on the
 purity of the sample which populates it.
-Each leaf therefore maps out an area in $n$-dimensions, and is classified as a signal or background leaf
+Each leaf therefore maps out an area in $n$-dimensions, and is classified as a signal or background
+leaf
 depending on the purity of the training sample enclosed by that area.
 The hypothesised category, as output by the \DT, $h(x_i)$, will ideally be equal to $f(x_i)$, but in reality there will be
 events which are misclassified.
@@ -54,8 +57,9 @@ index, which is defined as
 %Training a \DT begins with a single node, a decision is chosen which best separates the signal from
 %background based on the value of the $\mathrm{G}_{ini}$ index, which is defined as
 \begin{equation}
-  \mathrm{G}_{ini} = 2p_\mathrm{bkg}p_\mathrm{sig}
-  = 2\big(1-\eff{sig})(1-\eff{bkg}\big)
+  %\mathrm{G}_{ini} = 2p_\mathrm{bkg}p_\mathrm{sig}
+  \mathrm{G}_{ini} = 2p(1-p)
+  = 2(1-\eff{sig})\eff{sig}
   %= 2\cdot\frac{b}{s+b}\cdot\frac{s}{s+b}
   = \frac{2sb}{(s+b)^2},
 \end{equation}

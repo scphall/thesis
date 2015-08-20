@@ -22,7 +22,7 @@ def getPoints(rect):
 
 
 newy = 0
-coll = makebox(0, 0, ['Collisons at $40\,\mathrm{MHz}$'])
+coll = makebox(0, 0, ['Collsions at $40\,\mathrm{MHz}$'])
 
 
 l0y = -2.5
