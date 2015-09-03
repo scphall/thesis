@@ -3,13 +3,13 @@
 
 The data sample used in this analysis amounts to
 $1\invfb$ of $pp$ collisions at $7\tev$ collected by the \lhcb detector in 2011.
-Events are selected by the trigger at hardware level if they fulfill the requirements of the \lone
-hadron trigger, or any track in the event fulfills any \lone trigger line requirement (\tis).
+Events are selected by the trigger at hardware level if they fulfil the requirements of the \lone
+hadron trigger, or any track in the event fulfils any \lone trigger line requirement (\tis).
 Further trigger requirements are applied at the \hlttwo level, where events are required to pass at
 least one of the hadronic topological triggers (see \Sec{sec:lhcb:trig} for more details) with
 \tos.
 
-The \Ds meson is only reconstructed from the Cabibbo favoured decay \dstokkpi,
+The \Ds meson is only reconstructed from the Cabibbo-favoured decay \dstokkpi,
 which has a branching fraction of $(5.39\pm0.21)\e{-2}$.
 Furthermore, the mass of the reconstructed particle must fall within $25\mev$ of
 $m_{\Ds}^\pdg=1968.30\pm0.11\mev$; where the superscript \pdg indicates the nominal mass of the
@@ -29,9 +29,9 @@ $\Gamma_\phi=(4.266\pm0.031)\mev$, but the detector resolution is better for the
 because it has zero lifetime.
 Therefore, a mass window of $40\mev$ is extremely wide; but further mass constraints of the \phii
 are applied in the fit used to obtain the signal yield: a signal region is defined by a window that
-extends only $20\mev$ from $\mass{\phi}^\pdg$, and a sideband region
+extends only $20\mev$ from $\mass{\phi}^\pdg$, and a sideband region which contains the rest.
 
-All tracks forming the candidate mesons must fulfill requirements on the transverse momentum,
+All tracks forming the candidate mesons must fulfil requirements on the transverse momentum,
 $\pt>100\mev$, and tracks from the \Ds(\phii), $p>1(2)\gev$.
 Geometrical constraints are also placed on the tracks.
 One important geometrical variable is the \gls{IP}, which is defined as the perpendicular distance
@@ -41,26 +41,26 @@ The \chisq per degree of freedom of the track fit, $\chisqtrk/\ndof$, must be le
 %$\min\left(\chisqip\right)>4$.
 The variable \chisqip is defined as the increase in the \chisq of the vertex fit (\chisqvtx) when
 the signal track is combined with the \pv; the $\min\left(\chisqip\right)$ is the minimum \chisqip
-with respect to all \glspl{PV}, this selection requires $\min\left(\chisqip\right)>4$.
+with respect to all \glspl{PV} --- this selection requires $\min\left(\chisqip\right)>4$.
 Loose \pid requirements are also placed on all tracks, and further \pid constraints are applied in
 the \bdt, which is detailed later.
 
 
 The \Bp vertex fit is performed by constraining the mass of the \Ds candidate to its known
-mass~\cite{PDG2012}, and requirement a \chisqvtx per degree of freedom of
+mass~\cite{PDG2012}, and requiring a \chisqvtx per degree of freedom of
 less than ten.
 %A requirement of $\cos\thetadir>0.999$ must also be met.
 The angle between the momentum vector of the \Bp candidate and
 the vector formed by the \pv and decay vertex of the \Bp is known as the direction angle,
 \thetadir.
 Were the resolution of the \lhcb detector to be perfect, a real decay would have $\cos\thetadir=1$,
-here $\cos\thetadir$ must be greater than 0.999.
+but here $\cos\thetadir$ must be greater than 0.999.
 Prompt background from the \pv is suppressed by requiring that the lifetime of the \Bp,
 $\tau_{\Bp}$, is greater than $0.2\ps$.
 A cut on the \DOCA is applied to the \Ds candidate; where the \DOCA is defined as the maximum
 distance of closest approach between all pairs of daughter particles.
 %To ensure that the
-Selection criteria are summarized in \Tab{tab:dsphi:sel}.
+Selection criteria are summarised in \Tab{tab:dsphi:sel}.
 
 %Candidate \Ds and \phii mesons are reconstructed only in the decays \decay{\Ds}{\kkpi} and
 %\phitokk, where the \Ds decay is the Cabibbo favoured mode.
@@ -144,8 +144,8 @@ Selection criteria are summarized in \Tab{tab:dsphi:sel}.
 
 
 
-%These peaking backgrounds do not necessarily result in a longitudilnally polarized \phii.
-%They are however, irriducible, and must be accounted for in the fit, this is described later in
+%These peaking backgrounds do not necessarily result in a longitudinally polarised \phii.
+%They are however, irreducible, and must be accounted for in the fit, this is described later in
 %\Sec{sec:dsphi:fit}.
 
 %In order to remove candidates from \Dp cross-feed,
@@ -187,7 +187,7 @@ Cutting on the product of the \glspl{BDT} improves the performance of the select
 very strong \Ds candidate (for example) will be selected at the expense of a slightly weaker \phii
 selection, this is particularly true for tighter cuts.
 Figure~\ref{fig:dsphi:bdtprod} shows the effect of cutting on $\bdt_{\Ds}\times\bdt_{\Dz}$ in the
-normalization channel \btodsd.
+normalisation channel \btodsd.
 
 \begin{figure}
   \begin{center}
@@ -200,10 +200,10 @@ normalization channel \btodsd.
       sample of (left) \btodsd candidates where the background dominates and occupies the lower
       left of the plots, and (right) the same candidates after sWeighting has been applied where
       the signal peak is observed further towards the upper right.
-      The lines overlayed on the plot are show the boundaries for the cuts of
+      The lines overlaid on the plot are show the boundaries for the cuts of
       $\bdt_{\Ds}\times\bdt_{\Dz}>0.01$, 0.04, 0.10, 0.20, 0.30, 0.40, and 0.50.
       It is seen that using the product of the \bdt discriminants is more effective for rare decays
-      where a tighter cut will be needed, in this region candidates are selected if their response
+      where a tighter cut will be needed; in this region candidates are selected if their response
       is particularly positive, at the expense of the other meson.
     }
     \label{fig:dsphi:bdtprod}
@@ -221,8 +221,8 @@ normalization channel \btodsd.
 The \dstokkpi \bdt was trained using \dstokkpi decays from data taken from the
 high statistics channel \decay{\Bsb}{\Dsp\pim}.
 The signal sample of \Ds decays came from the \dstokkpi candidates that fell within $3\sigma$ of
-the known \Ds mass, the sample was
-background subtracted using the sWeighting technique~\cite{splot} on the \Bp mass spectrum.
+the known \Ds mass, and the sample was
+background-subtracted using the sWeighting technique~\cite{splot} on the \Bp mass spectrum.
 Background data was taken from candidates falling in the upper mass sideband of the \Bp, and either
 sideband of the \Ds.
 Similarly, for the \phii\ \bdt, the signal sample was sWeighted and the background comes from the
@@ -230,7 +230,7 @@ Similarly, for the \phii\ \bdt, the signal sample was sWeighted and the backgrou
 
 %Considering that each \bdt was trained on data, variables that are poorly described in simulation
 %can be used in the training.
-In total, there are five kinematic and geometric training variables for the parent meson.
+In total, there are five kinematic and geometric training variables for the parent (\Ds or \phii) meson.
 For the daughter tracks there are a total of 23 variables, including kinematic, geometric and \pid
 variables.
 Since the \bdt was trained using data, it is possible to use \pid variables that are poorly
@@ -275,7 +275,7 @@ A summary of all training variables is given in \Tab{tab:dsphi:vars}.
 \end{table}
 
 
-The cut for the \bdt was optimized using the metric $S/\sqrt{S+B}$,
+The cut for the \bdt was optimised using the metric $S/\sqrt{S+B}$,
 In this case, the number of signal events, $S$, was estimated from the yield from the decay
 \decay{\Bs}{\Dsm\pip}, according to:
 \begin{equation}
@@ -284,8 +284,8 @@ In this case, the number of signal events, $S$, was estimated from the yield fro
   \frac{f_d}{f_s}
   N\big(\Bsb\!\to\Ds\pim\big),
 \end{equation}
-$f_s/f_d$ quantifies the fraction of \Bs mesons produced relative to \Bd mesons.
-The generator level efficiency, \eff{gen}, is the efficiency introduced by the acceptance region of
+where $f_s/f_d$ quantifies the fraction of \Bs mesons produced relative to \Bd mesons.
+The generator-level efficiency, \eff{gen}, is the efficiency introduced by the acceptance region of
 the \lhcb detector, and the necessity that all daughter particles must travel through the detector.
 Background yield for a given cut is estimated as:
 \begin{equation}
@@ -294,14 +294,14 @@ Background yield for a given cut is estimated as:
 where $N_\mathrm{c}$ indicates the yield of the combinatoric background for the indicated decay,
 and $c$ is a constant scaled such that $N_\mathrm{c}\big(\bstodspi\big)\cdot
 N_\mathrm{c}\big(\bstojpsiphi\big)=N_\mathrm{c}\big(\btodsphi\big)$ with no \bdt cut.
-The optimization procedure results in the optimal cut as $\bdt_{\Ds}\times\bdt_\phi>0.57$, as is
+The optimisation procedure results in the optimal cut as $\bdt_{\Ds}\times\bdt_\phi>0.57$, as is
 shown in \Fig{fig:dsphi:opt}.
 
 
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.48\textwidth]{dsphi_opt}
-    \caption[Optimization of BDT cut for selection of \btodsphi candidates]
+    \caption[Optimisation of BDT cut for selection of \btodsphi candidates]
     {
       Value of the figure of merit $S/\sqrt{S+B}$ is shown as a function of the \bdt response,
       $\bdt_{\Ds}\times\bdt_{\phi}$.
@@ -310,8 +310,6 @@ shown in \Fig{fig:dsphi:opt}.
     \label{fig:dsphi:opt}
   \end{center}
 \end{figure}
-
-
 
 
 
@@ -328,11 +326,12 @@ have relatively large branching fractions~\cite{PDG2012}:
   \intertext{and}
   \BF(\decay{\Lc}{\pkpi}) &= (5.0\pm1.3)\e{-2}.\nonumber
 \end{align}
-If the daughter $\pip(\proton)$ from the $\Dp(\Lc)$ decay is misidentified as a \Kp the decay
+If the daughter $\pip(\proton)$ from the $\Dp(\Lc)$ decay is misidentified as a \Kp, the decay
 \dstokkpi can be mimicked.
 %the resulting invariant mass combination can fall within $25\mev$ of \mass{\Ds}.
 Henceforth, the notation $h_i$ will be used to denote a particle assigned the mass of an $h$ which
-has been identified as an $i$.
+has been identified as an $i$ --- \added{for example, a particle identified as a kaon but under the
+pion mass hypothesis would be $\pi_K$}.
 Simple generator level simulations of phasespace, as shown in \Fig{fig:dsphi:veto}, illustrate that
 the mass combination of $\Kp_\pi\Km\pip$ and $\Kp_p\Km\pip$ from a real \Dp or \Lc, respectively,
 can fall within $25\mev$ of $\mass{\Ds}^\pdg$.
@@ -344,14 +343,14 @@ can fall within $25\mev$ of $\mass{\Ds}^\pdg$.
     \includegraphics[width=0.48\textwidth]{tgen_lcveto}
     \caption[Vetoing \Ds contamination from \Lc and \Dp decays]
     {
-      Simple phasespace simulations at generator level of the decay \decay{\Ds}{\kkpi}, along side
+      Simple phasespace simulations at generator level of the decay \decay{\Ds}{\kkpi}, with
       (left) \decay{\Dp}{\kpipiss}, and
       (right) \decay{\Lc}{\pkpi},
       The distributions of the \Dp and \Lc decays, where one particle has been misidentified as a
       \Kp are also shown.
       Distributions after the misidentification are shown with a dotted outline, and sit under the
       \Ds mass peak.
-      Magnitudes of each peak are meaningless, each having the same integral.
+      Shapes are normalised to the same area.
     }
     \label{fig:dsphi:veto}
   \end{center}
@@ -359,7 +358,7 @@ can fall within $25\mev$ of $\mass{\Ds}^\pdg$.
 
 The cross-feed from the \Dp and \Lc is suppressed by vetoes, whereby tight \pid constraints are
 applied if the \dstokkpi candidate could have come from either a \Dp or \Lc.
-Firstly, if the invariant mass of the \kk pair is lies within $10\mev$ of the nominal \phii mass
+Firstly, if the invariant mass of the \kk pair lies within $10\mev$ of the nominal \phii mass
 then it is highly likely that it is a real \Ds decaying via \decay{\Ds}{\phi\pip}, which has a
 branching fraction of $(4.5\pm0.4)\e{-2}$ and therefore the \kkpi combination is immediately
 accepted as a \Ds candidate.

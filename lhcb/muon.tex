@@ -37,7 +37,7 @@ the expected muon flux would age this technology too quickly; in this area Gas E
 detectors are used.
 Detector resolution is defined by rectangular logical pads, which have varying spacial resolutions,
 becoming coarser as the distance from the beam axis increases.
-These regions are discretized, and labelled R1--4 as shown in Figure~\ref{fig:lhcb:muonpad},
+These regions are discretised, and labelled R1--4 as shown in Figure~\ref{fig:lhcb:muonpad},
 where the segmentation ratios for $\mathrm{R}1:\mathrm{R}2:\mathrm{R}3:\mathrm{R}4$ are $1:2:4:8$,
 such that the occupancy in each region is approximately equal.
 The number of detection cells in the bending plane is greater than in the non-bending plane, in
@@ -65,15 +65,18 @@ are primarily used to identify highly penetrating muons.
 \end{figure}
 
 The muon system provides important \pid information.
-In many \lhcb analyses a muon is identified based on hits within the muon system; this criteria is
+In many \lhcb analyses a muon is identified based on hits within the muon system; this criterion is
 known as \ismuon.
+\replaced{This criterion is boolean, and its exact response is defined by the muon momentum, which
+  is explicitly given in \Tab{tab:lhcb:ismuon}.}{
 The criteria is dependent upon the muon momentum, and defined exactly in \Tab{tab:lhcb:ismuon}.
+}
 
 \begin{table}
   \caption[Conditions to satisfy the {\tt isMuon} criteria]
   {
     The \ismuon flag is an important variable used to identify muons.
-    The criteria depends on the particle's measured momentum.
+    The criterion depends on the particle's measured momentum.
     If the \ismuon condition returns a true then the particle is identified to be a muon.
   }
   \label{tab:lhcb:ismuon}
