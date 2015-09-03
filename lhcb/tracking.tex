@@ -39,6 +39,47 @@ This must all be done in a high track multiplicity environment.
   \label{fig:lhcb:velo}
 \end{figure}
 
+
+
+
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{ResXY}
+    \includegraphics[width=0.48\textwidth]{ResZ}
+    \caption[PV resolution as a function of track multiplicity]{
+      PV resolution in the (left red) $x$, (left blue) $y$, and (right) $z$ directions
+      of events from 2011 in which there is a single PV as a function of track multiplicity,
+      $N$~\protect\cite{LHCb-CP-2014-001}.
+      The given values $A$, $B$, and $C$, result from fitting the data points to a resolution
+      function of the form $\sigma_\mathrm{PV} = AN^{-B} + C$.
+    }
+    \label{fig:velo:pvres}
+  \end{center}
+\end{figure}
+
+\added{
+  Reconstructed tracks in the \velo are used to construct the PVs,
+  the resolution of each \pv is highly dependent upon the number of tracks coming from the vertex.
+  Figure~\ref{fig:velo:pvres} shows that for a
+25-track vertex, the resolution in the} \plane{x}{y} \added{is
+  $13\mum$, whereas in the $z$ direction it is $71\mum$~\cite{LHCb-DP-2014-001}.
+  The resolution of the \gls{IP} is shown in \Fig{fig:velo:ipres}, where it is
+  seen that the performance in the $x$ and $y$ directions are almost identical and exhibit an
+  inverse power law, tending asymptotically to around $15\mum$ at high momentum.
+}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{IPRes_p}
+    \caption[IP resolution as a function of momentum]{
+      Impact parameter resolution as a function of momentum in the (black) $x$ and (blue) $y$
+      directions as a function of momentum, from data collected in 2012.
+    }
+    \label{fig:velo:ipres}
+  \end{center}
+\end{figure}
+
 Hits recorded in the tracking system are fitted to tracks, and in order to decrease the
 distance of extrapolation of tracks to vertices and increase the spacial resolution of vertices,
 the active area of the \velo starts $8\mm$ from the beam line.
@@ -48,6 +89,11 @@ begin.
 Its design leads to a detector with high impact parameter resolution, which can detect tracks
 emerging from a $pp$ interaction located in the range $1.6<\eta<4.9$ and $|z|<10.6\cm$.
 The geometry of the tracking stations is shown in \Fig{fig:lhcb:tracking}.
+
+
+
+
+
 
 
 Charged particles leaving the \velo are next observed traversing the
