@@ -9,14 +9,14 @@ Broadly, the search involves a frequentist scan of the dimuon invariant mass spe
 separated into two bins in decay time, from
 \btokstrmumu for an excess of events consistent with \dbtomumu.
 Firstly, an explanation of the search in the mass dimension will be presented, and then extended to
-to deal with the decay time dimension.
+deal with the decay time dimension.
 
 
 \subsection{Searching in the mass dimension}
 A scan in mass is performed where the test mass, \mass{t}, is incremented in steps of
 $\tfrac12\sigmam$, where $\sigmam$ is the local mass resolution defined at \mass{t}.
 In this analysis, \sigmam lies in the range $1\lesssim\sigmam\lesssim6\mev$.
-At each \mass{t} a signal and background regions are defined as
+At each \mass{t} signal and background regions are defined as
 \begin{align}
   |m-\mass{t}|&<2\sigmam \\
   \intertext{and}
@@ -24,7 +24,7 @@ At each \mass{t} a signal and background regions are defined as
 \end{align}
 respectively.
 The width of the sideband region with respect to the signal region is defined by $x$.
-Using two sideband regions, one either side of the signal means the background contribution to the
+Using two sideband regions, one either side of the signal, means the background contribution to the
 signal region can be estimated by assuming that the background is, on average, linear over the
 range of interest.
 A gap of $1\sigmam$ separates the signal and background regions to allow for leakage of signal
@@ -111,7 +111,7 @@ of freedom.
 Sensitivity to the lifetime of the \db, \lifetime{\db}, is introduced by splitting the data at each
 test mass into two regions: a prompt and a displaced region, defined by $\tau<3\sigmat$ and
 $\tau>3\sigmat$ respectively; where \sigmat is defined to be the local decay time resolution.
-The joint likelihood simply the product of the two individual likelihoods:
+The joint likelihood is simply the product of the two individual likelihoods:
 \begin{align}
   \mathcal{L}(n^p_s, n^p_b, n^d_s, n^d_b, x | s^p, b^p, y^p, s^d, b^d, y^d) &=
   \mathcal{L}(n^p_s, n^p_b, x | s^p, b^p, y^p)\nonumber\\
@@ -129,7 +129,7 @@ The combined profile likelihood is:
 \end{equation}
 and $-2\ln\big(\Lambda_\mathrm{Tot}\big)$ behaves as a \chisq distribution with two
 degrees of freedom.
-From this information a $p$-value for a given mass, can be calculated
+From this information a $p$-value for a given mass can be calculated
 quantifying how incompatible the signal region is with the null
 hypothesis of zero signal.
 
@@ -148,13 +148,13 @@ Therefore background shape information is not used.
 \label{sec:db:pval}
 At each \mass{t}, a $p$-value is calculated using the profile likelihood of the joint likelihood
 given in \Eq{eq:db:liketau}.
-Because there are $\mathcal{O}(1000)$ test masses, each of which is not completely independent the
-look-elsewhere effect must be accounted for.
-To do this the minimum local $p$-value is translated into a global $p$-value an ensemble of toys.
+Because there are \replaced{around a thousand}{$\mathcal{O}(1000)$} test masses, each of which is
+not completely independent, the look-elsewhere effect must be accounted for.
+To do this the minimum local $p$-value is translated into a global $p$-value from an ensemble of toys.
 
 %\bam{CLARIFY}
 After the $p$-value at each \mass{t} is calculated, the region in which the lowest $p$-value
-consistent with zero signal will be isolated and removed from the sample; leaving data which
+consistent with zero signal will be isolated and removed from the sample; leaving data
 which is entirely background.
 This is assuming that there is only one \np particle that can be observed in this analysis.
 The remaining background-like distribution is then turned into a \PDF\ --- where the region that is
@@ -173,14 +173,15 @@ As shown in \Ref{Davies:1987zz}, this bound is given by
   P_\mathrm{global} \leq P(\chisq_s > c) + \langle N(c)\rangle,
   \label{eq:db:asy1}
 \end{equation}
-where $s$ is the number of degrees of freedom of the \chisq, in this case $s=2$.
+where $s$ is the number of degrees of freedom of the \chisq.
+In this case $s=2$.
 The function $N(c)$ returns the number of \emph{upcrossings} of a dataset above the level of $c$,
 where an upcrossing is defined to be when the $p$-value crosses from below the value of
 $c$, to above it.
 The value of $c$ for a given $p$-value is its significance squared.
 Clearly, for large $p$-values, the ability to obtain a reliable value of $N(c)$ will be highly
-dependent on the toy datasets generate, and therefore an approximation is needed.
-Reference~\ref{Gross:2010qma} shows that \Eq{eq:db:asy1} can be approximated to be
+dependent on the toy datasets generated, and therefore an approximation is needed.
+Reference~\cite{Gross:2010qma} shows that \Eq{eq:db:asy1} can be approximated to be
 \begin{equation}
   P_\mathrm{global} \leq P(\chisq_s > c)
   + \langle N(c_0)\rangle
@@ -192,7 +193,7 @@ where $c_0$ is the number of upcrossings for a small value of $c$, optimally $c=
 Therefore, once $\langle N(c_0)\rangle$ has been determined using a few hundred toy datasets, the
 asymptotic boundary is trivial to calculate.
 This can be used to check the final conversion, and used to calculate the global $p$-value should a
-greater than $5\stdev$ be observed.
+significance of greater than $5\stdev$ be observed.
 
 
 \subsection{Limit setting}
@@ -200,7 +201,7 @@ Upper limits will be set as a function of \mass{\db} and \lifetime{\db}.
 This requires further modification to the likelihood function to account for the relationship
 between the number of signal events in the prompt and displaced regions for a given value of
 decay time.
-Additional Gaussian terms are added: one to account for the uncertainty in the fraction of
+Additional Gaussian factors are added: one to account for the uncertainty in the fraction of
 signal events that are observed in the two lifetime regions, and another to account for the
 uncertainty in the efficiency ratio with respect to the normalization channel.
 The resulting likelihood for a given \mass{\db} and \lifetime{\db} is
@@ -254,7 +255,7 @@ Below the mass of the \jpsi the values of $x=5$ and $\sigma_y=0.05$ are chosen.
 \begin{table}
   \caption[Total branching fractions for decays with the final state \btokstrmumu]
   {
-    Selected particles properties for mesons which decay into a dimuon pair final state, and
+    Selected particle properties for mesons which decay into a dimuon pair final state, and
     the branching
     fractions for the relevant decays~\protect\cite{PDG2014}.
     Central values of mass and width are given in MeV.
@@ -342,7 +343,7 @@ uncertainty on the background shape, by setting $x=1$ and $\sigma_y=0.1$.
 Interference effects between
 \btokstrmumu and \decay{\Bd}{\Kstarz\rho}, where \decay{\rho}{\mumu}, could lead to non-linearity
 in the background shape, despite the fact that the total branching fractions of
-$\decay{\Bd}{\Kstarz\rho(\to\mumu)}$ decay is so small that less than one event is expected in the
+$\decay{\Bd}{\Kstarz\rho(\to\mumu)}$ decays are so small that less than one event is expected in the
 data sample.
 However, this deviation can only be a maximum of \approx$5\pc$, which is already accounted for in
 the choice of $\sigma_y=0.05$.

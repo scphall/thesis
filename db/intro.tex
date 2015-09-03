@@ -38,11 +38,17 @@ Interaction terms for messengers in each of these portals are given in
 %is some mixing between the \db and an \sm particle.
 %In most dark sector models, the only way that a \db can be observed is if it mixes with a \sm
 %particle, and the superposition of the two states decays into, in this case, a dimuon pair.
-
+\replaced{
+Theories involving dark sectors that are weakly coupled to the \sm are tremendously attractive
+because it is relatively easy to construct a complex theory that explains various unexplained phenomena while having
+little impact on the \sm observables.
+These theories are therefore difficult to rule out.
+}{
 Theories involving dark sectors are tremendously attractive because it is relatively easy to
 construct a complex theory that explains various unexplained phenomena.
 Yet, these can have little impact on the \sm observables since the interaction between the two
 sectors can be extremely weak.
+}
 
 \begin{table}
   \caption[Summary of dark boson portals]
@@ -67,7 +73,7 @@ sectors can be extremely weak.
       \\\midrule
       Vector & Dark photons && $-\tfrac{\epsilon}{2\cos\theta_W}F_{\mu\nu}F^{\prime\mu\nu}$ \\
       Axion & Pseudoscalars & $\tfrac{\db}{f_\db}F_{\mu\nu}\widetilde{F}^{\mu\nu}$
-      & $\tfrac{\db}{f_\db}G_{i\mu\nu}\widetilde{G}^{\mu\nu}_i$
+      & $\tfrac{\db}{f_\db}G^{a}_{\mu\nu}\widetilde{G}^{\mu\nu}_a$
       & $\tfrac{\partial_\mu \db}{f_\db}\xbar{\psi}\gamma^\mu\gamma^5\psi$ \\
       Higgs & Dark scalars && $(\mu \db + \lambda \db^2)H^\dagger H$ \\
       Neutrino & Sterile neutrinos && $Y_N\ell H\db$ \\
@@ -81,12 +87,12 @@ The Higgs portal has a scalar messenger particle which can mix with the \sm Higg
 There are a number of models which incorporate a scalar messenger particle that interacts with the
 Higgs.
 One class of models incorporate an \emph{inflaton}, which is the quanta of the hypothesised
-inflaton field responsible for the inflationary period of the Universe; beginning around
+inflaton field responsible for the inflationary period of the Universe, beginning around
 $t=10^{-36}\sec$.
 %shows the Higgs-inflaton mixing angle as a function of inflaton mass.
 Figure~\ref{fig:db:inflaton} shows the allowed parameter space of the mixing angle between the \dm
 and Higgs, $\theta$, as a function of mass.
-it is possible that inflatons are light, in the range
+It is possible that inflatons are light, in the range
 $270<\mass{\db}<10^{4}\mev$~\cite{Bezrukov:2009yw}, and might therefore be accessible in the decay
 \btokstrdb.
 These models also help to solve other problems, such as the
@@ -133,24 +139,32 @@ portals which couple strongly to mass, as is the case for axions.
     \caption[Feynman diagram for the decay \btokstrdb]
     {
       Feynman diagram showing the decay \btokstrdb, and \dbtomumu.
-      Depending on the portal through which the \db acts, it couple directly to the muons, or need
+      Depending on the portal through which the \db acts, it couples directly to the muons, or need
       to mix with a \sm Higgs, $Z$, or photon.
     }
     \label{fig:db:feynman}
   \end{center}
 \end{figure}
 
+\replaced{
+Were the dark sector to be gauged under a different group to the \sm, the $U_Y(1)$ generator of the
+\sm could kinetically mix with with generator
+of the dark $U(1)$ group.
+This would give rise to a particle, often called a \emph{dark photon}, interacting
+via the vector portal.
+}{
 It is known that \sm would be a gauged field theory, and it is therefore reasonable to assume that
 the dark sector is also gauged, but under a different group.
 If this were to be the case, the \sm $U_Y(1)$ generator could kinetically mix with with generator
 of the dark $U(1)$ group, giving rise to a particle, often called a \emph{dark photon}, interacting
 through the vector portal.
+}
+
 %Figure~\ref{fig:db:darkphotonlimits} shows the existing parameter space for the mass of a dark
 %photon depending on the value of the mixing parameter $\epsilon$; for $\epsilon\lesssim10^{-3}$ the
 %mass of the dark
 %photon could be in the range $2m_\mu<\mass{\db}<1000\mev$~\cite{Essig:2013lka}, which is accessible
 %with the following analysis.
-
 %\begin{figure}
   %\begin{center}
     %\includegraphics[width=0.48\textwidth,trim=0 0 0 1.8em,clip]{A-visible-large}
@@ -167,8 +181,9 @@ through the vector portal.
     %\label{fig:db:darkphotonlimits}
   %\end{center}
 %\end{figure}
+
 In principle, the following analysis is sensitive to any dark sector particle.
-Practically, other experiments have searched directly for dark bosons with mass independent
+Practically, other experiments have searched directly for dark bosons with mass-independent
 couplings using much larger data samples.
 For example, the NA48/2 collaboration has searched for a dark photon directly in the decay
 \decay{\piz}{\gamma\darkgamma}~\cite{CERNNA48/2:2015lha}, and the \babar collaboration have
@@ -181,9 +196,9 @@ in comparison to these direct production searches.
 %There are numerous mechanism through which a messenger particle might communicate with the \sm, one
 %way is via the Goldstone bosons associated with the broken gernerators of \SUSY.
 It is known that \SUSY is a broken symmetry and thus must have associated Goldstone particles:
-a fermionic \emph{goldstino} and associated super-partners called \emph{sgolditinos}, which are
+a fermionic \emph{goldstino} and associated super-partners called \emph{sgoldstinos}, which are
 scalar and pseudoscalar.
-In some models, the sgolditinos are the messenger particles between the \sm and the dark \SUSY
+In some models, the sgoldstinos are the messenger particles between the \sm and the dark \SUSY
 sector.
 After \SUSY breaking, the goldstino becomes the longitudinal component of the gravitino, and the
 sgoldstinos are massless particles, which gain mass from corrections at higher orders.
@@ -193,52 +208,21 @@ $F$,~\cite{Alekhin:2015byh}.
 This is interesting because although the sgoldstino masses are unknown, a measurement of its
 coupling to fermions would give access to $F$ and the scale of \SUSY breaking since
 $\sqrt{F}\sim\Lambda_\mathrm{SUSY}$.
-The suppression of the coupling between the sgoldstinos and fermions, means that the larger the
-scale $\Lambda_\mathrm{SUSY}$, the longer the lifetime of the sgoldstinos.
+The suppression of the coupling between the sgoldstinos and fermions means that the larger the
+scale of $\Lambda_\mathrm{SUSY}$, the longer the lifetime of the sgoldstinos.
 %These Yukawa-like terms mean that the sgoldstinos could be the messenger particles between \SUSY in
 %the dark sector and the \sm.
 
-%sgolditinos could be the messenger particles between the \sm and dark sectors.
-%The lifetime of...
-%For example \SUSY, which was introduced in \Chap{ch:theory}, can provide a messenger particle in
-%the shape of a super-goldstino~\cite{Perazzi:2000id,Gorbunov:2000th}.
-
-
-%In the case that chi is a (pseudo)scalar, one might expect that the decay B+ ->K+ mumu may be more
-%sensitive than B0 -> K*mumu.  The latter mode for the spin-0 chi requires orbital angular momentum
-%of one and, thus, some suppression in the decay rate due to a barrier factor.  However, since the
-%available energy in B decays to K*chi is large, such suppression only occurs for large dimuon
-%masses.  Note also that in each decay for the (pseudo)scalar case, there is one available final
-%angular momentum state.  Therefore, we expect that at low dimuon masses, these two decays have
-%nearly equal sensitivity to scalar chi, while at large dimuon masses the K decay is more sensitive
-%than K*.
 
 Na\"{i}vely, one might expect that in the case that \db is a scalar or pseudoscalar, the decay
-\decay{\Bd}{\Kp\mumu} to be more sensitive that \btokstrmumu.
-The latter mode for a spin-0 \db requires orbital angular momentum of one, because the \Bd is a
+\decay{\Bd}{\Kp\mumu} to be more sensitive than \btokstrmumu.
+The latter mode for a spin-0 \db requires an orbital angular momentum of one, because the \Bd is a
 pseudoscalar and the \Kstarz is a vector, and therefore leads to some suppression due to a barrier
 factor.
-However, this suppression is only significant at high dimuon masses, close to threshold, becuase of
+However, this suppression is only significant at high dimuon masses, close to threshold, because
 there is plenty of phasespace in the decay \btokstrdb.
-%because the \Bd is a pseudoscalar and the \Kstarz is a vector
-%the decay \btokstrdb would be rather more sensitive to a vector \db than one which is a scalar
-%because of the number allowed spin states of the final state \db.
-%One might also conclude that to look for a scalar \db, a better decay channel in which to search
-%would be \decay{\Bp}{\Kp\mumu}; despite its added experimental difficulties.
-%Counting possible spin states that a two body decay can have, leads to the
-%conclusion that there should only a factor of about three between the branching fraction
-%$\BF(\btokstrdb)$ if the \db is a vector or scalar.
 A further complication of using the decay \decay{\Bp}{\Kp\mumu} for this analysis is the lack of a
 good quality \Bd decay vertex.
-%It is also possible to do this same analysis with \decay{\Bp}{\Kp\mumu} candidates, but it is
-%complicated from an experimental perspective because there are too few tracks to fit a good quality
-%vertex.
-%The angular momentum barrier only becomes significant when the phasespace for a decay begins
-%to be restricted.
-%Figure~\ref{fig:db:kx} shows the differences in branching fraction for \btokstrdb and
-%\decay{\Bp}{\Kp\db} where \db is a scalar and an pseudoscalar particle.
-%; the decay rate predictions
-%are taken from an axion portal model in Ref~\cite{Batell:2009jf}.
 Decay rate predictions for a \db operating through the axion portal for decays of the type
 \decay{B}{K\db} to be~\cite{Batell:2009jf}:
 \begin{align}
@@ -257,7 +241,7 @@ Decay rate predictions for a \db operating through the axion portal for decays o
     \right]^\frac12,
     \label{eq:db:bx}
 \end{align}
-form factors are denoted as $f_0$ $A_0$, and $\Gamma_0$  is a constant.
+and form factors are denoted as $f_0$, $A_0$, and $\Gamma_0$  is a constant.
 Figure~\ref{fig:db:kx} shows that the phasespace factor is the dominant factor in the shape for all
 the decays, and that searching for a new scalar or vector particle in the decays
 \decay{\Bd}{\Kstarz\db} and \decay{\Bp}{\Kp\db} is similarly sensitive for $m_\db\lesssim2000\mev$,
@@ -286,7 +270,7 @@ but at high masses \decay{\Bp}{\Kp\db} is more sensitive.
 
 The following chapter introduces the analysis strategy, an overview of the selection, and how the
 discrete samples of \btokstrdb are used to parameterize various distributions at all masses.
-The analysis is performed blindly, some results of the unblinding procedure are given in the final
+The analysis is performed blindly, and some results of the unblinding procedure are given in the final
 selection along with a calculated $p$-value.
 
 
