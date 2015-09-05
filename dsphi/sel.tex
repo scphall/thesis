@@ -225,6 +225,10 @@ the known \Ds mass, and the sample was
 background-subtracted using the sWeighting technique~\cite{splot} on the \Bp mass spectrum.
 Background data was taken from candidates falling in the upper mass sideband of the \Bp, and either
 sideband of the \Ds.
+\added{
+  The upper mass sideband is guaranteed to be pure combinatorics with some misidentified \Lc and
+  \Dp decays, which are removed with efficient vetoes, as described in \Sect{sec:dsphi:sel:veto}.
+}
 Similarly, for the \phii\ \bdt, the signal sample was sWeighted and the background comes from the
 \phii mass sidebands; but the sample is taken from the high statistics \bstojpsiphi mode.
 
@@ -235,6 +239,11 @@ For the daughter tracks there are a total of 23 variables, including kinematic, 
 variables.
 Since the \bdt was trained using data, it is possible to use \pid variables that are poorly
 described in simulation.
+\added{
+  The addition of the \pid variables is seen to improve the performance of the discriminator, but
+  they are not the most important variables, meaning that the background sample taken from the
+  upper mass sideband is a real sample of random tracks, as opposed to real decays.
+}
 A summary of all training variables is given in \Tab{tab:dsphi:vars}.
 
 %The BDT used to separate background from the signal \decay{\Ds}{\kkpi} decays was trained using

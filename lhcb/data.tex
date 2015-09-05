@@ -16,6 +16,7 @@ data of interest fast.
 Stripping selections in this thesis vary, and will be described when appropriate.
 
 
+\deleted{
 %\section{Simulation}
 Reliable analysis of real data would not be possible without selections of simulated events.
 %Simulation of events is a vital part of analyses at \lhcb, it allows collaborator's access to pure
@@ -24,33 +25,74 @@ research.
 This can be for the evaluation of efficiencies, understanding effects in data, or making analysis
 decisions without compromising blinded data.
 These events are generated in two independent phases: generation and simulation.
-Proton-proton collisions are generated using \pythia~\cite{Sjostrand:2006za,*Sjostrand:2007gs}
-with a specific \lhcb configuration~\cite{LHCb-PROC-2010-056},
-and subsequent hadronic decays are handled by the \evtgen~\cite{Lange:2001uf} package.
+Proton-proton collisions are generated using \pythia
+with a specific \lhcb configuration,
+and subsequent hadronic decays are handled by the \evtgen package.
 The simulation phase is designed to mimic the \lhcb detector's response to particles, this is done
-with \geant~\cite{Allison:2006ve,*Agostinelli:2002hh} as described in
-Ref.~\cite{LHCb-PROC-2011-006}.
-Simulated events after the hadronization stage and before detector modelling are known as
-\emph{generator level} simulation.
+with \geant as described in
+Ref.
+}
+%Simulated events after the hadronization stage and before detector modelling are known as
+%\emph{generator level} simulation.
 
 
 
+Simulated events are used in \lhcb analyses primarily for the purposes of optimising selections and
+determining efficiencies.
+Other important uses include the modelling of kinematic distributions and understanding various
+sources of background.
+Simulations produced by the \lhcb collaboration begin by modelling the $pp$ collisions, followed by
+the subsequent decays, and ending with the detector's response to the final state particles.
+Proton-proton collisions are generated using \pythia~\cite{Sjostrand:2006za,*Sjostrand:2007gs} with
+a configuration specific to \lhcb~\cite{LHCb-PROC-2010-056}.
+Particles of heavy flavour are produced by \pythia, but subsequent decays are modelled with
+\evtgen~\cite{Lange:2001uf}, which is a package created specifically for this purpose.
+The composition of decays in each sample of simulated events is requested at this level, and
+\evtgen forces one of the heavy flavour quarks to decay accordingly, other heavy quarks proceed to
+decay via a random decay chain.
+Selection cuts are applied throughout and if the required quark of heavy
+flavour is produced in the backward direction the $z$-coordinates are flipped, this is to save time
+at later stages.
+At this stage,the simulation is known as \emph{generator level}, which can be useful for
+determining distributions before the detector interactions have been accounted for.
+Final state radiation is modelled using \photos~\cite{Golonka:2005pn}.
+The interactions of each particle with the \lhcb detector is modelled using
+\geant~\cite{Allison:2006ve,*Agostinelli:2002hh} as described in Ref.~\cite{LHCb-PROC-2011-006}.
+Trigger decisions are applied to the simulation, however events which do not pass various triggers
+are not discarded, and instead are stored.
+After the simulation is complete, events are treated identically to the collected data; being
+processed by the same stripping selections.
+
+
+\added{
+Considering the importance of simulated events it is important for them to be trusted.
+To this end each analysis must ensure that the simulation used describes the data to a good degree,
+sometimes it is necessary for weights to be applied to correct for small differences.
+This is particularly true for \pid variables, which are known to be poorly modelled by the
+simulation.
+That being said, the simulated events are seen to reproduce data distributions very accurately.
+Figure~\ref{fig:data:ipres} shows the \gls{IP} resolution as a function of the inverse \pt of a
+track, the performance is roughly linear in this variable.
+The \velo achieves \gls{IP} resolutions of less than $25\mum$ for particles with $\pt>1\gev$, and
+}
+the agreement between data and simulation is seen to be excellent~\cite{LHCb-DP-2014-001}.
 
 
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.48\textwidth]{IPXRes_invp}
-    \caption[Impact parameter resolution as a function of inverse momentum comparing data and
+    \caption[Impact parameter resolution as a function of inverse transverse momentum comparing
+      data and
     simulation]{
-      Impact parameter resolution as a function of a track's inverse momentum comparing (black)
+      Impact parameter resolution as a function of a track's inverse transverse momentum comparing
+      (black)
       data taken in 2012 which is also shown in Fig.~\protect\ref{fig:velo:ipres} and (red)
-      simulation.  Excellent agreement is seen.
+      simulation.  Excellent agreement is seen, particularly for high momenta tracks,
+      $\pt>1\gev$~\protect\cite{LHCb-DP-2014-001}.
     }
     \label{fig:data:ipres}
   \end{center}
 \end{figure}
-
-
 
 
 

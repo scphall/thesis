@@ -1,9 +1,9 @@
 \section{Efficiency calculations}
 \label{sec:hhh:eff}
 
-Although the normalization channels have the same final state particles, the efficiency does not
+Although the normalisation channels have the same final state particles, the efficiency does not
 completely cancel due to kinematic differences.
-Therefore the relative efficiency between signal and normalization decays must be calculated.
+Therefore the relative efficiency between signal and normalisation decays must be calculated.
 The efficiency for each decay is computed using simulated events, under the assumption that the
 simulation accurately describes data, where there are discrepancies the simulations must be corrected.
 %These efficiencies were calculated using simulated events; therefore, in order that the above
@@ -11,11 +11,13 @@ simulation accurately describes data, where there are discrepancies the simulati
 %Where there are discrepancies, the simulations must be corrected.
 There are some variables which are known to be poorly described in simulation, particularly track
 multiplicity and the \chisqvtx of the \Bp candidate.
-The effects of these discrepancies are minimized by reweighting simulated events using
+The effects of these discrepancies are minimised by reweighting simulated events using
 the distributions of \btojpsikpipi.
 Track multiplicity is known to be poorly described in simulation, generally there are fewer tracks
 in simulation than observed in data,
-these discrepancies are illustrated in \Fig{fig:hhh:ntracks}.
+these discrepancies are
+\added{caused by the modelling of hadronization in \pythia and are} illustrated in
+\Fig{fig:hhh:ntracks}.
 \added{The source of the difference between data and simulation is the hadronization process which
 is handled by \pythia.}
 Aside from the direct differences, the low track multiplicity of in simulated events is a
@@ -28,7 +30,7 @@ contributing factor of \pid variables being badly described in simulations.
     {
       Distributions of track multiplicity for (black circles) data and (red squares) simulation.
       Simulated events are known to mis-model the track multiplicity, having a lower average number
-      of tracks per event.
+      of tracks per event, this is caused by the modelling of hadronization in \pythia.
     }
     \label{fig:hhh:ntracks}
   \end{center}
@@ -112,17 +114,17 @@ are seen to be in agreement, this is shown in \Fig{fig:kpipi:bdt}.
 \end{figure}
 
 Once the simulation has been corrected, the total efficiency, \eff{tot} was calculated for each
-normalization and signal mode using simulated events.
+normalisation and signal mode using simulated events.
 The value for \eff{tot} is calculated to be $\eff{gen}\times\eff{reco\&sel}\times\eff{trig}$, where:
 \eff{gen} is the generator selection efficiency;
 \eff{reco\&sel} is the reconstruction and selection efficiency;
 \eff{trig} trigger efficiency.
 The generator efficiency defines the probability that a \Bp decays into daughter particles which
 all pass through the \lhcb detector acceptance, and is approximately $15\pc$ for each signal and
-normalization channel.
+normalisation channel.
 
-%relating to the probabliity of all tracks passing throught the \lhcb dectecor volume;
-%Efficiencies for the normalization modes
+%relating to the probability of all tracks passing through the \lhcb detector volume;
+%Efficiencies for the normalisation modes
 %$\eff{reco\&sel\&trig}(\btopsitwosk)=(0.4123\pm0.0026)\,\%$, and
 %$\eff{reco\&sel\&trig}(\btojpsiphik)=(2.1121\pm0.0013)\,\%$, are calculated
 
@@ -152,7 +154,7 @@ using a phasespace model.
 These models introduce systematic uncertainties, which are discussed in \Sec{ssec:kpipi:syst} and
 \Sec{ssec:phik:syst}.
 The efficiencies for signal decays in each \qsq bin are shown in \Fig{fig:hhh:effs}.
-Reliable physics models exist for the normalization channels, which have efficiencies measured to
+Reliable physics models exist for the normalisation channels, which have efficiencies measured to
 be $\varepsilon(\btopsitwosk)=(0.41\pm0.01)\pc$ and $\varepsilon(\btojpsiphik)=(2.11\pm0.01)\%$
 the inefficiency of the former is due to the soft pions from the \psitwos decay failing \pt
 requirements in the stripping.
