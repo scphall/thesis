@@ -203,14 +203,60 @@ These systematic uncertainties do not have any effect on the significance level 
 local $p$-value.
 }
 
+\added{
 In the prompt region the efficiency ratio $\eff{\Bd\!\to\Kstarz\db(\mumu)}/\eff{\btokstrmumu}$ is
 constructed to be close to unity.
 The selection should preserve this for all lifetime values, but this must be validated.
 This is done by comparing \decay{\Bd}{\jpsi\KS} in data and simulation.
-The full selection, including the \ubdt where the \ProbNN{\mu} input is replaced by \ProbNN{\pi},
-is applied, using the \KS as a proxy for thee
+The full selection, including the \uBDT where the $\ProbNN{\mu}$ input is replaced by
+$\ProbNN{\pi}$,
+is applied, using the \KS as a proxy for the \db.
+Mass cuts are also applied around the nominal masses of the \jpsi and \KS, and to avoid prompt
+backgrounds of prompt backgrounds such as \decay{\Bd}{\jpsi\pipi} it is required that
+$\lifetime{\KS}>0.2\ps$.
+Lifetime distributions for these selected \KS candidates in data and simulation are shown in
+\Fig{fig:db:syst:effrat}.
+These distributions would be approximately uniform without detector effects; the degree to which
+the distributions agree demonstrates that the simulation models the detector well.
+}
 
 
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{jks_0}
+    \includegraphics[width=0.48\textwidth]{jks_1}
+    \includegraphics[width=0.48\textwidth]{jks_2}
+    \includegraphics[width=0.48\textwidth]{jks_3}
+    \includegraphics[width=0.48\textwidth]{jks_4}
+    \includegraphics[width=0.48\textwidth]{jks_5}
+    \caption[Validation of efficiency ratio at long lifetimes]
+    {
+      Reconstructed \KS lifetime distributions in bins of \KS momentum for (black) data and
+      (red) simulation, where the \KS is part of the decay \decay{\Bd}{\jpsi\KS(\pipi)} and is a
+      proxy \db candidate.
+      Each plot is normalized to unit area.
+      Good agreement is seen between the data and simulation.
+    }
+    \label{fig:db:syst:effrat}
+  \end{center}
+\end{figure}
+
+
+Throughout the search it is assumed that the signal window, which extends $\pm2\,\sigma_m$ around
+the test mass, contains $95\pc$ of a total signal from a decaying \db.
+A poorly modelled mass resolution will lead to an incorrect efficiency.
+The accuracy of the mass resolution is tested using \btojpsikstr candidates falling within $60\mev$
+of the nominal \Bd mass.
+In actuality, it is observed that $94\pc$ of \jpsitomumu candidates fall within $2\,\sigma_m$ of
+the known \jpsi mass.
+%Therefore a $1\pc$ systematic uncertainty is applied.
+
+
+An important consideration is the spin of the \db.
+Since the spin of the \db is unknown, there are a range of possible angular distributions that may
+arise, each having a different detection efficiency.
+This can be studied using the angular acceptance models used in the \btokstrmumu angular
+analysis~\cite{LHCb-CONF-2015-002}.
 
 
 
@@ -231,13 +277,6 @@ is applied, using the \KS as a proxy for thee
 %The total effect of this must be demonstrated.
 %}
 
-%\deleted{
-%An important consideration is the spin of the \db.
-%Since the spin of the \db is unknown, there are a range of possible angular distributions that may
-%arise, each having a different detection efficiency.
-%This can be studied using the angular acceptance models used in the \btokstrmumu angular
-%analysis~\cite{LHCb-CONF-2015-002}.
-%}
 
 
 
