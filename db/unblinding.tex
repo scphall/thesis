@@ -129,8 +129,8 @@ used to calculate it.
 %Systematic uncertainties will be evaluated and upper limits will be set for a range of \mass{\db}
 %and \lifetime{\db}.
 
-\subsection[Calculation of $p$-value]
-{Calculation of $\boldsymbol{p}$-value}
+\subsection[Calculation of the $p$-value]
+{Calculation of the $\boldsymbol{p}$-value}
 
 The unblinded distribution in $m_{\mumu}$ is shown in \Fig{fig:db:mumu}.
 Using the statistical method described in \Sect{sec:db:strategy} the following ranges in \mass{t}
@@ -158,7 +158,7 @@ global $p$-values, this conversion is shown in \Fig{fig:db:mumu}.
 Shown alongside the cumulative histogram is the asymptotic approximation, which is seen to be in
 excellent agreement for local $p$-values less than about $10^{-4}$.
 The histogram converts the local $p$-value to a global $p$-value of $0.63$, equivalent to a shift
-in significance of $2.9\stdev$ to $0.48\stdev$.
+in significance of $2.9\stdev$ to $0.63\stdev$.
 These results show no evidence for a new dark boson in the mass ranges given above.
 
 \begin{figure}
@@ -190,137 +190,57 @@ These results show no evidence for a new dark boson in the mass ranges given abo
 %0.63322 => 0.48sigma global
 % RooStats::PValueTOSignificance(pval / 2)
 
-%Firstly, the look-elsewhere effect must be accounted for, which
-%is done using the method outlined in \Sec{sec:db:pval} using all dimuon pairs from \Bd candidates
-%that fall within $2.5\stdev$ of the nominal \Bd mass.
-%It was decided that if the global $p$-value corresponds to a evidence for a new particle
-%($3\sigma$ or above) then fits will be used to
-%determine the best-fit mass and lifetime of the excess.
-
-%Figure~\ref{fig:db:mmumu} shows the unblinded dimuon mass distribution for the prompt and
-%displaced regions, fitted to fourth order Chebychev polynomials.
-%The displaced region is compatible with the expected contribution from combinatorial background.
-%A toy dataset is generated using this \PDF, full statistical method is applied to find the
-%$p$-value at each value of \mass{t}, and thus the minimum $p$-value for a single toy dataset is
-%extracted.
-%This process is repeated $10^7$ times, as required to achieve $p$-values corresponding to a
-%significance of $5\stdev$.
-%From the minimum $p$-values the fraction of toy datasets with minimum $p$-values less than some
-%value can be computed, and thus a conversion from local to global minimum $p$-value for any given
-%toy; therefore for the data itself.
-%Figure~\ref{fig:db:mmumu} also shows this cumulative distribution of minimum local $p$-values from
-%$1.5\e{7}$ datasets along with the asymptotic expectation~\cite{Gross:2010qma}.
-
-
-
-%Scanning values of \mass{t} in the ranges:
-%
-%The minimum local $p$-value observed in data is $xxx$  at $\mass{\mumu}xxx\mev$,
-%which corresponds to a global $p$-value of $xxx$; corresponding to a shift in significance of
-%$xxx\stdev$ to $xxx\stdev$.
-
-
-
-%Reference~\cite{Bezrukov:2009yw} considers inflatons with masses in the range
-%$1<\mass{\db}<1000\mev$ with lifetimes in the
-
-
-
-
-%From this \PDF ten million toy datasets are generated,
-%Ten million are required to be sensitive to
-
-%Using the unblinded
-%A fourth order Chebychev polynomial is fit to the unblinded \mass{\mumu} distribution,
-%these data
-%and
-%from this, ten million toy datasets are generated.
-%A least ten million are needed in order to be able to probe to $p$-values of $5\stdev$.
-
-%The resulting \qsq distribution is shown in \Fig{fig:res:q2} along with a fit to
-
-%\section{Blinded distributions}
-%\label{sec:results}
-
-%Figure~\ref{fig:res:mbvtau}, shows the \db candidate lifetime against \Bd
-%mass, it also shows the effect the uBDT cut has on the combinatorial background.
-%The lifetime of the \db candidate is also shown as a function of the \db mass, inside and outside
-%the \Bd signal region in Fig~\ref{fig:res:mxvtau}.
-
-%%\begin{figure}
-  %%\begin{center}
-    %%\subfloat[\label{fig:res:mbvtau:all}]{\includegraphics[width=0.48\textwidth]{mb_v_tau}}
-    %%\subfloat[\label{fig:res:mbvtau:bdt}]{\includegraphics[width=0.48\textwidth]{mb_v_tau_bdt}}
-    %%\caption{\small
-      %%Distributions of $\tau(\mumu)$ against $m(\Kstarz\mumu)$ for
-      %%candidates from data
-      %%\protect\subref{fig:res:mbvtau:all} with no cut, and
-      %%\protect\subref{fig:res:mbvtau:bdt} with a cut on the uBDT classifier.
-      %%The signal region has been blinded.
-    %%}
-    %%\label{fig:res:mbvtau}
-  %%\end{center}
-%%\end{figure}
-%%
-%%\begin{figure}
-  %%\begin{center}
-    %%\subfloat[\label{fig:res:mxvtau:all}]{\includegraphics[width=0.48\textwidth]{mx_v_tau}}
-    %%\subfloat[\label{fig:res:mxvtau:sig}]{\includegraphics[width=0.48\textwidth]{mx_v_tau_sig}}\\
-    %%\subfloat[\label{fig:res:mxvtau:bdtall}]{\includegraphics[width=0.48\textwidth]{mx_v_tau_bdt}}
-    %%\subfloat[\label{fig:res:mxvtau:bdtsig}]{\includegraphics[width=0.48\textwidth]{mx_v_tau_sig}}
-    %%\caption{\small
-      %%Distributions of $\tau(\mumu)$ against $m(\mumu)$ for \db candidates from data in the
-      %%\protect\subref{fig:res:mxvtau:all} upper mass sideband, and
-      %%\protect\subref{fig:res:mxvtau:sig} signal region (without the uBDT applied).
-      %%The Figs.~\protect\subref{fig:res:mxvtau:bdtall} and \protect\subref{fig:res:mxvtau:bdtsig} show the
-      %%same, but with uBDT cut applied (blank plots emphasise the analysis is blind).
-      %%%\emph{Blank plots will be filled in after unblinding.}
-    %%}
-    %%\label{fig:res:mxvtau}
-  %%\end{center}
-%%\end{figure}
-
-
 
 
 \subsection{Systematic uncertainties}
 Systematic uncertainties must be assessed in order to set limits.
 Sources of systematic uncertainties are from:
 the ratio of efficiencies $\varepsilon(\btokstrdb)/\varepsilon(\btokstrmumu)$;
-the definition of prompt and displaced regions;
+the of prompt and displaced regions as defined by the lifetime resolution;
 and the uncertainty on the \btokstrmumu branching fraction in the range $1.0<\qsq<6.0\gevgev$.
+\added{
+These systematic uncertainties do not have any effect on the significance level of the minimum
+local $p$-value.
+}
 
-The efficiency ratio $\varepsilon(\btokstrdb)/\varepsilon(\btokstrmumu)$ is approximately one, by
-construction, for each mass at zero lifetime.
-For larger lifetimes, the efficiency can be checked using data consistent with the decay
-\decay{\Bd}{\jpsi\KS}.
-It should be noted that in the displaced region a large uncertainty on the efficiency ratio will
-translate to a small uncertainty in the limits, because of the low statistics in that region.
+In the prompt region the efficiency ratio $\eff{\Bd\!\to\Kstarz\db(\mumu)}/\eff{\btokstrmumu}$ is
+constructed to be close to unity.
+The selection should preserve this for all lifetime values, but this must be validated.
+This is done by comparing \decay{\Bd}{\jpsi\KS} in data and simulation.
+The full selection, including the \ubdt where the \ProbNN{\mu} input is replaced by \ProbNN{\pi},
+is applied, using the \KS as a proxy for thee
 
-%Systematic checks addressed using \Bd mass peak in low \qsq region CONF
-%only relative efficiensy between signal and sm is reqiored, should be about 1 by construction, as
-%seen in..
 
-%For large decay times, must validate large-lifetime effs, using b to jpsi ks, but, due to low
-%background in displaced region, even a 20\% relative uncertainty will only increase limits by \bout
-%2\%.
 
-Studies undertaken in \Ref{Williams:2015xfa} show that the defining the boundary that separates
-the prompt and displaced regions to be $3\sigma_\tau$ is nearly optimal for any value of
-\lifetime{\db}.
-Only if $\lifetime{\db}\simeq3\sigma_\tau$, then there may be some effect on the limits.
-The total effect of this must be demonstrated.
 
-An important consideration is the spin of the \db.
-Since the spin of the \db is unknown, there are a range of possible angular distributions that may
-arise, each having a different detection efficiency.
-This can be studied using the angular acceptance models used in the \btokstrmumu angular
-analysis~\cite{LHCb-CONF-2015-002}.
-%The model with which the simulated samples were produced assumes that the \db is a scalar, a vector
-%there may be devaiation
+
+%\deleted{
+%The efficiency ratio $\varepsilon(\btokstrdb)/\varepsilon(\btokstrmumu)$ is approximately one, by
+%construction, for each mass at zero lifetime.
+%For larger lifetimes, the efficiency can be checked using data consistent with the decay
+%\decay{\Bd}{\jpsi\KS}.
+%It should be noted that in the displaced region a large uncertainty on the efficiency ratio will
+%translate to a small uncertainty in the limits, because of the low statistics in that region.
+%}
 %
-%dominant contribution for $\tau\sim0$ comes from unknown spin of \db, angular distributions, can
-%use angular acceptance model in sm.
+%\deleted{
+%Studies undertaken in Ref.~\cite{Williams:2015xfa} show that the defining the boundary that separates
+%the prompt and displaced regions to be $3\sigma_\tau$ is nearly optimal for any value of
+%\lifetime{\db}.
+%Only if $\tau_{\db}\simeq3\sigma_\tau$, then there may be some effect on the limits.
+%The total effect of this must be demonstrated.
+%}
+
+%\deleted{
+%An important consideration is the spin of the \db.
+%Since the spin of the \db is unknown, there are a range of possible angular distributions that may
+%arise, each having a different detection efficiency.
+%This can be studied using the angular acceptance models used in the \btokstrmumu angular
+%analysis~\cite{LHCb-CONF-2015-002}.
+%}
+
+
+
 
 It has been noted that this analysis relies on the assumption that the background is smoothly
 varying, and can be approximated as being locally linear.
@@ -330,9 +250,6 @@ by the addition of the Gaussian, $\mathcal{G}(y, x, \sigma_y)$, in the likelihoo
 There is no need to add a systematic uncertainty for the chosen value of $\sigma_y$, because it is,
 itself, an uncertainty and a maximal one.
 
-%Sources of systematic uncertainties that are considered come from the ratio of efficiencies
-%ratio of eff
-%counting of signal events in prompt and displaced
 
 
 
