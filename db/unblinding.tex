@@ -61,7 +61,7 @@ Next, the \BDT is applied and a second fit is performed, then \deleted{take} the
 yields \added{is calculated}.
 A comparison between these numbers in data and simulation is shown in comparison is shown in
 \Fig{fig:bdtEffRatio}; the two distributions are shown to be in good agreement, centred around
-unity with about 5--10\pc precision.
+unity with about 5--10\% precision.
 %This approach ignores the fact that there may be some small peaking background component that gets
 %counted as signal pre-BDT cut, but is removed by the BDT.
 %Note, however, that in the
@@ -217,7 +217,8 @@ $\lifetime{\KS}>0.2\ps$.
 Lifetime distributions for these selected \KS candidates in data and simulation are shown in
 \Fig{fig:db:syst:effrat}.
 These distributions would be approximately uniform without detector effects; the degree to which
-the distributions agree demonstrates that the simulation models the detector well.
+the distributions agree demonstrates that the simulation models the detector well, and results in a
+negligible systematic uncertainty.
 }
 
 
@@ -242,25 +243,33 @@ the distributions agree demonstrates that the simulation models the detector wel
 \end{figure}
 
 
-Throughout the search it is assumed that the signal window, which extends $\pm2\,\sigma_m$ around
-the test mass, contains $95\pc$ of a total signal from a decaying \db.
+Throughout the search it is assumed that the signal window, which extends $\pm2\sigma_m$ around
+the test mass, contains $95\%$ of a total signal from a decaying \db.
 A poorly modelled mass resolution will lead to an incorrect efficiency.
 The accuracy of the mass resolution is tested using \btojpsikstr candidates falling within $60\mev$
 of the nominal \Bd mass.
-In actuality, it is observed that $94\pc$ of \jpsitomumu candidates fall within $2\,\sigma_m$ of
+In actuality, it is observed that $94\%$ of \jpsitomumu candidates fall within $2\sigma_m$ of
 the known \jpsi mass.
-%Therefore a $1\pc$ systematic uncertainty is applied.
+%Therefore a $1\%$ systematic uncertainty is applied.
 
-An important consideration is the spin of the \db.
-Since the spin of the \db is unknown, there are a range of possible angular distributions that may
-arise, each having a different detection efficiency.
-This can be studied using the angular acceptance models used in the \btokstrmumu angular
-analysis~\cite{LHCb-CONF-2015-002}.
+%An important consideration is the spin of the \db.
+%Since the spin of the \db is unknown, there are a range of possible angular distributions that may
+%arise, each having a different detection efficiency.
+%This can be studied using the angular acceptance models used in the \btokstrmumu angular
+%analysis~\cite{LHCb-CONF-2015-002}.
 
-
-
-
-
+\added{
+The simulated events used to establish the efficiency for the \sm \btokstrmumu are generated
+assuming true knowledge of the Wilson coefficients that contribute to the decay.
+Results of the angular analysis of the decay \btokstrmumu from \lhcb, as described in
+Ref.~\cite{LHCb-CONF-2015-002}, show that the Wilson coefficients used in the simulation are
+consistent with those observed.
+By generating an ensemble of toy simulated datasets, where the input Wilson coefficients for each
+are varied randomly within their uncertainties.
+The RMS deviation from this ensemble of toys with respect to the nominal value is assigned as the
+systematic uncertainty from the mismodelling of the \sm \btokstrmumu channel, this is approximately
+$1\%$.
+}
 
 
 %\deleted{
@@ -281,9 +290,6 @@ analysis~\cite{LHCb-CONF-2015-002}.
 %}
 
 
-
-
-
 It has been noted that this analysis relies on the assumption that the background is smoothly
 varying, and can be approximated as being locally linear.
 This assumption clearly introduces an uncertainty, but this is already accounted for in the method
@@ -291,6 +297,22 @@ by the addition of the Gaussian, $\mathcal{G}(y, x, \sigma_y)$, in the likelihoo
 \Eq{eq:db:like2}.
 There is no need to add a systematic uncertainty for the chosen value of $\sigma_y$, because it is,
 itself, an uncertainty and a maximal one.
+It is also ensured that there is no variation between years and magnet polarity.
+
+The mismodelling of the lifetime resolutions is assessed using events consistent with the decay
+\btojpsikstr in data.
+Events falling in the displaced region, defined to be $\tau_{\mumu} > 3\sigma_\tau$, should
+constitute $0.13\%$ of all events, but actually make up $(0.18\pm0.01)\%$.
+To this end, a $3\%$ systematic uncertainty is applied, which is calculated by altering the
+lifetime resolution as calculated using simulation until $0.18\%$ of events fell in the displaced
+region.
+
+The statistical uncertainty propagated from the normalisation yield is $5\%$.
+As well as this, there is contamination from the $S$-wave component of the \Kstarz, which is
+estimated to be $(4\pm4)\%$~\cite{LHCb-PAPER-2013-019}.
+
+
+
 
 
 

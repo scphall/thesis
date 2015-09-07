@@ -23,12 +23,14 @@ At each \mass{t} signal and background regions are defined as
   3\sigmam<|m-\mass{t}|&<(2x+3)\sigmam,
 \end{align}
 respectively.
-The width of the sideband region with respect to the signal region is defined by $x$.
+The width of the sideband region with respect to the signal region is defined by $x$, \added{
+and the signal region extends $2\sigmam$ either side of the test mass, and therefore will contain
+$95\%$ of all signal events}.
+A gap of $1\sigmam$ separates the signal and background regions to allow for leakage of signal
+candidates beyond $2\sigmam$.
 Using two sideband regions, one either side of the signal, means the background contribution to the
 signal region can be estimated by assuming that the background is, on average, linear over the
 range of interest.
-A gap of $1\sigmam$ separates the signal and background regions to allow for leakage of signal
-candidates beyond $2\sigmam$.
 
 At each mass point in the search the number of events in the signal region, $n_s$, and the number
 of events in the background region, $n_b$, are counted.
@@ -87,7 +89,7 @@ the method, meaning that no additional systematic uncertainty is required.
 %natrually accounted for by setting \
 %Practically, the resonances that must be removed from the background are the \phi, \jpsi, \psitwos
 
-The profile likelihood, $\Lambda$, is defined as
+The profile likelihood, $\Lambda$, is used to extract the $p$-values, it defined as:
 \begin{equation}
   \Lambda(s|n_s,n_b) =
   \frac
@@ -143,14 +145,19 @@ significantly more complications to the analysis.
 Therefore background shape information is not used.
 
 
-\subsection[Calculation of $p$-value]
-{Calculation of $\boldsymbol{p}$-value}
+\subsection[Calculation of a global $p$-value]
+{Calculation of a global $\boldsymbol{p}$-value}
 \label{sec:db:pval}
 At each \mass{t}, a $p$-value is calculated using the profile likelihood of the joint likelihood
 given in \Eq{eq:db:liketau}.
-Because there are \replaced{around a thousand}{$\mathcal{O}(1000)$} test masses, each of which is
-not completely independent, the look-elsewhere effect must be accounted for.
-To do this the minimum local $p$-value is translated into a global $p$-value from an ensemble of toys.
+%Because there are \replaced{around a thousand}{$\mathcal{O}(1000)$} test masses, each of which is
+%not completely independent, the \emph{look-elsewhere effect} must be accounted for.
+\added{The \emph{look-elsewhere effect} is the name for the phenomenon whereby a statistically
+significant result appears by chance as a consequence of making a number of measurements.
+In the case of this analysis the look-elsewhere effect must be accounted for because around a
+thousand local $p$-values are measured in the course of the single experiment.}
+To do this the minimum local $p$-value is translated into a global $p$-value using an ensemble of
+toys.
 
 %\bam{CLARIFY}
 After the $p$-value at each \mass{t} is calculated, the region in which the lowest $p$-value
@@ -168,7 +175,7 @@ $5\stdev$, if the minimum local $p$-value corresponds to less than this, the asy
 will be used~\cite{Gross:2010qma}.
 The asymptotic formula uses a few toy datasets to set an upper bound on the conversion of local to
 global minimum $p$-value.
-As shown in \Ref{Davies:1987zz}, this bound is given by
+This bound is given by
 \begin{equation}
   P_\mathrm{global} \leq P(\chisq_s > c) + \langle N(c)\rangle,
   \label{eq:db:asy1}
@@ -177,7 +184,7 @@ where $s$ is the number of degrees of freedom of the \chisq.
 In this case $s=2$.
 The function $N(c)$ returns the number of \emph{upcrossings} of a dataset above the level of $c$,
 where an upcrossing is defined to be when the $p$-value crosses from below the value of
-$c$, to above it.
+$c$, to above it~\cite{Davies:1987zz}.
 The value of $c$ for a given $p$-value is its significance squared.
 Clearly, for large $p$-values, the ability to obtain a reliable value of $N(c)$ will be highly
 dependent on the toy datasets generated, and therefore an approximation is needed.
@@ -370,9 +377,6 @@ The resulting veto regions are very similar to those used in
 the $\psi(3770)$.
 All the vetoed regions to remove narrow resonances are summarised in
 \Table{tab:db:narrow}.
-
-
-
 
 
 \begin{figure}
