@@ -255,9 +255,16 @@ For this analysis, these ranges roughly translate to requiring that resonances w
 will be vetoed, and those with $\Gamma>125\mev$ shall be ignored.
 Other resonances in \Table{tab:db:bkg} are broad, and contribute to the dimuon
 structures at low mass.
+
+\added{
 It is shown in \Ref{Williams:2015xfa} that the local-linearity approximation is accurate to
-\approx$5\pc$ in regions where there may be contributions from wide resonances.
-Below the mass of the \jpsi the values of $x=5$ and $\sigma_y=0.05$ are chosen.
+\approx$5\pc$ in regions where there may be contributions from wide resonances, below the mass of
+the \jpsi.
+This means that a value of $\sigma_y=0.05$ is appropriate.
+The results are rather insensitive to the choice of $x$, in this region a value of $x=5$ is used.
+}
+
+%Below the mass of the \jpsi the values of $x=4$ and $\sigma_y=0.05$ are chosen.
 
 \begin{table}
   \caption[Total branching fractions for decays with the final state \btokstrmumu]
@@ -320,13 +327,30 @@ Below the mass of the \jpsi the values of $x=5$ and $\sigma_y=0.05$ are chosen.
   \end{center}
 \end{table}
 
+
+\added{
 Resonances that have a natural width in the intermediate region, $5\lesssim\Gamma\lesssim20\sigmam$, are
 various \ccbar states with masses above the mass of the \psitwos.
 For example, there is contribution from the $\psi(4160)$ which was observed by \lhcb in the decay
 \decay{\Bp}{\Kp\mumu}~\cite{LHCb-PAPER-2013-039}.
-All known charmonium resonances in this region are wide,
-$\Gamma\sim70\mev$, and are dealt with by reducing the size of the sidebands and increasing the
-uncertainty on the background shape, by setting $x=1$ and $\sigma_y=0.1$.
+All known \ccbar resonances that decay to a pair of muons with masses above the $\psi(3770)$ are
+relatively wide, with $\Gamma\sim 70\mev$, and are therefore fall into the intermediate category of
+widths described above.
+Since there are many resonances in this region the background shape is more uncertain, and so the
+size of the sidebands is reduced to $x=1$.
+With this choice the value of $\sigma_y$ was chosen by applying the method to candidate data from the
+decay \decay{\Bp}{\Kp\mumu}, giving a minimum local $p$-value of $0.3(0.4)$ for $\sigma_y=0(0.1)$,
+thus no false discovery claim could be made with either choice.
+A value of $\sigma_y=0.1$ is taken.
+}
+
+%The peak of the $\psi(4160)$ only causes a deviation of...
+%All known charmonium resonances in this region are wide,
+%$\Gamma\sim70\mev$, and are dealt with by reducing the size of the sidebands to $x=1$.
+
+
+%and increasing the
+%uncertainty on the background shape, by setting $x=1$ and $\sigma_y=0.1$.
 %A summary of the values of $x$ and $\sigma_y$ for different regions of \mass{t} are given in
 %\Table{tab:db:xsigmay}.
 
