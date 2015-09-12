@@ -205,15 +205,14 @@ local $p$-value.
 
 \added{
 In the prompt region the efficiency ratio $\eff{\Bd\!\to\Kstarz\db(\mumu)}/\eff{\btokstrmumu}$ is
-constructed to be close to unity.
-The selection should preserve this for all lifetime values, but this must be validated.
-This is done by comparing \decay{\Bd}{\jpsi\KS} in data and simulation.
+constructed to be close to unity, and should be preserved by the selection for all lifetimes.
+This preservation is validated by comparing \decay{\Bd}{\jpsi\KS} in data and simulation.
 The full selection, including the \uBDT where the $\ProbNN{\mu}$ input is replaced by
 $\ProbNN{\pi}$,
 is applied, using the \KS as a proxy for the \db.
-Mass cuts are also applied around the nominal masses of the \jpsi and \KS, and to avoid prompt
-backgrounds of prompt backgrounds such as \decay{\Bd}{\jpsi\pipi} it is required that
-$\lifetime{\KS}>0.2\ps$.
+Mass cuts are also applied to isolated the \jpsi and \KS candidates,
+and a cut of $\lifetime{\KS}>0.2\ps$ is applied to avoid prompt
+backgrounds such as \decay{\Bd}{\jpsi\pipi}.
 Lifetime distributions for these selected \KS candidates in data and simulation are shown in
 \Fig{fig:db:syst:effrat}.
 These distributions would be approximately uniform without detector effects; the degree to which
@@ -290,6 +289,23 @@ $1\%$.
 %}
 
 
+\added{
+The mismodelling of the lifetime resolutions is assessed using events consistent with the decay
+\btojpsikstr in data.
+Events falling in the displaced region, defined to be $\tau_{\mumu} > 3\sigma_\tau$, should
+constitute $0.13\%$ of all events, but actually make up $(0.18\pm0.01)\%$.
+To this end, a $3\%$ systematic uncertainty is applied, which is calculated by altering the
+lifetime resolution as calculated using simulation until $0.18\%$ of events fell in the displaced
+region.
+}
+
+\added{
+The statistical uncertainty propagated from the normalisation yield is $5\%$.
+As well as this, there is contamination from the $S$-wave component of the \Kstarz, which is
+estimated to be $(4\pm4)\%$~\cite{LHCb-PAPER-2013-019}.
+}
+
+\added{
 It has been noted that this analysis relies on the assumption that the background is smoothly
 varying, and can be approximated as being locally linear.
 This assumption clearly introduces an uncertainty, but this is already accounted for in the method
@@ -298,19 +314,7 @@ by the addition of the Gaussian, $\mathcal{G}(y, x, \sigma_y)$, in the likelihoo
 There is no need to add a systematic uncertainty for the chosen value of $\sigma_y$, because it is,
 itself, an uncertainty and a maximal one.
 It is also ensured that there is no variation between years and magnet polarity.
-
-The mismodelling of the lifetime resolutions is assessed using events consistent with the decay
-\btojpsikstr in data.
-Events falling in the displaced region, defined to be $\tau_{\mumu} > 3\sigma_\tau$, should
-constitute $0.13\%$ of all events, but actually make up $(0.18\pm0.01)\%$.
-To this end, a $3\%$ systematic uncertainty is applied, which is calculated by altering the
-lifetime resolution as calculated using simulation until $0.18\%$ of events fell in the displaced
-region.
-
-The statistical uncertainty propagated from the normalisation yield is $5\%$.
-As well as this, there is contamination from the $S$-wave component of the \Kstarz, which is
-estimated to be $(4\pm4)\%$~\cite{LHCb-PAPER-2013-019}.
-
+}
 
 
 

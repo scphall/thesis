@@ -152,12 +152,13 @@ At each \mass{t}, a $p$-value is calculated using the profile likelihood of the 
 given in \Eq{eq:db:liketau}.
 %Because there are \replaced{around a thousand}{$\mathcal{O}(1000)$} test masses, each of which is
 %not completely independent, the \emph{look-elsewhere effect} must be accounted for.
-\added{The \emph{look-elsewhere effect} is the name for the phenomenon whereby a statistically
-significant result appears by chance as a consequence of making a number of measurements.
+\added{The \emph{look-elsewhere effect} is the phenomenon whereby an experiment yields a
+statistically significant result by chance, as a simple consequence of making a number of
+measurements.
 In the case of this analysis the look-elsewhere effect must be accounted for because around a
-thousand local $p$-values are measured in the course of the single experiment.}
-To do this the minimum local $p$-value is translated into a global $p$-value using an ensemble of
-toys.
+thousand local $p$-values are measured in the course of the single experiment.
+This is accounted for by calculating the conversion of the minimum local $p$-value to a global
+$p$-value using an ensemble of toys.}
 
 %\bam{CLARIFY}
 After the $p$-value at each \mass{t} is calculated, the region in which the lowest $p$-value
