@@ -5,13 +5,13 @@ by making assumptions about the distance scales involved.
 One would not, for example, dream of using quantum mechanics to model a ball colliding with a wall
 despite the treatment being far more proper than a Newtonian approach.
 An \EFT works in an equivalent way in particle physics
-by decoupling the short- and long-range interactions, and treating them separately.
+by decoupling the short- and long-range interactions and treating them separately.
 Contributions from particles with very high mass, much greater than some pre-defined energy scale,
 are suppressed.
 %An equally valid interpretation is that massive, unstable particles have short lifetimes and can
 %only interact over very small distances.
-These simplifications are advantageous, as they allow processes to be modelled at a scale
-relevant to the particles involved.
+These simplifications are advantageous as they allow processes to be modelled at a scale
+relevant to the particles involved without complications from other scales.
 %A canonical example of this is Fermi's effective theory of weak decays which predates electroweak
 %theory; in it, a process (such as $\beta$-decay) is collapsed into a four point interaction.
 
@@ -36,10 +36,11 @@ Transition matrix elements for the interaction in the effective Hamiltonian are
 which is simply a weighted sum over the long distance matrix elements $\bra{f}\Op{j}\ket{i}$ which
 operates in dimension $d$.
 
-The above sum runs over an infinite number of operators --- which is clearly impractical.
-To simplify matters one can extract factors of $\Lambda^{-1}$ from the Wilson coefficients
-making the coefficients dimensionless, which
-modifies the effective Hamiltonian to be a sum over dimensions
+The sum in \Eq{q:th:opeham} runs over an infinite number of operators --- this is clearly
+impractical, and matters are simplified by
+extracting factors of $\Lambda^{-1}$ from the Wilson coefficients
+making each one.
+This modifies the effective Hamiltonian to be a sum over dimensions:
 \begin{equation}
   \bra{f}\Ham{eff}\ket{i} =
   \sum_{d}\frac{1}{\Lambda^{d}}

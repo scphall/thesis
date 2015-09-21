@@ -3,12 +3,12 @@
 The uniform Boosting, uBoost, algorithm\footnote{
   This section is based on \Ref{Stevens:2013dya}.} is designed to give a uniform
 response
-\replaced{
-  with respect to the signal efficiency in a set of variables.
-  This is used to create a \BDT which is not biased towards some region of parameter space.
-}{
-in the signal efficiency of some variables $\zeta_i$.
-}
+%\replaced{
+with respect to the signal efficiency in a set of variables.
+This is used to create a \BDT which is not biased towards some region of parameter space.
+%}{
+%in the signal efficiency of some variables $\zeta_i$.
+%}
 The procedure of creating a \uBDT, builds from the weighting technique used in the
 AdaBoost algorithm, but additional weight is applied to events that lie in a region of parameter
 space which is not performing with the desired efficiency.
@@ -50,13 +50,13 @@ $N\sim100$ is all that is needed for analysis.
 
 Use of the uBoost algorithm is well motivated in \Chap{ch:db}, which is a search for a particle
 of unknown mass and lifetime.
-\replaced{
+%\replaced{
 In this scenario, the uBoost technique allows the use of a \BDT while ensuring that the response is
 not bias towards some lifetimes or masses.
-}{
-The uBoost technique allows a \BDT to be trained, ensuring that the response does not bias
-the selection towards some lifetimes or masses.
-}
+%}{
+%The uBoost technique allows a \BDT to be trained, ensuring that the response does not bias
+%the selection towards some lifetimes or masses.
+%}
 
 
 
