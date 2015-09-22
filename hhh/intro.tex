@@ -139,9 +139,12 @@ This study indicated that the dominant contribution to the \kpipi system should 
 to be from decaying \kone{1270} mesons.
 The total branching fraction of the decay \decay{\kone{1270}}{\kpipi}
 %The \kone{1270} decays into the \kpipi final state
---- via both a non-resonant decay and various resonances ---
-with a branching fraction of
+%--- via both a non-resonant decay and various resonances ---
+%with a branching fraction of
+is
 $\BF\big(\decay{\kone{1270}}{\kpipi}\big)=\big(35.7\pm3.7\big)\,\%$~\cite{PDG2012}.
+This value includes the non-resonant mode, and the decays via variaous resonances including
+$\kone{1270}\!\to\Kp\rho(\to\pipi)$ and $\kone{1270}\!\to\pip\Kstarz(\to\kpi)$.
 The \kone{1270} meson, together with the \kone{1400}, are mass eigenstates resulting from the
 mixing of the $P$-wave axial vector states $K_{1A}$ and $K_{1B}$ according to:
 \begin{equation}
@@ -190,7 +193,15 @@ decay via a photon is forbidden.
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.96\textwidth]{K1_q2_theory}
+    \begin{tikzpicture}
+      \coordinate[] (p1);
+      \coordinate[above=4.5 of p1] (p2);
+      \coordinate[left=1 of p2] (p3);
+      \coordinate[right=6 of p3] (p4);
+      \draw (p1) node {\includegraphics[width=1.00\textwidth]{K1_q2_theory}};
+      \draw (p3) node {\includegraphics[scale=0.65]{legend_red}};
+      \draw (p4) node {\includegraphics[scale=0.65]{legend_blue}};
+    \end{tikzpicture}
     \caption[Theoretical \qsq distribution for $\decay{\Bp}{K_1^+\mumu}$]
     {
       The dimuon invariant mass distributions for the differential decay rates, as taken from
