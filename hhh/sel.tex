@@ -36,12 +36,6 @@ These are each selected by requiring that both \jpsi and \psitwos candidates hav
 mass within $50\mev$ of their known masses~\cite{PDG2012}.
 
 \begin{table}
-  \caption{
-    Stripping selection criteria applied in the stripping.
-    %The variable {\tt ADOCACHI2CUT} is the \chisq distance of the closest approach
-    %(below a threshold) for all two particle combinations.
-  }
-  \label{tab:hhh:strip}
   \begin{center}
     \begin{tabularcuts}
       \Bp
@@ -66,6 +60,12 @@ mass within $50\mev$ of their known masses~\cite{PDG2012}.
       \bottomrule
     \end{tabularcuts}
   \end{center}
+  \caption{
+    Stripping selection criteria applied in the stripping.
+    %The variable {\tt ADOCACHI2CUT} is the \chisq distance of the closest approach
+    %(below a threshold) for all two particle combinations.
+  }
+  \label{tab:hhh:strip}
 \end{table}
 
 
@@ -225,35 +225,8 @@ comprised solely of combinatorial background.
 This \BDT was trained using selection of geometric and kinematic variables, the exact variables are
 listed in \Tab{hhh:tab:bdtvars}.
 
-%\begin{table}
-  %\caption[\BDT training variables]
-  %{
-    %Input variables used to train the \BDT to distinguish between signal \btokpipimumu decays and
-    %combinatorial backgrounds.
-  %}
-  %\label{hhh:tab:bdtvars}
-  %\begin{center}
-    %\begin{tabular}{lc}\\\toprule
-      %Particle & Variable\\\midrule
-      %\Bp & \pt\\
-      %& \chisqip \\
-      %& \chisqfd\\
-      %& \chisqvtx\\
-      %& $\theta_\mathrm{dir}$\\\littlerule
-      %Tracks & \pt\\
-      %& \chisqip\\
-      %%\hline
-      %\bottomrule
-    %\end{tabular}
-  %\end{center}
-%\end{table}
+
 \begin{table}
-  \caption[BDT training variables]
-  {
-    Input variables used to train the \BDT to distinguish between signal \btokpipimumu decays and
-    combinatorial backgrounds.
-  }
-  \label{hhh:tab:bdtvars}
   \begin{center}
     \begin{tabular}{lccccc}\\\toprule
       Particle & \multicolumn{5}{c}{Variables}\\\midrule
@@ -267,6 +240,12 @@ listed in \Tab{hhh:tab:bdtvars}.
       \bottomrule
     \end{tabular}
   \end{center}
+  \caption[BDT training variables]
+  {
+    Input variables used to train the \BDT to distinguish between signal \btokpipimumu decays and
+    combinatorial backgrounds.
+  }
+  \label{hhh:tab:bdtvars}
 \end{table}
 
 
@@ -416,23 +395,6 @@ $\dllkpi(K)>-3$ and $\bdt>0.05$.
 The value of the \dllkpi criteria is looser for \btophikmumu than for \btokpipimumu because the
 implicit \pid requirements when selecting a \phii candidate.
 
-%\begin{table}
-  %\caption[Expected yields]
-  %{
-    %Expected values for $S$ and $B$ for the maximum value of the figure of merit $S/\sqrt{S+B}$.
-    %These are taken from the 2012 sample only.
-  %}
-  %\label{tab:hhh:opt}
-  %\begin{center}
-    %\begin{tabular}{lrrc}\toprule
-      %\cellc{Decay} & \cellc{$S$} & \cellc{$B$} & \cellc{$S/\sqrt{S+B}$} \\
-      %\midrule
-      %\btokpipimumu & 304 & 166 & 14.0 \\
-      %\btophikmumu  &  28 &   8 & \pz4.7 \\
-      %\bottomrule
-    %\end{tabular}
-  %\end{center}
-%\end{table}
 
 
 
@@ -440,19 +402,3 @@ implicit \pid requirements when selecting a \phii candidate.
 
 
 
-%\subsection{Reweighting of variables}
-
-
-%\section{Backgrounds}
-%\section{Mass fits}
-%\section{Efficiencies}
-%\section{Systematics}
-%\section{Summary}
-
-%PID info from the RICH is used to identify final state hadrons
-%PV chosen based on lowest PV of B candidates
-%vertex fit \chisq must increase by more than 121 when including the B candidate daughters
-%fit vertex chi2 < 6
-%Backgorunds of \jpsi and \psitwos must be removed
-%also their radiative tails
-%main sources of peaking backgrounds come from charmonia

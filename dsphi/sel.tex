@@ -77,14 +77,6 @@ Selection criteria are summarised in \Tab{tab:dsphi:sel}.
 %Full stripping requirements are given in \Tab{tab:dsphi:sel}.
 
 \begin{table}[!ht]
-  \caption[Selection criteria applied to \btodsphi candidates]
-  {
-    Stripping selection criteria applied to the \btodsphi candidates.
-    %The DOCA variable is defined as the maximum distance of closest approach between all pairs of
-    %all pairs of daughter particles.
-    %All remaining variables are defined in the text.
-  }
-  \label{tab:dsphi:sel}
   \begin{center}
     \begin{tabularcuts}
       \Bp
@@ -129,6 +121,14 @@ Selection criteria are summarised in \Tab{tab:dsphi:sel}.
       \bottomrule
     \end{tabularcuts}
   \end{center}
+  \caption[Selection criteria applied to \btodsphi candidates]
+  {
+    Stripping selection criteria applied to the \btodsphi candidates.
+    %The DOCA variable is defined as the maximum distance of closest approach between all pairs of
+    %all pairs of daughter particles.
+    %All remaining variables are defined in the text.
+  }
+  \label{tab:dsphi:sel}
 \end{table}
 
 
@@ -225,10 +225,12 @@ the known \Ds mass, and the sample was
 background-subtracted using the sWeighting technique~\cite{splot} on the \Bp mass spectrum.
 Background data was taken from candidates falling in the upper mass sideband of the \Bp, and either
 sideband of the \Ds.
-\added{
-  The upper mass sideband is guaranteed to be pure combinatorics with some misidentified \Lc and
-  \Dp decays, which are removed with efficient vetoes, as described in \Sect{sec:dsphi:sel:veto}.
-}
+The upper mass sideband is guaranteed to be pure combinatorics.
+Decays of higher mass states in which daughter particles are missed,
+misidentified, or both, may be in this sample, but they constitute real combinatorial background.
+Only real decays of \Bs mesons can contaminate this sample, specifically decay chains that
+contain \Dp and \Lc mesons, these are removed using
+the efficient vetoes as described in \Sect{sec:dsphi:sel:veto}.
 Similarly, for the \phii\ \bdt, the signal sample was sWeighted and the background comes from the
 \phii mass sidebands; but the sample is taken from the high statistics \bstojpsiphi mode.
 
@@ -239,11 +241,9 @@ For the daughter tracks there are a total of 23 variables, including kinematic, 
 variables.
 Since the \bdt was trained using data, it is possible to use \pid variables that are poorly
 described in simulation.
-\added{
-  The addition of the \pid variables is seen to improve the performance of the discriminator, but
-  they are not the most important variables, meaning that the background sample taken from the
-  upper mass sideband is a real sample of random tracks, as opposed to real decays.
-}
+The addition of the \pid variables is seen to improve the performance of the discriminator, but
+they are not the most important variables, meaning that the background sample taken from the
+upper mass sideband is a real sample of random tracks, as opposed to real decays.
 A summary of all training variables is given in \Tab{tab:dsphi:vars}.
 
 %The BDT used to separate background from the signal \decay{\Ds}{\kkpi} decays was trained using
@@ -253,13 +253,6 @@ A summary of all training variables is given in \Tab{tab:dsphi:vars}.
 %which include PID, and track quality variables.
 
 \begin{table}
-  \caption[Training variables for the \Ds and \phii BDTs]
-  {
-    List of training variables used in the \Ds and \phii BDTs.
-    Each BDT uses five variables associated with the parent particle and 23 variables from each
-    daughter track.
-  }
-  \label{tab:dsphi:vars}
   \begin{center}
     %\begin{tabular}{clp{0.50\textwidth}}
     %\begin{tabular}{p{0.1\textwidth}p{0.3\textwidth}p{0.50\textwidth}}
@@ -281,6 +274,13 @@ A summary of all training variables is given in \Tab{tab:dsphi:vars}.
     %\end{tabular}
     \end{tabular*}
   \end{center}
+  \caption[Training variables for the \Ds and \phii BDTs]
+  {
+    List of training variables used in the \Ds and \phii BDTs.
+    Each BDT uses five variables associated with the parent particle and 23 variables from each
+    daughter track.
+  }
+  \label{tab:dsphi:vars}
 \end{table}
 
 

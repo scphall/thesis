@@ -1,11 +1,17 @@
 \section{The Standard Model}
 \label{sec:sm}
 The behaviour of fundamental particles and forces are described by the \sm of
-particle physics, which was concocted in the 1970s, when the Higgs
+particle
+physics~\cite{Glashow:1961tr,Weinberg:1967tq,Salam:1968rm,Higgs:1964ia,Higgs:1966ev,Guralnik:1964eu,Kibble:1967sv}\footnote{
+  This section was written with reference to
+  Refs.~\cite{ellis2003qcd,halzen1984quarks,mannel2004effective}.
+}.
+The \sm was concocted in the 1970s, when the Higgs
 mechanism was incorporated into Glashow's electroweak theory by Salam and Weinberg.
 The theory prescribes a treatment
 as to how fundamental particles interact via three of the four
 fundamental forces, namely: the strong, weak and electromagnetic forces.
+
 
 Mathematically, the \sm is a locally gauge invariant quantum field theory.
 It inhabits a space-time with a global Poincar\'e symmetry that obeys a local
@@ -26,12 +32,6 @@ A summary of gauge bosons in the \sm is given in \Tab{tab:sm:gauge}.
 
 
 \begin{table}
-  \caption[Fundamental, force-mediating, gauge bosons]
-  {
-    Fundamental, force-mediating, gauge bosons in the \sm.
-    All values are taken from Ref.~\protect\cite{PDG2014}.
-  }
-  \label{tab:sm:gauge}
   \begin{center}
     \begin{tabular}{ccrc}
       \toprule
@@ -45,6 +45,12 @@ A summary of gauge bosons in the \sm is given in \Tab{tab:sm:gauge}.
       \bottomrule
     \end{tabular}
   \end{center}
+  \caption[Fundamental, force-mediating, gauge bosons]
+  {
+    Fundamental, force-mediating, gauge bosons in the \sm.
+    All values are taken from Ref.~\protect\cite{PDG2014}.
+  }
+  \label{tab:sm:gauge}
 \end{table}
 
 
@@ -90,14 +96,6 @@ There is also a single scalar field in the \sm: the Higgs boson.
 %The only additional particle is the scalar Higgs boson.
 
 \begin{table}
-  \caption[Fundamental fermions of matter]{
-    Fundamental fermions of matter.
-    In the \sm each has a corresponding anti-particle of opposite charge.
-    All values are taken from Ref.~\protect\cite{PDG2014}, where the quark masses are calculated
-    according to the $\overline{\mathrm{MS}}$ renormalisation scheme.
-    It is known that neutrinos have non-zero masses, but their precise masses are unknown.
-  }
-  \label{tab:sm:particles}
   \begin{center}
     \renewcommand\arraystretch{1.1}
     \begin{tabular}{ccrccrc}
@@ -120,6 +118,14 @@ There is also a single scalar field in the \sm: the Higgs boson.
       \bottomrule
     \end{tabular}
   \end{center}
+  \caption[Fundamental fermions of matter]{
+    Fundamental fermions of matter.
+    In the \sm each has a corresponding anti-particle of opposite charge.
+    All values are taken from Ref.~\protect\cite{PDG2014}, where the quark masses are calculated
+    according to the $\overline{\mathrm{MS}}$ renormalisation scheme.
+    It is known that neutrinos have non-zero masses, but their precise masses are unknown.
+  }
+  \label{tab:sm:particles}
 \end{table}
 
 
@@ -330,14 +336,16 @@ Similar to lepton masses, in \Eq{eq:leptonmass}, quark masses are defined as
   m_{ij}^d &= \frac{v}{\sqrt{2}}y_{ij}^d.
 \end{align}
 %\replaced{
-Thus far all calculations have been in the flavour basis, but it is now more convenient to change
-to the mass basis in which the matrices $m^{u,d}$ are diagonal, this is done
+Thus far all calculations have been in the flavour basis.
+But, it is now more convenient to change
+to the mass basis in which the matrices $m^{u,d}$ are diagonal.
+This is done
 %}{
   %Thus far, the flavour basis has been used, but it is now more convenient to change to the mass
 %basis, in which the matrices $m^{u,d}$ are diagonal., it is more convenient to change to a basis in which the matrix $m^q$
 %is diagonal,
 %}
-using the rotation matrices $V_L$ and $V_R$, such that
+using the rotation matrices $V_L$ and $V_R$ such that
 \begin{align}
   {m_{il}^{u}}^\prime &=  \big(V_L^{u\dagger}\big)_{ij} m_{jk}^u\big(V_R^u\big)_{kl} \nonumber\\
   {m_{il}^{d}}^\prime &=  \big(V_L^{d\dagger}\big)_{ij} m_{jk}^d\big(V_R^d\big)_{kl}.

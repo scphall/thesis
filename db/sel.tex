@@ -9,12 +9,6 @@ shown in \Table{tab:db:samples}.
 Studies are also performed using simulated events of the decays \btokstrmumu and \btojpsikstr.
 
 \begin{table}
-  \caption[Samples of simulated \btokstrdb generated for the analysis]{
-    Samples of simulated \btokstrdb generated with given mass and lifetime.
-    A total of 1.5 million events are generated for each sample, but only $150\,000$ for the
-    samples with a \mass{\db} of 220 and $235\mev$.
-  }
-  \label{tab:db:samples}
   \begin{center}
     \begin{tabular}{rccccccccccc}\toprule
       $\tau_\db$ (ps) & \multicolumn{10}{c}{\mass{\db} (MeV)} \\\midrule
@@ -24,6 +18,12 @@ Studies are also performed using simulated events of the decays \btokstrmumu and
       \bottomrule
     \end{tabular}
   \end{center}
+  \caption[Samples of simulated \btokstrdb generated for the analysis]{
+    Samples of simulated \btokstrdb generated with given mass and lifetime.
+    A total of 1.5 million events are generated for each sample, but only $150\,000$ for the
+    samples with a \mass{\db} of 220 and $235\mev$.
+  }
+  \label{tab:db:samples}
 \end{table}
 
 Reconstructed decays of \btokstrdb that must be selected by the \lone triggers for
@@ -90,27 +90,15 @@ The offline selection criteria applied in the stripping are outlined in \Tab{tab
 This table lists the variables \ProbNN{\pi} and \ProbNN{K} which are \MVA algorithms
 giving a probability-like response between zero and one, quantifying how pion or kaon like a
 particle is.
-\added{
-  A similar parameter is the ghost probability, $\ProbNN{\mathrm{gh}}$, which quantifies the chance
+A similar parameter is the ghost probability, $\ProbNN{\mathrm{gh}}$, which quantifies the chance
 that a given track is actually a ghost --- in other words, an erroneous track made from random
 combinations of hits~\cite{needham2008identification}.
-}
 The full decay chain \decay{\Bd}{\Kstarz\db(\to\mumu)} is reconstructed using a fit in which the
 \Bd mass is constrained to its known value~\cite{PDG2014}.
 All references to $\mass{\db}$, $\mass{\kpi}$ or $\lifetime{\db}$ are to the values after this
 vertex fit has been performed.
 
 \begin{table}[ht!]
-  \caption[Stripping criteria applied to the dark boson candidates]
-  {
-    Selection criteria applied to signal candidates in the stripping.
-    Criteria definitions are defined in text.
-    While the \Bd mass is constrained in the fit, the selection makes a cut on the unconstrained
-    mass.
-    %The variable {\tt DOCA} is defined as the distance of closest approach between any two pairs of
-    %tracks in the candidate.
-  }
-  \label{tab:stripping}
   \begin{center}
     \begin{tabularcuts}
       \Bp
@@ -148,6 +136,16 @@ vertex fit has been performed.
       \bottomrule
     \end{tabularcuts}
   \end{center}
+  \caption[Stripping criteria applied to the dark boson candidates]
+  {
+    Selection criteria applied to signal candidates in the stripping.
+    Criteria definitions are defined in text.
+    While the \Bd mass is constrained in the fit, the selection makes a cut on the unconstrained
+    mass.
+    %The variable {\tt DOCA} is defined as the distance of closest approach between any two pairs of
+    %tracks in the candidate.
+  }
+  \label{tab:stripping}
 \end{table}
 
 
@@ -202,11 +200,6 @@ A summary of all preselection cuts is shown in \Tab{tab:db:presel}.
 
 
 \begin{table}
-  \caption[Preselection criteria]
-  {
-    Preselection criteria applied to \btokstrdb candidates.
-  }
-  \label{tab:db:presel}
   \begin{center}
     \begin{tabularcuts}
       \Bd
@@ -229,6 +222,11 @@ A summary of all preselection cuts is shown in \Tab{tab:db:presel}.
       \bottomrule
     \end{tabularcuts}
   \end{center}
+  \caption[Preselection criteria]
+  {
+    Preselection criteria applied to \btokstrdb candidates.
+  }
+  \label{tab:db:presel}
 \end{table}
 
 
