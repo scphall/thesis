@@ -57,11 +57,16 @@ $\varepsilon_\mathrm{BDT}^\mathrm{\qsq bin}(\btokstrmumu) / \varepsilon_\mathrm{
 are approximately the same in data and simulation.
 To determine these efficiencies, the full selection without the \BDT is taken, and a fit performed
 and the signal yield is extracted.
-Next, the \BDT is applied and a second fit is performed, then take the ratio of the signal
-yields is calculated.
-A comparison between these numbers in data and simulation is shown in comparison is shown in
-\Fig{fig:bdtEffRatio}; the two distributions are shown to be in good agreement, centred around
-unity with about 5--10\% precision.
+The same procedure is followed with the \BDT applied.
+%Next, the \BDT is applied and a second fit is performed.
+%The ratio of the signal yields then take the ratio of the signal
+%yields is calculated.
+Figure \ref{fig:bdtEffRatio} shows the ratio of these yields in different regions of \qsq.
+It is observed the distributions for data and simulation are in good agreement,
+%; the two distributions are shown to be in good agreement, centred around
+%A comparison between these numbers in data and simulation is shown in comparison is shown in
+%\Fig{fig:bdtEffRatio}; the two distributions are shown to be in good agreement, centred around
+centred around unity with about 5--$10\pc$ precision.
 %This approach ignores the fact that there may be some small peaking background component that gets
 %counted as signal pre-BDT cut, but is removed by the BDT.
 %Note, however, that in the
@@ -105,13 +110,17 @@ used to calculate it.
     \caption[Estimation of combinatorial background contribution]
     {
       Fits to the background component of selected \btokstrmumu events are shown in the upper
-      plots, where the dark blue regions are not used in the fit, but are used to determine the
-      number of events contributing to the combinatorial background by integrating across the
+      plots.
+      The the dark blue signal regions are not used in the fit, but the integral of the background
+      exponential function is used to determine the combinatorial background contribution.
+      The light blue region in the upper tail contains the same number of events as in the signal
       region.
-      The light blue region covers the same number of background events as in the darker region;
-      these are purely combinatorial background, and the invariant dimuon masses are plotted below,
-      using a bin width that is approximately equal to the width of the signal region in where the
-      mass resolution is at its worst.
+      Since the source of combinatorial background varies little, the events in the high-mass
+      (light blue) region will have a similar mass distribution to those in the signal region.
+      These mass distributions are shown in the lower plots, giving an idea of the contribution
+      from combinatorial background at each test mass.
+      A bin width of $20\mev$ is comparable to the width of the sigal window in a single test for
+      most of values of $m_{\mumu}$.
     }
     \label{fig:db:comb}
   \end{center}
@@ -170,7 +179,8 @@ These results show no evidence for a new dark boson in the mass ranges given abo
       Invariant mass distributions of the dimuon pair are shown on the left, while
       prompt and displaced candidates are black and grey points, respectively.
       Chebychev polynomials fitted to the data are shown as solid blue lines.
-      The narrow red region indicates $|m_{t}-4285.0|<5\sigmam$ ($x=1$ in this region).
+      The narrow red region indicates $|m_{t}-4285.0|<5\sigmam$, which encompasses the test mass
+      with the minimum $p$-value, and everything withing the sideband regions.
       On the right is the result of running the method on $1.5\e{-7}$ toy datasets, used to convert
       the local $p$-value ($3.6\e{-3}$) to a global one (0.63). This conversion is indicated by the
       blue dashed line.

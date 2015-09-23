@@ -48,8 +48,8 @@ where $\eff{sig}$ is the signal efficiency on a given leaf.
 The final child nodes, or leaves, are each associated with signal or background depending on the
 purity of the sample which populates it.
 Each leaf therefore maps out an area in $n$-dimensions, and is classified as a signal or background
-leaf
-depending on the purity of the training sample enclosed by that area.
+leaf depending on the purity of the training sample enclosed by that area.
+Figure~\ref{fig:bdt:dt} shows an example of a single \DT.
 The hypothesised category, as output by the \DT, $h(x_i)$, will ideally be equal to $f(x_i)$, but in reality there will be
 events which are misclassified.
 A figure-of-merit which is often used to determine the cut used at each node is the $G_{ini}$
@@ -65,6 +65,24 @@ index, which is defined as
 \end{equation}
 where $s$ and $b$ are the weighted sum of signal and background candidates, respectively, after a
 given cut.
+
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=1.00\textwidth]{dt}
+    \caption{
+      An example single DT, taken from the analysis in Chap.~\protect\ref{ch:db}, showing the root
+      node and decendant nodes.
+      At each node the cut value is shown along with the purity of the node.
+      The variables Flight Distance (FD) and vertex \chisq are defined in later chapters.
+      Signal nodes have a higher purity, $p$, and are split to the left, such that candidates
+      landing on leaf 1, 2, or 4(3, 5, or 6) are classified as belonging to
+      signal-like(background-like) events.
+    }
+    \label{fig:bdt:dt}
+  \end{center}
+\end{figure}
+
 %The efficiency of signal and background are denoted by \eff{sig} and \eff{bkg}, and the purity of a
 %node is defined as $1-\varepsilon$.
 %The decision, or cut, which results in the largest reduction in $\mathrm{G}_{ini}$ is the one that
