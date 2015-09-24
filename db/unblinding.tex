@@ -209,24 +209,25 @@ the ratio of efficiencies $\varepsilon(\btokstrdb)/\varepsilon(\btokstrmumu)$;
 the of prompt and displaced regions as defined by the lifetime resolution;
 and the uncertainty on the \btokstrmumu branching fraction in the range $1.0<\qsq<6.0\gevgev$.
 \added{
-These systematic uncertainties do not have any effect on the significance level of the minimum
+These systematic uncertainties do not affect the significance of the minimum
 local $p$-value.
 }
 
 \added{
 In the prompt region the efficiency ratio $\eff{\Bd\!\to\Kstarz\db(\mumu)}/\eff{\btokstrmumu}$ is
-constructed to be close to unity, and should be preserved by the selection for all lifetimes.
-This preservation is validated by comparing \decay{\Bd}{\jpsi\KS} in data and simulation.
-The full selection, including the \uBDT where the $\ProbNN{\mu}$ input is replaced by
-$\ProbNN{\pi}$,
-is applied, using the \KS as a proxy for the \db.
+constructed to be close to unity.
+The selection should not change this, and the ratio should remain the same
+for all lifetimes.
+This validated by comparing \decay{\Bd}{\jpsi\KS} in data and simulation.
+The full selection is applied using the \KS as a proxy for the \db, and using the variable
+$\ProbNN{\pi}$ of the pions of the \KS decay in place of the $\ProbNN{\mu}$.
 Mass cuts are also applied to isolated the \jpsi and \KS candidates,
-and a cut of $\lifetime{\KS}>0.2\ps$ is applied to avoid prompt
-backgrounds such as \decay{\Bd}{\jpsi\pipi}.
+and a cut of $\lifetime{\KS}>0.2\ps$ is applied to avoid contamination from prompt
+decays such as \decay{\Bd}{\jpsi\pipi}.
 Lifetime distributions for these selected \KS candidates in data and simulation are shown in
 \Fig{fig:db:syst:effrat}.
 These distributions would be approximately uniform without detector effects; the degree to which
-the distributions agree demonstrates that the simulation models the detector well, and results in a
+the distributions agree demonstrates that the simulation models the detector well and results in
 negligible systematic uncertainty.
 }
 
@@ -242,7 +243,7 @@ negligible systematic uncertainty.
     \caption[Validation of efficiency ratio at long lifetimes]
     {
       Reconstructed \KS lifetime distributions in bins of \KS momentum for (black) data and
-      (red) simulation, where the \KS is part of the decay \decay{\Bd}{\jpsi\KS(\pipi)} and is a
+      (red) simulation, where the \KS is part of the decay \decay{\Bd}{\jpsi\KS(\to\pipi)} and is a
       proxy \db candidate.
       Each plot is normalised to unit area.
       Good agreement is seen between the data and simulation.
@@ -267,18 +268,25 @@ the known \jpsi mass.
 %This can be studied using the angular acceptance models used in the \btokstrmumu angular
 %analysis~\cite{LHCb-CONF-2015-002}.
 
-\added{
-The simulated events used to establish the efficiency for the \sm \btokstrmumu are generated
-assuming true knowledge of the Wilson coefficients that contribute to the decay.
-Results of the angular analysis of the decay \btokstrmumu from \lhcb, as described in
+%\added{
+The simulated events of the \sm decay \btokstrmumu were generated
+assuming knowledge of the true Wilson coefficients that contribute to the decay.
+Incorrect values of the Wilson coefficients would lead to incorrect efficiency calculations.
+However, results of the angular analysis of the decay \btokstrmumu from \lhcb, as described in
 Ref.~\cite{LHCb-CONF-2015-002}, show that the Wilson coefficients used in the simulation are
 consistent with those observed.
-By generating an ensemble of toy simulated datasets, where the input Wilson coefficients for each
-are varied randomly within their uncertainties.
-The RMS deviation from this ensemble of toys with respect to the nominal value is assigned as the
-systematic uncertainty from the mismodelling of the \sm \btokstrmumu channel, this is approximately
-$1\%$.
-}
+A systematic uncertainty of approximately is applied to account for possible mismodelling of the \sm
+simulation.
+An ensemble of toy datasets are generated, each of which having input Wilson coefficients that are
+randomly distributed about their means within their uncertainties.
+The RMS deviation from the nominal value of this ensemble is taken as the systematic uncertainty.
+It is approximately $1\pc$.
+%This value comes from generating generating an ensemble of toy simulated datasets,
+%where the input Wilson coefficients for each are varied randomly within their uncertainties.
+%The RMS deviation from this ensemble of toys with respect to the nominal value is assigned as the
+%systematic uncertainty from the mismodelling of the \sm \btokstrmumu channel, this is approximately
+%$1\%$.
+%}
 
 
 %\deleted{
@@ -299,32 +307,27 @@ $1\%$.
 %}
 
 
-\added{
-The mismodelling of the lifetime resolutions is assessed using events consistent with the decay
+The mismodelling of the lifetime resolution is assessed using events consistent with the decay
 \btojpsikstr in data.
 Events falling in the displaced region, defined to be $\tau_{\mumu} > 3\sigma_\tau$, should
 constitute $0.13\%$ of all events, but actually make up $(0.18\pm0.01)\%$.
 To this end, a $3\%$ systematic uncertainty is applied, which is calculated by altering the
 lifetime resolution as calculated using simulation until $0.18\%$ of events fell in the displaced
 region.
-}
 
-\added{
 The statistical uncertainty propagated from the normalisation yield is $5\%$.
-As well as this, there is contamination from the $S$-wave component of the \Kstarz, which is
+Additionally, there is contamination from the $S$-wave component of the \Kstarz, which is
 estimated to be $(4\pm4)\%$~\cite{LHCb-PAPER-2013-019}.
-}
 
-\added{
 It has been noted that this analysis relies on the assumption that the background is smoothly
 varying, and can be approximated as being locally linear.
 This assumption clearly introduces an uncertainty, but this is already accounted for in the method
 by the addition of the Gaussian, $\mathcal{G}(y, x, \sigma_y)$, in the likelihood shown in
 \Eq{eq:db:like2}.
 There is no need to add a systematic uncertainty for the chosen value of $\sigma_y$, because it is,
-itself, an uncertainty and a maximal one.
-It is also ensured that there is no variation between years and magnet polarity.
-}
+itself, an uncertainty.
+
+%It is also ensured that there is no variation between years and magnet polarity.
 
 
 

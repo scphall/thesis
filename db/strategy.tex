@@ -113,35 +113,33 @@ of freedom.
 Sensitivity to the lifetime of the \db, \lifetime{\db}, is introduced by splitting the data at each
 test mass into two regions: a prompt and a displaced region, defined by $\tau<3\sigmat$ and
 $\tau>3\sigmat$ respectively; where \sigmat is defined to be the local decay time resolution.
-The joint likelihood is simply the product of the two individual likelihoods:
+The joint likelihood is the product of the two individual likelihoods:
 \begin{align}
   \mathcal{L}(n^p_s, n^p_b, n^d_s, n^d_b, x | s^p, b^p, y^p, s^d, b^d, y^d) &=
   \mathcal{L}(n^p_s, n^p_b, x | s^p, b^p, y^p)\nonumber\\
   &\quad\times\mathcal{L}(n^d_s, n^d_b, x | s^d, b^d, y^d),
   \label{eq:db:liketau}
 \end{align}
-where superscripts $p$ and $d$ denote the prompt and displaced regions,
-respectively.
+where superscript $p(d)$ denotes the prompt(displaced) region.
 The combined profile likelihood is:
 \begin{equation}
   \Lambda_\mathrm{Tot}
   =
   \Lambda(s^p|n_s^p,n_b^p)\cdot
-  \Lambda(s^d|n_s^d,n_b^d),
+  \Lambda(s^d|n_s^d,n_b^d).
 \end{equation}
-and $-2\ln\big(\Lambda_\mathrm{Tot}\big)$ behaves as a \chisq distribution with two
+Then, $-2\ln\big(\Lambda_\mathrm{Tot}\big)$ behaves as a \chisq distribution with two
 degrees of freedom.
-From this information a $p$-value for a given mass can be calculated
-quantifying how incompatible the signal region is with the null
-hypothesis of zero signal.
+Since this is analytically solvable, a $p$-value can be calculated
+quantifying how incompatible the number of events observed in the signal region is with the null
+hypothesis of zero signal events.
+This is done for each test mass.
 
 The information supplied by the addition of two bins in the lifetime dimension is approximately
 optimal for all \db lifetimes, except for when $\tau\sim3\sigmat$.
 In this case, it is marginally more optimal to include shape information of the background
 distribution from the sidebands; but this introduces
 significantly more complications to the analysis.
-%and there is no reason to believe that the \db has
-%a lifetime $\tau\sim3\sigmat$ \emph{a priori}.
 Therefore background shape information is not used.
 
 
@@ -150,8 +148,6 @@ Therefore background shape information is not used.
 \label{sec:db:pval}
 At each \mass{t}, a $p$-value is calculated using the profile likelihood of the joint likelihood
 given in \Eq{eq:db:liketau}.
-%Because there are \replaced{around a thousand}{$\mathcal{O}(1000)$} test masses, each of which is
-%not completely independent, the \emph{look-elsewhere effect} must be accounted for.
 \added{The \emph{look-elsewhere effect} is the phenomenon whereby an experiment yields a
 statistically significant result by chance, as a simple consequence of making a number of
 measurements.
@@ -160,20 +156,19 @@ thousand local $p$-values are measured in the course of the single experiment.
 This is accounted for by calculating the conversion of the minimum local $p$-value to a global
 $p$-value using an ensemble of toys.}
 
-%\bam{CLARIFY}
 After the $p$-value at each \mass{t} is calculated, the region in which the lowest $p$-value
-consistent with zero signal will be isolated and removed from the sample; leaving data
-which is entirely background.
-This is assuming that there is only one \np particle that can be observed in this analysis.
-The remaining background-like distribution is then turned into a \PDF\ --- where the region that is
-removed is interpolated across --- from which toy datasets can be generated.
-%A conversion from local to global $p$-value can then be calculated by generating ten million toy
-%datasets.
-This procedure is undertaken later, and described more fully then.
+is observed will be isolated and removed from the sample; leaving data
+which is entirely background-like.
+This is assuming that there is only one \np particle to be observed in this analysis.
+The remaining background-like distribution is turned into a \PDF, where the region that has
+been removed is interpolated across.
+Toy datasets can then be generated from this \PDF.
+%This procedure is described more fully later.
 
-Since this method requires the generation of $\mathcal{O}(10^7)$ datasets to probe down to
-$5\stdev$, if the minimum local $p$-value corresponds to less than this, the asymptotic formula
-will be used~\cite{Gross:2010qma}.
+This method requires the generation of $\mathcal{O}(10^7)$ datasets to probe down to a
+$5\sigma$ global $p$-value.
+If the minimum local $p$-value observed is less than any of the local $p$-values in the toy
+datasets then the asymptotic formula will be used~\cite{Gross:2010qma}.
 The asymptotic formula uses a few toy datasets to set an upper bound on the conversion of local to
 global minimum $p$-value.
 This bound is given by
