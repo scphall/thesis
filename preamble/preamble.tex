@@ -152,15 +152,19 @@ end#1\endcsname
 
 % Get hyperlinks to captions and in references.
 % These do not work with revtex. Use "hypertext" as class option instead.
+
 \usepackage{hyperref}    % Hyperlinks in references
+
 %\usepackage[draft]{hyperref}    % Hyperlinks in references
 %\usepackage{nohyperref}
-%\usepackage{nohyperref}  % This makes hyperref commands do nothing without errors
 %\usepackage{url}  % This makes \url work
+
 \usepackage[all]{hypcap} % Internal hyperlinks to floats.  bookmarks
+%\usepackage{nohyperref}  % This makes hyperref commands do nothing without errors
 
 %\definecolor{britishracinggreen}{rgb}{0.0, 0.26, 0.15}
 %\definecolor{linkblue}{rgb}{0.0, 0.28, 0.67}
+
 \hypersetup{
   %colorlinks=false,% false: boxed links; true: colored links
   %linkcolor=black, % color of internal links (change box color with linkbordercolor)
@@ -257,9 +261,6 @@ end#1\endcsname
 \newlength{\abstractpagewidth}
 \setlength{\abstractpagewidth}{0.85\textwidth}
 
-
-%\usepackage{changes}
-\usepackage[final]{changes}
 
 
 % Make this the last packages you include before the \begin{document}
